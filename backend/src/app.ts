@@ -8,6 +8,7 @@ import permissionsRoutes from "./routes/permissions";
 import mediaRoutes from "./routes/media";
 import servicesRoutes from "./routes/services";
 import leadsRoutes from "./routes/leads";
+import blogsRoutes from "./routes/blogs";
 import publicRoutes from "./routes/public";
 
 const app = express();
@@ -50,6 +51,7 @@ app.use("/permissions", permissionsRoutes);
 app.use("/media", mediaRoutes);
 app.use("/services", servicesRoutes);
 app.use("/leads", leadsRoutes);
+app.use("/blogs", blogsRoutes);
 // Open CORS: the landing page fetches this from its own origin (and at build time).
 app.use("/public", cors({ origin: true }), publicRoutes);
 

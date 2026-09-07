@@ -12,6 +12,7 @@ import {
   TbPhoto,
   TbClipboardText,
   TbUserPlus,
+  TbArticle,
   TbSettings,
 } from "react-icons/tb";
 
@@ -39,6 +40,7 @@ export const NAV_ITEMS: NavItem[] = [
   { title: "Reports",       icon: <TbChartHistogram className="h-5 w-5 shrink-0" />,  path: "/reports",       permissions: ["reports:read"] },
   { title: "Leads",         icon: <TbUserPlus className="h-5 w-5 shrink-0" />,        path: "/leads",         permissions: ["leads:read"] },
   { title: "Services",      icon: <TbClipboardText className="h-5 w-5 shrink-0" />,   path: "/services",      permissions: ["services:read"] },
+  { title: "Blogs",         icon: <TbArticle className="h-5 w-5 shrink-0" />,         path: "/blogs",         permissions: ["blogs:read"] },
   { title: "Media",         icon: <TbPhoto className="h-5 w-5 shrink-0" />,           path: "/media",         permissions: ["media:read"] },
   { title: "Settings",      icon: <TbSettings className="h-5 w-5 shrink-0" />,        path: "/settings",      permissions: ["settings:read"] },
 ];
@@ -66,6 +68,8 @@ export const PERMISSION_LABELS: Record<string, string> = {
   "leads:write": "Update, assign & delete enquiries",
   "services:read": "View website services",
   "services:write": "Create, edit & publish service pages",
+  "blogs:read": "View blog posts",
+  "blogs:write": "Create, edit & publish blog posts",
   "media:read": "View the media library",
   "media:write": "Upload & delete media files",
   "settings:read": "View settings",
@@ -86,8 +90,9 @@ export const RESOURCE_META: { key: string; label: string; order: number }[] = [
   { key: "reports", label: "Reports", order: 8 },
   { key: "leads", label: "Leads", order: 9 },
   { key: "services", label: "Website Services", order: 10 },
-  { key: "media", label: "Media Library", order: 11 },
-  { key: "settings", label: "Settings", order: 12 },
+  { key: "blogs", label: "Blog Posts", order: 11 },
+  { key: "media", label: "Media Library", order: 12 },
+  { key: "settings", label: "Settings", order: 13 },
 ];
 
 export function resourceLabel(resource: string) {

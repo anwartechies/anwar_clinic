@@ -6,6 +6,7 @@ import { User } from "./User";
 import { MediaAsset } from "./MediaAsset";
 import { Service } from "./Service";
 import { Lead } from "./Lead";
+import { Blog } from "./Blog";
 
 // Role <-> Permission join table. A role's grants live entirely in here, which
 // is what lets permissions be re-assigned at runtime from Settings > Roles
@@ -35,8 +36,12 @@ User.hasMany(MediaAsset, { foreignKey: "uploadedById", as: "uploads" });
 Lead.belongsTo(User, { foreignKey: "assignedToId", as: "assignedTo" });
 User.hasMany(Lead, { foreignKey: "assignedToId", as: "assignedLeads" });
 
+// Blogs — author / creator
+Blog.belongsTo(User, { foreignKey: "createdById", as: "createdBy" });
+User.hasMany(Blog, { foreignKey: "createdById", as: "blogs" });
+
 export async function syncDatabase() {
   await sequelize.sync({ alter: true });
 }
 
-export { sequelize, Role, Permission, User, MediaAsset, Service, Lead };
+export { sequelize, Role, Permission, User, MediaAsset, Service, Lead, Blog };

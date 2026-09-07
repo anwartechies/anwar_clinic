@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
-import { Service, Lead } from "../models";
+import { Op } from "sequelize";
+import { Service, Lead, Blog } from "../models";
 import { LEAD_SOURCES, LeadSource } from "../models/Lead";
 import { SEED_SECTIONS_BY_SLUG } from "../config/serviceSeedData";
 
@@ -60,6 +61,88 @@ router.get("/services/:slug", async (req: Request, res: Response) => {
   }
 
   res.json(service);
+});
+
+/* ----------------------------- PUBLIC BLOGS ----------------------------- */
+
+const PUBLIC_BLOG_LIST_FIELDS = [
+  "id", "slug", "title", "excerpt", "category", "tags",
+  "authorName", "authorRole", "authorAvatar", "coverImage",
+  "readTime", "publishedAt", "featured",
+] as const;
+
+const PUBLIC_BLOG_DETAIL_FIELDS = [
+  ...PUBLIC_BLOG_LIST_FIELDS,
+  "content", "contentBlocks", "faqs", "metaTitle", "metaDescription", "views",
+] as const;
+
+// GET /public/blogs — published blogs for landing page
+router.get("/blogs", async (req: Request, res: Response) => {
+  try {
+    const { category, search } = req.query;
+    const where: any = { status: "published" };
+
+    if (category && typeof category === "string" && category.trim() && category.trim().toLowerCase() !== "all") {
+      where.category = { [Op.iLike]: category.trim() };
+    }
+    if (search && typeof search === "string" && search.trim()) {
+      where[Op.or] = [
+        { title: { [Op.iLike]: `%${search.trim()}%` } },
+        { excerpt: { [Op.iLike]: `%${search.trim()}%` } },
+      ];
+    }
+
+    const blogs = await Blog.findAll({
+      where,
+      attributes: PUBLIC_BLOG_LIST_FIELDS as unknown as string[],
+      order: [
+        ["featured", "DESC"],
+        ["publishedAt", "DESC"],
+        ["createdAt", "DESC"],
+      ],
+    });
+    res.json(blogs);
+  } catch (err: any) {
+    console.error("Failed to fetch public blogs:", err);
+    res.status(500).json({ message: "Failed to fetch blogs" });
+  }
+});
+
+// GET /public/blogs/:slug — single published blog + related posts
+router.get("/blogs/:slug", async (req: Request, res: Response) => {
+  try {
+    const blog = await Blog.findOne({
+      where: { slug: req.params.slug, status: "published" },
+      attributes: PUBLIC_BLOG_DETAIL_FIELDS as unknown as string[],
+    });
+    if (!blog) {
+      res.status(404).json({ message: "Blog not found" });
+      return;
+    }
+
+    // Increment views in background
+    Blog.increment("views", { where: { id: blog.id } }).catch(() => {});
+
+    // Fetch related blogs (same category or recent, excluding this blog)
+    const related = await Blog.findAll({
+      where: {
+        status: "published",
+        id: { [Op.ne]: blog.id },
+        ...(blog.category ? { category: blog.category } : {}),
+      },
+      attributes: PUBLIC_BLOG_LIST_FIELDS as unknown as string[],
+      order: [["publishedAt", "DESC"]],
+      limit: 3,
+    });
+
+    res.json({
+      ...blog.toJSON(),
+      related,
+    });
+  } catch (err: any) {
+    console.error("Failed to fetch public blog:", err);
+    res.status(500).json({ message: "Failed to fetch blog" });
+  }
 });
 
 
