@@ -1,11 +1,11 @@
 import { Router, Request, Response } from "express";
 import { Op } from "sequelize";
-import { Service, Lead, Blog } from "../models";
+import { Service, Lead, Blog, Product } from "../models";
 import { LEAD_SOURCES, LeadSource } from "../models/Lead";
 import { SEED_SECTIONS_BY_SLUG } from "../config/serviceSeedData";
 
-// Open, credential-less API consumed by the landing page at build/revalidate
-// time. Draft services are never exposed here, so an unfinished page can't leak.
+// Open, credential-less API consumed by the landing page and ecommerce at build/revalidate
+// time. Draft items are never exposed here.
 const router = Router();
 
 const PUBLIC_ATTRS = [
@@ -142,6 +142,111 @@ router.get("/blogs/:slug", async (req: Request, res: Response) => {
   } catch (err: any) {
     console.error("Failed to fetch public blog:", err);
     res.status(500).json({ message: "Failed to fetch blog" });
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Public Ecommerce Products API
+// ─────────────────────────────────────────────────────────────────────────────
+
+const PUBLIC_PRODUCT_CARD_ATTRS = [
+  "id",
+  "slug",
+  "name",
+  "category",
+  "concern",
+  "price",
+  "originalPrice",
+  "isSale",
+  "badge",
+  "rating",
+  "reviewsCount",
+  "image",
+  "description",
+  "inStock",
+  "stockQuantity",
+  "isKit",
+  "sortOrder",
+] as const;
+
+// GET /public/products — list all published products
+router.get("/products", async (req: Request, res: Response) => {
+  try {
+    const { category, concern, search, sortBy } = req.query;
+    const where: any = { status: "published" };
+
+    if (category && typeof category === "string" && category.trim() && category.trim().toLowerCase() !== "all") {
+      where.category = { [Op.iLike]: category.trim() };
+    }
+    if (concern && typeof concern === "string" && concern.trim() && concern.trim().toLowerCase() !== "all") {
+      where.concern = { [Op.iLike]: concern.trim() };
+    }
+    if (search && typeof search === "string" && search.trim()) {
+      where[Op.or] = [
+        { name: { [Op.iLike]: `%${search.trim()}%` } },
+        { description: { [Op.iLike]: `%${search.trim()}%` } },
+        { category: { [Op.iLike]: `%${search.trim()}%` } },
+        { concern: { [Op.iLike]: `%${search.trim()}%` } },
+      ];
+    }
+
+    let order: any[] = [["sortOrder", "ASC"], ["createdAt", "ASC"]];
+    if (sortBy === "price-low") {
+      order = [["price", "ASC"]];
+    } else if (sortBy === "price-high") {
+      order = [["price", "DESC"]];
+    } else if (sortBy === "rating") {
+      order = [["rating", "DESC"], ["reviewsCount", "DESC"]];
+    }
+
+    const products = await Product.findAll({
+      where,
+      attributes: PUBLIC_PRODUCT_CARD_ATTRS as unknown as string[],
+      order,
+    });
+
+    res.json(products);
+  } catch (err: any) {
+    console.error("Failed to fetch public products:", err);
+    res.status(500).json({ message: "Failed to fetch products" });
+  }
+});
+
+// GET /public/products/:slug — single published product with full sections
+router.get("/products/:slug", async (req: Request, res: Response) => {
+  try {
+    const slug = req.params.slug;
+    const product = await Product.findOne({
+      where: { slug, status: "published" },
+    });
+
+    if (!product) {
+      res.status(404).json({ message: "Product not found" });
+      return;
+    }
+
+    // Related products in the same category or concern (up to 4 items)
+    const related = await Product.findAll({
+      where: {
+        status: "published",
+        id: { [Op.ne]: product.id },
+        [Op.or]: [
+          { category: product.category },
+          { concern: product.concern },
+        ],
+      },
+      attributes: PUBLIC_PRODUCT_CARD_ATTRS as unknown as string[],
+      order: [["rating", "DESC"]],
+      limit: 4,
+    });
+
+    res.json({
+      ...product.toJSON(),
+      related,
+    });
+  } catch (err: any) {
+    console.error("Failed to fetch public product:", err);
+    res.status(500).json({ message: "Failed to fetch product" });
   }
 });
 

@@ -6,6 +6,7 @@ import { syncPermissionCatalog } from "./config/permissions";
 import { storage } from "./services/storage";
 import { ALL_SERVICES_SEED, SEED_SECTIONS_BY_SLUG } from "./config/serviceSeedData";
 import { syncSeedBlogsOnBoot } from "./config/seedBlogs";
+import { syncSeedProductsOnBoot } from "./config/seedProducts";
 
 async function syncServicesOnBoot() {
   try {
@@ -61,6 +62,7 @@ async function start() {
 
   await syncServicesOnBoot();
   await syncSeedBlogsOnBoot();
+  await syncSeedProductsOnBoot();
 
   console.log(`[Storage] Driver: ${storage.name}`);
 

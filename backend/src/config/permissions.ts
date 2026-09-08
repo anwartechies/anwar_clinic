@@ -29,6 +29,8 @@ export const PERMISSION_CATALOG = [
   { name: "media:write",        resource: "media",         action: "write" },
   { name: "blogs:read",         resource: "blogs",         action: "read"  },
   { name: "blogs:write",        resource: "blogs",         action: "write" },
+  { name: "products:read",      resource: "products",      action: "read"  },
+  { name: "products:write",     resource: "products",      action: "write" },
   { name: "settings:read",      resource: "settings",      action: "read"  },
   { name: "settings:write",     resource: "settings",      action: "write" },
 ];
@@ -45,6 +47,7 @@ export const DEFAULT_ROLE_GRANTS: Record<string, string[]> = {
     "reports:read",
     "leads:read",
     "blogs:read",
+    "products:read",
   ],
   receptionist: [
     "dashboard:read",

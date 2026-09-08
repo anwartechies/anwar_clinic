@@ -48,7 +48,19 @@ export const PRODUCT_FAQ_LIST: ProductFAQItem[] = [
   },
 ];
 
-export default function ProductFAQSection() {
+interface ProductFAQSectionProps {
+  items?: { id?: string; question: string; answer: string }[];
+  title?: string;
+  subtitle?: string;
+}
+
+export default function ProductFAQSection({
+  items,
+  title = "Frequently Asked Questions",
+  subtitle = "EXPERT ANSWERS",
+}: ProductFAQSectionProps = {}) {
+  const faqsToRender = items && items.length > 0 ? items : PRODUCT_FAQ_LIST;
+
   return (
     <section className="py-16 sm:py-24 bg-white border-t border-gray-100">
       <div className="qht-large-container">
@@ -59,10 +71,10 @@ export default function ProductFAQSection() {
           <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-6">
             <div>
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5c685f] block mb-2">
-                EXPERT ANSWERS
+                {subtitle}
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-tight">
-                Frequently Asked Questions
+                {title}
               </h2>
             </div>
 
@@ -74,8 +86,8 @@ export default function ProductFAQSection() {
 
           {/* Right Column: Clean Open Q&A List with Dividers */}
           <div className="lg:col-span-8 divide-y divide-gray-200 border-t border-b border-gray-200">
-            {PRODUCT_FAQ_LIST.map((faq) => (
-              <div key={faq.id} className="py-6 sm:py-7 space-y-2">
+            {faqsToRender.map((faq, idx) => (
+              <div key={faq.id || idx} className="py-6 sm:py-7 space-y-2">
                 <h3 className="text-lg sm:text-xl font-bold text-[#1b221d] leading-snug">
                   {faq.question}
                 </h3>

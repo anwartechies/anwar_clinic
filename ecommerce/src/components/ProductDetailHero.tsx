@@ -28,13 +28,27 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
   const [isAdded, setIsAdded] = useState(false);
 
   // Gallery images list (with fallbacks and gallery angles)
+  const customGallery: string[] = product.sections?.hero?.galleryImages || [];
   const galleryImages = [
     product.image,
-    "https://images.unsplash.com/photo-1608248597359-52e3794b6389?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+    ...customGallery.filter((img) => img && img !== product.image),
   ];
+  if (galleryImages.length === 1) {
+    galleryImages.push(
+      "https://images.unsplash.com/photo-1608248597359-52e3794b6389?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80"
+    );
+  }
+
+  const customSuitableFor: string[] = product.sections?.hero?.suitableFor;
+  const suitableForList: string[] =
+    customSuitableFor && customSuitableFor.length > 0
+      ? customSuitableFor
+      : [
+          "Patients recovering from FUT / FUE / QHT procedures",
+          "Individuals experiencing active hair thinning & shedding",
+          "Safe for daily use on sensitive or irritated scalps",
+        ];
 
   const formatPrice = (amount: number) => {
     return new Intl.NumberFormat("en-IN", {
@@ -281,18 +295,12 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
                     </div>
                   ) : (
                     <ul className="space-y-1.5 text-xs text-[#4a554c]">
-                      <li className="flex items-center gap-2">
-                        <Check className="w-3.5 h-3.5 text-[#2e7d32] flex-shrink-0" />
-                        <span>Patients recovering from FUT / FUE / QHT procedures</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Check className="w-3.5 h-3.5 text-[#2e7d32] flex-shrink-0" />
-                        <span>Individuals experiencing active hair thinning & shedding</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Check className="w-3.5 h-3.5 text-[#2e7d32] flex-shrink-0" />
-                        <span>Safe for daily use on sensitive or irritated scalps</span>
-                      </li>
+                      {suitableForList.map((item, idx) => (
+                        <li key={idx} className="flex items-center gap-2">
+                          <Check className="w-3.5 h-3.5 text-[#2e7d32] flex-shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
                     </ul>
                   )}
                 </div>
