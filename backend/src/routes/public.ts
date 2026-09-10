@@ -1,10 +1,11 @@
 import { Router, Request, Response } from "express";
-import { Service, Lead } from "../models";
+import { Op } from "sequelize";
+import { Service, Lead, Blog, Product } from "../models";
 import { LEAD_SOURCES, LeadSource } from "../models/Lead";
 import { SEED_SECTIONS_BY_SLUG } from "../config/serviceSeedData";
 
-// Open, credential-less API consumed by the landing page at build/revalidate
-// time. Draft services are never exposed here, so an unfinished page can't leak.
+// Open, credential-less API consumed by the landing page and ecommerce at build/revalidate
+// time. Draft items are never exposed here.
 const router = Router();
 
 const PUBLIC_ATTRS = [
@@ -60,6 +61,193 @@ router.get("/services/:slug", async (req: Request, res: Response) => {
   }
 
   res.json(service);
+});
+
+/* ----------------------------- PUBLIC BLOGS ----------------------------- */
+
+const PUBLIC_BLOG_LIST_FIELDS = [
+  "id", "slug", "title", "excerpt", "category", "tags",
+  "authorName", "authorRole", "authorAvatar", "coverImage",
+  "readTime", "publishedAt", "featured",
+] as const;
+
+const PUBLIC_BLOG_DETAIL_FIELDS = [
+  ...PUBLIC_BLOG_LIST_FIELDS,
+  "content", "contentBlocks", "faqs", "metaTitle", "metaDescription", "views",
+] as const;
+
+// GET /public/blogs — published blogs for landing page
+router.get("/blogs", async (req: Request, res: Response) => {
+  try {
+    const { category, search } = req.query;
+    const where: any = { status: "published" };
+
+    if (category && typeof category === "string" && category.trim() && category.trim().toLowerCase() !== "all") {
+      where.category = { [Op.iLike]: category.trim() };
+    }
+    if (search && typeof search === "string" && search.trim()) {
+      where[Op.or] = [
+        { title: { [Op.iLike]: `%${search.trim()}%` } },
+        { excerpt: { [Op.iLike]: `%${search.trim()}%` } },
+      ];
+    }
+
+    const blogs = await Blog.findAll({
+      where,
+      attributes: PUBLIC_BLOG_LIST_FIELDS as unknown as string[],
+      order: [
+        ["featured", "DESC"],
+        ["publishedAt", "DESC"],
+        ["createdAt", "DESC"],
+      ],
+    });
+    res.json(blogs);
+  } catch (err: any) {
+    console.error("Failed to fetch public blogs:", err);
+    res.status(500).json({ message: "Failed to fetch blogs" });
+  }
+});
+
+// GET /public/blogs/:slug — single published blog + related posts
+router.get("/blogs/:slug", async (req: Request, res: Response) => {
+  try {
+    const blog = await Blog.findOne({
+      where: { slug: req.params.slug, status: "published" },
+      attributes: PUBLIC_BLOG_DETAIL_FIELDS as unknown as string[],
+    });
+    if (!blog) {
+      res.status(404).json({ message: "Blog not found" });
+      return;
+    }
+
+    // Increment views in background
+    Blog.increment("views", { where: { id: blog.id } }).catch(() => {});
+
+    // Fetch related blogs (same category or recent, excluding this blog)
+    const related = await Blog.findAll({
+      where: {
+        status: "published",
+        id: { [Op.ne]: blog.id },
+        ...(blog.category ? { category: blog.category } : {}),
+      },
+      attributes: PUBLIC_BLOG_LIST_FIELDS as unknown as string[],
+      order: [["publishedAt", "DESC"]],
+      limit: 3,
+    });
+
+    res.json({
+      ...blog.toJSON(),
+      related,
+    });
+  } catch (err: any) {
+    console.error("Failed to fetch public blog:", err);
+    res.status(500).json({ message: "Failed to fetch blog" });
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Public Ecommerce Products API
+// ─────────────────────────────────────────────────────────────────────────────
+
+const PUBLIC_PRODUCT_CARD_ATTRS = [
+  "id",
+  "slug",
+  "name",
+  "category",
+  "concern",
+  "price",
+  "originalPrice",
+  "isSale",
+  "badge",
+  "rating",
+  "reviewsCount",
+  "image",
+  "description",
+  "inStock",
+  "stockQuantity",
+  "isKit",
+  "sortOrder",
+] as const;
+
+// GET /public/products — list all published products
+router.get("/products", async (req: Request, res: Response) => {
+  try {
+    const { category, concern, search, sortBy } = req.query;
+    const where: any = { status: "published" };
+
+    if (category && typeof category === "string" && category.trim() && category.trim().toLowerCase() !== "all") {
+      where.category = { [Op.iLike]: category.trim() };
+    }
+    if (concern && typeof concern === "string" && concern.trim() && concern.trim().toLowerCase() !== "all") {
+      where.concern = { [Op.iLike]: concern.trim() };
+    }
+    if (search && typeof search === "string" && search.trim()) {
+      where[Op.or] = [
+        { name: { [Op.iLike]: `%${search.trim()}%` } },
+        { description: { [Op.iLike]: `%${search.trim()}%` } },
+        { category: { [Op.iLike]: `%${search.trim()}%` } },
+        { concern: { [Op.iLike]: `%${search.trim()}%` } },
+      ];
+    }
+
+    let order: any[] = [["sortOrder", "ASC"], ["createdAt", "ASC"]];
+    if (sortBy === "price-low") {
+      order = [["price", "ASC"]];
+    } else if (sortBy === "price-high") {
+      order = [["price", "DESC"]];
+    } else if (sortBy === "rating") {
+      order = [["rating", "DESC"], ["reviewsCount", "DESC"]];
+    }
+
+    const products = await Product.findAll({
+      where,
+      attributes: PUBLIC_PRODUCT_CARD_ATTRS as unknown as string[],
+      order,
+    });
+
+    res.json(products);
+  } catch (err: any) {
+    console.error("Failed to fetch public products:", err);
+    res.status(500).json({ message: "Failed to fetch products" });
+  }
+});
+
+// GET /public/products/:slug — single published product with full sections
+router.get("/products/:slug", async (req: Request, res: Response) => {
+  try {
+    const slug = req.params.slug;
+    const product = await Product.findOne({
+      where: { slug, status: "published" },
+    });
+
+    if (!product) {
+      res.status(404).json({ message: "Product not found" });
+      return;
+    }
+
+    // Related products in the same category or concern (up to 4 items)
+    const related = await Product.findAll({
+      where: {
+        status: "published",
+        id: { [Op.ne]: product.id },
+        [Op.or]: [
+          { category: product.category },
+          { concern: product.concern },
+        ],
+      },
+      attributes: PUBLIC_PRODUCT_CARD_ATTRS as unknown as string[],
+      order: [["rating", "DESC"]],
+      limit: 4,
+    });
+
+    res.json({
+      ...product.toJSON(),
+      related,
+    });
+  } catch (err: any) {
+    console.error("Failed to fetch public product:", err);
+    res.status(500).json({ message: "Failed to fetch product" });
+  }
 });
 
 

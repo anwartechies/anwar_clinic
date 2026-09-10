@@ -2,15 +2,23 @@ export interface Product {
   id: string;
   name: string;
   slug: string;
-  category: "Devices" | "Kits & Combos" | "Shampoos" | "Tablets & Supplements" | "Topical Solutions";
-  concern: "Hair Fall" | "Post-Transplant Care" | "Dandruff" | "Regrowth" | "Daily Maintenance";
+  category: string;
+  concern: string;
   price: number;
-  originalPrice?: number;
+  originalPrice?: number | null;
   rating: number;
   reviewsCount: number;
   isSale?: boolean;
+  badge?: string | null;
   image: string;
   description: string;
+  inStock?: boolean;
+  stockQuantity?: number;
+  isKit?: boolean;
+  seoTitle?: string | null;
+  seoDescription?: string | null;
+  sections?: Record<string, any>;
+  hiddenSections?: string[];
 }
 
 export const PRODUCTS_DATA: Product[] = [

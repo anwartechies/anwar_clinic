@@ -8,6 +8,8 @@ import permissionsRoutes from "./routes/permissions";
 import mediaRoutes from "./routes/media";
 import servicesRoutes from "./routes/services";
 import leadsRoutes from "./routes/leads";
+import blogsRoutes from "./routes/blogs";
+import productsRoutes from "./routes/products";
 import publicRoutes from "./routes/public";
 
 const app = express();
@@ -15,6 +17,8 @@ const app = express();
 const allowedOrigins = [
   ...env.frontendUrls,
   "http://localhost:3100",
+  "http://localhost:3200",
+  "http://localhost:3300",
   "http://localhost:4200",
 ].filter(Boolean);
 
@@ -50,7 +54,9 @@ app.use("/permissions", permissionsRoutes);
 app.use("/media", mediaRoutes);
 app.use("/services", servicesRoutes);
 app.use("/leads", leadsRoutes);
-// Open CORS: the landing page fetches this from its own origin (and at build time).
+app.use("/blogs", blogsRoutes);
+app.use("/products", productsRoutes);
+// Open CORS: the landing page and ecommerce fetch this from their own origins.
 app.use("/public", cors({ origin: true }), publicRoutes);
 
 app.use((_req, res) => {

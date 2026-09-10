@@ -24,19 +24,19 @@ export default function SidebarFilter({
   const [isConcernOpen, setIsConcernOpen] = useState(true);
 
   const categories = [
-    { label: "Devices", count: categoryCounts["Devices"] || 2 },
-    { label: "Kits & Combos", count: categoryCounts["Kits & Combos"] || 9 },
-    { label: "Shampoos", count: categoryCounts["Shampoos"] || 2 },
-    { label: "Tablets & Supplements", count: categoryCounts["Tablets & Supplements"] || 9 },
-    { label: "Topical Solutions", count: categoryCounts["Topical Solutions"] || 6 },
+    { label: "Devices", count: categoryCounts["Devices"] || 0 },
+    { label: "Kits & Combos", count: categoryCounts["Kits & Combos"] || 0 },
+    { label: "Shampoos", count: categoryCounts["Shampoos"] || 0 },
+    { label: "Tablets & Supplements", count: categoryCounts["Tablets & Supplements"] || 0 },
+    { label: "Topical Solutions", count: categoryCounts["Topical Solutions"] || 0 },
   ];
 
   const concerns = [
-    { label: "Hair Fall", count: concernCounts["Hair Fall"] || 6 },
-    { label: "Post-Transplant Care", count: concernCounts["Post-Transplant Care"] || 4 },
-    { label: "Dandruff", count: concernCounts["Dandruff"] || 2 },
-    { label: "Regrowth", count: concernCounts["Regrowth"] || 8 },
-    { label: "Daily Maintenance", count: concernCounts["Daily Maintenance"] || 3 },
+    { label: "Hair Fall", count: concernCounts["Hair Fall"] || 0 },
+    { label: "Post-Transplant Care", count: concernCounts["Post-Transplant Care"] || 0 },
+    { label: "Dandruff", count: concernCounts["Dandruff"] || 0 },
+    { label: "Regrowth", count: concernCounts["Regrowth"] || 0 },
+    { label: "Daily Maintenance", count: concernCounts["Daily Maintenance"] || 0 },
   ];
 
   return (
