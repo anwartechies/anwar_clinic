@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Best Hair Transplant Clinic In India | ${COMPANY_NAME} Clinic`,
     description: `Discover India’s leading hair-transplant clinic. Advanced ${COMPANY_NAME} technique & 15,000+ results. Book now.`,
-    url: "https://www.qhtclinic.com",
+    url: "/",
     siteName: `${COMPANY_NAME} Clinic`,
     images: [
       {
-        url: "https://www.qhtclinic.com/wp-content/uploads/2026/03/delhi-6.jpg",
+        url: "/images/logo1.png",
         width: 900,
         height: 560,
         alt: `${COMPANY_NAME} Clinic Hair Restoration`,
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/cropped-Fav-Icon-192x192.png",
+    icon: "/images/logo1.png",
     apple:
-      "https://www.qhtclinic.com/wp-content/uploads/2025/11/cropped-Fav-Icon-180x180.png",
+      "/images/logo1.png",
   },
 };
 

@@ -28,7 +28,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
         .then((data) => {
           if (Array.isArray(data)) setServices(data);
         })
-        .catch(() => {});
+        .catch(() => { });
     }
   }, [initialServices]);
 
@@ -50,9 +50,9 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
             {/* Logo */}
             <Link href="/" className="inline-block mb-3">
               <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/08/header-logo.webp"
+                src="/images/logo3.png"
                 alt={`${COMPANY_NAME} Clinic Logo`}
-                className="h-11 w-auto object-contain brightness-0 invert"
+                className="h-11 md:h-12 w-auto object-contain rounded-md"
               />
             </Link>
 
