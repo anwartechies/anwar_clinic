@@ -58,9 +58,9 @@ function HeaderBar({
           className="flex items-center gap-2 relative z-10 flex-shrink-0"
         >
           <img
-            src="https://www.qhtclinic.com/wp-content/uploads/2025/08/header-logo.webp"
+            src="/images/logo3.png"
             alt={`${COMPANY_NAME} Clinic Logo`}
-            className={`${isSticky ? "h-9 md:h-11" : "h-10 sm:h-12 md:h-13"} w-auto object-contain transition-all duration-200`}
+            className={`${isSticky ? "h-9 md:h-11" : "h-10 sm:h-12 md:h-13"} w-auto object-contain rounded-md transition-all duration-200`}
           />
         </Link>
 
@@ -375,7 +375,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
         .then((data) => {
           if (Array.isArray(data)) setServices(data);
         })
-        .catch(() => {});
+        .catch(() => { });
     }
   }, [initialServices]);
 
@@ -419,11 +419,10 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
 
       {/* 1. Static Initial Header - Transparent overlay on every page */}
       <header
-        className={`absolute left-0 right-0 z-40 bg-transparent pb-4 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          isBannerVisible
-            ? "top-[52px] sm:top-[54px] pt-4 sm:pt-6"
-            : "top-0 pt-6 sm:pt-8"
-        }`}
+        className={`absolute left-0 right-0 z-40 bg-transparent pb-4 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${isBannerVisible
+          ? "top-[52px] sm:top-[54px] pt-4 sm:pt-6"
+          : "top-0 pt-6 sm:pt-8"
+          }`}
       >
         <HeaderBar
           isSticky={false}
@@ -466,9 +465,9 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
           <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl flex flex-col p-6 overflow-y-auto">
             <div className="flex items-center justify-between pb-4 border-b border-gray-100">
               <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/08/header-logo.webp"
+                src="/images/logo3.png"
                 alt="Logo"
-                className="h-9 w-auto"
+                className="h-9 w-auto object-contain rounded-md"
               />
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
