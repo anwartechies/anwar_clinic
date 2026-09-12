@@ -4,3 +4,7 @@ dist
 *.log
 .DS_Store
 uploads/
+
+# env files — ignore all variants, keep the committed template
+.env*
+!.env.example

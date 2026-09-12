@@ -7,7 +7,7 @@ import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 import { NAV_ABOUT_LIST } from "@/data/qhtData";
 import { useConsultation } from "@/context/ConsultationContext";
 import TopOfferBanner from "./TopOfferBanner";
-import { COMPANY_NAME } from "@/config/constants";
+import { CLINIC_URL, COMPANY_NAME } from "@/config/constants";
 import type { ServiceCard } from "@/lib/services";
 
 interface HeaderProps {
@@ -345,7 +345,7 @@ function HeaderBar({
 
 export default function Header({ onOpenConsultation, initialServices }: HeaderProps) {
   const pathname = usePathname();
-  const cliniUrl = process.env.NEXT_PUBLIC_CLINIC_URL || "#";
+  const cliniUrl = CLINIC_URL;
   const { openConsultation } = useConsultation();
   const handleOpenConsultation = onOpenConsultation || openConsultation;
 
