@@ -14,12 +14,12 @@ interface CountryComparisonRow {
 
 const COUNTRY_COMPARISON_DATA: CountryComparisonRow[] = [
   {
-    country: "India",
+    country: "India (NexGen)",
     flag: "https://flagcdn.com/w40/in.png",
     isBestValue: true,
-    costPerGraft: "₹50 – ₹120",
-    avgCost: "₹1,50,000 – ₹3,60,000",
-    language: "English",
+    costPerGraft: "₹10 – ₹25",
+    avgCost: "₹50,000 – ₹1,50,000",
+    language: "English / Hindi",
     waitTime: "1–3 Days",
   },
   {

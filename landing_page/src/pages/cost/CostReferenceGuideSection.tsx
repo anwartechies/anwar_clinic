@@ -55,9 +55,10 @@ export default function CostReferenceGuideSection() {
                 Formula: Total Cost = Number of Grafts × Per-Graft Rate
               </span>
               <ul className="space-y-0.5 text-xs text-gray-700">
-                <li>• FUT Strip: ₹50/graft (most economical)</li>
-                <li>• Motorized FUE: ₹70/graft (scarless standard)</li>
-                <li>• {COMPANY_NAME} Protocol: ₹100/graft (maximum graft viability)</li>
+                <li>• FUE Technique: ₹10/graft (scarless standard)</li>
+                <li>• Bio FUE (DMEM Medium): ₹15/graft (enhanced follicle vitality)</li>
+                <li>• DHI Technique: ₹15/graft (direct implanter pen)</li>
+                <li>• Premium DHI (Sapphire + DMEM): ₹25/graft (top clinical grade)</li>
               </ul>
             </div>
             <p>
