@@ -1,20 +1,28 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { X, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
 import { COUNTRY_CODES, CLINIC_BRANCHES } from "@/data/qhtData";
 import { COMPANY_NAME } from "@/config/constants";
 import { submitLead } from "@/lib/leads";
+import { STATIC_OFFER, OFFER_PAGE_PATH } from "@/config/offer";
+import type { ConsultationIntent } from "@/context/ConsultationContext";
 
 interface ConsultationModalProps {
   isOpen: boolean;
+  /** "offer" = opened from the banner's claim button; success goes to /offer. */
+  intent?: ConsultationIntent;
   onClose: () => void;
 }
 
 export default function ConsultationModal({
   isOpen,
+  intent = "consultation",
   onClose,
 }: ConsultationModalProps) {
+  const router = useRouter();
+  const isOffer = intent === "offer";
   const [name, setName] = useState("");
   const [countryCode, setCountryCode] = useState("+91");
   const [phone, setPhone] = useState("");
@@ -38,7 +46,21 @@ export default function ConsultationModal({
         phone,
         branch,
         source: "consultation_modal",
+        // Lead sources are a DB enum, so the claim is flagged in the message
+        // instead — it shows on the lead in the admin panel.
+        ...(isOffer && {
+          message: `Claimed website offer${STATIC_OFFER.couponCode ? ` (code ${STATIC_OFFER.couponCode})` : ""}: ${STATIC_OFFER.highlightText ?? STATIC_OFFER.title}`,
+        }),
       });
+
+      if (isOffer) {
+        // The offer page is the confirmation, so skip the in-modal thank-you.
+        setName("");
+        setPhone("");
+        onClose();
+        router.push(`${OFFER_PAGE_PATH}?claimed=1`);
+        return;
+      }
       setIsSubmitted(true);
     } catch (err) {
       setError(
@@ -76,14 +98,16 @@ export default function ConsultationModal({
         <div className="bg-[#1b392b] text-white p-6 sm:p-8 relative">
           <div className="flex items-center gap-2 mb-2">
             <span className="inline-flex items-center gap-1 bg-[#b1fc85] text-[#162418] text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-              <Sparkles className="w-3 h-3" /> Free Consultation
+              <Sparkles className="w-3 h-3" /> {isOffer ? STATIC_OFFER.badge ?? "Special Offer" : "Free Consultation"}
             </span>
           </div>
           <h3 className="text-xl sm:text-2xl font-bold">
-            Book a Consultation Today
+            {isOffer ? "Claim Your Offer" : "Book a Consultation Today"}
           </h3>
           <p className="text-xs text-gray-300 mt-1">
-            Get personalized hairline assessment and exact graft estimate from {COMPANY_NAME} specialists.
+            {isOffer
+              ? `Share your details to reserve ${STATIC_OFFER.highlightText ?? "this offer"} with your ${COMPANY_NAME} consultation.`
+              : `Get personalized hairline assessment and exact graft estimate from ${COMPANY_NAME} specialists.`}
           </p>
         </div>
 
@@ -167,12 +191,7 @@ export default function ConsultationModal({
                   className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none focus:border-[#1b392b]"
                 >
                   <option value="Patna">Patna (Main Branch - Raja Bazar)</option>
-                  <option value="Delhi">New Delhi (Rohini)</option>
-                  <option value="Haridwar">Haridwar (Uttarakhand)</option>
-                  <option value="Gurugram">Gurugram (Haryana)</option>
-                  <option value="Hyderabad">Hyderabad (Banjara Hills)</option>
-                  <option value="Kolkata">Kolkata (Sudder St.)</option>
-                  <option value="Online">Online Video Consultation</option>
+                  <option value="Chapra">Chapra</option>
                 </select>
               </div>
 
@@ -191,7 +210,7 @@ export default function ConsultationModal({
                   {isSubmitting ? (
                     <span>Submitting...</span>
                   ) : (
-                    <span>Book Free Consultation</span>
+                    <span>{isOffer ? "Claim Offer" : "Book Free Consultation"}</span>
                   )}
                 </button>
               </div>

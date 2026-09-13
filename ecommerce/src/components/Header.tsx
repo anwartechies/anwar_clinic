@@ -20,6 +20,9 @@ export default function Header() {
               alt="Logo"
               className="h-8 sm:h-10 w-auto object-contain"
             />
+            <span className="border-l border-[#a8843a]/40 pl-1.5 sm:pl-2.5 text-[10px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] sm:tracking-[0.14em] leading-tight text-[#a8843a] whitespace-nowrap">
+              Meds
+            </span>
           </Link>
 
           {/* Right: Actions (WhatsApp, Shopping Bag Counter, Start Free Hair Test Button) */}

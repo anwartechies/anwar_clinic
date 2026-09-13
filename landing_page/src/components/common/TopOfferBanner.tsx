@@ -2,28 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import { Sparkles, ArrowRight, X, Gift } from "lucide-react";
-import { COMPANY_NAME } from "@/config/constants";
 import { useConsultation } from "@/context/ConsultationContext";
+import { STATIC_OFFER, type OfferBannerConfig } from "@/config/offer";
 
-export interface OfferBannerConfig {
-  isEnabled: boolean;
-  badge?: string;
-  title: string;
-  highlightText?: string;
-  couponCode?: string;
-  ctaText?: string;
-  link?: string;
-}
-
-// Configurable offer state - currently static, easily connected to CMS/Admin later
-export const STATIC_OFFER: OfferBannerConfig = {
-  isEnabled: true,
-  badge: "Special Offer",
-  title: `Book your ${COMPANY_NAME} Hair Transplant this month & get`,
-  highlightText: "Free Scalp Diagnostics + 1 Year Post-Op Support",
-  couponCode: "SAVE25",
-  ctaText: "Claim Consultation",
-};
+// Re-exported so existing imports from this module keep working.
+export { STATIC_OFFER };
+export type { OfferBannerConfig };
 
 interface TopOfferBannerProps {
   config?: OfferBannerConfig;
@@ -38,7 +22,7 @@ export default function TopOfferBanner({
 }: TopOfferBannerProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const { openConsultation } = useConsultation();
+  const { claimOffer } = useConsultation();
 
   // Appears after 10 seconds with animation
   useEffect(() => {
@@ -52,11 +36,13 @@ export default function TopOfferBanner({
     return () => clearTimeout(timer);
   }, [config.isEnabled, onVisibilityChange]);
 
+  // Claiming the offer opens the modal in offer mode, which lands on /offer
+  // after a successful submit. An explicit handler still overrides that.
   const handleAction = () => {
     if (onOpenConsultation) {
       onOpenConsultation();
     } else {
-      openConsultation();
+      claimOffer();
     }
   };
 

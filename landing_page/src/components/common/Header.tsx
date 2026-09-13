@@ -62,6 +62,11 @@ function HeaderBar({
             alt={`${COMPANY_NAME} Clinic Logo`}
             className={`${isSticky ? "h-9 md:h-11" : "h-10 sm:h-12 md:h-13"} w-auto object-contain rounded-md transition-all duration-200`}
           />
+          {/* Only where the bar has room: hidden on phones (the drawer shows it) and
+              between lg and 1440px, where the full nav pill already fills the row. */}
+          <span className="hidden sm:inline-block lg:hidden min-[1440px]:inline-block border-l border-[#a8843a]/40 pl-2.5 text-xs md:text-[13px] font-semibold uppercase tracking-[0.14em] leading-tight text-[#a8843a] whitespace-nowrap">
+            Hair Transplant
+          </span>
         </Link>
 
         {/* Desktop Navigation Floating White Pill */}
@@ -412,10 +417,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
   return (
     <>
       {/* 0. Top Announcement & Offer Banner */}
-      <TopOfferBanner
-        onOpenConsultation={handleOpenConsultation}
-        onVisibilityChange={setIsBannerVisible}
-      />
+      <TopOfferBanner onVisibilityChange={setIsBannerVisible} />
 
       {/* 1. Static Initial Header - Transparent overlay on every page */}
       <header
@@ -464,11 +466,16 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
         <div className="fixed inset-0 z-50 lg:hidden bg-black/60 backdrop-blur-sm">
           <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl flex flex-col p-6 overflow-y-auto">
             <div className="flex items-center justify-between pb-4 border-b border-gray-100">
-              <img
-                src="/images/logo3.png"
-                alt="Logo"
-                className="h-9 w-auto object-contain rounded-md"
-              />
+              <div className="flex items-center gap-2">
+                <img
+                  src="/images/logo3.png"
+                  alt="Logo"
+                  className="h-9 w-auto object-contain rounded-md"
+                />
+                <span className="border-l border-[#a8843a]/40 pl-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] leading-tight text-[#a8843a] whitespace-nowrap">
+                  Hair Transplant
+                </span>
+              </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-2 rounded-full hover:bg-gray-100"
