@@ -94,7 +94,7 @@ export default function RealResultsVideoSection() {
                 {/* 9:16 Portrait Video Thumbnail Card */}
                 <div className="relative aspect-[9/14] w-full rounded-3xl sm:rounded-[32px] overflow-hidden bg-[#e8e2d8] shadow-md border border-gray-100/90 group">
                   
-                  {/* U.Roots Watermark for card 3 */}
+                  {/* NexGen Meds Watermark for card 3 */}
                   {testimonial.watermark && (
                     <div className="absolute top-4 left-0 right-0 text-center z-10 select-none pointer-events-none">
                       <span className="text-xl font-bold font-serif tracking-tight text-[#1b221d]/90 block">

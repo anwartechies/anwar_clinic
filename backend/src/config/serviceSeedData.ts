@@ -27,7 +27,7 @@ export const ALL_SERVICES_SEED: ServiceSeedItem[] = [
   { slug: "eyebrow-reconstruction-in-india", title: "Eyebrow Reconstruction", desc: "Affordable and effective naturally dense eyebrow restoration with single-hair microscopic graft placement.", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/microblading-eyebrows-semi-permanent-makeup-proce-2024-10-22-11-42-00-utc-1568x1045.jpg", badge: "Micro-Implantation" },
   { slug: "moustache-hair-transplant-in-india", title: "Moustache Hair Transplant", desc: "Restore facial hair density and symmetry with naturally growing, trimmable mustache follicles.", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/Patchy-beard1.png", badge: "Facial Hair" },
   { slug: "best-fue-hair-transplant-in-india", title: "FUE Hair Transplant", desc: "Advanced Follicular Unit Extraction delivering individual graft harvesting with zero linear stitches.", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC03566-1568x2352.jpg", badge: "Minimally Invasive" },
-  { slug: "quick-hair-transplant-in-india", title: "QHT Hair Transplant", desc: "Patented simultaneous extraction and implantation with SAVA pen for maximum graft survival.", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC6206-1568x1356.jpg", badge: "Patented Gold Standard" },
+  { slug: "quick-hair-transplant-in-india", title: "NexGen Hair Transplant", desc: "Patented simultaneous extraction and implantation with SAVA pen for maximum graft survival.", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC6206-1568x1356.jpg", badge: "Patented Gold Standard" },
   { slug: "female-hair-transplantation", title: "Female Hair Transplant", desc: "Specialized no-shave, high-density hair restoration designed specifically for female pattern thinning.", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/b35bec9538.jpg", badge: "Women Care" },
   { slug: "ultra-dense-hair-transplant", title: "Ultra-Dense Hair Transplant", desc: "Attain maximum density per sq cm with specialized microscopic slit creation and rapid placement.", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/14aaaebdcf.jpg", badge: "High Density" },
   { slug: "beard-hair-transplant-in-india", title: "Beard Hair Transplant", desc: "Redefine your style with sharp, permanent jawline and cheek beard density that grows naturally.", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/cb68a799e3.jpg", badge: "Sharp Jawline" },
@@ -40,7 +40,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
   "temple-hair-transplant": {
     hero: {
       title: "Best Clinic for Temple Hair Transplant",
-      subtitle: "QHT Clinic provides the best Temple Hair Transplant solutions, designed by experts with advanced methods for natural results and affordable care.",
+      subtitle: "NexGen Hair Transplant provides the best Temple Hair Transplant solutions, designed by experts with advanced methods for natural results and affordable care.",
       bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/79a11a05a3.jpg",
       tagline: "Natural Temporal Triangle & Facial Framing",
       pointerLabel: "Acute Angle Direction",
@@ -50,7 +50,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Regain your confidence and hairline naturally with our expert solutions.",
       block1Paragraphs: [
         "A Temple Hair Transplant is a specialized microsurgical hair restoration procedure where hair follicles are extracted from the safe donor zone and meticulously implanted into the temporal peaks and temporal angles.",
-        "Restoring the temples frames the face and creates a balanced, youthful aesthetic. At QHT Clinic, our senior surgeons utilize superfine Cole punches and SAVA implanters to place single-hair grafts at flat, acute angles, ensuring authentic facial framing with lifelong permanence.",
+        "Restoring the temples frames the face and creates a balanced, youthful aesthetic. At NexGen Hair Transplant, our senior surgeons utilize superfine Cole punches and SAVA implanters to place single-hair grafts at flat, acute angles, ensuring authentic facial framing with lifelong permanence.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-1-3.jpg",
       pointer1: "Flat 10–15° Acute Temporal Angles",
@@ -58,13 +58,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Temple Hair Transplant Cost in India",
       block2Paragraphs: [
         "In India, temple hairline restoration has become one of the most requested aesthetic procedures for patients dealing with receding temporal points or wide forehead profiles.",
-        "At QHT Clinic, we offer affordable, cutting-edge QHT techniques providing painless extraction, maximum graft survival, and natural density tailored for both domestic and international patients.",
+        "At NexGen Hair Transplant, we offer affordable, cutting-edge NexGen Hair Transplant techniques providing painless extraction, maximum graft survival, and natural density tailored for both domestic and international patients.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-2-3.jpg",
     },
     results: {
       title: "Result of Temple Hair Transplant",
-      subtitle: "Temple hair transplant in India provides long-term, natural-looking results at QHT Clinic by restoring density at the temple region and providing desired hairlines with visible growth within 3-4 months.",
+      subtitle: "Temple hair transplant in India provides long-term, natural-looking results at NexGen Hair Transplant by restoring density at the temple region and providing desired hairlines with visible growth within 3-4 months.",
       results: [
         {
           name: "Irfan - Grade 5A Temple Definition",
@@ -100,7 +100,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     candidate: {
       title: "Who is an Ideal Candidate for Temple Hair Transplant",
-      subtitle: "The procedure at QHT Clinic is ideal for individuals experiencing temple recession seeking natural facial balance:",
+      subtitle: "The procedure at NexGen Hair Transplant is ideal for individuals experiencing temple recession seeking natural facial balance:",
       points: [
         {
           title: "Receding Temple Hairline",
@@ -112,7 +112,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           title: "Temple Hair Thinning",
-          desc: "Patients with diffuse miniaturization at the temporal angles suitable for high-density QHT packing.",
+          desc: "Patients with diffuse miniaturization at the temporal angles suitable for high-density NexGen Hair Transplant packing.",
         },
       ],
     },
@@ -121,7 +121,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       subtitle: "Advanced surgical methodologies tailored for delicate temporal angle reconstruction:",
       types: [
         {
-          title: "QHT Technique for Temples",
+          title: "NexGen Hair Transplant Technique for Temples",
           desc: "Combines Cole punch extraction with SAVA pen implantation, placing fine single hairs at flat angles with minimal downtime.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -225,11 +225,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Temple Hair Transplant Cost in India",
       costOverview: [
         "Temple hair transplant in India typically ranges from ₹40,000 to ₹90,000 depending on graft requirement (500 – 1,500 single-hair grafts), technique selected, and facial symmetry needs.",
-        "At QHT Clinic, all-inclusive packages with specialized SAVA implanters ensure accessible pricing with zero hidden charges.",
+        "At NexGen Hair Transplant, all-inclusive packages with specialized SAVA implanters ensure accessible pricing with zero hidden charges.",
       ],
       tableRows: [
         { type: "Bilateral Temple Peak Touch-up (500 – 800 Grafts)", cost: "₹40,000 – ₹65,000" },
-        { type: "Advanced QHT Temporal Reconstruction (800 – 1,500 Grafts)", cost: "₹65,000 – ₹95,000", badge: "Most Popular", isHighlight: true },
+        { type: "Advanced NexGen Hair Transplant Temporal Reconstruction (800 – 1,500 Grafts)", cost: "₹65,000 – ₹95,000", badge: "Most Popular", isHighlight: true },
         { type: "Combined Temple & Frontal Hairline (1,500 – 2,500 Grafts)", cost: "₹95,000 – ₹1,45,000" },
       ],
       factorsSubtitle: "The factors affecting Temple Hair Transplant cost include:",
@@ -247,11 +247,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-6-3.png",
           title: "Treatment Method Chosen",
-          desc: "Advanced QHT with SAVA pens offers superior angle control compared to standard FUE.",
+          desc: "Advanced NexGen Hair Transplant with SAVA pens offers superior angle control compared to standard FUE.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-7-3.png",
-          title: "Clinical Expertise at QHT Clinic",
+          title: "Clinical Expertise at NexGen Hair Transplant",
           desc: "Experienced surgeons ensure acute angle accuracy and natural facial balance.",
         },
         {
@@ -263,7 +263,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Temple Hair Transplant Clinic in India",
-      subtitle: "QHT Clinic is trusted for temple hair transplant with expert surgeons and advanced techniques:",
+      subtitle: "NexGen Hair Transplant is trusted for temple hair transplant with expert surgeons and advanced techniques:",
       stats: [
         { title: "High Success Rate", desc: "Completed thousands of Temple Hair transplants with acute angle precision and proper care." },
         { title: "100% Client Satisfaction", desc: "Proven track record of successful temporal restorations and satisfied patients." },
@@ -294,7 +294,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Temple Hair Transplant?",
+      title: "Why Choose NexGen for Temple Hair Transplant?",
       subtitle: "We combine precision temporal artistry with patented transplantation methods:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and influencers for undetectable temporal hairline framing." },
@@ -305,7 +305,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     postSurgerySupport: {
       title: "Post-Surgery Support for Temple Hair Transplant",
-      subtitle: "QHT Clinic provides structured aftercare to ensure smooth healing and natural temporal growth.",
+      subtitle: "NexGen Hair Transplant provides structured aftercare to ensure smooth healing and natural temporal growth.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3-3.jpg",
       supportItems: [
         { title: "Regular Follow-ups", desc: "Routine clinical visits to track recovery and graft rooting." },
@@ -337,7 +337,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           label: "Week 1-2",
           expectations: ["Mild redness, slight swelling, and sensitive skin around the temporal peaks."],
-          careGuidelines: ["Keep head elevated, follow QHT wash routine, and avoid scratching grafts."],
+          careGuidelines: ["Keep head elevated, follow NexGen Hair Transplant wash routine, and avoid scratching grafts."],
         },
         {
           label: "Week 2-6",
@@ -362,10 +362,10 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     comparison: {
       title: "Comparison of Temple Hair Transplant Techniques",
-      subtitle: "Key differences between advanced QHT and traditional FUE for temple reconstruction:",
+      subtitle: "Key differences between advanced NexGen Hair Transplant and traditional FUE for temple reconstruction:",
       cards: [
         {
-          title: "QHT Temple Hair Transplant",
+          title: "NexGen Temple Hair Transplant",
           purpose: "Precision acute hair exit angle placement & high density using SAVA pens.",
           effectiveness: "Natural temporal margins, 98% graft survival, seamless blending.",
           risk: "Minimally invasive, rapid 5–7 day recovery, zero visible scars.",
@@ -385,15 +385,15 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       faqs: [
         {
           question: "What is the best method for temple hairline transplant?",
-          answer: "The Advanced QHT Technique is the gold standard because it ensures acute 10–15° hair exit angles, high density, and rapid 5–7 day recovery.",
+          answer: "The Advanced NexGen Hair Transplant Technique is the gold standard because it ensures acute 10–15° hair exit angles, high density, and rapid 5–7 day recovery.",
         },
         {
           question: "Is temple hair transplant permanent?",
           answer: "Yes. Follicles harvested from the permanent safe donor zone are DHT-resistant and grow naturally for a lifetime.",
         },
         {
-          question: "Can failed temple transplants be corrected at QHT?",
-          answer: "Yes. QHT Clinic specializes in revision repair, extracting poorly angled grafts and reconstructing natural temporal symmetry.",
+          question: "Can failed temple transplants be corrected at NexGen Hair Transplant?",
+          answer: "Yes. NexGen Hair Transplant specializes in revision repair, extracting poorly angled grafts and reconstructing natural temporal symmetry.",
         },
       ],
     },
@@ -410,7 +410,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Heading: "What is Natural Look Hair Restoration?",
       block1Lead: "Advanced methods developed to blend in flawlessly to your hair with long-lasting, natural results.",
       block1Paragraphs: [
-        "Natural Look Hair Restoration is an advanced cosmetic treatment designed to restore thinning or bald scalp areas with complete aesthetic realism. At QHT Clinic, our objective is to create natural hair transplant results that seamlessly integrate with your existing hair geometry.",
+        "Natural Look Hair Restoration is an advanced cosmetic treatment designed to restore thinning or bald scalp areas with complete aesthetic realism. At NexGen Hair Transplant, our objective is to create natural hair transplant results that seamlessly integrate with your existing hair geometry.",
         "By employing ultra-refined micro-slit tools and calibrating root placement for angle, depth, and curl orientation, we guarantee an authentic, undetectable hairline without pluggy patterns or surgical telltales.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
@@ -418,7 +418,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       pointer2: "Undetectable Single-Hair Transition",
       block2Heading: "Natural Hair Transplant in India",
       block2Paragraphs: [
-        "India has emerged as the premier global hub for undetectable hair restoration. At QHT Clinic, we combine sapphire micro-incision technology with senior trichology surgeons to provide permanent, naturalistic density.",
+        "India has emerged as the premier global hub for undetectable hair restoration. At NexGen Hair Transplant, we combine sapphire micro-incision technology with senior trichology surgeons to provide permanent, naturalistic density.",
         "Thousands of patients across India and worldwide trust our clinical expertise to deliver camera-ready hair restoration with minimal downtime.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
@@ -486,7 +486,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       subtitle: "Advanced surgical methodologies tailored for undetectable hair restoration:",
       types: [
         {
-          title: "Quick Hair Transplant (QHT)",
+          title: "NexGen Hair Transplant",
           desc: "Patented simultaneous extraction and placement using Cole punches and SAVA implanters for maximum graft survival and undetectable density.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -589,11 +589,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Hair Restoration Cost in India",
       costOverview: [
         "The cost of natural hair restoration in India typically ranges from ₹60,000 to ₹1,80,000 based on graft requirement (1,500 – 4,000+ grafts), technique selected, and surgeon experience.",
-        "At QHT Clinic, we offer transparent all-inclusive packages with zero hidden fees and complimentary post-op PRP sessions.",
+        "At NexGen Hair Transplant, we offer transparent all-inclusive packages with zero hidden fees and complimentary post-op PRP sessions.",
       ],
       tableRows: [
         { type: "Standard FUE Natural Restoration (1,500 – 2,500 Grafts)", cost: "₹60,000 – ₹1,10,000" },
-        { type: "Advanced QHT Natural Look Transplant (2,500 – 3,500 Grafts)", cost: "₹1,10,000 – ₹1,70,000", badge: "Most Popular", isHighlight: true },
+        { type: "Advanced NexGen Hair Transplant Natural Look Transplant (2,500 – 3,500 Grafts)", cost: "₹1,10,000 – ₹1,70,000", badge: "Most Popular", isHighlight: true },
         { type: "Mega-Session Undetectable Full Scalp (3,500+ Grafts)", cost: "₹1,70,000 – ₹2,50,000" },
       ],
       factorsSubtitle: "Factors Affecting The Cost of Natural Hair Transplant",
@@ -605,8 +605,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-4.webp",
-          title: "Technique Chosen (QHT vs FUE)",
-          desc: "Patented QHT with simultaneous SAVA pen placement utilizes premium sapphire micro-blades.",
+          title: "Technique Chosen (NexGen Hair Transplant vs FUE)",
+          desc: "NexGen Hair Transplant with simultaneous SAVA pen placement utilizes premium sapphire micro-blades.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
@@ -622,7 +622,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Undetectable Hair Restoration Clinics in India",
-      subtitle: "QHT Clinic combines clinical expertise, cutting-edge tools, and personalized aesthetic planning:",
+      subtitle: "NexGen Hair Transplant combines clinical expertise, cutting-edge tools, and personalized aesthetic planning:",
       stats: [
         { title: "5000+ Undetectable Surgeries", desc: "Successful natural hair restorations performed with seamless hairline artistry." },
         { title: "97%+ Graft Survival", desc: "Achieved through sapphire blades, hypothermic preservation, and SAVA implanters." },
@@ -653,7 +653,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Natural Hair Transplant?",
+      title: "Why Choose NexGen for Natural Hair Transplant?",
       subtitle: "Experience, surgical precision, and patient-centered protocols that set us apart:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Trustworthy Expertise", desc: "Senior surgeons specializing in undetectable single-hair micro transitions." },
@@ -729,10 +729,10 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     comparison: {
       title: "Comparison Of Natural Hair Transplant",
-      subtitle: "How QHT's undetectable restoration compares against conventional hair transplant methods:",
+      subtitle: "How NexGen Hair Transplant's undetectable restoration compares against conventional hair transplant methods:",
       cards: [
         {
-          title: "Natural Hair Transplant (QHT)",
+          title: "Natural Hair Transplant (NexGen Hair Transplant)",
           purpose: "Simultaneous extraction & placement with SAVA pens into sapphire micro-slits.",
           effectiveness: "Undetectable natural hairline, 97%+ graft survival, seamless density blending.",
           risk: "Scarless, minimal downtime, fast 5-day healing.",
@@ -778,21 +778,21 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Restoration or creation of fuller, naturally looking eyebrows.",
       block1Paragraphs: [
         "An Eyebrow Reconstruction is a delicate cosmetic and reconstructive hair restoration procedure designed to recreate natural density, arch curvature, and fuller framing for sparse, damaged, or absent eyebrows.",
-        "Using our patented QHT (Quick Hair Transplant) technique, fine single-hair grafts extracted from the safe donor zone are implanted along the exact acute angles of natural brow hair, delivering permanent, trimmable, and smudge-proof results without relying on daily makeup or cosmetic tattoos.",
+        "Using our NexGen Hair Transplant technique, fine single-hair grafts extracted from the safe donor zone are implanted along the exact acute angles of natural brow hair, delivering permanent, trimmable, and smudge-proof results without relying on daily makeup or cosmetic tattoos.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-1-4.jpg",
       pointer1: "Flat 10–15° Acute Implantation",
       pointer2: "Single-Hair Micro Selection",
       block2Heading: "Eyebrow Reconstruction in India",
       block2Paragraphs: [
-        "India is globally renowned for precision eyebrow transplantation. At QHT Clinic, our specialized facial hair surgeons utilize custom micro-slit blades and SAVA pen implanters to ensure imperceptible scars and high graft survival.",
+        "India is globally renowned for precision eyebrow transplantation. At NexGen Hair Transplant, our specialized facial hair surgeons utilize custom micro-slit blades and SAVA pen implanters to ensure imperceptible scars and high graft survival.",
         "With pan-India clinic facilities and transparent pricing, patients achieve symmetrical, face-framing brows at highly affordable costs.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-2-4.jpg",
     },
     results: {
       title: "Results of Eyebrow Reconstruction",
-      subtitle: "At QHT Clinic, eyebrow reconstruction delivers lifelong natural brows that grow continuously, framing the eyes with balanced symmetry and youthful facial harmony.",
+      subtitle: "At NexGen Hair Transplant, eyebrow reconstruction delivers lifelong natural brows that grow continuously, framing the eyes with balanced symmetry and youthful facial harmony.",
       results: [
         {
           name: "Irfan - Grade 5A Brow Reconstruction",
@@ -853,7 +853,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       subtitle: "Specialized microsurgical harvesting and implantation techniques for eyebrow restoration:",
       types: [
         {
-          title: "QHT Technique for Eyebrow",
+          title: "NexGen Hair Transplant Technique for Eyebrow",
           desc: "Simultaneous micro-slit creation and instant single-hair implantation ensuring precise flat angles and rapid recovery.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -927,7 +927,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           stepNumber: "03",
           title: "Selection of Techniques",
-          desc: "Utilizing advanced QHT simultaneous pen placement or micro-FUE depending on case requirements.",
+          desc: "Utilizing advanced NexGen Hair Transplant simultaneous pen placement or micro-FUE depending on case requirements.",
         },
         {
           stepNumber: "04",
@@ -966,10 +966,10 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Eyebrow Reconstruction Cost in India",
       costOverview: [
         "In India, eyebrow hair transplant costs typically range from ₹25,000 to ₹65,000 depending on graft count (200–600 single hairs), technique used, and surgeon expertise.",
-        "At QHT Clinic, all-inclusive packages with specialized single-hair SAVA implanters ensure accessible pricing and zero hidden charges.",
+        "At NexGen Hair Transplant, all-inclusive packages with specialized single-hair SAVA implanters ensure accessible pricing and zero hidden charges.",
       ],
       tableRows: [
-        { type: "QHT Technique (Patented Micro-Slit)", cost: "₹25,000 – ₹55,000", badge: "Most Popular", isHighlight: true },
+        { type: "NexGen Hair Transplant Technique (Micro-Slit)", cost: "₹25,000 – ₹55,000", badge: "Most Popular", isHighlight: true },
         { type: "Standard FUE Eyebrow Transplant", cost: "₹20,000 – ₹50,000" },
         { type: "FUT Strip Eyebrow Restoration", cost: "₹25,000 – ₹60,000" },
       ],
@@ -983,7 +983,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-6-3.png",
           title: "Techniques Used",
-          desc: "Advanced QHT with SAVA pens provides acute angle control and minimal trauma compared to standard methods.",
+          desc: "Advanced NexGen Hair Transplant with SAVA pens provides acute angle control and minimal trauma compared to standard methods.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/Vector-2.png",
@@ -998,8 +998,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyUs: {
-      title: "Why QHT is Amongst the Most Trusted Eyebrow Reconstruction Clinics in India",
-      subtitle: "QHT Clinic combines microsurgical precision, aesthetic artistry, and pan-India presence:",
+      title: "Why NexGen Hair Transplant is Amongst the Most Trusted Eyebrow Reconstruction Clinics in India",
+      subtitle: "NexGen Hair Transplant combines microsurgical precision, aesthetic artistry, and pan-India presence:",
       stats: [
         { title: "High Precision", desc: "Patented SAVA implanters ensure flat 10–15° angle placement matching natural brow feathering." },
         { title: "Highly Affordable", desc: "Transparent, accessible packages with full post-procedure care included." },
@@ -1030,7 +1030,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT Clinic for Eyebrow Reconstruction",
+      title: "Why Choose NexGen Hair Transplant for Eyebrow Reconstruction",
       subtitle: "Comprehensive counselling, world-class precision, and dedicated patient care:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Proper Analysis & Counselling", desc: "Personalized brow mapping aligned to golden ratio facial proportions." },
@@ -1042,7 +1042,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     postSurgerySupport: {
       title: "Post-Surgery Support For Eyebrow Reconstruction",
-      subtitle: "QHT Clinic provides structured post-operative protocols for smooth eyebrow healing and optimal density.",
+      subtitle: "NexGen Hair Transplant provides structured post-operative protocols for smooth eyebrow healing and optimal density.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3-3.jpg",
       supportItems: [
         { title: "Proper Guidance", desc: "Detailed cleansing and sanitization routines to prevent irritation or infection." },
@@ -1113,11 +1113,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       patientCountText: "4.9K patients booked their sessions",
     },
     comparison: {
-      title: "Comparison of QHT, FUE, and FUT Techniques for Eyebrow Reconstruction",
+      title: "Comparison of NexGen Hair Transplant, FUE, and FUT Techniques for Eyebrow Reconstruction",
       subtitle: "Key differences in invasiveness, scarring, discomfort, and recovery across brow techniques:",
       cards: [
         {
-          title: "QHT Technique (Patented)",
+          title: "NexGen Hair Transplant Technique",
           purpose: "Simultaneous micro-slit creation & single-hair SAVA pen placement.",
           effectiveness: "Scarless, natural acute feathering, 98% graft survival.",
           risk: "Minimally invasive with rapid 4–5 day recovery.",
@@ -1152,11 +1152,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "What is the importance of choosing the right clinic?",
-          answer: "Eyebrow hair grows at very flat, acute angles. Choosing an experienced clinic like QHT Clinic ensures accurate angle placement, preventing misdirected hairs and delivering natural results.",
+          answer: "Eyebrow hair grows at very flat, acute angles. Choosing an experienced clinic like NexGen Hair Transplant ensures accurate angle placement, preventing misdirected hairs and delivering natural results.",
         },
         {
           question: "Is the procedure affordable?",
-          answer: "Yes. QHT Clinic offers transparent, highly affordable packages with world-class microsurgical precision and zero hidden costs.",
+          answer: "Yes. NexGen Hair Transplant offers transparent, highly affordable packages with world-class microsurgical precision and zero hidden costs.",
         },
         {
           question: "Can I continue taking blood thinners post-treatment?",
@@ -1172,7 +1172,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
   "crown-hair-transplant": {
     hero: {
       title: "Best Crown Hair Transplant Clinic in India",
-      subtitle: "Crown Hair Transplant solutions at QHT Clinic are tailored by experts with affordability, artistic spiral whorl design, and advanced methods.",
+      subtitle: "Crown Hair Transplant solutions at NexGen are tailored by experts with affordability, artistic spiral whorl design, and advanced methods.",
       bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/8ce953a5b0.jpg",
       tagline: "Natural Spiral Whorl Reconstruction & Vertex Density",
       pointerLabel: "Spiral Whorl Alignment",
@@ -1182,21 +1182,21 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Restore your crown hair naturally with expert transplant solutions.",
       block1Paragraphs: [
         "A crown hair transplant restores hair density in the bald region or thinning vertex spots at the back of the scalp, commonly referred to as the crown. Because the crown features a complex spiral (whorl) growth pattern and experiences progressive hair loss, restoration requires artistic angle mapping, precise micro-incisions, and senior surgical intervention.",
-        "At QHT Clinic, our trichology team analyzes vertex baldness extent and future thinning trajectories to craft an authentic whorl design with natural multi-directional angles, preventing pluggy or unnatural appearance.",
+        "At NexGen Hair Transplant, our trichology team analyzes vertex baldness extent and future thinning trajectories to craft an authentic whorl design with natural multi-directional angles, preventing pluggy or unnatural appearance.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
       pointer1: "Artistic Spiral Angle Crafting",
       pointer2: "High-Density Vertex Packing",
       block2Heading: "Crown Hair Transplant in India",
       block2Paragraphs: [
-        "Crown hair transplant in India is a trusted solution for patients experiencing thinning or complete baldness at the vertex. At QHT Clinic, patented QHT methods, ultra-fine Cole punches, and SAVA implanters ensure realistic spiral patterns and rapid healing.",
-        "With world-class clinical infrastructure and transparent affordable pricing, QHT Clinic is the preferred choice for international and domestic patients seeking crown restoration.",
+        "Crown hair transplant in India is a trusted solution for patients experiencing thinning or complete baldness at the vertex. At NexGen Hair Transplant, NexGen Hair Transplant methods, ultra-fine Cole punches, and SAVA implanters ensure realistic spiral patterns and rapid healing.",
+        "With world-class clinical infrastructure and transparent affordable pricing, NexGen Hair Transplant is the preferred choice for international and domestic patients seeking crown restoration.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
     },
     results: {
       title: "Result of Crown Hair Transplant",
-      subtitle: "At QHT Clinic, crown hair transplant restores natural vertex density with an authentic spiral pattern, providing seamless blending with native hair and permanent coverage.",
+      subtitle: "At NexGen Hair Transplant, crown hair transplant restores natural vertex density with an authentic spiral pattern, providing seamless blending with native hair and permanent coverage.",
       results: [
         {
           name: "Irfan - Grade 5A Crown Restoration",
@@ -1267,7 +1267,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Technique for Crown",
+          title: "NexGen Hair Transplant Technique for Crown",
           desc: "Superfine Cole punches and SAVA implanters deliver simultaneous extraction and placement with superior graft survival.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -1360,11 +1360,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Crown Hair Transplant Cost in India",
       costOverview: [
         "Crown Hair Transplant in India typically ranges from ₹80,000 to ₹1,50,000 for moderate vertex baldness, and ₹1,50,000 to ₹2,80,000 for extensive high-graft cases.",
-        "At QHT Clinic, we offer all-inclusive transparent packages with advanced SAVA implanter pens, sapphire blades, and zero hidden charges.",
+        "At NexGen Hair Transplant, we offer all-inclusive transparent packages with advanced SAVA implanter pens, sapphire blades, and zero hidden charges.",
       ],
       tableRows: [
         { type: "Moderate Crown Thinning (1,500 – 2,500 Grafts)", cost: "₹80,000 – ₹1,30,000" },
-        { type: "Advanced QHT Crown Reconstruction (2,500 – 3,500 Grafts)", cost: "₹1,30,000 – ₹1,90,000", badge: "Most Popular", isHighlight: true },
+        { type: "Advanced NexGen Hair Transplant Crown Reconstruction (2,500 – 3,500 Grafts)", cost: "₹1,30,000 – ₹1,90,000", badge: "Most Popular", isHighlight: true },
         { type: "Mega Session Crown & Mid-Scalp (3,500+ Grafts)", cost: "₹1,90,000 – ₹2,80,000" },
       ],
       factorsSubtitle: "Factors Affecting The Cost of Crown Hair Transplant",
@@ -1381,8 +1381,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
-          title: "Technique Used (FUE vs. QHT)",
-          desc: "Advanced QHT simultaneous extraction and placement with Cole punches requires specialized tooling.",
+          title: "Technique Used (FUE vs. NexGen Hair Transplant)",
+          desc: "Advanced NexGen Hair Transplant simultaneous extraction and placement with Cole punches requires specialized tooling.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-2.webp",
@@ -1403,7 +1403,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Crown Hair Transplant Clinics in India",
-      subtitle: "QHT Clinic is trusted for crown hair restoration with expert surgeons and patented techniques:",
+      subtitle: "NexGen Hair Transplant is trusted for crown hair restoration with expert surgeons and patented techniques:",
       stats: [
         { title: "5000+ Crown Surgeries", desc: "Completed with artistic swirl accuracy and natural aesthetic density." },
         { title: "100% Client Satisfaction", desc: "Proven track record of successful vertex transformations and satisfied patients." },
@@ -1433,7 +1433,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Crown Hair Transplant?",
+      title: "Why Choose NexGen for Crown Hair Transplant?",
       subtitle: "We combine precision spiral artistry with patented quick transplantation:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and celebrities for undetectable vertex restoration." },
@@ -1475,7 +1475,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           label: "Week 1-2",
           expectations: ["Mild redness, slight swelling, and sensitive skin around the vertex whorl."],
-          careGuidelines: ["Keep head elevated, follow QHT wash routine, and avoid touching the grafts."],
+          careGuidelines: ["Keep head elevated, follow NexGen Hair Transplant wash routine, and avoid touching the grafts."],
         },
         {
           label: "Week 2-6",
@@ -1500,10 +1500,10 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     comparison: {
       title: "Comparison of Crown Hair Transplant Techniques",
-      subtitle: "Key technical differences between advanced QHT and traditional FUE for crown restoration:",
+      subtitle: "Key technical differences between advanced NexGen Hair Transplant and traditional FUE for crown restoration:",
       cards: [
         {
-          title: "QHT Crown Hair Transplant",
+          title: "NexGen Crown Hair Transplant",
           purpose: "Simultaneous extraction & placement with SAVA pens into micro-slits.",
           effectiveness: "Natural spiral whorl geometry, 95%+ graft survival, maximum vertex density.",
           risk: "Minimally invasive, rapid 5–7 day healing, zero visible scars.",
@@ -1523,11 +1523,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       faqs: [
         {
           question: "How effective is a crown hair transplant?",
-          answer: "QHT Clinic offers crown hair transplants with natural-looking spiral whorl designs and permanent, dense regrowth.",
+          answer: "NexGen offers crown hair transplants with natural-looking spiral whorl designs and permanent, dense regrowth.",
         },
         {
           question: "Which technique is better for crown hair transplant?",
-          answer: "The QHT technique is superior because it allows artistic multi-directional spiral slit creation, higher follicle survival, and faster recovery.",
+          answer: "The NexGen Hair Transplant technique is superior because it allows artistic multi-directional spiral slit creation, higher follicle survival, and faster recovery.",
         },
         {
           question: "How much time does recovery take after crown hair transplant surgery?",
@@ -1539,7 +1539,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "Does a crown hair transplant leave scars after surgery?",
-          answer: "The QHT technique uses micro-punch harvesting leaving virtually undetectable pin-point marks that are fully concealed by surrounding hair.",
+          answer: "The NexGen Hair Transplant technique uses micro-punch harvesting leaving virtually undetectable pin-point marks that are fully concealed by surrounding hair.",
         },
       ],
     },
@@ -1557,21 +1557,21 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Restoring more than hair! Restoring confidence.",
       block1Paragraphs: [
         "Burns often cause lifelong scars that remain below the surface, impacting not just physical appearance, but self-esteem as well. Burn Hair Transplant helps safely restore natural hair patterns to areas affected by thermal, chemical, or radiation burns—including the scalp, eyebrows, beard, and mustache.",
-        "At QHT Clinic, our senior surgical team specializes in reconstructive restoration over fibrotic scar tissue. Utilizing specialized sapphire micro-incisions and patented SAVA implanters, we maximize graft vascularization and anchoring in damaged tissue.",
+        "At NexGen Hair Transplant, our senior surgical team specializes in reconstructive restoration over fibrotic scar tissue. Utilizing specialized sapphire micro-incisions and patented SAVA implanters, we maximize graft vascularization and anchoring in damaged tissue.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
       pointer1: "Scar Tissue Re-vascularization",
       pointer2: "High-Survival Micro Grafting",
       block2Heading: "Burn Hair Transplant in India",
       block2Paragraphs: [
-        "At QHT Clinic in India, we understand the emotional and psychological impact of burn-related hair loss. Our compassionate team combines advanced reconstructive surgical mastery with gentle care to achieve optimal graft survival in challenging scarred dermis.",
+        "At NexGen Hair Transplant in India, we understand the emotional and psychological impact of burn-related hair loss. Our compassionate team combines advanced reconstructive surgical mastery with gentle care to achieve optimal graft survival in challenging scarred dermis.",
         "With specialized sapphire punches and high magnification, we deliver natural-looking coverage that camouflages burn markings permanently at transparent and affordable costs.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
     },
     results: {
       title: "Result of Burn Hair Transplant",
-      subtitle: "After a Burn Hair Transplant at QHT Clinic, patients experience natural regrowth over scarred tissue that blends seamlessly with existing hair, restoring facial harmony and self-assurance.",
+      subtitle: "After a Burn Hair Transplant at NexGen, patients experience natural regrowth over scarred tissue that blends seamlessly with existing hair, restoring facial harmony and self-assurance.",
       results: [
         {
           name: "Irfan - Grade 5A Scar Restoration",
@@ -1695,7 +1695,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           stepNumber: "03",
-          title: "Extraction with QHT Technique",
+          title: "Extraction with NexGen Hair Transplant Technique",
           desc: "Gentle sub-millimeter punch harvesting ensuring minimal donor trauma and maximum graft survival.",
         },
         {
@@ -1745,7 +1745,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Burn Hair Transplant Cost in India",
       costOverview: [
         "Burn Hair Transplant Cost in India is significantly more affordable than in Western countries, ranging from ₹45,000 to ₹1,60,000 depending on scar size, vascularity, and graft requirements.",
-        "QHT Clinic offers transparent, all-inclusive packages with specialized sapphire punches and zero hidden charges.",
+        "NexGen Hair Transplant offers transparent, all-inclusive packages with specialized sapphire punches and zero hidden charges.",
       ],
       tableRows: [
         { type: "Localized Facial Burn Restoration (Eyebrow / Beard)", cost: "₹45,000 – ₹75,000" },
@@ -1778,7 +1778,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Burn Hair Transplant Clinics in India?",
-      subtitle: "At QHT Clinic, we blend reconstructive expertise, advanced technology, and compassionate care for burn survivors:",
+      subtitle: "At NexGen Hair Transplant, we blend reconstructive expertise, advanced technology, and compassionate care for burn survivors:",
       stats: [
         { title: "5000+ Reconstructions", desc: "Successful burn and scar hair restoration procedures performed with clinical excellence." },
         { title: "95%+ Graft Survival", desc: "High graft survival achieved using sapphire punches and SAVA implanter technology." },
@@ -1810,8 +1810,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Burn Hair Transplant?",
-      subtitle: "QHT Clinic specializes in turning scars into stories of strength with compassionate care:",
+      title: "Why Choose NexGen for Burn Hair Transplant?",
+      subtitle: "NexGen Hair Transplant specializes in turning scars into stories of strength with compassionate care:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Expertise in Burn Cases", desc: "Senior surgeons with extensive experience in reconstructive grafting on fibrotic tissue." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Safe & Sterile Procedures", desc: "Carried out in ultra-sterile hospital-grade OT suites with strict infection control." },
@@ -1936,7 +1936,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Advanced procedures that limit loss of grafts and raise your natural density for Afro hair.",
       block1Paragraphs: [
         "An Afro Hair Transplant in India is a specialized hair restoration procedure designed specifically for people with curly or tightly coiled hair textures. Afro hair requires specialized care because the hair follicles are curved beneath the scalp dermis and require extra precision during extraction and placement.",
-        "Afro hair is delicate and highly curly, where most conventional clinics experience up to 20% graft transection. At QHT Clinic, our advanced curved-punch extraction keeps transection rates below 5%, preserving every curl intact and delivering fuller, natural results.",
+        "Afro hair is delicate and highly curly, where most conventional clinics experience up to 20% graft transection. At NexGen Hair Transplant, our advanced curved-punch extraction keeps transection rates below 5%, preserving every curl intact and delivering fuller, natural results.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3.webp",
       pointer1: "Transection Rate < 5%",
@@ -1944,13 +1944,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Affordable Afro Hair Transplant India",
       block2Paragraphs: [
         "India has emerged as a premier global destination for advanced Afro hair restoration due to senior surgical expertise, state-of-the-art facilities, and accessible pricing.",
-        "At QHT Clinic, international patients receive world-class care utilizing specialized sapphire punches, curved micro-punches, and 10x optical magnification tools with 100% transparent pricing and no hidden costs.",
+        "At NexGen Hair Transplant, international patients receive world-class care utilizing specialized sapphire punches, curved micro-punches, and 10x optical magnification tools with 100% transparent pricing and no hidden costs.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4.webp",
     },
     results: {
       title: "Result of Afro Hair Transplant In India",
-      subtitle: "After a successful Afro Hair Transplant at QHT Clinic, you will enjoy restored natural density, authentic coiled curl patterns, camouflaged scalp scars, and a lifelong confidence boost.",
+      subtitle: "After a successful Afro Hair Transplant at NexGen, you will enjoy restored natural density, authentic coiled curl patterns, camouflaged scalp scars, and a lifelong confidence boost.",
       results: [
         {
           name: "Irfan - Grade 5A Afro Restoration",
@@ -2021,7 +2021,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Technique for Afro Hair",
+          title: "NexGen Hair Transplant Technique for Afro Hair",
           desc: "A rapid simultaneous extraction and implantation workflow ensuring minimal out-of-body holding time and superior graft survival.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -2084,7 +2084,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           stepNumber: "03",
-          title: "Extraction with QHT Technique",
+          title: "Extraction with NexGen Hair Transplant Technique",
           desc: "Specialized curved punches extract subterranean coiled roots while maintaining transection rates under 5%.",
         },
         {
@@ -2124,11 +2124,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Afro Hair Transplant Cost in India",
       costOverview: [
         "Afro Hair Transplant in India ranges from ₹50,000 to ₹1,80,000 depending on graft numbers, curl curvature complexity, and surgeon expertise.",
-        "At QHT Clinic, specialized curved punch instruments and sapphire tools are provided with complete transparent pricing and no hidden costs.",
+        "At NexGen Hair Transplant, specialized curved punch instruments and sapphire tools are provided with complete transparent pricing and no hidden costs.",
       ],
       tableRows: [
         { type: "Partial Afro Hairline Restoration", cost: "₹50,000 – ₹85,000" },
-        { type: "Advanced QHT Afro Restoration (2,000 – 3,500 Grafts)", cost: "₹90,000 – ₹1,60,000", badge: "Specialized Choice", isHighlight: true },
+        { type: "Advanced NexGen Hair Transplant Afro Restoration (2,000 – 3,500 Grafts)", cost: "₹90,000 – ₹1,60,000", badge: "Specialized Choice", isHighlight: true },
         { type: "Mega Session Afro Coverage (3,500+ Grafts)", cost: "₹1,60,000 – ₹2,20,000" },
       ],
       factorsSubtitle: "Factors Affecting The Cost of Afro Hair Transplant",
@@ -2140,8 +2140,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
-          title: "Method (FUE vs. QHT)",
-          desc: "Advanced QHT technique with specialized curved punches preserves curl integrity with <5% transection.",
+          title: "Method (FUE vs. NexGen Hair Transplant)",
+          desc: "Advanced NexGen Hair Transplant technique with specialized curved punches preserves curl integrity with <5% transection.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
@@ -2157,10 +2157,10 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why Are We Amongst the Best Clinics for Afro Hair Transplant in India?",
-      subtitle: "QHT Clinic integrates artistry, curved punch technology, and individualized care for authentic Afro results:",
+      subtitle: "NexGen Hair Transplant integrates artistry, curved punch technology, and individualized care for authentic Afro results:",
       stats: [
         { title: "500+ Afro Transplants", desc: "Successfully completed with authentic coiled texture and natural aesthetic density." },
-        { title: "95%+ Graft Survival", desc: "Achieved via patented QHT rapid simultaneous extraction and placement." },
+        { title: "95%+ Graft Survival", desc: "Achieved via NexGen Hair Transplant rapid simultaneous extraction and placement." },
         { title: "<5% Transection Rate", desc: "Specialized curved punches preserve subterranean curl architecture." },
         { title: "100% Patient-Centric Care", desc: "Top-rated clinical protocols preventing keloids and hyperpigmentation." },
       ],
@@ -2188,15 +2188,15 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Afro Hair Transplant?",
-      subtitle: "QHT Clinic provides dedicated expertise and specialized equipment for Afro-textured hair:",
+      title: "Why Choose NexGen for Afro Hair Transplant?",
+      subtitle: "NexGen Hair Transplant provides dedicated expertise and specialized equipment for Afro-textured hair:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Delhi-7-1.webp", title: "Specialists in Afro Hair Cases", desc: "Surgeons trained in handling coiled root structures with zero transection." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Gfc-Tretment@2x.webp", title: "Surgical Tools for Precision", desc: "Curved sapphire punches and high-power magnification systems ensure graft survival." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Haridwar-1.webp", title: "Affordable Afro Hair Transplant in India", desc: "Transparent international patient packages with no hidden surcharges." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/1000-1200-1-1.webp", title: "Restore Confidence", desc: "Recreate natural ethnic hairline framing that looks authentic and youthful." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Thorough Aftercare", desc: "Personalized scalp hydration and anti-keloid care protocols." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Worldwide Trust", desc: "Patients travel globally to QHT Clinic for reliable Afro hair restoration." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Worldwide Trust", desc: "Patients travel globally to NexGen Hair Transplant for reliable Afro hair restoration." },
       ],
     },
     postSurgerySupport: {
@@ -2302,7 +2302,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
   "best-fue-hair-transplant-in-india": {
     hero: {
       title: "Best Clinic for FUE Hair Transplant in India",
-      subtitle: "QHT Clinic provides the best FUE Hair Transplant solutions, designed by experts with advanced methods for natural results and affordable care.",
+      subtitle: "NexGen Hair Transplant provides the best FUE Hair Transplant solutions, designed by experts with advanced methods for natural results and affordable care.",
       bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC03566-1568x2352.jpg",
       tagline: "Minimally Invasive Individual Unit Extraction",
       pointerLabel: "Micro-Punch Precision",
@@ -2312,7 +2312,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Restore your confidence and hairline with our expert care FUE solutions.",
       block1Paragraphs: [
         "FUE (Follicular Unit Extraction) Hair Transplant is a minimally invasive hair restoration procedure where individual follicular units are extracted from the donor area and implanted into bald or thinning zones. Unlike conventional strip methods, FUE leaves no visible linear scars and enables fast healing.",
-        "At QHT Clinic, our surgeons utilize the Quick Hair Transplant (QHT) technique, combining superfine punches and SAVA implanters to deliver natural-looking hairlines, maximum graft survival, and dense coverage personalized to each patient's facial geometry.",
+        "At NexGen Hair Transplant, our surgeons utilize the NexGen Hair Transplant technique, combining superfine punches and SAVA implanters to deliver natural-looking hairlines, maximum graft survival, and dense coverage personalized to each patient's facial geometry.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-2.jpg",
       pointer1: "Individual Unit Extraction",
@@ -2320,13 +2320,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "FUE Hair Transplant in India",
       block2Paragraphs: [
         "In India, FUE Hair Transplant has become one of the most sought-after solutions for individuals facing receding hairlines or thinning vertex crowns due to its minimally invasive nature and natural results.",
-        "QHT Clinic combines advanced FUE extraction with SAVA pen implantation to ensure a virtually painless experience, higher graft survival rates, and authentic growth patterns at affordable pricing across India.",
+        "NexGen Hair Transplant combines advanced FUE extraction with SAVA pen implantation to ensure a virtually painless experience, higher graft survival rates, and authentic growth patterns at affordable pricing across India.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-1-1.jpg",
     },
     results: {
       title: "Result of FUE Hair Transplant",
-      subtitle: "At QHT Clinic, FUE hair transplants provide long-term, natural-looking results by restoring density and creating natural hairlines, with visible healthy growth starting within 3-4 months.",
+      subtitle: "At NexGen Hair Transplant, FUE hair transplants provide long-term, natural-looking results by restoring density and creating natural hairlines, with visible healthy growth starting within 3-4 months.",
       results: [
         {
           name: "Irfan - Grade 5A FUE Restoration",
@@ -2362,7 +2362,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     candidate: {
       title: "Who is an Ideal Candidate for FUE Hair Transplant",
-      subtitle: "FUE hair transplant at QHT Clinic is ideal for individuals experiencing hair loss who want natural results and fast recovery:",
+      subtitle: "FUE hair transplant at NexGen is ideal for individuals experiencing hair loss who want natural results and fast recovery:",
       points: [
         {
           title: "Receding Hairline",
@@ -2374,13 +2374,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           title: "Thinning Crown",
-          desc: "Patients experiencing vertex crown thinning suitable for QHT-FUE dense swirl packing.",
+          desc: "Patients experiencing vertex crown thinning suitable for NexGen Hair Transplant FUE dense swirl packing.",
         },
       ],
     },
     types: {
       title: "Types of FUE Hair Transplant",
-      subtitle: "Advanced FUE methodologies available at QHT Clinic:",
+      subtitle: "Advanced FUE methodologies available at NexGen Hair Transplant:",
       types: [
         {
           title: "Standard FUE Hair Transplant",
@@ -2393,7 +2393,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Enhanced FUE Technique",
+          title: "NexGen Hair Transplant Enhanced FUE Technique",
           desc: "Superfine Cole punches extract follicles while SAVA implanters place them simultaneously with minimal out-of-body holding time.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -2427,7 +2427,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     procedure: {
       title: "Procedure Used for FUE Hair Transplant in India",
-      subtitle: "Safe, 5-step precision surgical protocol followed by experts at QHT Clinic:",
+      subtitle: "Safe, 5-step precision surgical protocol followed by experts at NexGen Hair Transplant:",
       steps: [
         {
           stepNumber: "01",
@@ -2485,12 +2485,12 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     cost: {
       title: "FUE Hair Transplant Cost in India",
       costOverview: [
-        "FUE Hair Transplant costs depend on baldness grade, number of grafts required, technique chosen (FUE vs. QHT), and surgeon expertise.",
-        "At QHT Clinic, transparent packages range from ₹40,000 for minor touch-ups to ₹1,80,000 for mega-session restorations.",
+        "FUE Hair Transplant costs depend on baldness grade, number of grafts required, technique chosen (FUE vs. NexGen Hair Transplant), and surgeon expertise.",
+        "At NexGen Hair Transplant, transparent packages range from ₹40,000 for minor touch-ups to ₹1,80,000 for mega-session restorations.",
       ],
       tableRows: [
         { type: "Standard FUE (Up to 2,000 Grafts)", cost: "₹40,000 – ₹70,000" },
-        { type: "Advanced QHT-FUE (2,500 – 4,000 Grafts)", cost: "₹75,000 – ₹1,40,000", badge: "Most Popular", isHighlight: true },
+        { type: "Advanced NexGen Hair Transplant FUE (2,500 – 4,000 Grafts)", cost: "₹75,000 – ₹1,40,000", badge: "Most Popular", isHighlight: true },
         { type: "Mega FUE Session (4,000+ Grafts)", cost: "₹1,40,000 – ₹2,00,000" },
       ],
       factorsSubtitle: "The factors affecting the FUE Hair Transplant cost include:",
@@ -2503,7 +2503,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-9-1.png",
           title: "The Technique Chosen",
-          desc: "Advanced methods like QHT with SAVA implanters offer higher graft survival and faster healing.",
+          desc: "Advanced methods like NexGen Hair Transplant with SAVA implanters offer higher graft survival and faster healing.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-10-1.png",
@@ -2519,7 +2519,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted FUE Hair Transplant Clinic in India",
-      subtitle: "QHT Clinic is trusted for natural FUE hair restoration with senior surgeons and proven techniques:",
+      subtitle: "NexGen Hair Transplant is trusted for natural FUE hair restoration with senior surgeons and proven techniques:",
       stats: [
         { title: "15,000+ Successful Transplants", desc: "Completed thousands of successful FUE hair transplants with clinical precision." },
         { title: "100% Client Satisfaction", desc: "Proven track record of high graft survival and happy patients across India." },
@@ -2549,8 +2549,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for FUE Hair Transplant?",
-      subtitle: "QHT provides advanced techniques, experienced surgeons, and supportive aftercare for long-term success:",
+      title: "Why Choose NexGen for FUE Hair Transplant?",
+      subtitle: "NexGen Hair Transplant provides advanced techniques, experienced surgeons, and supportive aftercare for long-term success:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "Trusted by celebrities and creators for undetectable, natural FUE hair restoration." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "Clinical Expertise", desc: "Years of dedicated experience in micro-punch FUE and SAVA pen implantation." },
@@ -2560,7 +2560,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     postSurgerySupport: {
       title: "Post-Surgery Support for FUE Hair Transplant",
-      subtitle: "QHT Clinic provides thorough aftercare guidance to ensure quick recovery and healthy follicle growth.",
+      subtitle: "NexGen Hair Transplant provides thorough aftercare guidance to ensure quick recovery and healthy follicle growth.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3-1.jpg",
       supportItems: [
         { title: "Scheduled Follow-Ups", desc: "Regular clinical reviews to track graft anchoring and scalp healing." },
@@ -2581,7 +2581,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
       dos: [
         "Take prescribed medications and antibiotics on time.",
-        "Follow QHT Clinic's gentle post-op washing instructions.",
+        "Follow NexGen Hair Transplant's gentle post-op washing instructions.",
         "Maintain a balanced, nutritious diet rich in vitamins and proteins.",
         "Sleep with your head elevated on extra pillows for the first 5 nights.",
         "Stay hydrated and attend all scheduled follow-up visits.",
@@ -2599,7 +2599,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           label: "Week 2",
           expectations: ["Scabs fall off naturally during gentle washing; scalp heals cleanly."],
-          careGuidelines: ["Follow QHT wash routine gently; do not scratch or pick scabs."],
+          careGuidelines: ["Follow NexGen Hair Transplant wash routine gently; do not scratch or pick scabs."],
         },
         {
           label: "3 Weeks",
@@ -2624,7 +2624,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     comparison: {
       title: "Comparison of FUE Hair Transplant Techniques",
-      subtitle: "Understanding the difference between Standard FUE and Advanced QHT-FUE:",
+      subtitle: "Understanding the difference between Standard FUE and Advanced NexGen Hair Transplant FUE:",
       cards: [
         {
           title: "Standard FUE Technique",
@@ -2634,7 +2634,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           cost: "Affordable (₹40,000 – ₹70,000)",
         },
         {
-          title: "Advanced QHT-FUE Technique",
+          title: "Advanced NexGen Hair Transplant FUE Technique",
           purpose: "Sub-millimeter extraction with instantaneous SAVA pen implantation.",
           effectiveness: "Maximum graft survival (95%+) and higher packing density.",
           risk: "Zero visible scarring with rapid 5-day recovery.",
@@ -2673,7 +2673,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Achieve natural, fuller-looking hair with minimal downtime and high precision.",
       block1Paragraphs: [
         "Ultra Dense Hair Transplant is an advanced hair restoration technique involving the implantation of the maximum number of hair grafts per square centimeter on the scalp to create natural, highly voluminous hair that often exceeds standard density.",
-        "At QHT Clinic, ultra-dense transplantation carefully aligns each graft with the natural direction and angle of surrounding hair follicles, delivering aesthetically flawless, undetectable hairline definition.",
+        "At NexGen Hair Transplant, ultra-dense transplantation carefully aligns each graft with the natural direction and angle of surrounding hair follicles, delivering aesthetically flawless, undetectable hairline definition.",
         "It is a minimally invasive procedure that uses sapphire micro-incisions to leave minimal, virtually invisible scalp markings.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1.webp",
@@ -2682,7 +2682,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Ultra Dense Hair Transplant in India",
       block2Paragraphs: [
         "While standard hair transplants focus on covering bald patches, an ultra-dense procedure places grafts in close proximity to recreate thick, lush, natural-looking volume.",
-        "In India, world-class clinics like QHT Clinic utilize advanced motorized sapphire punches, SAVA implanters, and 10x microscopic visualization to deliver high-density restoration at affordable costs.",
+        "In India, world-class clinics like NexGen Hair Transplant utilize advanced motorized sapphire punches, SAVA implanters, and 10x microscopic visualization to deliver high-density restoration at affordable costs.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2.webp",
     },
@@ -2769,7 +2769,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT (Quick Hair Transplant)",
+          title: "NexGen Hair Transplant",
           desc: "Patented simultaneous extraction and implantation ensuring near-zero out-of-body holding time for maximum graft viability.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -2867,7 +2867,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       tableRows: [
         { type: "Ultra Dense FUE", cost: "₹90,000 – ₹2,00,000" },
         { type: "FUT (Strip Mega Session)", cost: "₹50,000 – ₹2,50,000" },
-        { type: "Ultra-Dense QHT Technique", cost: "₹1,00,000 – ₹2,70,000+", badge: "Most Advanced", isHighlight: true },
+        { type: "Ultra-Dense NexGen Hair Transplant Technique", cost: "₹1,00,000 – ₹2,70,000+", badge: "Most Advanced", isHighlight: true },
       ],
       factorsSubtitle: "FACTORS AFFECTING THE COST OF ULTRA DENSE HAIR TRANSPLANT",
       factors: [
@@ -2895,7 +2895,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst The Most Trusted Ultra Dense Hair Transplant Clinic In India",
-      subtitle: "At QHT Clinic, we prioritize patient satisfaction with credibility and affordability:",
+      subtitle: "At NexGen Hair Transplant, we prioritize patient satisfaction with credibility and affordability:",
       stats: [
         { title: "Celebrity Trusted", desc: "Trusted by celebrities like Rajpal Yadav, Dayanand Shetty, and Shivaji Satam." },
         { title: "Best Techniques", desc: "Equipped with sapphire punches, SAVA implanters, and 10x magnification for zero scarring." },
@@ -2926,8 +2926,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Ultra Dense Hair Transplant",
-      subtitle: "QHT Clinic combines senior surgeon mastery, patented tools, and ethical care:",
+      title: "Why Choose NexGen for Ultra Dense Hair Transplant",
+      subtitle: "NexGen Hair Transplant combines senior surgeon mastery, patented tools, and ethical care:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Celebrity Clinic", desc: "Renowned in the industry and trusted by film and TV celebrities for undetectable high density." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "High Precision and Expertise", desc: "Motorized sapphire punches and SAVA implanters ensure high graft viability and dense packing." },
@@ -3020,7 +3020,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           cost: "Affordable Mid-Range (₹90,000 – ₹2,00,000)",
         },
         {
-          title: "DHI / QHT Technique",
+          title: "DHI / NexGen Hair Transplant Technique",
           purpose: "Direct follicle implantation using SAVA implanters with minimal out-of-body time.",
           effectiveness: "Maximum density per sq cm with unmatched graft viability.",
           risk: "Near-zero infection risk with instantaneous placement.",
@@ -3053,7 +3053,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "Is ultra dense hair transplant affordable?",
-          answer: "Yes. QHT Clinic offers transparent, competitive pricing starting from ₹90,000 with flexible 0% EMI financing options available.",
+          answer: "Yes. NexGen Hair Transplant offers transparent, competitive pricing starting from ₹90,000 with flexible 0% EMI financing options available.",
         },
       ],
     },
@@ -3071,7 +3071,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Discreet, natural, and confidence-boosting hair restoration.",
       block1Paragraphs: [
         "No-Shave Hair Transplant is an advanced method of restoring hair when a complete shave is not appropriate. Candidates for No-Shave Hair Transplant can maintain their current hairstyle using a specialised process. In this method, only the donor area is selectively trimmed so that grafts can be harvested while the recipient site remains intact with existing hair lengths, ensuring a more natural result.",
-        "Our no-shave hair transplant at QHT Clinic offers patients very little downtime, privacy, and a discreet hair restoration program made to boost your confidence and provide convenience.",
+        "Our no-shave hair transplant at NexGen offers patients very little downtime, privacy, and a discreet hair restoration program made to boost your confidence and provide convenience.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/unshaven-img-1.jpg",
       pointer1: "100% Intact Recipient Area",
@@ -3079,13 +3079,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Unshaven Hair Transplant in India",
       block2Paragraphs: [
         "Unshaven Hair Transplant is gaining rapid popularity in India, as it results in a very natural-looking outcome without making the hair transplant look obvious. The treatment is discreet — chosen by professionals, executives, and celebrities who want to avoid unwanted attention during their recovery.",
-        "QHT Clinic employs the best technology and advanced techniques, along with maintaining affordability and accessibility. Choosing an unshaven hair transplant in India at QHT Clinic allows patients to have access to international standards of care, perfect execution, and lasting results.",
+        "NexGen Hair Transplant employs the best technology and advanced techniques, along with maintaining affordability and accessibility. Choosing an unshaven hair transplant in India at NexGen Hair Transplant allows patients to have access to international standards of care, perfect execution, and lasting results.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/unshaven-img-2.jpg",
     },
     results: {
-      title: "Result of QHT Unshaven Hair Transplant",
-      subtitle: "The QHT Unshaven Hair Transplant offers natural density, sustainable hair growth, and no visible scarring. In a few months, patients start noticing a natural-looking and flawless blend with existing hair.",
+      title: "Result of NexGen Unshaven Hair Transplant",
+      subtitle: "The NexGen Unshaven Hair Transplant offers natural density, sustainable hair growth, and no visible scarring. In a few months, patients start noticing a natural-looking and flawless blend with existing hair.",
       results: [
         {
           name: "Irfan - Grade 5A No-Shave",
@@ -3142,7 +3142,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     types: {
-      title: "Types of QHT Unshaven Hair Transplant",
+      title: "Types of NexGen Unshaven Hair Transplant",
       subtitle: "Tailored unshaven hair restoration techniques based on your personal hair goals and lifestyle:",
       types: [
         {
@@ -3220,7 +3220,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     preProcedure: {
-      title: "Pre-Procedure Tips for QHT Unshaven Hair Transplant",
+      title: "Pre-Procedure Tips for NexGen Unshaven Hair Transplant",
       subtitle: "Proper preparation ensures seamless graft harvesting and fast recovery for your no-shave session:",
       tips: [
         {
@@ -3249,11 +3249,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "No Shave Hair Transplant Cost in India",
       costOverview: [
         "A No-Shave Hair Transplant requires exceptional surgical precision, specialized microscopic loupes, and meticulous handling between existing hairs, making it a premium bespoke procedure.",
-        "At QHT Clinic, pricing is transparent and based on graft count and technique, typically starting from ₹55,000 for partial donor shaving and ₹85,000 to ₹1,80,000 for full unshaven sessions.",
+        "At NexGen Hair Transplant, pricing is transparent and based on graft count and technique, typically starting from ₹55,000 for partial donor shaving and ₹85,000 to ₹1,80,000 for full unshaven sessions.",
       ],
       tableRows: [
         { type: "Partial Donor Shaving (Up to 1,500 Grafts)", cost: "₹55,000 – ₹85,000" },
-        { type: "Complete No-Shave QHT (2,000 – 3,000 Grafts)", cost: "₹95,000 – ₹1,60,000", badge: "Most Popular", isHighlight: true },
+        { type: "Complete No-Shave NexGen Hair Transplant (2,000 – 3,000 Grafts)", cost: "₹95,000 – ₹1,60,000", badge: "Most Popular", isHighlight: true },
         { type: "Mega Unshaven Session (3,000+ Grafts)", cost: "₹1,75,000 – ₹2,40,000" },
       ],
       factorsSubtitle: "Factors Affecting The Cost of Unshaven Hair Transplant",
@@ -3282,7 +3282,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why Are We Amongst the Most Trusted Unshaven Hair Transplant Clinic in India?",
-      subtitle: "QHT Clinic offers specialized expertise, advanced technology, and personalized care to ensure safe, natural results:",
+      subtitle: "NexGen Hair Transplant offers specialized expertise, advanced technology, and personalized care to ensure safe, natural results:",
       stats: [
         { title: "1,000+ Successful Transplants", desc: "Over 1,000 no-shave hair transplants successfully performed by senior surgeons." },
         { title: "95%+ Graft Survival", desc: "Maximum follicle survival achieved through fine sapphire micro punches and quick implantation." },
@@ -3313,8 +3313,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for No Shave Hair Transplant",
-      subtitle: "Selecting the best clinic for a No Shave Hair Transplant matters — QHT ensures unmatched comfort and precision:",
+      title: "Why Choose NexGen for No Shave Hair Transplant",
+      subtitle: "Selecting the best clinic for a No Shave Hair Transplant matters — NexGen Hair Transplant ensures unmatched comfort and precision:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "Personalized Care", desc: "A tailored treatment strategy developed for your specific hair density and styling needs." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Qualified Team", desc: "Senior surgeons with over 1,000+ completed unshaven procedures for safe, natural results." },
@@ -3324,7 +3324,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     postSurgerySupport: {
-      title: "Post Surgery Support for QHT Unshaven Hair Transplant",
+      title: "Post Surgery Support for NexGen Unshaven Hair Transplant",
       subtitle: "Patients receiving an unshaven transplant receive individualized aftercare support for smooth recovery.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-3.jpg",
       supportItems: [
@@ -3389,7 +3389,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     comparison: {
       title: "Comparison of Unshaven Hair Transplant Sub Services",
-      subtitle: "At QHT, we offer both Partial Shave and No Shave techniques designed for different lifestyle needs:",
+      subtitle: "At NexGen Hair Transplant, we offer both Partial Shave and No Shave techniques designed for different lifestyle needs:",
       cards: [
         {
           title: "Partial Shave Technique",
@@ -3432,7 +3432,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
   "failed-hair-transplant-repair": {
     hero: {
       title: "Best Hair Transplant Repair Clinic In India",
-      subtitle: "Hair Transplant Repair solutions tailored by experts at QHT Clinic with affordability and advanced methods.",
+      subtitle: "Hair Transplant Repair solutions tailored by experts at NexGen Hair Transplant with affordability and advanced methods.",
       bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/08/456.png",
       tagline: "Corrective Revision & Scar Camouflage",
       pointerLabel: "Graft Correction & Redesign",
@@ -3442,7 +3442,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Restore your confidence by getting the right Hair Transplant Repair solutions.",
       block1Paragraphs: [
         "Hair Transplant Repair is a specialized corrective procedure used to fix the results of an unsuccessful or poorly executed prior hair transplant. It helps restore an unnatural hairline and low density, while concealing scars caused by earlier procedures.",
-        "At QHT Clinic, our experts use advanced micro-extraction and implantation techniques centered on nurturing natural growth, avoiding complications, and delivering permanent, aesthetically harmonious outcomes.",
+        "At NexGen Hair Transplant, our experts use advanced micro-extraction and implantation techniques centered on nurturing natural growth, avoiding complications, and delivering permanent, aesthetically harmonious outcomes.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-1.jpg",
       pointer1: "Graft Extraction & Redistribution",
@@ -3450,13 +3450,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Hair Transplant Repair in India",
       block2Paragraphs: [
         "Failed hair transplants are unfortunately prevalent due to inexperienced technicians and poorly placed grafts, leading to pluggy, unnatural results. In India, Failed Hair Transplant Correction is performed by specialists using our refined Quick Hair Transplant method.",
-        "Because of skilled ABHRS-certified surgeons and transparent affordability, QHT Clinic in India is recognized globally as a trusted destination for complex corrective revisions.",
+        "Because of skilled ABHRS-certified surgeons and transparent affordability, NexGen Hair Transplant in India is recognized globally as a trusted destination for complex corrective revisions.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg",
     },
     results: {
       title: "Result of Hair Transplant Repair",
-      subtitle: "Corrective Hair Transplant at QHT Clinic focuses on hairline redesign, hair density, and no-scar growth, delivering long-term natural transformations for patients with failed earlier procedures.",
+      subtitle: "Corrective Hair Transplant at NexGen focuses on hairline redesign, hair density, and no-scar growth, delivering long-term natural transformations for patients with failed earlier procedures.",
       results: [
         {
           name: "Irfan - Grade 5A Repair",
@@ -3492,7 +3492,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     candidate: {
       title: "Who is an Ideal Candidate for Hair Transplant Repair?",
-      subtitle: "Patients with poor, unnatural hair density, misaligned hair angles, or visible donor scars from past surgeries consider QHT Clinic for repair:",
+      subtitle: "Patients with poor, unnatural hair density, misaligned hair angles, or visible donor scars from past surgeries consider NexGen Hair Transplant for repair:",
       points: [
         {
           title: "People with Unnatural Hairline",
@@ -3514,7 +3514,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     types: {
       title: "Types of Hair Transplant Repair",
-      subtitle: "To choose the best corrective hair transplant technique, QHT Clinic offers tailored surgical methods:",
+      subtitle: "To choose the best corrective hair transplant technique, NexGen Hair Transplant offers tailored surgical methods:",
       types: [
         {
           title: "FUE Hair Transplant Repair",
@@ -3527,7 +3527,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Technique Repair",
+          title: "NexGen Hair Transplant Technique Repair",
           desc: "Superfine Cole punches are used for delicate follicle extraction, combined with instantaneous SAVA pen implantation for 95%+ survival.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -3551,7 +3551,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-2.png",
           title: "Permanent Results",
-          desc: "Corrective procedures at QHT Clinic ensure permanent, lifelong DHT-resistant growth.",
+          desc: "Corrective procedures at NexGen Hair Transplant ensure permanent, lifelong DHT-resistant growth.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-3.png",
@@ -3626,11 +3626,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Hair Transplant Repair Cost in India",
       costOverview: [
         "Hair Transplant Repair in India is calculated based on problem severity, previous scarring, graft removal requirements, and the corrective technique chosen.",
-        "At QHT Clinic, transparent packages range from ₹60,000 to ₹1,20,000 for minor revisions and ₹1,50,000 to ₹3,00,000 for complex multi-stage corrections.",
+        "At NexGen Hair Transplant, transparent packages range from ₹60,000 to ₹1,20,000 for minor revisions and ₹1,50,000 to ₹3,00,000 for complex multi-stage corrections.",
       ],
       tableRows: [
         { type: "Minor Hairline Softening & Camouflage", cost: "₹60,000 – ₹1,20,000" },
-        { type: "Full Revision with Plug Extraction & QHT", cost: "₹1,50,000 – ₹2,50,000", badge: "Most Requested", isHighlight: true },
+        { type: "Full Revision with Plug Extraction & NexGen Hair Transplant", cost: "₹1,50,000 – ₹2,50,000", badge: "Most Requested", isHighlight: true },
         { type: "Complex Multi-Stage Mega Repair", cost: "₹2,50,000 – ₹3,50,000" },
       ],
       factorsSubtitle: "The factors affecting the Hair Transplant Repair cost include:",
@@ -3648,11 +3648,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
           title: "Treatment Method Chosen",
-          desc: "Techniques like QHT and Choi pen implantation require advanced precision tools.",
+          desc: "Techniques like NexGen Hair Transplant and Choi pen implantation require advanced precision tools.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
-          title: "Clinical Expertise at QHT Clinic",
+          title: "Clinical Expertise at NexGen Hair Transplant",
           desc: "Revision surgery demands master-level surgeon artistry to reverse complex unnatural results.",
         },
         {
@@ -3664,7 +3664,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Hair Transplant Repair Clinics in India",
-      subtitle: "QHT Clinic is trusted for failed hair transplant correction with expert surgeons and specialized techniques:",
+      subtitle: "NexGen Hair Transplant is trusted for failed hair transplant correction with expert surgeons and specialized techniques:",
       stats: [
         { title: "5,000+ Successful Repairs", desc: "Completed over 5,000 hair transplant repairs with clinical precision and patient satisfaction." },
         { title: "100% Client Satisfaction", desc: "Proven track record of reversing botched surgeries and restoring natural hair confidence." },
@@ -3695,8 +3695,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Hair Transplant Repair",
-      subtitle: "QHT provides the specialized skills, technology, and empathy required for complex corrective cases:",
+      title: "Why Choose NexGen for Hair Transplant Repair",
+      subtitle: "NexGen Hair Transplant provides the specialized skills, technology, and empathy required for complex corrective cases:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and celebrities for undetectable corrective revisions." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Clinical Expertise", desc: "Over 5,000+ successful repairs handling plug extraction, scar repair, and density enhancement." },
@@ -3706,7 +3706,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     postSurgerySupport: {
       title: "Post-Surgery Support for Hair Transplant Repair",
-      subtitle: "QHT Clinic provides structured post-operative support to nurture sensitive revised scalp tissue.",
+      subtitle: "NexGen Hair Transplant provides structured post-operative support to nurture sensitive revised scalp tissue.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-3.jpg",
       supportItems: [
         { title: "Regular Follow-Ups", desc: "Scheduled clinical reviews to monitor graft anchoring, scar healing, and growth trajectory." },
@@ -3788,7 +3788,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           cost: "High Precision (₹60,000 – ₹1,50,000)",
         },
         {
-          title: "Density Correction & QHT",
+          title: "Density Correction & NexGen Hair Transplant",
           purpose: "Fills in patchy, low-density recipient zones using sapphire micro-implanters.",
           effectiveness: "Provides a thicker, fuller, completely natural appearance.",
           risk: "Minimal risk with high graft survival.",
@@ -3809,11 +3809,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "Can failed hair transplants be corrected completely?",
-          answer: "Yes. In the vast majority of cases, pluggy hairlines, wrong angles, low density, and donor scarring can be successfully corrected at QHT Clinic.",
+          answer: "Yes. In the vast majority of cases, pluggy hairlines, wrong angles, low density, and donor scarring can be successfully corrected at NexGen Hair Transplant.",
         },
         {
-          question: "How is QHT better for corrective hair transplant?",
-          answer: "QHT combines experienced corrective surgeons, gentle micro-extraction punches, and instant SAVA pen implantation to achieve 95%+ survival on previously scarred tissue.",
+          question: "How is NexGen better for corrective hair transplant?",
+          answer: "NexGen Hair Transplant combines experienced corrective surgeons, gentle micro-extraction punches, and instant SAVA pen implantation to achieve 95%+ survival on previously scarred tissue.",
         },
       ],
     },
@@ -3821,7 +3821,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
   "hair-transplant-repair": {
     hero: {
       title: "Best Hair Transplant Repair Clinic In India",
-      subtitle: "Hair Transplant Repair solutions tailored by experts at QHT Clinic with affordability and advanced methods.",
+      subtitle: "Hair Transplant Repair solutions tailored by experts at NexGen Hair Transplant with affordability and advanced methods.",
       bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/08/456.png",
       tagline: "Corrective Revision & Scar Camouflage",
       pointerLabel: "Graft Correction & Redesign",
@@ -3831,7 +3831,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Restore your confidence by getting the right Hair Transplant Repair solutions.",
       block1Paragraphs: [
         "Hair Transplant Repair is a specialized corrective procedure used to fix the results of an unsuccessful or poorly executed prior hair transplant. It helps restore an unnatural hairline and low density, while concealing scars caused by earlier procedures.",
-        "At QHT Clinic, our experts use advanced micro-extraction and implantation techniques centered on nurturing natural growth, avoiding complications, and delivering permanent, aesthetically harmonious outcomes.",
+        "At NexGen Hair Transplant, our experts use advanced micro-extraction and implantation techniques centered on nurturing natural growth, avoiding complications, and delivering permanent, aesthetically harmonious outcomes.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-1.jpg",
       pointer1: "Graft Extraction & Redistribution",
@@ -3839,13 +3839,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Hair Transplant Repair in India",
       block2Paragraphs: [
         "Failed hair transplants are unfortunately prevalent due to inexperienced technicians and poorly placed grafts, leading to pluggy, unnatural results. In India, Failed Hair Transplant Correction is performed by specialists using our refined Quick Hair Transplant method.",
-        "Because of skilled ABHRS-certified surgeons and transparent affordability, QHT Clinic in India is recognized globally as a trusted destination for complex corrective revisions.",
+        "Because of skilled ABHRS-certified surgeons and transparent affordability, NexGen Hair Transplant in India is recognized globally as a trusted destination for complex corrective revisions.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg",
     },
     results: {
       title: "Result of Hair Transplant Repair",
-      subtitle: "Corrective Hair Transplant at QHT Clinic focuses on hairline redesign, hair density, and no-scar growth, delivering long-term natural transformations for patients with failed earlier procedures.",
+      subtitle: "Corrective Hair Transplant at NexGen focuses on hairline redesign, hair density, and no-scar growth, delivering long-term natural transformations for patients with failed earlier procedures.",
       results: [
         {
           name: "Irfan - Grade 5A Repair",
@@ -3881,7 +3881,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     candidate: {
       title: "Who is an Ideal Candidate for Hair Transplant Repair?",
-      subtitle: "Patients with poor, unnatural hair density, misaligned hair angles, or visible donor scars from past surgeries consider QHT Clinic for repair:",
+      subtitle: "Patients with poor, unnatural hair density, misaligned hair angles, or visible donor scars from past surgeries consider NexGen Hair Transplant for repair:",
       points: [
         {
           title: "People with Unnatural Hairline",
@@ -3903,7 +3903,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     types: {
       title: "Types of Hair Transplant Repair",
-      subtitle: "To choose the best corrective hair transplant technique, QHT Clinic offers tailored surgical methods:",
+      subtitle: "To choose the best corrective hair transplant technique, NexGen Hair Transplant offers tailored surgical methods:",
       types: [
         {
           title: "FUE Hair Transplant Repair",
@@ -3916,7 +3916,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Technique Repair",
+          title: "NexGen Hair Transplant Technique Repair",
           desc: "Superfine Cole punches are used for delicate follicle extraction, combined with instantaneous SAVA pen implantation for 95%+ survival.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -3940,7 +3940,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-2.png",
           title: "Permanent Results",
-          desc: "Corrective procedures at QHT Clinic ensure permanent, lifelong DHT-resistant growth.",
+          desc: "Corrective procedures at NexGen Hair Transplant ensure permanent, lifelong DHT-resistant growth.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-3.png",
@@ -4015,11 +4015,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Hair Transplant Repair Cost in India",
       costOverview: [
         "Hair Transplant Repair in India is calculated based on problem severity, previous scarring, graft removal requirements, and the corrective technique chosen.",
-        "At QHT Clinic, transparent packages range from ₹60,000 to ₹1,20,000 for minor revisions and ₹1,50,000 to ₹3,00,000 for complex multi-stage corrections.",
+        "At NexGen Hair Transplant, transparent packages range from ₹60,000 to ₹1,20,000 for minor revisions and ₹1,50,000 to ₹3,00,000 for complex multi-stage corrections.",
       ],
       tableRows: [
         { type: "Minor Hairline Softening & Camouflage", cost: "₹60,000 – ₹1,20,000" },
-        { type: "Full Revision with Plug Extraction & QHT", cost: "₹1,50,000 – ₹2,50,000", badge: "Most Requested", isHighlight: true },
+        { type: "Full Revision with Plug Extraction & NexGen Hair Transplant", cost: "₹1,50,000 – ₹2,50,000", badge: "Most Requested", isHighlight: true },
         { type: "Complex Multi-Stage Mega Repair", cost: "₹2,50,000 – ₹3,50,000" },
       ],
       factorsSubtitle: "The factors affecting the Hair Transplant Repair cost include:",
@@ -4037,11 +4037,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
           title: "Treatment Method Chosen",
-          desc: "Techniques like QHT and Choi pen implantation require advanced precision tools.",
+          desc: "Techniques like NexGen Hair Transplant and Choi pen implantation require advanced precision tools.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
-          title: "Clinical Expertise at QHT Clinic",
+          title: "Clinical Expertise at NexGen Hair Transplant",
           desc: "Revision surgery demands master-level surgeon artistry to reverse complex unnatural results.",
         },
         {
@@ -4053,7 +4053,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Hair Transplant Repair Clinics in India",
-      subtitle: "QHT Clinic is trusted for failed hair transplant correction with expert surgeons and specialized techniques:",
+      subtitle: "NexGen Hair Transplant is trusted for failed hair transplant correction with expert surgeons and specialized techniques:",
       stats: [
         { title: "5,000+ Successful Repairs", desc: "Completed over 5,000 hair transplant repairs with clinical precision and patient satisfaction." },
         { title: "100% Client Satisfaction", desc: "Proven track record of reversing botched surgeries and restoring natural hair confidence." },
@@ -4084,8 +4084,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Hair Transplant Repair",
-      subtitle: "QHT provides the specialized skills, technology, and empathy required for complex corrective cases:",
+      title: "Why Choose NexGen for Hair Transplant Repair",
+      subtitle: "NexGen Hair Transplant provides the specialized skills, technology, and empathy required for complex corrective cases:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and celebrities for undetectable corrective revisions." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Clinical Expertise", desc: "Over 5,000+ successful repairs handling plug extraction, scar repair, and density enhancement." },
@@ -4095,7 +4095,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     postSurgerySupport: {
       title: "Post-Surgery Support for Hair Transplant Repair",
-      subtitle: "QHT Clinic provides structured post-operative support to nurture sensitive revised scalp tissue.",
+      subtitle: "NexGen Hair Transplant provides structured post-operative support to nurture sensitive revised scalp tissue.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-3.jpg",
       supportItems: [
         { title: "Regular Follow-Ups", desc: "Scheduled clinical reviews to monitor graft anchoring, scar healing, and growth trajectory." },
@@ -4177,7 +4177,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           cost: "High Precision (₹60,000 – ₹1,50,000)",
         },
         {
-          title: "Density Correction & QHT",
+          title: "Density Correction & NexGen Hair Transplant",
           purpose: "Fills in patchy, low-density recipient zones using sapphire micro-implanters.",
           effectiveness: "Provides a thicker, fuller, completely natural appearance.",
           risk: "Minimal risk with high graft survival.",
@@ -4198,11 +4198,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "Can failed hair transplants be corrected completely?",
-          answer: "Yes. In the vast majority of cases, pluggy hairlines, wrong angles, low density, and donor scarring can be successfully corrected at QHT Clinic.",
+          answer: "Yes. In the vast majority of cases, pluggy hairlines, wrong angles, low density, and donor scarring can be successfully corrected at NexGen Hair Transplant.",
         },
         {
-          question: "How is QHT better for corrective hair transplant?",
-          answer: "QHT combines experienced corrective surgeons, gentle micro-extraction punches, and instant SAVA pen implantation to achieve 95%+ survival on previously scarred tissue.",
+          question: "How is NexGen better for corrective hair transplant?",
+          answer: "NexGen Hair Transplant combines experienced corrective surgeons, gentle micro-extraction punches, and instant SAVA pen implantation to achieve 95%+ survival on previously scarred tissue.",
         },
       ],
     },
@@ -4217,11 +4217,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     intro: {
       block1Heading: "What is FUT Hair Transplant?",
-      block1Lead: "Restore your hair with expert care at QHT Clinic and achieve natural-looking results.",
+      block1Lead: "Restore your hair with expert care at NexGen Hair Transplant and achieve natural-looking results.",
       block1Paragraphs: [
         "FUT (Follicular Unit Transplantation), also called the Strip method, is a hair transplant procedure in which a strip of scalp is removed from the donor area, typically the back of the head, under local anaesthesia. The individual follicular units from this strip are dissected under a microscope and then implanted into bald or thinning areas.",
         "FUT allows surgeons to harvest a large number of grafts in a single session, making it a preferred choice for patients with advanced baldness.",
-        "At QHT Clinic, FUT is performed with precision to minimise scar visibility at the donor site. The implanted grafts are placed at the correct angle and depth to achieve optimal density and a natural-looking hairline personalised to every patient.",
+        "At NexGen Hair Transplant, FUT is performed with precision to minimise scar visibility at the donor site. The implanted grafts are placed at the correct angle and depth to achieve optimal density and a natural-looking hairline personalised to every patient.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-1.webp",
       pointer1: "Microscopic Dissection",
@@ -4229,13 +4229,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "FUT Hair Transplant in India",
       block2Paragraphs: [
         "FUT has been the foundation of hair restoration surgery worldwide for decades and is still widely used today for patients with significant hair loss who require high graft counts in a single procedure. With the growing demand for hair restoration, top FUT surgeons in India now offer advanced microscopic dissection techniques with comparatively cost-effective treatment options, making India a preferred destination for both national and international patients.",
-        "At QHT Clinic, ABHRS-certified surgeons combine the precision of FUT strip harvesting and an advanced implantation technique, delivering superior graft survival, natural growth patterns and minimal donor area scarring.",
+        "At NexGen Hair Transplant, ABHRS-certified surgeons combine the precision of FUT strip harvesting and an advanced implantation technique, delivering superior graft survival, natural growth patterns and minimal donor area scarring.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-2.webp",
     },
     results: {
       title: "Results of FUT Hair Transplant",
-      subtitle: "FUT at QHT Clinic delivers high-density, long-term, natural-looking hair restoration, particularly effective for patients with advanced baldness. Visible growth typically begins within 3 to 4 months, with full results apparent by 12-18 months after the surgery.",
+      subtitle: "FUT at NexGen Hair Transplant delivers high-density, long-term, natural-looking hair restoration, particularly effective for patients with advanced baldness. Visible growth typically begins within 3 to 4 months, with full results apparent by 12-18 months after the surgery.",
       results: [
         {
           name: "Irfan - Grade 5A",
@@ -4287,7 +4287,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           title: "Budget-Conscious Patients",
-          desc: "Patients seeking a cost-effective hair transplant option with lower per-graft prices as compared to FUE and QHT.",
+          desc: "Patients seeking a cost-effective hair transplant option with lower per-graft prices as compared to FUE and NexGen Hair Transplant.",
         },
         {
           title: "Scar-Tolerant Patients",
@@ -4296,8 +4296,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     types: {
-      title: "Types of FUT Hair Transplant at QHT Clinic",
-      subtitle: "QHT Clinic offers a refined, modern approach to FUT, integrating precision dissection and advanced implantation for superior outcomes:",
+      title: "Types of FUT Hair Transplant at NexGen",
+      subtitle: "NexGen Hair Transplant offers a refined, modern approach to FUT, integrating precision dissection and advanced implantation for superior outcomes:",
       types: [
         {
           title: "FUT - Classic Strip Method",
@@ -4311,12 +4311,12 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "FUT with FUE/QHT Implantation Technique",
+          title: "FUT with FUE/NexGen Hair Transplant Implantation Technique",
           desc: "Combines high-yield strip harvesting with state-of-the-art SAVA and Choi pen implanters for pinpoint angle and depth placement.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2026/01/fut-vs-fue-hair-transplant-comparison-steps.webp",
           points: [
             "Delicate graft handling ensures 90%+ follicular survival rate.",
-            "Combines the high graft yield of FUT with the refined implantation precision of QHT.",
+            "Combines the high graft yield of FUT with the refined implantation precision of NexGen Hair Transplant.",
             "Natural hairline design with exact control over angle, depth, and direction.",
             "Shorter recipient healing time with minimal surrounding tissue trauma.",
           ],
@@ -4340,7 +4340,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-icon-3.png",
           title: "Cost-Effective for High Graft Counts",
-          desc: "Affordable option for patients requiring massive coverage, with a lower per-graft cost compared to FUE/QHT.",
+          desc: "Affordable option for patients requiring massive coverage, with a lower per-graft cost compared to FUE/NexGen Hair Transplant.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-icon-4.png",
@@ -4361,7 +4361,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           stepNumber: "02",
           title: "Selection of Techniques",
-          desc: "Surgeons determine strip dimensions or combine with FUE/QHT implanters for customized treatment.",
+          desc: "Surgeons determine strip dimensions or combine with FUE/NexGen Hair Transplant implanters for customized treatment.",
         },
         {
           stepNumber: "03",
@@ -4409,13 +4409,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     cost: {
       title: "FUT Hair Transplant Cost in India",
       costOverview: [
-        "FUT hair restoration cost per graft is lower than FUE and QHT techniques, making it the most cost-effective solution for patients requiring high-volume mega sessions.",
-        "At QHT Clinic, transparent pricing starts from ₹50 per graft with all-inclusive pre-operative tests, microscopic dissection, suture care, and dedicated follow-up assistance.",
+        "FUT hair restoration cost per graft is lower than FUE and NexGen Hair Transplant techniques, making it the most cost-effective solution for patients requiring high-volume mega sessions.",
+        "At NexGen Hair Transplant, transparent pricing starts from ₹50 per graft with all-inclusive pre-operative tests, microscopic dissection, suture care, and dedicated follow-up assistance.",
       ],
       tableRows: [
         { type: "FUE Technique", cost: "Starts from ₹50 per graft" },
         { type: "FUT Strip Technique (High Volume Yield)", cost: "Starts from ₹70 per graft", badge: "Max Graft Yield", isHighlight: true },
-        { type: "QHT Advanced Method", cost: "Starts from ₹100 per graft" },
+        { type: "NexGen Hair Transplant Advanced Method", cost: "Starts from ₹100 per graft" },
       ],
       factorsSubtitle: "The Factors Affecting FUT Hair Transplant Cost:",
       factors: [
@@ -4443,7 +4443,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Among the Most Trusted FUT Hair Transplant Clinics in India",
-      subtitle: "With extensive surgical experience, QHT Clinic is trusted across India for advanced hair restoration:",
+      subtitle: "With extensive surgical experience, NexGen Hair Transplant is trusted across India for advanced hair restoration:",
       stats: [
         { title: "15,000+ Transplants", desc: "Completed over 15,000 successful hair transplant procedures across national and international patients." },
         { title: "Patient-Centric Care", desc: "Proven track record of delivering natural results with transparent consultation and lifelong support." },
@@ -4475,8 +4475,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for FUT Hair Transplant",
-      subtitle: "With over 15,000+ surgeries and ABHRS-certified doctors, QHT provides clinical excellence:",
+      title: "Why Choose NexGen for FUT Hair Transplant",
+      subtitle: "With over 15,000+ surgeries and ABHRS-certified doctors, NexGen Hair Transplant provides clinical excellence:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "Expert Surgical Team", desc: "Highly skilled surgeons experienced in thousands of procedures spanning Norwood 1 to 7 grades." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Advanced Implantation", desc: "Grafts implanted using SAVA/Choi implanters for natural depth, acute angles, and density." },
@@ -4488,7 +4488,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     postSurgerySupport: {
       title: "Post-Surgery Support for FUT Hair Transplant",
-      subtitle: "QHT Clinic provides structured post-operative support to ensure smooth recovery and optimal long-term results after FUT.",
+      subtitle: "NexGen Hair Transplant provides structured post-operative support to ensure smooth recovery and optimal long-term results after FUT.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-8.webp",
       supportItems: [
         { title: "Regular Follow-Ups", desc: "Scheduled follow-up appointments to monitor healing, suture removal on day 10–14, and early hair growth." },
@@ -4499,7 +4499,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     dosDonts: {
       title: "Do's and Don'ts After Hair Transplant",
-      subtitle: "After an FUT hair transplant at QHT Clinic, follow these guidelines to ensure optimal graft survival and donor healing:",
+      subtitle: "After an FUT hair transplant at NexGen, follow these guidelines to ensure optimal graft survival and donor healing:",
       donts: [
         "Do not scratch, rub, or pick at the donor incision or recipient graft area.",
         "Avoid smoking and alcohol consumption for at least 2 weeks post-surgery.",
@@ -4510,7 +4510,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       dos: [
         "Take prescribed antibiotics and medications on time as directed.",
         "Sleep with your head elevated at 45 degrees for the first 5 nights to minimize swelling.",
-        "Follow gentle hair washing instructions provided by QHT Clinic experts.",
+        "Follow gentle hair washing instructions provided by NexGen Hair Transplant experts.",
         "Maintain a balanced, protein-rich diet and stay well hydrated.",
         "Attend scheduled clinic appointments for suture removal at day 10–14.",
       ],
@@ -4556,7 +4556,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       patientCountText: "4.9K patients booked their sessions",
     },
     comparison: {
-      title: "Comparison of FUE vs FUT vs QHT Hair Transplant Techniques",
+      title: "Comparison of FUE vs FUT vs NexGen Hair Transplant Techniques",
       subtitle: "Understand key technical differences in harvesting, yield, scarring, and recovery duration across methods:",
       cards: [
         {
@@ -4574,7 +4574,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           cost: "Standard (Starts ₹50/graft)",
         },
         {
-          title: "QHT Method",
+          title: "NexGen Hair Transplant Method",
           purpose: "Simultaneous sapphire extraction and SAVA implanter placement with zero holding time.",
           effectiveness: "Maximum 95%+ graft survival with ultra-dense hairline placement.",
           risk: "Virtually invisible scarring; fastest recovery (5–7 days).",
@@ -4599,7 +4599,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "Will the FUT scar be visible?",
-          answer: "With QHT Clinic's advanced trichophytic closure technique, hair grows directly through the incision, leaving a fine, pencil-thin line that is easily hidden under surrounding hair.",
+          answer: "With NexGen Hair Transplant's advanced trichophytic closure technique, hair grows directly through the incision, leaving a fine, pencil-thin line that is easily hidden under surrounding hair.",
         },
         {
           question: "How long does recovery take after FUT?",
@@ -4607,7 +4607,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "What is the cost of an FUT hair transplant in India in 2026?",
-          answer: "At QHT Clinic, FUT pricing starts from ₹50–₹70 per graft, providing the most cost-effective option for extensive Norwood 5–7 baldness with complete post-operative care.",
+          answer: "At NexGen Hair Transplant, FUT pricing starts from ₹50–₹70 per graft, providing the most cost-effective option for extensive Norwood 5–7 baldness with complete post-operative care.",
         },
       ],
     },
@@ -4625,22 +4625,22 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "A surgical procedure used for treating receding hairlines or baldness in men.",
       block1Paragraphs: [
         "Male pattern hair loss, also known as androgenetic alopecia, affects the temples and scalp, gradually causing hair loss and reduced density.",
-        "Male hair transplant treatment has become a reliable option for those seeking to restore hair and confidence. QHT Clinic offers the best affordable packages for male hair transplant procedures, providing denser, natural-looking hair. The results are permanent and long-lasting.",
+        "Male hair transplant treatment has become a reliable option for those seeking to restore hair and confidence. NexGen Hair Transplant offers the best affordable packages for male hair transplant procedures, providing denser, natural-looking hair. The results are permanent and long-lasting.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-1.webp",
       pointer1: "Graft extraction",
       pointer2: "Natural hairline",
       block2Heading: "Male Hair Transplant in India",
       block2Paragraphs: [
-        "Hair loss affects us both emotionally and psychologically. We, at QHT Clinic, hear you.",
-        "At QHT Clinic, we offer affordable packages with long-lasting natural results. As it depends on several factors like the number of grafts used, geographical location of the clinic or hospital, doctor's expertise, and the techniques used, costs can be estimated between Rs 25,000 and Rs 1,50,000.",
+        "Hair loss affects us both emotionally and psychologically. We, at NexGen Hair Transplant, hear you.",
+        "At NexGen Hair Transplant, we offer affordable packages with long-lasting natural results. As it depends on several factors like the number of grafts used, geographical location of the clinic or hospital, doctor's expertise, and the techniques used, costs can be estimated between Rs 25,000 and Rs 1,50,000.",
         "The cost for the surgery may increase to cover larger bald patches. Here's a quick overview of the male hair transplant procedure.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-2.webp",
     },
     results: {
       title: "RESULT OF MALE HAIR TRANSPLANT",
-      subtitle: "At QHT Clinic in India, we understand your concerns. We provide aesthetically natural-looking, denser hair through our unique QUICK HAIR TRANSPLANT TECHNIQUE, an enhanced FUE technique that focuses on speed and precision.",
+      subtitle: "At NexGen Hair Transplant in India, we understand your concerns. We provide aesthetically natural-looking, denser hair through our unique QUICK HAIR TRANSPLANT TECHNIQUE, an enhanced FUE technique that focuses on speed and precision.",
       results: [
         {
           name: "Irfan - Grade 5A",
@@ -4705,7 +4705,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       subtitle: "It is essential to know about the various male hair transplant techniques available. Here's a quick summary of each technique.",
       types: [
         {
-          title: "QHT (QUICK HAIR TRANSPLANT)",
+          title: "NEXGEN HAIR TRANSPLANT",
           desc: "An enhanced version of the FUE technique, in which the extraction and implantation of hair grafts occur simultaneously.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -4774,7 +4774,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           stepNumber: "02",
           title: "Selection of Techniques",
-          desc: "The surgeon may use the strip technique (FUT), follicle-by-follicle (FUE), or QHT (QUICK HAIR TRANSPLANT) technique depending on your situation.",
+          desc: "The surgeon may use the strip technique (FUT), follicle-by-follicle (FUE), or NEXGEN HAIR TRANSPLANT technique depending on your situation.",
         },
         {
           stepNumber: "03",
@@ -4819,7 +4819,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       costOverview: [
         "Male hair transplant cost depends on multiple factors. Male hair transplant cost in India varies depending upon the procedure, requirements, and technique. The more complex the procedure, the higher the cost.",
         "In tier 1 cities like Delhi and Mumbai, male hair transplants cost around Rs 50,000 - Rs 1,50,000.",
-        "In tier 2 cities, the treatment is slightly lower. QHT Clinic offers affordable packages with promising, celebrity-approved results.",
+        "In tier 2 cities, the treatment is slightly lower. NexGen Hair Transplant offers affordable packages with promising, celebrity-approved results.",
       ],
       factorsSubtitle: "The male hair transplant cost is greatly affected by expertise, techniques involved, geographical location, and the number of grafts needed.",
       factors: [
@@ -4847,9 +4847,9 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "WHY WE ARE AMONGST THE MOST TRUSTED SERVICE NAME IN HAIR TRANSPLANT CLINICS IN INDIA",
-      subtitle: "At QHT, we prefer patients' satisfaction over anything. The hair transplant packages at QHT Clinic come with assured credibility and affordability.",
+      subtitle: "At NexGen Hair Transplant, we prefer patients' satisfaction over anything. The hair transplant packages at NexGen come with assured credibility and affordability.",
       stats: [
-        { title: "15,000+", desc: "QHT Surgeries Done with near 100% success rate and maximum precision." },
+        { title: "15,000+", desc: "NexGen Hair Transplant Surgeries Done with near 100% success rate and maximum precision." },
         { title: "30 Million+", desc: "Grafts implanted with expert handling in large-scale sessions." },
         { title: "10+ Years", desc: "Years of experience with over 10,000+ procedures performed." },
         { title: "5+ Clinics", desc: "Clinic locations all over India, offering convenience and affordability." },
@@ -4878,19 +4878,19 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "WHY CHOOSE QHT FOR MALE HAIR TRANSPLANT",
-      subtitle: "QHT Clinic offers world-class techniques with greater affordability, offering EMI options, celebrity approval, and pan-India presence.",
+      title: "WHY CHOOSE NEXGEN FOR MALE HAIR TRANSPLANT",
+      subtitle: "NexGen Hair Transplant offers world-class techniques with greater affordability, offering EMI options, celebrity approval, and pan-India presence.",
       features: [
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "WORLD-CLASS TECHNIQUES", desc: "We use the QHT TECHNIQUE where slits are created before graft extraction, offering scarless, natural results with high graft survival." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "CELEBRITY TRUSTED", desc: "Renowned celebrities like Rajpal Yadav, Rajgopal Iyer, and Dayanand Shetty have trusted QHT Clinic for natural results." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-5.webp", title: "AFFORDABILITY", desc: "QHT Clinic is the preferred choice for hair restoration, providing transparent packages and unmatched clinical value." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "WORLD-CLASS TECHNIQUES", desc: "We use the NexGen Hair Transplant TECHNIQUE where slits are created before graft extraction, offering scarless, natural results with high graft survival." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "CELEBRITY TRUSTED", desc: "Renowned celebrities like Rajpal Yadav, Rajgopal Iyer, and Dayanand Shetty have trusted NexGen Hair Transplant for natural results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-5.webp", title: "AFFORDABILITY", desc: "NexGen Hair Transplant is the preferred choice for hair restoration, providing transparent packages and unmatched clinical value." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp", title: "PAN -INDIA CLINICS", desc: "Pan-India presence makes expert hair restoration accessible across multiple major hubs." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-7.webp", title: "EMI OPTIONS", desc: "Flexible EMI options ensure world-class treatments are accessible even during a financial crunch." },
       ],
     },
     postSurgerySupport: {
       title: "Post Surgery Support",
-      subtitle: "At QHT, comprehensive post-surgery support is provided to address all queries and ensure smooth recovery.",
+      subtitle: "At NexGen Hair Transplant, comprehensive post-surgery support is provided to address all queries and ensure smooth recovery.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-8.webp",
       supportItems: [
         { title: "Detailed Follow-Up Plan", desc: "A proper follow-up guide helps in understanding post-treatment care to avoid complications." },
@@ -4968,11 +4968,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       patientCountText: "4.9K patients booked their sessions",
     },
     comparison: {
-      title: "Comparison of FUE, FUT and QHT Technique in Male Hair Transplant",
-      subtitle: "FUE, FUT and QHT techniques are used in hair restoration procedures, each offering distinct advantages.",
+      title: "Comparison of FUE, FUT and NexGen Technique in Male Hair Transplant",
+      subtitle: "FUE, FUT and NexGen Hair Transplant techniques are used in hair restoration procedures, each offering distinct advantages.",
       cards: [
         {
-          title: "QHT",
+          title: "NexGen Hair Transplant",
           purpose: "Minimally invasive with scarless results and simultaneous extraction and implantation.",
           effectiveness: "Denser looking hair with minimal downtime and discomfort",
           risk: "Minimal to moderate",
@@ -5038,7 +5038,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Hairline Reconstruction: The Art of Restoring a Natural, Youthful Look via a Hairline Designing.",
       block1Paragraphs: [
         "Hairline reconstruction is a specialized hair transplant procedure that brings back a natural-looking and geometrically balanced hairline. For many people, a receding hairline makes the face look older than it should.",
-        "This treatment is all about designing a hairline that looks real, blends well with your features, and stays permanent. At QHT Clinic, we use modern methods like FUE and our own QHT approach to achieve high graft survival and natural results that patients can trust.",
+        "This treatment is all about designing a hairline that looks real, blends well with your features, and stays permanent. At NexGen Hair Transplant, we use modern methods like FUE and our own NexGen Hair Transplant approach to achieve high graft survival and natural results that patients can trust.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Our-Promise.webp",
       pointer1: "Geometric Facial Ratio",
@@ -5046,7 +5046,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Hairline Reconstruction in India",
       block2Paragraphs: [
         "India has quickly become one of the leading destinations for hairline restoration. The combination of skilled doctors, advanced technology, and affordable pricing makes it popular not just with local patients, but also with people flying in from abroad.",
-        "At QHT, every hairline is planned individually—we look at face shape, age, and future hair loss patterns before deciding how the hairline should be built. Our commitment at QHT Clinic is clear: natural, dense results you can trust.",
+        "At NexGen Hair Transplant, every hairline is planned individually—we look at face shape, age, and future hair loss patterns before deciding how the hairline should be built. Our commitment at NexGen Hair Transplant is clear: natural, dense results you can trust.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/Hairline.webp",
     },
@@ -5131,7 +5131,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Method",
+          title: "NexGen Hair Transplant Method",
           desc: "An advanced technique where extracted follicles are quickly implanted into the scalp using special SAVA implanters, reducing out-of-body holding time.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -5163,13 +5163,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-2.webp",
           title: "Minimally Invasive & Minimal Downtime",
-          desc: "Advanced techniques like FUE and QHT offer minimal discomfort, faster healing, and quick return to work.",
+          desc: "Advanced techniques like FUE and NexGen Hair Transplant offer minimal discomfort, faster healing, and quick return to work.",
         },
       ],
     },
     procedure: {
       title: "Procedure Used For Hairline Reconstruction in India",
-      subtitle: "Hair transplant procedures in India use advanced techniques like QHT, FUE, and FUT to restore natural hair growth with safe and long-lasting results:",
+      subtitle: "Hair transplant procedures in India use advanced techniques like NexGen Hair Transplant, FUE, and FUT to restore natural hair growth with safe and long-lasting results:",
       steps: [
         {
           stepNumber: "01",
@@ -5238,14 +5238,14 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       tableRows: [
         { type: "FUE (Follicular Unit Extraction)", cost: "₹40,000 – ₹90,000" },
         { type: "FUT (Follicular Unit Transplantation)", cost: "₹35,000 – ₹80,000" },
-        { type: "QHT (Quick Hair Transplant)", cost: "₹70,000 – ₹1,50,000", badge: "Gold Standard", isHighlight: true },
+        { type: "NexGen Hair Transplant", cost: "₹70,000 – ₹1,50,000", badge: "Gold Standard", isHighlight: true },
       ],
       factorsSubtitle: "Factors Affecting the Cost of Hairline Reconstruction:",
       factors: [
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
           title: "Technique Used",
-          desc: "Advanced techniques like QHT and micro-FUE use specialized implanters, elevating precision and procedural value.",
+          desc: "Advanced techniques like NexGen Hair Transplant and micro-FUE use specialized implanters, elevating precision and procedural value.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-4.webp",
@@ -5269,7 +5269,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       subtitle: "Selecting the right clinic makes all the difference in achieving a natural, long-lasting hairline. Here’s what sets us apart:",
       stats: [
         { title: "Custom Hairline Design", desc: "Every hairline plan is uniquely designed to suit your face, age, and natural growth pattern." },
-        { title: "Advanced QHT Tech", desc: "Immediate graft implantation without waiting time for maximum graft survival and high density." },
+        { title: "Advanced NexGen Hair Transplant Tech", desc: "Immediate graft implantation without waiting time for maximum graft survival and high density." },
         { title: "Proven Experience", desc: "Over 12,000 successful hair restorations performed with consistent top-tier results." },
         { title: "Trusted Nationwide", desc: "Multiple centres across India endorsed by public figures and thousands of satisfied clients." },
       ],
@@ -5297,11 +5297,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Hairline Reconstruction?",
-      subtitle: "At QHT, hairline reconstruction is about designing a hairline that matches your facial proportions and stays consistent over time:",
+      title: "Why Choose NexGen Hair Transplant for Hairline Reconstruction?",
+      subtitle: "At NexGen Hair Transplant, hairline reconstruction is about designing a hairline that matches your facial proportions and stays consistent over time:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Artistic Hairline Design", desc: "Every hairline is created to fit your individual face shape and age for an authentic, seamless result." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Advanced QHT Technology", desc: "Immediate graft placement with zero waiting time ensures higher survival and maximum density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Advanced NexGen Hair Transplant Technology", desc: "Immediate graft placement with zero waiting time ensures higher survival and maximum density." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Experienced Surgeons", desc: "Over 12,000 successful procedures completed with unmatched precision and artistic expertise." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Natural & Long-Term Results", desc: "Medical skill and micro single-hair feathering guarantee your new hairline grows naturally for life." },
       ],
@@ -5396,7 +5396,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "What is the success rate of hairline reconstruction?",
-          answer: "With advanced methods like QHT, hairline reconstruction achieves exceptional success rates—over 90–95% of transplanted grafts grow back naturally and permanently.",
+          answer: "With advanced methods like NexGen Hair Transplant, hairline reconstruction achieves exceptional success rates—over 90–95% of transplanted grafts grow back naturally and permanently.",
         },
         {
           question: "What are the side effects of hairline reconstruction?",
@@ -5416,7 +5416,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
   "caucasian-patients-hair-transplant": {
     hero: {
       title: "Best Hair Transplant for Caucasian Men in India",
-      subtitle: "QHT Clinic provides the best Hair Transplant for Caucasian Men, designed by experts with advanced methods for natural results and affordable care.",
+      subtitle: "NexGen provides the best Hair Transplant for Caucasian Men, designed by experts with advanced methods for natural results and affordable care.",
       bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/IMG_0466-1568x1045.jpg",
       tagline: "International Care & Expertise",
       pointerLabel: "Caucasian Hairline Design",
@@ -5426,21 +5426,21 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Regain Confidence with Hair Transplant for Caucasian Men",
       block1Paragraphs: [
         "Hair Transplant for Caucasian Men is a minimally invasive procedure where follicles are extracted from the donor site and implanted into balding or thinning regions. Caucasian men often experience patterned loss, usually initiated at the temples or crown, leading to an 'M-shaped' hairline. Unlike traditional methods, advanced techniques leave no visible scars and promote quicker recovery.",
-        "At QHT Clinic, surgeons apply the Quick Hair Transplant (QHT) method with superfine punches and SAVA implanters for natural Caucasian hairlines, higher graft survival, and customized density.",
+        "At NexGen Hair Transplant, surgeons apply the NexGen Hair Transplant method with superfine punches and SAVA implanters for natural Caucasian hairlines, higher graft survival, and customized density.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/IMG_0466-1568x1045.jpg",
       pointer1: "Fine graft extraction",
       pointer2: "M-shape hairline design",
       block2Heading: "Hair Transplant for Caucasian Men in India",
       block2Paragraphs: [
-        "In India, Hair Transplant for Caucasian Men has become a reliable solution for those experiencing receding hairlines or thinning crowns. With naturally thicker strands, Caucasian hair provides good scalp coverage, requiring fewer grafts for good results. At QHT Clinic, our advanced procedures combined with the QHT method ensure painless extraction, high graft survival and density.",
-        "Many international patients choose India for affordable transplants with high quality. QHT Clinic is thus offering advanced, safe, and affordable Caucasian hair transplant services with natural and permanent outcomes.",
+        "In India, Hair Transplant for Caucasian Men has become a reliable solution for those experiencing receding hairlines or thinning crowns. With naturally thicker strands, Caucasian hair provides good scalp coverage, requiring fewer grafts for good results. At NexGen Hair Transplant, our advanced procedures combined with the NexGen Hair Transplant method ensure painless extraction, high graft survival and density.",
+        "Many international patients choose India for affordable transplants with high quality. NexGen Hair Transplant is thus offering advanced, safe, and affordable Caucasian hair transplant services with natural and permanent outcomes.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
     },
     results: {
       title: "Result of Hair Transplant for Caucasian Men",
-      subtitle: "At QHT Clinic, the Hair transplant for Caucasian Men provides long-term, natural-looking results by restoring density and providing desired hairlines. All this with visible growth within 3-4 months.",
+      subtitle: "At NexGen Hair Transplant, the Hair transplant for Caucasian Men provides long-term, natural-looking results by restoring density and providing desired hairlines. All this with visible growth within 3-4 months.",
       results: [
         {
           name: "Irfan - Grade 5A",
@@ -5476,7 +5476,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     candidate: {
       title: "Who is an Ideal Candidate for Hair Transplant for Caucasian Men",
-      subtitle: "The Hair transplant for Caucasian Men procedure at QHT Clinic is ideal for individuals experiencing hair loss who want natural-looking results and a quick recovery from a minimally invasive procedure.",
+      subtitle: "The Hair transplant for Caucasian Men procedure at NexGen Hair Transplant is ideal for individuals experiencing hair loss who want natural-looking results and a quick recovery from a minimally invasive procedure.",
       points: [
         {
           title: "Individuals with Receding Hairline",
@@ -5494,7 +5494,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     types: {
       title: "Types of Hair Transplant for Caucasian Men",
-      subtitle: "QHT offers advanced hair transplant techniques for Caucasian men, ensuring precise graft placement, natural results, and minimal downtime.",
+      subtitle: "NexGen offers advanced hair transplant techniques for Caucasian men, ensuring precise graft placement, natural results, and minimal downtime.",
       types: [
         {
           title: "FUE Hair Transplant",
@@ -5507,7 +5507,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Technique",
+          title: "NexGen Hair Transplant Technique",
           desc: "Advanced technique combining FUE precision with customized graft handling, superfine sapphire punches, and direct SAVA implanter pens.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-types-thumb-2.webp",
           points: [
@@ -5520,7 +5520,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     benefits: {
       title: "Benefits of Hair Transplant for Caucasian Men",
-      subtitle: "The hair transplant for Caucasian Men at QHT Clinic enhances confidence and appearance with world-class international standards:",
+      subtitle: "The hair transplant for Caucasian Men at NexGen Hair Transplant enhances confidence and appearance with world-class international standards:",
       benefits: [
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-1.webp",
@@ -5535,18 +5535,18 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-4.webp",
           title: "Least Scarring",
-          desc: "QHT Clinic’s advanced micro-punch techniques provide quick healing and virtually invisible scars.",
+          desc: "NexGen Hair Transplant’s advanced micro-punch techniques provide quick healing and virtually invisible scars.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-2.webp",
           title: "Customised for Every Patient",
-          desc: "At QHT Clinic, every procedure is personalized to match the specific hair curl, texture, and density needs of Caucasian men.",
+          desc: "At NexGen Hair Transplant, every procedure is personalized to match the specific hair curl, texture, and density needs of Caucasian men.",
         },
       ],
     },
     procedure: {
       title: "Procedure for Hair Transplant for Caucasian Men",
-      subtitle: "Hair Restoration for Caucasian Men at QHT Clinic is performed with utmost precision and modern process comprising 4 key steps:",
+      subtitle: "Hair Restoration for Caucasian Men at NexGen Hair Transplant is performed with utmost precision and modern process comprising 4 key steps:",
       steps: [
         {
           stepNumber: "01",
@@ -5587,7 +5587,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-4.webp",
           title: "Medical Evaluation",
-          desc: "Detailed medical history and scalp assessment are conducted by QHT Clinic specialists.",
+          desc: "Detailed medical history and scalp assessment are conducted by NexGen Hair Transplant specialists.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cause-icon-2.webp",
@@ -5600,11 +5600,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Hair Transplant for Caucasian Men Cost in India",
       costOverview: [
         "The Hair Transplant for Caucasian Men in India relies on various factors like the patient’s degree of baldness, the number of grafts required, the technique opted, and the surgeon’s expertise. Each case requires different personalization, therefore the cost is calculated in accordance with the patient’s needs and desires.",
-        "QHT Clinic offers personalized planning, expert surgical interventions, advanced procedures, and comprehensive aftercare, making India a premier global hub for international patient hair restoration.",
+        "NexGen Hair Transplant offers personalized planning, expert surgical interventions, advanced procedures, and comprehensive aftercare, making India a premier global hub for international patient hair restoration.",
       ],
       tableRows: [
         { type: "FUE Technique (1,500 – 2,500 Grafts)", cost: "₹45,000 – ₹90,000 / $600 – $1,100" },
-        { type: "QHT Advanced Method (2,500 – 4,000 Grafts)", cost: "₹75,000 – ₹1,50,000 / $950 – $1,850", badge: "International Choice", isHighlight: true },
+        { type: "NexGen Hair Transplant Advanced Method (2,500 – 4,000 Grafts)", cost: "₹75,000 – ₹1,50,000 / $950 – $1,850", badge: "International Choice", isHighlight: true },
         { type: "Mega Session (4,000+ Grafts)", cost: "₹1,20,000 – ₹2,20,000 / $1,500 – $2,700" },
       ],
       factorsSubtitle: "The factors that affect the Hair Transplant for Caucasian Men include:",
@@ -5622,12 +5622,12 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
           title: "Treatment Method Chosen",
-          desc: "Different techniques like QHT and micro-FUE vary based on specialized instruments and surgical precision.",
+          desc: "Different techniques like NexGen Hair Transplant and micro-FUE vary based on specialized instruments and surgical precision.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-2.webp",
-          title: "Clinical Expertise at QHT Clinic",
-          desc: "QHT Clinic’s experienced specialists provide safe, natural-looking results with transparent international patient pricing.",
+          title: "Clinical Expertise at NexGen Hair Transplant",
+          desc: "NexGen Hair Transplant’s experienced specialists provide safe, natural-looking results with transparent international patient pricing.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
@@ -5638,7 +5638,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Hair Transplant Clinics for Caucasian Men in India",
-      subtitle: "QHT Clinic is trusted globally by international patients for our expert surgeons, state-of-the-art facilities, and natural outcomes:",
+      subtitle: "NexGen Hair Transplant is trusted globally by international patients for our expert surgeons, state-of-the-art facilities, and natural outcomes:",
       stats: [
         { title: "5000+", desc: "Successful Hair Transplants for Caucasian and international patients completed with precision." },
         { title: "100%", desc: "Client satisfaction with a proven record of successful recoveries and natural hair growth." },
@@ -5669,11 +5669,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Hair Transplant for Caucasian Men?",
-      subtitle: "QHT Hair Transplants for Caucasian Men provide the right techniques, surgeons, natural results, the least recovery time, and proper aftercare for long-term success.",
+      title: "Why Choose NexGen for Hair Transplant for Caucasian Men?",
+      subtitle: "NexGen Hair Transplants for Caucasian Men provide the right techniques, surgeons, natural results, the least recovery time, and proper aftercare for long-term success.",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Celebrity Trusted", desc: "Trusted by celebrities, global influencers, and international travelers for undetectable results." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Clinical Expertise", desc: "Years of specialized experience handling Caucasian hair follicle geometry with our advanced QHT technique." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Clinical Expertise", desc: "Years of specialized experience handling Caucasian hair follicle geometry with our advanced NexGen Hair Transplant technique." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Natural Results", desc: "Expert surgeons craft customized hairlines and natural density matching European facial symmetry." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Best Facilities", desc: "World-class surgical suites equipped with cutting-edge sapphire micro-tools and sterile safety protocols." },
       ],
@@ -5700,7 +5700,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
       dos: [
         "Take prescribed medications and antibiotics on time as directed.",
-        "Follow QHT Clinic’s post-operative washing and saline spray instructions.",
+        "Follow NexGen Hair Transplant’s post-operative washing and saline spray instructions.",
         "Maintain a balanced, nutritious protein-rich diet.",
         "Sleep with your head elevated on extra pillows for the first 3–4 nights.",
       ],
@@ -5741,11 +5741,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       patientCountText: "4.9K patients booked their sessions",
     },
     comparison: {
-      title: "Comparison of QHT vs Traditional FUE Hair Transplant",
+      title: "Comparison of NexGen vs Traditional FUE Hair Transplant",
       subtitle: "This comparison provides a clear overview of key features, helping you choose the best technique for your restoration goals:",
       cards: [
         {
-          title: "QHT Hair Transplant",
+          title: "NexGen Hair Transplant",
           purpose: "High precision, undetectable natural hairline, and maximum density with SAVA implanter pens.",
           effectiveness: "High graft survival (95%+), minimal out-of-body time, customized for Caucasian hair texture.",
           risk: "Virtually invisible micro-scars, rapid recovery in 5–7 days with minimal discomfort.",
@@ -5777,7 +5777,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "Is a hair transplant for Caucasian men safe in India?",
-          answer: "Yes. At QHT Clinic, procedures are minimally invasive, 100% doctor-performed in sterile state-of-the-art facilities following international safety protocols.",
+          answer: "Yes. At NexGen Hair Transplant, procedures are minimally invasive, 100% doctor-performed in sterile state-of-the-art facilities following international safety protocols.",
         },
       ],
     },
@@ -5795,7 +5795,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Custom Hairline Transplant – Designed Uniquely for Your Face, Age & Natural Look.",
       block1Paragraphs: [
         "Custom hairline transplant is a medicalized form of hair restoration surgery, which is developed to form an age-realistic, natural-looking hairline that flows in harmony with your facial features. In contrast to generic transplant techniques, custom hairline targets your personal requirements; face shape, age, gender and future patterns of loss of your hair.",
-        "In the QHT Clinic, our professionals apply the latest methods such as FUE, FUT and our own QHT to provide permanent outcomes that look natural. Each hairline is different and so is our style.",
+        "In the NexGen Hair Transplant, our professionals apply the latest methods such as FUE, FUT and our own NexGen Hair Transplant to provide permanent outcomes that look natural. Each hairline is different and so is our style.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC8005-1568x1126.jpg",
       pointer1: "Micro slit alignment",
@@ -5803,7 +5803,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Custom Hairline Transplant in India",
       block2Paragraphs: [
         "A combination of low cost, highly qualified surgeons, and technology has made India one of the top locations to have custom hairline transplants. India is preferred by patients worldwide as a destination of choice to perform procedures that are affordable and at the same time of high quality.",
-        "At QHT, your hairline is custom made. Each part, such as density, symmetry and natural direction is shaped so that your transplant does not feel artificial.",
+        "At NexGen Hair Transplant, your hairline is custom made. Each part, such as density, symmetry and natural direction is shaped so that your transplant does not feel artificial.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
     },
@@ -5888,7 +5888,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Method",
+          title: "NexGen Hair Transplant Method",
           desc: "An advanced technique where extracted follicles are directly implanted into the scalp using special SAVA pens.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -5990,19 +5990,19 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Custom Hairline Transplant Cost in India",
       costOverview: [
         "The cost of a custom hairline transplant in India varies widely, depending on the technique used, the number of grafts required, and the surgeon’s expertise.",
-        "At QHT Clinic, we offer transparent pricing models tailored to each patient's aesthetic needs, ensuring high artistic standard without inflated corporate costs.",
+        "At NexGen Hair Transplant, we offer transparent pricing models tailored to each patient's aesthetic needs, ensuring high artistic standard without inflated corporate costs.",
       ],
       tableRows: [
         { type: "FUE (Follicular Unit Extraction)", cost: "₹40,000 – ₹90,000" },
         { type: "FUT (Follicular Unit Transplantation)", cost: "₹35,000 – ₹80,000" },
-        { type: "QHT (Quick Hair Transplant)", cost: "₹70,000 – ₹1,50,000", badge: "Gold Standard", isHighlight: true },
+        { type: "NexGen Hair Transplant", cost: "₹70,000 – ₹1,50,000", badge: "Gold Standard", isHighlight: true },
       ],
       factorsSubtitle: "Factors Affecting Cost of Custom Hairline Transplant:",
       factors: [
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
           title: "Technique Used",
-          desc: "Advanced methods like QHT and Sapphire FUE require specialized implanters and higher precision.",
+          desc: "Advanced methods like NexGen Hair Transplant and Sapphire FUE require specialized implanters and higher precision.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-4.webp",
@@ -6026,7 +6026,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       subtitle: "Selecting the right clinic makes all the difference in achieving a natural, long-lasting hairline. Here’s what sets us apart:",
       stats: [
         { title: "Custom Design", desc: "Every hairline plan is uniquely designed to suit your face, age, and natural growth pattern." },
-        { title: "QHT Technology", desc: "Immediate graft implantation without out-of-body waiting time for higher survival." },
+        { title: "NexGen Hair Transplant Technology", desc: "Immediate graft implantation without out-of-body waiting time for higher survival." },
         { title: "12,000+ Cases", desc: "Over 12,000 successful hair restorations performed with consistent top-tier results." },
         { title: "Trusted Nationwide", desc: "Multiple centres across India endorsed by public figures and thousands of happy patients." },
       ],
@@ -6054,11 +6054,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Custom Hairline Transplant?",
-      subtitle: "Choosing QHT ensures a world-class restoration experience backed by an outstanding surgical team:",
+      title: "Why Choose NexGen Hair Transplant for Custom Hairline Transplant?",
+      subtitle: "Choosing NexGen Hair Transplant ensures a world-class restoration experience backed by an outstanding surgical team:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Artistic Hairline Design", desc: "Age-related, face-proportioned customized planning for the most authentic front framing." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "QHT Technology", desc: "Immediate graft placement with zero holding time for 95%+ graft survival and high density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "NexGen Hair Transplant Technology", desc: "Immediate graft placement with zero holding time for 95%+ graft survival and high density." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Skilled Surgeons", desc: "Certified hair restoration doctors with over 12,000 successful surgical outcomes." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Natural & Long-Lasting", desc: "Undetectable single-hair feathering on leading borders with lifetime permanent growth." },
       ],
@@ -6166,7 +6166,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "What is the success rate?",
-          answer: "At QHT Clinic, our specialized QHT technique and sapphire precision tools achieve graft survival and success rates of 95% and above.",
+          answer: "At NexGen Hair Transplant, our specialized NexGen Hair Transplant technique and sapphire precision tools achieve graft survival and success rates of 95% and above.",
         },
       ],
     },
@@ -6174,7 +6174,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
   "social-media-influencer-hair-transplant": {
     hero: {
       title: "Best Clinic for Social Media Influencer Hair Transplant",
-      subtitle: "Social Media Influencer Hair Transplant solutions at QHT Clinic are tailored by experts with high definition, camera-ready aesthetics and advanced methods.",
+      subtitle: "Social Media Influencer Hair Transplant solutions at NexGen are tailored by experts with high definition, camera-ready aesthetics and advanced methods.",
       bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC5170-1568x1262.jpg",
       tagline: "Camera-Ready HD Restoration",
       pointerLabel: "Celebrity Hairline Design",
@@ -6184,7 +6184,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Regain Confidence with Hair Transplant for Social Media Influencers",
       block1Paragraphs: [
         "Social Media Influencer Hair Transplant is a specialized hair restoration process tailored for digital creators, actors, and public figures dependent on their appearance for personal branding. By using our advanced technique, like the Quick Hair Transplant method, we restore natural hair density and precise, camera-ready hairlines.",
-        "At QHT Clinic, our experts in celebrity hair transplants take care of the requirements of influencers, helping them maintain their aesthetic appeal under high-definition camera lighting for a prolonged duration.",
+        "At NexGen Hair Transplant, our experts in celebrity hair transplants take care of the requirements of influencers, helping them maintain their aesthetic appeal under high-definition camera lighting for a prolonged duration.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC5170-1568x1262.jpg",
       pointer1: "HD Camera-Ready Density",
@@ -6192,13 +6192,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Social Media Influencer Hair Transplant in India",
       block2Paragraphs: [
         "In India, social media influencer hair restoration is a high-demand solution for digital creators and public figures. With the rise of visual content platforms, the need to maintain a youthful, symmetrical appearance has become essential.",
-        "QHT Clinic provides Quick Hair Transplant methods that deliver maximum frontal density, desirable hairline design, and minimal downtime. With proven experience in celebrity hair transplants, QHT clinic is preferred across India for being reliable, discreet, and affordable.",
+        "NexGen provides Quick Hair Transplant methods that deliver maximum frontal density, desirable hairline design, and minimal downtime. With proven experience in celebrity hair transplants, NexGen Hair Transplant is preferred across India for being reliable, discreet, and affordable.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
     },
     results: {
       title: "Result of Social Media Influencer Hair Transplant",
-      subtitle: "At QHT Clinic, the social media influencer hair transplant provides long-term, natural-looking results by restoring density and providing desired camera-ready hairlines with minimal recovery delay.",
+      subtitle: "At NexGen Hair Transplant, the social media influencer hair transplant provides long-term, natural-looking results by restoring density and providing desired camera-ready hairlines with minimal recovery delay.",
       results: [
         {
           name: "Irfan - Grade 5A",
@@ -6234,7 +6234,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     candidate: {
       title: "Who is an Ideal Candidate?",
-      subtitle: "Influencers with bald spots, thinning crowns, or receding hairlines desiring natural, long-term restoration often consider a celebrity hair transplant at QHT Clinic:",
+      subtitle: "Influencers with bald spots, thinning crowns, or receding hairlines desiring natural, long-term restoration often consider a celebrity hair transplant at NexGen:",
       points: [
         {
           title: "Influencers with Receding Hairlines",
@@ -6265,7 +6265,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Technique",
+          title: "NexGen Hair Transplant Technique",
           desc: "Advanced quick hair transplantation with zero holding delay and maximum graft survival.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -6279,7 +6279,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     benefits: {
       title: "Benefits of Social Media Influencer Hair Transplant",
-      subtitle: "The social media influencer hair transplant at QHT Clinic enhances confidence and screen presence with these key benefits:",
+      subtitle: "The social media influencer hair transplant at NexGen enhances confidence and screen presence with these key benefits:",
       benefits: [
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-1.webp",
@@ -6294,7 +6294,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-4.webp",
           title: "Least Scarring",
-          desc: "QHT Clinic’s advanced sapphire micro techniques provide rapid healing and invisible micro-dots.",
+          desc: "NexGen Hair Transplant’s advanced sapphire micro techniques provide rapid healing and invisible micro-dots.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-2.webp",
@@ -6305,7 +6305,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     procedure: {
       title: "Procedure for Social Media Influencers Hair Transplant",
-      subtitle: "Influencer hair restoration at QHT Clinic is performed with utmost precision and modern workflow comprising these steps:",
+      subtitle: "Influencer hair restoration at NexGen Hair Transplant is performed with utmost precision and modern workflow comprising these steps:",
       steps: [
         {
           stepNumber: "01",
@@ -6346,7 +6346,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-3.webp",
           title: "Medical Evaluation",
-          desc: "Comprehensive review of medical history, scalp assessment, and styling requirements at QHT Clinic.",
+          desc: "Comprehensive review of medical history, scalp assessment, and styling requirements at NexGen Hair Transplant.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-2.webp",
@@ -6359,11 +6359,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Social Media Influencer Hair Transplant Cost in India",
       costOverview: [
         "The cost of Social Media Influencer Hair Transplant in India relies on the degree of hair loss, number of grafts, technique chosen, and required density.",
-        "Each case requires personalized artistic planning to achieve high-definition screen results, and QHT Clinic provides transparent, celebrity-trusted pricing tiers.",
+        "Each case requires personalized artistic planning to achieve high-definition screen results, and NexGen Hair Transplant provides transparent, celebrity-trusted pricing tiers.",
       ],
       tableRows: [
         { type: "FUE Technique (1,500 – 2,500 Grafts)", cost: "₹45,000 – ₹90,000" },
-        { type: "QHT Advanced Method (2,500 – 4,000 Grafts)", cost: "₹75,000 – ₹1,50,000", badge: "Influencer Choice", isHighlight: true },
+        { type: "NexGen Hair Transplant Advanced Method (2,500 – 4,000 Grafts)", cost: "₹75,000 – ₹1,50,000", badge: "Influencer Choice", isHighlight: true },
         { type: "High-Density Mega Session (4,000+ Grafts)", cost: "₹1,20,000 – ₹2,20,000" },
       ],
       factorsSubtitle: "The factors that affect Social Media Influencer Hair Transplant cost include:",
@@ -6381,11 +6381,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
           title: "Treatment Method Chosen",
-          desc: "Techniques like QHT and Sapphire FUE require specialized micro implanters for higher precision.",
+          desc: "Techniques like NexGen Hair Transplant and Sapphire FUE require specialized micro implanters for higher precision.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-2.webp",
-          title: "Clinical Expertise at QHT Clinic",
+          title: "Clinical Expertise at NexGen Hair Transplant",
           desc: "Top surgeon artistry ensures undetectable hairlines that withstand close-up 4K video recording.",
         },
         {
@@ -6397,7 +6397,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Influencer Hair Transplant Clinics in India",
-      subtitle: "QHT Clinic is trusted by prominent creators and public figures for natural results and privacy:",
+      subtitle: "NexGen Hair Transplant is trusted by prominent creators and public figures for natural results and privacy:",
       stats: [
         { title: "5,000+ Transplants", desc: "Numerous successful influencer and celebrity hair restorations performed with precision." },
         { title: "100% Satisfaction", desc: "Proven track record of high graft survival and delighted public figures." },
@@ -6428,8 +6428,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Influencer Hair Transplant?",
-      subtitle: "QHT provides advanced techniques, experienced celebrity surgeons, natural density, and fast recovery:",
+      title: "Why Choose NexGen for Influencer Hair Transplant?",
+      subtitle: "NexGen Hair Transplant provides advanced techniques, experienced celebrity surgeons, natural density, and fast recovery:",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Celebrity Trusted", desc: "Trusted by Bollywood actors, YouTube creators, and reality TV stars for seamless restoration." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Clinical Expertise", desc: "Years of experience handling aesthetic, camera-critical hairline and crown cases." },
@@ -6459,7 +6459,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
       dos: [
         "Take prescribed medications and antibiotics on time.",
-        "Follow QHT Clinic's gentle hair washing and saline spray instructions.",
+        "Follow NexGen Hair Transplant's gentle hair washing and saline spray instructions.",
         "Eat a balanced, protein-rich diet and stay well hydrated.",
         "Sleep with your head elevated on pillows for the first 5 nights to minimize swelling.",
       ],
@@ -6476,7 +6476,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           label: "Week 2",
           expectations: ["Scabs fall off naturally and the scalp begins rapid epithelial healing."],
-          careGuidelines: ["Follow gentle QHT washing routine without scratching; avoid direct sunlight."],
+          careGuidelines: ["Follow gentle NexGen Hair Transplant washing routine without scratching; avoid direct sunlight."],
         },
         {
           label: "Week 3",
@@ -6504,7 +6504,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       subtitle: "A clear overview of key features to help you choose the best technique for your screen presence and schedule:",
       cards: [
         {
-          title: "QHT Advanced Method",
+          title: "NexGen Hair Transplant Advanced Method",
           purpose: "Precision micro-extraction with immediate SAVA implanter placement for maximum density.",
           effectiveness: "High density and natural spiral alignment with 95%+ graft survival.",
           risk: "Virtually zero visible scarring, rapid 5–7 days recovery for quick screen return.",
@@ -6532,7 +6532,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "What is the cost of Social Media Influencer Hair Transplant in India?",
-          answer: "The cost depends on the graft count and technique chosen. QHT Clinic offers transparent, competitive pricing ranging from ₹45,000 to ₹1,50,000+ with celebrity-level surgical care.",
+          answer: "The cost depends on the graft count and technique chosen. NexGen Hair Transplant offers transparent, competitive pricing ranging from ₹45,000 to ₹1,50,000+ with celebrity-level surgical care.",
         },
         {
           question: "Can influencers style hair after a transplant?",
@@ -6543,8 +6543,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           answer: "Only mild, temporary redness and slight swelling may occur in the first few days, which quickly subsides with our guided aftercare.",
         },
         {
-          question: "Why do influencers choose QHT Clinic for Hair Transplant?",
-          answer: "Because QHT Clinic provides undetectable natural hairlines, high camera-ready density, minimal downtime, and complete privacy for public figures.",
+          question: "Why do influencers choose NexGen for Hair Transplant?",
+          answer: "Because NexGen Hair Transplant provides undetectable natural hairlines, high camera-ready density, minimal downtime, and complete privacy for public figures.",
         },
       ],
     },
@@ -6563,21 +6563,21 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Correcting The Mistakes Made",
       block1Paragraphs: [
         "A Bad Hair Transplant Correction is a specific procedure that aims to correct an unnatural, poorly done, or failed hair transplant. If you are dealing with a pluggy hairline, visible scarring, poor density, or hair growing in the wrong direction, you may be ideal for this procedure.",
-        "At QHT Clinic, our surgeons have performed hundreds of corrections on patients who need help in fixing a hair transplant that has gone wrong. They use the latest technology and precise techniques to obtain natural growth and aesthetic results. This is a proven to be successful treatment which gives patients the ability to gain back their confidence.",
+        "At NexGen Hair Transplant, our surgeons have performed hundreds of corrections on patients who need help in fixing a hair transplant that has gone wrong. They use the latest technology and precise techniques to obtain natural growth and aesthetic results. This is a proven to be successful treatment which gives patients the ability to gain back their confidence.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
       pointer1: "Graft extraction",
       pointer2: "Natural hairline",
       block2Heading: "Bad Hair Transplant Correction in India",
       block2Paragraphs: [
-        "India has quickly become a world leader in correcting failed hair transplants due to advanced techniques, experienced surgeons, and affordability. At QHT Clinic, you can expect international standards of care using the latest tools including sapphire punch and high magnification lenses. All procedures have low downtime, very high graft survival rate, and an aesthetically pleasing outcome.",
+        "India has quickly become a world leader in correcting failed hair transplants due to advanced techniques, experienced surgeons, and affordability. At NexGen Hair Transplant, you can expect international standards of care using the latest tools including sapphire punch and high magnification lenses. All procedures have low downtime, very high graft survival rate, and an aesthetically pleasing outcome.",
         "Patients from all over the globe fly to India for correcting failed hair transplants, which is known for its low costs, expertise, and individualized treatment plans that aim to restore a natural look and feeling of confidence.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-intro-thumb-2.webp",
     },
     results: {
       title: "Result of Unnatural Hair Transplant Fix",
-      subtitle: "An unnatural hair transplant fix at QHT Clinic will provide you natural density, soft hairline, camouflaged scars, and restored confidence.",
+      subtitle: "An unnatural hair transplant fix at NexGen will provide you natural density, soft hairline, camouflaged scars, and restored confidence.",
       results: [
         {
           name: "Irfan - Grade 5A",
@@ -6635,7 +6635,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     types: {
       title: "Types of Bad Hair Transplant Correction",
-      subtitle: "There are many advanced solutions for unnatural hair transplant fix based on the patient’s condition, past surgery, and desired outcomes. At the QHT Clinic, our specialists assess each case carefully and recommend the best technique.",
+      subtitle: "There are many advanced solutions for unnatural hair transplant fix based on the patient’s condition, past surgery, and desired outcomes. At the NexGen Hair Transplant, our specialists assess each case carefully and recommend the best technique.",
       types: [
         {
           title: "Graft Removal",
@@ -6697,7 +6697,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     procedure: {
       title: "Procedure Used for Correcting Failed Hair Transplant in India",
-      subtitle: "At QHT Clinic, correcting failed hair transplants is performed with high levels of precision and care to ensure natural and long-lasting results.",
+      subtitle: "At NexGen Hair Transplant, correcting failed hair transplants is performed with high levels of precision and care to ensure natural and long-lasting results.",
       steps: [
         {
           stepNumber: "01",
@@ -6711,7 +6711,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           stepNumber: "03",
-          title: "Graft Extraction with QHT Technique",
+          title: "Graft Extraction with NexGen Hair Transplant Technique",
           desc: "Very precise tools will maximize the chance of survival of the follicles and limit scarring.",
         },
         {
@@ -6789,7 +6789,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why Are We Amongst the Most Trusted For Correcting Failed Hair Transplant Clinics in India?",
-      subtitle: "QHT Clinic draws from years of expertise, cutting-edge technology, and ethical care to offer the safest, natural, and reliable correction methods.",
+      subtitle: "NexGen Hair Transplant draws from years of expertise, cutting-edge technology, and ethical care to offer the safest, natural, and reliable correction methods.",
       stats: [
         { title: "15+ Years", desc: "Team of expert surgeons with decades of experience in correction surgeries." },
         { title: "Advanced Tools", desc: "Sapphire punches & high-magnification lenses for precision." },
@@ -6821,15 +6821,15 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Bad Hair Transplant Correction?",
-      subtitle: "There are many scars—physical and emotional—from a badly done hair transplant. At QHT Clinic, we can correct a bad hair transplant, and do it safely, efficiently, and with the highest level of expertise.",
+      title: "Why Choose NexGen for Bad Hair Transplant Correction?",
+      subtitle: "There are many scars—physical and emotional—from a badly done hair transplant. At NexGen Hair Transplant, we can correct a bad hair transplant, and do it safely, efficiently, and with the highest level of expertise.",
       features: [
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Expertise in Bad Hair Transplant Correction", desc: "QHT Clinic is a well-respected name in the field of Bad Hair Transplant Correction, with many techniques and professionally proven results." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Advanced QHT Technique", desc: "Unlike other clinics, we are prepared to offer our Quick Hair Transplant (QHT) Technique, which allows for proper monitoring of graft survival and sustained naturalness of the Bad Hair Transplant Correction." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Precise Surgery with QHT Technology", desc: "With the aid of sapphire punches and magnification lenses, our surgeons are able to perform accurate and safe Bad Hair Transplant Correction." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Superior Facilities & Transparent Pricing", desc: "Patients trust QHT and feel confident in our Bad Hair Transplant Correction, with our exceptional facilities, complete infrastructure, and honest/transparent pricing." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Expertise in Bad Hair Transplant Correction", desc: "NexGen Hair Transplant is a well-respected name in the field of Bad Hair Transplant Correction, with many techniques and professionally proven results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Advanced NexGen Hair Transplant Technique", desc: "Unlike other clinics, we are prepared to offer our NexGen Hair Transplant Technique, which allows for proper monitoring of graft survival and sustained naturalness of the Bad Hair Transplant Correction." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Precise Surgery with NexGen Hair Transplant Technology", desc: "With the aid of sapphire punches and magnification lenses, our surgeons are able to perform accurate and safe Bad Hair Transplant Correction." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Superior Facilities & Transparent Pricing", desc: "Patients trust NexGen Hair Transplant and feel confident in our Bad Hair Transplant Correction, with our exceptional facilities, complete infrastructure, and honest/transparent pricing." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Restoring Confidence", desc: "Our commitment and efforts are not only to repair someone's hair- our deeper goal is to fix someone's confidence through a professional Bad Hair Transplant Correction." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Aftercare Support", desc: "QHT Clinic provides you with aftercare follow-up and assistance as you require after the Bad Hair Transplant Correction procedure, to ensure a smooth recovery." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Aftercare Support", desc: "NexGen Hair Transplant provides you with aftercare follow-up and assistance as you require after the Bad Hair Transplant Correction procedure, to ensure a smooth recovery." },
       ],
     },
     postSurgerySupport: {
@@ -6901,7 +6901,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     comparison: {
       title: "Comparison of Correcting Failed Hair Transplant Sub Services",
-      subtitle: "Not every bad hair transplant will require the same correction; at QHT Clinic, patients have a choice of partial or full correction depending on their level of concern and desired result.",
+      subtitle: "Not every bad hair transplant will require the same correction; at NexGen Hair Transplant, patients have a choice of partial or full correction depending on their level of concern and desired result.",
       cards: [
         {
           title: "Partial Correction",
@@ -6950,7 +6950,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Looks natural and treated with precision and delicacy.",
       block1Paragraphs: [
         "Mustache reconstruction in India is a specialized cosmetic surgery that aims to restore a natural appearing facial hair pattern in a male who has a sparse, patchy, or missing moustache. A Moustache Hair Transplant is simply extracting hair grafts from a donor area (e.g., the back of the scalp) and implanting them into the moustache area of the face with great care.",
-        "At QHT Clinic, our professionals focus on angle, direction and density so that you have a thick moustache that looks natural. Patients seek out this procedure for various reasons including aesthetic enhancement or to camouflage a scar.",
+        "At NexGen Hair Transplant, our professionals focus on angle, direction and density so that you have a thick moustache that looks natural. Patients seek out this procedure for various reasons including aesthetic enhancement or to camouflage a scar.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-1-2.jpg",
       pointer1: "Follicle extraction",
@@ -6958,14 +6958,14 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Moustache Hair Transplant in India",
       block2Lead: "World-class expertise, cutting-edge methodology, affordable excellence.",
       block2Paragraphs: [
-        "India is now the preferred choice for Mustache Hair Transplant, thanks to its expert surgeons, updated technology, and value for money. At QHT Clinic, we perform every Moustache Hair Transplant using state-of-the-art methods, including sapphire punches and high-magnification lenses, which lead to high graft survival and a quick healing time.",
+        "India is now the preferred choice for Mustache Hair Transplant, thanks to its expert surgeons, updated technology, and value for money. At NexGen Hair Transplant, we perform every Moustache Hair Transplant using state-of-the-art methods, including sapphire punches and high-magnification lenses, which lead to high graft survival and a quick healing time.",
         "International patients frequently travel to India to have their procedure completed, with satisfactory results, smooth recovery, and costs competitive to their home countries. Moustache Hair Transplant Cost in India offers value without sacrificing quality.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-2-2.jpg",
     },
     results: {
       title: "Result of Moustache Hair Transplant",
-      subtitle: "A successful Moustache Hair Transplant provides fuller coverage, even density, natural hair direction, and a more masculine appearance. Mustache reconstruction in India at QHT Clinic will ensure that the end result matches your facial features and will give you an overall confidence boost.",
+      subtitle: "A successful Moustache Hair Transplant provides fuller coverage, even density, natural hair direction, and a more masculine appearance. Mustache reconstruction in India at NexGen Hair Transplant will ensure that the end result matches your facial features and will give you an overall confidence boost.",
       results: [
         {
           name: "Irfan - Grade 5A",
@@ -7027,7 +7027,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       types: [
         {
           title: "FUE Technique",
-          desc: "Individual extraction of follicles can minimize scarring, along with accuracy in placing the grafts. QHT utilizes advanced FUE tools for high precision.",
+          desc: "Individual extraction of follicles can minimize scarring, along with accuracy in placing the grafts. NexGen Hair Transplant utilizes advanced FUE tools for high precision.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
           points: [
             "Little punctures allow for rapid healing.",
@@ -7036,8 +7036,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "Quick Hair Transplant (QHT)",
-          desc: "Only offered at the QHT Clinic, this method leads to quicker recovery, high graft survival rates, and ease of moustache reconstruction with a minimal recovery time.",
+          title: "NexGen Hair Transplant",
+          desc: "Only offered at the NexGen Hair Transplant, this method leads to quicker recovery, high graft survival rates, and ease of moustache reconstruction with a minimal recovery time.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
             "Accelerated healing and recovery process.",
@@ -7069,7 +7069,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-4-2.png",
           title: "Faster Recovery",
-          desc: "Minimal downtime & quicker healing with advanced QHT procedures.",
+          desc: "Minimal downtime & quicker healing with advanced NexGen Hair Transplant procedures.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-5-1.png",
@@ -7084,13 +7084,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-7-2.png",
           title: "Painless & Scarless",
-          desc: "Painless and no visible scars, thanks to modern FUE and QHT microscopic techniques.",
+          desc: "Painless and no visible scars, thanks to modern FUE and NexGen Hair Transplant microscopic techniques.",
         },
       ],
     },
     procedure: {
       title: "Procedure Used for Mustache Hair Transplant in India",
-      subtitle: "Moustache reconstruction in India at QHT Clinic is done with great care and artistry through 6 precise steps.",
+      subtitle: "Moustache reconstruction in India at NexGen Hair Transplant is done with great care and artistry through 6 precise steps.",
       steps: [
         {
           stepNumber: "01",
@@ -7104,7 +7104,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           stepNumber: "03",
-          title: "Extraction with QHT Technique",
+          title: "Extraction with NexGen Hair Transplant Technique",
           desc: "Follicles are extracted carefully and accurately to ensure highest graft survival rate with little to no impact on natural hair.",
         },
         {
@@ -7155,7 +7155,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         { type: "Moustache Patch Repair (300-600 Grafts)", cost: "INR 25,000 – INR 45,000", badge: "Patch Fix" },
         { type: "Full Mustache Reconstruction (800-1,500 Grafts)", cost: "INR 45,000 – INR 85,000", badge: "Full Coverage", isHighlight: true },
         { type: "FUE Technique", cost: "INR 30,000 – INR 60,000" },
-        { type: "QHT Advanced Method", cost: "Highly affordable, mid ranged" },
+        { type: "NexGen Hair Transplant Advanced Method", cost: "Highly affordable, mid ranged" },
       ],
       factorsSubtitle: "The following are the factors that can have a significant impact on the cost of a moustache hair transplant:",
       factors: [
@@ -7167,7 +7167,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-9-1.png",
           title: "Procedure Used",
-          desc: "The procedure utilized is an influencing factor in price, e.g., FUE vs QHT methods differ by technology and precision.",
+          desc: "The procedure utilized is an influencing factor in price, e.g., FUE vs NexGen Hair Transplant methods differ by technology and precision.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-10-1.png",
@@ -7183,7 +7183,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     whyUs: {
       title: "Why We Are Amongst the Most Trusted Moustache Hair Transplant Clinics in India?",
-      subtitle: "QHT Clinic brings together its skill, technology, and care to deliver safe, natural, and long-lasting results for every moustache hair transplant patient.",
+      subtitle: "NexGen Hair Transplant brings together its skill, technology, and care to deliver safe, natural, and long-lasting results for every moustache hair transplant patient.",
       stats: [
         { title: "20+ Years", desc: "Expert surgeons have decades of experience in specialized facial hair transplants." },
         { title: "Advanced Tools", desc: "Using sapphire punches and magnification lenses to provide scar-free outcomes." },
@@ -7214,10 +7214,10 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Mustache Hair Transplant In India?",
-      subtitle: "QHT Clinic is a renowned name for Mustache reconstruction in India, providing dedicated care, natural density, and lifetime results.",
+      title: "Why Choose NexGen for Mustache Hair Transplant In India?",
+      subtitle: "NexGen Hair Transplant is a renowned name for Mustache reconstruction in India, providing dedicated care, natural density, and lifetime results.",
       features: [
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "QHT Clinic is trusted by celebrities for natural and discreet facial hair restoration." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "NexGen Hair Transplant is trusted by celebrities for natural and discreet facial hair restoration." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "Expertise", desc: "Surgeons with decades of facial hair restoration experience ensure personalized care and best outcomes." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-1.webp", title: "Natural Looking Results", desc: "Skilled artistic approach and attention to angle and direction result in natural, trimmable moustaches." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "State of the Art Facility", desc: "Equipped with cutting-edge technology and high-magnification tools for comfortable and seamless surgery." },
@@ -7226,7 +7226,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     postSurgerySupport: {
       title: "Post-Surgery Support For Moustache Hair Transplant",
-      subtitle: "We offer specialized post-surgery care as part of our commitment to patient care at QHT Clinic, creating the best environment for natural growth and lasting results.",
+      subtitle: "We offer specialized post-surgery care as part of our commitment to patient care at NexGen Hair Transplant, creating the best environment for natural growth and lasting results.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3-2.jpg",
       supportItems: [
         { title: "Follow-up Appointments", desc: "Scheduled follow-ups allow patients to monitor recovery and early hair growth milestones." },
@@ -7331,36 +7331,36 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
   },
   "quick-hair-transplant-in-india": {
     hero: {
-      title: "QHT Hair Transplant Technique - An Overview",
+      title: "NexGen Hair Transplant Technique - An Overview",
       subtitle: "An advanced minimally invasive FUE technique prioritizing speed and precision for aesthetically natural-looking hair.",
       bannerImage: "https://www.qhtclinic.com/wp-content/uploads/2025/09/DSC6206-1568x1356.jpg",
       tagline: "Speed & Precision",
       pointerLabel: "Micro Slit Design",
     },
     intro: {
-      block1Heading: "What is QHT Hair Transplant?",
+      block1Heading: "What is NexGen Hair Transplant?",
       block1Lead: "Restore your hair with our quick and hassle-free procedure.",
       block1Paragraphs: [
-        "QHT hair transplant stands for QUICK HAIR TRANSPLANT, an advanced, minimally invasive FUE technique developed by the QHT clinic, prioritizing speed and precision.",
+        "NexGen hair transplant stands for QUICK HAIR TRANSPLANT, an advanced, minimally invasive FUE technique developed by the NexGen Hair Transplant, prioritizing speed and precision.",
         "With minimal downtime required, it’s quick and hassle-free.",
         "Benefits like hairline restoration, increased hair density, and overall improved appearance make it a perfect choice for achieving aesthetically natural hair.",
-        "QHT Hair Transplant in India has been receiving great reviews from the patients, and famous celebrities like Rajpal Yadav and Dayanand Shetty have also trusted QHT Clinic for their hair restoration procedures.",
+        "NexGen Hair Transplant in India has been receiving great reviews from the patients, and famous celebrities like Rajpal Yadav and Dayanand Shetty have also trusted NexGen Hair Transplant for their hair restoration procedures.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-1.jpg",
       pointer1: "Graft extraction",
       pointer2: "Natural hairline",
-      block2Heading: "QHT Hair Transplant in India",
+      block2Heading: "NexGen Hair Transplant in India",
       block2Paragraphs: [
         "Baldness is a common issue in India, and the majority of the population experiences significant hair loss as early as in their 30s. Stress, poor lifestyle, and genetics are some of the contributing factors leading to early hair loss.",
-        "If you’re looking for a painless procedure offering maximum benefits with minimal downtime, QHT Hair Transplant could be your saviour.",
-        "At QHT Clinic, we hear you. With 15+ years of experience, we deliver what we promise. Regaining your confidence with a scarless, painless, and quick recovery hair restoration technique has been made easy at the QHT Clinic.",
-        "Here’s a quick overview of the QHT Hair Transplant procedure.",
+        "If you’re looking for a painless procedure offering maximum benefits with minimal downtime, NexGen Hair Transplant could be your saviour.",
+        "At NexGen Hair Transplant, we hear you. With 15+ years of experience, we deliver what we promise. Regaining your confidence with a scarless, painless, and quick recovery hair restoration technique has been made easy at the NexGen Hair Transplant.",
+        "Here’s a quick overview of the NexGen Hair Transplant procedure.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-2.jpg",
     },
     results: {
-      title: "Result of QHT Hair Transplant",
-      subtitle: "A hair transplant at QHT Clinic offers natural-looking hair with a scarless, painless experience, ensuring high precision and speed with greater affordability. With a panel of experienced team and staff, the results are promising and long-lasting.",
+      title: "Result of NexGen Hair Transplant",
+      subtitle: "A hair transplant at NexGen offers natural-looking hair with a scarless, painless experience, ensuring high precision and speed with greater affordability. With a panel of experienced team and staff, the results are promising and long-lasting.",
       results: [
         {
           name: "Irfan - Grade 5A",
@@ -7400,7 +7400,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       points: [
         {
           title: "Patients with MAA",
-          desc: "It affects the hairline and temples. Hair loss is gradual and visible. To restore the hairline, the QHT technique offers quicker and precise results.",
+          desc: "It affects the hairline and temples. Hair loss is gradual and visible. To restore the hairline, the NexGen Hair Transplant technique offers quicker and precise results.",
         },
         {
           title: "Females suffering from FPHL",
@@ -7412,16 +7412,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           title: "Low Density",
-          desc: "If low density is your concern, the QHT technique can offer maximum density, thereby improving overall appearance.",
+          desc: "If low density is your concern, the NexGen Hair Transplant technique can offer maximum density, thereby improving overall appearance.",
         },
       ],
     },
     types: {
-      title: "Types of QHT Hair Transplant",
-      subtitle: "The QHT hair transplant technique in India is a unique and enhanced version of the existing FUE technique. QHT crown hair transplant and QHT Hairline transplant are its two types.",
+      title: "Types of NexGen Hair Transplant",
+      subtitle: "The NexGen hair transplant technique in India is a unique and enhanced version of the existing FUE technique. NexGen crown hair transplant and NexGen Hairline transplant are its two types.",
       types: [
         {
-          title: "QHT Crown Hair Transplant",
+          title: "NexGen Crown Hair Transplant",
           desc: "Best for those experiencing crown baldness. Provides maximum coverage and helps in camouflaging the bald spots.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -7430,7 +7430,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Hairline Transplant",
+          title: "NexGen Hair Transplant Hairline Transplant",
           desc: "A great choice for those seeking a treatment for hairline restoration. Provides a natural-looking hairline with no scar visibility.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -7450,13 +7450,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     benefits: {
-      title: "Benefits of QHT Hair Transplant",
-      subtitle: "QHT Hair Transplant offers multiple benefits, like a realistic hairline design, speed and precision, graft preservation, and a high graft survival rate.",
+      title: "Benefits of NexGen Hair Transplant",
+      subtitle: "NexGen Hair Transplant offers multiple benefits, like a realistic hairline design, speed and precision, graft preservation, and a high graft survival rate.",
       benefits: [
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-1.png",
           title: "Realistic Hairline Designing",
-          desc: "The expert team at QHT clinic designs a realistic and natural-looking hairline, keeping in mind the facial symmetry and the natural direction of the hair.",
+          desc: "The expert team at NexGen Hair Transplant designs a realistic and natural-looking hairline, keeping in mind the facial symmetry and the natural direction of the hair.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-2.png",
@@ -7476,8 +7476,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     procedure: {
-      title: "Procedure Used for QHT Hair Transplant in India",
-      subtitle: "QHT Technique involves consultation and scalp assessment, creation of slits before the procedure, followed by extraction and implantation. Specialized tools like sapphire punches, SAVA Implanter, and a 10x magnification make the process precision-guided.",
+      title: "Procedure Used for NexGen Hair Transplant in India",
+      subtitle: "NexGen Hair Transplant Technique involves consultation and scalp assessment, creation of slits before the procedure, followed by extraction and implantation. Specialized tools like sapphire punches, SAVA Implanter, and a 10x magnification make the process precision-guided.",
       steps: [
         {
           stepNumber: "01",
@@ -7528,14 +7528,14 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     cost: {
-      title: "QHT Hair Transplant in India",
+      title: "NexGen Hair Transplant in India",
       costOverview: [
-        "Since the QHT technique is an enhanced version of FUE, the cost is subject to variation depending on candidacy.",
+        "Since the NexGen Hair Transplant technique is an enhanced version of FUE, the cost is subject to variation depending on candidacy.",
         "Unlike a regular hair transplant, the cost for a complex hair transplant can go significantly up due to the complications involved. More complications require expert surgeons and advanced surgical skills.",
-        "The QHT clinic offers affordable packages for all types of hair restoration procedures, including FUE, FUT and QHT. With no compromise on medical ethics, the QHT hair transplant has been the most sought-after technique.",
+        "The NexGen Hair Transplant offers affordable packages for all types of hair restoration procedures, including FUE, FUT and NexGen Hair Transplant. With no compromise on medical ethics, the NexGen hair transplant has been the most sought-after technique.",
       ],
       tableRows: [
-        { type: "QHT", cost: "Highly affordable, mid ranged", badge: "Patented Technique", isHighlight: true },
+        { type: "NexGen Hair Transplant", cost: "Highly affordable, mid ranged", badge: "Patented Technique", isHighlight: true },
         { type: "FUE", cost: "INR 60,000 – INR 2,00,000" },
         { type: "FUT", cost: "INR 30,000 – INR 1,50,000" },
       ],
@@ -7549,7 +7549,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-11.png",
           title: "Hair Restoration Techniques Used",
-          desc: "The cost for QHT varies in comparison to FUE. The complexity and effectiveness of the technique account for the value.",
+          desc: "The cost for NexGen Hair Transplant varies in comparison to FUE. The complexity and effectiveness of the technique account for the value.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-4.webp",
@@ -7564,8 +7564,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyUs: {
-      title: "Why We Are Amongst the Most Trusted QHT Hair Transplant Technique in India",
-      subtitle: "QHT Hair Transplant in India has become a leading hair transplant clinic in India, offering precision-guided, naturally denser hair with 10+ years of expertise and advanced techniques.",
+      title: "Why We Are Amongst the Most Trusted NexGen Hair Transplant Technique in India",
+      subtitle: "NexGen Hair Transplant in India has become a leading hair transplant clinic in India, offering precision-guided, naturally denser hair with 10+ years of expertise and advanced techniques.",
       stats: [
         { title: "15,000+", desc: "Successful procedures with near 100% success rate and maximum precision." },
         { title: "30 Million+", desc: "Grafts implanted with unmatched handling skills in large-scale sessions." },
@@ -7585,7 +7585,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     causes: {
-      title: "Cause of Early QHT Hair Transplant Loss",
+      title: "Cause of Early NexGen Hair Transplant Loss",
       subtitle: "Understanding the early causes of hair transplant loss can help in identifying the underlying factors that contribute to graft survival rates.",
       causes: [
         { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-15.png", title: "Shock Loss", desc: "The body may shed transplanted hair grafts temporarily. Over time, shedding stops and permanent follicle growth begins." },
@@ -7596,10 +7596,10 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT Clinic for QHT Hair Transplant",
-      subtitle: "QHT Clinic, with its highly experienced team, offers authentic results. It is a celebrity-trusted clinic that uses the advanced QHT technique and ensures supportive care throughout the procedure.",
+      title: "Why Choose NexGen for NexGen Hair Transplant",
+      subtitle: "NexGen Hair Transplant, with its highly experienced team, offers authentic results. It is a celebrity-trusted clinic that uses the advanced NexGen Hair Transplant technique and ensures supportive care throughout the procedure.",
       features: [
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "QHT Clinic is trusted by renowned celebrities like Rajpal Yadav and Dayanand Shetty for natural results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "NexGen Hair Transplant is trusted by renowned celebrities like Rajpal Yadav and Dayanand Shetty for natural results." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "Expertise", desc: "With years of experience, our surgeons ensure that each patient receives personalized care and optimal density." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp", title: "Natural Looking Results", desc: "Our skilled surgeons' artistic approach and attention to detail result in natural-looking hairlines and fuller hair." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "State of the Art Facility", desc: "Equipped with cutting-edge technology including sapphire punches and SAVA implanters for seamless surgery." },
@@ -7607,8 +7607,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     postSurgerySupport: {
-      title: "Post Surgery Support for QHT Hair Transplant",
-      subtitle: "At the QHT Clinic, we provide comprehensive care and support to patients, ensuring proper guidance to achieve quicker recovery and desired results.",
+      title: "Post Surgery Support for NexGen Hair Transplant",
+      subtitle: "At the NexGen Hair Transplant, we provide comprehensive care and support to patients, ensuring proper guidance to achieve quicker recovery and desired results.",
       image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3.jpg",
       supportItems: [
         { title: "Routine Follow-ups", desc: "Timely follow-ups are scheduled post-procedure to check for recovery and new hair growth." },
@@ -7618,8 +7618,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     dosDonts: {
-      title: "Do's and Don'ts After QHT Hair Transplant",
-      subtitle: "After undergoing the QHT Hair Transplant, it’s essential to follow this advice to ensure proper hair growth.",
+      title: "Do's and Don'ts After NexGen Hair Transplant",
+      subtitle: "After undergoing the NexGen Hair Transplant, it’s essential to follow this advice to ensure proper hair growth.",
       donts: [
         "Avoid touching, scratching, or rubbing the recipient area to prevent friction and dislodgement.",
         "Usage of any harsh cosmetic products in the initial weeks may result in hair shedding.",
@@ -7634,7 +7634,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     recoveryTimeline: {
-      title: "Recovery Time and Aftercare of QHT Hair Transplant",
+      title: "Recovery Time and Aftercare of NexGen Hair Transplant",
       subtitle: "Learn about the aftercare and the recovery timeline for ensuring proper hair growth, optimum results and smooth healing.",
       weeks: [
         {
@@ -7686,11 +7686,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       patientCountText: "4.9K patients booked their sessions",
     },
     comparison: {
-      title: "Comparison of QHT VS FUE Hair Technique",
-      subtitle: "Although QHT is an enhanced version of FUE, following are the differences between them making them unique from each other.",
+      title: "Comparison of NexGen Hair Transplant VS FUE Hair Technique",
+      subtitle: "Although NexGen Hair Transplant is an enhanced version of FUE, following are the differences between them making them unique from each other.",
       cards: [
         {
-          title: "QHT – Advanced FUE-Based Method",
+          title: "NexGen Hair Transplant – Advanced FUE-Based Method",
           purpose: "Slits created first → Extract + Immediate Implant with SAVA Implanter Pens (0.7 mm micro slits).",
           effectiveness: "High-density, natural, undetectable result with 45–55 grafts/cm² and up to 95–99% graft survival.",
           risk: "Very Low trauma with only ~30 minutes out-of-body time.",
@@ -7709,19 +7709,19 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Frequently Asked Questions",
       faqs: [
         {
-          question: "WHAT IS QHT HAIR TRANSPLANT?",
-          answer: "QHT HAIR TRANSPLANT is a Quick hair transplant technique designed by QHT Clinic that has made the hair transplant easier and highly affordable for people wishing to achieve fuller, denser hair or those experiencing higher-grade hair loss.",
+          question: "WHAT IS NEXGEN HAIR TRANSPLANT?",
+          answer: "NexGen HAIR TRANSPLANT is a Quick hair transplant technique designed by NexGen Hair Transplant that has made the hair transplant easier and highly affordable for people wishing to achieve fuller, denser hair or those experiencing higher-grade hair loss.",
         },
         {
-          question: "IS QHT HAIR TRANSPLANT PRESENT IN INDIA?",
-          answer: "With a pan-India presence, QHT Clinic offers this unique hair technique for achieving quicker transplantation without compromising precision and safety protocols. QHT Hair Transplant Clinic in India offers a thorough scalp analysis under expert doctor guidance.",
+          question: "IS NEXGEN HAIR TRANSPLANT PRESENT IN INDIA?",
+          answer: "With a pan-India presence, NexGen Hair Transplant offers this unique hair technique for achieving quicker transplantation without compromising precision and safety protocols. NexGen Hair Transplant Clinic in India offers a thorough scalp analysis under expert doctor guidance.",
         },
         {
-          question: "IS QHT HAIR TRANSPLANT AFFORDABLE?",
+          question: "IS NEXGEN HAIR TRANSPLANT AFFORDABLE?",
           answer: "Since it’s an enhanced version of the FUE technique, the cost may vary, but it’s highly affordable and offers durable, long-lasting results. EMI options are also available for financial assistance.",
         },
         {
-          question: "IS QHT TECHNIQUE PAINFUL?",
+          question: "IS NEXGEN HAIR TRANSPLANT TECHNIQUE PAINFUL?",
           answer: "No, it is not painful. Local anesthesia is administered for complete comfort, and only minimal discomfort is experienced post-procedure.",
         },
         {
@@ -7744,7 +7744,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "A safe, permanent solution to restore natural hair and confidence.",
       block1Paragraphs: [
         "A female hair transplant is a surgical solution to address female pattern baldness and diffuse thinning. The procedure involves transferring healthy follicles from a stable donor area, typically the back of the scalp, to areas experiencing hair loss.",
-        "At QHT Clinic, every step is guided by our proprietary QHT technique, delivering high graft survival, minimal downtime, and a natural aesthetic tailored to the female hairline. Whether you’re dealing with widening of the part, thinning at the crown, or post-pregnancy hair fall, our approach ensures outcomes restoring volume and confidence.",
+        "At NexGen Hair Transplant, every step is guided by our proprietary NexGen Hair Transplant technique, delivering high graft survival, minimal downtime, and a natural aesthetic tailored to the female hairline. Whether you’re dealing with widening of the part, thinning at the crown, or post-pregnancy hair fall, our approach ensures outcomes restoring volume and confidence.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/female-img-1.webp",
       pointer1: "No-shave technique",
@@ -7758,7 +7758,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     results: {
       title: "Results of Female Hair Transplant",
-      subtitle: "The results of a female hair transplant at QHT Clinic are natural, permanent, and tailored to each patient’s unique hair pattern. With advanced techniques and minimal out-of-body time for grafts, the transplanted hair grows seamlessly with existing strands, giving women fuller density, a youthful hairline, and renewed confidence.",
+      subtitle: "The results of a female hair transplant at NexGen are natural, permanent, and tailored to each patient’s unique hair pattern. With advanced techniques and minimal out-of-body time for grafts, the transplanted hair grows seamlessly with existing strands, giving women fuller density, a youthful hairline, and renewed confidence.",
       results: [
         {
           name: "Irfan - Grade 5A",
@@ -7794,7 +7794,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
     },
     candidate: {
       title: "Who is an Ideal Candidate?",
-      subtitle: "You may be eligible for a female hair transplant at QHT Clinic if you have female pattern baldness, thinning, or stable hair loss:",
+      subtitle: "You may be eligible for a female hair transplant at NexGen if you have female pattern baldness, thinning, or stable hair loss:",
       points: [
         {
           title: "Female Pattern Baldness",
@@ -7835,7 +7835,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "Quick Hair Transplant (QHT)",
+          title: "NexGen Hair Transplant",
           desc: "An advanced method where follicles are extracted and implanted directly using specialized implanter pens.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
@@ -7932,12 +7932,12 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Female Hair Transplant Cost in India",
       costOverview: [
         "The hair transplant cost depends upon the technique used at your clinic and the number of follicular units required.",
-        "At QHT Clinic, we offer transparent pricing packages for female hair restoration including discreet no-shave FUE and QHT methods, ensuring top-tier surgical precision and compassionate care.",
+        "At NexGen Hair Transplant, we offer transparent pricing packages for female hair restoration including discreet no-shave FUE and NexGen Hair Transplant methods, ensuring top-tier surgical precision and compassionate care.",
       ],
       tableRows: [
         { type: "Follicular Unit Extraction (FUE)", cost: "₹30,000 – ₹1,50,000" },
         { type: "Follicular Unit Transplantation (FUT)", cost: "₹25,000 – ₹1,25,000" },
-        { type: "QHT (Quick Hair Transplant)", cost: "₹40,000 – ₹2,00,000", badge: "Most Popular", isHighlight: true },
+        { type: "NexGen Hair Transplant", cost: "₹40,000 – ₹2,00,000", badge: "Most Popular", isHighlight: true },
         { type: "Robotic Hair Transplant", cost: "₹75,000 – ₹3,00,000" },
       ],
       factorsSubtitle: "In India, the price of female hair transplant is based on various factors that are important to the entire treatment procedure:",
@@ -7950,7 +7950,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
           title: "Technique Used",
-          desc: "More complex techniques like no-shave QHT or sapphire FUE require advanced tools and specialized precision.",
+          desc: "More complex techniques like no-shave NexGen Hair Transplant or sapphire FUE require advanced tools and specialized precision.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
@@ -7997,8 +7997,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Female Hair Transplant",
-      subtitle: "QHT stands out as the preferred choice for female hair transplants, combining advanced technology with personalized care for natural, lasting results.",
+      title: "Why Choose NexGen for Female Hair Transplant",
+      subtitle: "NexGen Hair Transplant stands out as the preferred choice for female hair transplants, combining advanced technology with personalized care for natural, lasting results.",
       features: [
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Expertise", desc: "Led by certified hair restoration surgeons. Zero technician-led procedures for ultimate safety." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "High Quality Tools Used", desc: "Ultra-refined microscopic tools designed specifically for female anatomy and hair density." },
@@ -8076,11 +8076,11 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       patientCountText: "4.9K patients booked their sessions",
     },
     comparison: {
-      title: "Comparison of QHT vs FUE Hair Treatment",
+      title: "Comparison of NexGen Hair Transplant vs FUE Hair Treatment",
       subtitle: "When considering female hair transplants, understanding the differences helps you choose the right approach for your goals:",
       cards: [
         {
-          title: "QHT (Quick Hair Transplant)",
+          title: "NexGen Hair Transplant",
           purpose: "Follicles extracted and implanted directly with precision implanter pens without delay.",
           effectiveness: "Higher precision with controlled angle, depth, and female hairline direction. 95–99% survival.",
           risk: "Faster healing and minimal out-of-body time with almost invisible micro marks.",
@@ -8090,7 +8090,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           title: "FUE (Follicular Unit Extraction)",
           purpose: "Follicles extracted individually and implanted into pre-made slits manually.",
           effectiveness: "Good precision with natural results suitable for moderate coverage.",
-          risk: "Minimal scarring with small dot-like marks; slightly longer recovery compared to QHT.",
+          risk: "Minimal scarring with small dot-like marks; slightly longer recovery compared to NexGen Hair Transplant.",
           cost: "₹30,000 – ₹1,50,000",
         },
       ],
@@ -8104,19 +8104,19 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "Is a robotic hair transplant more effective than a manual one?",
-          answer: "Robotic transplants provide automated consistency, but the ultimate aesthetic outcome depends heavily on the surgeon's design and artistic placement. Manual FUE and QHT performed by skilled surgeons produce exceptionally natural results tailored to female hairline contours.",
+          answer: "Robotic transplants provide automated consistency, but the ultimate aesthetic outcome depends heavily on the surgeon's design and artistic placement. Manual FUE and NexGen Hair Transplant performed by skilled surgeons produce exceptionally natural results tailored to female hairline contours.",
         },
         {
           question: "Which method does not hurt as much?",
-          answer: "Both FUE and QHT are conducted under local anaesthesia with minimal discomfort. Post-procedure soreness in FUE/QHT is minimal compared to the tightness associated with strip FUT surgery.",
+          answer: "Both FUE and NexGen Hair Transplant are conducted under local anaesthesia with minimal discomfort. Post-procedure soreness in FUE/NexGen Hair Transplant is minimal compared to the tightness associated with strip FUT surgery.",
         },
         {
           question: "Which approach is the most natural?",
-          answer: "When performed by expert surgeons, modern QHT and microscopic FUE deliver the most natural outcomes with undetectable hairline transitions and authentic female parting density.",
+          answer: "When performed by expert surgeons, modern NexGen Hair Transplant and microscopic FUE deliver the most natural outcomes with undetectable hairline transitions and authentic female parting density.",
         },
         {
           question: "Which is the quicker recovery procedure?",
-          answer: "QHT and FUE offer the fastest recovery timelines (typically 5–7 days for initial healing), allowing women to return to social and work routines quickly without significant downtime.",
+          answer: "NexGen Hair Transplant and FUE offer the fastest recovery timelines (typically 5–7 days for initial healing), allowing women to return to social and work routines quickly without significant downtime.",
         },
       ],
     },
@@ -8134,7 +8134,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block1Lead: "Beard hair transplant is a permanent solution to achieve a fuller, well-defined beard naturally.",
       block1Paragraphs: [
         "Beard hair transplant refers to the cosmetic surgery in which hair follicles usually obtained on the scalp are implanted into sparse or bare bald spots on your beard. It can help men gain a fuller, more defined and naturally growing beard that can be styled, trimmed, and maintained identically to facial hair.",
-        "With QHT techniques, results are long-lasting, with minimal scarring and virtually invisible marks Whether you have never grown a beard before or have sparse facial hair because of genetics, scars, or a previous surgery, the permanent solution to this problem is a beard hair transplant.",
+        "With NexGen Hair Transplant techniques, results are long-lasting, with minimal scarring and virtually invisible marks Whether you have never grown a beard before or have sparse facial hair because of genetics, scars, or a previous surgery, the permanent solution to this problem is a beard hair transplant.",
       ],
       block1Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/beard-img-1.webp",
       pointer1: "Scalp extraction",
@@ -8142,7 +8142,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       block2Heading: "Beard Hair Transplant In India",
       block2Paragraphs: [
         "There is a growing trend in India where men want to have a thicker and more stylish beard through beard hair transplant. If your facial hair is patchy, you can always find a solution to the problem using a beard transplant.",
-        "QHT Hair Transplant Clinic India specialises in this new technique. The highly skilled surgeons will give you natural, thick, and permanent results to make you look better and feel more confident.",
+        "NexGen Hair Transplant Clinic India specialises in this new technique. The highly skilled surgeons will give you natural, thick, and permanent results to make you look better and feel more confident.",
       ],
       block2Image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/beard-img-2.webp",
     },
@@ -8229,8 +8229,8 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           ],
         },
         {
-          title: "QHT Technique (Quick Hair Transplant)",
-          desc: "Our advanced method at QHT Clinic with immediate graft implantation.",
+          title: "NexGen Hair Transplant Technique (Quick Hair Transplant)",
+          desc: "Our advanced method at NexGen Hair Transplant with immediate graft implantation.",
           image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
           points: [
             "Immediate graft implantation",
@@ -8278,7 +8278,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           stepNumber: "02",
           title: "Donor Hair Harvest",
-          desc: "Grafts are removed from the back of the head using the FUE/ QHT /FUE process.",
+          desc: "Grafts are removed from the back of the head using the FUE/ NexGen Hair Transplant /FUE process.",
         },
         {
           stepNumber: "03",
@@ -8345,7 +8345,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
           title: "Technique Used",
-          desc: "FUE or QHT are often more expensive than FUT because of accuracy and recovery advantages.",
+          desc: "FUE or NexGen Hair Transplant are often more expensive than FUT because of accuracy and recovery advantages.",
         },
         {
           icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
@@ -8363,7 +8363,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       title: "Why We Are Amongst the Most Trusted Beard Hair Transplant Clinics in India",
       subtitle: "Our high approach and care towards patients have made us considered as one of the most reliable beard hair transplant clinics in India.",
       stats: [
-        { title: "Advanced QHT", desc: "Grafts are being transplanted in real-time with less out-of-body time, which means increased survival and improved outcomes." },
+        { title: "Advanced NexGen Hair Transplant", desc: "Grafts are being transplanted in real-time with less out-of-body time, which means increased survival and improved outcomes." },
         { title: "Personalized Plan", desc: "All processes are custom made to fit the facial structure, the skin complexion, and the personal beard objectives to enhance a natural look." },
         { title: "Expert Surgeons", desc: "A team of experienced surgeons and specialists provides safe procedures that are regularly successful." },
         { title: "100% Transparency", desc: "Clear pricing plans with EMI facilities, easy access across India, and trusted by celebrities and thousands of patients." },
@@ -8392,13 +8392,13 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     whyChooseQHT: {
-      title: "Why Choose QHT for Beard Hair Transplant",
-      subtitle: "QHT is a reputable option when it comes to transplanting beard hair, providing hi-tech solutions and individualized service delivery with natural and permanent outcomes.",
+      title: "Why Choose NexGen for Beard Hair Transplant",
+      subtitle: "NexGen Hair Transplant is a reputable option when it comes to transplanting beard hair, providing hi-tech solutions and individualized service delivery with natural and permanent outcomes.",
       features: [
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/Group-14678.jpg", title: "Advanced QHT Technology", desc: "There is instant grafting with low out of body time, leading to high survival rates and more dense results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/Group-14678.jpg", title: "Advanced NexGen Hair Transplant Technology", desc: "There is instant grafting with low out of body time, leading to high survival rates and more dense results." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/body-img-2.jpg", title: "Customized Beard Design", desc: "Each transplant will be designed based on the symmetry of the face, the color of the skin, and the type of beard to have a natural appearance." },
         { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Expert Surgical Team", desc: "The procedure is done by very experienced doctors and specialists who are very accurate and safe." },
-        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-7.webp", title: "Clearly Communicated Care", desc: "Crystal-clear pricing, EMI plans and reputed outcomes have led to the choice of QHT by thousands of people, including celebrities." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-7.webp", title: "Clearly Communicated Care", desc: "Crystal-clear pricing, EMI plans and reputed outcomes have led to the choice of NexGen Hair Transplant by thousands of people, including celebrities." },
       ],
     },
     postSurgerySupport: {
@@ -8499,7 +8499,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         },
         {
           question: "Are there going to be any scars?",
-          answer: "No scarring can be seen with QHT-FUE as microscopic punch extraction is used.",
+          answer: "No scarring can be seen with NexGen Hair Transplant FUE as microscopic punch extraction is used.",
         },
         {
           question: "Is it painful?",

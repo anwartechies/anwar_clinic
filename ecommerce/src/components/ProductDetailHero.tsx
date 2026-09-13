@@ -97,8 +97,8 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
 
               {/* Brand Watermark on Top Left */}
               <div className="absolute top-3 sm:top-4 left-3 sm:left-4 z-10 text-[9px] sm:text-[10px] text-[#4a554c]/80 font-semibold tracking-tight select-none pointer-events-none">
-                <span className="font-bold text-[#1b221d] text-[11px] sm:text-xs block">U.Roots</span>
-                <span className="text-[7.5px] sm:text-[8.5px] -mt-0.5 block text-gray-500">Brand backed by QHT</span>
+                <span className="font-bold text-[#1b221d] text-[11px] sm:text-xs block">NexGen Meds</span>
+                <span className="text-[7.5px] sm:text-[8.5px] -mt-0.5 block text-gray-500">Brand backed by NexGen Hair Transplant</span>
               </div>
 
               {/* Zoom Indicator Icon */}

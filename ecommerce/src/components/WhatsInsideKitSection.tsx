@@ -78,8 +78,8 @@ export default function WhatsInsideKitSection({
                 
                 {/* Brand Watermark in Top Left */}
                 <div className="absolute top-3 left-3 z-10 text-[9px] text-[#4a554c]/75 font-semibold tracking-tight select-none pointer-events-none">
-                  <span className="font-bold text-[#1b221d]/85 block">U.Roots</span>
-                  <span className="text-[7.5px] -mt-0.5 block text-gray-500">Brand backed by QHT</span>
+                  <span className="font-bold text-[#1b221d]/85 block">NexGen Meds</span>
+                  <span className="text-[7.5px] -mt-0.5 block text-gray-500">Brand backed by NexGen Hair Transplant</span>
                 </div>
 
                 <img

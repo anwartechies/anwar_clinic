@@ -28,7 +28,7 @@ export const INITIAL_PRODUCTS_SEED = [
           "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
         ],
         suitableFor: [
-          "Patients recovering from FUT / FUE / QHT procedures",
+          "Patients recovering from FUT / FUE / NexGen Hair Transplant procedures",
           "Individuals experiencing active hair thinning & shedding",
           "Safe for daily use on sensitive or irritated scalps",
         ],
@@ -235,7 +235,7 @@ export const INITIAL_PRODUCTS_SEED = [
   },
   {
     slug: "qht-lllt-hair-growth-laser-device",
-    name: "QHT Low-Level Laser Therapy (LLLT) Hair Growth Cap Device",
+    name: "NexGen Hair Transplant Low-Level Laser Therapy (LLLT) Hair Growth Cap Device",
     category: "Devices",
     concern: "Regrowth",
     price: 18999,
@@ -249,7 +249,7 @@ export const INITIAL_PRODUCTS_SEED = [
     description: "US-FDA cleared medical-grade 650nm laser diodes for non-invasive at-home follicle reactivation.",
     status: "published" as const,
     sortOrder: 9,
-    seoTitle: "QHT Low-Level Laser Therapy Hair Growth Cap",
+    seoTitle: "NexGen Hair Transplant Low-Level Laser Therapy Hair Growth Cap",
     seoDescription: "Medical-grade 650nm laser diodes for non-invasive hair follicle reactivation.",
     sections: {},
     hiddenSections: ["whatsInside"],

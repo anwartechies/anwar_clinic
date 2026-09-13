@@ -49,8 +49,8 @@ export default function ProductCard({ product, onAddToCart }: ProductCardProps) 
 
             {/* Brand Watermark in Top Corner */}
             <div className="absolute top-2.5 sm:top-3 right-2.5 sm:right-3 z-10 text-[8px] sm:text-[9px] text-[#4a554c]/70 font-semibold tracking-tight text-right select-none pointer-events-none">
-              <span className="font-bold text-[#1b221d]/80 block text-[9px] sm:text-[10px]">U.Roots</span>
-              <span className="text-[6.5px] sm:text-[7.5px] -mt-0.5 block text-gray-500">Brand backed by QHT</span>
+              <span className="font-bold text-[#1b221d]/80 block text-[9px] sm:text-[10px]">NexGen Meds</span>
+              <span className="text-[6.5px] sm:text-[7.5px] -mt-0.5 block text-gray-500">Brand backed by NexGen Hair Transplant</span>
             </div>
 
             <img

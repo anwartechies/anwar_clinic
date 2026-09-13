@@ -15,9 +15,12 @@ async function syncServicesOnBoot() {
       const meta = ALL_SERVICES_SEED.find((s) => s.slug === slug);
       if (service) {
         await service.update({
+          // Seed data only fills in sections the service doesn't have yet.
+          // Existing sections belong to the admin panel — overwriting them here
+          // silently wiped every admin edit on each restart.
           sections: {
-            ...(service.sections || {}),
             ...sections,
+            ...(service.sections || {}),
           },
           ...(meta?.desc && !service.cardDescription ? { cardDescription: meta.desc } : {}),
           ...(meta?.image && !service.cardImage ? { cardImage: meta.image } : {}),
@@ -32,7 +35,7 @@ async function syncServicesOnBoot() {
           badge: meta.badge ?? null,
           sortOrder: ALL_SERVICES_SEED.indexOf(meta),
           status: "published",
-          seoTitle: `${meta.title} in India | QHT Clinic`,
+          seoTitle: `${meta.title} in India | NexGen Hair Transplant`,
           seoDescription: meta.desc,
           sections: sections ?? {},
           hiddenSections: [],

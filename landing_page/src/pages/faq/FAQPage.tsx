@@ -42,7 +42,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: "WILL I EXPERIENCE SEVERE PAIN THROUGHOUT THE PROCEDURE?",
-        a: "No. The QHT Technique is virtually painless under local anesthesia. Post-procedure, only minimal discomfort can be felt for a brief period.",
+        a: "No. The NexGen Hair Transplant technique is virtually painless under local anesthesia. Post-procedure, only minimal discomfort can be felt for a brief period.",
       },
       {
         q: "ARE THE RESULTS PERMANENT?",
@@ -52,23 +52,23 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   },
   {
     id: "qht-hair-transplant",
-    name: "QHT Hair Transplant",
+    name: "NexGen Hair Transplant",
     icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/QHT-Hair-Transplant.webp",
     faqs: [
       {
-        q: "WHAT IS A QHT HAIR TRANSPLANT?",
-        a: "QHT (Quick Hair Transplant) is an advanced modification of the traditional FUE technique designed by QHT Clinic. It minimizes out-of-body graft holding time to under 30 minutes, ensuring 95%+ follicle viability, faster healing, and denser results.",
+        q: "WHAT IS A NEXGEN HAIR TRANSPLANT?",
+        a: "NexGen Hair Transplant uses an advanced modification of the traditional FUE technique. It minimizes out-of-body graft holding time to under 30 minutes, ensuring 95%+ follicle viability, faster healing, and denser results.",
       },
       {
-        q: "IS QHT HAIR TRANSPLANT PRESENT IN INDIA?",
-        a: "With a pan-India presence across Delhi, Gurugram, Haridwar, and Hyderabad, QHT Clinic offers this unique hair technique for achieving quicker transplantation without compromising precision and safety protocols.",
+        q: "IS NEXGEN HAIR TRANSPLANT PRESENT IN INDIA?",
+        a: "With a pan-India presence across Delhi, Gurugram, Haridwar, and Hyderabad, NexGen Hair Transplant offers this unique hair technique for achieving quicker transplantation without compromising precision and safety protocols.",
       },
       {
-        q: "IS QHT HAIR TRANSPLANT AFFORDABLE?",
+        q: "IS NEXGEN HAIR TRANSPLANT AFFORDABLE?",
         a: "Since it’s an enhanced version of the FUE technique, the cost may vary, but it’s highly affordable and offers durable, long-lasting results. 0% EMI financing is also available for financial flexibility.",
       },
       {
-        q: "IS QHT TECHNIQUE PAINFUL?",
+        q: "IS THE NEXGEN HAIR TRANSPLANT TECHNIQUE PAINFUL?",
         a: "No. It is not painful. However, minimal discomfort is experienced post-procedure. The medical team provides full support, ensuring total patient comfort and safety.",
       },
       {
@@ -84,23 +84,23 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     faqs: [
       {
         q: "HOW EFFECTIVE IS A CROWN HAIR TRANSPLANT?",
-        a: "At QHT Clinic we perform crown hair transplants for natural, lasting regrowth. We achieve exceptional density in the crown area, which requires high surgical artistry to replicate the natural swirl pattern.",
+        a: "At NexGen Hair Transplant we perform crown hair transplants for natural, lasting regrowth. We achieve exceptional density in the crown area, which requires high surgical artistry to replicate the natural swirl pattern.",
       },
       {
         q: "WHICH TECHNIQUE IS BETTER FOR CROWN HAIR TRANSPLANT?",
-        a: "The QHT-FUE technique is best for natural spiral design, higher density, and faster recovery in crown hair transplants. QHT Implanters amplify the angles ensuring high accuracy to recreate the natural crown whorl.",
+        a: "The NexGen Hair Transplant FUE technique is best for natural spiral design, higher density, and faster recovery in crown hair transplants. Our specialised implanters amplify the angles ensuring high accuracy to recreate the natural crown whorl.",
       },
       {
         q: "HOW MUCH TIME DOES RECOVERY TAKE AFTER CROWN SURGERY?",
-        a: "QHT ensures natural crown coverage with rapid 5–7 days of initial healing.",
+        a: "NexGen Hair Transplant ensures natural crown coverage with rapid 5–7 days of initial healing.",
       },
       {
         q: "ARE THE CROWN HAIR TRANSPLANT RESULTS PERMANENT?",
-        a: "Yes. Crown hair transplants are permanent with appropriate medical maintenance, with QHT Clinic ensuring lifelong natural results.",
+        a: "Yes. Crown hair transplants are permanent with appropriate medical maintenance, with NexGen Hair Transplant ensuring lifelong natural results.",
       },
       {
         q: "DOES A CROWN HAIR TRANSPLANT LEAVE SCARS AFTER SURGERY?",
-        a: "The QHT technique gives natural crown results with minimal to non-visible micro-scars.",
+        a: "The NexGen Hair Transplant technique gives natural crown results with minimal to non-visible micro-scars.",
       },
     ],
   },
@@ -111,11 +111,11 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     faqs: [
       {
         q: "IS SOCIAL MEDIA INFLUENCER HAIR TRANSPLANT PERMANENT?",
-        a: "Yes, with the advanced QHT technique, QHT Clinic gives prolonged natural results with high-definition density suitable for 4K cameras and public appearances.",
+        a: "Yes, with its advanced technique, NexGen Hair Transplant gives prolonged natural results with high-definition density suitable for 4K cameras and public appearances.",
       },
       {
         q: "WHAT IS THE COST OF INFLUENCER HAIR TRANSPLANT IN INDIA?",
-        a: "The cost depends upon the grafts and method chosen. At QHT Clinic, affordable expert care and VIP privacy are always prioritized.",
+        a: "The cost depends upon the grafts and method chosen. At NexGen Hair Transplant, affordable expert care and VIP privacy are always prioritized.",
       },
       {
         q: "CAN INFLUENCERS STYLE HAIR AFTER A TRANSPLANT?",
@@ -126,8 +126,8 @@ const FAQ_CATEGORIES: FAQCategory[] = [
         a: "Mild redness and slight swelling may be observed for 2–3 days, which is effectively managed through our post-operative aftercare protocol.",
       },
       {
-        q: "WHY DO INFLUENCERS CHOOSE QHT CLINIC FOR HAIR TRANSPLANT?",
-        a: "Because QHT Clinic provides natural, high-density, and long-lasting outcomes with minimum downtime and zero visible linear scarring.",
+        q: "WHY DO INFLUENCERS CHOOSE NEXGEN HAIR TRANSPLANT?",
+        a: "Because NexGen Hair Transplant provides natural, high-density, and long-lasting outcomes with minimum downtime and zero visible linear scarring.",
       },
     ],
   },
@@ -142,15 +142,15 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: "HOW LONG DOES HAIR TRANSPLANT REPAIR LAST?",
-        a: "The results are permanent when performed by expert restorative surgeons at QHT Clinic.",
+        a: "The results are permanent when performed by expert restorative surgeons at NexGen Hair Transplant.",
       },
       {
         q: "CAN FAILED HAIR TRANSPLANTS BE CORRECTED COMPLETELY?",
-        a: "Yes. Most failed procedures (unnatural hair angles, pluggy doll-like hairlines, or depleted donor areas) can be successfully corrected at QHT Clinic.",
+        a: "Yes. Most failed procedures (unnatural hair angles, pluggy doll-like hairlines, or depleted donor areas) can be successfully corrected at NexGen Hair Transplant.",
       },
       {
-        q: "HOW IS QHT BETTER FOR CORRECTIVE HAIR TRANSPLANT?",
-        a: "QHT has seasoned senior surgeons, custom micro-instruments, and higher graft survival rates for delicate revision surgeries.",
+        q: "HOW IS NEXGEN HAIR TRANSPLANT BETTER FOR CORRECTIVE SURGERY?",
+        a: "NexGen Hair Transplant has seasoned senior surgeons, custom micro-instruments, and higher graft survival rates for delicate revision surgeries.",
       },
     ],
   },
@@ -165,7 +165,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: "WHAT IS THE SUCCESS RATE OF HAIRLINE RECONSTRUCTION?",
-        a: "When performed with advanced techniques like QHT, graft retention and success rates consistently exceed 95%.",
+        a: "When performed with advanced techniques like those at NexGen Hair Transplant, graft retention and success rates consistently exceed 95%.",
       },
       {
         q: "WHAT ARE THE SIDE EFFECTS OF HAIRLINE RECONSTRUCTION?",
@@ -188,7 +188,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     faqs: [
       {
         q: "IS FUE HAIR TRANSPLANT PAINFUL?",
-        a: "No. At QHT Clinic, local anesthesia ensures the entire extraction and placement process is virtually pain-free.",
+        a: "No. At NexGen Hair Transplant, local anesthesia ensures the entire extraction and placement process is virtually pain-free.",
       },
       {
         q: "ARE THE RESULTS OF FUE HAIR TRANSPLANT PERMANENT?",
@@ -207,15 +207,15 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     faqs: [
       {
         q: "WHAT IS THE BEST METHOD FOR TEMPLE HAIRLINE TRANSPLANT?",
-        a: "The Advanced QHT Technique ensures acute natural angles, higher density, and fast recovery for the delicate temporal points.",
+        a: "The advanced NexGen Hair Transplant technique ensures acute natural angles, higher density, and fast recovery for the delicate temporal points.",
       },
       {
         q: "IS TEMPLE HAIR TRANSPLANT PERMANENT?",
         a: "Yes. Temple restoration provides lifelong natural facial balance and framing.",
       },
       {
-        q: "CAN FAILED TEMPLE TRANSPLANTS BE CORRECTED AT QHT?",
-        a: "Yes. QHT offers specialized Temple Hair Correction to soften harsh angles and restore natural symmetry.",
+        q: "CAN FAILED TEMPLE TRANSPLANTS BE CORRECTED AT NEXGEN HAIR TRANSPLANT?",
+        a: "Yes. NexGen Hair Transplant offers specialized Temple Hair Correction to soften harsh angles and restore natural symmetry.",
       },
     ],
   },

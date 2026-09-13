@@ -23,7 +23,7 @@ async function seedServices() {
         badge: item.badge ?? null,
         sortOrder: index,
         status: "published",
-        seoTitle: `${item.title} in India | QHT Clinic`,
+        seoTitle: `${item.title} in India | NexGen Hair Transplant`,
         seoDescription: item.desc,
         sections: SEED_SECTIONS_BY_SLUG[item.slug] ?? {},
         hiddenSections: [],
