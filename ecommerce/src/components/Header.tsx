@@ -15,21 +15,18 @@ export default function Header() {
           
           {/* Left: Brand Logo */}
           <Link href="/" className="flex items-center gap-1.5 select-none group flex-shrink-0">
-            <div className="flex flex-col">
-              <span className="text-lg sm:text-2xl font-bold tracking-tight text-[#1b221d] flex items-center gap-0.5 font-serif">
-                <span className="border-b-2 border-[#1b221d] pb-0.5">U.</span>Roots
-              </span>
-              <span className="text-[7.5px] sm:text-[9px] uppercase tracking-widest text-[#5c685f] -mt-1 font-sans font-medium">
-                BY QHT CLINIC
-              </span>
-            </div>
+            <img
+              src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/logo3-mtydwmmt1iuppt.png"
+              alt="Logo"
+              className="h-8 sm:h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Right: Actions (WhatsApp, Shopping Bag Counter, Start Free Hair Test Button) */}
           <div className="flex items-center gap-1.5 sm:gap-4">
             {/* WhatsApp Link */}
             <a
-              href="https://wa.me/919084726916?text=Hi%20URoots%20by%20QHT,%20I%20need%20help%20choosing%20hair%20care%20products."
+              href="https://wa.me/919084726916?text=Hi,%20I%20need%20help%20choosing%20hair%20care%20products."
               target="_blank"
               rel="noreferrer"
               className="w-8 h-8 sm:w-9 sm:h-9 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-700 hover:text-green-600 transition-colors"

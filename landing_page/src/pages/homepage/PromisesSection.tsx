@@ -41,7 +41,7 @@ export default function PromisesSection() {
           <div className="lg:col-span-5 space-y-6">
             <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100">
               <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/11/Our-Promise.webp"
+                src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg"
                 alt="Our Clinical Commitments"
                 className="w-full h-auto object-cover"
               />

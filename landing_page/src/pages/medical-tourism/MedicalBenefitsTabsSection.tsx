@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { Play } from "lucide-react";
+import { CalendarCheck, Plane, Hotel, Languages, LucideIcon, Play } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface TabItem {
   id: string;
   label: string;
-  icon: string;
+  icon: LucideIcon;
   heading: string;
   points: {
     title?: string;
@@ -18,7 +19,7 @@ const TABS: TabItem[] = [
   {
     id: "tab-1",
     label: "Before & After You Visit Us",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/benefits-icon-1.webp",
+    icon: CalendarCheck,
     heading: "What we provide when you pay us a visit:",
     points: [
       {
@@ -42,7 +43,7 @@ const TABS: TabItem[] = [
   {
     id: "tab-2",
     label: "Your Travel",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/benefits-icon-2.webp",
+    icon: Plane,
     heading: "How we make your travelling very smooth and easy:",
     points: [
       {
@@ -56,7 +57,7 @@ const TABS: TabItem[] = [
   {
     id: "tab-3",
     label: "Your Stay",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/benefits-icon-3.webp",
+    icon: Hotel,
     heading: "This is how we make sure you have a peaceful stay when you come to visit us:",
     points: [
       {
@@ -70,7 +71,7 @@ const TABS: TabItem[] = [
   {
     id: "tab-4",
     label: "Communication",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/benefits-icon-4.webp",
+    icon: Languages,
     heading: "For international clients, communication might be a problem, this how we help:",
     points: [
       {
@@ -100,7 +101,7 @@ export default function MedicalBenefitsTabsSection() {
             Benefits You’ll Receive During Your Visit for a Seamless, Satisfying Experience
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-gray-500 font-normal">
-            QHT can make certain your medical tourism experience is both hassle-free and stress-free.
+            {COMPANY_NAME} ensures your medical tourism experience is both hassle-free and stress-free.
           </p>
         </div>
 
@@ -114,6 +115,7 @@ export default function MedicalBenefitsTabsSection() {
             <div className="flex flex-col divide-y divide-gray-200/60">
               {TABS.map((tab) => {
                 const isActive = tab.id === activeTabId;
+                const IconComp = tab.icon;
                 return (
                   <button
                     key={tab.id}
@@ -126,11 +128,9 @@ export default function MedicalBenefitsTabsSection() {
                   >
                     {/* Icon */}
                     <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
-                      <img
-                        src={tab.icon}
-                        alt={tab.label}
-                        className={`w-7 h-7 object-contain ${
-                          isActive ? "filter brightness-0 invert" : ""
+                      <IconComp
+                        className={`w-5 h-5 transition-colors ${
+                          isActive ? "text-white" : "text-[#162418]"
                         }`}
                       />
                     </div>

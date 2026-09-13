@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ZoomIn, X, Building, ShieldCheck, Sparkles } from "lucide-react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface GalleryItem {
   id: number;
@@ -13,37 +14,37 @@ interface GalleryItem {
 const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
-    src: "https://www.qhtclinic.com/wp-content/uploads/2025/10/medical-tourism-gallery-1.webp",
+    src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
     title: "International Consultation Suite",
     category: "Consultation & Planning",
   },
   {
     id: 2,
-    src: "https://www.qhtclinic.com/wp-content/uploads/2025/10/medical-tourism-gallery-2.webp",
+    src: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
     title: "Doctor-Led Hairline Architecture",
     category: "Surgeon Assessment",
   },
   {
     id: 3,
-    src: "https://www.qhtclinic.com/wp-content/uploads/2025/10/medical-tourism-gallery-3.webp",
+    src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
     title: "Ultra-Sterile Operating Theaters",
     category: "HEPA Filtered Theaters",
   },
   {
     id: 4,
-    src: "https://www.qhtclinic.com/wp-content/uploads/2025/10/medical-tourism-gallery-4.webp",
+    src: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1200&q=80",
     title: "VIP Patient Lounge & Hospitality",
     category: "Comfort & Recovery",
   },
   {
     id: 5,
-    src: "https://www.qhtclinic.com/wp-content/uploads/2025/10/medical-tourism-gallery-5.webp",
+    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
     title: "Microscopic Graft Preservation",
     category: "High Viability Lab",
   },
   {
     id: 6,
-    src: "https://www.qhtclinic.com/wp-content/uploads/2025/10/medical-tourism-gallery-6.webp",
+    src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
     title: "International Patient Experience",
     category: "Patient Delight",
   },
@@ -65,7 +66,7 @@ export default function MedicalInfrastructureSection() {
             Glimpse of Our Infrastructure & Hospitality
           </h2>
           <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto font-normal">
-            Comfort is considered as highly at QHT as clinical results. State-of-the-art operating theatres, private recovery rooms, cosy lounges, and a dedicated international patient desk ensure a completely stress-free experience.
+            Comfort is considered as highly at {COMPANY_NAME} as clinical results. State-of-the-art operating theatres, private recovery rooms, cosy lounges, and a dedicated international patient desk ensure a completely stress-free experience.
           </p>
         </div>
 

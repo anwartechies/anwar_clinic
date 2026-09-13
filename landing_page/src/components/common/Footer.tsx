@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useConsultation } from "@/context/ConsultationContext";
-import { COMPANY_NAME } from "@/config/constants";
+import { COMPANY_NAME, CLINIC_PHONE, CLINIC_EMAIL } from "@/config/constants";
 import type { ServiceCard } from "@/lib/services";
 
 interface FooterProps {
@@ -56,61 +56,56 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
               />
             </Link>
 
-            {/* North India Branch */}
-            <div className="pt-1">
-              <span className="inline-block bg-white/10 text-white font-semibold text-xs px-3 py-1 rounded border border-white/15 mb-3">
-                North India Branch
+            {/* Main Clinic Center */}
+            <div className="pt-1 pb-4 border-b border-white/10">
+              <span className="inline-block bg-white/10 text-white font-semibold text-xs px-3 py-1 rounded border border-white/15 mb-2.5">
+                Main Clinic Branch
               </span>
-              <p className="leading-relaxed">
-                {COMPANY_NAME} Clinic, 521, Model Colony, Haridwar, Uttarakhand
+              <p className="font-bold text-white text-base">
+                {COMPANY_NAME}
               </p>
-            </div>
+              <p className="leading-relaxed text-xs sm:text-sm text-[#cdd7cb] mt-1.5">
+                Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014
+              </p>
 
-            <div className="border-b border-white/10 pb-4">
-              <p className="leading-relaxed">
-                D -15, Outer Ring Rd, Opp. Prashant Vihar Metro Station, Sector 14, Rohini, New Delhi, Delhi, 110085
-              </p>
-            </div>
+              {/* Embedded Google Maps View */}
+              <div className="mt-3 w-full h-36 rounded-xl overflow-hidden border border-white/15 shadow-inner">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.264183401463!2d85.0827563740967!3d25.604422915088595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57924bf8c993%3A0xc9a79dda2a64c183!2sNEXGEN%20HAIR%20TRANSPLANT!5e1!3m2!1sen!2sin!4v1789286019174!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  title={`${COMPANY_NAME} Google Maps Location`}
+                  className="w-full h-full"
+                />
+              </div>
 
-            <div className="border-b border-white/10 pb-4">
-              <p className="leading-relaxed">
-                Plot No. 3, opposite Huda Market, Sector 46, Gurugram, Haryana 122022
-              </p>
-            </div>
-
-            {/* South India Branch */}
-            <div className="border-b border-white/10 pb-4 pt-1">
-              <span className="inline-block bg-white/10 text-white font-semibold text-xs px-3 py-1 rounded border border-white/15 mb-3">
-                South India Branch
-              </span>
-              <p className="leading-relaxed">
-                {COMPANY_NAME} Clinic Opposite Hotel Park HyattRoad No. 2 Banjara Hills, Hyderabad, Telangana
-              </p>
-            </div>
-
-            {/* Consultation Office */}
-            <div className="border-b border-white/10 pb-4 pt-1">
-              <span className="inline-block bg-white/10 text-white font-semibold text-xs px-3 py-1 rounded border border-white/15 mb-3">
-                Consultation Office
-              </span>
-              <p className="leading-relaxed">
-                5th Floor, Prasad House, 16 Sudder Street, Kolkata, West Bengal 700016
-              </p>
+              <a
+                href="https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 text-xs text-[#baf788] hover:underline font-medium mt-3"
+              >
+                <span>Get Directions on Google Maps →</span>
+              </a>
             </div>
 
             {/* Phone & Email Row */}
             <div className="flex items-center justify-between pt-2 text-sm sm:text-[15px] font-medium text-white">
               <a
-                href="tel:+919084726916"
+                href={`tel:${CLINIC_PHONE.replace(/[^0-9+]/g, "")}`}
                 className="hover:text-[#baf788] transition-colors"
               >
-                +91-9084726916
+                {CLINIC_PHONE}
               </a>
               <a
-                href="mailto:care@clinic.com"
+                href={`mailto:${CLINIC_EMAIL}`}
                 className="hover:text-[#baf788] transition-colors"
               >
-                care@clinic.com
+                {CLINIC_EMAIL}
               </a>
             </div>
 
@@ -182,7 +177,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
             <div className="border-b border-white/15" />
 
             {/* 3. In Your City */}
-            <div>
+            {/* <div>
               <h4 className="text-lg sm:text-xl font-bold text-white mb-4 tracking-tight">
                 In Your City
               </h4>
@@ -214,7 +209,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
                   <p><Link href="/surat/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Surat</Link></p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

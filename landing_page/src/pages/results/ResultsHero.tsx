@@ -148,7 +148,7 @@ export default function ResultsHero({
               >
                 {/* AFTER IMAGE (Base Layer - Right Side) */}
                 <img
-                  src="https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-4-mtzmgy4ufm739v.png"
                   alt="Transformation After"
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                   draggable={false}
@@ -160,7 +160,7 @@ export default function ResultsHero({
                   style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
                 >
                   <img
-                    src="https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp"
+                    src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-6-mtzmmfyjtmpxyz.png"
                     alt="Transformation Before"
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                     draggable={false}

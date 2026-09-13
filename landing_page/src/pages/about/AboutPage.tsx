@@ -34,7 +34,7 @@ export default function AboutPage() {
       <AboutClinicStandardsSection />
 
       {/* 5. Mission & Vision */}
-      <AboutMissionVisionSection />
+      {/* <AboutMissionVisionSection /> */}
 
       {/* 6. Interested in costs? CTA Banner */}
       <AboutCostCTASection onOpenConsultation={openConsultation} />
@@ -43,7 +43,7 @@ export default function AboutPage() {
       <AboutExpertsPhilosophySection onOpenConsultation={openConsultation} />
 
       {/* 8. Celebrities & Patients Who Trust QHT */}
-      <AboutCelebrityTrustSection />
+      {/* <AboutCelebrityTrustSection /> */}
 
       {/* Google Reviews */}
       <GoogleReviews />

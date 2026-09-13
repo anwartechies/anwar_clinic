@@ -13,7 +13,7 @@ export default function BottomBanner({ onOpenConsultation }: BottomBannerProps) 
       className="py-20 relative bg-cover bg-center text-white"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(22, 36, 24, 0.88), rgba(27, 57, 43, 0.92)), url('https://www.qhtclinic.com/wp-content/uploads/2025/10/hp-bottom-banner-img.webp')",
+          "linear-gradient(rgba(22, 36, 24, 0.88), rgba(27, 57, 43, 0.92)), url('https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/hp-bottom-banner-img-mtzluh7iln19oe.webp')",
       }}
     >
       <div className="qht-container text-center max-w-2xl mx-auto">

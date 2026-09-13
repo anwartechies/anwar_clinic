@@ -3,6 +3,17 @@
 import React from "react";
 import { COMPANY_NAME } from "@/config/constants";
 
+const PATIENT_AVATARS = [
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80",
+  "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80",
+  "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80",
+  "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=300&q=80",
+];
+
 export default function MedicalWhyQHTSection() {
   return (
     <section className="py-20 lg:py-28 bg-[#303e2c] text-white relative overflow-hidden">
@@ -16,10 +27,10 @@ export default function MedicalWhyQHTSection() {
              ======================================================== */}
           <div className="relative z-10 w-full max-w-[580px] min-h-[460px] sm:min-h-[500px] bg-[#475743] rounded-[48%_52%_56%_44%_/_48%_44%_56%_52%] shadow-2xl p-8 sm:p-12 flex flex-col items-center justify-center text-center mx-auto border border-[#586b53]/50">
             
-            {/* Tree Branch / Follicle Green Logo */}
+            {/* Brand Logo */}
             <div className="mb-5 flex items-center justify-center">
               <img
-                src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/qh-logo-green.png"
+                src="/images/logo1.png"
                 alt={`${COMPANY_NAME} Logo`}
                 className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-md"
               />
@@ -87,7 +98,7 @@ export default function MedicalWhyQHTSection() {
           {/* Photo 1: Top Mid-Left (Thumbs Up) */}
           <div className="hidden lg:block absolute left-[32%] top-[12%] z-20 w-20 h-20 xl:w-22 xl:h-22 rounded-full overflow-hidden border-[3px] border-white shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/10/why-qht-img-2.webp"
+              src={PATIENT_AVATARS[0]}
               alt="Satisfied Patient"
               className="w-full h-full object-cover object-top"
             />
@@ -96,7 +107,7 @@ export default function MedicalWhyQHTSection() {
           {/* Photo 2: Left Upper-Mid (Checking Hairline) */}
           <div className="hidden lg:block absolute left-[8%] top-[30%] z-20 w-24 h-24 xl:w-26 xl:h-26 rounded-full overflow-hidden border-[3px] border-white shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/10/why-qht-img-1.webp"
+              src={PATIENT_AVATARS[1]}
               alt="Patient Hairline Examination"
               className="w-full h-full object-cover object-top"
             />
@@ -105,7 +116,7 @@ export default function MedicalWhyQHTSection() {
           {/* Photo 3: Left Mid-Lower (Small Avatar) */}
           <div className="hidden lg:block absolute left-[19%] top-[45%] z-20 w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/10/why-qht-img-3.webp"
+              src={PATIENT_AVATARS[2]}
               alt="International Patient"
               className="w-full h-full object-cover object-top"
             />
@@ -114,7 +125,7 @@ export default function MedicalWhyQHTSection() {
           {/* Photo 4: Bottom Left (Bearded Patient) */}
           <div className="hidden lg:block absolute left-[20%] bottom-[12%] z-20 w-22 h-22 xl:w-24 xl:h-24 rounded-full overflow-hidden border-[3px] border-white shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/10/why-qht-img-4.webp"
+              src={PATIENT_AVATARS[3]}
               alt="Happy Patient Result"
               className="w-full h-full object-cover object-top"
             />
@@ -123,7 +134,7 @@ export default function MedicalWhyQHTSection() {
           {/* Photo 5: Top Right (Holding Mirror) */}
           <div className="hidden lg:block absolute right-[28%] top-[10%] z-20 w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/10/why-qht-img-5.webp"
+              src={PATIENT_AVATARS[4]}
               alt="Patient Checking Results"
               className="w-full h-full object-cover object-top"
             />
@@ -132,7 +143,7 @@ export default function MedicalWhyQHTSection() {
           {/* Photo 6: Right Mid (Smiling Buzz Cut) */}
           <div className="hidden lg:block absolute right-[18%] top-[51%] z-20 w-14 h-14 xl:w-16 xl:h-16 rounded-full overflow-hidden border-2 border-white shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/10/why-qht-img-6.webp"
+              src={PATIENT_AVATARS[5]}
               alt="Restored Natural Hairline"
               className="w-full h-full object-cover object-top"
             />
@@ -141,7 +152,7 @@ export default function MedicalWhyQHTSection() {
           {/* Photo 7: Far Right-Mid (Patient in Polo) */}
           <div className="hidden lg:block absolute right-[4%] top-[54%] z-20 w-24 h-24 xl:w-28 xl:h-28 rounded-full overflow-hidden border-[3px] border-white shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/10/why-qht-img-7.webp"
+              src={PATIENT_AVATARS[6]}
               alt="Patient Success"
               className="w-full h-full object-cover object-top"
             />
@@ -150,7 +161,7 @@ export default function MedicalWhyQHTSection() {
           {/* Photo 8: Bottom Center-Right (Patient Pointing to Hair) */}
           <div className="hidden lg:block absolute right-[32%] bottom-[16%] z-20 w-14 h-14 xl:w-16 xl:h-16 rounded-full overflow-hidden border-2 border-white shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/10/why-qht-img-8.webp"
+              src={PATIENT_AVATARS[7]}
               alt="Density Restored"
               className="w-full h-full object-cover object-top"
             />
@@ -189,20 +200,13 @@ export default function MedicalWhyQHTSection() {
               Trusted by International Patients Worldwide
             </p>
             <div className="flex items-center justify-center flex-wrap gap-2.5">
-              {[
-                "why-qht-img-2.webp",
-                "why-qht-img-1.webp",
-                "why-qht-img-4.webp",
-                "why-qht-img-6.webp",
-                "why-qht-img-7.webp",
-                "why-qht-img-8.webp",
-              ].map((img, i) => (
+              {PATIENT_AVATARS.slice(0, 6).map((avatarUrl, i) => (
                 <div
                   key={i}
                   className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-md bg-white"
                 >
                   <img
-                    src={`https://www.qhtclinic.com/wp-content/uploads/2025/10/${img}`}
+                    src={avatarUrl}
                     alt="Patient"
                     className="w-full h-full object-cover"
                   />

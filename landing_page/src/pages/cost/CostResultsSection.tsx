@@ -19,8 +19,8 @@ const COST_RESULTS_CARDS: CostResultItem[] = [
   {
     id: 1,
     name: "Irfan",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-mtzm9qege4m658.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/firefly-removebackground-mtzm64rwl6pkss.png",
     grafts: "3,200 Grafts",
     technique: `${COMPANY_NAME} Technique`,
     months: "9 Months Result",
@@ -28,8 +28,8 @@ const COST_RESULTS_CARDS: CostResultItem[] = [
   {
     id: 2,
     name: "Kshitij Ahuja",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-1-mtzmbn4vqwbdn3.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-2-mtzmdijf5120tx.png",
     grafts: "2,800 Grafts",
     technique: `${COMPANY_NAME} Technique`,
     months: "8 Months Result",
@@ -37,8 +37,8 @@ const COST_RESULTS_CARDS: CostResultItem[] = [
   {
     id: 3,
     name: "Puneet Chandra",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-6-mtzmmfyjtmpxyz.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-4-mtzmgy4ufm739v.png",
     grafts: "4,500 Grafts",
     technique: `FUE + ${COMPANY_NAME}`,
     months: "12 Months Result",
@@ -46,30 +46,30 @@ const COST_RESULTS_CARDS: CostResultItem[] = [
   {
     id: 4,
     name: "Pranav Meshram",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-5-mtzmidwcu9uedr.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-13-2026-02-25-44-pm-mtzkx8trmehq12.png",
     grafts: "4,000 Grafts",
     technique: "FUE Technique",
     months: "10 Months Result",
   },
-  {
-    id: 5,
-    name: "Praveen Kumar",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
-    grafts: "3,500 Grafts",
-    technique: "DHI / FUE",
-    months: "9 Months Result",
-  },
-  {
-    id: 6,
-    name: "Sagar Kumar",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
-    grafts: "2,600 Grafts",
-    technique: `${COMPANY_NAME} Technique`,
-    months: "7 Months Result",
-  },
+  // {
+  //   id: 5,
+  //   name: "Praveen Kumar",
+  //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
+  //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+  //   grafts: "3,500 Grafts",
+  //   technique: "DHI / FUE",
+  //   months: "9 Months Result",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Sagar Kumar",
+  //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
+  //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+  //   grafts: "2,600 Grafts",
+  //   technique: `${COMPANY_NAME} Technique`,
+  //   months: "7 Months Result",
+  // },
 ];
 
 function InteractiveComparisonCard({ item }: { item: CostResultItem }) {
@@ -103,14 +103,14 @@ function InteractiveComparisonCard({ item }: { item: CostResultItem }) {
 
   return (
     <div className="bg-[#38493a] rounded-3xl overflow-hidden shadow-xl border border-white/10 flex flex-col justify-between">
-      
+
       {/* Interactive Split Comparison Slider */}
       <div
         ref={containerRef}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden select-none bg-black"
+        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden select-none bg-white"
       >
         {/* AFTER IMAGE (Base Layer) */}
         <img
@@ -172,7 +172,7 @@ export default function CostResultsSection() {
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 bg-[#485942] text-white overflow-hidden">
       <div className="qht-large-container relative z-10">
-        
+
         {/* Header Row with Vector Motif */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12 lg:mb-16">
           <div className="max-w-2xl space-y-3">

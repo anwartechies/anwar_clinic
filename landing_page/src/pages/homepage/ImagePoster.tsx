@@ -12,10 +12,10 @@ export default function ImagePoster() {
           <picture>
             <source
               media="(max-width: 768px)"
-              srcSet="https://www.qhtclinic.com/wp-content/uploads/2025/11/Mobile-Banner-Homepage-1.webp"
+              srcSet="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg"
             />
             <img
-              src="https://www.qhtclinic.com/wp-content/uploads/2025/11/Banner-Homepage.webp"
+              src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg"
               alt={`${COMPANY_NAME} Clinic Excellence Poster`}
               className="w-full h-auto object-cover block"
             />

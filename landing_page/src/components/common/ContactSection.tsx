@@ -14,9 +14,9 @@ interface ClinicLocation {
 
 const DEFAULT_CLINIC_LOCATIONS: ClinicLocation[] = [
   {
-    city: "Haridwar",
-    address: `${COMPANY_NAME}, 521, Model Colony, Ranipur More, Haridwar, Uttarakhand.`,
-    mapLink: "https://maps.app.goo.gl/BtDzrvdu7hEDbBoJ9",
+    city: "Patna (Main Branch)",
+    address: `${COMPANY_NAME}, Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014`,
+    mapLink: "https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z",
   },
   {
     city: "Delhi",
@@ -93,7 +93,7 @@ export default function ContactSection({
   };
 
   return (
-    <section className={`py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden ${className}`}>
+    <section className={`py-16 sm:py-20 lg:py-24 mt-32 bg-[#eff5f1] overflow-hidden ${className}`}>
       <div className="qht-large-container">
 
         {/* Top Half: Contact Info (Left) + Lead Form (Right) */}
@@ -258,7 +258,7 @@ export default function ContactSection({
 
         {/* Bottom Half: 4 Clinic Location Cards */}
         {showLocations && (
-          <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+          <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {locations.map((loc, idx) => (
               <a
                 key={idx}
@@ -285,6 +285,46 @@ export default function ContactSection({
             ))}
           </div>
         )}
+
+        {/* Interactive Google Map Embed */}
+        <div className="mt-12 sm:mt-14 bg-white rounded-3xl p-5 sm:p-7 shadow-xs border border-gray-200/80">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 px-1">
+            <div>
+              <span className="text-xs font-bold text-[#596d53] uppercase tracking-wider block mb-1">
+                Find Us on the Map
+              </span>
+              <h4 className="text-xl sm:text-2xl font-bold text-[#1b221d] tracking-tight">
+                {COMPANY_NAME} Location
+              </h4>
+              <p className="text-xs sm:text-sm text-[#5c685f] mt-1">
+                Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014
+              </p>
+            </div>
+            <a
+              href="https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#596d53] hover:bg-[#495c44] text-white text-xs sm:text-sm font-semibold rounded-full shadow-xs transition-colors self-start sm:self-auto"
+            >
+              <span>Get Directions</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div className="w-full h-[360px] sm:h-[420px] rounded-2xl overflow-hidden border border-gray-200/70 relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.264183401463!2d85.0827563740967!3d25.604422915088595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57924bf8c993%3A0xc9a79dda2a64c183!2sNEXGEN%20HAIR%20TRANSPLANT!5e1!3m2!1sen!2sin!4v1789286019174!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title={`${COMPANY_NAME} Location`}
+              className="w-full h-full"
+            />
+          </div>
+        </div>
 
       </div>
     </section>
