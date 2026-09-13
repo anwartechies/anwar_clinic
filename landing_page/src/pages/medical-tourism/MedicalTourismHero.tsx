@@ -18,10 +18,10 @@ export default function MedicalTourismHero() {
 
   return (
     <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-[#162418]">
-      {/* Background Image Matching Exactly the Official QHT Medical Tourism Banner */}
+      {/* Background Hero Banner */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.qhtclinic.com/wp-content/uploads/2025/10/medical-tourism-main-banner.webp"
+          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=80"
           alt={`${COMPANY_NAME} Medical Tourism For International Patients`}
           className="w-full h-full object-cover object-center"
         />

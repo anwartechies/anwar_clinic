@@ -45,7 +45,7 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
           {duplicatedSlides.map((slide, idx) => (
             <div
               key={idx}
-              className="relative w-[280px] sm:w-[320px] md:w-[380px] rounded-[24px] overflow-hidden flex-shrink-0 shadow-sm"
+              className="relative w-[280px] sm:w-[320px] md:w-[470px] rounded-[24px] overflow-hidden flex-shrink-0 shadow-sm"
             >
               {/* Card Top Label: Name + Location */}
               {/* <div className="px-3 pt-1 pb-2 flex items-baseline gap-1.5 text-white">
@@ -64,7 +64,7 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
                 <img
                   src={slide.image}
                   alt={slide.name}
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-fit object-center"
                   loading={idx < 4 ? "eager" : "lazy"}
                 />
               </div>

@@ -154,32 +154,32 @@ export const NAV_SERVICES_LIST = [
 ];
 
 export const NAV_ABOUT_LIST = [
-  { label: "Who we are", href: "/about/", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/about-list-1.webp" },
-  { label: "Blog", href: "/blogs/", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/about-list-2.webp" },
-  { label: "Career", href: "/career/", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/about-list-3.webp" },
-  { label: "Medical Tourism", href: "/medical-tourism/", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/about-list-4.webp" },
-  { label: "Frequently Asked Questions", href: "/faq/", image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/about-list-5.webp" },
+  { label: "Who we are", href: "/about/", image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80" },
+  { label: "Blog", href: "/blogs/", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" },
+  { label: "Career", href: "/career/", image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" },
+  { label: "Medical Tourism", href: "/medical-tourism/", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" },
+  { label: "Frequently Asked Questions", href: "/faq/", image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80" },
 ];
 
 // 2. Hero Results Slider Data
 export const HERO_SLIDES: CelebritySlide[] = [
-  { name: "Rajpal Yadav", location: "Mumbai, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Rajpal-Yadav-2.webp" },
-  { name: "Dayanand Shetty", location: "Mumbai, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Dayanand-Shetty.webp" },
-  { name: "Nadeem", location: "Delhi, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Nadeem.webp" },
-  { name: "Armaan Malik", location: "Mumbai, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Armaan-Malik-3.webp" },
-  { name: "Saurav", location: "Haridwar, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Saurav.webp" },
-  { name: "Tarun", location: "Rajasthan, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Tarun.webp" },
-  { name: "Shubham", location: "Gurugram, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Shubham.webp" },
-  { name: "Sanat", location: "Kolkata, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Sanat.webp" },
-  { name: "Puneet", location: "Bangalore, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Puneet.webp" },
-  { name: "Anurudra", location: "Noida, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Anurudra.webp" },
-  { name: "Kshitij", location: "Jabalpur, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Kshitij.webp" },
-  { name: "Gaurav", location: "Dehradun, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Gaurav.webp" },
-  { name: "Dheerendra", location: "Lucknow, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Dheerendra.webp" },
-  { name: "Utkrishta", location: "Hyderabad, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/utkrishta.webp" },
-  { name: "Rajat", location: "Chandigarh, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Rajat.webp" },
-  { name: "Kamal", location: "Ahmedabad, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Kamal.webp" },
-  { name: "Abhyudaya", location: "Delhi, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Abhyudaya.webp" },
+  { name: "Patient1", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p6-mtzj0y22eyj8vb.jpeg" },
+  { name: "Patient2", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p5-mtzj1k7g8yzzb9.jpeg" },
+  { name: "Patient3", location: "Delhi, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p4-mtzj20hg6dglrq.jpeg" },
+  { name: "Patient4", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/sd-mtzj2hfx4r5xwb.jpeg" },
+  { name: "Patient5", location: "Haridwar, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-13-at-1-02-03-am-mtzj2yg2x0guny.jpeg" },
+  { name: "Patient6", location: "Rajasthan, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-13-at-12-14-03-am-mtzj3jgnwd1pzn.jpeg" },
+  // { name: "Shubham", location: "Gurugram, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Shubham.webp" },
+  // { name: "Sanat", location: "Kolkata, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Sanat.webp" },
+  // { name: "Puneet", location: "Bangalore, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Puneet.webp" },
+  // { name: "Anurudra", location: "Noida, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Anurudra.webp" },
+  // { name: "Kshitij", location: "Jabalpur, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Kshitij.webp" },
+  // { name: "Gaurav", location: "Dehradun, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Gaurav.webp" },
+  // { name: "Dheerendra", location: "Lucknow, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Dheerendra.webp" },
+  // { name: "Utkrishta", location: "Hyderabad, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/utkrishta.webp" },
+  // { name: "Rajat", location: "Chandigarh, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Rajat.webp" },
+  // { name: "Kamal", location: "Ahmedabad, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Kamal.webp" },
+  // { name: "Abhyudaya", location: "Delhi, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Abhyudaya.webp" },
 ];
 
 // 3. The Bald Truth
@@ -246,12 +246,12 @@ export const PROMISES_LIST: PromiseItem[] = [
 ];
 
 export const PROMISE_GALLERY_IMAGES = [
-  "https://www.qhtclinic.com/wp-content/uploads/2025/11/OT-4-1.webp",
-  "https://www.qhtclinic.com/wp-content/uploads/2025/11/OT-3-1.webp",
-  "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hairline-design.webp",
-  "https://www.qhtclinic.com/wp-content/uploads/2025/11/Surgical-suite.webp",
-  "https://www.qhtclinic.com/wp-content/uploads/2025/11/OT-5-1.webp",
-  "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hairline-design-1.webp",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p5-mtzj1k7g8yzzb9.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/t1-mtzji2lq10j280.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/sd-mtzj2hfx4r5xwb.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/iii2-mtzjkctwkp1zrc.jpeg",
 ];
 
 // 5. See the Difference
@@ -407,7 +407,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "Male pattern hair loss (Androgenetic Alopecia) progressively affects hairline position and crown density.",
       `At ${COMPANY_NAME}, our male restoration procedures combine aesthetic hairline design with permanent follicle longevity, restoring your natural look and personal confidence.`,
     ],
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hair-Transplant-for-men.jpg",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/t1-mtzji2lq10j280.jpeg",
     link: "/services/hair-transplant-for-men/",
   },
   {
@@ -418,7 +418,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "A well-designed hairline frames the face and restores youthful facial balance without looking artificial.",
       `At ${COMPANY_NAME}, our surgeons handcraft every hairline contour, selecting single-hair follicles at precise growth angles to achieve undetectable, permanent results.`,
     ],
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hairline-Redesign-1.jpg",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-13-at-12-09-12-am-mtzjsehbjkjquk.jpeg",
     link: "/services/hairline-reconstruction/",
   },
   {
@@ -429,7 +429,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "If a previous hair transplant left you with pluggy grafts, misdirected hair, or depleted donor areas, corrective restoration can restore balance.",
       `Our experienced surgical team at ${COMPANY_NAME} carefully redistributes grafts, camouflages scars, and refines your hairline to deliver the natural appearance you originally envisioned.`,
     ],
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Failed-Hair-Transplant-Repair.jpg",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/iii2-mtzjkctwkp1zrc.jpeg",
     link: "/services/failed-hair-transplant-repair/",
   },
   {
@@ -440,7 +440,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "Growth Factor Concentrate (GFC) therapy harnesses concentrated regenerative growth factors from your own blood, delivered directly to weakened hair roots.",
       "This non-surgical therapy is highly effective for reducing active shedding, strengthening existing hair caliber, and boosting overall scalp vitality.",
     ],
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Gfc-Tretment@2x.webp",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
     link: "/services/gfc-treatment/",
   },
   {
@@ -451,7 +451,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "Facial hair restoration implants individual donor follicles into sparse, patchy, or scarred areas across the beard and mustache.",
       `Using ${COMPANY_NAME} micro-precision techniques, facial grafts are placed along the exact natural direction of facial hair growth for seamless blending and effortless styling.`,
     ],
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/10/Mask-group-3.webp",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/screenshot-2026-09-13-135730-mtzjxcb7vl9gg7.png",
     link: "/services/beard-hair-transplant-in-india/",
   },
   {
@@ -462,7 +462,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "Platelet-Rich Plasma (PRP) is a clinically proven, non-invasive treatment utilizing your body’s own healing platelets to nourish dormant follicles.",
       "Ideal for early-stage thinning, post-transplant recovery acceleration, and overall hair density maintenance.",
     ],
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/10/Mask-group-4.webp",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/mask-group-4-mtzjz39sekfjz5.webp",
     link: "/services/prp-treatment/",
   },
 ];
@@ -471,46 +471,46 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
 export const TRANSFORMATION_GALLERY: TransformationItem[] = [
   {
     id: 1,
-    patientName: "Irfan",
+    patientName: "Patient - 1",
     grade: "Uttar Pradesh · Grade 5A",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-mtzm9qege4m658.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/firefly-removebackground-mtzm64rwl6pkss.png",
   },
   {
     id: 2,
-    patientName: "Kshitij Ahuja",
+    patientName: "Patient - 2",
     grade: "Jabalpur · Grade 4",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-1-mtzmbn4vqwbdn3.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-2-mtzmdijf5120tx.png",
   },
   {
     id: 3,
-    patientName: "Pranav Meshram",
+    patientName: "Patient - 3",
     grade: "Grade 6",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-6-mtzmmfyjtmpxyz.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-4-mtzmgy4ufm739v.png",
   },
   {
     id: 4,
-    patientName: "Praveen Kumar",
+    patientName: "Patient - 4",
     grade: "Bangalore · DHI",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-5-mtzmidwcu9uedr.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-13-2026-02-25-44-pm-mtzkx8trmehq12.png",
   },
-  {
-    id: 5,
-    patientName: "Puneet Chandra",
-    grade: "Grade 6",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
-  },
-  {
-    id: 6,
-    patientName: "Sagar Kumar",
-    grade: "Grade 4A",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
-  },
+  // {
+  //   id: 5,
+  //   patientName: "Puneet Chandra",
+  //   grade: "Grade 6",
+  //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
+  //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+  // },
+  // {
+  //   id: 6,
+  //   patientName: "Sagar Kumar",
+  //   grade: "Grade 4A",
+  //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
+  //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+  // },
 ];
 
 // 10. Google Reviews

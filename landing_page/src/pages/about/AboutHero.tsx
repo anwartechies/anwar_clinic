@@ -16,17 +16,17 @@ export default function AboutHero() {
   return (
     <section className="pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 bg-[#eff5f1] overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Title with Inline Rounded Pill Image Capsules */}
         <div className="text-center max-w-4xl mx-auto mb-6">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-[1.2] flex flex-col items-center justify-center">
-            
+
             {/* Line 1: Redefining [pill 1] Hair */}
             <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
               <span>Redefining</span>
               <span className="inline-flex items-center justify-center w-16 sm:w-20 md:w-22 h-8 sm:h-9 md:h-10 rounded-full overflow-hidden border border-black/15 shadow-xs align-middle bg-white flex-shrink-0">
                 <img
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=300&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/photo-1579684385127-1ef15d508118-mtzmy1yvzj07fe.avif"
                   alt="Scalp Hair Assessment"
                   className="w-full h-full object-cover"
                 />
@@ -57,7 +57,7 @@ export default function AboutHero() {
         {/* Big Medical Team Hospital Photo */}
         <div className="max-w-5xl mx-auto rounded-3xl sm:rounded-[36px] overflow-hidden shadow-xl border border-gray-200/80 bg-white relative aspect-[16/10] sm:aspect-[1.85/1]">
           <img
-            src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1600&q=80"
+            src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg"
             alt={`${COMPANY_NAME} Clinic Experienced Surgical Team and Doctors`}
             className="w-full h-full object-cover object-top"
           />

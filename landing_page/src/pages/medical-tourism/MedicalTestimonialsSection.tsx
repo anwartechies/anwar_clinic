@@ -18,7 +18,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "New York",
     title: "World-Class Results at a Fraction of the Cost",
     review:
-      "My QHT operation in India cost me just a third of what I would have paid in the US, with equally excellent outcomes.",
+      "My hair transplant procedure in India cost me just a third of what I would have paid in the US, with equally excellent outcomes.",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "London (NRI)",
     title: "Professionalism Beyond Expectations",
     review:
-      "The professionalism and hospitality at QHT were far better than I expected. Truly world-class service.",
+      "The professionalism and hospitality at the clinic were far better than I expected. Truly world-class service.",
   },
   {
     id: 4,

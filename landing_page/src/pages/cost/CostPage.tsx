@@ -59,7 +59,7 @@ export default function CostPage() {
       <CostEstimateCalculatorSection onOpenConsultation={openConsultation} />
 
       {/* 12. Watch The Incredible Journey & Transformation (YouTube Video Grid) */}
-      <CostVideoJourneySection />
+      {/* <CostVideoJourneySection /> */}
 
       {/* 13. Google Verified Reviews */}
       <GoogleReviews />

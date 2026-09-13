@@ -13,7 +13,7 @@ const FAQS: FAQItem[] = [
   {
     question: "Is having a hair transplant in India safe for international patients?",
     answer:
-      "Yes, absolutely. India is a leading global medical tourism destination. At QHT Clinic, all procedures are conducted by board-certified doctors in ultra-sterile, HEPA-filtered operating theaters adhering strictly to international NABH sterility and safety protocols.",
+      `Yes, absolutely. India is a leading global medical tourism destination. At ${COMPANY_NAME}, all procedures are conducted by board-certified doctors in ultra-sterile, HEPA-filtered operating theaters adhering strictly to international sterility and safety protocols.`,
   },
   {
     question: "How many days do I need to stay in India for the entire procedure?",
@@ -23,7 +23,7 @@ const FAQS: FAQItem[] = [
   {
     question: "Will my results look natural and match my ethnic hair type?",
     answer:
-      "Yes. QHT specializes in customized hairline architecture tailored to all ethnicities — including Caucasian, Asian, Afro, and Middle Eastern hair types. We replicate natural hair exit angles, swirls, and feathering for an undetectable look.",
+      `Yes. ${COMPANY_NAME} specializes in customized hairline architecture tailored to all ethnicities — including Caucasian, Asian, Afro, and Middle Eastern hair types. We replicate natural hair exit angles, swirls, and feathering for an undetectable look.`,
   },
   {
     question: "How much does a hair transplant cost for foreigners and NRIs?",
@@ -31,7 +31,7 @@ const FAQS: FAQItem[] = [
       "The average all-inclusive package ranges from $800 to $3,500 depending on graft requirement (typically 2,000 to 5,500+ grafts). This represents an immediate 70% to 80% cost savings compared to the US, UK, Canada, or Australia.",
   },
   {
-    question: "How does QHT assist with Medical Visas and Airport Logistics?",
+    question: `How does ${COMPANY_NAME} assist with Medical Visas and Airport Logistics?`,
     answer:
       "Our international desk provides official Hospital Visa Invitation letters for rapid e-Medical Visa processing. Upon arrival at Delhi International Airport (DEL), our private chauffeur greets you and transfers you directly to your accommodation.",
   },

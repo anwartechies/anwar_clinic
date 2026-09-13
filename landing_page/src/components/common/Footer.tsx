@@ -182,7 +182,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
             <div className="border-b border-white/15" />
 
             {/* 3. In Your City */}
-            <div>
+            {/* <div>
               <h4 className="text-lg sm:text-xl font-bold text-white mb-4 tracking-tight">
                 In Your City
               </h4>
@@ -214,7 +214,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
                   <p><Link href="/surat/hair-transplant" className="hover:text-white transition-colors">Hair Transplant in Surat</Link></p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
