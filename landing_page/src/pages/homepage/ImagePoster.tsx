@@ -12,10 +12,10 @@ export default function ImagePoster() {
           <picture>
             <source
               media="(max-width: 768px)"
-              srcSet="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg"
+              srcSet="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/nexgen-clinic-mtzudfipa89a8q.png"
             />
             <img
-              src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg"
+              src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/nexgen-clinic-mtzudfipa89a8q.png"
               alt={`${COMPANY_NAME} Clinic Excellence Poster`}
               className="w-full h-auto object-cover block"
             />

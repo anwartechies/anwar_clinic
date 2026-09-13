@@ -481,7 +481,7 @@ export const TRANSFORMATION_GALLERY: TransformationItem[] = [
     patientName: "Patient - 2",
     grade: "Jabalpur · Grade 4",
     beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-1-mtzmbn4vqwbdn3.png",
-    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-2-mtzmdijf5120tx.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-2-mtzv0lk8j638b7.png",
   },
   {
     id: 3,
@@ -494,8 +494,8 @@ export const TRANSFORMATION_GALLERY: TransformationItem[] = [
     id: 4,
     patientName: "Patient - 4",
     grade: "Bangalore · DHI",
-    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-5-mtzmidwcu9uedr.png",
-    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-13-2026-02-25-44-pm-mtzkx8trmehq12.png",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-5-mtzurmt0h3tm7w.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-13-2026-02-25-44-pm-mtzuuboggumj3g.png",
   },
   // {
   //   id: 5,

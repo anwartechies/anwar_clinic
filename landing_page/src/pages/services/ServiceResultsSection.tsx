@@ -169,8 +169,8 @@ export default function ServiceResultsSection({
           <div className="max-w-2xl space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
               {title.toLowerCase().startsWith("result of") ||
-              title.toLowerCase().startsWith("results of") ||
-              title.toLowerCase().startsWith("result")
+                title.toLowerCase().startsWith("results of") ||
+                title.toLowerCase().startsWith("result")
                 ? title
                 : `Result of ${title}`}
             </h2>
@@ -180,13 +180,7 @@ export default function ServiceResultsSection({
           </div>
 
           {/* QHT Circular Vector Motif */}
-          <div className="flex-shrink-0 opacity-90">
-            <img
-              src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-result-vector.webp"
-              alt={`${COMPANY_NAME} Motif`}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+
         </div>
 
         {/* 3-Column Results Cards Grid using TransformationGallery component architecture */}

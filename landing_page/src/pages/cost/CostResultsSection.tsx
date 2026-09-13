@@ -185,13 +185,7 @@ export default function CostResultsSection() {
           </div>
 
           {/* QHT Circular Root Vector Motif */}
-          <div className="flex-shrink-0">
-            <img
-              src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-result-vector.webp"
-              alt={`${COMPANY_NAME} Motif`}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain opacity-90"
-            />
-          </div>
+
         </div>
 
         {/* 6 Cards 3-Column Grid */}

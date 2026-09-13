@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { X, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
-import { COUNTRY_CODES, CLINIC_BRANCHES } from "@/data/qhtData";
+import { COUNTRY_CODES } from "@/data/qhtData";
 import { COMPANY_NAME } from "@/config/constants";
 import { submitLead } from "@/lib/leads";
 import { STATIC_OFFER, OFFER_PAGE_PATH } from "@/config/offer";
