@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Anwar Clinic · Admin Panel",
-  description: "Role-based admin panel for Anwar Clinic",
+  title: "NexGen · Admin Panel",
+  description: "Role-based admin panel for NexGen",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

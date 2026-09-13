@@ -3,6 +3,7 @@ import { Op } from "sequelize";
 import { Service, Lead, Blog, Product } from "../models";
 import { LEAD_SOURCES, LeadSource } from "../models/Lead";
 import { SEED_SECTIONS_BY_SLUG } from "../config/serviceSeedData";
+import { getGoogleReviews } from "../services/googleReviews";
 
 // Open, credential-less API consumed by the landing page and ecommerce at build/revalidate
 // time. Draft items are never exposed here.
@@ -277,6 +278,18 @@ const trim = (v: unknown, max: number) =>
 
 // Lead capture for every public form on the landing page. Deliberately open and
 // credential-less — the response carries no data back, only an acknowledgement.
+// Live Google rating + reviews for the clinic. `configured: false` (HTTP 200)
+// means the key/place aren't set yet — the landing page hides the section.
+router.get("/google-reviews", async (_req: Request, res: Response) => {
+  try {
+    const payload = await getGoogleReviews();
+    res.set("Cache-Control", "public, max-age=300");
+    res.json(payload);
+  } catch {
+    res.status(502).json({ message: "Google reviews are temporarily unavailable." });
+  }
+});
+
 router.post("/leads", async (req: Request, res: Response) => {
   if (isRateLimited(req.ip || "unknown")) {
     res.status(429).json({ message: "Too many requests — please try again in a minute." });

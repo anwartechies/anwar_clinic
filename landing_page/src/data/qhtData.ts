@@ -70,13 +70,6 @@ export interface TransformationItem {
   afterImg: string;
 }
 
-export interface GoogleReview {
-  id: number;
-  name: string;
-  avatar: string;
-  rating: number;
-  review: string;
-}
 
 export interface FAQItem {
   id: string;
@@ -511,80 +504,6 @@ export const TRANSFORMATION_GALLERY: TransformationItem[] = [
   //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
   //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
   // },
-];
-
-// 10. Google Reviews
-export const GOOGLE_REVIEWS: GoogleReview[] = [
-  {
-    id: 1,
-    name: "Abhishek Thapa",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/abhishek_thapa.png",
-    rating: 5,
-    review: `From my first consultation to the final result, the medical team at ${COMPANY_NAME} was transparent, attentive, and deeply professional. My hairline looks completely natural.`,
-  },
-  {
-    id: 2,
-    name: "Sudhir Chandra",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/sudhir_chandra.png",
-    rating: 5,
-    review: `Received 5,000 grafts across a two-day session. The precision of the doctors and painless procedure exceeded all my expectations. Highly recommended!`,
-  },
-  {
-    id: 3,
-    name: "Shubham Chaudhary",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/shubham_chaudhary.png",
-    rating: 5,
-    review: `The doctors took extra care in designing an age-appropriate hairline. Sterile OT facilities and thorough post-op follow-ups made recovery seamless.`,
-  },
-  {
-    id: 4,
-    name: "Daksh",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/daksh.png",
-    rating: 5,
-    review: "Exceptional clinical care. The surgeons took time to explain every graft placement. A truly premium and reassuring experience.",
-  },
-  {
-    id: 5,
-    name: "Irfan Ansari",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/irfan_ansari.png",
-    rating: 5,
-    review: "Had 4,500 grafts done. Growth density at 8 months is incredible and nobody can tell I had a transplant done. Life-changing experience.",
-  },
-  {
-    id: 6,
-    name: "Virendra Kumar",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/virendra_kumar.png",
-    rating: 5,
-    review: `Cleanliness, surgeon expertise, and honest billing. ${COMPANY_NAME} sets the standard for hair restoration in India.`,
-  },
-  {
-    id: 7,
-    name: "Ankit Khan",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/ankit_khan.png",
-    rating: 5,
-    review: "Had 3,000+ grafts implanted with direct implanter pens. Painless procedure with zero swelling. The care coordinators were extremely supportive.",
-  },
-  {
-    id: 8,
-    name: "Chandan Pandey",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/chandan_pandey.png",
-    rating: 5,
-    review: "Transparent assessment without pushy sales tactics. The doctors gave me realistic expectations and delivered outstanding density.",
-  },
-  {
-    id: 9,
-    name: "Nishant Kumar Singh",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/nishant_kumar_singh.png",
-    rating: 5,
-    review: "Impeccable OT hygiene, modern equipment, and highly skilled staff. Restored not just my hair, but my everyday confidence.",
-  },
-  {
-    id: 10,
-    name: "Mohd Shahrukh",
-    avatar: "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/google-avatars/mohd_shahrukh.png",
-    rating: 5,
-    review: `Outstanding care and world-class surgical precision. ${COMPANY_NAME} has truly mastered the art of natural hair transplantation.`,
-  },
 ];
 
 // 11. FAQ Items

@@ -36,4 +36,13 @@ export const env = {
     // Optional CloudFront/custom domain serving the bucket.
     publicBaseUrl: process.env.S3_PUBLIC_BASE_URL || "",
   },
+
+  // Live Google rating + reviews (Places API New). The public endpoint reports
+  // "not configured" and the landing page hides the section until both are set.
+  googleReviews: {
+    apiKey: process.env.GOOGLE_PLACES_API_KEY || "",
+    placeId: process.env.GOOGLE_PLACE_ID || "",
+    // How long reviews are reused before asking Google again.
+    cacheSeconds: parseInt(process.env.GOOGLE_REVIEWS_CACHE_SECONDS || "3600", 10),
+  },
 };

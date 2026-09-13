@@ -1,4 +1,4 @@
-# Anwar Clinic — Admin Panel
+# NexGen — Admin Panel
 
 Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 admin panel with a fully
 dynamic, role-based access control system.

@@ -833,13 +833,13 @@ export function BlogEditor({
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-slate-800 dark:bg-slate-950 text-xs">
               <span className="text-[11px] text-slate-400 block mb-1">Google Search Preview:</span>
               <p className="text-blue-600 dark:text-blue-400 font-medium truncate">
-                {form.metaTitle || form.title || "Article Headline"} | Anwar Clinic
+                {form.metaTitle || form.title || "Article Headline"} | NexGen Clinic
               </p>
               <p className="text-emerald-700 dark:text-emerald-400 text-[11px] truncate">
                 {LANDING_URL}/blogs/{form.slug || "article-slug"}
               </p>
               <p className="text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">
-                {form.metaDescription || form.excerpt || "Read more about hair restoration on Anwar Clinic."}
+                {form.metaDescription || form.excerpt || "Read more about hair restoration on NexGen Clinic."}
               </p>
             </div>
           </div>

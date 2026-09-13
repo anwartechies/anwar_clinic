@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
-import { TbActivityHeartbeat, TbAlertCircle, TbEye, TbEyeOff } from "react-icons/tb";
+import { TbAlertCircle, TbEye, TbEyeOff } from "react-icons/tb";
 import { API_URL } from "@/lib/api";
 
 export function LoginForm() {
@@ -49,12 +50,17 @@ export function LoginForm() {
   return (
     <div className="w-full max-w-sm">
       <div className="mb-8 flex flex-col items-center text-center">
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-white">
-          <TbActivityHeartbeat className="h-6 w-6" />
-        </div>
+        <Image
+          src="/brand/nexgen-logo.png"
+          alt="NexGen Hair Transplant"
+          width={640}
+          height={239}
+          priority
+          className="mb-6 h-20 w-auto"
+        />
         <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">Welcome back</h1>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-          Sign in to the Anwar Clinic admin panel
+          Sign in to the NexGen admin panel
         </p>
       </div>
 
@@ -73,7 +79,7 @@ export function LoginForm() {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@anwarclinic.com"
+            placeholder="you@nexgenhairtransplant.com"
             className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
           />
         </div>
