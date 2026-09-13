@@ -42,6 +42,11 @@ export const env = {
   googleReviews: {
     apiKey: process.env.GOOGLE_PLACES_API_KEY || "",
     placeId: process.env.GOOGLE_PLACE_ID || "",
+    // Alternative to placeId: the listing's CID (from a Google Maps share link)
+    // plus a search query that finds it. The Place ID is then looked up once and
+    // only an exact CID match is accepted.
+    placeCid: process.env.GOOGLE_PLACE_CID || "",
+    placeQuery: process.env.GOOGLE_PLACE_QUERY || "",
     // How long reviews are reused before asking Google again.
     cacheSeconds: parseInt(process.env.GOOGLE_REVIEWS_CACHE_SECONDS || "3600", 10),
   },
