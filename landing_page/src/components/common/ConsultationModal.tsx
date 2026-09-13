@@ -191,7 +191,7 @@ export default function ConsultationModal({
                   className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none focus:border-[#1b392b]"
                 >
                   <option value="Patna">Patna (Main Branch - Raja Bazar)</option>
-                  <option value="Chapra">Chapra</option>
+                  <option value="Mumbai">Mumbai (Second Branch)</option>
                 </select>
               </div>
 

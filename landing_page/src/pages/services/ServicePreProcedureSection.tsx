@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import { Ban, HeartPulse, ClipboardCheck, Sparkles } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface PreProcedureTip {
   id?: number;
-  icon: string;
+  icon?: string | React.ReactNode;
   title: string;
   desc: string;
 }
@@ -19,25 +20,25 @@ interface ServicePreProcedureSectionProps {
 const DEFAULT_TIPS: PreProcedureTip[] = [
   {
     id: 1,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-3.webp",
+    icon: <Ban className="w-8 h-8 text-[#596d53]" />,
     title: "Avoid Alcohol or Smoking",
     desc: "Blood flow, graft survival, and recovery are improved.",
   },
   {
     id: 2,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-2.webp",
+    icon: <HeartPulse className="w-8 h-8 text-[#596d53]" />,
     title: "Avoid Blood Thinners",
     desc: "To avoid the risk of bleeding.",
   },
   {
     id: 3,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-pre-procedure-icon-1.webp",
+    icon: <ClipboardCheck className="w-8 h-8 text-[#596d53]" />,
     title: "Medical Evaluation",
     desc: `Past transplant details, medications, and overall health of the customer are taken at ${COMPANY_NAME} Clinic.`,
   },
   {
     id: 4,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-icon-8.png",
+    icon: <Sparkles className="w-8 h-8 text-[#596d53]" />,
     title: "Scalp and Hair Hygiene",
     desc: "Ensure hygiene before surgery for a clean procedure.",
   },
@@ -49,6 +50,14 @@ export default function ServicePreProcedureSection({
   tips = DEFAULT_TIPS,
 }: ServicePreProcedureSectionProps) {
   const defaultSubtitle = `For a successful ${title}, some factors should be taken care of.`;
+
+  const safeTips = (tips && tips.length > 0 ? tips : DEFAULT_TIPS).map((tip, idx) => {
+    const isQht = typeof tip.icon === "string" && tip.icon.includes("qhtclinic.com");
+    return {
+      ...tip,
+      icon: isQht ? DEFAULT_TIPS[idx % DEFAULT_TIPS.length].icon : tip.icon,
+    };
+  });
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
@@ -68,18 +77,21 @@ export default function ServicePreProcedureSection({
 
         {/* 4-Column Tips Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-gray-200">
-          {tips.map((tip, idx) => (
+          {safeTips.map((tip, idx) => (
             <div
               key={tip.id ?? idx}
               className="flex flex-col justify-start lg:px-6 xl:px-8 first:lg:pl-0 last:lg:pr-0 group"
             >
-              {/* Minimalist Outline Icon */}
-              <div className="w-12 h-12 flex items-center justify-start flex-shrink-0 group-hover:scale-110 transition-transform">
-                <img
-                  src={tip.icon}
-                  alt={tip.title}
-                  className="w-full h-full object-contain"
-                />
+              <div className="w-12 h-12 flex items-center justify-start flex-shrink-0 group-hover:scale-110 transition-transform text-[#596d53]">
+                {typeof tip.icon === "string" && (tip.icon.startsWith("http") || tip.icon.startsWith("/")) ? (
+                  <img
+                    src={tip.icon}
+                    alt={tip.title}
+                    className="w-full h-full object-contain"
+                  />
+                ) : (
+                  tip.icon
+                )}
               </div>
 
               {/* Tip Title */}

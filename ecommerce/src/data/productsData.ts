@@ -126,8 +126,8 @@ export const PRODUCTS_DATA: Product[] = [
   },
   {
     id: "laser-growth-helmet",
-    name: "QHT Low-Level Laser Therapy (LLLT) Hair Growth Cap Device",
-    slug: "qht-lllt-hair-growth-laser-device",
+    name: "NexGen Low-Level Laser Therapy (LLLT) Hair Growth Cap Device",
+    slug: "nexgen-lllt-hair-growth-laser-device",
     category: "Devices",
     concern: "Regrowth",
     price: 18999,

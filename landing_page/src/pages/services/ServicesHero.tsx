@@ -10,7 +10,7 @@ export default function ServicesHero({ onOpenConsultation }: ServicesHeroProps) 
   return (
     <section className="relative w-full bg-[#f4f7f4] bg-cover bg-right md:bg-center overflow-hidden min-h-[480px] sm:min-h-[540px] lg:min-h-[620px] flex items-center"
       style={{
-        backgroundImage: "url('https://www.qhtclinic.com/wp-content/themes/qht/assets/img/service-banner.jpg')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "right 35% center",
       }}

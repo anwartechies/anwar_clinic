@@ -159,7 +159,7 @@ function ComingSoonContent({
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </h4>
               <p className="text-xs text-[#5c685f] mt-1 font-normal">
-                Delhi, Haridwar, Gurugram, Hyderabad & Kolkata.
+                Patna (Main Branch) & Mumbai (Second Branch).
               </p>
             </Link>
 

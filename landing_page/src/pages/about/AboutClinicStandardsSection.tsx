@@ -26,7 +26,7 @@ interface CityGallery {
 const CITY_GALLERIES: CityGallery[] = [
   {
     id: "patna",
-    name: "Patna",
+    name: "Patna (Main Branch)",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
         {/* Clinic / Building */}
@@ -49,25 +49,27 @@ const CITY_GALLERIES: CityGallery[] = [
     },
   },
   {
-    id: "chapra",
-    name: "Chapra",
+    id: "mumbai",
+    name: "Mumbai (Second Branch)",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Healthcare Center */}
-        <path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M2 21h20M9 8h6M12 5v6" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Gateway / Metropolitan */}
+        <path d="M4 21V6H20V21" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2 6H22V4H2V6Z" />
+        <path d="M8 21V11C8 9.5 16 9.5 16 11V21" strokeLinecap="round" />
       </svg>
     ),
     photos: {
       hero: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
-      heroAlt: "Chapra Clinic Consultation & Care Center",
+      heroAlt: "Mumbai Clinic Consultation & Care Center",
       office: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-      officeAlt: "Doctor Consultation Cabin Chapra",
+      officeAlt: "Doctor Consultation Cabin Mumbai",
       otRoom: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80",
-      otRoomAlt: "Chapra State-of-the-Art Procedure Room",
+      otRoomAlt: "Mumbai State-of-the-Art Procedure Room",
       otLight: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
       otLightAlt: "Sterile Cleanroom Surgical Illumination",
       lounge: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=600&q=80",
-      loungeAlt: "Chapra Patient Waiting Corridor",
+      loungeAlt: "Mumbai Patient Waiting Lounge",
       wallOfFame: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80",
       wallOfFameAlt: "Patient Results and Accreditations",
     },

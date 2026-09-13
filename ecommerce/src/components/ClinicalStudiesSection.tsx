@@ -15,13 +15,13 @@ export default function ClinicalStudiesSection() {
   return (
     <section className="py-16 sm:py-24 bg-[#edf6eb] border-t border-gray-100/80">
       <div className="qht-large-container">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5c685f] block mb-2">
             CLINICAL STUDIES
           </span>
-          
+
           <h2 className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#1b221d] tracking-tight leading-tight mb-3 sm:mb-4">
             How it Will Help You
           </h2>
@@ -33,10 +33,10 @@ export default function ClinicalStudiesSection() {
 
         {/* 2-Card Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch max-w-5xl mx-auto">
-          
+
           {/* Left Card: Hair Growth Timeline Bar Chart */}
           <div className="lg:col-span-6 bg-white rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.02)] border border-gray-100 flex flex-col justify-between overflow-hidden">
-            
+
             <div>
               {/* Card Top Title & Badge */}
               <div className="flex items-center justify-between gap-2 mb-6 sm:mb-8">
@@ -52,7 +52,7 @@ export default function ClinicalStudiesSection() {
               <div className="overflow-x-auto no-scrollbar pb-2">
                 <div className="min-w-[380px] sm:min-w-0">
                   <div className="flex items-end gap-3 sm:gap-4 h-56 sm:h-72 pt-4 pb-2 border-b border-gray-200 relative">
-                    
+
                     {/* Left Y-Axis Milestones */}
                     <div className="flex flex-col justify-between h-full text-[9.5px] sm:text-[11px] text-[#5c685f] w-32 sm:w-40 flex-shrink-0 pr-2 border-r border-gray-200/80 relative font-normal">
                       <div className="flex items-center gap-1.5 relative">
@@ -93,11 +93,11 @@ export default function ClinicalStudiesSection() {
                   {/* X-Axis Labels */}
                   <div className="flex justify-end pt-2">
                     <div className="flex-1 flex items-center justify-between pl-34 sm:pl-44 gap-1 text-[9.5px] sm:text-[11px] font-semibold text-[#1b221d] text-center">
-                      <span className="w-7 sm:w-8 leading-tight">1-3<br/>mo</span>
-                      <span className="w-7 sm:w-8 leading-tight">3-6<br/>mo</span>
-                      <span className="w-7 sm:w-8 leading-tight">6-9<br/>mo</span>
-                      <span className="w-7 sm:w-8 leading-tight">9-12<br/>mo</span>
-                      <span className="w-7 sm:w-8 leading-tight">12-18<br/>mo</span>
+                      <span className="w-7 sm:w-8 leading-tight">1-3<br />mo</span>
+                      <span className="w-7 sm:w-8 leading-tight">3-6<br />mo</span>
+                      <span className="w-7 sm:w-8 leading-tight">6-9<br />mo</span>
+                      <span className="w-7 sm:w-8 leading-tight">9-12<br />mo</span>
+                      <span className="w-7 sm:w-8 leading-tight">12-18<br />mo</span>
                     </div>
                   </div>
                 </div>
@@ -107,14 +107,14 @@ export default function ClinicalStudiesSection() {
 
             {/* Bottom Disclaimer */}
             <p className="text-[9.5px] sm:text-[11px] text-[#5c685f]/80 mt-6 sm:mt-8 leading-relaxed font-normal">
-              The graph is based on insights gained from over 10 years of research, 100,000+ patient evaluations, 15,000+ successful hair transplant surgeries and the clinical experience of QHT Clinic.
+              The graph is based on insights gained from over 10 years of research, 100,000+ patient evaluations, 15,000+ successful hair transplant surgeries and the clinical experience of NexGen Clinic.
             </p>
 
           </div>
 
           {/* Right Card: 94% Efficacy Result Highlight */}
           <div className="lg:col-span-6 bg-[#d9edd2] rounded-2xl sm:rounded-[32px] p-6 sm:p-12 border border-[#c1e2b7] flex flex-col items-center justify-center text-center shadow-xs">
-            
+
             {/* Big Stat */}
             <span className="text-5xl sm:text-7xl lg:text-[84px] font-bold text-[#1b392b] font-serif leading-none tracking-tight mb-2 sm:mb-3">
               94%

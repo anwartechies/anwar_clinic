@@ -20,7 +20,7 @@ const DEFAULT_TYPES: ServiceTypeItem[] = [
   {
     title: "Motorized FUE Hair Transplant",
     desc: "Follicles are individually harvested with precision micro-punches, offering minimal tissue trauma and rapid healing.",
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/FUE.webp",
+    image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
     points: [
       "Precise control over depth, angle, and natural direction of every follicle.",
       "Minimally invasive individual harvesting with zero linear donor scarring.",
@@ -30,7 +30,7 @@ const DEFAULT_TYPES: ServiceTypeItem[] = [
   {
     title: `${COMPANY_NAME} Advanced Technique`,
     desc: "Direct micro-implantation protocol minimizing out-of-body holding time for maximum follicle viability and high density.",
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/QHT_1.webp",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
     points: [
       "Immediate implantation protecting delicate follicular dermal papilla.",
       "Ultra-fine implanter pens ensuring soft, natural hairline transitions.",
@@ -45,6 +45,13 @@ export default function ServiceTypesSection({
   subtitle = "To choose the best Corrective Hair Transplant technique, it’s important to know the methods available for it. These are:",
   types = DEFAULT_TYPES,
 }: ServiceTypesSectionProps) {
+  const safeTypes = (types && types.length > 0 ? types : DEFAULT_TYPES).map((type, idx) => ({
+    ...type,
+    image: (!type.image || type.image.includes("qhtclinic.com"))
+      ? DEFAULT_TYPES[idx % DEFAULT_TYPES.length].image
+      : type.image,
+  }));
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
       <div className="qht-large-container">
@@ -65,7 +72,7 @@ export default function ServiceTypesSection({
 
         {/* 2-Column Types Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-          {types.map((type, idx) => (
+          {safeTypes.map((type, idx) => (
             <div
               key={idx}
               className="flex flex-col justify-between h-full bg-transparent"

@@ -21,7 +21,7 @@ const DEFAULT_WEEKS: TimelineWeek[] = [
   {
     id: 1,
     label: "WEEK 1",
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-9.webp",
+    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
     expectations: ["Swelling", "Redness"],
     careGuidelines: [
       "Sleep with an elevated head",
@@ -31,7 +31,7 @@ const DEFAULT_WEEKS: TimelineWeek[] = [
   {
     id: 2,
     label: "WEEK 2",
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-4.jpg",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
     expectations: ["Falling of Scabs", "The scalp starts to heal"],
     careGuidelines: [
       "Avoid scratching head",
@@ -41,7 +41,7 @@ const DEFAULT_WEEKS: TimelineWeek[] = [
   {
     id: 3,
     label: "WEEK 3",
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-9.webp",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80",
     expectations: ["Temporary hair shedding begins"],
     careGuidelines: [
       "Stay patient and don’t panic",
@@ -51,14 +51,14 @@ const DEFAULT_WEEKS: TimelineWeek[] = [
   {
     id: 4,
     label: "WEEK 4",
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-9.webp",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
     expectations: ["Hair shedding continues", "Scalp looks clearer"],
     careGuidelines: ["Avoid heavy lifting exercises"],
   },
   {
     id: 5,
     label: "WEEK 5",
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-9.webp",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
     expectations: ["Healing is complete, scalp is stable"],
     careGuidelines: ["Avoid harsh products"],
   },
@@ -69,8 +69,14 @@ export default function ServiceRecoveryTimelineSection({
   subtitle = "Understand the recovery timeline and essential aftercare tips for a quicker recovery after a crown hair transplant.",
   weeks = DEFAULT_WEEKS,
 }: ServiceRecoveryTimelineSectionProps) {
+  const safeWeeks = (weeks && weeks.length > 0 ? weeks : DEFAULT_WEEKS).map((w, idx) => ({
+    ...w,
+    image: (!w.image || w.image.includes("qhtclinic.com"))
+      ? DEFAULT_WEEKS[idx % DEFAULT_WEEKS.length].image
+      : w.image,
+  }));
   const [activeWeekIndex, setActiveWeekIndex] = useState(0);
-  const currentWeek = weeks[activeWeekIndex] || weeks[0];
+  const currentWeek = safeWeeks[activeWeekIndex] || safeWeeks[0];
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">

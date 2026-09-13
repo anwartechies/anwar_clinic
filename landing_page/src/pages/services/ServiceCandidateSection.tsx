@@ -71,9 +71,9 @@ export default function ServiceCandidateSection({
           <div className="lg:col-span-4 flex justify-center lg:justify-start items-center">
             <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
               <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-candidate-thumb.webp"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
                 alt="Ideal Candidate Illustration"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover rounded-2xl shadow-sm"
               />
             </div>
           </div>

@@ -20,29 +20,56 @@ interface ServiceWhyChooseQHTSectionProps {
 const DEFAULT_FEATURES: FeatureCard[] = [
   {
     id: 1,
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp",
+    image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
     title: "Surgical Mastery",
     desc: `Surgeon-led procedures adhering to international medical protocols at ${COMPANY_NAME}.`,
   },
   {
     id: 2,
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
+    image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80",
     title: "Artistic Hairline Geometry",
     desc: "Handcrafted angle and depth alignment ensuring soft, undetectable transitions.",
   },
   {
     id: 3,
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
     title: "Maximum Follicle Viability",
     desc: "Ultra-fine micro-instrumentation designed to preserve 95%+ graft survival.",
   },
   {
     id: 4,
-    image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp",
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
     title: "Hospital-Grade Theaters",
     desc: `${COMPANY_NAME} operates in ultra-sterile surgical suites equipped with modern micro-restoration technology.`,
   },
 ];
+
+const CLEAN_FEATURE_IMAGES: Record<string, string> = {
+  "WORLD-CLASS TECHNIQUES": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
+  "CELEBRITY TRUSTED": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
+  "AFFORDABILITY": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80",
+  "PAN-INDIA CLINICS": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+  "PAN -INDIA CLINICS": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+  "EMI OPTIONS": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
+};
+
+const getCleanFeatureImage = (title: string, imgUrl?: string, idx = 0) => {
+  if (imgUrl && !imgUrl.includes("qhtclinic.com") && !imgUrl.includes("transplant-img-")) {
+    return imgUrl;
+  }
+  const upper = (title || "").toUpperCase().trim();
+  for (const [key, cleanUrl] of Object.entries(CLEAN_FEATURE_IMAGES)) {
+    if (upper.includes(key)) return cleanUrl;
+  }
+  const fallbackList = [
+    "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
+  ];
+  return fallbackList[idx % fallbackList.length];
+};
 
 export default function ServiceWhyChooseQHTSection({
   title = "Hair Restoration",
@@ -50,6 +77,13 @@ export default function ServiceWhyChooseQHTSection({
   features = DEFAULT_FEATURES,
   onOpenConsultation,
 }: ServiceWhyChooseQHTSectionProps) {
+  const displayFeatures = (features && features.length > 0 ? features : DEFAULT_FEATURES).map(
+    (item, idx) => ({
+      ...item,
+      image: getCleanFeatureImage(item.title, item.image, idx),
+    })
+  );
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#38493a] text-white overflow-hidden">
       <div className="qht-large-container">
@@ -70,7 +104,7 @@ export default function ServiceWhyChooseQHTSection({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-stretch">
           
           {/* Photo Cards */}
-          {features.map((item, idx) => (
+          {displayFeatures.map((item, idx) => (
             <div
               key={item.id ?? idx}
               className="relative aspect-[4/3.8] rounded-3xl overflow-hidden shadow-lg border border-white/10 group bg-black/20"
@@ -95,11 +129,26 @@ export default function ServiceWhyChooseQHTSection({
           <div className="aspect-[4/3.8] rounded-3xl p-7 sm:p-8 flex flex-col justify-between bg-[#bde876] text-[#1b221d] shadow-lg">
             <div className="space-y-4">
               {/* Overlapping Patient Avatars */}
-              <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-avatars.webp"
-                alt="Satisfied Patient Avatars"
-                className="h-10 sm:h-11 object-contain"
-              />
+              <div className="flex -space-x-2">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                  alt="Patient avatar"
+                  className="w-10 h-10 rounded-full border-2 border-[#bde876] object-cover"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                  alt="Patient avatar"
+                  className="w-10 h-10 rounded-full border-2 border-[#bde876] object-cover"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                  alt="Patient avatar"
+                  className="w-10 h-10 rounded-full border-2 border-[#bde876] object-cover"
+                />
+                <div className="w-10 h-10 rounded-full border-2 border-[#bde876] bg-[#596d53] text-white text-xs font-bold flex items-center justify-center">
+                  +4.7k
+                </div>
+              </div>
 
               {/* Rating Text */}
               <p className="text-base sm:text-lg font-normal text-[#1b221d] leading-snug">

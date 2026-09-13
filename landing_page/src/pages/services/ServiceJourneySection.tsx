@@ -76,9 +76,9 @@ function VideoCard({ video }: { video: JourneyVideo }) {
             alt={video.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             onError={(e) => {
-              // Fallback to maxres or placeholder
+              // Fallback to placeholder
               (e.target as HTMLImageElement).src =
-                "https://www.qhtclinic.com/wp-content/themes/qht/assets/img/service-banner.jpg";
+                "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80";
             }}
           />
 

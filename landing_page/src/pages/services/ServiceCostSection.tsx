@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Activity, Layers, Sparkles, Award, Coins } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface CostFactor {
   id?: number;
-  icon: string;
+  icon?: string | React.ReactNode;
   title: string;
   desc: string;
 }
@@ -34,31 +34,31 @@ const DEFAULT_COST_OVERVIEW = [
 const DEFAULT_FACTORS: CostFactor[] = [
   {
     id: 1,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-7.png",
+    icon: <Activity className="w-8 h-8 text-[#596d53]" />,
     title: "Degree of Hair Loss",
     desc: "The total surface area requiring density determines the overall graft count and surgical duration.",
   },
   {
     id: 2,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-3.webp",
+    icon: <Layers className="w-8 h-8 text-[#596d53]" />,
     title: "Total Follicular Unit Count",
     desc: "Graft requirements directly impact procedural scale and microscopic follicular sorting complexity.",
   },
   {
     id: 3,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-8.png",
+    icon: <Sparkles className="w-8 h-8 text-[#596d53]" />,
     title: "Surgical Technique Selected",
     desc: `Techniques such as Motorized FUE and ${COMPANY_NAME} Direct Implantation vary by instrumentation and precision requirements.`,
   },
   {
     id: 4,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-cost-icon-1.webp",
+    icon: <Award className="w-8 h-8 text-[#596d53]" />,
     title: `Surgeon Expertise at ${COMPANY_NAME}`,
     desc: `Senior surgeon-led design and implantation ensure natural angulation, soft transitions, and lasting follicle survival.`,
   },
   {
     id: 5,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-10.png",
+    icon: <Coins className="w-8 h-8 text-[#596d53]" />,
     title: "Donor Reserve & Session Scale",
     desc: "Extensive Norwood cases requiring mega-sessions or staged procedures are structured for optimal donor preservation.",
   },
@@ -71,6 +71,14 @@ export default function ServiceCostSection({
   factorsSubtitle = "Procedure pricing is determined by graft volume, technique selection, surgeon expertise, and personalized hairline design requirements.",
   factors = DEFAULT_FACTORS,
 }: ServiceCostSectionProps) {
+  const safeFactors = (factors && factors.length > 0 ? factors : DEFAULT_FACTORS).map((f, idx) => {
+    const isQht = typeof f.icon === "string" && f.icon.includes("qhtclinic.com");
+    return {
+      ...f,
+      icon: isQht ? DEFAULT_FACTORS[idx % DEFAULT_FACTORS.length].icon : f.icon,
+    };
+  });
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#fafcfa] overflow-hidden">
       <div className="qht-large-container">
@@ -164,18 +172,22 @@ export default function ServiceCostSection({
 
           {/* Dynamic 4-Column Factors Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {factors.map((f, idx) => (
+            {safeFactors.map((f, idx) => (
               <div
                 key={f.id ?? idx}
                 className="flex flex-col justify-start group bg-white lg:bg-transparent p-5 lg:p-0 rounded-2xl lg:rounded-none border border-gray-100 lg:border-none shadow-sm lg:shadow-none"
               >
                 {/* Factor Icon */}
-                <div className="w-12 h-12 flex items-center justify-start flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <img
-                    src={f.icon}
-                    alt={f.title}
-                    className="w-full h-full object-contain"
-                  />
+                <div className="w-12 h-12 flex items-center justify-start flex-shrink-0 group-hover:scale-110 transition-transform text-[#596d53]">
+                  {typeof f.icon === "string" && (f.icon.startsWith("http") || f.icon.startsWith("/")) ? (
+                    <img
+                      src={f.icon}
+                      alt={f.title}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    f.icon
+                  )}
                 </div>
 
                 {/* Factor Title */}

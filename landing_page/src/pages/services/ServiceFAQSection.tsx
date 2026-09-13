@@ -51,9 +51,9 @@ export default function ServiceFAQSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-200/80">
       <div className="qht-large-container">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left Column: Heading + Vector Logo Graphic */}
           <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-8">
             <div>
@@ -65,13 +65,7 @@ export default function ServiceFAQSection({
             </div>
 
             {/* Circular Root Vector Graphic */}
-            <div className="w-40 sm:w-48 aspect-square opacity-70 hover:opacity-100 transition-opacity">
-              <img
-                src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-faq-thumb.webp"
-                alt={`${COMPANY_NAME} Clinic FAQ Vector`}
-                className="w-full h-full object-contain"
-              />
-            </div>
+
           </div>
 
           {/* Right Column: Animated Accordion Items */}
@@ -91,9 +85,8 @@ export default function ServiceFAQSection({
                       {faq.question}
                     </span>
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-gray-500 group-hover:text-[#596d53] transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-[#596d53]" : "rotate-0"
-                      }`}
+                      className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-gray-500 group-hover:text-[#596d53] transition-transform duration-300 ${isOpen ? "rotate-180 text-[#596d53]" : "rotate-0"
+                        }`}
                     >
                       <ChevronDown className="w-5 h-5 stroke-[2]" />
                     </div>
@@ -101,11 +94,10 @@ export default function ServiceFAQSection({
 
                   {/* Accordion Animated Body (CSS Grid Rows for fluid height transition) */}
                   <div
-                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100 pb-5 sm:pb-6"
-                        : "grid-rows-[0fr] opacity-0 pb-0"
-                    }`}
+                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${isOpen
+                      ? "grid-rows-[1fr] opacity-100 pb-5 sm:pb-6"
+                      : "grid-rows-[0fr] opacity-0 pb-0"
+                      }`}
                   >
                     <div className="overflow-hidden">
                       <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal pr-8">

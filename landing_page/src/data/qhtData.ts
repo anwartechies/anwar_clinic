@@ -162,17 +162,6 @@ export const HERO_SLIDES: CelebritySlide[] = [
   { name: "Patient4", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/sd-mtzj2hfx4r5xwb.jpeg" },
   { name: "Patient5", location: "Haridwar, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-13-at-1-02-03-am-mtzj2yg2x0guny.jpeg" },
   { name: "Patient6", location: "Rajasthan, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-13-at-12-14-03-am-mtzj3jgnwd1pzn.jpeg" },
-  // { name: "Shubham", location: "Gurugram, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Shubham.webp" },
-  // { name: "Sanat", location: "Kolkata, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Sanat.webp" },
-  // { name: "Puneet", location: "Bangalore, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Puneet.webp" },
-  // { name: "Anurudra", location: "Noida, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Anurudra.webp" },
-  // { name: "Kshitij", location: "Jabalpur, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Kshitij.webp" },
-  // { name: "Gaurav", location: "Dehradun, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Gaurav.webp" },
-  // { name: "Dheerendra", location: "Lucknow, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Dheerendra.webp" },
-  // { name: "Utkrishta", location: "Hyderabad, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/utkrishta.webp" },
-  // { name: "Rajat", location: "Chandigarh, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Rajat.webp" },
-  // { name: "Kamal", location: "Ahmedabad, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Kamal.webp" },
-  // { name: "Abhyudaya", location: "Delhi, India", image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Abhyudaya.webp" },
 ];
 
 // 3. The Bald Truth
@@ -544,34 +533,10 @@ export const CLINIC_BRANCHES: Branch[] = [
     mapLink: "https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z",
   },
   {
-    region: "North India Branch - Haridwar",
-    name: `${COMPANY_NAME} Clinic Haridwar`,
-    address: "521, Model Colony, Haridwar, Uttarakhand",
-    mapLink: "https://maps.app.goo.gl/eHNZ67iJPGpmUrZx6",
-  },
-  {
-    region: "North India Branch - Delhi",
-    name: `${COMPANY_NAME} Clinic Delhi`,
-    address: "D -15, Outer Ring Rd, Opp. Prashant Vihar Metro Station, Sector 14, Rohini, New Delhi, Delhi, 110085",
-    mapLink: "https://maps.app.goo.gl/v1tXP3y8oM1K58YN6",
-  },
-  {
-    region: "North India Branch - Gurugram",
-    name: `${COMPANY_NAME} Clinic Gurugram`,
-    address: "Plot No. 3, opposite Huda Market, Sector 46, Gurugram, Haryana 122022",
-    mapLink: "https://maps.app.goo.gl/WmKVvniW9erc3hmy8",
-  },
-  {
-    region: "South India Branch - Hyderabad",
-    name: `${COMPANY_NAME} Clinic Hyderabad`,
-    address: "Opposite Hotel Park Hyatt, Road No. 2 Banjara Hills, Hyderabad, Telangana",
-    mapLink: "https://maps.app.goo.gl/NcNQH3MtLWponejy8",
-  },
-  {
-    region: "Consultation Office - Kolkata",
-    name: `${COMPANY_NAME} Clinic Kolkata`,
-    address: "5th Floor, Prasad House, 16 Sudder Street, Kolkata, West Bengal 700016",
-    mapLink: "https://share.google/fKyubEl5ZWPxBcpx3",
+    region: "Second Clinic Branch - Mumbai",
+    name: `${COMPANY_NAME} Mumbai`,
+    address: "Bandra West / Andheri, Mumbai, Maharashtra",
+    mapLink: "https://maps.google.com/?q=Mumbai+Maharashtra",
   },
 ];
 

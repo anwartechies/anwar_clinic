@@ -21,7 +21,7 @@ export default function ServiceDetailHero({
   slug = "best-fue-hair-transplant-in-india",
   title = "FUE Hair Transplant",
   subtitle = `Advanced minimally invasive hair restoration solutions at ${COMPANY_NAME}.`,
-  bannerImage = "https://www.qhtclinic.com/wp-content/uploads/2025/08/456.png",
+  bannerImage = "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1200&q=80",
   pointerLabel = "Graft correction",
   onOpenConsultation,
 }: ServiceDetailHeroProps) {
@@ -74,13 +74,18 @@ export default function ServiceDetailHero({
 
   const defaultSubtitle = `${title} procedures tailored by specialists at ${COMPANY_NAME} with clinical precision and natural results.`;
 
+  const safeBannerImage =
+    !bannerImage || bannerImage.includes("qhtclinic.com")
+      ? "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1200&q=80"
+      : bannerImage;
+
   return (
     <div className="relative w-full">
       {/* 1. Main Hero Banner */}
       <section
         className="relative w-full bg-slate-900 bg-cover bg-center overflow-hidden min-h-[500px] sm:min-h-[580px] lg:min-h-[660px] flex items-center pt-28 sm:pt-36 lg:pt-20 pb-20 sm:pb-24"
         style={{
-          backgroundImage: `url('${bannerImage}')`,
+          backgroundImage: `url('${safeBannerImage}')`,
           backgroundPosition: "center 30%",
         }}
       >

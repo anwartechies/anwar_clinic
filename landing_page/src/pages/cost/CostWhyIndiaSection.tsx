@@ -102,7 +102,7 @@ export default function CostWhyIndiaSection() {
                     Multi-City Clinic Network
                   </h3>
                   <p className="text-xs text-[#5c685f] leading-relaxed font-normal">
-                    {COMPANY_NAME} operates centers across 4 strategic hubs — Haridwar, Delhi, Gurugram, and Hyderabad — making it accessible for both domestic and international patients to plan their procedure and follow-up care.
+                    {COMPANY_NAME} operates centers across 2 strategic hubs — Patna (Main Branch) and Mumbai (Second Branch) — making it accessible for both domestic and international patients to plan their procedure and follow-up care.
                   </p>
                 </div>
               </div>
@@ -163,10 +163,10 @@ export default function CostWhyIndiaSection() {
               {/* Stat 5 */}
               <div className="pt-6">
                 <div className="text-4xl sm:text-5xl font-black text-[#b1fc85] tracking-tight leading-none">
-                  04
+                  02
                 </div>
                 <p className="text-xs sm:text-sm text-white/90 font-medium mt-2 leading-snug">
-                  Clinic locations: Delhi, Haridwar, Gurugram, Hyderabad
+                  Clinic locations: Patna (Main Branch), Mumbai (Second Branch)
                 </p>
               </div>
 

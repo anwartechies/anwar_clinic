@@ -18,8 +18,8 @@ export default function AboutLegacySection() {
     {
       id: 1,
       year: "Phase 01",
-      title: "Founding Clinical Center in Haridwar",
-      desc: "Established our initial center of excellence in Uttarakhand, building our clinical foundation on ethical diagnosis, patient transparency, and surgeon-led care.",
+      title: "Founding Clinical Center in Patna",
+      desc: "Established our initial center of excellence in Patna, building our clinical foundation on ethical diagnosis, patient transparency, and surgeon-led care.",
     },
     {
       id: 2,
@@ -31,13 +31,13 @@ export default function AboutLegacySection() {
       id: 3,
       year: "Phase 03",
       title: "Over 15,000+ Documented Patient Outcomes",
-      desc: "Across our centers in Delhi, Haridwar, Gurugram, and Hyderabad, delivering natural density, balanced hairline aesthetics, and lifelong follicular growth.",
+      desc: "Across our centers in Patna and Mumbai, delivering natural density, balanced hairline aesthetics, and lifelong follicular growth.",
     },
     {
       id: 4,
       year: "Phase 04",
-      title: "Multi-City Expansion Across Major Indian Hubs",
-      desc: "Expanded ultra-sterile surgical suites and trichology consultation centers across Delhi NCR, Hyderabad, and Northern India to bring clinical hair restoration closer to patients.",
+      title: "Expansion to Mumbai (Second Branch)",
+      desc: "Expanded ultra-sterile surgical suites and trichology consultation centers with our second branch in Mumbai to bring clinical hair restoration closer to patients.",
     },
     {
       id: 5,

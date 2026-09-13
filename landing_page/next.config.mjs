@@ -17,14 +17,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'flagcdn.com',
       },
-      {
-        protocol: 'https',
-        hostname: 'www.qhtclinic.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'qhtclinic.com',
-      },
+      // {
+      //   protocol: 'https',
+      //   hostname: 'www.qhtclinic.com',
+      // },
+      // {
+      //   protocol: 'https',
+      //   hostname: 'qhtclinic.com',
+      // },
     ],
   },
 };

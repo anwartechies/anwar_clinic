@@ -45,10 +45,10 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
     customSuitableFor && customSuitableFor.length > 0
       ? customSuitableFor
       : [
-          "Patients recovering from FUT / FUE / QHT procedures",
-          "Individuals experiencing active hair thinning & shedding",
-          "Safe for daily use on sensitive or irritated scalps",
-        ];
+        "Patients recovering from FUT / FUE procedures",
+        "Individuals experiencing active hair thinning & shedding",
+        "Safe for daily use on sensitive or irritated scalps",
+      ];
 
   const formatPrice = (amount: number) => {
     return new Intl.NumberFormat("en-IN", {
@@ -121,8 +121,8 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
                   type="button"
                   onClick={() => setSelectedImageIndex(idx)}
                   className={`w-14 h-14 sm:w-20 sm:h-20 flex-shrink-0 rounded-xl sm:rounded-2xl overflow-hidden bg-[#ebe6df] border-2 transition-all cursor-pointer ${selectedImageIndex === idx
-                      ? "border-[#1b221d] shadow-sm scale-102"
-                      : "border-transparent opacity-75 hover:opacity-100"
+                    ? "border-[#1b221d] shadow-sm scale-102"
+                    : "border-transparent opacity-75 hover:opacity-100"
                     }`}
                 >
                   <img
@@ -203,13 +203,13 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
                   </span>
                 </div>
 
-                {/* 3. QHT Clinic Backed */}
+                {/* 3. NexGen Clinic Backed */}
                 <div className="flex flex-col items-center text-center">
                   <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-gray-200 flex items-center justify-center text-[#345c3b] mb-1 bg-[#f8faf8]">
                     <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <span className="text-[9.5px] sm:text-xs font-medium text-[#1b221d] leading-tight">
-                    QHT Clinic<br />Backed
+                    NexGen Clinic<br />Backed
                   </span>
                 </div>
 
@@ -257,8 +257,8 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
                     type="button"
                     onClick={() => setActiveTab("description")}
                     className={`text-xs sm:text-sm font-bold px-4 sm:px-5 py-1.5 sm:py-2 rounded-2xl transition-all cursor-pointer ${activeTab === "description"
-                        ? "bg-[#fbf7eb] text-[#1b221d] shadow-2xs"
-                        : "text-[#5c685f] hover:text-black"
+                      ? "bg-[#fbf7eb] text-[#1b221d] shadow-2xs"
+                      : "text-[#5c685f] hover:text-black"
                       }`}
                   >
                     Description
@@ -268,8 +268,8 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
                     type="button"
                     onClick={() => setActiveTab("suitableFor")}
                     className={`text-xs sm:text-sm font-bold px-4 sm:px-5 py-1.5 sm:py-2 rounded-2xl transition-all cursor-pointer ${activeTab === "suitableFor"
-                        ? "bg-[#fbf7eb] text-[#1b221d] shadow-2xs"
-                        : "text-[#5c685f] hover:text-black"
+                      ? "bg-[#fbf7eb] text-[#1b221d] shadow-2xs"
+                      : "text-[#5c685f] hover:text-black"
                       }`}
                   >
                     Suitable For
@@ -283,7 +283,7 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
                       <p className={isExpandedText ? "" : "line-clamp-3"}>
                         {product.description ||
                           "URoots Post Hair Transplant Kit is an expert-curated, complete hair regrowth treatment bundle for men designed to support recovery and maintain long-term hair density after hair restoration procedures. This kit provides targeted scalp treatment, follicle activation, and vital cellular nutrition."}
-                        {" "}Formulated with US-FDA approved compounds, peptides, and organic botanicals under clinical supervision of QHT Clinic dermatologists.
+                        {" "}Formulated with US-FDA approved compounds, peptides, and organic botanicals under clinical supervision of NexGen Clinic dermatologists.
                       </p>
                       <button
                         type="button"

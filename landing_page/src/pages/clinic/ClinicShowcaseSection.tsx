@@ -21,22 +21,20 @@ interface ClinicBranchData {
 
 const CLINIC_BRANCHES: ClinicBranchData[] = [
   {
-    id: "delhi",
-    tabLabel: "Delhi",
+    id: "patna",
+    tabLabel: "Patna (Main Branch)",
     tabIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* India Gate */}
-        <path d="M4 21V6H20V21" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M2 6H22V4H2V6Z" />
-        <path d="M8 21V11C8 9.5 16 9.5 16 11V21" strokeLinecap="round" />
+        {/* Clinic / Building */}
+        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h2M13 10h2M9 14h2M13 14h2M9 18h2M13 18h2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: `${COMPANY_NAME} — Delhi Center`,
+    title: `${COMPANY_NAME} — Patna (Main Branch)`,
     subtitle:
-      `Our Delhi restoration center offers precision micro-follicular procedures with senior surgeon care and natural results.`,
+      `Our Patna flagship center features world-class sterile surgical suites, comprehensive trichoscopy diagnostics, and senior surgeon care.`,
     address:
-      "D-15, Outer Ring Rd, Opp. Prashant Vihar Metro Station, Sector 14, Rohini, New Delhi, Delhi, 110085",
-    phone: "+91 7217033844",
+      "Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014",
+    phone: "+91 9084726916",
     email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
     images: [
       {
@@ -58,27 +56,27 @@ const CLINIC_BRANCHES: ClinicBranchData[] = [
     ],
   },
   {
-    id: "uttarakhand",
-    tabLabel: "Uttarakhand",
+    id: "mumbai",
+    tabLabel: "Mumbai (Second Branch)",
     tabIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Temple / Mountain Gateway */}
-        <path d="M4 8H20V10H4V8Z" />
-        <path d="M7 10V21M17 10V21" />
-        <path d="M3 6L12 2L21 6" strokeLinecap="round" />
+        {/* Gateway / Metropolitan */}
+        <path d="M4 21V6H20V21" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2 6H22V4H2V6Z" />
+        <path d="M8 21V11C8 9.5 16 9.5 16 11V21" strokeLinecap="round" />
       </svg>
     ),
-    title: `${COMPANY_NAME} — Uttarakhand Center`,
+    title: `${COMPANY_NAME} — Mumbai (Second Branch)`,
     subtitle:
-      `Our Haridwar flagship center features world-class sterile surgical suites and comprehensive pre-op trichoscopy diagnostics.`,
+      `Our Mumbai restoration center provides precision graft implantation, advanced scalp analysis, and personalized consultations.`,
     address:
-      "Near Arya Samaj Mandir, Jwalapur, Haridwar, Uttarakhand - 249407",
+      "Bandra West / Andheri, Mumbai, Maharashtra",
     phone: "+91 9084726916",
     email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
     images: [
       {
         url: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
-        caption: "Haridwar Main Clinic Suite",
+        caption: "Mumbai Consultation Suite",
       },
       {
         url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
@@ -86,63 +84,11 @@ const CLINIC_BRANCHES: ClinicBranchData[] = [
       },
       {
         url: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
-        caption: "Trichoscopy & Scalp Diagnostics OT",
+        caption: "Sterile Procedure OT Room",
       },
-    ],
-  },
-  {
-    id: "hyderabad",
-    tabLabel: "Hyderabad",
-    tabIcon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Charminar 4 Towers */}
-        <path d="M4 21V7L6 5V21M20 21V7L18 5V21" />
-        <path d="M6 12C6 8 18 8 18 12V21H6V12Z" />
-      </svg>
-    ),
-    title: `${COMPANY_NAME} — Hyderabad Center`,
-    subtitle:
-      `Our Hyderabad center provides precision graft implantation and personalized consultations for South India.`,
-    address:
-      "Road No. 36, Jubilee Hills, Hyderabad, Telangana - 500033",
-    phone: "+91 9084726916",
-    email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
-        caption: "Hyderabad Jubilee Hills Surgical Wing",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-        caption: "Private Consultation Rooms",
-      },
-    ],
-  },
-  {
-    id: "gurugram",
-    tabLabel: "Gurugram",
-    tabIcon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Highrise */}
-        <path d="M12 3L17 7V21H7V7L12 3Z" />
-        <line x1="12" y1="3" x2="12" y2="21" />
-      </svg>
-    ),
-    title: `${COMPANY_NAME} — Gurugram Center`,
-    subtitle:
-      `Our Gurugram center delivers state-of-the-art scalp analysis and premium hair restoration care.`,
-    address:
-      "Golf Course Extension Road, Sector 57, Gurugram, Haryana - 122003",
-    phone: "+91 7217033844",
-    email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
-    images: [
       {
         url: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1200&q=80",
-        caption: "Gurugram Executive Diagnostic Suite",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-        caption: "Sterile OT Suite",
+        caption: "Trichoscopy & Scalp Diagnostics OT",
       },
     ],
   },
@@ -155,7 +101,7 @@ interface ClinicShowcaseSectionProps {
 export default function ClinicShowcaseSection({
   onOpenConsultation,
 }: ClinicShowcaseSectionProps) {
-  const [activeTab, setActiveTab] = useState<string>("delhi");
+  const [activeTab, setActiveTab] = useState<string>("patna");
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   const currentBranch =

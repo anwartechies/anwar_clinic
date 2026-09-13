@@ -17,7 +17,7 @@ export const TESTIMONIALS_DATA: VideoTestimonial[] = [
     id: "sushant",
     name: "Sushant Gupta",
     quote:
-      "I had my transplant at QHT and used to collect my medicines from the clinic. Now I just order them on URoots and they get delivered to my door.",
+      "I had my transplant at NexGen and used to collect my medicines from the clinic. Now I just order them on URoots and they get delivered to my door.",
     thumbnail:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -26,7 +26,7 @@ export const TESTIMONIALS_DATA: VideoTestimonial[] = [
     id: "sounu",
     name: "Sounu Kumar",
     quote:
-      "Six months after my transplant, I'm still following my QHT medicines. My results speak for themselves, and now I get everything on URoots.",
+      "Six months after my transplant, I'm still following my NexGen medicines. My results speak for themselves, and now I get everything on URoots.",
     thumbnail:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -48,18 +48,18 @@ export default function RealResultsVideoSection() {
 
   return (
     <section className="py-20 sm:py-24 bg-[#f4faf2] relative overflow-hidden">
-      
+
       {/* Decorative Top Wavy Edge */}
       <div className="absolute top-0 left-0 right-0 h-4 bg-repeat-x opacity-20 pointer-events-none" />
 
       <div className="qht-large-container">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5c685f] block mb-2">
             TRUSTED BY REAL PATIENTS
           </span>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1b221d] tracking-tight leading-tight">
             Our members get real results
           </h2>
@@ -76,7 +76,7 @@ export default function RealResultsVideoSection() {
 
         {/* Video Cards Grid with Navigation Arrows */}
         <div className="relative max-w-6xl mx-auto">
-          
+
           {/* Left Arrow Button */}
           <button
             type="button"
@@ -90,10 +90,10 @@ export default function RealResultsVideoSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">
             {TESTIMONIALS_DATA.map((testimonial) => (
               <div key={testimonial.id} className="flex flex-col group">
-                
+
                 {/* 9:16 Portrait Video Thumbnail Card */}
                 <div className="relative aspect-[9/14] w-full rounded-3xl sm:rounded-[32px] overflow-hidden bg-[#e8e2d8] shadow-md border border-gray-100/90 group">
-                  
+
                   {/* NexGen Meds Watermark for card 3 */}
                   {testimonial.watermark && (
                     <div className="absolute top-4 left-0 right-0 text-center z-10 select-none pointer-events-none">

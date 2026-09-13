@@ -24,7 +24,7 @@ const JOURNEY_PILLARS: PillarItem[] = [
   {
     num: "03",
     title: "Multi-City Footprint",
-    desc: "Clinics in Haridwar, Delhi, Gurugram and Hyderabad delivering uniform clinical excellence.",
+    desc: "Clinics in Patna (Main Branch) and Mumbai (Second Branch) delivering uniform clinical excellence.",
   },
   {
     num: "04",
