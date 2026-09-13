@@ -8,12 +8,43 @@ interface HeroSectionProps {
   onOpenConsultation: () => void;
 }
 
+// Decorative hair-follicle cross-sections (skin, follicle bulbs, 1–3 hair
+// follicular units) that frame the hero so it reads as hair transplant at a
+// glance. The SVG fades out on its inner edge; mirroring flips the fade too.
+const FOLLICLE_ART = "/images/hero-follicles.svg";
+
+function FollicleArt({ className }: { className: string }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element -- static decorative SVG
+    <img
+      src={FOLLICLE_ART}
+      alt=""
+      aria-hidden="true"
+      draggable={false}
+      decoding="async"
+      className={`pointer-events-none select-none absolute h-auto ${className}`}
+    />
+  );
+}
+
 export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
   const duplicatedSlides = [...HERO_SLIDES, ...HERO_SLIDES];
 
   return (
-    <section className="pt-28 sm:pt-36 lg:pt-40 pb-16 bg-[#f4f7f4] overflow-hidden">
-      <div className="qht-container text-center">
+    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 bg-[#f4f7f4] overflow-hidden">
+      {/* Wide screens: large clusters framing the headline from both sides —
+          only from xl up, where the text leaves room at the edges */}
+      <FollicleArt className="hidden xl:block top-20 -left-10 w-[380px] opacity-60" />
+      <FollicleArt className="hidden xl:block top-20 -right-10 w-[380px] opacity-60 -scale-x-100" />
+
+      {/* isolate: lets the phone art sit behind the text (-z-10) without
+          dropping below the section's background */}
+      <div className="qht-container text-center relative isolate">
+        {/* Below xl the text spans (nearly) the full width, so clusters sit
+            beside the CTA row instead — the one place with free space at every size */}
+        <FollicleArt className="xl:hidden -z-10 -bottom-12 -left-20 md:-left-12 lg:-left-8 w-[190px] md:w-[250px] lg:w-[290px] opacity-40 md:opacity-45" />
+        <FollicleArt className="xl:hidden -z-10 -bottom-12 -right-20 md:-right-12 lg:-right-8 w-[190px] md:w-[250px] lg:w-[290px] opacity-40 md:opacity-45 -scale-x-100" />
+
         {/* Main Headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-[500] text-[#181d19] tracking-tight leading-[1.18] max-w-7xl mx-auto">
           Pioneering Natural Hair Restoration & Artistic Precision,{" "}

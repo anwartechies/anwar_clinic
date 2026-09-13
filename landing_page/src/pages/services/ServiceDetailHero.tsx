@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronRight, ChevronDown, CheckCircle2 } from "lucide-react";
 import { COUNTRY_CODES } from "@/data/qhtData";
 import { COMPANY_NAME } from "@/config/constants";
+import { submitLead } from "@/lib/leads";
 
 interface ServiceDetailHeroProps {
   slug?: string;
@@ -30,16 +31,45 @@ export default function ServiceDetailHero({
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleCallbackSubmit = (e: React.FormEvent) => {
+  const handleCallbackSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!fullName.trim() || phone.length < 7) return;
+    if (!fullName.trim()) return;
+    if (phone.length < 7) {
+      setError("Please enter a valid mobile number.");
+      return;
+    }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError(null);
+    try {
+      await submitLead({
+        fullName: fullName.trim(),
+        countryCode,
+        phone,
+        email: email.trim() || undefined,
+        // The service name travels with the lead so the admin panel shows
+        // which page the callback was requested from.
+        message: `Callback request — ${title}`,
+        source: "contact_form",
+      });
       setIsSubmitted(true);
-    }, 700);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Clears every field so the next request starts from a blank form.
+  const handleSendAnother = () => {
+    setFullName("");
+    setCountryCode("+91");
+    setPhone("");
+    setEmail("");
+    setError(null);
+    setIsSubmitted(false);
   };
 
   const defaultSubtitle = `${title} procedures tailored by specialists at ${COMPANY_NAME} with clinical precision and natural results.`;
@@ -126,7 +156,8 @@ export default function ServiceDetailHero({
                 </div>
               </div>
               <button
-                onClick={() => setIsSubmitted(false)}
+                type="button"
+                onClick={handleSendAnother}
                 className="px-5 py-2 bg-white text-[#1b392b] rounded-full text-xs font-bold hover:bg-gray-100 transition-colors"
               >
                 Send Another
@@ -204,6 +235,12 @@ export default function ServiceDetailHero({
                 </button>
               </div>
             </form>
+          )}
+
+          {!isSubmitted && error && (
+            <p role="alert" className="mt-4 rounded-lg bg-red-50 px-3 py-2 text-xs font-medium text-red-700">
+              {error}
+            </p>
           )}
         </div>
       </div>
