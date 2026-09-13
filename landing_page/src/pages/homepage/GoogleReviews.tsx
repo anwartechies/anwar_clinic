@@ -1,12 +1,16 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Star, ExternalLink, PenLine } from "lucide-react";
 import { fetchGoogleReviews, type GoogleReviewsData, type GoogleReviewItem } from "@/lib/googleReviews";
 
 interface GoogleReviewsProps {
   className?: string;
 }
+
+/** Reviews longer than this get a "Read more" toggle. */
+const LONG_REVIEW_CHARS = 220;
+const AVATAR_COLORS = ["#52664d", "#1b392b", "#7a6a3a", "#3f5f6b", "#6b4f5f", "#4f6b58"];
 
 function GoogleG({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -20,12 +24,12 @@ function GoogleG({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 /** Five stars filled to the exact rating (e.g. 4.7 fills the fifth star 70%). */
-function Stars({ rating, size = "w-3.5 h-3.5" }: { rating: number; size?: string }) {
+function Stars({ rating, size = "w-4 h-4" }: { rating: number; size?: string }) {
   const pct = Math.max(0, Math.min(100, (rating / 5) * 100));
   const row = (cls: string) => (
-    <div className={`flex ${cls}`}>
+    <div className={`flex gap-0.5 ${cls}`}>
       {[...Array(5)].map((_, i) => (
-        <Star key={i} className={`${size} fill-current flex-shrink-0`} />
+        <Star key={i} className={`${size} fill-current flex-shrink-0`} strokeWidth={0} />
       ))}
     </div>
   );
@@ -41,6 +45,7 @@ function Stars({ rating, size = "w-3.5 h-3.5" }: { rating: number; size?: string
 
 function Avatar({ review }: { review: GoogleReviewItem }) {
   const [failed, setFailed] = useState(false);
+  const initial = review.authorName.trim().charAt(0).toUpperCase() || "G";
   if (review.authorPhotoUri && !failed) {
     return (
       // eslint-disable-next-line @next/next/no-img-element -- Google-hosted author photo
@@ -49,21 +54,89 @@ function Avatar({ review }: { review: GoogleReviewItem }) {
         alt=""
         referrerPolicy="no-referrer"
         onError={() => setFailed(true)}
-        className="w-full h-full object-cover rounded-full"
+        className="w-11 h-11 rounded-full object-cover flex-shrink-0 bg-gray-100"
       />
     );
   }
+  const color = AVATAR_COLORS[review.authorName.split("").reduce((n, c) => n + c.charCodeAt(0), 0) % AVATAR_COLORS.length];
   return (
-    <span className="w-full h-full rounded-full flex items-center justify-center text-white text-base font-bold">
-      {review.authorName.trim().charAt(0).toUpperCase() || "G"}
+    <span
+      className="w-11 h-11 rounded-full flex-shrink-0 flex items-center justify-center text-white text-base font-semibold"
+      style={{ backgroundColor: color }}
+      aria-hidden="true"
+    >
+      {initial}
     </span>
   );
 }
 
+function ReviewCard({ review }: { review: GoogleReviewItem }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = review.text.length > LONG_REVIEW_CHARS;
+
+  return (
+    <article className="min-h-[292px] bg-white rounded-3xl p-6 border border-[#e4eae4] shadow-[0_2px_12px_rgba(27,34,29,0.04)] flex flex-col">
+      <header className="flex items-start gap-3">
+        <Avatar review={review} />
+        <div className="min-w-0 flex-1">
+          <h3 className="text-[15px] font-semibold text-[#1b221d] leading-snug truncate">
+            {review.authorUri ? (
+              <a href={review.authorUri} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                {review.authorName}
+              </a>
+            ) : (
+              review.authorName
+            )}
+          </h3>
+          {review.relativeTime && <p className="text-xs text-[#7a857c] mt-0.5">{review.relativeTime}</p>}
+        </div>
+        <GoogleG className="w-5 h-5 flex-shrink-0 mt-0.5" />
+      </header>
+
+      <div className="mt-4">
+        <Stars rating={review.rating} size="w-4 h-4" />
+      </div>
+
+      <p
+        className={`mt-3 text-sm text-[#4a554c] leading-relaxed whitespace-pre-line ${
+          isLong && !expanded ? "line-clamp-5" : ""
+        }`}
+      >
+        {review.text}
+      </p>
+
+      <div className="mt-auto pt-4 flex items-center justify-between gap-3 text-xs">
+        {isLong ? (
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            className="font-semibold text-[#52664d] hover:text-[#384c3c] cursor-pointer"
+          >
+            {expanded ? "Show less" : "Read more"}
+          </button>
+        ) : (
+          <span />
+        )}
+        {review.reviewUri && (
+          <a
+            href={review.reviewUri}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-[#7a857c] hover:text-[#52664d]"
+          >
+            View on Google <ExternalLink className="w-3 h-3" />
+          </a>
+        )}
+      </div>
+    </article>
+  );
+}
+
 export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const trackRef = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<GoogleReviewsData | null>(null);
+  const [edges, setEdges] = useState({ atStart: true, atEnd: true });
 
   useEffect(() => {
     const ctrl = new AbortController();
@@ -71,187 +144,161 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
     return () => ctrl.abort();
   }, []);
 
-  const handleScroll = () => {
-    if (sliderRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
-      const maxScroll = scrollWidth - clientWidth;
-      setScrollProgress(maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0);
-    }
-  };
-
-  const scroll = (direction: "left" | "right") => {
-    sliderRef.current?.scrollBy({ left: direction === "left" ? -340 : 340, behavior: "smooth" });
-  };
+  const updateEdges = useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setEdges({ atStart: el.scrollLeft <= 4, atEnd: el.scrollLeft >= max - 4 });
+  }, []);
 
   useEffect(() => {
-    const el = sliderRef.current;
+    const el = trackRef.current;
     if (!el) return;
-    el.addEventListener("scroll", handleScroll);
-    return () => el.removeEventListener("scroll", handleScroll);
-  }, [data]);
+    updateEdges();
+    el.addEventListener("scroll", updateEdges, { passive: true });
+    window.addEventListener("resize", updateEdges);
+    return () => {
+      el.removeEventListener("scroll", updateEdges);
+      window.removeEventListener("resize", updateEdges);
+    };
+  }, [data, updateEdges]);
 
-  // Only ever real reviews: nothing is rendered until live data arrives, and the
+  const scrollByCard = (dir: -1 | 1) => {
+    const el = trackRef.current;
+    const card = el?.querySelector<HTMLElement>("[data-review-card]");
+    if (!el || !card) return;
+    el.scrollBy({ left: dir * (card.offsetWidth + 20), behavior: "smooth" });
+  };
+
+  // Only ever real reviews: nothing renders until live data arrives, and the
   // section stays hidden if Google isn't configured, fails, or has no reviews.
   if (!data) return null;
 
-  return (
-    <section className={`py-16 sm:py-20 lg:py-24 bg-[#f8faf8] overflow-hidden ${className}`}>
-      <div className="qht-large-container">
+  const scrollable = !(edges.atStart && edges.atEnd);
+  const countLabel = `${data.userRatingCount.toLocaleString("en-IN")} ${data.userRatingCount === 1 ? "review" : "reviews"}`;
 
-        {/* Header Row */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 sm:mb-16">
+  return (
+    <section
+      aria-labelledby="google-reviews-heading"
+      className={`py-16 sm:py-20 lg:py-24 bg-[#f8faf8] overflow-hidden ${className}`}
+    >
+      <div className="qht-large-container">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end mb-10 sm:mb-12">
+          {/* Heading */}
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-bold text-gray-800 shadow-xs mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs font-semibold text-gray-700 shadow-xs mb-4">
               <GoogleG />
-              <span>Reviews from Google</span>
+              <span>Google Reviews</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight">
+            <h2
+              id="google-reviews-heading"
+              className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight"
+            >
               Patient Experiences & Feedback
             </h2>
+            <p className="mt-3 text-sm sm:text-base text-[#5c685f] max-w-xl">
+              Real reviews from patients, straight from our Google profile.
+            </p>
           </div>
 
-          {/* Right: Aggregate Score + Prev/Next Controls */}
-          <div className="flex flex-wrap items-center gap-4">
-            {data.rating !== null && (
-              <a
-                href={data.googleMapsUri ?? undefined}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-white px-5 py-2.5 rounded-2xl border border-gray-200 shadow-xs hover:border-gray-300 transition-colors"
-              >
-                <span className="text-3xl font-extrabold text-[#1b221d] font-mono">
+          {/* Summary card */}
+          <div className="bg-white rounded-3xl border border-[#e4eae4] shadow-[0_8px_30px_rgba(27,34,29,0.06)] p-6">
+            <div className="flex items-center gap-4">
+              {data.rating !== null && (
+                <span className="text-5xl font-semibold text-[#1b221d] tracking-tight leading-none tabular-nums">
                   {data.rating.toFixed(1)}
                 </span>
-                <div>
-                  <Stars rating={data.rating} />
-                  <span className="block text-[11px] text-gray-500 font-medium">
-                    {data.userRatingCount.toLocaleString("en-IN")} Google {data.userRatingCount === 1 ? "review" : "reviews"}
-                  </span>
-                </div>
+              )}
+              <div>
+                {data.rating !== null && <Stars rating={data.rating} size="w-5 h-5" />}
+                <p className="mt-1 text-sm text-[#5c685f]">
+                  Based on{" "}
+                  {data.googleMapsUri ? (
+                    <a
+                      href={data.googleMapsUri}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-[#1b221d] underline decoration-gray-300 underline-offset-2 hover:decoration-[#52664d]"
+                    >
+                      {countLabel}
+                    </a>
+                  ) : (
+                    <span className="font-semibold text-[#1b221d]">{countLabel}</span>
+                  )}
+                </p>
+              </div>
+              <GoogleG className="w-8 h-8 ml-auto self-start" />
+            </div>
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2.5 whitespace-nowrap">
+              <a
+                href={data.writeReviewUri}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 border border-transparent bg-[#52664d] hover:bg-[#43543e] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-colors"
+              >
+                <PenLine className="w-4 h-4" /> Write a review
               </a>
-            )}
+              {data.googleMapsUri && (
+                <a
+                  href={data.googleMapsUri}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 border border-[#cfd8cf] text-[#1b221d] hover:border-[#52664d] hover:text-[#52664d] text-sm font-semibold px-4 py-2.5 rounded-full transition-colors"
+                >
+                  View all <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
 
-            <div className="flex items-center gap-2">
+        {/* Reviews track */}
+        <div className="relative">
+          <div
+            ref={trackRef}
+            role="region"
+            aria-label="Google reviews"
+            tabIndex={0}
+            className="flex items-start gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#52664d]/40 rounded-3xl"
+          >
+            {data.reviews.map((review, idx) => (
+              <div
+                key={`${review.authorName}-${review.publishTime ?? idx}`}
+                data-review-card
+                className="snap-start flex-shrink-0 w-[85%] sm:w-[calc((100%-20px)/2)] lg:w-[calc((100%-40px)/3)] xl:w-[calc((100%-60px)/4)]"
+              >
+                <ReviewCard review={review} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Controls + attribution */}
+        <div className="mt-6 flex items-center justify-between gap-4">
+          <p className="text-[11px] text-gray-400">Ratings and reviews from Google Maps</p>
+          {scrollable && (
+            <div className="hidden sm:flex items-center gap-2">
               <button
-                onClick={() => scroll("left")}
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-gray-200 hover:bg-[#596d53] hover:text-white flex items-center justify-center transition-colors shadow-xs"
-                aria-label="Previous Review"
+                type="button"
+                onClick={() => scrollByCard(-1)}
+                disabled={edges.atStart}
+                aria-label="Previous reviews"
+                className="w-11 h-11 rounded-full bg-white border border-gray-200 text-[#1b221d] flex items-center justify-center shadow-xs transition-colors enabled:hover:bg-[#52664d] enabled:hover:text-white enabled:hover:border-[#52664d] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
-                onClick={() => scroll("right")}
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-gray-200 hover:bg-[#596d53] hover:text-white flex items-center justify-center transition-colors shadow-xs"
-                aria-label="Next Review"
+                type="button"
+                onClick={() => scrollByCard(1)}
+                disabled={edges.atEnd}
+                aria-label="Next reviews"
+                className="w-11 h-11 rounded-full bg-white border border-gray-200 text-[#1b221d] flex items-center justify-center shadow-xs transition-colors enabled:hover:bg-[#52664d] enabled:hover:text-white enabled:hover:border-[#52664d] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
-          </div>
-        </div>
-
-        {/* Reviews Horizontal Slider Track */}
-        <div
-          ref={sliderRef}
-          className="flex gap-6 sm:gap-7 overflow-x-auto no-scrollbar pt-8 pb-8 snap-x snap-mandatory"
-        >
-          {data.reviews.map((rev, idx) => (
-            <article
-              key={`${rev.authorName}-${rev.publishTime ?? idx}`}
-              className="flex-shrink-0 w-[280px] sm:w-[310px] md:w-[320px] bg-white rounded-3xl p-6 sm:p-7 pt-10 border border-[#e4eae4] shadow-xs flex flex-col justify-between relative snap-start hover:shadow-md transition-shadow"
-            >
-              {/* Floating Top Center Avatar */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-md bg-[#1b392b] p-0.5">
-                <Avatar review={rev} />
-              </div>
-
-              <span className="absolute top-4 right-5 text-3xl font-serif text-gray-200 select-none pointer-events-none" aria-hidden="true">
-                “
-              </span>
-
-              <div>
-                {/* Author (links to their Google profile, as Google's attribution rules require) */}
-                <div className="text-center mb-3">
-                  <h3 className="text-base font-bold text-gray-900 leading-tight">
-                    {rev.authorUri ? (
-                      <a href={rev.authorUri} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        {rev.authorName}
-                      </a>
-                    ) : (
-                      rev.authorName
-                    )}
-                  </h3>
-                  <div className="flex items-center justify-center gap-2 mt-1.5">
-                    <Stars rating={rev.rating} size="w-3 h-3" />
-                    {rev.relativeTime && (
-                      <span className="text-[11px] text-gray-400">{rev.relativeTime}</span>
-                    )}
-                  </div>
-                </div>
-
-                <p className="text-xs sm:text-[13px] text-gray-600 leading-relaxed text-center font-normal line-clamp-5 whitespace-pre-line">
-                  {rev.text}
-                </p>
-              </div>
-
-              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-400">
-                <span className="inline-flex items-center gap-1.5">
-                  <GoogleG className="w-3 h-3" /> Google review
-                </span>
-                {rev.reviewUri && (
-                  <a
-                    href={rev.reviewUri}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[#52664d] font-semibold hover:underline"
-                  >
-                    Read on Google <ExternalLink className="w-3 h-3" />
-                  </a>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* Bottom Scroll Progress Track */}
-        <div className="mt-4 flex items-center gap-3 max-w-4xl mx-auto px-4">
-          <button onClick={() => scroll("left")} className="text-gray-400 hover:text-gray-700 text-xs" aria-label="Scroll reviews left">
-            ◀
-          </button>
-          <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-gray-500 rounded-full transition-all duration-150"
-              style={{ width: "25%", transform: `translateX(${scrollProgress * 3}%)` }}
-            />
-          </div>
-          <button onClick={() => scroll("right")} className="text-gray-400 hover:text-gray-700 text-xs" aria-label="Scroll reviews right">
-            ▶
-          </button>
-        </div>
-
-        {/* Calls to action + attribution */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a
-            href={data.writeReviewUri}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#52664d] hover:bg-[#43543e] text-white text-sm font-semibold px-6 py-3 rounded-full shadow-sm transition-colors"
-          >
-            <PenLine className="w-4 h-4" /> Write a review
-          </a>
-          {data.googleMapsUri && (
-            <a
-              href={data.googleMapsUri}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-[#52664d] text-[#52664d] hover:bg-[#52664d] hover:text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors"
-            >
-              See all reviews on Google <ExternalLink className="w-4 h-4" />
-            </a>
           )}
         </div>
-        <p className="mt-4 text-center text-[11px] text-gray-400">Ratings and reviews from Google Maps</p>
-
       </div>
     </section>
   );
