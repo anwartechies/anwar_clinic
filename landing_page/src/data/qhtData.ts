@@ -619,6 +619,12 @@ export const FAQ_ITEMS: FAQItem[] = [
 // 12. Clinic Branches & Cities
 export const CLINIC_BRANCHES: Branch[] = [
   {
+    region: "Main Clinic Branch - Patna",
+    name: `${COMPANY_NAME} Patna`,
+    address: "Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014",
+    mapLink: "https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z",
+  },
+  {
     region: "North India Branch - Haridwar",
     name: `${COMPANY_NAME} Clinic Haridwar`,
     address: "521, Model Colony, Haridwar, Uttarakhand",

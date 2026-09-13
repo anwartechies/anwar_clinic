@@ -6,7 +6,7 @@ import CartDrawer from "@/components/CartDrawer";
 export const metadata: Metadata = {
   title: "NexGen Hair Care & Clinical Medicines | Official Store",
   description:
-    "Explore clinical hair care formulations, post-transplant care serums, natural growth oils, and dermatologist-recommended hair restoration products by QHT Clinic.",
+    "Explore clinical hair care formulations, post-transplant care serums, natural growth oils, and dermatologist-recommended hair restoration products by NexGen Hair Clinic.",
   icons: {
     icon: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/logo1-mtznnfev83t5nb.png",
   },

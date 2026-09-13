@@ -18,7 +18,7 @@ export default function ConsultationModal({
   const [name, setName] = useState("");
   const [countryCode, setCountryCode] = useState("+91");
   const [phone, setPhone] = useState("");
-  const [branch, setBranch] = useState("Delhi");
+  const [branch, setBranch] = useState("Patna");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -166,6 +166,7 @@ export default function ConsultationModal({
                   onChange={(e) => setBranch(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none focus:border-[#1b392b]"
                 >
+                  <option value="Patna">Patna (Main Branch - Raja Bazar)</option>
                   <option value="Delhi">New Delhi (Rohini)</option>
                   <option value="Haridwar">Haridwar (Uttarakhand)</option>
                   <option value="Gurugram">Gurugram (Haryana)</option>
