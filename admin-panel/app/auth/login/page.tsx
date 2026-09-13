@@ -1,6 +1,6 @@
 import { LoginForm } from "@/components/Auth/LoginForm";
 
-export const metadata = { title: "Sign in · Anwar Clinic" };
+export const metadata = { title: "Sign in · NexGen Admin Panel" };
 
 export default function LoginPage() {
   return (

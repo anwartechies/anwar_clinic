@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TbLayoutSidebarLeftCollapse, TbLayoutSidebarLeftExpand, TbActivityHeartbeat } from "react-icons/tb";
+import { TbLayoutSidebarLeftCollapse, TbLayoutSidebarLeftExpand } from "react-icons/tb";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS } from "@/constants/nav";
 import { usePermissions } from "@/context/PermissionsContext";
@@ -41,14 +42,12 @@ export function Sidebar() {
         )}
       >
         <div className="flex h-16 items-center gap-2.5 border-b border-slate-200 px-4 dark:border-slate-800">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-teal-600 text-white">
-            <TbActivityHeartbeat className="h-5 w-5" />
-          </div>
+          <Image src="/brand/nexgen-mark.png" alt="NexGen" width={32} height={32} priority className="h-8 w-8 shrink-0" />
           {expanded && (
             <div className="flex min-w-0 flex-1 items-center justify-between">
               <div className="min-w-0">
                 <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100">
-                  Anwar Clinic
+                  NexGen
                 </p>
                 <p className="truncate text-[11px] text-slate-500 dark:text-slate-400">Admin Panel</p>
               </div>

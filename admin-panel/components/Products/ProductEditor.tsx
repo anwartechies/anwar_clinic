@@ -470,7 +470,7 @@ export function ProductEditor({ productId, roleSlug }: { productId: string; role
             <input
               value={product.seoTitle ?? ""}
               onChange={(e) => setField("seoTitle", e.target.value)}
-              placeholder="e.g. URoots Hair Kit | Anwar Clinic"
+              placeholder="e.g. URoots Hair Kit | NexGen"
               className={inputCls}
             />
           </div>

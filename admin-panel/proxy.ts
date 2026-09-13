@@ -62,5 +62,8 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/auth/:path*", "/((?!_next/static|_next/image|favicon.ico|public/).*)"],
+  // Static files from public/ and the app icon files are served from the site
+  // root, so they're excluded by extension — otherwise the logo and favicon
+  // would redirect to /auth/login for signed-out visitors.
+  matcher: ["/auth/:path*", "/((?!_next/static|_next/image|.*\\.(?:ico|png|jpe?g|svg|webp)$).*)"],
 };
