@@ -15,6 +15,7 @@ import {
   TbArticle,
   TbShoppingBag,
   TbSettings,
+  TbBriefcase,
 } from "react-icons/tb";
 
 export interface NavItem {
@@ -43,6 +44,7 @@ export const NAV_ITEMS: NavItem[] = [
   { title: "Services",      icon: <TbClipboardText className="h-5 w-5 shrink-0" />,   path: "/services",      permissions: ["services:read"] },
   { title: "Blogs",         icon: <TbArticle className="h-5 w-5 shrink-0" />,         path: "/blogs",         permissions: ["blogs:read"] },
   { title: "Products",      icon: <TbShoppingBag className="h-5 w-5 shrink-0" />,     path: "/products",      permissions: ["products:read"] },
+  { title: "Careers",       icon: <TbBriefcase className="h-5 w-5 shrink-0" />,       path: "/careers",       permissions: ["careers:read"] },
   { title: "Media",         icon: <TbPhoto className="h-5 w-5 shrink-0" />,           path: "/media",         permissions: ["media:read"] },
   { title: "Settings",      icon: <TbSettings className="h-5 w-5 shrink-0" />,        path: "/settings",      permissions: ["settings:read"] },
 ];
@@ -76,8 +78,10 @@ export const PERMISSION_LABELS: Record<string, string> = {
   "products:write": "Create, edit & publish products",
   "media:read": "View the media library",
   "media:write": "Upload & delete media files",
-  "settings:read": "View settings",
+  "settings:read": "View clinic configuration",
   "settings:write": "Manage roles, permissions & clinic settings",
+  "careers:read": "View job openings & applications",
+  "careers:write": "Create/edit jobs & update applications",
 };
 
 // Display order + label per resource group in the matrix. Unlisted resources
@@ -96,8 +100,9 @@ export const RESOURCE_META: { key: string; label: string; order: number }[] = [
   { key: "services", label: "Website Services", order: 10 },
   { key: "blogs", label: "Blog Posts", order: 11 },
   { key: "products", label: "Ecommerce Products", order: 12 },
-  { key: "media", label: "Media Library", order: 13 },
-  { key: "settings", label: "Settings", order: 14 },
+  { key: "careers", label: "Careers & Jobs", order: 13 },
+  { key: "media", label: "Media Library", order: 14 },
+  { key: "settings", label: "Settings", order: 15 },
 ];
 
 export function resourceLabel(resource: string) {

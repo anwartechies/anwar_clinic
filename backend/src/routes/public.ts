@@ -1,9 +1,11 @@
 import { Router, Request, Response } from "express";
 import { Op } from "sequelize";
-import { Service, Lead, Blog, Product } from "../models";
+import multer from "multer";
+import { Service, Lead, Blog, Product, Job, JobApplication } from "../models";
 import { LEAD_SOURCES, LeadSource } from "../models/Lead";
 import { SEED_SECTIONS_BY_SLUG } from "../config/serviceSeedData";
 import { getGoogleReviews } from "../services/googleReviews";
+import { storage } from "../services/storage";
 
 // Open, credential-less API consumed by the landing page and ecommerce at build/revalidate
 // time. Draft items are never exposed here.
@@ -322,6 +324,160 @@ router.post("/leads", async (req: Request, res: Response) => {
 
   res.status(201).json({ message: "Thanks — our team will reach out shortly." });
 });
+
+// ---------------------------------------------------------------------------
+// Careers: Public Jobs & Application Submission
+// ---------------------------------------------------------------------------
+
+const resumeUpload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10MB
+});
+
+const ALLOWED_RESUME_MIME = [
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "application/octet-stream",
+];
+
+// List published jobs for /career page
+router.get("/jobs", async (req: Request, res: Response) => {
+  try {
+    const { department, employmentType, search } = req.query;
+    const where: any = { status: "published" };
+
+    if (department && typeof department === "string" && department !== "All") {
+      where.department = department;
+    }
+    if (employmentType && typeof employmentType === "string" && employmentType !== "All") {
+      where.employmentType = employmentType;
+    }
+    if (search && typeof search === "string") {
+      where[Op.or] = [
+        { title: { [Op.iLike]: `%${search}%` } },
+        { department: { [Op.iLike]: `%${search}%` } },
+        { description: { [Op.iLike]: `%${search}%` } },
+        { location: { [Op.iLike]: `%${search}%` } },
+      ];
+    }
+
+    const jobs = await Job.findAll({
+      where,
+      order: [
+        ["sortOrder", "ASC"],
+        ["createdAt", "DESC"],
+      ],
+      attributes: [
+        "id",
+        "title",
+        "slug",
+        "department",
+        "location",
+        "employmentType",
+        "experience",
+        "salaryRange",
+        "openings",
+        "description",
+        "requirements",
+        "responsibilities",
+        "benefits",
+        "createdAt",
+      ],
+    });
+
+    res.json(jobs);
+  } catch (err: any) {
+    res.status(500).json({ message: err.message || "Failed to fetch jobs" });
+  }
+});
+
+// Get detailed job opening for /career/[slug]
+router.get("/jobs/:slug", async (req: Request, res: Response) => {
+  try {
+    const job = await Job.findOne({
+      where: { slug: req.params.slug, status: "published" },
+    });
+
+    if (!job) {
+      res.status(404).json({ message: "Job opening not found" });
+      return;
+    }
+
+    res.json(job);
+  } catch (err: any) {
+    res.status(500).json({ message: err.message || "Failed to fetch job" });
+  }
+});
+
+// Submit candidate application for a job
+router.post(
+  "/jobs/:slug/apply",
+  resumeUpload.single("resume"),
+  async (req: Request, res: Response) => {
+    try {
+      const job = await Job.findOne({
+        where: { slug: req.params.slug, status: "published" },
+      });
+
+      if (!job) {
+        res.status(404).json({ message: "Job opening not found" });
+        return;
+      }
+
+      const fullName = (req.body?.fullName || "").trim();
+      const email = (req.body?.email || "").trim();
+      const phone = (req.body?.phone || "").trim();
+      const experienceYears = (req.body?.experienceYears || "").trim();
+      const currentCompany = (req.body?.currentCompany || "").trim();
+      const noticePeriod = (req.body?.noticePeriod || "").trim();
+      const coverNote = (req.body?.coverNote || "").trim();
+
+      if (!fullName || !email || !phone) {
+        res.status(400).json({ message: "Full name, email, and phone number are required." });
+        return;
+      }
+
+      const file = req.file;
+      if (!file) {
+        res.status(400).json({ message: "Please upload your resume (PDF or Word document)." });
+        return;
+      }
+
+      if (!ALLOWED_RESUME_MIME.includes(file.mimetype) && !file.originalname.match(/\.(pdf|doc|docx)$/i)) {
+        res.status(400).json({ message: "Unsupported file type. Please upload a PDF, DOC, or DOCX document." });
+        return;
+      }
+
+      const uploadResult = await storage.put({
+        buffer: file.buffer,
+        originalName: file.originalname,
+        mimeType: file.mimetype,
+      });
+
+      const application = await JobApplication.create({
+        jobId: job.id,
+        fullName,
+        email,
+        phone,
+        experienceYears: experienceYears || "0",
+        currentCompany: currentCompany || null,
+        noticePeriod: noticePeriod || null,
+        resumeUrl: uploadResult.url,
+        resumeFileName: file.originalname,
+        coverNote: coverNote || null,
+        status: "new",
+      });
+
+      res.status(201).json({
+        message: "Application submitted successfully! Our HR team will review your profile.",
+        applicationId: application.id,
+      });
+    } catch (err: any) {
+      res.status(500).json({ message: err.message || "Failed to submit application" });
+    }
+  }
+);
 
 export default router;
 
