@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ChevronRight, Plus, Minus } from "lucide-react";
+import { ChevronRight, Plus, Minus, HelpCircle } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 import { useConsultation } from "@/context/ConsultationContext";
 
@@ -22,7 +22,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: "hair-transplant-for-men",
     name: "Hair Transplant For Men",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hair-Transplant-For-Men.webp",
+    icon: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=200&q=80",
     faqs: [
       {
         q: "WHAT IS A MALE HAIR TRANSPLANT?",
@@ -51,9 +51,9 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     ],
   },
   {
-    id: "qht-hair-transplant",
+    id: "nexGen-hair-transplant",
     name: "NexGen Hair Transplant",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/QHT-Hair-Transplant.webp",
+    icon: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=200&q=80",
     faqs: [
       {
         q: "WHAT IS A NEXGEN HAIR TRANSPLANT?",
@@ -61,7 +61,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: "IS NEXGEN HAIR TRANSPLANT PRESENT IN INDIA?",
-        a: "With a pan-India presence across Delhi, Gurugram, Haridwar, and Hyderabad, NexGen Hair Transplant offers this unique hair technique for achieving quicker transplantation without compromising precision and safety protocols.",
+        a: "With our main branch in Patna and second branch in Mumbai, NexGen Hair Transplant offers this unique hair technique for achieving quicker transplantation without compromising precision and safety protocols.",
       },
       {
         q: "IS NEXGEN HAIR TRANSPLANT AFFORDABLE?",
@@ -80,7 +80,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: "crown-hair-transplant",
     name: "Crown Hair Transplant",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Crown-Hair-Transplant.webp",
+    icon: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
     faqs: [
       {
         q: "HOW EFFECTIVE IS A CROWN HAIR TRANSPLANT?",
@@ -107,7 +107,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: "social-media-influencer-hair-transplant",
     name: "Social Media Influencer Hair Transplant",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Social-Media-Influencer-Hair-Transplant.png",
+    icon: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80",
     faqs: [
       {
         q: "IS SOCIAL MEDIA INFLUENCER HAIR TRANSPLANT PERMANENT?",
@@ -134,7 +134,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: "hair-transplant-repair",
     name: "Hair Transplant Repair",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hair-Transplant-Repair.webp",
+    icon: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=200&q=80",
     faqs: [
       {
         q: "IS HAIR TRANSPLANT REPAIR PAINFUL?",
@@ -157,7 +157,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: "hairline-reconstruction",
     name: "Hairline Reconstruction",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Hairline-Reconstruction.webp",
+    icon: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
     faqs: [
       {
         q: "WHAT ARE THE COMMON CAUSES OF HAIRLINE PAIN AFTER RECONSTRUCTION?",
@@ -184,7 +184,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: "fue-hair-transplant",
     name: "FUE Hair transplant",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/FUE-Hair-transplant.webp",
+    icon: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=200&q=80",
     faqs: [
       {
         q: "IS FUE HAIR TRANSPLANT PAINFUL?",
@@ -203,7 +203,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: "temple-hair-transplant",
     name: "Temple Hair Transplant",
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Temple-Hair-Transplant.webp",
+    icon: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&q=80",
     faqs: [
       {
         q: "WHAT IS THE BEST METHOD FOR TEMPLE HAIRLINE TRANSPLANT?",
@@ -273,13 +273,13 @@ export default function FAQPage() {
 
   return (
     <div className="bg-white min-h-screen">
-      
+
       {/* ========================================================
           HERO BANNER SECTION (Matching Screenshot)
          ======================================================== */}
       <section className="pt-28 sm:pt-36 pb-12 sm:pb-16 bg-white text-center px-4">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
-          
+
           {/* Breadcrumb: Home > FAQ's */}
           <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
             <ol className="flex items-center justify-center gap-1.5 text-xs sm:text-sm text-gray-500 font-medium">
@@ -319,9 +319,9 @@ export default function FAQPage() {
          ======================================================== */}
       <section className="py-8 sm:py-12 pb-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start relative">
-            
+
             {/* ========================================================
                 LEFT COLUMN: STICKY CATEGORY NAV (Scrolled With Content)
                ======================================================== */}
@@ -334,28 +334,24 @@ export default function FAQPage() {
                       <button
                         key={category.id}
                         onClick={() => scrollToCategory(category.id)}
-                        className={`w-full flex items-center gap-3.5 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl text-left transition-all duration-300 cursor-pointer ${
-                          isActive
-                            ? "bg-[#52664d] text-white shadow-lg my-1 scale-[1.02]"
-                            : "bg-transparent text-[#162418] hover:bg-white/60"
-                        }`}
+                        className={`w-full flex items-center gap-3.5 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl text-left transition-all duration-300 cursor-pointer ${isActive
+                          ? "bg-[#52664d] text-white shadow-lg my-1 scale-[1.02]"
+                          : "bg-transparent text-[#162418] hover:bg-white/60"
+                          }`}
                       >
-                        {/* Icon */}
-                        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                        {/* Icon Thumbnail */}
+                        <div className="w-8 h-8 rounded-xl overflow-hidden flex items-center justify-center flex-shrink-0 shadow-2xs border border-black/10 bg-white">
                           <img
                             src={category.icon}
                             alt={category.name}
-                            className={`w-7 h-7 object-contain transition-all duration-300 ${
-                              isActive ? "filter brightness-0 invert" : ""
-                            }`}
+                            className="w-full h-full object-cover"
                           />
                         </div>
 
                         {/* Name */}
                         <span
-                          className={`text-xs sm:text-[14px] font-semibold tracking-tight leading-snug transition-colors ${
-                            isActive ? "text-white" : "text-[#162418]"
-                          }`}
+                          className={`text-xs sm:text-[14px] font-semibold tracking-tight leading-snug transition-colors ${isActive ? "text-white" : "text-[#162418]"
+                            }`}
                         >
                           {category.name}
                         </span>
@@ -370,7 +366,7 @@ export default function FAQPage() {
                 RIGHT COLUMN: ALL SECTIONS DISPLAYED SEQUENTIALLY
                ======================================================== */}
             <div className="lg:col-span-8 space-y-16 sm:space-y-20 pt-2">
-              
+
               {/* Main Top Header */}
               <div className="pb-4 border-b border-gray-200">
                 <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#162418] tracking-tight leading-tight">
@@ -387,11 +383,11 @@ export default function FAQPage() {
                 >
                   {/* Category Title with Icon */}
                   <div className="flex items-center gap-3 mb-6 pb-3 border-b border-gray-200">
-                    <div className="w-10 h-10 rounded-xl bg-[#eff5f1] flex items-center justify-center p-2 flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl overflow-hidden shadow-2xs border border-gray-200/80 flex-shrink-0">
                       <img
                         src={category.icon}
                         alt={category.name}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-[#162418] tracking-tight">
@@ -424,11 +420,10 @@ export default function FAQPage() {
 
                               {/* Question Text */}
                               <span
-                                className={`text-xs sm:text-sm md:text-[14.5px] font-bold tracking-tight leading-relaxed transition-colors duration-200 ${
-                                  isOpen
-                                    ? "text-[#52664d]"
-                                    : "text-[#162418] group-hover:text-[#52664d]"
-                                }`}
+                                className={`text-xs sm:text-sm md:text-[14.5px] font-bold tracking-tight leading-relaxed transition-colors duration-200 ${isOpen
+                                  ? "text-[#52664d]"
+                                  : "text-[#162418] group-hover:text-[#52664d]"
+                                  }`}
                               >
                                 {faq.q}
                               </span>
@@ -436,11 +431,10 @@ export default function FAQPage() {
 
                             {/* Plus / Minus Expand Icon with Smooth Rotation */}
                             <div
-                              className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 mt-0.5 ${
-                                isOpen
-                                  ? "bg-[#52664d] text-white rotate-180"
-                                  : "text-gray-400 group-hover:text-[#52664d] group-hover:bg-[#eff5f1]"
-                              }`}
+                              className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 mt-0.5 ${isOpen
+                                ? "bg-[#52664d] text-white rotate-180"
+                                : "text-gray-400 group-hover:text-[#52664d] group-hover:bg-[#eff5f1]"
+                                }`}
                             >
                               {isOpen ? (
                                 <Minus className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -452,9 +446,8 @@ export default function FAQPage() {
 
                           {/* Smooth Collapsible Answer with Slide & Fade Animation */}
                           <div
-                            className={`grid transition-all duration-300 ease-in-out ${
-                              isOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0 mt-0"
-                            }`}
+                            className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0 mt-0"
+                              }`}
                           >
                             <div className="overflow-hidden">
                               <div className="pl-10 sm:pl-12 pr-4 pb-1 text-xs sm:text-[13.5px] text-gray-600 font-normal leading-relaxed">
@@ -482,12 +475,8 @@ export default function FAQPage() {
       <section className="bg-[#52664d] text-white py-10 sm:py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4 text-center sm:text-left">
-            <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0">
-              <img
-                src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/know-more-icon.png"
-                alt="Costing"
-                className="w-7 h-7 object-contain filter brightness-0 invert"
-              />
+            <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 text-white">
+              <HelpCircle className="w-6 h-6 stroke-[2]" />
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">

@@ -1,240 +1,327 @@
 "use client";
 
 import React from "react";
-import { Check, ArrowRight } from "lucide-react";
+import {
+  Check,
+  ShieldCheck,
+  Clock,
+  HeartHandshake,
+  UserCheck,
+  Sparkles,
+  Phone,
+  MapPin,
+  Award,
+  Gem,
+  FlaskConical,
+  PenTool,
+  CheckCircle2,
+  Stethoscope,
+  Microscope,
+} from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface CostTechniquesSectionProps {
   onOpenConsultation?: () => void;
 }
 
+const PACKAGES = [
+  {
+    id: "fue",
+    name: "FUE",
+    grafts: "5000 - 6000 GRAFT REQUIRED",
+    price: 10,
+    headerBg: "bg-[#0b5c53]",
+    headerText: "text-white",
+    cardBorder: "border-[#0b5c53]/20",
+    badge: null,
+    highlightFeatures: [],
+    inclusions: [
+      "4 PRP FREE",
+      "5 DAYS MED FREE",
+      "BANDAGE REMOVAL FREE",
+      "HEADWASH FREE",
+      "BLOOD TEST FREE",
+      "POST TRANSPLANT DOCTOR CONSULTATION FREE",
+    ],
+    checkColor: "bg-[#0b5c53] text-white",
+    ctaBg: "bg-[#0b5c53] hover:bg-[#084740] text-white",
+    needleType: "Micro-Punch Extraction",
+  },
+  {
+    id: "bio-fue",
+    name: "BIO FUE",
+    grafts: "5000 - 6000 GRAFT REQUIRED",
+    price: 15,
+    headerBg: "bg-[#0062b8]",
+    headerText: "text-white",
+    cardBorder: "border-[#0062b8]/30 ring-2 ring-[#0062b8]/20",
+    badge: "INCLUDES DMEM MEDIUM",
+    highlightFeatures: ["DMEM Enriched Medium", "Enhanced Follicle Vitality"],
+    inclusions: [
+      "5 GFC FREE",
+      "5 DAYS MED FREE",
+      "BANDAGE REMOVAL FREE",
+      "HEADWASH FREE",
+      "BLOOD TEST FREE",
+      "POST TRANSPLANT DOCTOR CONSULTATION FREE",
+    ],
+    checkColor: "bg-[#0062b8] text-white",
+    ctaBg: "bg-[#0062b8] hover:bg-[#004f94] text-white",
+    needleType: "Bio-Active Enriched Needle",
+  },
+  {
+    id: "dhi",
+    name: "DHI",
+    grafts: "5000 - 6000 GRAFT REQUIRED",
+    price: 15,
+    headerBg: "bg-[#45277a]",
+    headerText: "text-white",
+    cardBorder: "border-[#45277a]/20",
+    badge: null,
+    highlightFeatures: ["Direct Hair Implantation", "No Channel Slit Trauma"],
+    inclusions: [
+      "3 GFC FREE",
+      "5 DAYS MED FREE",
+      "BANDAGE REMOVAL FREE",
+      "HEADWASH FREE",
+      "BLOOD TEST FREE",
+      "POST TRANSPLANT DOCTOR CONSULTATION FREE",
+    ],
+    checkColor: "bg-[#45277a] text-white",
+    ctaBg: "bg-[#45277a] hover:bg-[#341d5e] text-white",
+    needleType: "Direct Micro Implanter Pen",
+  },
+  {
+    id: "premium-dhi",
+    name: "PREMIUM DHI",
+    grafts: "5000 - 6000 GRAFT REQUIRED",
+    price: 25,
+    headerBg: "bg-[#161a18]",
+    headerText: "text-[#ffd700]",
+    cardBorder: "border-[#ffd700]/50 ring-2 ring-[#ffd700]/30 shadow-2xl",
+    badge: "BEST CLINICAL GRADE",
+    isFeatured: true,
+    highlightFeatures: ["SAPPHIRE BLADE", "DHI PEN", "DMEM MEDIUM"],
+    inclusions: [
+      "6 GFC FREE",
+      "5 DAYS MED FREE",
+      "BANDAGE REMOVAL FREE",
+      "HEADWASH FREE",
+      "BLOOD TEST FREE",
+      "POST TRANSPLANT DOCTOR CONSULTATION FREE",
+    ],
+    checkColor: "bg-[#ffd700] text-black",
+    ctaBg: "bg-gradient-to-r from-[#ffd700] to-[#f59e0b] hover:from-[#f59e0b] hover:to-[#d97706] text-black font-bold",
+    needleType: "Sapphire Blade + Direct Pen",
+  },
+];
+
 export default function CostTechniquesSection({
   onOpenConsultation,
 }: CostTechniquesSectionProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f7f4] overflow-hidden">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Top Header Row with Number 1 Badge */}
-        <div className="flex items-center justify-between pb-4 border-b border-gray-300 mb-10">
-          <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight">
-              Hair Transplant Cost by Technique
-            </h2>
+        {/* 1. Header with Badges */}
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 bg-[#596d53]/10 text-[#596d53] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            <span>Natural Hair • Next Gen You</span>
           </div>
-          <div className="hidden sm:flex items-center justify-center w-8 h-8 rounded border border-gray-400 text-xs font-semibold text-gray-700">
-            1
-          </div>
-        </div>
 
-        {/* Intro Subtitle */}
-        <div className="max-w-4xl mb-12">
-          <p className="text-sm sm:text-lg text-[#5c685f] leading-relaxed font-normal">
-            Hair transplant cost in India depends on the technique used and the number of grafts required. The primary techniques are FUE, FUT and {COMPANY_NAME}. The number of grafts is determined based on the extent of baldness, commonly assessed using the Norwood scale.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight">
+            Transparent Per-Graft Pricing Packages
+          </h2>
+
+          <p className="text-sm sm:text-base text-[#5c685f] max-w-2xl mx-auto leading-relaxed">
+            Choose from our specialized restoration protocols at {COMPANY_NAME}. All packages include complete diagnostic tests, recovery medications, post-op headwash, and complimentary GFC/PRP sessions.
           </p>
+
+          {/* Top Trust Icons */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-2 py-2 px-3 bg-white rounded-xl shadow-xs border border-gray-100 text-xs font-semibold text-[#1b221d]">
+              <Stethoscope className="w-4 h-4 text-[#596d53]" />
+              <span>Expert Doctors</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 py-2 px-3 bg-white rounded-xl shadow-xs border border-gray-100 text-xs font-semibold text-[#1b221d]">
+              <Microscope className="w-4 h-4 text-[#596d53]" />
+              <span>Advanced Technology</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 py-2 px-3 bg-white rounded-xl shadow-xs border border-gray-100 text-xs font-semibold text-[#1b221d]">
+              <ShieldCheck className="w-4 h-4 text-[#596d53]" />
+              <span>Safe & Painless</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 py-2 px-3 bg-white rounded-xl shadow-xs border border-gray-100 text-xs font-semibold text-[#1b221d]">
+              <Sparkles className="w-4 h-4 text-[#596d53]" />
+              <span>Natural Looking</span>
+            </div>
+          </div>
         </div>
 
-        {/* 3 Pricing Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch max-w-6xl mx-auto">
+        {/* 2. The 4 Technique Pricing Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-16">
+          {PACKAGES.map((pkg) => (
+            <div
+              key={pkg.id}
+              className={`rounded-3xl overflow-hidden bg-white shadow-md border ${pkg.cardBorder} flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1 relative`}
+            >
+              {/* Card Header */}
+              <div className={`${pkg.headerBg} ${pkg.headerText} p-5 text-center relative`}>
+                <h3 className="text-2xl font-extrabold tracking-wide uppercase">
+                  {pkg.name}
+                </h3>
+                <p className="text-[11px] font-semibold opacity-90 tracking-wider mt-1">
+                  {pkg.grafts}
+                </p>
+              </div>
 
-          {/* 1. FUT Technique (White Card) */}
-          <div className="bg-white rounded-3xl p-7 sm:p-8 shadow-xs border border-gray-100/90 flex flex-col justify-between">
-            <div>
-              <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
-                FUT Technique
-              </span>
-              <h3 className="text-lg sm:text-xl font-[500] text-[#1b221d] mb-2">
-                Follicular Unit Transplantation
-              </h3>
-              <p className="text-xs text-[#5c685f] leading-relaxed font-normal min-h-[60px]">
-                Strip-harvesting technique. Ideal for advanced baldness (Norwood 4–7) requiring a high number of grafts in a single session. Most cost-effective per-graft rate.
-              </p>
-
-              {/* Price Row */}
-              <div className="pt-4 pb-4 my-4 border-y border-gray-100 flex items-center justify-between">
+              {/* Card Body */}
+              <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
+                {/* Special Highlight Pills */}
                 <div>
-                  <span className="text-[11px] text-gray-500 block font-medium">
-                    Per graft onwards
-                  </span>
-                  <span className="text-xs font-semibold text-gray-800">
-                    Total: ₹90,000 – ₹2,50,000
-                  </span>
+                  {pkg.id === "bio-fue" && (
+                    <div className="mb-3 py-1 px-2.5 rounded-lg bg-amber-50 border border-amber-300 text-amber-900 text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-xs">
+                      <FlaskConical className="w-3.5 h-3.5 text-amber-600" />
+                      <span>INCLUDES DMEM MEDIUM</span>
+                    </div>
+                  )}
+
+                  {pkg.id === "premium-dhi" && (
+                    <div className="space-y-1.5 mb-3">
+                      <div className="py-1 px-2 rounded-md bg-[#161a18] text-[#ffd700] text-[11px] font-bold flex items-center gap-1.5">
+                        <Gem className="w-3.5 h-3.5" />
+                        <span>SAPPHIRE BLADE</span>
+                      </div>
+                      <div className="py-1 px-2 rounded-md bg-[#161a18] text-[#ffd700] text-[11px] font-bold flex items-center gap-1.5">
+                        <PenTool className="w-3.5 h-3.5" />
+                        <span>DHI PEN</span>
+                      </div>
+                      <div className="py-1 px-2 rounded-md bg-[#161a18] text-[#ffd700] text-[11px] font-bold flex items-center gap-1.5">
+                        <FlaskConical className="w-3.5 h-3.5" />
+                        <span>DMEM MEDIUM</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Price Tag */}
+                  <div className="text-center py-4 border-b border-gray-100 bg-[#f9fbf9] rounded-2xl">
+                    <div className="flex items-baseline justify-center text-[#1b221d]">
+                      <span className="text-2xl font-extrabold mr-1">₹</span>
+                      <span className="text-5xl font-extrabold tracking-tight">{pkg.price}</span>
+                    </div>
+                    <span className="text-xs font-bold text-gray-500 uppercase tracking-wider block mt-1">
+                      Per Graft
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-baseline text-[#1b221d]">
-                  <span className="text-lg font-bold mr-0.5">₹</span>
-                  <span className="text-3xl sm:text-4xl font-extrabold tracking-tight">50</span>
+
+                {/* Free Inclusions Checklist */}
+                <div className="space-y-3 pt-2">
+                  <span className="text-[10px] uppercase font-bold text-gray-400 tracking-wider block">
+                    Complimentary Inclusions
+                  </span>
+                  <ul className="space-y-2.5 text-xs text-gray-800 font-semibold">
+                    {pkg.inclusions.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2.5">
+                        <div
+                          className={`w-4 h-4 rounded-full ${pkg.checkColor} flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs`}
+                        >
+                          <Check className="w-2.5 h-2.5 stroke-[3]" />
+                        </div>
+                        <span className="leading-tight">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* CTA Button */}
+                <div className="pt-4">
+                  <button
+                    onClick={onOpenConsultation}
+                    className={`w-full py-3 px-4 rounded-full text-xs sm:text-sm font-bold shadow-md transition-all active:scale-95 duration-150 cursor-pointer ${pkg.ctaBg}`}
+                  >
+                    Select {pkg.name} Package
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 3. "Why Choose NexGen Hair Transplant?" Banner */}
+        <div className="bg-[#12232c] text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-white/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left 5 Pillars */}
+            <div className="lg:col-span-8 space-y-6">
+              <div className="text-center sm:text-left">
+                <span className="text-xs uppercase font-bold text-[#b1fc85] tracking-widest block mb-1">
+                  Excellence Guaranteed
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-[500] text-white tracking-tight">
+                  Why Choose NexGen Hair Transplant?
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 pt-2">
+                <div className="flex flex-col items-center text-center p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                  <Sparkles className="w-7 h-7 text-[#b1fc85] mb-2" />
+                  <span className="text-xs font-bold leading-tight">NATURAL HAIRLINE</span>
+                </div>
+                <div className="flex flex-col items-center text-center p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                  <Clock className="w-7 h-7 text-[#b1fc85] mb-2" />
+                  <span className="text-xs font-bold leading-tight">MINIMAL DOWNTIME</span>
+                </div>
+                <div className="flex flex-col items-center text-center p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                  <ShieldCheck className="w-7 h-7 text-[#b1fc85] mb-2" />
+                  <span className="text-xs font-bold leading-tight">SAFE & PROVEN METHODS</span>
+                </div>
+                <div className="flex flex-col items-center text-center p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                  <UserCheck className="w-7 h-7 text-[#b1fc85] mb-2" />
+                  <span className="text-xs font-bold leading-tight">PERSONALIZED CARE</span>
+                </div>
+                <div className="flex flex-col items-center text-center p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors col-span-2 sm:col-span-1">
+                  <HeartHandshake className="w-7 h-7 text-[#b1fc85] mb-2" />
+                  <span className="text-xs font-bold leading-tight">COMPLETE SUPPORT</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Callout Box */}
+            <div className="lg:col-span-4 bg-gradient-to-br from-[#1b343f] to-[#0e1d24] rounded-2xl p-6 sm:p-7 border border-white/15 text-center flex flex-col justify-between space-y-4">
+              <div className="space-y-1">
+                <h4 className="text-lg sm:text-xl font-extrabold text-white tracking-wide">
+                  YOUR HAIR. OUR EXPERTISE.
+                </h4>
+                <p className="text-sm text-[#b1fc85] italic font-serif">
+                  Perfect Combination for a Better You.
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-white/10 text-xs text-gray-300 space-y-2 text-left">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-[#b1fc85] flex-shrink-0" />
+                  <span className="font-semibold text-white">8797363636 / 9296993636</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-3.5 h-3.5 text-[#b1fc85] flex-shrink-0 mt-0.5" />
+                  <span>Pillar No-55, Razabazar, Patna</span>
                 </div>
               </div>
 
-              {/* Features List */}
-              <ul className="space-y-3.5 my-6 text-xs text-gray-700">
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Best for Norwood Grade 4–7</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Maximum grafts in one session</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Linear donor scar (concealable)</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Lower per-graft cost</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Suitable for longer hairstyles</span>
-                </li>
-              </ul>
+              <button
+                onClick={onOpenConsultation}
+                className="w-full py-2.5 px-4 rounded-full bg-[#b1fc85] hover:bg-[#9ee074] text-[#12232c] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 duration-150"
+              >
+                Book Your Consultation Today
+              </button>
             </div>
+
           </div>
-
-          {/* 2. FUE Technique (Featured Dark Olive Green Card) */}
-          <div className="bg-[#52664d] text-white rounded-3xl p-7 sm:p-8 shadow-xl border border-white/10 flex flex-col justify-between">
-            <div>
-              <span className="text-[11px] font-bold text-[#b1fc85] uppercase tracking-wider block mb-1">
-                FUE Technique
-              </span>
-              <h3 className="text-lg sm:text-xl font-[500] text-white mb-2">
-                Follicular Unit Extraction
-              </h3>
-              <p className="text-xs text-white/85 leading-relaxed font-normal min-h-[60px]">
-                Minimally invasive, no linear scar. Each follicle is extracted individually. Gold-standard technique for permanent restoration globally, suitable for scalp and facial hair.
-              </p>
-
-              {/* Price Row */}
-              <div className="pt-4 pb-4 my-4 border-y border-white/20 flex items-center justify-between">
-                <div>
-                  <span className="text-[11px] text-white/80 block font-medium">
-                    Per graft onwards
-                  </span>
-                  <span className="text-xs font-semibold text-white">
-                    Total: ₹56,000 – ₹4,20,000
-                  </span>
-                </div>
-                <div className="flex items-baseline text-[#b1fc85]">
-                  <span className="text-lg font-bold mr-0.5">₹</span>
-                  <span className="text-3xl sm:text-4xl font-extrabold tracking-tight">70</span>
-                </div>
-              </div>
-
-              {/* Features List */}
-              <ul className="space-y-3.5 my-6 text-xs text-white/90">
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#b1fc85] text-[#1b221d] flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Suitable for Norwood Grade 2–7</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#b1fc85] text-[#1b221d] flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>No linear scar – short hair compatible</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#b1fc85] text-[#1b221d] flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Minimally Invasive procedure</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#b1fc85] text-[#1b221d] flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Suitable for scalp + facial hair</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#b1fc85] text-[#1b221d] flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Gold standard globally</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* 3. QHT Technique (White Card) */}
-          <div className="bg-white rounded-3xl p-7 sm:p-8 shadow-xs border border-gray-100/90 flex flex-col justify-between">
-            <div>
-              <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
-                {COMPANY_NAME} Advanced Technique
-              </span>
-              <h3 className="text-lg sm:text-xl font-[500] text-[#1b221d] mb-2">
-                Direct Follicular Implantation
-              </h3>
-              <p className="text-xs text-[#5c685f] leading-relaxed font-normal min-h-[60px]">
-                {COMPANY_NAME}’s specialized direct micro-implantation protocol reduces out-of-body holding time for maximum graft viability, accelerated recovery, and seamless hairline density.
-              </p>
-
-              {/* Price Row */}
-              <div className="pt-4 pb-4 my-4 border-y border-gray-100 flex items-center justify-between">
-                <div>
-                  <span className="text-[11px] text-gray-500 block font-medium">
-                    Per graft onwards
-                  </span>
-                  <span className="text-xs font-semibold text-gray-800">
-                    Total: ₹80,000 – ₹5,00,000
-                  </span>
-                </div>
-                <div className="flex items-baseline text-[#1b221d]">
-                  <span className="text-lg font-bold mr-0.5">₹</span>
-                  <span className="text-3xl sm:text-4xl font-extrabold tracking-tight">100</span>
-                </div>
-              </div>
-
-              {/* Features List */}
-              <ul className="space-y-3.5 my-6 text-xs text-gray-700">
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Optimized graft viability via minimal out-of-body holding time</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Surgeon-guided rapid extraction and direct implantation</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Precision micro-implanter depth and angle control</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Rapid recovery with minimal post-op downtime</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <span>Maximum follicular density and natural soft-edge hairline</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </section>
   );
 }
+

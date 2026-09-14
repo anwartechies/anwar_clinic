@@ -21,128 +21,74 @@ interface ClinicBranchData {
 
 const CLINIC_BRANCHES: ClinicBranchData[] = [
   {
-    id: "delhi",
-    tabLabel: "Delhi",
+    id: "patna",
+    tabLabel: "Patna (Main Branch)",
     tabIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* India Gate */}
-        <path d="M4 21V6H20V21" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M2 6H22V4H2V6Z" />
-        <path d="M8 21V11C8 9.5 16 9.5 16 11V21" strokeLinecap="round" />
+        {/* Clinic / Building */}
+        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h2M13 10h2M9 14h2M13 14h2M9 18h2M13 18h2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: `${COMPANY_NAME} — Delhi Center`,
+    title: `${COMPANY_NAME} — Patna (Main Branch)`,
     subtitle:
-      `Our Delhi restoration center offers precision micro-follicular procedures with senior surgeon care and natural results.`,
+      `Our Patna flagship center features world-class sterile surgical suites, comprehensive trichoscopy diagnostics, and senior surgeon care.`,
     address:
-      "D-15, Outer Ring Rd, Opp. Prashant Vihar Metro Station, Sector 14, Rohini, New Delhi, Delhi, 110085",
-    phone: "+91 7217033844",
+      "Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014",
+    phone: "+91 9084726916",
     email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
+        url: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-10-57-pm-mu16ng7ufd4rtc.jpeg",
         caption: "Main Reception & Consultation Hallway",
       },
       {
-        url: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+        url: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
         caption: "Sterile Procedure OT Room",
       },
+      // {
+      //   url: "",
+      //   caption: "Microscopic Graft Segregation Station",
+      // },
       {
-        url: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
-        caption: "Microscopic Graft Segregation Station",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1200&q=80",
+        url: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/e-mu16nfv3eg6j4g.jpeg",
         caption: "Post-Operative Recovery Lounge",
       },
     ],
   },
   {
-    id: "uttarakhand",
-    tabLabel: "Uttarakhand",
+    id: "mumbai",
+    tabLabel: "Mumbai (Second Branch)",
     tabIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Temple / Mountain Gateway */}
-        <path d="M4 8H20V10H4V8Z" />
-        <path d="M7 10V21M17 10V21" />
-        <path d="M3 6L12 2L21 6" strokeLinecap="round" />
+        {/* Gateway / Metropolitan */}
+        <path d="M4 21V6H20V21" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2 6H22V4H2V6Z" />
+        <path d="M8 21V11C8 9.5 16 9.5 16 11V21" strokeLinecap="round" />
       </svg>
     ),
-    title: `${COMPANY_NAME} — Uttarakhand Center`,
+    title: `${COMPANY_NAME} — Mumbai (Second Branch)`,
     subtitle:
-      `Our Haridwar flagship center features world-class sterile surgical suites and comprehensive pre-op trichoscopy diagnostics.`,
+      `Our Mumbai restoration center provides precision graft implantation, advanced scalp analysis, and personalized consultations.`,
     address:
-      "Near Arya Samaj Mandir, Jwalapur, Haridwar, Uttarakhand - 249407",
+      "Bandra West / Andheri, Mumbai, Maharashtra",
     phone: "+91 9084726916",
     email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
-        caption: "Haridwar Main Clinic Suite",
+        url: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-10-57-pm-mu16ng7ufd4rtc.jpeg",
+        caption: "Main Reception & Consultation Hallway",
       },
       {
-        url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-        caption: "Patient Care & Waiting Lounge",
+        url: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
+        caption: "Sterile Procedure OT Room",
       },
+      // {
+      //   url: "",
+      //   caption: "Microscopic Graft Segregation Station",
+      // },
       {
-        url: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
-        caption: "Trichoscopy & Scalp Diagnostics OT",
-      },
-    ],
-  },
-  {
-    id: "hyderabad",
-    tabLabel: "Hyderabad",
-    tabIcon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Charminar 4 Towers */}
-        <path d="M4 21V7L6 5V21M20 21V7L18 5V21" />
-        <path d="M6 12C6 8 18 8 18 12V21H6V12Z" />
-      </svg>
-    ),
-    title: `${COMPANY_NAME} — Hyderabad Center`,
-    subtitle:
-      `Our Hyderabad center provides precision graft implantation and personalized consultations for South India.`,
-    address:
-      "Road No. 36, Jubilee Hills, Hyderabad, Telangana - 500033",
-    phone: "+91 9084726916",
-    email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
-        caption: "Hyderabad Jubilee Hills Surgical Wing",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-        caption: "Private Consultation Rooms",
-      },
-    ],
-  },
-  {
-    id: "gurugram",
-    tabLabel: "Gurugram",
-    tabIcon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Highrise */}
-        <path d="M12 3L17 7V21H7V7L12 3Z" />
-        <line x1="12" y1="3" x2="12" y2="21" />
-      </svg>
-    ),
-    title: `${COMPANY_NAME} — Gurugram Center`,
-    subtitle:
-      `Our Gurugram center delivers state-of-the-art scalp analysis and premium hair restoration care.`,
-    address:
-      "Golf Course Extension Road, Sector 57, Gurugram, Haryana - 122003",
-    phone: "+91 7217033844",
-    email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1200&q=80",
-        caption: "Gurugram Executive Diagnostic Suite",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-        caption: "Sterile OT Suite",
+        url: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/e-mu16nfv3eg6j4g.jpeg",
+        caption: "Post-Operative Recovery Lounge",
       },
     ],
   },
@@ -155,7 +101,7 @@ interface ClinicShowcaseSectionProps {
 export default function ClinicShowcaseSection({
   onOpenConsultation,
 }: ClinicShowcaseSectionProps) {
-  const [activeTab, setActiveTab] = useState<string>("delhi");
+  const [activeTab, setActiveTab] = useState<string>("patna");
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   const currentBranch =
@@ -190,7 +136,7 @@ export default function ClinicShowcaseSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Heading & Intro */}
         <div className="max-w-5xl mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14] mb-4">
@@ -211,11 +157,10 @@ export default function ClinicShowcaseSection({
                 key={branch.id}
                 type="button"
                 onClick={() => handleTabChange(branch.id)}
-                className={`flex items-center gap-2 px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
-                  isActive
-                    ? "bg-[#52664d] text-white shadow-md"
-                    : "bg-white text-gray-700 border border-gray-300/80 hover:bg-gray-50 hover:border-gray-400"
-                }`}
+                className={`flex items-center gap-2 px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${isActive
+                  ? "bg-[#52664d] text-white shadow-md"
+                  : "bg-white text-gray-700 border border-gray-300/80 hover:bg-gray-50 hover:border-gray-400"
+                  }`}
               >
                 <span className={isActive ? "text-white" : "text-[#52664d]"}>
                   {branch.tabIcon}
@@ -228,13 +173,13 @@ export default function ClinicShowcaseSection({
 
         {/* Main Content Grid: Left Details Sidebar + Right Image Gallery Slideshow */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          
+
           {/* Left Column: Contact Card + Get An Expert Assistance */}
           <div className="lg:col-span-4 space-y-6">
-            
+
             {/* Contact Card */}
             <div className="bg-[#eff5f1] rounded-3xl p-6 sm:p-7 space-y-4 border border-gray-200/50 shadow-2xs">
-              
+
               {/* Address */}
               <div className="flex items-start gap-3.5 pb-3.5 border-b border-gray-300/40">
                 <div className="w-8 h-8 rounded-full bg-[#52664d] text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
@@ -301,7 +246,7 @@ export default function ClinicShowcaseSection({
 
           {/* Right Column: Branch Title + 10s Automatic Image Slideshow */}
           <div className="lg:col-span-8 flex flex-col">
-            
+
             {/* Branch Showcase Header */}
             <div className="mb-6">
               <h3 className="text-2xl sm:text-3xl font-[500] text-[#1b221d] mb-2 tracking-tight">
@@ -314,7 +259,7 @@ export default function ClinicShowcaseSection({
 
             {/* Slideshow Container with peek next image */}
             <div className="relative flex items-center gap-4 sm:gap-6 overflow-hidden">
-              
+
               {/* Main Active Slide */}
               <div className="relative flex-1 rounded-3xl overflow-hidden shadow-xl border border-gray-200/80 bg-gray-900 h-[360px] sm:h-[440px] group">
                 <img
@@ -322,7 +267,7 @@ export default function ClinicShowcaseSection({
                   alt={currentBranch.images[currentImageIndex].caption}
                   className="w-full h-full object-cover transition-all duration-700 ease-out"
                 />
-                
+
                 {/* Gradient bottom overlay with caption */}
                 <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end justify-between">
                   <span className="text-xs sm:text-sm font-semibold text-white drop-shadow">
@@ -336,11 +281,10 @@ export default function ClinicShowcaseSection({
                         key={dotIdx}
                         type="button"
                         onClick={() => setCurrentImageIndex(dotIdx)}
-                        className={`h-1.5 rounded-full transition-all duration-300 ${
-                          currentImageIndex === dotIdx
-                            ? "w-6 bg-[#b1fc85]"
-                            : "w-2 bg-white/50 hover:bg-white"
-                        }`}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${currentImageIndex === dotIdx
+                          ? "w-6 bg-[#b1fc85]"
+                          : "w-2 bg-white/50 hover:bg-white"
+                          }`}
                       />
                     ))}
                   </div>

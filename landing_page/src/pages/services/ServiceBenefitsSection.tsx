@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import { CheckCircle2, Sparkles, ShieldCheck, Clock, Star } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface BenefitItem {
   id?: number;
-  icon: string;
+  icon?: string | React.ReactNode;
   title: string;
   desc: string;
 }
@@ -20,31 +21,31 @@ interface ServiceBenefitsSectionProps {
 const DEFAULT_BENEFITS: BenefitItem[] = [
   {
     id: 1,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-benefit-icon-1.webp",
+    icon: <CheckCircle2 className="w-8 h-8 text-[#bde876]" />,
     title: "Hairline Restoration",
     desc: "The unnatural hairlines are corrected, and a natural look is implemented.",
   },
   {
     id: 2,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-2.png",
+    icon: <Sparkles className="w-8 h-8 text-[#bde876]" />,
     title: "Permanent Results",
     desc: `The Corrective Hair Transplant procedures at ${COMPANY_NAME} Clinic ensure natural and long-lasting results.`,
   },
   {
     id: 3,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-3.png",
+    icon: <ShieldCheck className="w-8 h-8 text-[#bde876]" />,
     title: "Using Advanced techniques",
     desc: `The repair methods used by experts at ${COMPANY_NAME} Clinic are safe and leave negligible scars.`,
   },
   {
     id: 4,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-4.png",
+    icon: <Clock className="w-8 h-8 text-[#bde876]" />,
     title: "Quick Healing Process",
     desc: "New methods of Hair Transplant Repair are less invasive with less recovery time.",
   },
   {
     id: 5,
-    icon: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-icon-5.png",
+    icon: <Star className="w-8 h-8 text-[#bde876]" />,
     title: "Customised Repair",
     desc: `${COMPANY_NAME} Clinic makes sure that the repair plan is tailored to the needs and satisfaction of the patient.`,
   },
@@ -57,6 +58,14 @@ export default function ServiceBenefitsSection({
   onOpenConsultation,
 }: ServiceBenefitsSectionProps) {
   const defaultSubtitle = `The ${title} fixes transplant mistakes and gives a natural look.\nWe at ${COMPANY_NAME} Clinic benefits patients in the following ways:`;
+
+  const safeBenefits = (benefits && benefits.length > 0 ? benefits : DEFAULT_BENEFITS).map((b, idx) => {
+    const isQht = typeof b.icon === "string" && b.icon.includes("qhtclinic.com");
+    return {
+      ...b,
+      icon: isQht ? DEFAULT_BENEFITS[idx % DEFAULT_BENEFITS.length].icon : b.icon,
+    };
+  });
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#38493a] text-white overflow-hidden">
@@ -78,7 +87,7 @@ export default function ServiceBenefitsSection({
 
         {/* Benefits List with Dividers */}
         <div className="border-t border-white/20">
-          {benefits.map((item, index) => (
+          {safeBenefits.map((item, index) => (
             <div
               key={item.id ?? index}
               className="py-7 sm:py-9 border-b border-white/20 flex flex-col md:flex-row md:items-center justify-between gap-6 sm:gap-8 group"
@@ -87,11 +96,15 @@ export default function ServiceBenefitsSection({
               <div className="flex items-center gap-5 sm:gap-7 md:w-1/2">
                 {/* Circular Icon */}
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#8ea987]/60 bg-white/5 flex items-center justify-center p-3 flex-shrink-0 group-hover:border-white/80 group-hover:bg-white/10 transition-all duration-300">
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="w-full h-full object-contain"
-                  />
+                  {typeof item.icon === "string" && (item.icon.startsWith("http") || item.icon.startsWith("/")) ? (
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    item.icon
+                  )}
                 </div>
 
                 {/* Benefit Title */}

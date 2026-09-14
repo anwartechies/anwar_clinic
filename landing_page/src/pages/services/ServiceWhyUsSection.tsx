@@ -65,9 +65,9 @@ export default function ServiceWhyUsSection({
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start justify-between">
             <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
               <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp"
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
                 alt={`Why Choose ${COMPANY_NAME} Clinic`}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover rounded-2xl shadow-md"
               />
             </div>
 

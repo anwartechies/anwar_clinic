@@ -81,10 +81,10 @@ export default function MedicalWhyQHTSection() {
             </span>
           </div>
 
-          {/* 4. Stat Circle: 4 Clinic Branches in India (Bottom Right) */}
+          {/* 4. Stat Circle: 2 Clinic Branches in India (Bottom Right) */}
           <div className="hidden lg:flex absolute right-[13%] bottom-[8%] z-20 w-36 h-36 xl:w-40 xl:h-40 rounded-full bg-white text-[#162418] shadow-2xl flex-col items-center justify-center text-center p-4 border border-white/80 transform hover:scale-105 transition-transform duration-300">
             <span className="text-3xl xl:text-4xl font-extrabold text-[#5c7a4f] tracking-tight">
-              4
+              2
             </span>
             <span className="text-[11px] xl:text-xs font-semibold text-gray-800 leading-tight mt-1 max-w-[95px]">
               Clinic Branches in India
@@ -189,7 +189,7 @@ export default function MedicalWhyQHTSection() {
               <span className="text-xs font-semibold text-gray-800 mt-1 block">Doctor-Led Procedures</span>
             </div>
             <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-white/80">
-              <span className="text-3xl font-extrabold text-[#5c7a4f] block">4</span>
+              <span className="text-3xl font-extrabold text-[#5c7a4f] block">2</span>
               <span className="text-xs font-semibold text-gray-800 mt-1 block">Clinic Branches in India</span>
             </div>
           </div>

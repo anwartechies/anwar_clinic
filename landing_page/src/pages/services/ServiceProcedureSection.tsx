@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { COMPANY_NAME } from "@/config/constants";
 
 interface ProcedureStep {
@@ -82,11 +82,9 @@ export default function ServiceProcedureSection({
 
             {/* Stat Card 2: Minimal Pain */}
             <div className="w-[140px] sm:w-[160px] aspect-square rounded-3xl border border-gray-200/90 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-md transition-shadow">
-              <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-procedure-pain-icon.webp"
-                alt="Minimal Pain"
-                className="w-8 h-8 sm:w-9 sm:h-9 object-contain"
-              />
+              <div className="w-10 h-10 rounded-full bg-[#596d53]/10 flex items-center justify-center text-[#596d53]">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
               <span className="text-xs sm:text-sm font-semibold text-[#596d53] leading-tight">
                 Minimal Pain
               </span>
@@ -101,9 +99,9 @@ export default function ServiceProcedureSection({
           <div className="lg:col-span-5 flex flex-col items-center lg:items-start justify-between">
             <div className="relative w-full max-w-[340px] aspect-square flex items-center justify-center">
               <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-procedure-thumb.webp"
-                alt="Procedure Before & Post Surgery Diagram"
-                className="w-full h-full object-contain"
+                src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80"
+                alt="Procedure Clinical Demonstration"
+                className="w-full h-full object-cover rounded-2xl shadow-md"
               />
             </div>
 

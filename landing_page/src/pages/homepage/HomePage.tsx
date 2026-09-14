@@ -50,7 +50,7 @@ export default function HomePage() {
       <TransformationGallery onOpenConsultation={openConsultation} />
 
       {/* 10. Free E-Book Guide Lead Generation Form */}
-      <EbookCatalogueForm />
+      {/* <EbookCatalogueForm /> */}
 
       {/* 11. Verified Google Reviews Carousel */}
       <GoogleReviews />

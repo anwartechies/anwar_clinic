@@ -93,6 +93,27 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
               </a>
             </div>
 
+            {/* Second Clinic Center - Mumbai */}
+            <div className="pt-1 pb-4 border-b border-white/10">
+              <span className="inline-block bg-white/10 text-white font-semibold text-xs px-3 py-1 rounded border border-white/15 mb-2.5">
+                Second Branch
+              </span>
+              <p className="font-bold text-white text-base">
+                {COMPANY_NAME} Mumbai
+              </p>
+              <p className="leading-relaxed text-xs sm:text-sm text-[#cdd7cb] mt-1.5">
+                Bandra West / Andheri, Mumbai, Maharashtra
+              </p>
+              <a
+                href="https://maps.google.com/?q=Mumbai+Maharashtra"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 text-xs text-[#baf788] hover:underline font-medium mt-2"
+              >
+                <span>View on Google Maps →</span>
+              </a>
+            </div>
+
             {/* Phone & Email Row */}
             <div className="flex items-center justify-between pt-2 text-sm sm:text-[15px] font-medium text-white">
               <a

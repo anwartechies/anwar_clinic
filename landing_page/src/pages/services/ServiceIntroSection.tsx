@@ -21,9 +21,9 @@ interface ServiceIntroSectionProps {
 }
 
 const DEFAULT_BLOCK1_IMAGE =
-  "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp";
+  "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80";
 const DEFAULT_BLOCK2_IMAGE =
-  "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp";
+  "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80";
 
 export default function ServiceIntroSection({
   title = "Bad Hair Transplant Correction",
@@ -40,8 +40,15 @@ export default function ServiceIntroSection({
   block2Image = DEFAULT_BLOCK2_IMAGE,
   onOpenConsultation,
 }: ServiceIntroSectionProps) {
-  // Defaults are interpolated from the service title so an unedited service
-  // still reads correctly; any field set in the admin panel wins.
+  const safeBlock1Image =
+    !block1Image || block1Image.includes("qhtclinic.com") || block1Image.includes("sd-why-us-thumb")
+      ? DEFAULT_BLOCK1_IMAGE
+      : block1Image;
+  const safeBlock2Image =
+    !block2Image || block2Image.includes("qhtclinic.com") || block2Image.includes("sd-why-us-thumb")
+      ? DEFAULT_BLOCK2_IMAGE
+      : block2Image;
+
   const heading1 = block1Heading || `Understanding ${title}`;
   const lead1 = block1Lead || `Tailored clinical care designed for lasting aesthetic results.`;
   const paras1 =
@@ -98,7 +105,7 @@ export default function ServiceIntroSection({
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-[#f4f7f4] aspect-[4/3] sm:aspect-[16/11]">
               <img
-                src={block1Image}
+                src={safeBlock1Image}
                 alt={heading1}
                 className="w-full h-full object-cover object-center"
               />
@@ -132,7 +139,7 @@ export default function ServiceIntroSection({
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-[#f4f7f4] aspect-[4/3] sm:aspect-[16/11]">
               <img
-                src={block2Image}
+                src={safeBlock2Image}
                 alt={heading2}
                 className="w-full h-full object-cover object-center"
               />

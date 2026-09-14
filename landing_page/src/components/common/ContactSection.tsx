@@ -19,19 +19,9 @@ const DEFAULT_CLINIC_LOCATIONS: ClinicLocation[] = [
     mapLink: "https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z",
   },
   {
-    city: "Delhi",
-    address: "D -15, Outer Ring Rd, Prashant Vihar, Sector 14, Rohini, New Delhi, Delhi, 110085",
-    mapLink: "https://maps.app.goo.gl/mnvSFb9vCh5QGe7A8",
-  },
-  {
-    city: "Hyderabad",
-    address: `${COMPANY_NAME}, Road No. 2, Banjara Hills, Hyderabad, Telangana`,
-    mapLink: "https://maps.app.goo.gl/NcNQH3MtLWponejy8",
-  },
-  {
-    city: "Gurugram",
-    address: "Plot No 3, Sector 46, Gurugram, Haryana 122022",
-    mapLink: "https://maps.app.goo.gl/kbHcpPe1jS8xJHMD9",
+    city: "Mumbai (Second Branch)",
+    address: `${COMPANY_NAME}, Mumbai, Maharashtra`,
+    mapLink: "https://maps.google.com/?q=Mumbai+Maharashtra",
   },
 ];
 
@@ -256,9 +246,9 @@ export default function ContactSection({
 
         </div>
 
-        {/* Bottom Half: 4 Clinic Location Cards */}
+        {/* Bottom Half: Clinic Location Cards */}
         {showLocations && (
-          <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          <div className={`mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 ${locations.length <= 2 ? "lg:grid-cols-2 max-w-4xl mx-auto" : "lg:grid-cols-4"} gap-6 items-stretch`}>
             {locations.map((loc, idx) => (
               <a
                 key={idx}

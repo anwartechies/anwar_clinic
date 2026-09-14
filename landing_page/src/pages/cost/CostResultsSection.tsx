@@ -29,7 +29,7 @@ const COST_RESULTS_CARDS: CostResultItem[] = [
     id: 2,
     name: "Kshitij Ahuja",
     beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-1-mtzmbn4vqwbdn3.png",
-    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-2-mtzmdijf5120tx.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-2-mtzv0lk8j638b7.png",
     grafts: "2,800 Grafts",
     technique: `${COMPANY_NAME} Technique`,
     months: "8 Months Result",
@@ -46,8 +46,8 @@ const COST_RESULTS_CARDS: CostResultItem[] = [
   {
     id: 4,
     name: "Pranav Meshram",
-    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-5-mtzmidwcu9uedr.png",
-    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-13-2026-02-25-44-pm-mtzkx8trmehq12.png",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-5-mtzurmt0h3tm7w.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-13-2026-02-25-44-pm-mtzuuboggumj3g.png",
     grafts: "4,000 Grafts",
     technique: "FUE Technique",
     months: "10 Months Result",
@@ -185,13 +185,7 @@ export default function CostResultsSection() {
           </div>
 
           {/* QHT Circular Root Vector Motif */}
-          <div className="flex-shrink-0">
-            <img
-              src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-result-vector.webp"
-              alt={`${COMPANY_NAME} Motif`}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain opacity-90"
-            />
-          </div>
+
         </div>
 
         {/* 6 Cards 3-Column Grid */}

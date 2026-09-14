@@ -64,9 +64,11 @@ export default function ServiceDetailPage({ slug, service }: ServiceDetailPagePr
   const hidden = (key: string) => service?.hiddenSections?.includes(key) ?? false;
 
   const heroFallbackImage =
-    service?.cardImage ||
-    matchedService?.image ||
-    "https://www.qhtclinic.com/wp-content/uploads/2025/08/456.png";
+    service?.cardImage && !service.cardImage.includes("qhtclinic.com")
+      ? service.cardImage
+      : matchedService?.image && !matchedService.image.includes("qhtclinic.com")
+        ? matchedService.image
+        : "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1200&q=80";
   const heroFallbackSubtitle =
     service?.cardDescription ||
     matchedService?.desc ||
@@ -162,17 +164,17 @@ export default function ServiceDetailPage({ slug, service }: ServiceDetailPagePr
       )}
 
       {/* 11. Video Journey */}
-      {!hidden("journey") && <ServiceJourneySection {...sec("journey")} />}
+      {/* {!hidden("journey") && <ServiceJourneySection {...sec("journey")} />} */}
 
       {/* 12. Causes */}
       {!hidden("causes") && <ServiceCausesSection title={title} {...sec("causes")} />}
 
-      {/* 13. Why Choose QHT */}
-      {!hidden("whyChooseQHT") && (
+      {/* 13. Why Choose NexGen */}
+      {(!hidden("whyChooseNexGen") && !hidden("whyChooseQHT")) && (
         <ServiceWhyChooseQHTSection
           title={title}
           onOpenConsultation={openConsultation}
-          {...sec("whyChooseQHT")}
+          {...(sec("whyChooseNexGen") || sec("whyChooseQHT"))}
         />
       )}
 

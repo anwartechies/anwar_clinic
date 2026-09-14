@@ -38,9 +38,14 @@ const DEFAULT_SUPPORT_ITEMS: SupportItem[] = [
 export default function ServicePostSurgerySupportSection({
   title = "Hair Transplant Repair",
   subtitle = `${COMPANY_NAME} Clinic, with surgeons and methods, ensures natural graft growth and long-term Hair Transplant Repair. The support includes:`,
-  image = "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-3.jpg",
+  image = "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80",
   supportItems = DEFAULT_SUPPORT_ITEMS,
 }: ServicePostSurgerySupportSectionProps) {
+  const safeImage =
+    !image || image.includes("qhtclinic.com") || image.includes("repair-img-3")
+      ? "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80"
+      : image;
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
@@ -64,7 +69,7 @@ export default function ServicePostSurgerySupportSection({
           <div className="lg:col-span-5 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[420px] aspect-[4/4] rounded-3xl overflow-hidden shadow-md border border-gray-100">
               <img
-                src={image}
+                src={safeImage}
                 alt={`Post Surgery Support for ${title}`}
                 className="w-full h-full object-cover"
               />

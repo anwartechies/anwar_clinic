@@ -264,9 +264,9 @@ export const SERVICE_SECTIONS: SectionSchema[] = [
     ],
   },
   {
-    key: "whyChooseQHT",
-    label: "Why Choose QHT",
-    component: "ServiceWhyChooseQHTSection",
+    key: "whyChooseNexGen",
+    label: "Why Choose NexGen",
+    component: "ServiceWhyChooseNexGenSection",
     description: "Feature card grid.",
     fields: [
       { name: "title", label: "Heading", type: "text" },

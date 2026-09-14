@@ -25,9 +25,9 @@ export interface ServiceResultsSectionProps {
 const DEFAULT_RESULTS: ResultCardItem[] = [
   {
     id: 1,
-    name: "Irfan",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+    name: "Devendra",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-mtzm9qege4m658.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/firefly-removebackground-mtzm64rwl6pkss.png",
     grafts: "2800 Grafts",
     age: "34 Years",
     technique: `${COMPANY_NAME} Method`,
@@ -36,9 +36,9 @@ const DEFAULT_RESULTS: ResultCardItem[] = [
   },
   {
     id: 2,
-    name: "Kshitij Ahuja",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+    name: "Harsh Sharma",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-1-mtzmbn4vqwbdn3.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-2-mtzv0lk8j638b7.png",
     grafts: "3200 Grafts",
     age: "29 Years",
     technique: "FUE Repair",
@@ -47,9 +47,9 @@ const DEFAULT_RESULTS: ResultCardItem[] = [
   },
   {
     id: 3,
-    name: "Pranav Meshram",
-    beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Pre.webp",
-    afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Pranav-Meshram-Grade-6-Post.webp",
+    name: "Probir Das",
+    beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-6-mtzmmfyjtmpxyz.png",
+    afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-4-mtzmgy4ufm739v.png",
     grafts: "2500 Grafts",
     age: "38 Years",
     technique: "Correction",
@@ -95,7 +95,7 @@ function ServiceComparisonCard({ item }: { item: ResultCardItem }) {
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden select-none bg-black"
+        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden select-none bg-white"
       >
         {/* AFTER IMAGE (Base Layer) */}
         <img
@@ -169,8 +169,8 @@ export default function ServiceResultsSection({
           <div className="max-w-2xl space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
               {title.toLowerCase().startsWith("result of") ||
-              title.toLowerCase().startsWith("results of") ||
-              title.toLowerCase().startsWith("result")
+                title.toLowerCase().startsWith("results of") ||
+                title.toLowerCase().startsWith("result")
                 ? title
                 : `Result of ${title}`}
             </h2>
@@ -180,13 +180,7 @@ export default function ServiceResultsSection({
           </div>
 
           {/* QHT Circular Vector Motif */}
-          <div className="flex-shrink-0 opacity-90">
-            <img
-              src="https://www.qhtclinic.com/wp-content/themes/qht/assets/img/sd-result-vector.webp"
-              alt={`${COMPANY_NAME} Motif`}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+
         </div>
 
         {/* 3-Column Results Cards Grid using TransformationGallery component architecture */}

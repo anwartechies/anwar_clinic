@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { X, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
-import { COUNTRY_CODES, CLINIC_BRANCHES } from "@/data/qhtData";
+import { COUNTRY_CODES } from "@/data/qhtData";
 import { COMPANY_NAME } from "@/config/constants";
 import { submitLead } from "@/lib/leads";
 import { STATIC_OFFER, OFFER_PAGE_PATH } from "@/config/offer";
@@ -191,7 +191,7 @@ export default function ConsultationModal({
                   className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none focus:border-[#1b392b]"
                 >
                   <option value="Patna">Patna (Main Branch - Raja Bazar)</option>
-                  <option value="Chapra">Chapra</option>
+                  <option value="Mumbai">Mumbai (Second Branch)</option>
                 </select>
               </div>
 

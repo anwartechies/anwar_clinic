@@ -25,37 +25,35 @@ interface CityGallery {
 
 const CITY_GALLERIES: CityGallery[] = [
   {
-    id: "haridwar",
-    name: "Haridwar",
+    id: "patna",
+    name: "Patna (Main Branch)",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Temple / Gateway */}
-        <path d="M4 8H20V10H4V8Z" />
-        <path d="M7 10V21M17 10V21" />
-        <path d="M3 6L12 2L21 6" strokeLinecap="round" />
+        {/* Clinic / Building */}
+        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h2M13 10h2M9 14h2M13 14h2M9 18h2M13 18h2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     photos: {
       hero: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-      heroAlt: "Clinic Entrance and Exterior Facade Haridwar",
+      heroAlt: "Patna Main Clinic Entrance and Reception",
       office: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80",
-      officeAlt: "Doctor Consultation Suite",
+      officeAlt: "Doctor Consultation Suite Patna",
       otRoom: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-      otRoomAlt: "Sterile Surgical OT Unit",
+      otRoomAlt: "Advanced Sterile OT Room Patna",
       otLight: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
       otLightAlt: "High Precision Surgical Shadowless Lamp",
       lounge: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=600&q=80",
-      loungeAlt: "Spacious Patient Reception and Waiting Area",
+      loungeAlt: "Patna Patient Lounge and Waiting Area",
       wallOfFame: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80",
       wallOfFameAlt: "Wall of Patient Transformation Success Stories",
     },
   },
   {
-    id: "delhi",
-    name: "Delhi",
+    id: "mumbai",
+    name: "Mumbai (Second Branch)",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* India Gate */}
+        {/* Gateway / Metropolitan */}
         <path d="M4 21V6H20V21" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M2 6H22V4H2V6Z" />
         <path d="M8 21V11C8 9.5 16 9.5 16 11V21" strokeLinecap="round" />
@@ -63,48 +61,23 @@ const CITY_GALLERIES: CityGallery[] = [
     ),
     photos: {
       hero: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
-      heroAlt: "Clinic Entrance and Reception Delhi",
+      heroAlt: "Mumbai Clinic Consultation & Care Center",
       office: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-      officeAlt: "Trichologist Consultation Cabin",
+      officeAlt: "Doctor Consultation Cabin Mumbai",
       otRoom: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80",
-      otRoomAlt: "Delhi State-of-the-Art OT Room",
+      otRoomAlt: "Mumbai State-of-the-Art Procedure Room",
       otLight: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
       otLightAlt: "Sterile Cleanroom Surgical Illumination",
       lounge: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=600&q=80",
-      loungeAlt: "Delhi VIP Patient Lounge",
+      loungeAlt: "Mumbai Patient Waiting Lounge",
       wallOfFame: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80",
-      wallOfFameAlt: "Verified Patient Results and Awards",
-    },
-  },
-  {
-    id: "hyderabad",
-    name: "Hyderabad",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-        {/* Charminar 4 Towers */}
-        <path d="M4 21V7L6 5V21M20 21V7L18 5V21" />
-        <path d="M6 12C6 8 18 8 18 12V21H6V12Z" />
-      </svg>
-    ),
-    photos: {
-      hero: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
-      heroAlt: "Hyderabad Jubilee Hills Surgical Wing",
-      office: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-      officeAlt: "Doctor Consultation Cabin Hyderabad",
-      otRoom: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-      otRoomAlt: "Graft Placement OT Facility",
-      otLight: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
-      otLightAlt: "High Intensity Microscopic Illumination",
-      lounge: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=600&q=80",
-      loungeAlt: "Hyderabad Waiting Corridor",
-      wallOfFame: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80",
-      wallOfFameAlt: "Transformations Gallery",
+      wallOfFameAlt: "Patient Results and Accreditations",
     },
   },
 ];
 
 export default function AboutClinicStandardsSection() {
-  const [activeCityId, setActiveCityId] = useState("haridwar");
+  const [activeCityId, setActiveCityId] = useState("patna");
 
   const currentGallery =
     CITY_GALLERIES.find((g) => g.id === activeCityId) || CITY_GALLERIES[0];

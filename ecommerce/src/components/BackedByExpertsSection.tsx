@@ -7,10 +7,10 @@ export default function BackedByExpertsSection() {
   return (
     <section className="py-12 sm:py-20 bg-white">
       <div className="qht-large-container">
-        
+
         {/* Main Card Container */}
         <div className="bg-[#fbf9f4] rounded-2xl sm:rounded-[44px] p-6 sm:p-12 lg:p-16 border border-gray-200/70 shadow-sm max-w-6xl mx-auto">
-          
+
           {/* Header */}
           <div className="text-center max-w-xl mx-auto mb-8 sm:mb-14">
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#5c685f] block mb-2">
@@ -23,11 +23,11 @@ export default function BackedByExpertsSection() {
 
           {/* Doctor + Quote 2-Column Row */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center mb-8 sm:mb-12">
-            
+
             {/* Left: Doctor Circular Portal with Floating Badges */}
             <div className="lg:col-span-6 flex justify-center">
               <div className="relative">
-                
+
                 {/* Circular Blue Stage */}
                 <div className="w-52 h-52 sm:w-72 sm:h-72 rounded-full bg-[#1b56d8] overflow-hidden flex items-end justify-center shadow-lg relative">
                   <img
@@ -37,10 +37,10 @@ export default function BackedByExpertsSection() {
                   />
                 </div>
 
-                {/* Floating Badge 1: Top-Right QHT Emblem */}
+                {/* Floating Badge 1: Top-Right NexGen Emblem */}
                 <div className="absolute top-0 right-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center p-1.5 sm:p-2 z-10">
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#1b392b] text-white flex items-center justify-center font-serif text-[10px] sm:text-xs font-bold">
-                    QHT
+                    NexGen
                   </div>
                 </div>
 
@@ -51,7 +51,7 @@ export default function BackedByExpertsSection() {
                   </div>
                   <div>
                     <span className="bg-[#2d5236] text-white text-[8.5px] sm:text-[9px] font-bold px-2 py-0.5 rounded-full block w-max uppercase tracking-wider">
-                      BACKED BY QHT CLINIC
+                      BACKED BY NexGen CLINIC
                     </span>
                     <span className="text-[11px] sm:text-xs font-bold text-[#1b221d] block mt-0.5">
                       15,000+ Hair Surgeries
@@ -64,7 +64,7 @@ export default function BackedByExpertsSection() {
 
             {/* Right: Endorsement Quote & Surgeon Profile */}
             <div className="lg:col-span-6 space-y-3 sm:space-y-4 text-center sm:text-left mt-4 sm:mt-0">
-              
+
               {/* Quote Icon */}
               <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#1b56d8]/10 text-[#1b56d8] flex items-center justify-center mx-auto sm:mx-0 mb-1">
                 <Quote className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
@@ -105,7 +105,7 @@ export default function BackedByExpertsSection() {
 
           {/* Bottom Floating Stats Bar */}
           <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-xs border border-gray-200/80 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-4 items-center text-center sm:text-left">
-            
+
             {/* Stat 1: Procedures */}
             <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 sm:pr-4">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#eff5f1] text-[#2d5236] flex items-center justify-center flex-shrink-0">

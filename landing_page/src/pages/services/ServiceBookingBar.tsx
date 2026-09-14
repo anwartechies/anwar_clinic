@@ -28,11 +28,23 @@ export default function ServiceBookingBar({
             <div className="hidden lg:block w-px h-10 bg-white/30" />
             
             <div className="flex items-center gap-3">
-              <img
-                src="https://www.qhtclinic.com/wp-content/uploads/2025/09/Avatar-.webp"
-                alt="Booked Patients"
-                className="h-9 sm:h-10 object-contain"
-              />
+              <div className="flex -space-x-2">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                  alt="Patient"
+                  className="w-8 h-8 rounded-full border-2 border-[#596d53] object-cover"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                  alt="Patient"
+                  className="w-8 h-8 rounded-full border-2 border-[#596d53] object-cover"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                  alt="Patient"
+                  className="w-8 h-8 rounded-full border-2 border-[#596d53] object-cover"
+                />
+              </div>
               <span className="text-xs sm:text-sm font-medium text-white/95 whitespace-nowrap">
                 {patientCountText}
               </span>

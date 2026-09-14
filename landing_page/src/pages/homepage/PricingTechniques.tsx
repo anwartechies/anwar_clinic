@@ -25,15 +25,15 @@ export default function PricingTechniques({
           </p>
         </div>
 
-        {/* 3 Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-7xl mx-auto">
+        {/* Pricing Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch max-w-7xl mx-auto">
           {PRICING_PACKAGES.map((pkg, idx) => {
             const isFeatured = pkg.isFeatured;
 
             return (
               <div
                 key={idx}
-                className={`rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 relative ${isFeatured
+                className={`rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 relative ${isFeatured
                   ? "bg-[#52664d] text-white shadow-xl"
                   : "bg-white text-gray-900 border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)]"
                   }`}
