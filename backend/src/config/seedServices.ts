@@ -32,6 +32,10 @@ async function seedServices() {
 
     if (!wasCreated && SEED_SECTIONS_BY_SLUG[item.slug]) {
       await service.update({
+        cardDescription: item.desc,
+        badge: item.badge ?? null,
+        seoTitle: `${item.title} in India | NexGen Hair Transplant`,
+        seoDescription: item.desc,
         sections: {
           ...(service.sections || {}),
           ...SEED_SECTIONS_BY_SLUG[item.slug],

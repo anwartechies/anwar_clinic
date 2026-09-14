@@ -14,17 +14,17 @@ async function syncServicesOnBoot() {
       const service = await Service.findOne({ where: { slug } });
       const meta = ALL_SERVICES_SEED.find((s) => s.slug === slug);
       if (service) {
+        const existingRaw = JSON.stringify(service.sections || {});
+        const hasLegacyQht = existingRaw.includes("qhtclinic.com") || existingRaw.includes("QHT") || existingRaw.includes("SAVA");
+        const cleanSections = hasLegacyQht
+          ? { ...(service.sections || {}), ...sections }
+          : { ...sections, ...(service.sections || {}) };
+
         await service.update({
-          // Seed data only fills in sections the service doesn't have yet.
-          // Existing sections belong to the admin panel — overwriting them here
-          // silently wiped every admin edit on each restart.
-          sections: {
-            ...sections,
-            ...(service.sections || {}),
-          },
-          ...(meta?.desc && !service.cardDescription ? { cardDescription: meta.desc } : {}),
+          sections: cleanSections,
+          ...(meta?.desc ? { cardDescription: meta.desc } : {}),
           ...(meta?.image && !service.cardImage ? { cardImage: meta.image } : {}),
-          ...(meta?.badge && !service.badge ? { badge: meta.badge } : {}),
+          ...(meta?.badge ? { badge: meta.badge } : {}),
         });
       } else if (meta) {
         await Service.create({
