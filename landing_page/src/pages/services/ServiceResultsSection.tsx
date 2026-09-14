@@ -95,7 +95,7 @@ function ServiceComparisonCard({ item }: { item: ResultCardItem }) {
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden select-none bg-black"
+        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden select-none bg-white"
       >
         {/* AFTER IMAGE (Base Layer) */}
         <img

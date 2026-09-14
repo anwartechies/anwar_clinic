@@ -11,7 +11,7 @@ export default function ClinicHero() {
       {/* Clinic Corridor Interior Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=80"
+          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-25-24-pm-mu16ngv5sdupct.jpeg"
           alt={`${COMPANY_NAME} Clinic Interior Corridor`}
           className="w-full h-full object-cover object-center"
         />
@@ -21,7 +21,7 @@ export default function ClinicHero() {
 
       {/* Hero Content in Center */}
       <div className="relative z-10 qht-container text-center px-4 py-12 flex flex-col items-center">
-        
+
         {/* Breadcrumb: Home > Our Clinic */}
         <nav aria-label="Breadcrumb" className="mb-4">
           <ol className="flex items-center gap-1.5 text-xs sm:text-sm text-white/90 font-medium">

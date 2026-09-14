@@ -118,7 +118,7 @@ function HeaderBar({
               Hair Transplant Cost
             </Link>
 
-            {/* Medicines */}
+            {/* Medicines - Temporarily commented out
             <a
               href={cliniUrl}
               target="_blank"
@@ -128,6 +128,7 @@ function HeaderBar({
             >
               Medicines
             </a>
+            */}
 
             {/* About us */}
             <div
@@ -547,6 +548,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
                 Hair Transplant Cost
               </Link>
 
+              {/* Medicines - Temporarily commented out
               <a
                 href={cliniUrl}
                 target="_blank"
@@ -555,6 +557,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
               >
                 Medicines
               </a>
+              */}
 
               <div>
                 <button

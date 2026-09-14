@@ -22,7 +22,7 @@ export default function ResultsBaldnessGradeSection({
           <div className="lg:col-span-5 flex justify-center">
             <div className="w-full max-w-[380px] aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden bg-white/10 border border-white/20 shadow-lg relative group">
               <img
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80"
+                src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/doctor-mu16qkmeekqvfb.jpeg"
                 alt="Baldness Grade Assessment"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -34,7 +34,7 @@ export default function ResultsBaldnessGradeSection({
 
             {/* Heading */}
             <h3 className="text-2xl sm:text-3xl lg:text-5xl font-[500] text-white leading-tight tracking-tight">
-              Discover the Ideal Treatment Plan <br className="hidden sm:block" />
+              Discover the Ideal Treatment Plan
               for Your Hair Loss.
             </h3>
 

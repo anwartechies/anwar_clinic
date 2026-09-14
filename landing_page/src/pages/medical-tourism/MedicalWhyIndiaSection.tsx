@@ -81,7 +81,7 @@ export default function MedicalWhyIndiaSection() {
             <div className="my-8 relative z-10 flex items-center justify-center">
               <div className="relative w-52 sm:w-60 h-52 sm:h-60">
                 <img
-                  src="/images/Map.webp"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-14-2026-05-44-12-pm-mu17gyqi7w8aer.png"
                   alt="India Medical Tourism Map"
                   className="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] transform hover:scale-105 transition-transform duration-500"
                 />
