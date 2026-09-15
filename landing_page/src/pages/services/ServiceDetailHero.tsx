@@ -75,7 +75,7 @@ export default function ServiceDetailHero({
   const defaultSubtitle = `${title} procedures tailored by specialists at ${COMPANY_NAME} with clinical precision and natural results.`;
 
   const safeBannerImage =
-    !bannerImage || bannerImage.includes("qhtclinic.com")
+    !bannerImage || bannerImage.includes("nexgenhairtransplant.com")
       ? "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1200&q=80"
       : bannerImage;
 

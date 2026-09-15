@@ -41,11 +41,11 @@ export default function ServiceIntroSection({
   onOpenConsultation,
 }: ServiceIntroSectionProps) {
   const safeBlock1Image =
-    !block1Image || block1Image.includes("qhtclinic.com") || block1Image.includes("sd-why-us-thumb")
+    !block1Image || block1Image.includes("nexgenhairtransplant.com") || block1Image.includes("sd-why-us-thumb")
       ? DEFAULT_BLOCK1_IMAGE
       : block1Image;
   const safeBlock2Image =
-    !block2Image || block2Image.includes("qhtclinic.com") || block2Image.includes("sd-why-us-thumb")
+    !block2Image || block2Image.includes("nexgenhairtransplant.com") || block2Image.includes("sd-why-us-thumb")
       ? DEFAULT_BLOCK2_IMAGE
       : block2Image;
 

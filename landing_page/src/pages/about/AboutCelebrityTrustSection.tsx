@@ -27,7 +27,7 @@ export default function AboutCelebrityTrustSection() {
       title: "Exceptional Experience",
       quote: `I am truly grateful to ${COMPANY_NAME} for their exceptional hair restoration procedure. The entire medical team was professional, attentive, and made the experience comfortable from start to finish.`,
       rating: 5,
-      image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Rajpal-Yadav-2.webp",
+      image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-1-mu2jxgr4xjdvq4.jpg",
     },
     {
       id: 2,
@@ -36,7 +36,7 @@ export default function AboutCelebrityTrustSection() {
       title: "Remarkable Density & Care",
       quote: `Choosing ${COMPANY_NAME} was one of the best decisions for my hair restoration. The surgical precision, sterile theaters, and doctor-led approach gave me a completely natural hairline.`,
       rating: 5,
-      image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Dayanand-Shetty.webp",
+      image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-2-mu2jxhc5aa4czi.jpg",
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default function AboutCelebrityTrustSection() {
       title: "World-Class Technology",
       quote: `The direct micro-implantation protocol and minimal recovery downtime at ${COMPANY_NAME} exceeded all my expectations. Highly recommended to anyone seeking natural, permanent density.`,
       rating: 5,
-      image: "https://www.qhtclinic.com/wp-content/uploads/2026/07/Armaan-Malik-3.webp",
+      image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-3-mu2jxhk9h6w4rt.jpg",
     },
   ];
 
@@ -85,7 +85,7 @@ export default function AboutCelebrityTrustSection() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Centered Heading & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight mb-4">
@@ -98,7 +98,7 @@ export default function AboutCelebrityTrustSection() {
 
         {/* Testimonial Card with Sliding Track */}
         <div className="relative max-w-5xl mx-auto">
-          
+
           {/* Card Outer Mask */}
           <div
             className="rounded-3xl sm:rounded-[36px] overflow-hidden shadow-xl bg-[#52664d]"
@@ -118,7 +118,7 @@ export default function AboutCelebrityTrustSection() {
                 >
                   {/* Left Column: Quote & Testimonial Info */}
                   <div className="lg:col-span-6 p-8 sm:p-12 lg:p-14 flex flex-col justify-between text-white relative">
-                    
+
                     <div className="space-y-4 sm:space-y-6">
                       {/* Double Quote Vector Icon */}
                       <div className="text-white/80">
@@ -199,11 +199,10 @@ export default function AboutCelebrityTrustSection() {
                 type="button"
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`transition-all duration-300 rounded-full cursor-pointer ${
-                  currentIndex === idx
-                    ? "w-8 h-2.5 bg-[#52664d]"
-                    : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
-                }`}
+                className={`transition-all duration-300 rounded-full cursor-pointer ${currentIndex === idx
+                  ? "w-8 h-2.5 bg-[#52664d]"
+                  : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
+                  }`}
               />
             ))}
           </div>

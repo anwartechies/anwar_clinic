@@ -54,7 +54,7 @@ const CLEAN_FEATURE_IMAGES: Record<string, string> = {
 };
 
 const getCleanFeatureImage = (title: string, imgUrl?: string, idx = 0) => {
-  if (imgUrl && !imgUrl.includes("qhtclinic.com") && !imgUrl.includes("transplant-img-")) {
+  if (imgUrl && !imgUrl.includes("nexgenhairtransplant.com") && !imgUrl.includes("transplant-img-")) {
     return imgUrl;
   }
   const upper = (title || "").toUpperCase().trim();
@@ -87,7 +87,7 @@ export default function ServiceWhyChooseQHTSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#38493a] text-white overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18] max-w-xl">
@@ -102,7 +102,7 @@ export default function ServiceWhyChooseQHTSection({
 
         {/* 3-Column Card Grid (Photo Cards + Lime Review CTA Card) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-stretch">
-          
+
           {/* Photo Cards */}
           {displayFeatures.map((item, idx) => (
             <div

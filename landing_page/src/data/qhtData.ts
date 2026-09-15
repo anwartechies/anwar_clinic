@@ -501,20 +501,7 @@ export const TRANSFORMATION_GALLERY: TransformationItem[] = [
     beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-5-mtzurmt0h3tm7w.png",
     afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-13-2026-02-25-44-pm-mtzuuboggumj3g.png",
   },
-  // {
-  //   id: 5,
-  //   patientName: "Puneet Chandra",
-  //   grade: "Grade 6",
-  //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
-  //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
-  // },
-  // {
-  //   id: 6,
-  //   patientName: "Sagar Kumar",
-  //   grade: "Grade 4A",
-  //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
-  //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
-  // },
+
 ];
 
 // 11. FAQ Items

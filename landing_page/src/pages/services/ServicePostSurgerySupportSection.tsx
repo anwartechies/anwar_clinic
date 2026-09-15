@@ -42,14 +42,14 @@ export default function ServicePostSurgerySupportSection({
   supportItems = DEFAULT_SUPPORT_ITEMS,
 }: ServicePostSurgerySupportSectionProps) {
   const safeImage =
-    !image || image.includes("qhtclinic.com") || image.includes("repair-img-3")
+    !image || image.includes("nexgenhairtransplant.com") || image.includes("repair-img-3")
       ? "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80"
       : image;
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] max-w-xl">
@@ -64,7 +64,7 @@ export default function ServicePostSurgerySupportSection({
 
         {/* 2-Column: Left Scalp Photo + Right Support List */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          
+
           {/* Left Column: Post-Surgery Scalp Photo */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[420px] aspect-[4/4] rounded-3xl overflow-hidden shadow-md border border-gray-100">

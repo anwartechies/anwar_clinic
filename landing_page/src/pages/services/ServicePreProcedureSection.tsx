@@ -52,7 +52,7 @@ export default function ServicePreProcedureSection({
   const defaultSubtitle = `For a successful ${title}, some factors should be taken care of.`;
 
   const safeTips = (tips && tips.length > 0 ? tips : DEFAULT_TIPS).map((tip, idx) => {
-    const isQht = typeof tip.icon === "string" && tip.icon.includes("qhtclinic.com");
+    const isQht = typeof tip.icon === "string" && tip.icon.includes("nexgenhairtransplant.com");
     return {
       ...tip,
       icon: isQht ? DEFAULT_TIPS[idx % DEFAULT_TIPS.length].icon : tip.icon,
@@ -62,7 +62,7 @@ export default function ServicePreProcedureSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] max-w-lg">

@@ -47,7 +47,7 @@ export default function ServiceTypesSection({
 }: ServiceTypesSectionProps) {
   const safeTypes = (types && types.length > 0 ? types : DEFAULT_TYPES).map((type, idx) => ({
     ...type,
-    image: (!type.image || type.image.includes("qhtclinic.com"))
+    image: (!type.image || type.image.includes("nexgenhairtransplant.com"))
       ? DEFAULT_TYPES[idx % DEFAULT_TYPES.length].image
       : type.image,
   }));
@@ -55,13 +55,13 @@ export default function ServiceTypesSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Centered Heading & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
             {title.toLowerCase().startsWith("types of") ||
-            title.toLowerCase().startsWith("type of") ||
-            title.toLowerCase().startsWith("types")
+              title.toLowerCase().startsWith("type of") ||
+              title.toLowerCase().startsWith("types")
               ? title
               : `Types of ${title}`}
           </h2>
