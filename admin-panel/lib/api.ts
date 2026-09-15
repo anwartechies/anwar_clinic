@@ -37,6 +37,25 @@ export async function apiFetch<T = unknown>(path: string, init?: RequestInit): P
   return res.json() as Promise<T>;
 }
 
+// Authenticated file download (e.g. a private CV) — returns the raw bytes.
+export async function apiBlob(path: string): Promise<Blob> {
+  const token = Cookies.get("authToken");
+  const res = await fetch(`${API_URL}${path}`, {
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  });
+  if (res.status === 401 && typeof window !== "undefined") {
+    Cookies.remove("authToken");
+    Cookies.remove("permissions");
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- same session-loss handling as apiFetch
+    window.location.href = "/auth/login";
+  }
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ message: "Download failed" }));
+    throw new Error(err.message || "Download failed");
+  }
+  return res.blob();
+}
+
 // Multipart upload — deliberately does NOT set Content-Type so the browser adds
 // the multipart boundary itself.
 export async function apiUpload<T = unknown>(

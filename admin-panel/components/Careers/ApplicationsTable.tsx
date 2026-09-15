@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { openResume } from "./openResume";
 import {
   TbSearch,
   TbTrash,
@@ -253,15 +254,14 @@ export function ApplicationsTable({ filterJobId, onClearJobFilter }: Application
 
                       {/* Resume Download */}
                       <td className="py-3.5 px-4">
-                        <a
-                          href={app.resumeUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 border border-emerald-200/60 dark:border-emerald-800 transition shadow-sm"
+                        <button
+                          type="button"
+                          onClick={() => openResume(app.id, app.resumeFileName)}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 border border-emerald-200/60 dark:border-emerald-800 transition shadow-sm cursor-pointer"
                         >
                           <TbFileDownload className="w-3.5 h-3.5" />
                           Resume
-                        </a>
+                        </button>
                       </td>
 
                       {/* Status Dropdown */}

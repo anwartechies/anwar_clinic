@@ -8,3 +8,6 @@ uploads/
 # env files — ignore all variants, keep the committed template
 .env*
 !.env.example
+
+# Private files (job-applicant CVs) written by the local storage driver — never served.
+uploads-private/

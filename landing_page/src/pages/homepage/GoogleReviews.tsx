@@ -8,8 +8,6 @@ interface GoogleReviewsProps {
   className?: string;
 }
 
-/** Reviews longer than this get a "Read more" toggle. */
-const LONG_REVIEW_CHARS = 220;
 const AVATAR_COLORS = ["#52664d", "#1b392b", "#7a6a3a", "#3f5f6b", "#6b4f5f", "#4f6b58"];
 
 function GoogleG({ className = "w-4 h-4" }: { className?: string }) {
@@ -72,7 +70,21 @@ function Avatar({ review }: { review: GoogleReviewItem }) {
 
 function ReviewCard({ review }: { review: GoogleReviewItem }) {
   const [expanded, setExpanded] = useState(false);
-  const isLong = review.text.length > LONG_REVIEW_CHARS;
+  const [overflows, setOverflows] = useState(false);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  // Offer "Read more" only when the clamped text is actually cut off — a short
+  // review written with line breaks can run past 5 lines, a long one may not.
+  useEffect(() => {
+    const el = textRef.current;
+    if (!el) return;
+    const measure = () => {
+      if (!expanded) setOverflows(el.scrollHeight > el.clientHeight + 1);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [expanded, review.text]);
 
   return (
     <article className="min-h-[292px] bg-white rounded-3xl p-6 border border-[#e4eae4] shadow-[0_2px_12px_rgba(27,34,29,0.04)] flex flex-col">
@@ -98,15 +110,14 @@ function ReviewCard({ review }: { review: GoogleReviewItem }) {
       </div>
 
       <p
-        className={`mt-3 text-sm text-[#4a554c] leading-relaxed whitespace-pre-line ${
-          isLong && !expanded ? "line-clamp-5" : ""
-        }`}
+        ref={textRef}
+        className={`mt-3 text-sm text-[#4a554c] leading-relaxed whitespace-pre-line ${expanded ? "" : "line-clamp-5"}`}
       >
         {review.text}
       </p>
 
       <div className="mt-auto pt-4 flex items-center justify-between gap-3 text-xs">
-        {isLong ? (
+        {overflows || expanded ? (
           <button
             type="button"
             onClick={() => setExpanded((v) => !v)}
