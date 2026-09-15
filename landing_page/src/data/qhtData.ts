@@ -156,12 +156,12 @@ export const NAV_ABOUT_LIST = [
 
 // 2. Hero Results Slider Data
 export const HERO_SLIDES: CelebritySlide[] = [
-  { name: "Patient1", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p6-mtzj0y22eyj8vb.jpeg" },
-  { name: "Patient2", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p5-mtzj1k7g8yzzb9.jpeg" },
-  { name: "Patient3", location: "Delhi, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p4-mtzj20hg6dglrq.jpeg" },
-  { name: "Patient4", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/sd-mtzj2hfx4r5xwb.jpeg" },
-  { name: "Patient5", location: "Haridwar, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-13-at-1-02-03-am-mtzj2yg2x0guny.jpeg" },
-  { name: "Patient6", location: "Rajasthan, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-13-at-12-14-03-am-mtzj3jgnwd1pzn.jpeg" },
+  { name: "Patient1", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-6-10-26-pm-mu2k3a2cw7pyto.jpeg" },
+  { name: "Patient2", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-6-10-25-pm-mu2k3a8opndxid.jpeg" },
+  { name: "Patient3", location: "Delhi, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-15-at-10-22-47-am-mu2k30p99krelc.jpeg" },
+  { name: "Patient4", location: "Mumbai, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-15-at-10-22-47-am-mu2k30vb4yns1b.jpeg" },
+  { name: "Patient5", location: "Haridwar, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-15-at-10-22-46-am-mu2k310vtu0x5v.jpeg" },
+  { name: "Patient6", location: "Rajasthan, India", image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-15-at-10-22-46-am-mu2k316p8jcsrr.jpeg" },
 ];
 
 // 3. The Bald Truth
@@ -232,8 +232,8 @@ export const PROMISE_GALLERY_IMAGES = [
   "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p5-mtzj1k7g8yzzb9.jpeg",
   "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/t1-mtzji2lq10j280.jpeg",
   "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
-  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/sd-mtzj2hfx4r5xwb.jpeg",
-  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/iii2-mtzjkctwkp1zrc.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-15-at-10-22-45-am-mu2k31is4e8c0u.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-15-at-10-22-47-am-mu2k30vb4yns1b.jpeg",
 ];
 
 // 5. See the Difference
@@ -501,20 +501,7 @@ export const TRANSFORMATION_GALLERY: TransformationItem[] = [
     beforeImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/image-5-mtzurmt0h3tm7w.png",
     afterImg: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/chatgpt-image-sep-13-2026-02-25-44-pm-mtzuuboggumj3g.png",
   },
-  // {
-  //   id: 5,
-  //   patientName: "Puneet Chandra",
-  //   grade: "Grade 6",
-  //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Pre.webp",
-  //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
-  // },
-  // {
-  //   id: 6,
-  //   patientName: "Sagar Kumar",
-  //   grade: "Grade 4A",
-  //   beforeImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Pre.webp",
-  //   afterImg: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
-  // },
+
 ];
 
 // 11. FAQ Items

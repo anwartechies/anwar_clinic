@@ -71,7 +71,7 @@ export default function ServiceRecoveryTimelineSection({
 }: ServiceRecoveryTimelineSectionProps) {
   const safeWeeks = (weeks && weeks.length > 0 ? weeks : DEFAULT_WEEKS).map((w, idx) => ({
     ...w,
-    image: (!w.image || w.image.includes("qhtclinic.com"))
+    image: (!w.image || w.image.includes("nexgenhairtransplant.com"))
       ? DEFAULT_WEEKS[idx % DEFAULT_WEEKS.length].image
       : w.image,
   }));
@@ -81,7 +81,7 @@ export default function ServiceRecoveryTimelineSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Header */}
         <div className="max-w-3xl mb-12 sm:mb-16 space-y-3">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
@@ -96,7 +96,7 @@ export default function ServiceRecoveryTimelineSection({
 
         {/* 3-Column Content: Left Vertical Tabs + Center Photo + Right Expectation/Care Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          
+
           {/* Column 1: Vertical Tabs (WEEK 1 to WEEK 5) */}
           <div className="lg:col-span-2 flex flex-row lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
             {weeks.map((w, idx) => {
@@ -105,11 +105,10 @@ export default function ServiceRecoveryTimelineSection({
                 <button
                   key={w.id ?? idx}
                   onClick={() => setActiveWeekIndex(idx)}
-                  className={`px-6 py-3 rounded-full text-xs font-bold transition-all text-center whitespace-nowrap ${
-                    isActive
+                  className={`px-6 py-3 rounded-full text-xs font-bold transition-all text-center whitespace-nowrap ${isActive
                       ? "bg-[#596d53] text-white shadow-md"
                       : "bg-[#dce5de] hover:bg-[#cfded2] text-[#5c685f]"
-                  }`}
+                    }`}
                 >
                   {w.label}
                 </button>
@@ -130,7 +129,7 @@ export default function ServiceRecoveryTimelineSection({
 
           {/* Column 3: Right 2 Cards (WHAT TO EXPECT + HOW TO CARE) */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             {/* Card 1: What to Expect */}
             <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xs">
               <h3 className="text-xs font-bold uppercase tracking-wider text-[#596d53] pb-3 border-b border-gray-100">

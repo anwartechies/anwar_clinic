@@ -72,7 +72,7 @@ export default function ServiceCostSection({
   factors = DEFAULT_FACTORS,
 }: ServiceCostSectionProps) {
   const safeFactors = (factors && factors.length > 0 ? factors : DEFAULT_FACTORS).map((f, idx) => {
-    const isQht = typeof f.icon === "string" && f.icon.includes("qhtclinic.com");
+    const isQht = typeof f.icon === "string" && f.icon.includes("nexgenhairtransplant.com");
     return {
       ...f,
       icon: isQht ? DEFAULT_FACTORS[idx % DEFAULT_FACTORS.length].icon : f.icon,
@@ -85,7 +85,7 @@ export default function ServiceCostSection({
 
         {/* 1. TOP PART: Title + Cost Overview Paragraphs + Pricing Table */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start pb-14 sm:pb-16 border-b border-gray-200/90">
-          
+
           {/* Left Column: Heading + Descriptive Text */}
           <div className="lg:col-span-6 space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
@@ -109,15 +109,13 @@ export default function ServiceCostSection({
                 tableRows.map((row, idx) => (
                   <div
                     key={idx}
-                    className={`py-4 ${idx === 0 ? "first:pt-0" : ""} ${
-                      idx === tableRows.length - 1 ? "last:pb-0" : ""
-                    } flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal`}
+                    className={`py-4 ${idx === 0 ? "first:pt-0" : ""} ${idx === tableRows.length - 1 ? "last:pb-0" : ""
+                      } flex items-center justify-between text-sm sm:text-base text-gray-600 font-normal`}
                   >
                     <div className="flex items-center gap-2">
                       <span
-                        className={`font-medium ${
-                          row.isHighlight ? "font-bold text-[#1b221d]" : "text-gray-800"
-                        }`}
+                        className={`font-medium ${row.isHighlight ? "font-bold text-[#1b221d]" : "text-gray-800"
+                          }`}
                       >
                         {row.type}
                       </span>
