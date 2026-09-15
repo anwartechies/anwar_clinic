@@ -2,6 +2,7 @@ import { Router, Response } from "express";
 import { Op } from "sequelize";
 import { Job, JobApplication, User } from "../models";
 import { authenticate, authorize, AuthRequest } from "../middleware/authenticate";
+import { storage } from "../services/storage";
 
 const router = Router();
 router.use(authenticate);
@@ -265,6 +266,44 @@ router.get("/admin/applications", authorize("careers:read"), async (req: AuthReq
   }
 });
 
+// Stream an applicant's CV. The file is private in storage, so this route (login
+// + careers:read) is the only way to read it — there is no shareable link.
+router.get(
+  "/admin/applications/:id/resume",
+  authorize("careers:read"),
+  async (req: AuthRequest, res: Response) => {
+    try {
+      const application = await JobApplication.findByPk(req.params.id);
+      if (!application) {
+        res.status(404).json({ message: "Application not found" });
+        return;
+      }
+      if (!application.resumeKey) {
+        // Only applications saved before CVs became private have a URL instead.
+        if (application.resumeUrl) {
+          res.redirect(application.resumeUrl);
+          return;
+        }
+        res.status(404).json({ message: "No resume on file" });
+        return;
+      }
+
+      const file = await storage.getPrivate(application.resumeKey);
+      const safeName = (application.resumeFileName || "resume").replace(/[^\w.\- ]+/g, "_");
+      res.setHeader("Content-Type", file.contentType || "application/octet-stream");
+      if (file.contentLength) res.setHeader("Content-Length", String(file.contentLength));
+      res.setHeader("Content-Disposition", `inline; filename="${safeName}"`);
+      res.setHeader("Cache-Control", "private, no-store");
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      file.body.on("error", () => res.destroy());
+      file.body.pipe(res);
+    } catch (err: any) {
+      console.error("[Careers] Resume read failed:", err?.message);
+      res.status(500).json({ message: "Could not load the resume" });
+    }
+  }
+);
+
 // Update application status & admin notes
 router.patch(
   "/admin/applications/:id/status",
@@ -302,7 +341,14 @@ router.delete(
         return;
       }
 
+      const resumeKey = application.resumeKey;
       await application.destroy();
+      // Deleting an applicant removes their CV too, not just the database row.
+      if (resumeKey) {
+        await storage.removePrivate(resumeKey).catch((err) =>
+          console.warn(`[Careers] Could not remove resume ${resumeKey}: ${err.message}`)
+        );
+      }
       res.json({ message: "Application deleted successfully" });
     } catch (err: any) {
       res.status(500).json({ message: err.message || "Failed to delete application" });

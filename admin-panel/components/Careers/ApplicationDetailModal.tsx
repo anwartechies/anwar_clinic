@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { openResume } from "./openResume";
 import {
   TbX,
   TbMail,
@@ -168,15 +169,14 @@ export function ApplicationDetailModal({
                 </p>
               </div>
             </div>
-            <a
-              href={application.resumeUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm transition"
+            <button
+              type="button"
+              onClick={() => openResume(application.id, application.resumeFileName)}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm transition cursor-pointer"
             >
               <TbFileDownload className="w-4 h-4" />
               Download / View
-            </a>
+            </button>
           </div>
 
           {/* Cover Letter / Note */}

@@ -449,25 +449,33 @@ router.post(
         return;
       }
 
-      const uploadResult = await storage.put({
-        buffer: file.buffer,
-        originalName: file.originalname,
-        mimeType: file.mimetype,
-      });
+      // CVs hold personal data, so they're stored privately (never under the
+      // publicly readable media/ prefix) and only streamed to logged-in staff.
+      const stored = await storage.putPrivate(
+        { buffer: file.buffer, originalName: file.originalname, mimeType: file.mimetype },
+        "resumes"
+      );
 
-      const application = await JobApplication.create({
-        jobId: job.id,
-        fullName,
-        email,
-        phone,
-        experienceYears: experienceYears || "0",
-        currentCompany: currentCompany || null,
-        noticePeriod: noticePeriod || null,
-        resumeUrl: uploadResult.url,
-        resumeFileName: file.originalname,
-        coverNote: coverNote || null,
-        status: "new",
-      });
+      let application;
+      try {
+        application = await JobApplication.create({
+          jobId: job.id,
+          fullName,
+          email,
+          phone,
+          experienceYears: experienceYears || "0",
+          currentCompany: currentCompany || null,
+          noticePeriod: noticePeriod || null,
+          resumeKey: stored.key,
+          resumeFileName: file.originalname,
+          coverNote: coverNote || null,
+          status: "new",
+        });
+      } catch (err) {
+        // Don't leave an orphaned CV behind if the application wasn't saved.
+        await storage.removePrivate(stored.key).catch(() => {});
+        throw err;
+      }
 
       res.status(201).json({
         message: "Application submitted successfully! Our HR team will review your profile.",

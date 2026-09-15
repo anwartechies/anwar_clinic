@@ -35,6 +35,9 @@ export const env = {
     keyPrefix: process.env.S3_KEY_PREFIX || "",
     // Optional CloudFront/custom domain serving the bucket.
     publicBaseUrl: process.env.S3_PUBLIC_BASE_URL || "",
+    // Folder for private files (CVs). Must stay OUTSIDE the publicly readable
+    // prefix — the bucket policy only grants public read on media/*.
+    privateKeyPrefix: (process.env.S3_PRIVATE_PREFIX || "private").replace(/^\/+|\/+$/g, ""),
   },
 
   // Live Google rating + reviews (Places API New). The public endpoint reports

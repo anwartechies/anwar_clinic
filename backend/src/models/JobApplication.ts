@@ -18,7 +18,10 @@ export interface JobApplicationAttributes {
   experienceYears: string;
   currentCompany?: string | null;
   noticePeriod?: string | null;
-  resumeUrl: string;
+  /** Private storage key of the CV. Read only through the authenticated resume route. */
+  resumeKey?: string | null;
+  /** Legacy: public CV URL from before CVs were private. Not set for new applications. */
+  resumeUrl?: string | null;
   resumeFileName: string;
   coverNote?: string | null;
   status: ApplicationStatus;
@@ -34,6 +37,8 @@ export interface JobApplicationCreationAttributes
     | "currentCompany"
     | "noticePeriod"
     | "coverNote"
+    | "resumeKey"
+    | "resumeUrl"
     | "status"
     | "adminNotes"
   > {}
@@ -50,7 +55,8 @@ export class JobApplication
   declare experienceYears: string;
   declare currentCompany: string | null;
   declare noticePeriod: string | null;
-  declare resumeUrl: string;
+  declare resumeKey: string | null;
+  declare resumeUrl: string | null;
   declare resumeFileName: string;
   declare coverNote: string | null;
   declare status: ApplicationStatus;
@@ -69,7 +75,8 @@ JobApplication.init(
     experienceYears: { type: DataTypes.STRING, allowNull: false, defaultValue: "0" },
     currentCompany: { type: DataTypes.STRING, allowNull: true },
     noticePeriod: { type: DataTypes.STRING, allowNull: true },
-    resumeUrl: { type: DataTypes.TEXT, allowNull: false },
+    resumeKey: { type: DataTypes.TEXT, allowNull: true },
+    resumeUrl: { type: DataTypes.TEXT, allowNull: true },
     resumeFileName: { type: DataTypes.STRING, allowNull: false },
     coverNote: { type: DataTypes.TEXT, allowNull: true },
     status: { type: DataTypes.STRING, allowNull: false, defaultValue: "new" },

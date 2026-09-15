@@ -40,7 +40,8 @@ export interface JobApplication {
   experienceYears: string;
   currentCompany?: string | null;
   noticePeriod?: string | null;
-  resumeUrl: string;
+  /** Legacy public URL; new applications store the CV privately (use openResume). */
+  resumeUrl?: string | null;
   resumeFileName: string;
   coverNote?: string | null;
   status: ApplicationStatus;

@@ -13,6 +13,19 @@ export interface StoredObject {
   contentType: string;
 }
 
+/** A file that is never publicly reachable — no URL, only a storage key. */
+export interface PrivateObject {
+  key: string;
+  size: number;
+  contentType: string;
+}
+
+export interface PrivateFileStream {
+  body: NodeJS.ReadableStream;
+  contentType?: string;
+  contentLength?: number;
+}
+
 export interface StorageDriver {
   /** Shown in the admin UI so it's obvious which backend is live. */
   readonly name: "local" | "s3";
@@ -20,6 +33,17 @@ export interface StorageDriver {
   remove(key: string): Promise<void>;
   /** Rebuilds the public URL for a key — used if the bucket/host changes later. */
   urlFor(key: string): string;
+
+  // Private files (e.g. job-applicant CVs). Stored outside anything served
+  // publicly; read back only through authenticated routes that stream them.
+  putPrivate(file: PutFileInput, folder: string): Promise<PrivateObject>;
+  getPrivate(key: string): Promise<PrivateFileStream>;
+  removePrivate(key: string): Promise<void>;
+}
+
+/** Folder names for private files are fixed strings in code, never user input. */
+export function assertSafeFolder(folder: string): void {
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(folder)) throw new Error(`Invalid private folder: ${folder}`);
 }
 
 // Keys are generated, never taken from the client: a user-supplied filename can
