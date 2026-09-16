@@ -131,7 +131,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
             </div>
 
             {/* Book Your Surgery Button */}
-            <div className="pt-2">
+            {/* <div className="pt-2">
               <a
                 href="https://pages.razorpay.com/pl_R9xTz14IIPBGyE/view"
                 target="_blank"
@@ -140,7 +140,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
               >
                 Book your Surgery
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column: Company Links, Our Services, In Your City */}
@@ -237,7 +237,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
         {/* Bottom Full-Width Line + Copyright & Appointment CTA */}
         <div className="border-t border-white/15 pt-8 mt-14 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm text-gray-300 font-normal">
-            © {currentYear} {COMPANY_NAME} Regrow Hair |{" "}
+            © {currentYear} {COMPANY_NAME} Hair Transplant Clinic |{" "}
             <Link href="/privacy-policy" className="hover:text-white underline">
               Privacy Policy
             </Link>{" "}

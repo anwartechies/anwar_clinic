@@ -77,9 +77,9 @@ export default function OurServicesSection({
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
+    <section className="py-16 sm:py-20 lg:py-24 px-20 max-md:px-5 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         {/* Section Title */}
         <div className="pb-6 border-b border-gray-200">
           <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-nexgen-veryDarkHeader tracking-tight leading-tight">
@@ -89,7 +89,7 @@ export default function OurServicesSection({
 
         {/* 2-Column Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pt-10 sm:pt-14 items-start">
-          
+
           {/* Left Column: Introduction & Hair Follicles Image */}
           <div className="lg:col-span-5 flex flex-col items-start">
             <span className="text-xs sm:text-[13px] font-semibold text-nexgen-primaryGold block mb-4 tracking-wide uppercase">
@@ -99,7 +99,7 @@ export default function OurServicesSection({
             {/* Hair Strands Image from public folder */}
             <div className="py-2 flex justify-start">
               <img
-                src="/images/service1.webp"
+                src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-26-49-pm-mu460av79rso7y.jpeg"
                 alt="Hair Loss Introduction"
                 className="w-56 sm:w-64 h-auto object-contain select-none"
                 onError={(e) => {
@@ -154,19 +154,17 @@ export default function OurServicesSection({
 
                       {/* Rotating Chevron */}
                       <ChevronDown
-                        className={`w-4 h-4 text-gray-500 transition-transform duration-300 ease-out ${
-                          isOpen ? "rotate-180 text-nexgen-primaryGold" : "text-gray-400 group-hover:text-nexgen-primaryGold"
-                        }`}
+                        className={`w-4 h-4 text-gray-500 transition-transform duration-300 ease-out ${isOpen ? "rotate-180 text-nexgen-primaryGold" : "text-gray-400 group-hover:text-nexgen-primaryGold"
+                          }`}
                       />
                     </button>
 
                     {/* Expandable Content Container */}
                     <div
-                      className={`grid transition-all duration-300 ease-in-out ${
-                        isOpen
-                          ? "grid-rows-[1fr] opacity-100 mt-3"
-                          : "grid-rows-[0fr] opacity-0"
-                      }`}
+                      className={`grid transition-all duration-300 ease-in-out ${isOpen
+                        ? "grid-rows-[1fr] opacity-100 mt-3"
+                        : "grid-rows-[0fr] opacity-0"
+                        }`}
                     >
                       <div className="overflow-hidden pl-9.5 sm:pl-10">
                         <p className="text-xs sm:text-[13px] text-gray-600 leading-relaxed mb-4 font-normal">

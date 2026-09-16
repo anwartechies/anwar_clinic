@@ -15,13 +15,13 @@ interface ComparisonRow {
 const COMPARISON_ROWS: ComparisonRow[] = [
   {
     feature: "Graft Storage Time",
-    fue: "30–90 mins",
-    qht: "<30 mins",
+    fue: "30–100 mins",
+    qht: "<25 mins",
   },
   {
     feature: "Graft Survival Rate",
     fue: "75–85%",
-    qht: "95%+",
+    qht: "98%+",
   },
   {
     feature: "Healing Time",
@@ -30,8 +30,8 @@ const COMPARISON_ROWS: ComparisonRow[] = [
   },
   {
     feature: "Result Onset",
-    fue: "8–12 months",
-    qht: "6–9 months",
+    fue: "6–12 months",
+    qht: "5–6 months",
   },
   {
     feature: "Surgeon Involvement",

@@ -179,29 +179,9 @@ export default function CostTechniquesSection({
               <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
                 {/* Special Highlight Pills */}
                 <div>
-                  {pkg.id === "bio-fue" && (
-                    <div className="mb-3 py-1 px-2.5 rounded-lg bg-amber-50 border border-amber-300 text-amber-900 text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-xs">
-                      <FlaskConical className="w-3.5 h-3.5 text-amber-600" />
-                      <span>INCLUDES DMEM MEDIUM</span>
-                    </div>
-                  )}
 
-                  {pkg.id === "premium-dhi" && (
-                    <div className="space-y-1.5 mb-3">
-                      <div className="py-1 px-2 rounded-md bg-nexgen-veryDarkHeader text-nexgen-brightGold border border-nexgen-primaryGold/30 text-[11px] font-bold flex items-center gap-1.5">
-                        <Gem className="w-3.5 h-3.5" />
-                        <span>SAPPHIRE BLADE</span>
-                      </div>
-                      <div className="py-1 px-2 rounded-md bg-nexgen-veryDarkHeader text-nexgen-brightGold border border-nexgen-primaryGold/30 text-[11px] font-bold flex items-center gap-1.5">
-                        <PenTool className="w-3.5 h-3.5" />
-                        <span>DHI PEN</span>
-                      </div>
-                      <div className="py-1 px-2 rounded-md bg-nexgen-veryDarkHeader text-nexgen-brightGold border border-nexgen-primaryGold/30 text-[11px] font-bold flex items-center gap-1.5">
-                        <FlaskConical className="w-3.5 h-3.5" />
-                        <span>DMEM MEDIUM</span>
-                      </div>
-                    </div>
-                  )}
+
+
 
                   {/* Price Tag */}
                   <div className="text-center py-4 border-b border-gray-100 bg-nexgen-pageLightBg rounded-2xl">
@@ -214,6 +194,30 @@ export default function CostTechniquesSection({
                     </span>
                   </div>
                 </div>
+
+                {pkg.id === "bio-fue" && (
+                  <div className="mb-3 py-1 px-2.5 rounded-lg bg-amber-50 border border-amber-300 text-amber-900 text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-xs">
+                    <FlaskConical className="w-3.5 h-3.5 text-amber-600" />
+                    <span>INCLUDES DMEM MEDIUM</span>
+                  </div>
+                )}
+
+                {pkg.id === "premium-dhi" && (
+                  <div className="space-y-1.5 mb-3">
+                    <div className="py-1 px-2 rounded-md bg-nexgen-veryDarkHeader text-nexgen-brightGold border border-nexgen-primaryGold/30 text-[11px] font-bold flex items-center gap-1.5">
+                      <Gem className="w-3.5 h-3.5" />
+                      <span>SAPPHIRE BLADE</span>
+                    </div>
+                    <div className="py-1 px-2 rounded-md bg-nexgen-veryDarkHeader text-nexgen-brightGold border border-nexgen-primaryGold/30 text-[11px] font-bold flex items-center gap-1.5">
+                      <PenTool className="w-3.5 h-3.5" />
+                      <span>DHI PEN</span>
+                    </div>
+                    <div className="py-1 px-2 rounded-md bg-nexgen-veryDarkHeader text-nexgen-brightGold border border-nexgen-primaryGold/30 text-[11px] font-bold flex items-center gap-1.5">
+                      <FlaskConical className="w-3.5 h-3.5" />
+                      <span>DMEM MEDIUM</span>
+                    </div>
+                  </div>
+                )}
 
                 {/* Free Inclusions Checklist */}
                 <div className="space-y-3 pt-2">

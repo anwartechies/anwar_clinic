@@ -7,44 +7,44 @@ const DHI_PRICING_ROWS = [
   {
     stage: "Norwood II–III (Hairline Restructuring)",
     grafts: "800 – 1,500",
-    bioFueCost: "₹12,000 – ₹22,500",
-    dhiCost: "₹16,000 – ₹30,000",
-    premiumCost: "₹20,000 – ₹37,500",
+    bioFueCost: "₹30,000 – ₹40,000",
+    dhiCost: "₹40,000 – ₹45,000",
+    premiumCost: "₹45,000 – ₹50,000",
   },
   {
     stage: "Norwood III (Temples + Vertex)",
     grafts: "1,200 – 1,800",
-    bioFueCost: "₹18,000 – ₹27,000",
-    dhiCost: "₹24,000 – ₹36,000",
-    premiumCost: "₹30,000 – ₹45,000",
+    bioFueCost: "₹35,000 – ₹45,000",
+    dhiCost: "₹45,000 – ₹50,000",
+    premiumCost: "₹50,000 – ₹55,000",
   },
   {
     stage: "Norwood IV (Crown & Mid-Scalp)",
     grafts: "2,000 – 2,500",
-    bioFueCost: "₹30,000 – ₹37,500",
-    dhiCost: "₹40,000 – ₹50,000",
-    premiumCost: "₹50,000 – ₹62,500",
+    bioFueCost: "₹40,000 – ₹50,000",
+    dhiCost: "₹50,000 – ₹55,000",
+    premiumCost: "₹55,000 – ₹60,000",
   },
   {
     stage: "Norwood V (Extensive Thinning)",
     grafts: "2,500 – 3,500",
-    bioFueCost: "₹37,500 – ₹52,500",
-    dhiCost: "₹50,000 – ₹70,000",
-    premiumCost: "₹62,500 – ₹87,500",
+    bioFueCost: "₹45,000 – ₹55,000",
+    dhiCost: "₹55,000 – ₹60,000",
+    premiumCost: "₹60,000 – ₹65,500",
   },
   {
     stage: "Norwood VI (Significant Bald Area)",
     grafts: "3,500 – 4,500",
-    bioFueCost: "₹52,500 – ₹67,500",
-    dhiCost: "₹70,000 – ₹90,000",
-    premiumCost: "₹87,500 – ₹1,12,500",
+    bioFueCost: "₹50,000 – ₹60,000",
+    dhiCost: "₹60,000 – ₹65,000",
+    premiumCost: "₹65,000 – ₹70,000",
   },
   {
     stage: "Norwood VII (Mega Session)",
     grafts: "5,000 – 6,000",
-    bioFueCost: "₹75,000 – ₹90,000",
-    dhiCost: "₹1,00,000 – ₹1,20,000",
-    premiumCost: "₹1,25,000 – ₹1,50,000",
+    bioFueCost: "₹55,000 – ₹65,000",
+    dhiCost: "₹65,000 – ₹70,000",
+    premiumCost: "₹70,000 – ₹75,000",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function CostQHTTableSection() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         {/* Header */}
         <div className="max-w-4xl mb-10">
           <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold block mb-2 tracking-wide">
@@ -69,7 +69,7 @@ export default function CostQHTTableSection() {
 
         {/* Pricing Table Card - Full Width in Center */}
         <div className="w-full rounded-3xl overflow-hidden shadow-xl border border-gray-200/80 bg-white">
-          
+
           {/* Table Header Row */}
           <div className="bg-nexgen-veryDarkHeader text-white py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 font-bold text-xs sm:text-sm border-b border-nexgen-primaryGold/20">
             <div className="col-span-4 sm:col-span-3">Norwood Stage</div>

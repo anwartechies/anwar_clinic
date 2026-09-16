@@ -11,9 +11,9 @@ export default function ClinicHero() {
       {/* Clinic Corridor Interior Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-25-24-pm-mu16ngv5sdupct.jpeg"
+          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-4-49-04-pm-mu411bb72kfv8h.jpeg"
           alt={`${COMPANY_NAME} Clinic Interior Corridor`}
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center blur-sm"
         />
         {/* Soft Warm/Dark Gradient Overlay for Optimal Text Readability */}
         <div className="absolute inset-0 bg-black/40 via-black/25 to-black/50" />

@@ -20,7 +20,7 @@ export default function ResultsBaldnessGradeSection({
 
           {/* Left Column: Grade Chart Illustration Image */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-[380px] aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden bg-white/10 border border-white/20 shadow-lg relative group">
+            <div className="w-full max-w-[400px] h-[380px] sm:h-[400px] lg:h-[420px] rounded-2xl sm:rounded-3xl overflow-hidden bg-white/10 border border-white/20 shadow-lg relative group">
               <img
                 src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/doctor-mu16qkmeekqvfb.jpeg"
                 alt="Baldness Grade Assessment"

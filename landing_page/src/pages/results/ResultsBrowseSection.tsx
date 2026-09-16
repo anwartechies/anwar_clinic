@@ -241,7 +241,7 @@ export default function ResultsBrowseSection({
   });
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 px-20 max-md:px-5 bg-white overflow-hidden">
       <div className="qht-large-container">
 
         {/* Header Title + Counter */}

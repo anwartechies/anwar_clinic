@@ -13,43 +13,48 @@ interface ComparisonRow {
 export default function AboutComparisonTableSection() {
   const COMPARISON_ROWS: ComparisonRow[] = [
     {
-      feature: "Technology",
-      ourClinic: "Sapphire instruments, high magnification lenses",
-      others: "Mixed/outdated instruments",
+      feature: "Surgical Technology",
+      ourClinic: "Sapphire micro-instruments & cold-chain storage ensuring 95%+ graft survival",
+      others: "Standard steel blades with prolonged out-of-body holding times",
     },
     {
-      feature: "Hygiene/ Safety",
-      ourClinic: "Hospital-grade sterilization and safety practices throughout.",
-      others: "Varies often inconsistent",
+      feature: "Doctor Involvement",
+      ourClinic: "Direct planning and surgical execution by certified senior surgeons",
+      others: "Unsupervised procedures frequently delegated to technicians",
     },
     {
-      feature: "Pricing",
-      ourClinic: "All costs are clearly outlined in the quote- no hidden charges",
-      others: "Additional add-ons not shown in the quote and unclear pricing",
+      feature: "Hairline Artistry",
+      ourClinic: "Custom facial mapping with single-hair micro-feathering for natural density",
+      others: "Generic, stencil-like hairlines that can appear unnatural or pluggy",
     },
     {
-      feature: "Hairline Design",
-      ourClinic: "Face-fit, age-appropriate, and natural-looking hairline design",
-      others: "All hairlines are uniform and occasionally pluggy",
+      feature: "Safety & Hygiene",
+      ourClinic: "Hospital-grade sterile cleanroom suites with 100% single-use disposables",
+      others: "Inconsistent sterilization practices in basic outpatient rooms",
     },
     {
-      feature: "Treatment Planning",
-      ourClinic: "Customized plan for each patient",
-      others: "Standardized template approach",
+      feature: "Pricing Transparency",
+      ourClinic: "Clear, all-inclusive per-graft quotes with zero hidden or surprise costs",
+      others: "Low initial quotes followed by unexpected post-procedure add-on fees",
+    },
+    {
+      feature: "Donor Preservation",
+      ourClinic: "Strategic micro-extraction preserving donor reserves for future needs",
+      others: "Aggressive over-harvesting causing patchy or depleted donor zones",
     },
   ];
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         {/* Centered Heading & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold uppercase tracking-wider block mb-2">
             Clear Standards. Clear Results.
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight mb-3">
-            How {COMPANY_NAME} Differs from <br className="hidden sm:inline" />
+            How {COMPANY_NAME} Differs from
             Other Clinics?
           </h2>
         </div>
@@ -58,7 +63,7 @@ export default function AboutComparisonTableSection() {
         <div className="max-w-4xl mx-auto rounded-2xl sm:rounded-3xl border border-nexgen-primaryGold/25 overflow-hidden shadow-md bg-white">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[620px]">
-              
+
               {/* Table Header */}
               <thead>
                 <tr className="bg-nexgen-veryDarkHeader text-white border-b border-nexgen-primaryGold/20">
@@ -78,7 +83,7 @@ export default function AboutComparisonTableSection() {
               <tbody className="divide-y divide-gray-200">
                 {COMPARISON_ROWS.map((row, idx) => (
                   <tr key={idx} className="hover:bg-gray-50/50 transition-colors">
-                    
+
                     {/* Feature Title */}
                     <td className="py-4 sm:py-5 px-6 sm:px-8 text-xs sm:text-sm font-semibold text-nexgen-veryDarkHeader align-middle">
                       {row.feature}

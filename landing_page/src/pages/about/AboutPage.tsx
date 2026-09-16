@@ -15,6 +15,7 @@ import FAQSection from "@/pages/homepage/FAQSection";
 import BottomBanner from "@/pages/homepage/BottomBanner";
 import { useConsultation } from "@/context/ConsultationContext";
 import OurServicesSection from "@/components/common/OurServicesSection";
+import CostVideoJourneySection from "../cost/CostVideoJourneySection";
 
 export default function AboutPage() {
   const { openConsultation } = useConsultation();
@@ -44,6 +45,8 @@ export default function AboutPage() {
 
       {/* 8. Celebrities & Patients Who Trust QHT */}
       {/* <AboutCelebrityTrustSection /> */}
+
+      <CostVideoJourneySection />
 
       {/* Google Reviews */}
       <GoogleReviews />

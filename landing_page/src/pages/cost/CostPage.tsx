@@ -35,7 +35,7 @@ export default function CostPage() {
       <CostNorwoodTableSection />
 
       {/* 4. FUT Hair Transplant Cost by Norwood Stage Table */}
-      <CostFUTTableSection />
+      {/* <CostFUTTableSection /> */}
 
       {/* 5. QHT (Quick Hair Transplant) Cost Table */}
       <CostQHTTableSection />

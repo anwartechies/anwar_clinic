@@ -34,8 +34,8 @@ const CLINIC_BRANCHES: ClinicBranchData[] = [
       `Our Patna flagship center features world-class sterile surgical suites, comprehensive trichoscopy diagnostics, and senior surgeon care.`,
     address:
       "Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014",
-    phone: "+91 9084726916",
-    email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
+    phone: "+91 8797363636",
+    email: `nexgenhairtransplant@gmail.com`,
     images: [
       {
         url: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-10-57-pm-mu16ng7ufd4rtc.jpeg",
@@ -71,8 +71,8 @@ const CLINIC_BRANCHES: ClinicBranchData[] = [
       `Our Mumbai restoration center provides precision graft implantation, advanced scalp analysis, and personalized consultations.`,
     address:
       "Bandra West / Andheri, Mumbai, Maharashtra",
-    phone: "+91 9084726916",
-    email: `care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
+    phone: "+91 8797363636",
+    email: `nexgenhairtransplant@gmail.com`,
     images: [
       {
         url: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-10-57-pm-mu16ng7ufd4rtc.jpeg",

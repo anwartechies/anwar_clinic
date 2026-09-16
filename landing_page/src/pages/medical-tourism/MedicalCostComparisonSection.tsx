@@ -42,13 +42,13 @@ const COUNTRIES: CountryCostItem[] = [
     description:
       "The United States provides advanced robotic technology and strict medical governance. However, steep surgeon fees, hospital charges, and post-op care expenses make it one of the most expensive destinations worldwide.",
   },
-  {
-    country: "China",
-    flagIcon: "https://flagcdn.com/w80/cn.png",
-    price: "$1,200",
-    description:
-      "China boasts a fast-growing hair transplant market driven by large domestic clinics and mechanized extraction tools. While rates are competitive, language barriers and limited international patient concierge services remain challenges.",
-  },
+  // {
+  //   country: "China",
+  //   flagIcon: "https://flagcdn.com/w80/cn.png",
+  //   price: "$1,200",
+  //   description:
+  //     "China boasts a fast-growing hair transplant market driven by large domestic clinics and mechanized extraction tools. While rates are competitive, language barriers and limited international patient concierge services remain challenges.",
+  // },
 ];
 
 export default function MedicalCostComparisonSection() {
@@ -71,13 +71,13 @@ export default function MedicalCostComparisonSection() {
         {/* ========================================================
             5 COMPARISON CARDS
            ======================================================== */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 items-stretch">
           {COUNTRIES.map((item, idx) => (
             <div
               key={idx}
               className={`bg-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-sm border transition-all duration-300 hover:shadow-md ${item.badge
-                  ? "border-nexgen-primaryGold/50 ring-1 ring-nexgen-primaryGold/20 shadow-md"
-                  : "border-gray-200/70"
+                ? "border-nexgen-primaryGold/50 ring-1 ring-nexgen-primaryGold/20 shadow-md"
+                : "border-gray-200/70"
                 }`}
             >
               <div>

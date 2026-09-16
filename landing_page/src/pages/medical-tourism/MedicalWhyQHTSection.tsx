@@ -43,7 +43,7 @@ export default function MedicalWhyQHTSection() {
 
             {/* Subtitle */}
             <p className="mt-4 sm:mt-5 text-xs sm:text-sm text-white/90 leading-relaxed max-w-sm sm:max-w-md font-normal">
-              Due to quality, ethics, and innovation, {COMPANY_NAME} Clinic has gained a good reputation among foreign patients who want to undergo hair transplant in India due to its dedication to quality services.
+              Combining surgeon-led artistry, uncompromising safety ethics, and advanced micro-follicular protocols, {COMPANY_NAME} is the trusted destination for international patients seeking permanent, world-class hair restoration in India.
             </p>
           </div>
 

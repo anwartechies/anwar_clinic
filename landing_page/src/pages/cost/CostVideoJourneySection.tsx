@@ -15,45 +15,45 @@ interface JourneyVideo {
 const COST_JOURNEY_VIDEOS: JourneyVideo[] = [
   {
     id: 1,
-    title: "Rajpal Yadav | Bollywood Actor Hair Transplant Journey",
+    title: "Hair Transplant Results | Best Hair Transplant in Patna",
     channel: `${COMPANY_NAME} Hair Transplant Clinic`,
-    youtubeId: "8Z0B660p7nU",
-    thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-why-us-thumb.webp",
+    youtubeId: "g0gOySSmaYg",
+    thumbnail: "https://i.ytimg.com/vi/g0gOySSmaYg/hqdefault.jpg",
   },
   {
     id: 2,
-    title: "FUE Hair Transplant Results | DAYA's FUE Hair Transplant 21-Days Review",
+    title: "New Hair, New Confidence | Transform Your Look & Say Goodbye to Baldness",
     channel: `${COMPANY_NAME} Hair Transplant Clinic`,
-    youtubeId: "WJ5c2z4kZGE",
-    thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Puneet-Chandra-Grade-6-Post.webp",
+    youtubeId: "2Dtm3lRxpg4",
+    thumbnail: "https://i.ytimg.com/vi/2Dtm3lRxpg4/hqdefault.jpg",
   },
   {
     id: 3,
-    title: "Hair Transplant in Mumbai (HX-LMAP) | Completely Hair Transplant",
+    title: `${COMPANY_NAME} Hair Transplant Clinic | Patient Experience & Results`,
     channel: `${COMPANY_NAME} Hair Transplant Clinic`,
-    youtubeId: "rK47G9_908Q",
-    thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Praveen-Kumar-Grade-Bangalore-DHI-Post.webp",
+    youtubeId: "l1zjtt4n92Q",
+    thumbnail: "https://i.ytimg.com/vi/l1zjtt4n92Q/hqdefault.jpg",
   },
   {
     id: 4,
-    title: "Hair Transplant in Indore | 2 PATIENTS AMAZING RESULTS",
+    title: `Hair Loss Solution & Baldness Treatment | ${COMPANY_NAME} Hair Transplant`,
     channel: `${COMPANY_NAME} Hair Transplant Clinic`,
-    youtubeId: "_7sxUwnt5UA",
-    thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Irfan-Uttar-Pradesh-Grade-5A-Post.webp",
+    youtubeId: "je50o_PRQV8",
+    thumbnail: "https://i.ytimg.com/vi/je50o_PRQV8/hqdefault.jpg",
   },
   {
     id: 5,
-    title: "Hair Transplant in Ahmedabad | Best Results & High Density",
+    title: `Natural Hair Restoration & Density | ${COMPANY_NAME} Hair Transplant`,
     channel: `${COMPANY_NAME} Hair Transplant Clinic`,
-    youtubeId: "_N3b69JjCpI",
-    thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Kshitij-Ahuja-Jabalpur-Grade-4-Post.webp",
+    youtubeId: "74GLSc0tbmE",
+    thumbnail: "https://i.ytimg.com/vi/74GLSc0tbmE/hqdefault.jpg",
   },
   {
     id: 6,
-    title: "Hair Transplant in Dehradun | Best Results & Real Transformation",
+    title: `Real Results | Honest Patient Experience at ${COMPANY_NAME} Hair Transplant`,
     channel: `${COMPANY_NAME} Hair Transplant Clinic`,
-    youtubeId: "kk4TGEmal3Q",
-    thumbnail: "https://www.qhtclinic.com/wp-content/uploads/2025/08/Copy-of-Sagar-Kumar-Grade-4A-Post.webp",
+    youtubeId: "jfqv22Re2pI",
+    thumbnail: "https://i.ytimg.com/vi/jfqv22Re2pI/hqdefault.jpg",
   },
 ];
 
@@ -122,7 +122,7 @@ export default function CostVideoJourneySection() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         {/* Heading */}
         <div className="max-w-4xl mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.14]">
