@@ -153,14 +153,18 @@ function InteractiveComparisonCard({ item }: { item: CostResultItem }) {
       </div>
 
       {/* Card Info Details */}
-      <div className="p-5 space-y-3">
-        <div className="flex items-center justify-between text-xs text-gray-200 font-medium">
-          <span className="font-bold text-white">{item.name}</span>
-          <span className="text-nexgen-brightGold font-semibold">{item.grafts}</span>
+      <div className="p-4 sm:p-4.5 space-y-2.5">
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-bold text-nexgen-veryDarkHeader text-sm sm:text-base tracking-tight truncate">
+            {item.name}
+          </span>
+          <span className="text-xs sm:text-sm font-semibold px-2.5 py-0.5 rounded-full bg-nexgen-mainDarkBg text-nexgen-brightGold shrink-0 border border-nexgen-brightGold/20">
+            {item.grafts}
+          </span>
         </div>
-        <div className="flex items-center justify-between text-[11px] text-gray-300">
-          <span>{item.technique}</span>
-          <span>{item.months}</span>
+        <div className="flex items-center justify-between gap-2 text-xs text-black/50 font-medium">
+          <span className="truncate pr-1" title={item.technique}>{item.technique}</span>
+          <span className="shrink-0 text-nexgen-veryDarkHeader/65 font-medium">{item.months}</span>
         </div>
       </div>
 
@@ -177,10 +181,10 @@ export default function CostResultsSection() {
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12 lg:mb-16">
           <div className="max-w-2xl space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.15]">
-              Results of Hair Transplant
+              Verified Transformations & Regrowth Outcomes
             </h2>
             <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-normal">
-              See real transformations delivered through {COMPANY_NAME}’s proprietary technique. Every result reflects precision graft handling, optimal density, and natural-looking outcomes - designed by experienced surgeons with attention to detail.
+              Witness real patient journeys restored through {COMPANY_NAME}’s precision surgical protocols. Each transformation demonstrates artistic hairline architecture, maximum follicular survival, and undetectable, natural-looking density tailored to the patient's facial profile.
             </p>
           </div>
 
@@ -188,8 +192,8 @@ export default function CostResultsSection() {
 
         </div>
 
-        {/* 6 Cards 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* 4 Cards 4-Column Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {COST_RESULTS_CARDS.map((card) => (
             <InteractiveComparisonCard key={card.id} item={card} />
           ))}

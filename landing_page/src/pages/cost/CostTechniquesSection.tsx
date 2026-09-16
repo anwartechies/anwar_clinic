@@ -73,7 +73,7 @@ const PACKAGES = [
     id: "dhi",
     name: "DHI",
     grafts: "5000 - 6000 GRAFT REQUIRED",
-    price: 15,
+    price: 20,
     headerBg: "bg-nexgen-veryDarkHeader",
     headerText: "text-white",
     cardBorder: "border-nexgen-veryDarkHeader/20",
@@ -130,11 +130,11 @@ export default function CostTechniquesSection({
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight">
-            Transparent Per-Graft Pricing Packages
+            Precision Hair Restoration Packages & Per-Graft Rates
           </h2>
 
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Choose from our specialized restoration protocols at {COMPANY_NAME}. All packages include complete diagnostic tests, recovery medications, post-op headwash, and complimentary GFC/PRP sessions.
+            Explore transparent surgical protocols engineered for optimal density and graft survival at {COMPANY_NAME}. Every treatment package is fully all-inclusive — featuring pre-op blood diagnostics, sterile procedural suites, post-op recovery kits, and complimentary regenerative GFC/PRP sessions.
           </p>
 
           {/* Top Trust Icons */}
@@ -251,7 +251,7 @@ export default function CostTechniquesSection({
         {/* 3. "Why Choose NexGen Hair Transplant?" Banner */}
         <div className="bg-nexgen-mainDarkBg text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-nexgen-primaryGold/30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Left 5 Pillars */}
             <div className="lg:col-span-8 space-y-6">
               <div className="text-center sm:text-left">
@@ -305,7 +305,7 @@ export default function CostTechniquesSection({
                 </div>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 text-nexgen-brightGold flex-shrink-0 mt-0.5" />
-                  <span>Pillar No-55, Razabazar, Patna</span>
+                  <span>Pillar No-56, Raja Bazar, Patna</span>
                 </div>
               </div>
 

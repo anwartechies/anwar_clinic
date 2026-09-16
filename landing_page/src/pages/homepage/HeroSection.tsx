@@ -35,7 +35,7 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
       {/* Absolute Background Image (Black mask applied directly to image pixels via brightness filter) */}
       <div className="absolute max-md:hidden inset-0 z-0 pointer-events-none">
         <img
-          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-25-24-pm-mu16ngv5sdupct.jpeg"
+          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-4-49-04-pm-mu411bb72kfv8h.jpeg"
           alt={`${COMPANY_NAME} Background`}
           className="w-full h-full object-contain object-left-top brightness-50"
         />

@@ -69,10 +69,10 @@ export default function CostWhyIndiaSection() {
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base font-bold text-nexgen-veryDarkHeader mb-1">
-                    Significant Cost Savings vs US & UK
+                    Up to 80% Cost Savings vs US, UK & UAE
                   </h3>
                   <p className="text-xs text-gray-600 leading-relaxed font-normal">
-                    The same FUE procedure that costs ₹250–₹800 per graft in the UK or USA can be performed in India for ₹50–₹120 per graft - with expert surgical care, modern infrastructure, and globally aligned clinical protocols. World-class quality at a fraction of the global cost.
+                    The exact same precision restoration that commands ₹250–₹800 per graft in the UK, USA, or Canada starts from just ₹10–₹25 per graft at {COMPANY_NAME} in India — backed by certified surgical specialists, sterile procedural suites, and gold-standard follicular preservation.
                   </p>
                 </div>
               </div>
@@ -84,10 +84,10 @@ export default function CostWhyIndiaSection() {
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base font-bold text-nexgen-veryDarkHeader mb-1">
-                    Personalised Pre & Post-Surgery Support
+                    Dedicated Pre & Post-Procedure Concierge
                   </h3>
                   <p className="text-xs text-gray-600 leading-relaxed font-normal">
-                    A dedicated team of experts assists international patients with pre- and post-surgical queries throughout the journey - from initial consultation to recovery. Personalised hair restoration plans are tailored to each patient's individual needs and expectations.
+                    A dedicated medical coordinator supports each patient throughout their entire journey — from initial digital trichoscopy and travel scheduling to weekly post-op washes and long-term regrowth assessments.
                   </p>
                 </div>
               </div>
@@ -99,10 +99,10 @@ export default function CostWhyIndiaSection() {
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base font-bold text-nexgen-veryDarkHeader mb-1">
-                    Multi-City Clinic Network
+                    Strategic Multi-City Surgical Centers
                   </h3>
                   <p className="text-xs text-gray-600 leading-relaxed font-normal">
-                    {COMPANY_NAME} operates centers across 2 strategic hubs — Patna (Main Branch) and Mumbai (Second Branch) — making it accessible for both domestic and international patients to plan their procedure and follow-up care.
+                    {COMPANY_NAME} operates modern restoration facilities across 2 strategic hubs — Patna (Flagship Center) and Mumbai (Second Center) — offering accessible consultation and procedural access for both domestic and international travelers.
                   </p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function CostWhyIndiaSection() {
                   15,000+
                 </div>
                 <p className="text-xs sm:text-sm text-white/90 font-medium mt-2 leading-snug">
-                  Successful hair transplant procedures performed
+                  Successful hair restoration procedures completed
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export default function CostWhyIndiaSection() {
                   4.9★
                 </div>
                 <p className="text-xs sm:text-sm text-white/90 font-medium mt-2 leading-snug">
-                  Average Google rating from 2,091+ verified patient reviews
+                  Google rating backed by 2,000+ verified patient reviews
                 </p>
               </div>
 
@@ -146,7 +146,7 @@ export default function CostWhyIndiaSection() {
                   10+
                 </div>
                 <p className="text-xs sm:text-sm text-white/90 font-medium mt-2 leading-snug">
-                  Years of clinical experience in advanced hair restoration
+                  Years of specialized surgical experience in trichology
                 </p>
               </div>
 
@@ -156,7 +156,7 @@ export default function CostWhyIndiaSection() {
                   ₹0
                 </div>
                 <p className="text-xs sm:text-sm text-white/90 font-medium mt-2 leading-snug">
-                  Hidden charges – transparent, upfront pricing with no surprises
+                  Hidden expenses – 100% upfront, transparent pricing guarantee
                 </p>
               </div>
 
@@ -166,7 +166,7 @@ export default function CostWhyIndiaSection() {
                   02
                 </div>
                 <p className="text-xs sm:text-sm text-white/90 font-medium mt-2 leading-snug">
-                  Clinic locations: Patna (Main Branch), Mumbai (Second Branch)
+                  Specialized surgical hubs: Patna (Flagship) & Mumbai
                 </p>
               </div>
 

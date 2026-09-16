@@ -159,10 +159,16 @@ export default function CostEstimateCalculatorSection({
         
         {/* Heading */}
         <div className="max-w-4xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.12]">
+          <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold block mb-2 tracking-wide">
+            Interactive Cost Estimator
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.12] mb-3">
             Calculate Your Estimated <br />
             Hair Restoration Cost
           </h2>
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-2xl">
+            Select your closest pattern of thinning and submit your details to receive an instant, clinically accurate graft estimation and customized procedural quote from our senior trichology team.
+          </p>
         </div>
 
         {/* 2-Column Form Layout */}

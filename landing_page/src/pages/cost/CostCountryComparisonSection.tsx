@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { COMPANY_NAME } from "@/config/constants";
 
 interface CountryComparisonRow {
   country: string;
@@ -64,10 +65,10 @@ export default function CostCountryComparisonSection() {
         {/* Header */}
         <div className="max-w-4xl mb-10 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-tight mb-4">
-            Hair Transplant Cost: India vs Other Countries
+            Global Cost Comparison: India vs Other Leading Countries
           </h2>
           <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-normal max-w-3xl">
-            India is rapidly establishing itself as a medical tourism hub, offering world-class hair restoration services at a fraction of the global cost. International patients are choosing India for the combination of expert surgical care and consistently satisfactory results.
+            India has established itself as the world’s leading hub for medical hair restoration, providing international-grade surgical precision at up to 80% lower cost than the United States, United Kingdom, and the UAE. Patients worldwide choose {COMPANY_NAME} for doctor-led procedures, hospital-standard sterility, and permanent natural density.
           </p>
         </div>
 

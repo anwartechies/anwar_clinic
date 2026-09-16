@@ -22,14 +22,14 @@ export default function CostNorwoodTableSection() {
         {/* Header */}
         <div className="max-w-4xl mb-10">
           <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold block mb-2 tracking-wide">
-            FUE Pricing Table
+            FUE Pricing Matrix
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight mb-4">
             FUE Hair Transplant Cost in India <br />
             by Norwood Stage
           </h2>
           <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-3xl">
-            Follicular Unit Extraction is an advanced, minimally invasive technique with no linear scar. The FUE hair transplant cost at {COMPANY_NAME} Clinic starts from just ₹10 per graft. The number of grafts and therefore total cost is determined by your Norwood baldness grade, assessed during a scalp consultation.
+            Follicular Unit Extraction (FUE) represents the gold standard in scarless, minimally invasive hair restoration. At {COMPANY_NAME}, our surgeon-led FUE procedures start from just ₹10 per graft. The total investment is determined by your Norwood hair loss classification, individual donor bank density, and aesthetic hairline goals determined during a comprehensive scalp evaluation.
           </p>
         </div>
 
@@ -39,8 +39,8 @@ export default function CostNorwoodTableSection() {
           {/* Table Header Row */}
           <div className="bg-nexgen-veryDarkHeader text-white py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 font-bold text-xs sm:text-sm border-b border-nexgen-primaryGold/20">
             <div className="col-span-4 sm:col-span-5">Norwood Stage</div>
-            <div className="col-span-4 sm:col-span-4">Grafts Required</div>
-            <div className="col-span-4 sm:col-span-3 text-left">FUE Cost ({COMPANY_NAME} Clinic)</div>
+            <div className="col-span-4 sm:col-span-4">Estimated Grafts</div>
+            <div className="col-span-4 sm:col-span-3 text-left">FUE Investment ({COMPANY_NAME})</div>
           </div>
 
           {/* Table Body Rows */}
@@ -67,7 +67,7 @@ export default function CostNorwoodTableSection() {
 
         {/* Footer Note */}
         <p className="text-xs text-gray-500 font-normal mt-6">
-          Prices at {COMPANY_NAME} Clinic – FUE starts from ₹10/graft. Includes free PRP, medications, and consultations. Final cost confirmed after personalised scalp assessment.
+          * Transparent pricing starting at ₹10/graft. Every package includes complimentary GFC/PRP therapy, post-op medications, sterile headwashes, and scheduled doctor reviews. Final surgical plan confirmed following digital trichoscopy.
         </p>
 
       </div>

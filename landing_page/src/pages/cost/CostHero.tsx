@@ -33,19 +33,19 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
 
             {/* Tag Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 px-3.5 py-1 rounded-full text-xs font-semibold text-white">
-              <span>NATURAL HAIR. NEXT GEN YOU.</span>
+              <span>NATURAL HAIR • NEXT GEN YOU</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-[500] text-white tracking-tight leading-[1.12]">
               Hair Transplant Cost <br className="hidden sm:block" />
               <span className="text-nexgen-brightGold">in India</span> | Transparent <br className="hidden sm:block" />
-              Pricing, Natural Results.
+              Pricing, Natural Density.
             </h1>
 
             {/* Overview Paragraph */}
             <p className="text-xs sm:text-lg text-white/85 leading-relaxed font-normal max-w-xl">
-              Hair transplant pricing at {COMPANY_NAME} is 100% transparent and starts from just ₹10/graft (FUE), ₹15/graft (Bio FUE & DHI), and ₹25/graft (Premium DHI with Sapphire Blade). Every package includes complimentary PRP/GFC sessions, 5 days medication, bandage removal, headwash, blood tests, and post-transplant doctor consultations.
+              Experience world-class, doctor-led hair restoration with complete upfront transparency at {COMPANY_NAME}. Our surgeon-supervised procedures start from ₹10/graft (FUE), ₹15/graft (Bio FUE), ₹20/graft (DHI), and ₹25/graft (Premium Sapphire DHI). Every package includes complimentary GFC/PRP sessions, essential recovery medications, professional bandage removal, headwashes, laboratory tests, and continuous post-operative follow-up with zero hidden charges.
             </p>
 
             {/* Action Buttons */}
@@ -90,32 +90,32 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
 
                 {/* Row 2: Bio FUE */}
                 <div className="py-3.5 flex items-center justify-between">
-                  <span className="text-gray-600 font-medium">Bio FUE (DMEM Medium)</span>
+                  <span className="text-gray-600 font-medium">Bio FUE (DMEM Preservation)</span>
                   <span className="font-extrabold text-nexgen-veryDarkHeader text-sm">₹15 / graft</span>
                 </div>
 
                 {/* Row 3: DHI */}
                 <div className="py-3.5 flex items-center justify-between">
-                  <span className="text-gray-600 font-medium">DHI Technique</span>
-                  <span className="font-extrabold text-nexgen-veryDarkHeader text-sm">₹15 / graft</span>
+                  <span className="text-gray-600 font-medium">DHI Direct Implantation</span>
+                  <span className="font-extrabold text-nexgen-veryDarkHeader text-sm">₹20 / graft</span>
                 </div>
 
                 {/* Row 4: Premium DHI */}
                 <div className="py-3.5 flex items-center justify-between bg-nexgen-pageLightBg -mx-6 sm:-mx-7 px-6 sm:px-7">
-                  <span className="text-nexgen-veryDarkHeader font-bold">Premium DHI (Sapphire + DMEM)</span>
+                  <span className="text-nexgen-veryDarkHeader font-bold">Premium Sapphire DHI</span>
                   <span className="font-extrabold text-nexgen-primaryGold text-sm">₹25 / graft</span>
                 </div>
 
                 {/* Row 5: Package Benefits */}
                 <div className="py-3.5 flex items-center justify-between">
-                  <span className="text-gray-600 font-medium">Free Package Inclusions</span>
-                  <span className="font-bold text-nexgen-primaryGold">PRP/GFC + Meds + Wash</span>
+                  <span className="text-gray-600 font-medium">Included at No Extra Cost</span>
+                  <span className="font-bold text-nexgen-primaryGold">GFC/PRP + Meds + Wash</span>
                 </div>
 
                 {/* Row 6: Location */}
                 <div className="pt-3.5 flex items-center justify-between">
-                  <span className="text-gray-600 font-medium">Main Clinic (Patna)</span>
-                  <span className="font-bold text-gray-900">Pillar No-55, Razabazar</span>
+                  <span className="text-gray-600 font-medium">Flagship Center (Patna)</span>
+                  <span className="font-bold text-gray-900">Pillar No-56, Raja Bazar</span>
                 </div>
 
               </div>

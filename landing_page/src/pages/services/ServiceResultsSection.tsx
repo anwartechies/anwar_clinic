@@ -138,15 +138,21 @@ function ServiceComparisonCard({ item }: { item: ResultCardItem }) {
       </div>
 
       {/* Card Info Details */}
-      <div className="p-5 space-y-3">
-        <div className="flex items-center justify-between text-xs text-gray-300 font-medium">
-          <span>{item.grafts || item.name || "Hair Restoration"}</span>
-          {item.timeframe && <span className="text-nexgen-brightGold">{item.timeframe}</span>}
+      <div className="p-4 sm:p-4.5 space-y-2.5">
+        <div className="flex items-center justify-between gap-2 text-xs font-semibold">
+          <span className="text-nexgen-veryDarkHeader font-bold text-sm sm:text-base tracking-tight truncate">
+            {item.grafts || item.name || "Hair Restoration"}
+          </span>
+          {item.timeframe && (
+            <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-nexgen-mainDarkBg text-nexgen-brightGold shrink-0 border border-nexgen-brightGold/20">
+              {item.timeframe}
+            </span>
+          )}
         </div>
         {(item.technique || item.age) && (
-          <div className="flex items-center justify-between text-[11px] text-gray-400">
-            <span>{item.technique}</span>
-            <span>{item.age}</span>
+          <div className="flex items-center justify-between gap-2 text-xs text-black/50 font-medium">
+            <span className="truncate pr-1">{item.technique}</span>
+            <span className="shrink-0 text-nexgen-veryDarkHeader/65">{item.age}</span>
           </div>
         )}
       </div>
@@ -183,8 +189,8 @@ export default function ServiceResultsSection({
 
         </div>
 
-        {/* 3-Column Results Cards Grid using TransformationGallery component architecture */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* 4-Column Results Cards Grid using TransformationGallery component architecture */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {results.map((item, index) => (
             <ServiceComparisonCard key={item.id ?? index} item={item} />
           ))}

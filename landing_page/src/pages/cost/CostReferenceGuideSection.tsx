@@ -45,24 +45,24 @@ export default function CostReferenceGuideSection() {
           {/* 2. QHT Clinic Cost per Graft */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
             <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
-              Per-Graft Cost Structure at {COMPANY_NAME}
+              Transparent Per-Graft Pricing Formula
             </h3>
             <p>
-              In India, hair transplant cost is primarily calculated on a per-graft basis. A graft typically contains 1–4 hair follicles. The total cost is derived by multiplying the per-graft rate by the total number of grafts required for your specific case.
+              In India, hair restoration costs are calculated on a strictly transparent per-graft basis. Each graft contains 1–4 active follicles. Total cost is derived by multiplying the total graft count required for your desired density by the technique rate:
             </p>
             <div className="bg-white/80 rounded-xl p-3.5 border border-gray-200/60 space-y-1 my-2">
               <span className="font-bold text-nexgen-veryDarkHeader block">
-                Formula: Total Cost = Number of Grafts × Per-Graft Rate
+                Formula: Total Investment = Graft Count × Per-Graft Rate
               </span>
-              <ul className="space-y-0.5 text-xs text-gray-700">
-                <li>• FUE Technique: ₹10/graft (scarless standard)</li>
-                <li>• Bio FUE (DMEM Medium): ₹15/graft (enhanced follicle vitality)</li>
-                <li>• DHI Technique: ₹15/graft (direct implanter pen)</li>
-                <li>• Premium DHI (Sapphire + DMEM): ₹25/graft (top clinical grade)</li>
+              <ul className="space-y-0.5 text-xs text-gray-700 font-medium">
+                <li>• FUE Technique: ₹10 / graft (scarless motorized baseline)</li>
+                <li>• Bio FUE (with DMEM Medium): ₹15 / graft (enhanced follicle vitality)</li>
+                <li>• DHI Technique: ₹20 / graft (direct micro-implanter pen)</li>
+                <li>• Premium Sapphire DHI: ₹25 / graft (sapphire blades + DMEM solution)</li>
               </ul>
             </div>
             <p>
-              The number of grafts required is determined by your Norwood baldness scale grade, assessed during a scalp analysis consultation with the surgeon.
+              The precise graft requirement is clinically diagnosed through high-magnification digital trichoscopy and Norwood staging during your surgeon consultation.
             </p>
           </div>
 
@@ -106,20 +106,20 @@ export default function CostReferenceGuideSection() {
           {/* 5. Difference Between FUE, FUT and DHI */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
             <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
-              Difference Between FUE, FUT and DHI
+              Key Differences: FUE vs FUT vs DHI vs Sapphire
             </h3>
             <ul className="space-y-2 list-disc list-inside">
               <li>
-                <strong className="text-gray-900">FUE:</strong> Individual follicle extraction using punch tool. No linear scar. Versatile — suitable for scalp, beard, eyebrow transplants.
+                <strong className="text-gray-900">FUE (Follicular Unit Extraction):</strong> Individual follicle harvesting using micro-punches (0.75–0.9mm). Leaves zero linear scars, has minimal downtime, and is versatile across scalp, beard, and eyebrow restoration.
               </li>
               <li>
-                <strong className="text-gray-900">FUT:</strong> Strip of scalp removed and microscopically dissected. Higher graft yield in one session. Leaves linear scar concealable by hair.
+                <strong className="text-gray-900">FUT (Strip Method):</strong> An excised donor strip microscopically dissected into individual units. Delivers high graft yields in mega sessions without shaving the donor or recipient area. Leaves a discreet linear scar easily concealed by surrounding hair.
               </li>
               <li>
-                <strong className="text-gray-900">DHI (Direct Hair Implantation):</strong> A variation of FUE using a Choi implanter pen for direct placement without recipient site pre-creation. Higher cost, fewer grafts per session.
+                <strong className="text-gray-900">DHI (Direct Hair Implantation):</strong> Utilizes specialized hollow-needle implanter pens to insert follicles directly without prior channel slits, giving precise 360-degree control over depth, angle, and directional growth.
               </li>
               <li>
-                <strong className="text-gray-900">{COMPANY_NAME} Advanced Technique:</strong> Direct micro-implantation protocol reducing follicle out-of-body holding time to protect root viability and yield maximum natural density.
+                <strong className="text-gray-900">Premium Sapphire DHI:</strong> Pairs ultra-sharp gem-grade sapphire micro-incisions with direct pen delivery and DMEM bio-preservation medium, ensuring minimal tissue trauma, zero scab marks, and peak visual density.
               </li>
             </ul>
           </div>
