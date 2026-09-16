@@ -18,47 +18,47 @@ const SERVICES_LIST: ServiceAccordionItem[] = [
     number: "01",
     title: "Hair Restoration for Men",
     description:
-      "Personalized surgical and medical treatments engineered to restore temple recession, vertex thinning, and male pattern baldness permanently.",
+      "Advanced surgeon-led follicular transplantation designed to permanently reverse male pattern baldness, rebuild receding temples, and restore lifelong crown density with authentic hair flow.",
     href: "/services/hair-transplant-for-men/",
   },
   {
     id: "hairline",
     number: "02",
-    title: "Hairline Reconstruction",
+    title: "Artistic Hairline Reconstruction",
     description:
-      "Restore your natural facial balance with bespoke hairline architecture sculpted to your facial proportions and natural exit angles.",
+      "Custom-crafted hairline architecture tailored to your natural facial proportions, using single-hair micro-grafts placed at feather-soft angles for a virtually undetectable transition.",
     href: "/services/hairline-reconstruction/",
   },
   {
     id: "repair",
     number: "03",
-    title: "Failed Transplant Revision",
+    title: "Corrective & Revision Transplant",
     description:
-      "Correct pluggy grafts, misaligned growth angles, and donor scarring from previous procedures with specialized revision protocols.",
+      "Specialized reconstructive protocols to extract unnatural pluggy grafts, correct misaligned growth vectors, and repair donor scarring from substandard prior surgeries.",
     href: "/services/failed-hair-transplant-repair/",
   },
   {
     id: "body-hair",
     number: "04",
-    title: "Body Hair Restoration",
+    title: "Body Hair Transplant (BHT)",
     description:
-      "Harvest healthy follicles from beard or secondary donor areas when occipital scalp donor reserves are depleted.",
+      "Strategic harvesting of robust donor follicles from the beard and chest to reconstruct dense coverage for patients with exhausted or compromised scalp donor reserves.",
     href: "/services/body-hair-transplant/",
   },
   {
     id: "beard",
     number: "05",
-    title: "Beard & Mustache Transplant",
+    title: "Beard & Mustache Restoration",
     description:
-      "Sculpt dense, natural-looking beard, mustache, and sideburn contours with angle-matched micro-graft placement.",
+      "Precision facial transplantation to eliminate patchy areas, sculpt sharp jawlines, and enhance beard and mustache density with perfectly matched growth directions.",
     href: "/services/beard-hair-transplant-in-india/",
   },
   {
     id: "prp",
     number: "06",
-    title: "PRP & GFC Therapy",
+    title: "PRP & GFC Regenerative Therapy",
     description:
-      "Accelerate post-procedural healing and nourish native follicles with concentrated autologous growth factors.",
+      "Next-generation autologous therapies infusing concentrated growth factors to fortify thinning follicles, stimulate dormant roots, and accelerate post-procedural recovery.",
     href: "/services/prp-treatment/",
   },
 ];

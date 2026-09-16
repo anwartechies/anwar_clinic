@@ -15,13 +15,13 @@ const COST_FAQ_ITEMS: FAQItem[] = [
     id: "01",
     question: "What is the expected hair transplant cost in India?",
     answer:
-      `Hair restoration costs depend primarily on the number of grafts required and the surgical technique selected. At ${COMPANY_NAME}, we offer itemized, transparent per-graft estimates without surprise theatre or post-op charges, ensuring complete financial clarity prior to your procedure.`,
+      `Hair restoration costs depend primarily on the number of grafts required and the surgical technique selected. At ${COMPANY_NAME}, procedure packages start from ₹50,000 for FUE (5,000–6,000 grafts), ₹75,000 for Bio-Enhanced FUE, ₹1,00,000 for DHI, and ₹1,25,000 for Premium Sapphire DHI, with transparent all-inclusive billing and zero hidden charges.`,
   },
   {
     id: "02",
     question: `How are per-graft prices determined at ${COMPANY_NAME}?`,
     answer:
-      `Per-graft pricing reflects the precision instrumentation and surgeon involvement required. We provide clear pricing structures starting from ₹50/graft for FUT, ₹70/graft for Motorized FUE, and ₹100/graft for ${COMPANY_NAME} Micro-Direct Implantation.`,
+      `Per-graft pricing reflects the precision instrumentation, specialized implanters, and surgeon involvement required. At ${COMPANY_NAME}, our transparent per-graft pricing starts from ₹10/graft for standard FUE, ₹15/graft for Bio-Enhanced FUE, ₹20/graft for DHI (Direct Hair Implantation), and ₹25/graft for Premium Sapphire DHI.`,
   },
   {
     id: "03",

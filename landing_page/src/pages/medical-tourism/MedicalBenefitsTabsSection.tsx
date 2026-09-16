@@ -18,76 +18,94 @@ interface TabItem {
 const TABS: TabItem[] = [
   {
     id: "tab-1",
-    label: "Before & After You Visit Us",
+    label: "Before & After You Visit",
     icon: CalendarCheck,
-    heading: "What we provide when you pay us a visit:",
+    heading: "Comprehensive patient care, from your home country to lifelong regrowth:",
     points: [
       {
-        title: "Pre-arrival Consultation",
-        description: "Online consultations: Plan your procedure before you even land in India.",
+        title: "Virtual Pre-Arrival Assessment",
+        description: "Review your hairline and graft density expectations with our surgeons before booking flights.",
       },
       {
-        title: "Personalized Treatment Plans",
-        description: "Customized solutions: Get a hair transplant tailored to your unique hair loss pattern.",
+        title: "Bespoke Treatment Architecture",
+        description: "Receive a personalized graft distribution roadmap designed for your specific Norwood grade and facial symmetry.",
       },
       {
-        title: "Advanced Techniques",
-        description: "Modern procedures: Benefit from FUE and FUT methods with natural-looking results.",
+        title: "Advanced Micro-FUE & DHI Protocols",
+        description: "Benefit from gentle, scarless follicular extraction and high-density direct implanter techniques.",
       },
       {
-        title: "Post-Procedure Support",
-        description: "Continuous care: Receive follow-up guidance even after you return home.",
+        title: "1-Year Remote Recovery Support",
+        description: "Stay supported with structured video follow-ups, customized wash schedules, and growth check-ins after you return home.",
       },
     ],
   },
   {
     id: "tab-2",
-    label: "Your Travel",
+    label: "Travel & Transit Logistics",
     icon: Plane,
-    heading: "How we make your travelling very smooth and easy:",
+    heading: "Effortless travel coordination from the moment your flight touches down:",
     points: [
       {
-        description: "Airport Pickup and drop-off via taxi/cabs.",
+        title: "Private Airport Chauffeur",
+        description: "Complimentary airport pick-up and drop-off service with private, comfortable transfers directly to your accommodation.",
       },
       {
-        description: "Fast and easy transfers to international clients.",
+        title: "Dedicated Clinic Transportation",
+        description: "Seamless daily transport between your hotel and our surgical facility for all pre-op, surgical, and post-wash visits.",
+      },
+      {
+        title: "Visa & Flight Documentation Support",
+        description: "Official hospital invitation letters and visa facilitation assistance for rapid Indian Medical e-Visa processing.",
       },
     ],
   },
   {
     id: "tab-3",
-    label: "Your Stay",
+    label: "Curated Stay & Hospitality",
     icon: Hotel,
-    heading: "This is how we make sure you have a peaceful stay when you come to visit us:",
+    heading: "Restful, hygienic, and convenient accommodations tailored to your budget:",
     points: [
       {
-        description: "Luxury Accommodation Help.",
+        title: "Partnered 4-Star & 5-Star Accommodations",
+        description: "Enjoy exclusive clinic corporate rates at verified premium hotels located within 10–15 minutes of our surgical facility.",
       },
       {
-        description: "Whether it is a low-budget hotel or the top of the top, it is personalized to your choice.",
+        title: "Flexible Stay Packages",
+        description: "Customized lodging arrangements suited to your preference, from luxury executive suites to fully equipped serviced apartments.",
+      },
+      {
+        title: "Post-Op Rest Support",
+        description: "In-room recovery essentials including sterile neck pillows, gentle shampoo supplies, and customized dietary arrangements.",
       },
     ],
   },
   {
     id: "tab-4",
-    label: "Communication",
+    label: "Multilingual & VIP Concierge",
     icon: Languages,
-    heading: "For international clients, communication might be a problem, this how we help:",
+    heading: "Crystal-clear communication and personalized guidance every step of the way:",
     points: [
       {
-        description: "Personal Translator Service.",
+        title: "Dedicated 1-on-1 Patient Coordinator",
+        description: "A single, English-fluent patient manager assigned to assist you through every medical consultation, procedure, and inquiry.",
       },
       {
-        description: "Assistance to non-English speaking patients.",
+        title: "Personal Translator Assistance",
+        description: "Native interpretation support for Arabic, Russian, French, and other non-English speaking international patients.",
+      },
+      {
+        title: "24/7 Priority WhatsApp & Tele-Support",
+        description: "Round-the-clock direct access to your care team for instant answers, prescription support, and complete peace of mind.",
       },
     ],
   },
 ];
 
 export default function MedicalBenefitsTabsSection() {
-  const [activeTabId, setActiveTabId] = useState("tab-4");
+  const [activeTabId, setActiveTabId] = useState("tab-1");
 
-  const activeTab = TABS.find((t) => t.id === activeTabId) || TABS[3];
+  const activeTab = TABS.find((t) => t.id === activeTabId) || TABS[0];
 
   return (
     <section className="py-20 lg:py-24 bg-white overflow-hidden">
@@ -98,10 +116,10 @@ export default function MedicalBenefitsTabsSection() {
            ======================================================== */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#162418] tracking-tight leading-[1.2]">
-            Benefits You’ll Receive During Your Visit for a Seamless, Satisfying Experience
+            World-Class Medical Care & VIP Hospitality for Global Patients
           </h2>
-          <p className="mt-3 text-xs sm:text-sm text-gray-500 font-normal">
-            {COMPANY_NAME} ensures your medical tourism experience is both hassle-free and stress-free.
+          <p className="mt-3 text-xs sm:text-sm sm:text-base text-gray-500 font-normal leading-relaxed">
+            From chauffeured airport transfers and luxury hotel stays to expert surgeon-led restoration and dedicated aftercare, {COMPANY_NAME} ensures an effortless, stress-free medical journey.
           </p>
         </div>
 
