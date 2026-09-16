@@ -51,40 +51,43 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
   }, [filteredBlogs, featuredBlog]);
 
   return (
-    <div className="bg-[#fcfbf9] min-h-screen">
+    <div className="bg-nexgen-pageLightBg min-h-screen">
       {/* Hero Header Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#f3f6f1] via-[#f7f9f5] to-[#fcfbf9] pt-18 pb-16 md:pt-40 md:pb-24 border-b border-[#e5ebe1]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e3ecd9] text-[#41553c] text-xs font-semibold uppercase tracking-wider mb-5">
-            <Sparkles className="w-3.5 h-3.5 text-[#52664d]" />
+      <section className="relative overflow-hidden bg-nexgen-mainDarkBg text-white pt-28 pb-16 md:pt-40 md:pb-24 border-b border-nexgen-primaryGold/25">
+        {/* Subtle Ambient Radial Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-nexgen-primaryGold/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-nexgen-brightGold/10 border border-nexgen-primaryGold/30 text-nexgen-brightGold text-xs font-semibold uppercase tracking-wider mb-5">
+            <Sparkles className="w-3.5 h-3.5 text-nexgen-brightGold" />
             Clinical Insights & Patient Guides
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#232b21] tracking-tight max-w-3xl mx-auto leading-tight sm:leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight max-w-3xl mx-auto leading-tight sm:leading-tight">
             Hair Restoration Knowledge Base & Expert Articles
           </h1>
 
-          <p className="mt-4 text-base sm:text-lg text-[#5a6458] max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Written by leading hair transplant surgeons and dermatologists. Explore science-backed
             advice on techniques, aftercare routines, and permanent results.
           </p>
 
           {/* Search Bar */}
           <div className="mt-8 max-w-xl mx-auto relative">
-            <div className="relative flex items-center bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-[#dce5d7] p-1.5 focus-within:border-[#52664d] focus-within:ring-2 focus-within:ring-[#52664d]/20 transition-all">
+            <div className="relative flex items-center bg-white/10 backdrop-blur-md rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.15)] border border-nexgen-primaryGold/30 p-1.5 focus-within:border-nexgen-brightGold focus-within:ring-2 focus-within:ring-nexgen-brightGold/20 transition-all">
               <Search className="w-5 h-5 text-gray-400 ml-3 shrink-0" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search procedures, aftercare, recovery, PRP…"
-                className="w-full px-3 py-2.5 text-sm sm:text-base text-gray-800 placeholder-gray-400 bg-transparent outline-none"
+                className="w-full px-3 py-2.5 text-sm sm:text-base text-white placeholder-gray-400 bg-transparent outline-none"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery("")}
-                  className="mr-2 text-xs font-medium text-gray-400 hover:text-gray-600"
+                  className="mr-2 text-xs font-medium text-gray-400 hover:text-white transition-colors"
                 >
                   Clear
                 </button>
@@ -98,9 +101,9 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${activeCategory === cat
-                  ? "bg-[#52664d] text-white shadow-md shadow-[#52664d]/25 scale-102"
-                  : "bg-white text-[#41553c] border border-[#dce5d7] hover:border-[#52664d] hover:bg-[#f6f9f3]"
+                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${activeCategory === cat
+                  ? "bg-nexgen-brightGold text-nexgen-veryDarkHeader shadow-md scale-102"
+                  : "bg-white/10 text-white border border-nexgen-primaryGold/30 hover:border-nexgen-brightGold hover:bg-white/15"
                   }`}
               >
                 {cat}
@@ -124,7 +127,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
                 setActiveCategory("All");
                 setSearchQuery("");
               }}
-              className="mt-5 inline-flex items-center px-4 py-2 rounded-xl bg-[#52664d] text-white text-xs font-semibold hover:bg-[#3f503a] transition"
+              className="mt-5 inline-flex items-center px-4 py-2 rounded-xl bg-nexgen-brightGold text-nexgen-veryDarkHeader text-xs font-bold hover:bg-yellow-400 transition"
             >
               Reset Filters
             </button>
@@ -133,7 +136,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
           <>
             {/* Spotlight / Featured Hero Post */}
             {featuredBlog && (
-              <div className="group relative bg-white rounded-3xl border border-[#e5ebe1] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="group relative bg-white rounded-3xl border border-nexgen-primaryGold/20 overflow-hidden shadow-sm hover:shadow-xl hover:border-nexgen-primaryGold/40 transition-all duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                   {/* Left Cover Image */}
                   <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto overflow-hidden bg-slate-100">
@@ -147,7 +150,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#52664d] text-white text-xs font-bold uppercase tracking-wider shadow-md">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-nexgen-brightGold text-nexgen-veryDarkHeader text-xs font-bold uppercase tracking-wider shadow-md">
                         <Sparkles className="w-3 h-3" /> Featured Article
                       </span>
                     </div>
@@ -156,19 +159,19 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
                   {/* Right Content */}
                   <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center gap-3 text-xs text-[#63735f] font-medium mb-3">
-                        <span className="px-2.5 py-0.5 rounded-full bg-[#eff4eb] text-[#3e5039]">
+                      <div className="flex items-center gap-3 text-xs text-gray-500 font-medium mb-3">
+                        <span className="px-2.5 py-0.5 rounded-full bg-nexgen-pageLightBg text-nexgen-veryDarkHeader font-semibold border border-nexgen-primaryGold/20">
                           {featuredBlog.category}
                         </span>
                         <span>•</span>
                         <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5" />
+                          <Clock className="w-3.5 h-3.5 text-nexgen-primaryGold" />
                           {featuredBlog.readTime}
                         </span>
                       </div>
 
                       <Link href={`/blogs/${featuredBlog.slug}`}>
-                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#232b21] group-hover:text-[#52664d] transition-colors leading-snug">
+                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-nexgen-veryDarkHeader group-hover:text-nexgen-primaryGold transition-colors leading-snug">
                           {featuredBlog.title}
                         </h2>
                       </Link>
@@ -189,7 +192,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
                             className="w-10 h-10 rounded-full object-cover border border-gray-200"
                           />
                         ) : (
-                          <div className="w-10 h-10 rounded-full bg-[#52664d] text-white flex items-center justify-center font-bold text-sm">
+                          <div className="w-10 h-10 rounded-full bg-nexgen-veryDarkHeader text-nexgen-brightGold flex items-center justify-center font-bold text-sm">
                             {featuredBlog.authorName.charAt(0)}
                           </div>
                         )}
@@ -205,7 +208,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
 
                       <Link
                         href={`/blogs/${featuredBlog.slug}`}
-                        className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#52664d] hover:text-[#384c3c] group-hover:translate-x-0.5 transition-all"
+                        className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-nexgen-primaryGold hover:text-nexgen-brightGold group-hover:translate-x-0.5 transition-all"
                       >
                         Read Post <ArrowRight className="w-4 h-4" />
                       </Link>
@@ -221,7 +224,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
                 {gridBlogs.map((blog) => (
                   <article
                     key={blog.id}
-                    className="group bg-white rounded-2xl border border-[#e5ebe1] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                    className="group bg-white rounded-2xl border border-nexgen-primaryGold/20 overflow-hidden shadow-xs hover:shadow-lg hover:border-nexgen-primaryGold/40 transition-all duration-300 flex flex-col justify-between"
                   >
                     <div>
                       {/* Card Image */}
@@ -239,7 +242,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute top-3 left-3">
-                          <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[#3e5039] text-[11px] font-semibold tracking-wide shadow-xs">
+                          <span className="px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-nexgen-veryDarkHeader border border-nexgen-primaryGold/20 text-[11px] font-semibold tracking-wide shadow-xs">
                             {blog.category}
                           </span>
                         </div>
@@ -264,7 +267,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
                         </div>
 
                         <Link href={`/blogs/${blog.slug}`}>
-                          <h3 className="text-lg font-bold text-[#232b21] group-hover:text-[#52664d] transition-colors leading-snug line-clamp-2">
+                          <h3 className="text-lg font-bold text-nexgen-veryDarkHeader group-hover:text-nexgen-primaryGold transition-colors leading-snug line-clamp-2">
                             {blog.title}
                           </h3>
                         </Link>
@@ -286,7 +289,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
                             className="w-7 h-7 rounded-full object-cover border border-gray-200"
                           />
                         ) : (
-                          <div className="w-7 h-7 rounded-full bg-[#52664d] text-white flex items-center justify-center font-bold text-xs">
+                          <div className="w-7 h-7 rounded-full bg-nexgen-veryDarkHeader text-nexgen-brightGold flex items-center justify-center font-bold text-xs">
                             {blog.authorName.charAt(0)}
                           </div>
                         )}
@@ -297,7 +300,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
 
                       <Link
                         href={`/blogs/${blog.slug}`}
-                        className="inline-flex items-center gap-1 text-xs font-semibold text-[#52664d] hover:text-[#384c3c]"
+                        className="inline-flex items-center gap-1 text-xs font-semibold text-nexgen-primaryGold hover:text-nexgen-brightGold"
                       >
                         Read <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
@@ -310,15 +313,15 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
         )}
 
         {/* Bottom Consultation Banner */}
-        <div className="rounded-3xl bg-gradient-to-r from-[#52664d] to-[#384c3c] p-8 sm:p-12 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="rounded-3xl bg-gradient-to-r from-nexgen-mainDarkBg via-nexgen-veryDarkHeader to-nexgen-mainDarkBg border border-nexgen-primaryGold/30 p-8 sm:p-12 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="max-w-xl text-center md:text-left">
-            <span className="inline-block px-3 py-1 rounded-full bg-white/15 text-xs font-semibold uppercase tracking-wider mb-3">
+            <span className="inline-block px-3 py-1 rounded-full bg-nexgen-brightGold/15 text-nexgen-brightGold border border-nexgen-primaryGold/30 text-xs font-semibold uppercase tracking-wider mb-3">
               Confidential Surgeon Consultation
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
               Have Questions About Your Hair Loss?
             </h3>
-            <p className="mt-2 text-sm sm:text-base text-white/85 leading-relaxed">
+            <p className="mt-2 text-sm sm:text-base text-gray-300 leading-relaxed">
               Get an accurate graft estimation, hairline design assessment, and honest medical
               recommendation from Dr. Anwar.
             </p>
@@ -327,7 +330,7 @@ export default function BlogsPageClient({ initialBlogs }: BlogsPageClientProps) 
           <button
             type="button"
             onClick={openConsultation}
-            className="shrink-0 px-6 py-3.5 rounded-xl bg-white text-[#384c3c] font-bold text-sm sm:text-base shadow-lg hover:bg-[#f0f4ee] hover:scale-102 transition-all cursor-pointer"
+            className="shrink-0 px-6 py-3.5 rounded-xl bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold text-sm sm:text-base shadow-lg hover:bg-yellow-400 hover:scale-102 transition-all cursor-pointer"
           >
             Book Free Hair Analysis
           </button>

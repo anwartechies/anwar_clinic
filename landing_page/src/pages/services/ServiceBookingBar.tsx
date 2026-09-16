@@ -14,7 +14,7 @@ export default function ServiceBookingBar({
   onOpenConsultation,
 }: ServiceBookingBarProps) {
   return (
-    <section className="py-8 sm:py-10 bg-[#596d53] text-white overflow-hidden">
+    <section className="py-8 sm:py-10 bg-nexgen-mainDarkBg text-white overflow-hidden border-y border-nexgen-primaryGold/30">
       <div className="qht-large-container">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
           
@@ -32,17 +32,17 @@ export default function ServiceBookingBar({
                 <img
                   src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
                   alt="Patient"
-                  className="w-8 h-8 rounded-full border-2 border-[#596d53] object-cover"
+                  className="w-8 h-8 rounded-full border-2 border-nexgen-primaryGold object-cover"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
                   alt="Patient"
-                  className="w-8 h-8 rounded-full border-2 border-[#596d53] object-cover"
+                  className="w-8 h-8 rounded-full border-2 border-nexgen-primaryGold object-cover"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
                   alt="Patient"
-                  className="w-8 h-8 rounded-full border-2 border-[#596d53] object-cover"
+                  className="w-8 h-8 rounded-full border-2 border-nexgen-primaryGold object-cover"
                 />
               </div>
               <span className="text-xs sm:text-sm font-medium text-white/95 whitespace-nowrap">
@@ -57,7 +57,7 @@ export default function ServiceBookingBar({
           <div className="flex-shrink-0">
             <button
               onClick={onOpenConsultation}
-              className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3 px-8 sm:px-10 rounded-full shadow-md transition-all active:scale-95 duration-150"
+              className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3 px-8 sm:px-10 rounded-full shadow-md transition-all active:scale-95 duration-150"
             >
               Book Now
             </button>

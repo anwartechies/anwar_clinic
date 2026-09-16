@@ -115,7 +115,7 @@ export default function MedicalBenefitsTabsSection() {
             LEFT-ALIGNED HEADER (Matching Screenshot)
            ======================================================== */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#162418] tracking-tight leading-[1.2]">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-nexgen-veryDarkHeader tracking-tight leading-[1.2]">
             World-Class Medical Care & VIP Hospitality for Global Patients
           </h2>
           <p className="mt-3 text-xs sm:text-sm sm:text-base text-gray-500 font-normal leading-relaxed">
@@ -129,7 +129,7 @@ export default function MedicalBenefitsTabsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start pb-16 border-b border-gray-100">
           
           {/* Left Column: Vertical Tab List Card (Matching Screenshot) */}
-          <div className="lg:col-span-4 bg-[#eff5f1] rounded-3xl p-3.5 sm:p-4 shadow-sm border border-[#e2ece4]">
+          <div className="lg:col-span-4 bg-nexgen-pageLightBg rounded-3xl p-3.5 sm:p-4 shadow-sm border border-gray-100">
             <div className="flex flex-col divide-y divide-gray-200/60">
               {TABS.map((tab) => {
                 const isActive = tab.id === activeTabId;
@@ -140,15 +140,15 @@ export default function MedicalBenefitsTabsSection() {
                     onClick={() => setActiveTabId(tab.id)}
                     className={`w-full flex items-center gap-4 px-5 py-4 sm:py-4.5 rounded-2xl text-left transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? "bg-[#52664d] text-white shadow-lg my-1"
-                        : "bg-transparent text-[#162418] hover:bg-white/50"
+                        ? "bg-nexgen-mainDarkBg text-white shadow-lg my-1 border border-nexgen-primaryGold/30"
+                        : "bg-transparent text-nexgen-veryDarkHeader hover:bg-white/50"
                     }`}
                   >
                     {/* Icon */}
                     <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
                       <IconComp
                         className={`w-5 h-5 transition-colors ${
-                          isActive ? "text-white" : "text-[#162418]"
+                          isActive ? "text-nexgen-brightGold" : "text-nexgen-veryDarkHeader"
                         }`}
                       />
                     </div>
@@ -156,7 +156,7 @@ export default function MedicalBenefitsTabsSection() {
                     {/* Label */}
                     <span
                       className={`text-sm sm:text-[15px] font-semibold tracking-tight leading-snug ${
-                        isActive ? "text-white" : "text-[#162418]"
+                        isActive ? "text-white" : "text-nexgen-veryDarkHeader"
                       }`}
                     >
                       {tab.label}
@@ -171,7 +171,7 @@ export default function MedicalBenefitsTabsSection() {
           <div className="lg:col-span-8 pt-2 sm:pt-4">
             
             {/* Dynamic Content Heading */}
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#162418] tracking-tight leading-[1.25] mb-8 sm:mb-10 max-w-xl">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-nexgen-veryDarkHeader tracking-tight leading-[1.25] mb-8 sm:mb-10 max-w-xl">
               {activeTab.heading}
             </h3>
 
@@ -180,15 +180,15 @@ export default function MedicalBenefitsTabsSection() {
               {activeTab.points.map((point, idx) => (
                 <div key={idx} className="flex items-start gap-3.5">
                   {/* Custom Arrow Icon */}
-                  <span className="text-[#162418] mt-1 flex-shrink-0">
-                    <Play className="w-3.5 h-3.5 fill-[#162418] stroke-[#162418]" />
+                  <span className="text-nexgen-primaryGold mt-1 flex-shrink-0">
+                    <Play className="w-3.5 h-3.5 fill-nexgen-primaryGold stroke-nexgen-primaryGold" />
                   </span>
 
                   {/* Text Content */}
-                  <p className="text-sm sm:text-base text-[#162418] leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
                     {point.title ? (
                       <>
-                        <strong className="font-bold text-[#162418] mr-1.5">
+                        <strong className="font-bold text-nexgen-veryDarkHeader mr-1.5">
                           {point.title}:
                         </strong>
                         <span className="text-gray-700 font-normal">{point.description}</span>

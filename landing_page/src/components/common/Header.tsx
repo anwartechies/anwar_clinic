@@ -64,7 +64,7 @@ function HeaderBar({
           />
           {/* Only where the bar has room: hidden on phones (the drawer shows it) and
               between lg and 1440px, where the full nav pill already fills the row. */}
-          <span className="hidden sm:inline-block lg:hidden min-[1440px]:inline-block border-l border-[#a8843a]/40 pl-2.5 text-xs md:text-[13px] font-semibold uppercase tracking-[0.14em] leading-tight text-[#a8843a] whitespace-nowrap">
+          <span className="hidden sm:inline-block lg:hidden min-[1440px]:inline-block border-l border-nexgen-primaryGold/40 pl-2.5 text-xs md:text-[13px] font-semibold uppercase tracking-[0.14em] leading-tight text-nexgen-primaryGold whitespace-nowrap">
             Hair Transplant
           </span>
         </Link>
@@ -76,7 +76,7 @@ function HeaderBar({
             <Link
               href="/"
               onClick={onCloseDropdown}
-              className="font-semibold text-[#52664d] hover:text-[#384c3c] transition-colors"
+              className="font-semibold text-nexgen-primaryGold hover:text-nexgen-brightGold transition-colors"
             >
               Home
             </Link>
@@ -85,7 +85,7 @@ function HeaderBar({
             <Link
               href="/results"
               onClick={onCloseDropdown}
-              className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors py-1"
+              className="font-medium text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors"
             >
               Results
             </Link>
@@ -99,11 +99,11 @@ function HeaderBar({
               <Link
                 href="/services"
                 onClick={onCloseDropdown}
-                className="flex items-center gap-1.5 font-medium text-[#2b302c] hover:text-[#52664d] transition-colors py-1"
+                className="flex items-center gap-1.5 font-medium text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors py-1"
               >
                 <span>Services</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180 text-[#52664d]" : ""
+                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180 text-nexgen-primaryGold" : ""
                     }`}
                 />
               </Link>
@@ -113,22 +113,10 @@ function HeaderBar({
             <Link
               href="/hair-transplant-cost-in-india"
               onClick={onCloseDropdown}
-              className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors whitespace-nowrap"
+              className="font-medium text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors whitespace-nowrap"
             >
               Hair Transplant Cost
             </Link>
-
-            {/* Medicines - Temporarily commented out
-            <a
-              href={cliniUrl}
-              target="_blank"
-              rel="noreferrer"
-              onClick={onCloseDropdown}
-              className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors"
-            >
-              Medicines
-            </a>
-            */}
 
             {/* About us */}
             <div
@@ -136,10 +124,10 @@ function HeaderBar({
               onMouseEnter={() => onMouseEnter("about")}
               onMouseLeave={onMouseLeave}
             >
-              <button className="flex items-center gap-1.5 font-medium text-[#2b302c] hover:text-[#52664d] transition-colors py-1 cursor-pointer">
+              <button className="flex items-center gap-1.5 font-medium text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors py-1 cursor-pointer">
                 <span>About us</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "about" ? "rotate-180 text-[#52664d]" : ""
+                  className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-200 ${activeDropdown === "about" ? "rotate-180 text-nexgen-primaryGold" : ""
                     }`}
                 />
               </button>
@@ -149,7 +137,7 @@ function HeaderBar({
             <Link
               href="/our-clinic"
               onClick={onCloseDropdown}
-              className="font-medium text-[#2b302c] hover:text-[#52664d] transition-colors whitespace-nowrap"
+              className="font-medium text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors whitespace-nowrap"
             >
               Our Clinic
             </Link>
@@ -159,7 +147,7 @@ function HeaderBar({
           <button
             type="button"
             onClick={onOpenConsultation}
-            className="bg-[#52664d] hover:bg-[#43543e] text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl md:rounded-2xl text-[14px] sm:text-[15px] font-bold transition-colors duration-200 shadow-md whitespace-nowrap ml-1 cursor-pointer"
+            className="bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl md:rounded-2xl text-[14px] sm:text-[15px] font-bold transition-all duration-200 shadow-md hover:shadow-lg whitespace-nowrap ml-1 cursor-pointer"
           >
             Book your surgery
           </button>
@@ -170,7 +158,7 @@ function HeaderBar({
           <button
             type="button"
             onClick={onOpenConsultation}
-            className="px-4 py-2 bg-[#52664d] hover:bg-[#43543e] text-white text-xs font-semibold rounded-xl shadow-xs cursor-pointer"
+            className="px-4 py-2 bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader text-xs font-bold rounded-xl shadow-xs cursor-pointer"
           >
             Book Surgery
           </button>
@@ -199,16 +187,21 @@ function HeaderBar({
           }`}
       >
         <div className="qht-large-container">
-          <div className="bg-[#243527] text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#344b38]">
-            <div className="flex items-center gap-4 mb-6">
-              <h3 className="text-xl font-bold text-white tracking-tight">
-                Services
-              </h3>
-              <div className="flex-1 h-[1px] bg-white/15"></div>
+          <div className="bg-gradient-to-br from-nexgen-mainDarkBg via-nexgen-mainDarkBg to-nexgen-servicesSection text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-nexgen-serviceInnerCard/50">
+            <div className="flex items-center justify-between gap-4 mb-6">
+              <div className="flex items-center gap-3">
+                <h3 className="text-2xl sm:text-[28px] font-bold font-display text-white tracking-tight">
+                  Services
+                </h3>
+                <div className="w-2 h-2 rounded-full bg-nexgen-brightGold" />
+              </div>
+              <span className="text-[11px] sm:text-xs tracking-widest uppercase font-semibold text-nexgen-brightGold/90 hidden md:inline">
+                ADVANCED SOLUTIONS &nbsp;|&nbsp; NATURAL RESULTS &nbsp;|&nbsp; A MORE CONFIDENT YOU
+              </span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-              <div className="lg:col-span-8 bg-[#586d52] rounded-2xl p-6 sm:p-7">
+              <div className="lg:col-span-8 bg-nexgen-serviceInnerCard/30 border border-nexgen-serviceInnerCard/60 rounded-2xl p-6 sm:p-7">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3.5">
                   <div className="space-y-3.5">
                     {col1.map((item, idx) => (
@@ -216,9 +209,9 @@ function HeaderBar({
                         key={idx}
                         href={item.href}
                         onClick={onCloseDropdown}
-                        className="flex items-center gap-2 text-[13.5px] font-medium text-white/95 hover:text-[#d7fbd0] hover:translate-x-1 transition-all duration-150 leading-tight group"
+                        className="flex items-center gap-2 text-[13.5px] font-medium text-white/95 hover:text-nexgen-brightGold hover:translate-x-1 transition-all duration-150 leading-tight group"
                       >
-                        <ArrowUpRight className="w-4 h-4 text-white/80 group-hover:text-white transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                        <ArrowUpRight className="w-4 h-4 text-nexgen-brightGold group-hover:text-white transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                         <span>{item.label}</span>
                       </Link>
                     ))}
@@ -230,9 +223,9 @@ function HeaderBar({
                         key={idx}
                         href={item.href}
                         onClick={onCloseDropdown}
-                        className="flex items-center gap-2 text-[13.5px] font-medium text-white/95 hover:text-[#d7fbd0] hover:translate-x-1 transition-all duration-150 leading-tight group"
+                        className="flex items-center gap-2 text-[13.5px] font-medium text-white/95 hover:text-nexgen-brightGold hover:translate-x-1 transition-all duration-150 leading-tight group"
                       >
-                        <ArrowUpRight className="w-4 h-4 text-white/80 group-hover:text-white transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                        <ArrowUpRight className="w-4 h-4 text-nexgen-brightGold group-hover:text-white transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                         <span>{item.label}</span>
                       </Link>
                     ))}
@@ -240,19 +233,19 @@ function HeaderBar({
                 </div>
               </div>
 
-              <div className="lg:col-span-4 relative rounded-2xl overflow-hidden min-h-[380px] flex flex-col justify-between p-7 bg-black shadow-lg">
+              <div className="lg:col-span-4 relative rounded-2xl overflow-hidden min-h-[380px] flex flex-col justify-between p-7 bg-nexgen-veryDarkHeader border border-nexgen-serviceInnerCard/60 shadow-lg">
                 <img
                   src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
                   alt="OT Hair Surgery"
-                  className="absolute inset-0 w-full h-full object-cover object-center grayscale contrast-125 opacity-40 mix-blend-luminosity"
+                  className="absolute inset-0 w-full h-full object-cover object-center grayscale contrast-125 opacity-30 mix-blend-luminosity"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-nexgen-veryDarkHeader via-nexgen-veryDarkHeader/80 to-transparent"></div>
 
                 <div className="relative z-10">
                   <h4 className="text-2xl sm:text-[28px] font-bold text-white leading-tight tracking-tight">
                     let’s Start Your
                     <br />
-                    Journey Today
+                    <span className="text-nexgen-brightGold">Journey Today</span>
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-300 mt-4 leading-relaxed font-normal">
                     Restore your confidence with our expert-led hair transplant solutions.
@@ -265,9 +258,9 @@ function HeaderBar({
                       onCloseDropdown();
                       onOpenConsultation();
                     }}
-                    className="bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm py-2.5 px-7 rounded-full shadow-lg transition-transform active:scale-95 duration-150 inline-block text-center cursor-pointer"
+                    className="bg-nexgen-brightGold hover:bg-nexgen-primaryGold text-nexgen-veryDarkHeader font-bold text-sm py-2.5 px-7 rounded-full shadow-lg transition-transform active:scale-95 duration-150 inline-block text-center cursor-pointer"
                   >
-                    Start Journey
+                    Start Journey →
                   </button>
                 </div>
               </div>
@@ -286,12 +279,12 @@ function HeaderBar({
           }`}
       >
         <div className="qht-large-container">
-          <div className="bg-[#243527] text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#344b38]">
+          <div className="bg-gradient-to-br from-nexgen-mainDarkBg to-nexgen-servicesSection text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-nexgen-serviceInnerCard/50">
             <div className="flex items-center gap-4 mb-6">
-              <h3 className="text-xl font-bold text-white tracking-tight">
+              <h3 className="text-xl font-bold font-display text-white tracking-tight">
                 About Us
               </h3>
-              <div className="flex-1 h-[1px] bg-white/15"></div>
+              <div className="flex-1 h-[1px] bg-nexgen-primaryGold/30"></div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -300,14 +293,14 @@ function HeaderBar({
                   key={idx}
                   href={item.href}
                   onClick={onCloseDropdown}
-                  className="group relative rounded-2xl overflow-hidden h-[260px] flex flex-col justify-between p-5 bg-black shadow-md border border-white/5 transition-transform duration-300 hover:-translate-y-1"
+                  className="group relative rounded-2xl overflow-hidden h-[260px] flex flex-col justify-between p-5 bg-nexgen-veryDarkHeader shadow-md border border-nexgen-serviceInnerCard/40 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <img
                     src={item.image}
                     alt={item.label}
-                    className="absolute inset-0 w-full h-full object-cover object-center grayscale contrast-125 opacity-40 mix-blend-luminosity group-hover:scale-105 transition-transform duration-500"
+                    className="absolute inset-0 w-full h-full object-cover object-center grayscale contrast-125 opacity-35 mix-blend-luminosity group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-nexgen-veryDarkHeader via-nexgen-veryDarkHeader/60 to-transparent"></div>
 
                   <div className="relative z-10">
                     <h4 className="text-base sm:text-[17px] font-bold text-white leading-snug">
@@ -316,9 +309,9 @@ function HeaderBar({
                   </div>
 
                   <div className="relative z-10">
-                    <div className="w-full bg-white group-hover:bg-gray-100 text-gray-900 font-semibold text-xs py-2 px-3.5 rounded-full flex items-center justify-between shadow-md transition-colors">
+                    <div className="w-full bg-nexgen-brightGold group-hover:bg-nexgen-primaryGold text-nexgen-veryDarkHeader font-bold text-xs py-2 px-3.5 rounded-full flex items-center justify-between shadow-md transition-colors">
                       <span>Know More</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-gray-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-nexgen-veryDarkHeader group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
                   </div>
                 </Link>
@@ -335,7 +328,7 @@ function HeaderBar({
                   onCloseDropdown();
                   onOpenConsultation();
                 }}
-                className="bg-[#566c50] hover:bg-[#465b41] text-white text-sm font-semibold px-7 py-2.5 rounded-full shadow-md transition-all active:scale-95 whitespace-nowrap flex-shrink-0 cursor-pointer"
+                className="bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader text-sm font-bold px-7 py-2.5 rounded-full shadow-md transition-all active:scale-95 whitespace-nowrap flex-shrink-0 cursor-pointer"
               >
                 Book Appointment
               </button>
@@ -441,7 +434,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
 
       {/* 2. Floating Sticky Header - Slides in smoothly from top on hero scroll */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-[#f4f7f4]/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#e5ebe5] py-2.5 transition-all duration-300 ease-out ${isStickyVisible
+        className={`fixed top-0 left-0 right-0 z-50 bg-nexgen-navBg/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-nexgen-serviceInnerCard/20 py-2.5 transition-all duration-300 ease-out ${isStickyVisible
           ? "translate-y-0 opacity-100 pointer-events-auto"
           : "-translate-y-full opacity-0 pointer-events-none"
           }`}
@@ -471,7 +464,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
                   alt="Logo"
                   className="h-9 w-auto object-contain rounded-md"
                 />
-                <span className="border-l border-[#a8843a]/40 pl-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] leading-tight text-[#a8843a] whitespace-nowrap">
+                <span className="border-l border-nexgen-primaryGold/40 pl-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] leading-tight text-nexgen-primaryGold whitespace-nowrap">
                   Hair Transplant
                 </span>
               </div>
@@ -487,7 +480,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
               <Link
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-base font-semibold text-[#627566]"
+                className="block text-base font-semibold text-nexgen-primaryGold"
               >
                 Home
               </Link>
@@ -520,7 +513,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
                     <Link
                       href="/services"
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block py-1 font-semibold text-[#1b392b]"
+                      className="block py-1 font-semibold text-nexgen-primaryGold"
                     >
                       View All Services →
                     </Link>
@@ -598,7 +591,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
                   setIsMobileMenuOpen(false);
                   handleOpenConsultation();
                 }}
-                className="w-full py-3 block text-center bg-[#596d53] hover:bg-[#465b41] text-white rounded-xl font-bold text-sm cursor-pointer transition-colors"
+                className="w-full py-3 block text-center bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader rounded-xl font-bold text-sm cursor-pointer transition-colors"
               >
                 Book your surgery
               </button>
@@ -608,7 +601,7 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
                   setIsMobileMenuOpen(false);
                   handleOpenConsultation();
                 }}
-                className="w-full py-2.5 border border-[#1b392b] text-[#1b392b] rounded-xl font-bold text-sm"
+                className="w-full py-2.5 border border-nexgen-primaryGold text-nexgen-veryDarkHeader hover:bg-nexgen-primaryGold/10 rounded-xl font-bold text-sm"
               >
                 Book Free Consultation
               </button>

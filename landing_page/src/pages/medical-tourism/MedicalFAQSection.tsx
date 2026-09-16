@@ -90,20 +90,20 @@ export default function MedicalFAQSection() {
           
           {/* Left Column: FAQ Accordion */}
           <div className="lg:col-span-7">
-            <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#1b392b]/10 text-[#1b392b] text-xs font-bold tracking-wider uppercase mb-3">
+            <span className="inline-block px-3.5 py-1.5 rounded-full bg-nexgen-veryDarkHeader/10 text-nexgen-veryDarkHeader border border-nexgen-primaryGold/20 text-xs font-bold tracking-wider uppercase mb-3">
               Help Center
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[600] text-[#162418] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[600] text-nexgen-veryDarkHeader tracking-tight leading-tight">
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed flex flex-wrap items-center gap-x-3 gap-y-1">
               <span>Have questions regarding travel, safety, or package details? Reach us at:</span>
-              <a href={`mailto:${CLINIC_EMAIL}`} className="text-[#1b392b] font-semibold underline inline-flex items-center gap-1">
+              <a href={`mailto:${CLINIC_EMAIL}`} className="text-nexgen-primaryGold font-semibold underline inline-flex items-center gap-1">
                 <Mail className="w-3.5 h-3.5" />
                 <span>{CLINIC_EMAIL}</span>
               </a>
               <span className="text-gray-300 hidden sm:inline">•</span>
-              <a href={`tel:${CLINIC_PHONE}`} className="text-[#1b392b] font-semibold underline inline-flex items-center gap-1">
+              <a href={`tel:${CLINIC_PHONE}`} className="text-nexgen-primaryGold font-semibold underline inline-flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5" />
                 <span>{CLINIC_PHONE}</span>
               </a>
@@ -116,21 +116,21 @@ export default function MedicalFAQSection() {
                 return (
                   <div
                     key={idx}
-                    className="border border-gray-200 rounded-2xl overflow-hidden transition-all duration-200 bg-[#f8faf8]"
+                    className="border border-gray-200 rounded-2xl overflow-hidden transition-all duration-200 bg-nexgen-pageLightBg"
                   >
                     <button
                       onClick={() => toggleFAQ(idx)}
-                      className="w-full flex items-center justify-between p-5 text-left font-bold text-sm sm:text-base text-[#162418] hover:text-[#1b392b] transition-colors cursor-pointer"
+                      className="w-full flex items-center justify-between p-5 text-left font-bold text-sm sm:text-base text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors cursor-pointer"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full bg-[#1b392b]/10 text-[#1b392b] text-xs font-extrabold flex items-center justify-center flex-shrink-0">
+                        <span className="w-6 h-6 rounded-full bg-nexgen-veryDarkHeader/10 text-nexgen-veryDarkHeader text-xs font-extrabold flex items-center justify-center flex-shrink-0">
                           {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                         </span>
                         <span>{faq.question}</span>
                       </div>
                       <ChevronDown
                         className={`w-5 h-5 text-gray-500 transition-transform duration-300 flex-shrink-0 ${
-                          isOpen ? "rotate-180 text-[#1b392b]" : ""
+                          isOpen ? "rotate-180 text-nexgen-primaryGold" : ""
                         }`}
                       />
                     </button>
@@ -148,8 +148,8 @@ export default function MedicalFAQSection() {
 
           {/* Right Column: International Lead Form */}
           <div className="lg:col-span-5">
-            <div className="bg-gradient-to-br from-[#1b392b] to-[#12241b] rounded-3xl p-7 sm:p-9 text-white shadow-2xl border border-[#284c3b] relative">
-              <div className="flex items-center gap-2 text-[#b1fc85] text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="bg-gradient-to-br from-nexgen-mainDarkBg to-nexgen-veryDarkHeader rounded-3xl p-7 sm:p-9 text-white shadow-2xl border border-nexgen-primaryGold/30 relative">
+              <div className="flex items-center gap-2 text-nexgen-brightGold text-xs font-bold uppercase tracking-wider mb-2">
                 <Shield className="w-4 h-4" />
                 <span>100% Confidential Assessment</span>
               </div>
@@ -163,14 +163,14 @@ export default function MedicalFAQSection() {
 
               {isSubmitted ? (
                 <div className="bg-white/10 rounded-2xl p-6 text-center border border-white/20">
-                  <CheckCircle2 className="w-12 h-12 text-[#b1fc85] mx-auto mb-3" />
+                  <CheckCircle2 className="w-12 h-12 text-nexgen-brightGold mx-auto mb-3" />
                   <h4 className="text-lg font-bold text-white">Consultation Request Sent!</h4>
                   <p className="text-xs text-gray-200 mt-2">
                     Our Senior International Patient Coordinator will contact you via WhatsApp / Email within 2 hours.
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    className="mt-5 text-xs text-[#b1fc85] underline font-semibold"
+                    className="mt-5 text-xs text-nexgen-brightGold underline font-semibold"
                   >
                     Submit another request
                   </button>
@@ -188,7 +188,7 @@ export default function MedicalFAQSection() {
                       placeholder="e.g. John Miller"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-[#b1fc85] transition-colors"
+                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-nexgen-primaryGold transition-colors"
                     />
                   </div>
 
@@ -201,7 +201,7 @@ export default function MedicalFAQSection() {
                       <select
                         value={formData.countryCode}
                         onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
-                        className="bg-white/15 border border-white/20 rounded-xl px-3 py-3 text-white text-xs sm:text-sm focus:outline-none focus:border-[#b1fc85] transition-colors max-w-[130px]"
+                        className="bg-white/15 border border-white/20 rounded-xl px-3 py-3 text-white text-xs sm:text-sm focus:outline-none focus:border-nexgen-primaryGold transition-colors max-w-[130px]"
                       >
                         {COUNTRY_CODES.map((c, i) => (
                           <option key={i} value={c.code} className="text-black">
@@ -215,7 +215,7 @@ export default function MedicalFAQSection() {
                         placeholder="Mobile number"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-[#b1fc85] transition-colors"
+                        className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-nexgen-primaryGold transition-colors"
                       />
                     </div>
                   </div>
@@ -231,7 +231,7 @@ export default function MedicalFAQSection() {
                       placeholder="john@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-[#b1fc85] transition-colors"
+                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-nexgen-primaryGold transition-colors"
                     />
                   </div>
 
@@ -246,7 +246,7 @@ export default function MedicalFAQSection() {
                       placeholder="e.g. London, United Kingdom"
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-[#b1fc85] transition-colors"
+                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-nexgen-primaryGold transition-colors"
                     />
                   </div>
 
@@ -259,7 +259,7 @@ export default function MedicalFAQSection() {
                         onChange={(e) =>
                           setFormData({ ...formData, whatsappOptIn: e.target.checked })
                         }
-                        className="rounded accent-[#b1fc85]"
+                        className="rounded accent-nexgen-brightGold"
                       />
                       <span>Opt-in for immediate WhatsApp quote updates</span>
                     </label>
@@ -269,7 +269,7 @@ export default function MedicalFAQSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full mt-4 py-3.5 rounded-full bg-[#b1fc85] text-[#162418] font-bold text-sm hover:bg-white transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75"
+                    className="w-full mt-4 py-3.5 rounded-full bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold text-sm hover:bg-white transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75"
                   >
                     {isSubmitting ? (
                       <span>Sending Request...</span>

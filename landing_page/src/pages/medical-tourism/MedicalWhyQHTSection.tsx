@@ -16,7 +16,7 @@ const PATIENT_AVATARS = [
 
 export default function MedicalWhyQHTSection() {
   return (
-    <section className="py-20 lg:py-28 bg-[#303e2c] text-white relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-nexgen-mainDarkBg text-white relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
         
         {/* Main Relative Canvas for Absolute Orbiting Elements on Desktop */}
@@ -25,7 +25,7 @@ export default function MedicalWhyQHTSection() {
           {/* ========================================================
               CENTER ORGANIC BLOB CARD
              ======================================================== */}
-          <div className="relative z-10 w-full max-w-[580px] min-h-[460px] sm:min-h-[500px] bg-[#475743] rounded-[48%_52%_56%_44%_/_48%_44%_56%_52%] shadow-2xl p-8 sm:p-12 flex flex-col items-center justify-center text-center mx-auto border border-[#586b53]/50">
+          <div className="relative z-10 w-full max-w-[580px] min-h-[460px] sm:min-h-[500px] bg-gradient-to-br from-nexgen-mainDarkBg to-nexgen-veryDarkHeader rounded-[48%_52%_56%_44%_/_48%_44%_56%_52%] shadow-2xl p-8 sm:p-12 flex flex-col items-center justify-center text-center mx-auto border border-nexgen-primaryGold/30">
             
             {/* Brand Logo */}
             <div className="mb-5 flex items-center justify-center">
@@ -52,41 +52,41 @@ export default function MedicalWhyQHTSection() {
              ======================================================== */}
 
           {/* 1. Stat Circle: 95% Successful Transplants (Top Left) */}
-          <div className="hidden lg:flex absolute left-[15%] top-[14%] z-20 w-40 h-40 xl:w-44 xl:h-44 rounded-full bg-white text-[#162418] shadow-2xl flex-col items-center justify-center text-center p-4 border border-white/80 transform hover:scale-105 transition-transform duration-300">
-            <span className="text-3xl xl:text-4xl font-extrabold text-[#5c7a4f] tracking-tight">
+          <div className="hidden lg:flex absolute left-[15%] top-[14%] z-20 w-40 h-40 xl:w-44 xl:h-44 rounded-full bg-white text-nexgen-veryDarkHeader shadow-2xl flex-col items-center justify-center text-center p-4 border border-nexgen-primaryGold/30 transform hover:scale-105 transition-transform duration-300">
+            <span className="text-3xl xl:text-4xl font-extrabold text-nexgen-primaryGold tracking-tight">
               95%
             </span>
-            <span className="text-xs xl:text-sm font-semibold text-gray-800 leading-tight mt-1 max-w-[100px]">
+            <span className="text-xs xl:text-sm font-semibold text-nexgen-veryDarkHeader leading-tight mt-1 max-w-[100px]">
               Successful Transplants
             </span>
           </div>
 
           {/* 2. Stat Circle: 15K+ Doctor-Led Procedures (Bottom Left) */}
-          <div className="hidden lg:flex absolute left-[3%] bottom-[12%] z-20 w-52 h-52 xl:w-56 xl:h-56 rounded-full bg-white text-[#162418] shadow-2xl flex-col items-center justify-center text-center p-5 border border-white/80 transform hover:scale-105 transition-transform duration-300">
-            <span className="text-4xl xl:text-5xl font-extrabold text-[#5c7a4f] tracking-tight">
+          <div className="hidden lg:flex absolute left-[3%] bottom-[12%] z-20 w-52 h-52 xl:w-56 xl:h-56 rounded-full bg-white text-nexgen-veryDarkHeader shadow-2xl flex-col items-center justify-center text-center p-5 border border-nexgen-primaryGold/30 transform hover:scale-105 transition-transform duration-300">
+            <span className="text-4xl xl:text-5xl font-extrabold text-nexgen-primaryGold tracking-tight">
               15K+
             </span>
-            <span className="text-xs xl:text-sm font-semibold text-gray-800 leading-tight mt-1 max-w-[120px]">
+            <span className="text-xs xl:text-sm font-semibold text-nexgen-veryDarkHeader leading-tight mt-1 max-w-[120px]">
               Doctor-Led Procedures
             </span>
           </div>
 
           {/* 3. Stat Circle: 25+ Countries Clients (Top Right) */}
-          <div className="hidden lg:flex absolute right-[6%] top-[10%] z-20 w-52 h-52 xl:w-56 xl:h-56 rounded-full bg-white text-[#162418] shadow-2xl flex-col items-center justify-center text-center p-5 border border-white/80 transform hover:scale-105 transition-transform duration-300">
-            <span className="text-4xl xl:text-5xl font-extrabold text-[#5c7a4f] tracking-tight">
+          <div className="hidden lg:flex absolute right-[6%] top-[10%] z-20 w-52 h-52 xl:w-56 xl:h-56 rounded-full bg-white text-nexgen-veryDarkHeader shadow-2xl flex-col items-center justify-center text-center p-5 border border-nexgen-primaryGold/30 transform hover:scale-105 transition-transform duration-300">
+            <span className="text-4xl xl:text-5xl font-extrabold text-nexgen-primaryGold tracking-tight">
               25+
             </span>
-            <span className="text-xs xl:text-sm font-semibold text-gray-800 leading-tight mt-1 max-w-[110px]">
+            <span className="text-xs xl:text-sm font-semibold text-nexgen-veryDarkHeader leading-tight mt-1 max-w-[110px]">
               Countries Clients
             </span>
           </div>
 
           {/* 4. Stat Circle: 2 Clinic Branches in India (Bottom Right) */}
-          <div className="hidden lg:flex absolute right-[13%] bottom-[8%] z-20 w-36 h-36 xl:w-40 xl:h-40 rounded-full bg-white text-[#162418] shadow-2xl flex-col items-center justify-center text-center p-4 border border-white/80 transform hover:scale-105 transition-transform duration-300">
-            <span className="text-3xl xl:text-4xl font-extrabold text-[#5c7a4f] tracking-tight">
+          <div className="hidden lg:flex absolute right-[13%] bottom-[8%] z-20 w-36 h-36 xl:w-40 xl:h-40 rounded-full bg-white text-nexgen-veryDarkHeader shadow-2xl flex-col items-center justify-center text-center p-4 border border-nexgen-primaryGold/30 transform hover:scale-105 transition-transform duration-300">
+            <span className="text-3xl xl:text-4xl font-extrabold text-nexgen-primaryGold tracking-tight">
               2
             </span>
-            <span className="text-[11px] xl:text-xs font-semibold text-gray-800 leading-tight mt-1 max-w-[95px]">
+            <span className="text-[11px] xl:text-xs font-semibold text-nexgen-veryDarkHeader leading-tight mt-1 max-w-[95px]">
               Clinic Branches in India
             </span>
           </div>
@@ -96,7 +96,7 @@ export default function MedicalWhyQHTSection() {
              ======================================================== */}
 
           {/* Photo 1: Top Mid-Left (Thumbs Up) */}
-          <div className="hidden lg:block absolute left-[32%] top-[12%] z-20 w-20 h-20 xl:w-22 xl:h-22 rounded-full overflow-hidden border-[3px] border-white shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
+          <div className="hidden lg:block absolute left-[32%] top-[12%] z-20 w-20 h-20 xl:w-22 xl:h-22 rounded-full overflow-hidden border-[3px] border-nexgen-primaryGold/40 shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
               src={PATIENT_AVATARS[0]}
               alt="Satisfied Patient"
@@ -105,7 +105,7 @@ export default function MedicalWhyQHTSection() {
           </div>
 
           {/* Photo 2: Left Upper-Mid (Checking Hairline) */}
-          <div className="hidden lg:block absolute left-[8%] top-[30%] z-20 w-24 h-24 xl:w-26 xl:h-26 rounded-full overflow-hidden border-[3px] border-white shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
+          <div className="hidden lg:block absolute left-[8%] top-[30%] z-20 w-24 h-24 xl:w-26 xl:h-26 rounded-full overflow-hidden border-[3px] border-nexgen-primaryGold/40 shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
               src={PATIENT_AVATARS[1]}
               alt="Patient Hairline Examination"
@@ -114,7 +114,7 @@ export default function MedicalWhyQHTSection() {
           </div>
 
           {/* Photo 3: Left Mid-Lower (Small Avatar) */}
-          <div className="hidden lg:block absolute left-[19%] top-[45%] z-20 w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
+          <div className="hidden lg:block absolute left-[19%] top-[45%] z-20 w-12 h-12 rounded-full overflow-hidden border-2 border-nexgen-primaryGold/40 shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
               src={PATIENT_AVATARS[2]}
               alt="International Patient"
@@ -123,7 +123,7 @@ export default function MedicalWhyQHTSection() {
           </div>
 
           {/* Photo 4: Bottom Left (Bearded Patient) */}
-          <div className="hidden lg:block absolute left-[20%] bottom-[12%] z-20 w-22 h-22 xl:w-24 xl:h-24 rounded-full overflow-hidden border-[3px] border-white shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
+          <div className="hidden lg:block absolute left-[20%] bottom-[12%] z-20 w-22 h-22 xl:w-24 xl:h-24 rounded-full overflow-hidden border-[3px] border-nexgen-primaryGold/40 shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
               src={PATIENT_AVATARS[3]}
               alt="Happy Patient Result"
@@ -132,7 +132,7 @@ export default function MedicalWhyQHTSection() {
           </div>
 
           {/* Photo 5: Top Right (Holding Mirror) */}
-          <div className="hidden lg:block absolute right-[28%] top-[10%] z-20 w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
+          <div className="hidden lg:block absolute right-[28%] top-[10%] z-20 w-14 h-14 rounded-full overflow-hidden border-2 border-nexgen-primaryGold/40 shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
               src={PATIENT_AVATARS[4]}
               alt="Patient Checking Results"
@@ -141,7 +141,7 @@ export default function MedicalWhyQHTSection() {
           </div>
 
           {/* Photo 6: Right Mid (Smiling Buzz Cut) */}
-          <div className="hidden lg:block absolute right-[18%] top-[51%] z-20 w-14 h-14 xl:w-16 xl:h-16 rounded-full overflow-hidden border-2 border-white shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
+          <div className="hidden lg:block absolute right-[18%] top-[51%] z-20 w-14 h-14 xl:w-16 xl:h-16 rounded-full overflow-hidden border-2 border-nexgen-primaryGold/40 shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
               src={PATIENT_AVATARS[5]}
               alt="Restored Natural Hairline"
@@ -150,7 +150,7 @@ export default function MedicalWhyQHTSection() {
           </div>
 
           {/* Photo 7: Far Right-Mid (Patient in Polo) */}
-          <div className="hidden lg:block absolute right-[4%] top-[54%] z-20 w-24 h-24 xl:w-28 xl:h-28 rounded-full overflow-hidden border-[3px] border-white shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
+          <div className="hidden lg:block absolute right-[4%] top-[54%] z-20 w-24 h-24 xl:w-28 xl:h-28 rounded-full overflow-hidden border-[3px] border-nexgen-primaryGold/40 shadow-xl transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
               src={PATIENT_AVATARS[6]}
               alt="Patient Success"
@@ -159,7 +159,7 @@ export default function MedicalWhyQHTSection() {
           </div>
 
           {/* Photo 8: Bottom Center-Right (Patient Pointing to Hair) */}
-          <div className="hidden lg:block absolute right-[32%] bottom-[16%] z-20 w-14 h-14 xl:w-16 xl:h-16 rounded-full overflow-hidden border-2 border-white shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
+          <div className="hidden lg:block absolute right-[32%] bottom-[16%] z-20 w-14 h-14 xl:w-16 xl:h-16 rounded-full overflow-hidden border-2 border-nexgen-primaryGold/40 shadow-lg transform hover:scale-110 transition-transform duration-300 bg-white">
             <img
               src={PATIENT_AVATARS[7]}
               alt="Density Restored"
@@ -176,26 +176,26 @@ export default function MedicalWhyQHTSection() {
           
           {/* 4 Stat Cards for Mobile */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-white/80">
-              <span className="text-3xl font-extrabold text-[#5c7a4f] block">95%</span>
-              <span className="text-xs font-semibold text-gray-800 mt-1 block">Successful Transplants</span>
+            <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-nexgen-primaryGold/20">
+              <span className="text-3xl font-extrabold text-nexgen-primaryGold block">95%</span>
+              <span className="text-xs font-semibold text-nexgen-veryDarkHeader mt-1 block">Successful Transplants</span>
             </div>
-            <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-white/80">
-              <span className="text-3xl font-extrabold text-[#5c7a4f] block">25+</span>
-              <span className="text-xs font-semibold text-gray-800 mt-1 block">Countries Clients</span>
+            <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-nexgen-primaryGold/20">
+              <span className="text-3xl font-extrabold text-nexgen-primaryGold block">25+</span>
+              <span className="text-xs font-semibold text-nexgen-veryDarkHeader mt-1 block">Countries Clients</span>
             </div>
-            <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-white/80">
-              <span className="text-3xl font-extrabold text-[#5c7a4f] block">15K+</span>
-              <span className="text-xs font-semibold text-gray-800 mt-1 block">Doctor-Led Procedures</span>
+            <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-nexgen-primaryGold/20">
+              <span className="text-3xl font-extrabold text-nexgen-primaryGold block">15K+</span>
+              <span className="text-xs font-semibold text-nexgen-veryDarkHeader mt-1 block">Doctor-Led Procedures</span>
             </div>
-            <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-white/80">
-              <span className="text-3xl font-extrabold text-[#5c7a4f] block">2</span>
-              <span className="text-xs font-semibold text-gray-800 mt-1 block">Clinic Branches in India</span>
+            <div className="bg-white rounded-3xl p-5 text-center shadow-lg border border-nexgen-primaryGold/20">
+              <span className="text-3xl font-extrabold text-nexgen-primaryGold block">2</span>
+              <span className="text-xs font-semibold text-nexgen-veryDarkHeader mt-1 block">Clinic Branches in India</span>
             </div>
           </div>
 
           {/* Patient Avatars Row for Mobile */}
-          <div className="bg-[#475743] rounded-2xl p-4 border border-[#586b53]/50">
+          <div className="bg-nexgen-veryDarkHeader rounded-2xl p-4 border border-nexgen-primaryGold/30">
             <p className="text-xs font-semibold text-center text-white/90 mb-3">
               Trusted by International Patients Worldwide
             </p>
@@ -203,7 +203,7 @@ export default function MedicalWhyQHTSection() {
               {PATIENT_AVATARS.slice(0, 6).map((avatarUrl, i) => (
                 <div
                   key={i}
-                  className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-md bg-white"
+                  className="w-12 h-12 rounded-full overflow-hidden border-2 border-nexgen-primaryGold/40 shadow-md bg-white"
                 >
                   <img
                     src={avatarUrl}

@@ -62,7 +62,7 @@ const CLINIC_FEATURES = [
 
 export default function ClinicTechnologySection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#485942] text-white overflow-hidden border-t border-white/10">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden border-t border-nexgen-primaryGold/20">
       <div className="qht-large-container">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -82,7 +82,7 @@ export default function ClinicTechnologySection() {
             <div className="pt-2">
               <Link
                 href="/about-us/"
-                className="bg-white hover:bg-gray-100 text-[#162418] font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-md transition-all active:scale-95 duration-150 inline-block"
+                className="bg-nexgen-brightGold hover:bg-white text-nexgen-veryDarkHeader font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-md transition-all active:scale-95 duration-150 inline-block"
               >
                 About Us
               </Link>
@@ -94,7 +94,7 @@ export default function ClinicTechnologySection() {
             {CLINIC_FEATURES.map((feature, idx) => (
               <div key={idx} className="py-6 flex items-start gap-5 group">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-nexgen-veryDarkHeader border border-nexgen-primaryGold/30 text-nexgen-brightGold flex items-center justify-center flex-shrink-0 group-hover:border-nexgen-primaryGold transition-colors">
                   {feature.icon}
                 </div>
 

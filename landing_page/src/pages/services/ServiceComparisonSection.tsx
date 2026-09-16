@@ -136,12 +136,12 @@ export default function ServiceComparisonSection({
         {/* Header with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-14">
           <div className="max-w-3xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight">
               {title.toLowerCase().includes("comparison")
                 ? title
                 : `Comparison of ${title} Techniques`}
             </h2>
-            <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
               {subtitle}
             </p>
           </div>
@@ -150,14 +150,14 @@ export default function ServiceComparisonSection({
           <div className="flex items-center gap-2.5 self-start md:self-end">
             <button
               onClick={() => scroll("left")}
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#f4f7f4] border border-gray-200 hover:bg-[#596d53] hover:text-white flex items-center justify-center transition-colors shadow-xs"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-gray-200 hover:bg-nexgen-mainDarkBg hover:text-nexgen-brightGold flex items-center justify-center transition-colors shadow-xs"
               aria-label="Previous Technique"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#f4f7f4] border border-gray-200 hover:bg-[#596d53] hover:text-white flex items-center justify-center transition-colors shadow-xs"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-gray-200 hover:bg-nexgen-mainDarkBg hover:text-nexgen-brightGold flex items-center justify-center transition-colors shadow-xs"
               aria-label="Next Technique"
             >
               <ChevronRight className="w-5 h-5" />
@@ -181,11 +181,11 @@ export default function ServiceComparisonSection({
           {cards.map((card, idx) => (
             <div
               key={card.id ?? idx}
-              className="flex-shrink-0 w-[275px] sm:w-[310px] md:w-[325px] bg-[#eff5f1] rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300 snap-start border border-gray-200/50"
+              className="flex-shrink-0 w-[275px] sm:w-[310px] md:w-[325px] bg-nexgen-pageLightBg rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300 snap-start border border-gray-200/50"
             >
               {/* Header Title */}
               <div className="pb-4 border-b border-gray-200/80 min-h-[58px] flex items-center">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1b221d] tracking-tight leading-snug">
+                <h3 className="text-lg sm:text-xl font-bold text-nexgen-veryDarkHeader tracking-tight leading-snug">
                   {card.title}
                 </h3>
               </div>
@@ -228,7 +228,7 @@ export default function ServiceComparisonSection({
                   <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider block mb-1">
                     Cost
                   </span>
-                  <p className="font-bold text-[#1b392b] leading-relaxed">
+                  <p className="font-bold text-nexgen-primaryGold leading-relaxed">
                     {card.cost}
                   </p>
                 </div>

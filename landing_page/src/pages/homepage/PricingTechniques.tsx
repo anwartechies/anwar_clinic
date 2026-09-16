@@ -12,15 +12,15 @@ export default function PricingTechniques({
   onOpenConsultation,
 }: PricingTechniquesProps) {
   return (
-    <section className="py-20 sm:py-24 bg-[#f8faf8] overflow-hidden">
+    <section className="py-20 sm:py-24 bg-nexgen-pageLightBg overflow-hidden">
       <div className="qht-container">
 
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-5xl font-[500] text-[#162418] tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight">
             Transparent Procedure Options & Pricing
           </h2>
-          <p className="mt-3 text-sm sm:text-lg text-[#5c685f] font-normal leading-relaxed">
+          <p className="mt-3 text-sm sm:text-lg text-nexgen-serviceInnerCard font-normal leading-relaxed">
             Explore proven, physician-administered restoration techniques tailored to your degree of hair loss, aesthetic vision, and budget.
           </p>
         </div>
@@ -34,28 +34,28 @@ export default function PricingTechniques({
               <div
                 key={idx}
                 className={`rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 relative ${isFeatured
-                  ? "bg-[#52664d] text-white shadow-xl"
-                  : "bg-white text-gray-900 border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)]"
+                  ? "bg-nexgen-mainDarkBg text-white shadow-xl border border-nexgen-primaryGold/30"
+                  : "bg-white text-nexgen-veryDarkHeader border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)]"
                   }`}
               >
                 {/* Card Top: Technique Name, Full Title, Description */}
                 <div>
                   <span
-                    className={`text-xs font-semibold block mb-1.5 ${isFeatured ? "text-[#b1fc85]" : "text-[#5c685f]"
+                    className={`text-xs font-semibold block mb-1.5 ${isFeatured ? "text-nexgen-brightGold" : "text-nexgen-primaryGold"
                       }`}
                   >
                     {pkg.technique}
                   </span>
 
                   <h3
-                    className={`text-lg sm:text-xl font-[500] leading-snug mb-3 ${isFeatured ? "text-white" : "text-[#1b221d]"
+                    className={`text-lg sm:text-xl font-[500] leading-snug mb-3 ${isFeatured ? "text-white" : "text-nexgen-veryDarkHeader"
                       }`}
                   >
                     {pkg.fullName}
                   </h3>
 
                   <p
-                    className={`text-xs sm:text-[13px] leading-relaxed mb-6 font-normal ${isFeatured ? "text-white/85" : "text-[#5c685f]"
+                    className={`text-xs sm:text-[13px] leading-relaxed mb-6 font-normal ${isFeatured ? "text-white/85" : "text-gray-600"
                       }`}
                   >
                     {pkg.desc}
@@ -69,13 +69,13 @@ export default function PricingTechniques({
                 >
                   <div>
                     <span
-                      className={`text-xs font-bold block ${isFeatured ? "text-[#b1fc85]" : "text-[#1b221d]"
+                      className={`text-xs font-bold block ${isFeatured ? "text-nexgen-brightGold" : "text-nexgen-veryDarkHeader"
                         }`}
                     >
                       per graft onwards
                     </span>
                     <span
-                      className={`text-xs font-normal mt-0.5 block ${isFeatured ? "text-white/80" : "text-[#5c685f]"
+                      className={`text-xs font-normal mt-0.5 block ${isFeatured ? "text-white/80" : "text-gray-500"
                         }`}
                     >
                       Total: {pkg.totalRange}
@@ -84,7 +84,7 @@ export default function PricingTechniques({
 
                   <div className="text-right">
                     <span
-                      className={`text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight ${isFeatured ? "text-[#b1fc85]" : "text-[#52664d]"
+                      className={`text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight ${isFeatured ? "text-nexgen-brightGold" : "text-nexgen-primaryGold"
                         }`}
                     >
                       ₹{pkg.perGraft}
@@ -101,11 +101,11 @@ export default function PricingTechniques({
                     {pkg.features.map((feature, fIdx) => (
                       <li
                         key={fIdx}
-                        className={`py-3 flex items-center gap-2.5 text-xs sm:text-[13px] font-normal ${isFeatured ? "text-white" : "text-[#2b302c]"
+                        className={`py-3 flex items-center gap-2.5 text-xs sm:text-[13px] font-normal ${isFeatured ? "text-white" : "text-nexgen-veryDarkHeader"
                           }`}
                       >
                         <CheckCircle2
-                          className={`w-4 h-4 flex-shrink-0 ${isFeatured ? "text-[#b1fc85]" : "text-[#52664d]"
+                          className={`w-4 h-4 flex-shrink-0 ${isFeatured ? "text-nexgen-brightGold" : "text-nexgen-primaryGold"
                             }`}
                         />
                         <span>{feature}</span>

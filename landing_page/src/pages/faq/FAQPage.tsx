@@ -286,7 +286,7 @@ export default function FAQPage() {
               <li>
                 <Link
                   href="/"
-                  className="hover:text-[#162418] transition-colors underline-offset-2 hover:underline"
+                  className="hover:text-nexgen-primaryGold transition-colors underline-offset-2 hover:underline"
                 >
                   Home
                 </Link>
@@ -294,14 +294,14 @@ export default function FAQPage() {
               <li className="flex items-center text-gray-400">
                 <ChevronRight className="w-3.5 h-3.5" />
               </li>
-              <li className="text-[#162418] font-semibold">
+              <li className="text-nexgen-veryDarkHeader font-semibold">
                 FAQ's
               </li>
             </ol>
           </nav>
 
           {/* Main Hero Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#162418] tracking-tight leading-[1.15] mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-nexgen-veryDarkHeader tracking-tight leading-[1.15] mb-4">
             Frequently asked <br />
             questions.
           </h1>
@@ -326,7 +326,7 @@ export default function FAQPage() {
                 LEFT COLUMN: STICKY CATEGORY NAV (Scrolled With Content)
                ======================================================== */}
             <div className="lg:col-span-4 lg:sticky lg:top-28 z-20 self-start">
-              <div className="bg-[#eff5f1] rounded-3xl p-3 sm:p-4 shadow-sm border border-[#e2ece4]">
+              <div className="bg-nexgen-pageLightBg rounded-3xl p-3 sm:p-4 shadow-sm border border-gray-100">
                 <div className="flex flex-col divide-y divide-gray-200/60">
                   {FAQ_CATEGORIES.map((category) => {
                     const isActive = category.id === activeCategoryId;
@@ -335,8 +335,8 @@ export default function FAQPage() {
                         key={category.id}
                         onClick={() => scrollToCategory(category.id)}
                         className={`w-full flex items-center gap-3.5 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl text-left transition-all duration-300 cursor-pointer ${isActive
-                          ? "bg-[#52664d] text-white shadow-lg my-1 scale-[1.02]"
-                          : "bg-transparent text-[#162418] hover:bg-white/60"
+                          ? "bg-nexgen-mainDarkBg text-white shadow-lg my-1 scale-[1.02] border border-nexgen-primaryGold/30"
+                          : "bg-transparent text-nexgen-veryDarkHeader hover:bg-white/60"
                           }`}
                       >
                         {/* Icon Thumbnail */}
@@ -350,7 +350,7 @@ export default function FAQPage() {
 
                         {/* Name */}
                         <span
-                          className={`text-xs sm:text-[14px] font-semibold tracking-tight leading-snug transition-colors ${isActive ? "text-white" : "text-[#162418]"
+                          className={`text-xs sm:text-[14px] font-semibold tracking-tight leading-snug transition-colors ${isActive ? "text-white" : "text-nexgen-veryDarkHeader"
                             }`}
                         >
                           {category.name}
@@ -369,7 +369,7 @@ export default function FAQPage() {
 
               {/* Main Top Header */}
               <div className="pb-4 border-b border-gray-200">
-                <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#162418] tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-nexgen-veryDarkHeader tracking-tight leading-tight">
                   Looking for an answer on hair transplant ?
                 </h2>
               </div>
@@ -390,7 +390,7 @@ export default function FAQPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#162418] tracking-tight">
+                    <h3 className="text-xl sm:text-2xl font-bold text-nexgen-veryDarkHeader tracking-tight">
                       {category.name}
                     </h3>
                   </div>
@@ -421,8 +421,8 @@ export default function FAQPage() {
                               {/* Question Text */}
                               <span
                                 className={`text-xs sm:text-sm md:text-[14.5px] font-bold tracking-tight leading-relaxed transition-colors duration-200 ${isOpen
-                                  ? "text-[#52664d]"
-                                  : "text-[#162418] group-hover:text-[#52664d]"
+                                  ? "text-nexgen-primaryGold"
+                                  : "text-nexgen-veryDarkHeader group-hover:text-nexgen-primaryGold"
                                   }`}
                               >
                                 {faq.q}
@@ -432,8 +432,8 @@ export default function FAQPage() {
                             {/* Plus / Minus Expand Icon with Smooth Rotation */}
                             <div
                               className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 mt-0.5 ${isOpen
-                                ? "bg-[#52664d] text-white rotate-180"
-                                : "text-gray-400 group-hover:text-[#52664d] group-hover:bg-[#eff5f1]"
+                                ? "bg-nexgen-mainDarkBg text-nexgen-brightGold border border-nexgen-primaryGold/30 rotate-180"
+                                : "text-gray-400 group-hover:text-nexgen-primaryGold group-hover:bg-nexgen-pageLightBg"
                                 }`}
                             >
                               {isOpen ? (
@@ -472,7 +472,7 @@ export default function FAQPage() {
       {/* ========================================================
           BOTTOM "KNOW MORE ABOUT COSTING" BANNER
          ======================================================== */}
-      <section className="bg-[#52664d] text-white py-10 sm:py-12">
+      <section className="bg-gradient-to-r from-nexgen-mainDarkBg via-nexgen-veryDarkHeader to-nexgen-mainDarkBg text-white py-10 sm:py-12 border-t border-nexgen-primaryGold/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4 text-center sm:text-left">
             <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 text-white">
@@ -491,13 +491,13 @@ export default function FAQPage() {
           <div className="flex items-center gap-3">
             <Link
               href="/hair-transplant-cost-in-india/"
-              className="px-6 py-3 rounded-full bg-white text-[#162418] font-bold text-xs sm:text-sm hover:bg-[#eff5f1] transition-all transform hover:scale-105 shadow-md whitespace-nowrap"
+              className="px-6 py-3 rounded-full bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold text-xs sm:text-sm hover:bg-white transition-all transform hover:scale-105 shadow-md whitespace-nowrap"
             >
               View Cost Guide
             </Link>
             <button
               onClick={openConsultation}
-              className="px-6 py-3 rounded-full bg-transparent text-white border border-white/60 font-medium text-xs sm:text-sm hover:bg-white/15 transition-all cursor-pointer whitespace-nowrap"
+              className="px-6 py-3 rounded-full bg-transparent text-white border border-nexgen-primaryGold/50 font-semibold text-xs sm:text-sm hover:bg-nexgen-brightGold/20 transition-all cursor-pointer whitespace-nowrap"
             >
               Book Consultation
             </button>

@@ -61,18 +61,21 @@ export default function AboutLegacySection() {
     <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="qht-large-container">
         
-        {/* Dark Olive Outer Container */}
-        <div className="bg-[#4a5c45] rounded-2xl sm:rounded-3xl lg:rounded-[32px] p-6 sm:p-10 lg:p-14 text-white relative overflow-hidden shadow-xl">
+        {/* Dark Outer Container */}
+        <div className="bg-nexgen-mainDarkBg border border-nexgen-primaryGold/30 rounded-2xl sm:rounded-3xl lg:rounded-[32px] p-6 sm:p-10 lg:p-14 text-white relative overflow-hidden shadow-2xl">
           
           {/* Top Header Row */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
             
             {/* Title & Subtitle */}
             <div className="max-w-2xl">
+              <span className="text-xs sm:text-sm font-semibold text-nexgen-brightGold uppercase tracking-wider block mb-2">
+                Our History & Growth
+              </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] tracking-tight text-white leading-tight mb-3">
                 Our Legacy in Hair Restoration
               </h2>
-              <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-normal">
                 From clinical inception to nationwide trust, {COMPANY_NAME} is dedicated to pioneering ethical, high-precision hair restoration with verified patient outcomes.
               </p>
             </div>
@@ -83,7 +86,7 @@ export default function AboutLegacySection() {
                 type="button"
                 onClick={() => handleScroll("left")}
                 aria-label="Previous milestone"
-                className="w-10 h-10 rounded-full bg-white text-[#1b221d] flex items-center justify-center hover:bg-gray-100 active:scale-95 transition-all shadow-md cursor-pointer"
+                className="w-10 h-10 rounded-full bg-nexgen-brightGold text-nexgen-veryDarkHeader flex items-center justify-center hover:bg-yellow-400 active:scale-95 transition-all shadow-md cursor-pointer"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -91,7 +94,7 @@ export default function AboutLegacySection() {
                 type="button"
                 onClick={() => handleScroll("right")}
                 aria-label="Next milestone"
-                className="w-10 h-10 rounded-full bg-white text-[#1b221d] flex items-center justify-center hover:bg-gray-100 active:scale-95 transition-all shadow-md cursor-pointer"
+                className="w-10 h-10 rounded-full bg-nexgen-brightGold text-nexgen-veryDarkHeader flex items-center justify-center hover:bg-yellow-400 active:scale-95 transition-all shadow-md cursor-pointer"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -115,26 +118,26 @@ export default function AboutLegacySection() {
                 >
                   {/* Top Diamond Indicator & Vertical Guide */}
                   <div className="flex items-center mb-6">
-                    <div className="w-2.5 h-2.5 rotate-45 bg-white/90 shadow-sm flex-shrink-0" />
-                    <div className="h-[1px] bg-white/20 flex-grow ml-2" />
+                    <div className="w-2.5 h-2.5 rotate-45 bg-nexgen-brightGold shadow-sm flex-shrink-0" />
+                    <div className="h-[1px] bg-nexgen-primaryGold/30 flex-grow ml-2" />
                   </div>
 
                   {/* Outlined Milestone Card */}
-                  <div className="border border-white/50 hover:border-white rounded-2xl sm:rounded-[22px] p-6 sm:p-7 flex flex-col justify-between h-[280px] sm:h-[300px] bg-white/[0.04] hover:bg-white/[0.08] transition-all duration-300 backdrop-blur-xs">
+                  <div className="border border-nexgen-primaryGold/25 hover:border-nexgen-primaryGold rounded-2xl sm:rounded-[22px] p-6 sm:p-7 flex flex-col justify-between h-[280px] sm:h-[300px] bg-nexgen-navBg/60 hover:bg-nexgen-navBg/90 transition-all duration-300 backdrop-blur-xs">
                     
                     {/* Content */}
                     <div>
-                      <h3 className="text-base sm:text-lg font-[500] text-[#bbf786] leading-snug mb-3">
+                      <h3 className="text-base sm:text-lg font-semibold text-nexgen-brightGold leading-snug mb-3">
                         {milestone.title}
                       </h3>
-                      <p className="text-xs sm:text-[13px] text-white/85 leading-relaxed font-normal line-clamp-6">
+                      <p className="text-xs sm:text-[13px] text-gray-300 leading-relaxed font-normal line-clamp-6">
                         {milestone.desc}
                       </p>
                     </div>
 
                     {/* Footer Phase Indicator */}
                     {milestone.year && (
-                      <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-semibold text-white/50 tracking-wider uppercase">
+                      <div className="pt-3 border-t border-nexgen-primaryGold/15 flex items-center justify-between text-[11px] font-semibold text-nexgen-primaryGold/80 tracking-wider uppercase">
                         <span>{milestone.year}</span>
                       </div>
                     )}

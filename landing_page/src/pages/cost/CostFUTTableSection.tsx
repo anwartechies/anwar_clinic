@@ -20,14 +20,14 @@ export default function CostFUTTableSection() {
         
         {/* Header */}
         <div className="max-w-4xl mb-10">
-          <span className="text-xs sm:text-sm font-semibold text-[#5c685f] block mb-2 tracking-wide">
+          <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold block mb-2 tracking-wide">
             FUT Pricing Table
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight mb-4">
             FUT Hair Transplant Cost in India <br />
             by Norwood Stage
           </h2>
-          <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-3xl">
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-3xl">
             FUT costs less than FUE and {COMPANY_NAME} and is a cost-effective method for hair restoration in India. It is ideal for patients with longer hair who do not wish to shave the donor area, and for patients with advanced baldness (Norwood 6–7) requiring a higher number of grafts in one session. At {COMPANY_NAME} Clinic, FUT starts from ₹50 per graft.
           </p>
         </div>
@@ -36,7 +36,7 @@ export default function CostFUTTableSection() {
         <div className="w-full rounded-3xl overflow-hidden shadow-xl border border-gray-200/80 bg-white">
           
           {/* Table Header Row */}
-          <div className="bg-[#243322] text-white py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 font-bold text-xs sm:text-sm">
+          <div className="bg-nexgen-veryDarkHeader text-white py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 font-bold text-xs sm:text-sm border-b border-nexgen-primaryGold/20">
             <div className="col-span-4 sm:col-span-5">Norwood Stage</div>
             <div className="col-span-4 sm:col-span-4">Grafts Required</div>
             <div className="col-span-4 sm:col-span-3 text-left">FUT Cost</div>

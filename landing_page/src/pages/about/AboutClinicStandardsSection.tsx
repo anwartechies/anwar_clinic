@@ -91,7 +91,10 @@ export default function AboutClinicStandardsSection() {
           
           {/* Left Column: Heading & City Pills */}
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.12] mb-5">
+            <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold uppercase tracking-wider block mb-2">
+              Clinical Excellence
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.12] mb-5">
               International Standards, <br />
               Local Care
             </h2>
@@ -107,11 +110,11 @@ export default function AboutClinicStandardsSection() {
                     onClick={() => setActiveCityId(city.id)}
                     className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? "bg-[#52664d] text-white shadow-sm"
-                        : "bg-white border border-gray-200 text-[#445046] hover:bg-gray-50"
+                        ? "bg-nexgen-veryDarkHeader text-white border border-nexgen-primaryGold shadow-md"
+                        : "bg-white border border-gray-200 text-gray-700 hover:border-nexgen-primaryGold/50 hover:bg-nexgen-pageLightBg"
                     }`}
                   >
-                    <span className={isActive ? "text-white" : "text-[#52664d]"}>
+                    <span className={isActive ? "text-nexgen-brightGold" : "text-nexgen-primaryGold"}>
                       {city.icon}
                     </span>
                     <span>{city.name}</span>
@@ -123,7 +126,7 @@ export default function AboutClinicStandardsSection() {
 
           {/* Right Column: Description */}
           <div className="max-w-md lg:pb-1">
-            <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
               With modern clinics across several cities in India, {COMPANY_NAME} continues to provide accessible, safe, and dependable hair restoration care.
             </p>
           </div>

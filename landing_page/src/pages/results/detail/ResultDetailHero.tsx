@@ -43,7 +43,7 @@ export default function ResultDetailHero({
   };
 
   return (
-    <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 bg-[#eff5f1] overflow-hidden">
+    <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 bg-nexgen-pageLightBg overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* 1. Breadcrumb */}
@@ -61,7 +61,7 @@ export default function ResultDetailHero({
 
         {/* 2. Patient Header Title & Location */}
         <div className="text-center space-y-2 mb-10">
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight">
             {patient.name}
           </h1>
           <p className="text-xs sm:text-lg text-gray-600 font-normal">
@@ -146,7 +146,7 @@ export default function ResultDetailHero({
         </div>
 
         {/* 5. Treatment Snapshot (Dark Olive Green Card with Split Interactive Slider) */}
-        <div className="bg-[#485942] rounded-3xl p-7 sm:p-10 lg:p-12 text-white shadow-xl border border-white/10">
+        <div className="bg-nexgen-mainDarkBg rounded-3xl p-7 sm:p-10 lg:p-12 text-white shadow-xl border border-nexgen-primaryGold/30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
             {/* Left Snapshot Stats */}
@@ -160,7 +160,7 @@ export default function ResultDetailHero({
                 <span className="text-xs sm:text-sm font-medium text-white/85 block mb-1">
                   Grafts Implanted
                 </span>
-                <p className="text-5xl sm:text-6xl font-black text-[#b1fc85] tracking-tight leading-none">
+                <p className="text-5xl sm:text-6xl font-black text-nexgen-brightGold tracking-tight leading-none">
                   {patient.graftsImplanted}
                 </p>
               </div>
@@ -170,7 +170,7 @@ export default function ResultDetailHero({
                 <span className="text-xs sm:text-sm font-medium text-white/85 block mb-1">
                   Results Achieved In (Months)
                 </span>
-                <p className="text-5xl sm:text-6xl font-black text-[#b1fc85] tracking-tight leading-none">
+                <p className="text-5xl sm:text-6xl font-black text-nexgen-brightGold tracking-tight leading-none">
                   {patient.resultsMonths}
                 </p>
               </div>

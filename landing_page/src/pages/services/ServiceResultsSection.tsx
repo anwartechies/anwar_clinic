@@ -88,7 +88,7 @@ function ServiceComparisonCard({ item }: { item: ResultCardItem }) {
   };
 
   return (
-    <div className="bg-[#2d3b2e] rounded-3xl overflow-hidden border border-white/10 shadow-lg flex flex-col justify-between">
+    <div className="bg-nexgen-navBg rounded-3xl overflow-hidden border border-nexgen-primaryGold/20 shadow-lg flex flex-col justify-between">
       {/* Interactive Before/After Split Comparison View */}
       <div
         ref={containerRef}
@@ -141,7 +141,7 @@ function ServiceComparisonCard({ item }: { item: ResultCardItem }) {
       <div className="p-5 space-y-3">
         <div className="flex items-center justify-between text-xs text-gray-300 font-medium">
           <span>{item.grafts || item.name || "Hair Restoration"}</span>
-          {item.timeframe && <span className="text-emerald-400">{item.timeframe}</span>}
+          {item.timeframe && <span className="text-nexgen-brightGold">{item.timeframe}</span>}
         </div>
         {(item.technique || item.age) && (
           <div className="flex items-center justify-between text-[11px] text-gray-400">
@@ -161,7 +161,7 @@ export default function ServiceResultsSection({
   onOpenConsultation,
 }: ServiceResultsSectionProps) {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 bg-[#38493a] text-white overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden">
       <div className="qht-large-container relative z-10">
 
         {/* Top Header Row with Vector Logo Motif */}
@@ -195,7 +195,7 @@ export default function ServiceResultsSection({
           <div className="mt-12 text-center">
             <button
               onClick={onOpenConsultation}
-              className="bg-[#596d53] hover:bg-[#495c44] text-white font-semibold text-sm sm:text-base py-3.5 px-9 rounded-full shadow-lg transition-all active:scale-95"
+              className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3.5 px-9 rounded-full shadow-lg transition-all active:scale-95"
             >
               Book an Appointment
             </button>

@@ -12,7 +12,7 @@ interface CostHeroProps {
 
 export default function CostHero({ onOpenConsultation }: CostHeroProps) {
   return (
-    <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-[#596d53] text-white overflow-hidden">
+    <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-nexgen-mainDarkBg text-white overflow-hidden">
       <div className="qht-large-container">
 
         {/* Breadcrumbs */}
@@ -39,7 +39,7 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-[500] text-white tracking-tight leading-[1.12]">
               Hair Transplant Cost <br className="hidden sm:block" />
-              <span className="text-[#b1fc85]">in India</span> | Transparent <br className="hidden sm:block" />
+              <span className="text-nexgen-brightGold">in India</span> | Transparent <br className="hidden sm:block" />
               Pricing, Natural Results.
             </h1>
 
@@ -52,7 +52,7 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
             <div className="pt-3 flex flex-wrap items-center gap-4">
               <button
                 onClick={onOpenConsultation}
-                className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3.5 px-8 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
+                className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3.5 px-8 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
               >
                 Book Free Consultation
               </button>
@@ -73,7 +73,7 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
             <div className="w-full max-w-[430px] rounded-3xl overflow-hidden shadow-2xl bg-white border border-gray-100 text-gray-800">
 
               {/* Card Dark Header */}
-              <div className="bg-[#243322] py-4 px-6 text-center">
+              <div className="bg-nexgen-veryDarkHeader py-4 px-6 text-center border-b border-nexgen-primaryGold/20">
                 <h3 className="text-sm sm:text-base font-bold text-white tracking-wide">
                   At a glance — {COMPANY_NAME}
                 </h3>
@@ -85,31 +85,31 @@ export default function CostHero({ onOpenConsultation }: CostHeroProps) {
                 {/* Row 1: FUE */}
                 <div className="pb-3.5 flex items-center justify-between">
                   <span className="text-gray-600 font-medium">FUE Technique</span>
-                  <span className="font-extrabold text-[#1b392b] text-sm">₹10 / graft</span>
+                  <span className="font-extrabold text-nexgen-veryDarkHeader text-sm">₹10 / graft</span>
                 </div>
 
                 {/* Row 2: Bio FUE */}
                 <div className="py-3.5 flex items-center justify-between">
                   <span className="text-gray-600 font-medium">Bio FUE (DMEM Medium)</span>
-                  <span className="font-extrabold text-[#1b392b] text-sm">₹15 / graft</span>
+                  <span className="font-extrabold text-nexgen-veryDarkHeader text-sm">₹15 / graft</span>
                 </div>
 
                 {/* Row 3: DHI */}
                 <div className="py-3.5 flex items-center justify-between">
                   <span className="text-gray-600 font-medium">DHI Technique</span>
-                  <span className="font-extrabold text-[#1b392b] text-sm">₹15 / graft</span>
+                  <span className="font-extrabold text-nexgen-veryDarkHeader text-sm">₹15 / graft</span>
                 </div>
 
                 {/* Row 4: Premium DHI */}
-                <div className="py-3.5 flex items-center justify-between bg-[#f4f7f4] -mx-6 sm:-mx-7 px-6 sm:px-7">
-                  <span className="text-[#1b392b] font-bold">Premium DHI (Sapphire + DMEM)</span>
-                  <span className="font-extrabold text-[#1b392b] text-sm">₹25 / graft</span>
+                <div className="py-3.5 flex items-center justify-between bg-nexgen-pageLightBg -mx-6 sm:-mx-7 px-6 sm:px-7">
+                  <span className="text-nexgen-veryDarkHeader font-bold">Premium DHI (Sapphire + DMEM)</span>
+                  <span className="font-extrabold text-nexgen-primaryGold text-sm">₹25 / graft</span>
                 </div>
 
                 {/* Row 5: Package Benefits */}
                 <div className="py-3.5 flex items-center justify-between">
                   <span className="text-gray-600 font-medium">Free Package Inclusions</span>
-                  <span className="font-bold text-[#596d53]">PRP/GFC + Meds + Wash</span>
+                  <span className="font-bold text-nexgen-primaryGold">PRP/GFC + Meds + Wash</span>
                 </div>
 
                 {/* Row 6: Location */}

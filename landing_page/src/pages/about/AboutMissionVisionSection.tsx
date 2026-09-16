@@ -8,13 +8,13 @@ export default function AboutMissionVisionSection() {
     <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="qht-large-container">
         
-        {/* Deep Olive Card Container */}
-        <div className="bg-[#52664d] rounded-2xl sm:rounded-3xl lg:rounded-[36px] p-6 sm:p-10 lg:p-14 text-white relative overflow-hidden shadow-xl">
+        {/* Deep Dark Container */}
+        <div className="bg-nexgen-mainDarkBg border border-nexgen-primaryGold/30 rounded-2xl sm:rounded-3xl lg:rounded-[36px] p-6 sm:p-10 lg:p-14 text-white relative overflow-hidden shadow-xl">
           
           {/* Top Row: Mission (Left) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-6 lg:mb-2">
             <div className="lg:col-span-6 max-w-lg space-y-2 sm:space-y-3">
-              <span className="text-xs sm:text-sm font-semibold text-[#bbf786] tracking-wide uppercase">
+              <span className="text-xs sm:text-sm font-semibold text-nexgen-brightGold tracking-wide uppercase">
                 Mission
               </span>
               <h3 className="text-xl sm:text-2xl lg:text-[28px] font-[500] text-white leading-snug tracking-tight">
@@ -37,7 +37,7 @@ export default function AboutMissionVisionSection() {
           {/* Bottom Row: Vision (Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mt-6 lg:mt-2">
             <div className="lg:col-start-7 lg:col-span-6 lg:text-right max-w-lg lg:ml-auto space-y-2 sm:space-y-3">
-              <span className="text-xs sm:text-sm font-semibold text-[#bbf786] tracking-wide uppercase">
+              <span className="text-xs sm:text-sm font-semibold text-nexgen-brightGold tracking-wide uppercase">
                 Vision
               </span>
               <h3 className="text-xl sm:text-2xl lg:text-[28px] font-[500] text-white leading-snug tracking-tight">

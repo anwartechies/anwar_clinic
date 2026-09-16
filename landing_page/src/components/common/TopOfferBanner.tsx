@@ -72,7 +72,7 @@ export default function TopOfferBanner({
         : "max-h-0 opacity-0 -translate-y-full pointer-events-none"
         }`}
     >
-      <div className="bg-gradient-to-r from-[#142017] via-[#243527] to-[#142017] text-white py-3 sm:py-3.5 px-4 sm:px-8 border-b border-white/15 shadow-md relative overflow-hidden">
+      <div className="bg-gradient-to-r from-nexgen-veryDarkHeader via-nexgen-mainDarkBg to-nexgen-veryDarkHeader text-white py-3 sm:py-3.5 px-4 sm:px-8 border-b border-nexgen-primaryGold/25 shadow-md relative overflow-hidden">
 
         {/* Animated Light Sweep Shimmer Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.08] to-transparent -translate-x-full animate-[shimmer_4s_infinite] pointer-events-none" />
@@ -84,8 +84,8 @@ export default function TopOfferBanner({
 
             {/* Badge with gentle glowing pulse */}
             {config.badge && (
-              <span className="inline-flex items-center gap-1.5 bg-[#52664d] text-[#bbf786] border border-[#bbf786]/40 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold tracking-wide uppercase shadow-xs animate-pulse">
-                <Sparkles className="w-3.5 h-3.5 text-[#bbf786]" />
+              <span className="inline-flex items-center gap-1.5 bg-nexgen-veryDarkHeader text-nexgen-brightGold border border-nexgen-primaryGold/60 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold tracking-wide uppercase shadow-xs animate-pulse">
+                <Sparkles className="w-3.5 h-3.5 text-nexgen-brightGold" />
                 <span>{config.badge}</span>
               </span>
             )}
@@ -94,7 +94,7 @@ export default function TopOfferBanner({
             <div className="text-white/95 font-medium flex items-center gap-1.5 flex-wrap leading-relaxed">
               <span>{config.title}</span>
               {config.highlightText && (
-                <span className="font-bold text-[#d2f896] underline decoration-white/30 underline-offset-2">
+                <span className="font-bold text-nexgen-brightGold underline decoration-nexgen-primaryGold/40 underline-offset-2">
                   {config.highlightText}
                 </span>
               )}
@@ -102,8 +102,8 @@ export default function TopOfferBanner({
 
             {/* Optional Coupon Code Tag */}
             {config.couponCode && (
-              <span className="hidden md:inline-flex items-center gap-1 bg-black/40 border border-dashed border-white/30 text-white/90 px-2.5 py-1 rounded-md font-mono text-[11.5px] font-semibold tracking-wider">
-                Code: <strong className="text-[#bbf786]">{config.couponCode}</strong>
+              <span className="hidden md:inline-flex items-center gap-1 bg-black/40 border border-dashed border-nexgen-primaryGold/40 text-white/90 px-2.5 py-1 rounded-md font-mono text-[11.5px] font-semibold tracking-wider">
+                Code: <strong className="text-nexgen-brightGold">{config.couponCode}</strong>
               </span>
             )}
 
@@ -114,7 +114,7 @@ export default function TopOfferBanner({
             <button
               type="button"
               onClick={handleAction}
-              className="inline-flex items-center gap-1.5 bg-[#bbf786] hover:bg-[#a6ea6e] text-[#17241a] font-bold text-xs sm:text-[13px] px-4 sm:px-5 py-1.5 sm:py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 hover:scale-[1.03] cursor-pointer"
+              className="inline-flex items-center gap-1.5 bg-nexgen-brightGold hover:bg-nexgen-primaryGold text-nexgen-veryDarkHeader font-bold text-xs sm:text-[13px] px-4 sm:px-5 py-1.5 sm:py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 hover:scale-[1.03] cursor-pointer"
             >
               <span>{config.ctaText || "Claim Offer"}</span>
               <ArrowRight className="w-3.5 h-3.5" />

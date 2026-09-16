@@ -85,7 +85,7 @@ export default function ServiceWhyChooseQHTSection({
   );
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#38493a] text-white overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden">
       <div className="qht-large-container">
 
         {/* Header Row */}
@@ -95,12 +95,12 @@ export default function ServiceWhyChooseQHTSection({
               ? title
               : `Why Choose ${COMPANY_NAME} for ${title}`}
           </h2>
-          <p className="text-sm sm:text-base text-gray-200 max-w-md leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-gray-300 max-w-md leading-relaxed font-normal">
             {subtitle}
           </p>
         </div>
 
-        {/* 3-Column Card Grid (Photo Cards + Lime Review CTA Card) */}
+        {/* 3-Column Card Grid (Photo Cards + Gold Review CTA Card) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-stretch">
 
           {/* Photo Cards */}
@@ -125,34 +125,34 @@ export default function ServiceWhyChooseQHTSection({
             </div>
           ))}
 
-          {/* 5th Card: Lime/Sage Review & CTA Box */}
-          <div className="aspect-[4/3.8] rounded-3xl p-7 sm:p-8 flex flex-col justify-between bg-[#bde876] text-[#1b221d] shadow-lg">
+          {/* 5th Card: Gold Review & CTA Box */}
+          <div className="aspect-[4/3.8] rounded-3xl p-7 sm:p-8 flex flex-col justify-between bg-nexgen-brightGold text-nexgen-veryDarkHeader shadow-xl">
             <div className="space-y-4">
               {/* Overlapping Patient Avatars */}
               <div className="flex -space-x-2">
                 <img
                   src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
                   alt="Patient avatar"
-                  className="w-10 h-10 rounded-full border-2 border-[#bde876] object-cover"
+                  className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
                   alt="Patient avatar"
-                  className="w-10 h-10 rounded-full border-2 border-[#bde876] object-cover"
+                  className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
                   alt="Patient avatar"
-                  className="w-10 h-10 rounded-full border-2 border-[#bde876] object-cover"
+                  className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
-                <div className="w-10 h-10 rounded-full border-2 border-[#bde876] bg-[#596d53] text-white text-xs font-bold flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold bg-nexgen-veryDarkHeader text-nexgen-brightGold text-xs font-bold flex items-center justify-center">
                   +4.7k
                 </div>
               </div>
 
               {/* Rating Text */}
-              <p className="text-base sm:text-lg font-normal text-[#1b221d] leading-snug">
-                <span className="font-bold text-[#1b221d]">4,700 satisfied patients</span>{" "}
+              <p className="text-base sm:text-lg font-normal text-nexgen-veryDarkHeader leading-snug">
+                <span className="font-bold text-nexgen-veryDarkHeader">4,700 satisfied patients</span>{" "}
                 achieved lasting results with a 100% success rate.
               </p>
             </div>
@@ -161,7 +161,7 @@ export default function ServiceWhyChooseQHTSection({
             <div>
               <button
                 onClick={onOpenConsultation}
-                className="bg-[#596d53] hover:bg-[#495b44] text-white font-bold text-xs sm:text-sm py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
+                className="bg-nexgen-veryDarkHeader hover:brightness-125 text-white font-bold text-xs sm:text-sm py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
               >
                 Book Now
               </button>

@@ -94,7 +94,7 @@ function VideoCard({ video }: { video: JourneyVideo }) {
 
           {/* Big Red YouTube Play Button Icon */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-14 h-10 sm:w-16 sm:h-11 bg-[#ff0000] rounded-xl flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform">
+            <div className="w-14 h-10 sm:w-16 sm:h-11 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform">
               <Play className="w-5 h-5 fill-white text-white ml-0.5" />
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function ServiceJourneySection({
         
         {/* Section Heading */}
         <div className="max-w-2xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] whitespace-pre-line">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.18] whitespace-pre-line">
             {title}
           </h2>
         </div>

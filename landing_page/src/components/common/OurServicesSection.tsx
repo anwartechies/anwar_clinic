@@ -82,7 +82,7 @@ export default function OurServicesSection({
         
         {/* Section Title */}
         <div className="pb-6 border-b border-gray-200">
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#1b221d] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-nexgen-veryDarkHeader tracking-tight leading-tight">
             Our Services
           </h2>
         </div>
@@ -92,7 +92,7 @@ export default function OurServicesSection({
           
           {/* Left Column: Introduction & Hair Follicles Image */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <span className="text-xs sm:text-[13px] font-semibold text-[#5c685f] block mb-4 tracking-wide">
+            <span className="text-xs sm:text-[13px] font-semibold text-nexgen-primaryGold block mb-4 tracking-wide uppercase">
               Introduction
             </span>
 
@@ -113,7 +113,7 @@ export default function OurServicesSection({
               <button
                 type="button"
                 onClick={onOpenConsultation}
-                className="bg-[#52664d] hover:bg-[#43543e] text-white font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
+                className="bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
               >
                 Book Free Consultation
               </button>
@@ -122,7 +122,7 @@ export default function OurServicesSection({
 
           {/* Right Column: Headline & 6-Item Accordion */}
           <div className="lg:col-span-7">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#1b221d] tracking-tight leading-snug mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-nexgen-veryDarkHeader tracking-tight leading-snug mb-8">
               Hair loss affects more than just your scalp — <br className="hidden sm:inline" />
               it touches your identity.
             </h3>
@@ -142,12 +142,12 @@ export default function OurServicesSection({
                     >
                       <div className="flex items-center gap-3.5 sm:gap-4">
                         {/* Number Badge (01, 02, etc.) */}
-                        <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[11px] font-bold flex items-center justify-center flex-shrink-0 shadow-2xs">
+                        <div className="w-6 h-6 rounded-full bg-nexgen-mainDarkBg text-nexgen-brightGold text-[11px] font-bold flex items-center justify-center flex-shrink-0 shadow-2xs border border-nexgen-primaryGold/30">
                           {service.number}
                         </div>
 
                         {/* Title */}
-                        <span className="text-sm sm:text-base font-bold text-[#1b221d] group-hover:text-[#52664d] transition-colors">
+                        <span className="text-sm sm:text-base font-bold text-nexgen-veryDarkHeader group-hover:text-nexgen-primaryGold transition-colors">
                           {service.title}
                         </span>
                       </div>
@@ -155,7 +155,7 @@ export default function OurServicesSection({
                       {/* Rotating Chevron */}
                       <ChevronDown
                         className={`w-4 h-4 text-gray-500 transition-transform duration-300 ease-out ${
-                          isOpen ? "rotate-180 text-[#1b221d]" : "text-gray-400 group-hover:text-gray-700"
+                          isOpen ? "rotate-180 text-nexgen-primaryGold" : "text-gray-400 group-hover:text-nexgen-primaryGold"
                         }`}
                       />
                     </button>
@@ -169,13 +169,13 @@ export default function OurServicesSection({
                       }`}
                     >
                       <div className="overflow-hidden pl-9.5 sm:pl-10">
-                        <p className="text-xs sm:text-[13px] text-[#5c685f] leading-relaxed mb-4 font-normal">
+                        <p className="text-xs sm:text-[13px] text-gray-600 leading-relaxed mb-4 font-normal">
                           {service.description}
                         </p>
 
                         <Link
                           href={service.href}
-                          className="inline-block border border-[#52664d] text-[#52664d] hover:bg-[#52664d] hover:text-white font-semibold text-xs px-5 py-2 rounded-full transition-all duration-200"
+                          className="inline-block border border-nexgen-primaryGold text-nexgen-veryDarkHeader hover:bg-nexgen-primaryGold hover:text-nexgen-veryDarkHeader font-semibold text-xs px-5 py-2 rounded-full transition-all duration-200"
                         >
                           Explore Service
                         </Link>

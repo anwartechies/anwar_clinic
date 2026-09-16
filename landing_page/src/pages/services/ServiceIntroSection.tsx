@@ -77,16 +77,16 @@ export default function ServiceIntroSection({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left Column: Text Content */}
           <div className="lg:col-span-6 space-y-5">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.18]">
               {heading1}
             </h2>
 
-            <p className="text-base sm:text-lg text-[#202922] font-semibold leading-snug">
+            <p className="text-base sm:text-lg text-nexgen-veryDarkHeader font-semibold leading-snug">
               {lead1}
             </p>
 
             {paras1.map((para, i) => (
-              <p key={i} className="text-sm sm:text-base text-[#556358] leading-relaxed font-normal">
+              <p key={i} className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
                 {para}
               </p>
             ))}
@@ -94,7 +94,7 @@ export default function ServiceIntroSection({
             <div className="pt-3">
               <button
                 onClick={onOpenConsultation}
-                className="bg-[#596d53] hover:bg-[#495b44] text-white font-semibold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
+                className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
               >
                 Book an Appointment
               </button>
@@ -103,7 +103,7 @@ export default function ServiceIntroSection({
 
           {/* Right Column: Image with Pointer Annotations */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-[#f4f7f4] aspect-[4/3] sm:aspect-[16/11]">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-nexgen-pageLightBg aspect-[4/3] sm:aspect-[16/11]">
               <img
                 src={safeBlock1Image}
                 alt={heading1}
@@ -137,7 +137,7 @@ export default function ServiceIntroSection({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left Column: Combing Hair Close-Up Image */}
           <div className="lg:col-span-6 order-2 lg:order-1">
-            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-[#f4f7f4] aspect-[4/3] sm:aspect-[16/11]">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-nexgen-pageLightBg aspect-[4/3] sm:aspect-[16/11]">
               <img
                 src={safeBlock2Image}
                 alt={heading2}
@@ -148,12 +148,12 @@ export default function ServiceIntroSection({
 
           {/* Right Column: Text Content */}
           <div className="lg:col-span-6 space-y-5 order-1 lg:order-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.18]">
               {heading2}
             </h2>
 
             {paras2.map((para, i) => (
-              <p key={i} className="text-sm sm:text-base text-[#556358] leading-relaxed font-normal">
+              <p key={i} className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
                 {para}
               </p>
             ))}
@@ -161,7 +161,7 @@ export default function ServiceIntroSection({
             <div className="pt-3">
               <button
                 onClick={onOpenConsultation}
-                className="bg-[#596d53] hover:bg-[#495b44] text-white font-semibold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
+                className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
               >
                 Book an Appointment
               </button>

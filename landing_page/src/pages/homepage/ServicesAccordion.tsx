@@ -24,7 +24,7 @@ export default function ServicesAccordion({
       <div className="qht-container">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-4 mb-8 border-b border-black/50">
-          <h2 className="text-3xl sm:text-6xl font-[500] text-[#162418]">
+          <h2 className="text-3xl sm:text-6xl font-[500] text-nexgen-veryDarkHeader">
             Comprehensive Restoration Services
           </h2>
           <span className="w-10 h-10 rounded-lg border-[0.1px] border-black font-bold flex items-center justify-center text-base">
@@ -34,7 +34,7 @@ export default function ServicesAccordion({
 
         {/* Intro Text */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center mb-10">
-          <h3 className="md:col-span-6 text-xl sm:text-3xl font-[400] text-[#162418] leading-snug">
+          <h3 className="md:col-span-6 text-xl sm:text-3xl font-[400] text-nexgen-veryDarkHeader leading-snug">
             Tailored Medical & Surgical Therapies for Every Stage of Hair Loss
           </h3>
           <p className="md:col-span-6 text-xs sm:text-lg text-gray-600 leading-relaxed">
@@ -58,19 +58,19 @@ export default function ServicesAccordion({
                 >
                   <div className="flex items-center gap-4 sm:gap-6 pr-4">
                     {/* Number Badge */}
-                    <span className="text-xs sm:text-sm font-semibold text-[#5c685f] tracking-tight flex-shrink-0">
+                    <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold tracking-tight flex-shrink-0">
                       {formattedNum}
                     </span>
 
                     {/* Service Title */}
-                    <span className="text-base sm:text-lg font-bold text-[#1b221d] group-hover:text-[#52664d] transition-colors leading-snug">
+                    <span className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader group-hover:text-nexgen-primaryGold transition-colors leading-snug">
                       {service.title}
                     </span>
                   </div>
 
                   {/* Smooth Rotating Chevron */}
                   <ChevronDown
-                    className={`w-4 h-4 text-gray-500 flex-shrink-0 transition-transform duration-300 ease-out ${isOpen ? "rotate-180 text-[#1b221d]" : "text-gray-400 group-hover:text-gray-700"
+                    className={`w-4 h-4 text-gray-500 flex-shrink-0 transition-transform duration-300 ease-out ${isOpen ? "rotate-180 text-nexgen-primaryGold" : "text-gray-400 group-hover:text-nexgen-primaryGold"
                       }`}
                   />
                 </button>
@@ -86,7 +86,7 @@ export default function ServicesAccordion({
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-2 pb-3">
                       {/* Left: Subtitle, Paragraphs, Action Link */}
                       <div className="md:col-span-7 space-y-3">
-                        <h4 className="text-sm sm:text-base font-bold text-[#162418]">
+                        <h4 className="text-sm sm:text-base font-bold text-nexgen-veryDarkHeader">
                           {service.subtitle}
                         </h4>
                         {service.paragraphs.map((p, pIdx) => (
@@ -101,7 +101,7 @@ export default function ServicesAccordion({
                         <div className="pt-3 flex flex-wrap items-center gap-3">
                           <Link
                             href={service.link}
-                            className="border border-[#52664d] text-[#52664d] hover:bg-[#52664d] hover:text-white text-xs font-semibold px-5 py-2 rounded-full transition-all duration-200 inline-flex items-center gap-1.5"
+                            className="border border-nexgen-primaryGold text-nexgen-veryDarkHeader hover:bg-nexgen-primaryGold hover:text-nexgen-veryDarkHeader text-xs font-semibold px-5 py-2 rounded-full transition-all duration-200 inline-flex items-center gap-1.5"
                           >
                             <span>Explore Service</span>
                             <ArrowRight className="w-3.5 h-3.5" />
@@ -110,7 +110,7 @@ export default function ServicesAccordion({
                           <button
                             type="button"
                             onClick={onOpenConsultation}
-                            className="bg-[#52664d] hover:bg-[#43543e] text-white text-xs font-semibold px-5 py-2 rounded-full transition-all duration-200 cursor-pointer shadow-xs"
+                            className="bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader text-xs font-bold px-5 py-2 rounded-full transition-all duration-200 cursor-pointer shadow-xs"
                           >
                             Book Consultation
                           </button>

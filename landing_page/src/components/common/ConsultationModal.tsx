@@ -98,9 +98,9 @@ export default function ConsultationModal({
         </button>
 
         {/* Modal Header */}
-        <div className="bg-[#1b392b] text-white p-6 sm:p-8 relative">
+        <div className="bg-nexgen-mainDarkBg text-white p-6 sm:p-8 relative">
           <div className="flex items-center gap-2 mb-2">
-            <span className="inline-flex items-center gap-1 bg-[#b1fc85] text-[#162418] text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+            <span className="inline-flex items-center gap-1 bg-nexgen-brightGold text-nexgen-veryDarkHeader text-[11px] font-bold px-2.5 py-0.5 rounded-full">
               <Sparkles className="w-3 h-3" /> {isOffer ? currentOffer.badge ?? "Special Offer" : "Free Consultation"}
             </span>
           </div>
@@ -118,10 +118,10 @@ export default function ConsultationModal({
         <div className="p-6 sm:p-8">
           {isSubmitted ? (
             <div className="text-center py-6 space-y-4">
-              <div className="w-16 h-16 bg-[#b1fc85]/20 text-[#1b392b] rounded-full flex items-center justify-center mx-auto">
-                <CheckCircle2 className="w-10 h-10 text-[#00d084]" />
+              <div className="w-16 h-16 bg-nexgen-brightGold/20 text-nexgen-veryDarkHeader rounded-full flex items-center justify-center mx-auto">
+                <CheckCircle2 className="w-10 h-10 text-nexgen-primaryGold" />
               </div>
-              <h4 className="text-xl font-bold text-[#1b392b]">
+              <h4 className="text-xl font-bold text-nexgen-veryDarkHeader">
                 Thank You, {name}!
               </h4>
               <p className="text-sm text-gray-600 max-w-xs mx-auto">
@@ -147,7 +147,7 @@ export default function ConsultationModal({
                   placeholder="Enter your full name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-[#1b392b] focus:ring-1 focus:ring-[#1b392b]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-nexgen-primaryGold focus:ring-1 focus:ring-nexgen-primaryGold"
                 />
               </div>
 
@@ -160,7 +160,7 @@ export default function ConsultationModal({
                   <select
                     value={countryCode}
                     onChange={(e) => setCountryCode(e.target.value)}
-                    className="w-32 px-3 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none focus:border-[#1b392b]"
+                    className="w-32 px-3 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none focus:border-nexgen-primaryGold"
                   >
                     {COUNTRY_CODES.map((c, idx) => (
                       <option key={idx} value={c.code}>
@@ -178,7 +178,7 @@ export default function ConsultationModal({
                     onChange={(e) =>
                       setPhone(e.target.value.replace(/\D/g, ""))
                     }
-                    className="flex-1 px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-[#1b392b] focus:ring-1 focus:ring-[#1b392b]"
+                    className="flex-1 px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-nexgen-primaryGold focus:ring-1 focus:ring-nexgen-primaryGold"
                   />
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default function ConsultationModal({
                 <select
                   value={branch}
                   onChange={(e) => setBranch(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none focus:border-[#1b392b]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-xs bg-gray-50 focus:outline-none focus:border-nexgen-primaryGold"
                 >
                   <option value="Patna">Patna (Main Branch - Raja Bazar)</option>
                   <option value="Mumbai">Mumbai (Second Branch)</option>
@@ -208,7 +208,7 @@ export default function ConsultationModal({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 bg-[#1b392b] text-white rounded-full font-bold text-sm hover:bg-[#284c3b] transition-all shadow-md flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader rounded-full font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
                 >
                   {isSubmitting ? (
                     <span>Submitting...</span>
@@ -219,7 +219,7 @@ export default function ConsultationModal({
               </div>
 
               <div className="flex items-center justify-center gap-1.5 text-[11px] text-gray-500 pt-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#00d084]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-nexgen-primaryGold" />
                 <span>100% Confidential · No Spam Guarantee</span>
               </div>
             </form>

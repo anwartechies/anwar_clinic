@@ -107,12 +107,15 @@ export default function AboutExpertsPhilosophySection({
         {/* Header: Title on Left, Subtitle on Right */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-xl">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.12]">
+            <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold uppercase tracking-wider block mb-2">
+              Our Medical Philosophy
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.12]">
               Meet the Experts at {COMPANY_NAME}
             </h2>
           </div>
           <div className="max-w-md lg:pb-1">
-            <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
               Behind every transformative outcome is a dedicated medical team. At {COMPANY_NAME}, our experienced surgeons and trichology specialists are united in delivering natural, undetectable results.
             </p>
           </div>
@@ -123,20 +126,20 @@ export default function AboutExpertsPhilosophySection({
           {CARDS.map((card) => (
             <div
               key={card.id}
-              className="bg-[#eff5f1] rounded-2xl sm:rounded-3xl p-7 sm:p-8 flex flex-col justify-start border border-gray-100 hover:shadow-md transition-all duration-300 group"
+              className="bg-nexgen-pageLightBg rounded-2xl sm:rounded-3xl p-7 sm:p-8 flex flex-col justify-start border border-nexgen-primaryGold/20 hover:border-nexgen-primaryGold/50 hover:shadow-md transition-all duration-300 group"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl text-[#52664d] flex items-center justify-start mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 rounded-xl text-nexgen-primaryGold group-hover:text-nexgen-brightGold flex items-center justify-start mb-6 group-hover:scale-110 transition-transform duration-300">
                 {card.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-lg sm:text-[19px] font-[500] text-[#1b221d] leading-snug tracking-tight mb-3">
+              <h3 className="text-lg sm:text-[19px] font-[500] text-nexgen-veryDarkHeader leading-snug tracking-tight mb-3">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <p className="text-xs sm:text-[13.5px] text-[#5c685f] leading-relaxed font-normal">
+              <p className="text-xs sm:text-[13.5px] text-gray-600 leading-relaxed font-normal">
                 {card.desc}
               </p>
             </div>
@@ -147,14 +150,14 @@ export default function AboutExpertsPhilosophySection({
         <div className="relative mt-16 sm:mt-20 pt-6">
           
           {/* Subtle Horizontal Divider */}
-          <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-gray-200 -translate-y-1/2" />
+          <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-nexgen-primaryGold/20 -translate-y-1/2" />
 
           {/* Centered Schedule Button */}
           <div className="relative flex justify-center z-10">
             <button
               type="button"
               onClick={onOpenConsultation}
-              className="bg-[#52664d] hover:bg-[#43543e] text-white font-bold text-xs sm:text-sm px-8 sm:px-10 py-3.5 rounded-full shadow-md transition-all active:scale-95 duration-150 cursor-pointer"
+              className="bg-nexgen-brightGold hover:bg-yellow-400 text-nexgen-veryDarkHeader font-bold text-xs sm:text-sm px-8 sm:px-10 py-3.5 rounded-full shadow-md transition-all active:scale-95 duration-150 cursor-pointer"
             >
               Schedule An Appointment
             </button>

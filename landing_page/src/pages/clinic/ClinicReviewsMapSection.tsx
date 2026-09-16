@@ -11,19 +11,19 @@ export default function ClinicReviewsMapSection({
   onOpenConsultation,
 }: ClinicReviewsMapSectionProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden border-t border-gray-200/50">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden border-t border-gray-200/50">
       <div className="qht-large-container">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
           {/* Left Column: Heading, Subtitle & Action Buttons */}
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.14]">
               Verified Outcomes & <br />
               Patient Experiences
             </h2>
 
-            <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-md">
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-md">
               Discover authentic patient feedback and documented hair restoration journeys from clients across our nationwide centers.
             </p>
 
@@ -31,7 +31,7 @@ export default function ClinicReviewsMapSection({
               {/* Explore Reviews CTA */}
               <Link
                 href="/results/"
-                className="bg-[#52664d] hover:bg-[#43543e] text-white font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-md transition-all active:scale-95 duration-150 inline-block text-center"
+                className="bg-nexgen-brightGold hover:bg-white text-nexgen-veryDarkHeader font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-md transition-all active:scale-95 duration-150 inline-block text-center"
               >
                 Explore Reviews
               </Link>
@@ -40,7 +40,7 @@ export default function ClinicReviewsMapSection({
               <button
                 type="button"
                 onClick={onOpenConsultation}
-                className="border border-[#52664d]/60 hover:bg-[#52664d] hover:text-white text-[#2c3d2a] font-semibold text-xs sm:text-sm px-8 py-3.5 rounded-full transition-all duration-200 cursor-pointer text-center"
+                className="border border-nexgen-primaryGold/50 hover:bg-nexgen-brightGold/20 hover:text-nexgen-veryDarkHeader text-nexgen-veryDarkHeader font-semibold text-xs sm:text-sm px-8 py-3.5 rounded-full transition-all duration-200 cursor-pointer text-center"
               >
                 Contact Us
               </button>
@@ -67,13 +67,13 @@ export default function ClinicReviewsMapSection({
         <div className="mt-14 sm:mt-16 bg-white rounded-3xl p-5 sm:p-7 shadow-sm border border-gray-200/80">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 px-1">
             <div>
-              <span className="text-xs font-bold text-[#52664d] uppercase tracking-wider block mb-1">
+              <span className="text-xs font-bold text-nexgen-primaryGold uppercase tracking-wider block mb-1">
                 Clinic Location & Directions
               </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1b221d] tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-bold text-nexgen-veryDarkHeader tracking-tight">
                 Visit NEXGEN HAIR TRANSPLANT
               </h3>
-              <p className="text-xs sm:text-sm text-[#5c685f] mt-1">
+              <p className="text-xs sm:text-sm text-gray-600 mt-1">
                 Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function ClinicReviewsMapSection({
               href="https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#52664d] hover:bg-[#43543e] text-white text-xs sm:text-sm font-semibold rounded-full shadow-xs transition-colors self-start sm:self-auto"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-nexgen-veryDarkHeader hover:bg-nexgen-mainDarkBg text-nexgen-brightGold border border-nexgen-primaryGold/30 text-xs sm:text-sm font-semibold rounded-full shadow-xs transition-colors self-start sm:self-auto"
             >
               <span>Open in Google Maps</span>
               <span aria-hidden="true">↗</span>

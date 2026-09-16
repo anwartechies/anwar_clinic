@@ -40,16 +40,16 @@ const REASONS: ReasonCard[] = [
 
 export default function MedicalWhyIndiaSection() {
   return (
-    <section id="why-india" className="py-20 lg:py-24 bg-[#f8faf8] overflow-hidden">
+    <section id="why-india" className="py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden">
       <div className="qht-container">
 
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-2xl">
-            <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#1b392b]/10 text-[#1b392b] text-xs font-bold tracking-wider uppercase mb-3">
+            <span className="inline-block px-3.5 py-1.5 rounded-full bg-white border border-nexgen-primaryGold/25 text-nexgen-primaryGold text-xs font-bold tracking-wider uppercase mb-3">
               Destination Excellence
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[600] text-[#162418] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[600] text-nexgen-veryDarkHeader tracking-tight leading-tight">
               Why India is the Top Choice for Hair Transplant
             </h2>
           </div>
@@ -62,17 +62,17 @@ export default function MedicalWhyIndiaSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
 
           {/* Left Side: Featured India Reason Card */}
-          <div className="lg:col-span-4 bg-gradient-to-br from-[#1b392b] to-[#12241b] rounded-3xl p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden shadow-xl border border-[#284c3b]">
+          <div className="lg:col-span-4 bg-gradient-to-br from-nexgen-mainDarkBg to-nexgen-veryDarkHeader rounded-3xl p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden shadow-xl border border-nexgen-primaryGold/30">
             {/* Background Decorative Graphic */}
-            <div className="absolute -right-8 -bottom-8 w-60 h-60 bg-[#b1fc85]/10 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -right-8 -bottom-8 w-60 h-60 bg-nexgen-primaryGold/10 rounded-full blur-2xl pointer-events-none" />
 
             {/* Top Stat typography */}
             <div className="relative z-10">
               <div className="flex items-baseline gap-1 text-white font-extrabold tracking-tight">
-                <span className="text-6xl sm:text-7xl text-[#b1fc85]">0</span>
+                <span className="text-6xl sm:text-7xl text-nexgen-brightGold">0</span>
                 <span className="text-6xl sm:text-7xl text-white">4</span>
               </div>
-              <p className="text-xs uppercase tracking-widest text-[#b1fc85] font-semibold mt-1">
+              <p className="text-xs uppercase tracking-widest text-nexgen-brightGold font-semibold mt-1">
                 Top Pillar Highlights
               </p>
             </div>
@@ -106,16 +106,16 @@ export default function MedicalWhyIndiaSection() {
               return (
                 <div
                   key={item.id}
-                  className="bg-white rounded-3xl p-7 sm:p-8 border border-gray-200/80 shadow-sm hover:shadow-md hover:border-[#1b392b]/30 transition-all duration-300 flex flex-col justify-between group"
+                  className="bg-white rounded-3xl p-7 sm:p-8 border border-nexgen-primaryGold/20 shadow-sm hover:shadow-md hover:border-nexgen-primaryGold/50 transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div>
                     {/* Icon */}
-                    <div className="w-14 h-14 rounded-2xl bg-[#eff5f1] border border-[#d6e5d8] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#1b392b] transition-all duration-300">
-                      <IconComp className="w-7 h-7 text-[#1b392b] group-hover:text-white transition-colors" />
+                    <div className="w-14 h-14 rounded-2xl bg-nexgen-pageLightBg border border-nexgen-primaryGold/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-nexgen-veryDarkHeader transition-all duration-300">
+                      <IconComp className="w-7 h-7 text-nexgen-primaryGold group-hover:text-nexgen-brightGold transition-colors" />
                     </div>
 
                     {/* Title */}
-                    <h4 className="text-xl font-bold text-[#162418] tracking-tight group-hover:text-[#1b392b] transition-colors">
+                    <h4 className="text-xl font-bold text-nexgen-veryDarkHeader tracking-tight group-hover:text-nexgen-primaryGold transition-colors">
                       {item.title}
                     </h4>
 
@@ -125,9 +125,9 @@ export default function MedicalWhyIndiaSection() {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-[#1b392b] font-semibold">
+                  <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-nexgen-primaryGold font-semibold">
                     <span>Verified Standard</span>
-                    <span className="text-[#1b392b]">✦ ✦ ✦</span>
+                    <span className="text-nexgen-brightGold">✦ ✦ ✦</span>
                   </div>
                 </div>
               )

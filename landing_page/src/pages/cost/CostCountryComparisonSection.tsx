@@ -58,7 +58,7 @@ const COUNTRY_COMPARISON_DATA: CountryComparisonRow[] = [
 
 export default function CostCountryComparisonSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#485942] text-white overflow-hidden border-t border-white/10">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden border-t border-white/10">
       <div className="qht-large-container">
         
         {/* Header */}
@@ -72,7 +72,7 @@ export default function CostCountryComparisonSection() {
         </div>
 
         {/* Comparison Table Card - Full Width in Center */}
-        <div className="w-full rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-[#364431]/70 backdrop-blur-xs">
+        <div className="w-full rounded-3xl overflow-hidden shadow-2xl border border-nexgen-primaryGold/25 bg-nexgen-veryDarkHeader/80 backdrop-blur-xs">
           
           {/* Table Header Row */}
           <div className="py-4 sm:py-5 px-6 sm:px-8 grid grid-cols-12 font-bold text-xs sm:text-sm text-white border-b border-white/15">
@@ -90,7 +90,7 @@ export default function CostCountryComparisonSection() {
                 key={idx}
                 className={`py-4 sm:py-5 px-6 sm:px-8 grid grid-cols-12 items-center transition-colors ${
                   row.isBestValue
-                    ? "bg-[#b1fc85] text-[#162418] font-semibold"
+                    ? "bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold"
                     : "text-white/90 hover:bg-white/5"
                 }`}
               >
@@ -105,7 +105,7 @@ export default function CostCountryComparisonSection() {
                     {row.country}
                   </span>
                   {row.isBestValue && (
-                    <span className="hidden sm:inline-block bg-[#162418] text-white text-[9px] font-black uppercase px-2 py-0.5 rounded-sm tracking-wider">
+                    <span className="hidden sm:inline-block bg-nexgen-veryDarkHeader text-white text-[9px] font-black uppercase px-2 py-0.5 rounded-sm tracking-wider">
                       BEST VALUE
                     </span>
                   )}

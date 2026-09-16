@@ -337,19 +337,19 @@ export default function CostByCitySection({
   const [selectedCity, setSelectedCity] = useState("gurgaon");
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden border-t border-gray-200/60">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden border-t border-nexgen-primaryGold/20">
       <div className="qht-large-container">
         
         {/* Header */}
         <div className="max-w-4xl mb-12 sm:mb-16">
-          <span className="text-xs sm:text-sm font-semibold text-[#5c685f] block mb-2 tracking-wide">
+          <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold uppercase tracking-wider block mb-2">
             By City
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight mb-4">
             Hair Transplant Cost by City in India
           </h2>
-          <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-3xl">
-            Explore city-specific hair transplant pricing across India. Metropolitan cities may carry a small premium due to advanced clinic infrastructure, while {COMPANY_NAME}'s transparent pricing ensures no surprise charges nationwide.
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-3xl">
+            Explore city-specific hair transplant pricing across India. Metropolitan cities may carry a small premium due to advanced clinic infrastructure, while {COMPANY_NAME}&apos;s transparent pricing ensures no surprise charges nationwide.
           </p>
         </div>
 
@@ -367,15 +367,15 @@ export default function CostByCitySection({
                 }}
                 className={`group rounded-[22px] p-4 sm:p-5 flex flex-col items-center justify-between aspect-square transition-all duration-300 cursor-pointer border ${
                   isSelected
-                    ? "bg-[#52664d] text-white shadow-lg border-[#52664d] scale-[1.02]"
-                    : "bg-white/95 text-gray-800 border-gray-300/80 hover:bg-[#52664d] hover:text-white hover:border-[#52664d] hover:shadow-md hover:-translate-y-1"
+                    ? "bg-nexgen-veryDarkHeader text-white shadow-lg border-nexgen-primaryGold scale-[1.02]"
+                    : "bg-white text-gray-800 border-gray-200/80 hover:bg-nexgen-veryDarkHeader hover:text-white hover:border-nexgen-primaryGold hover:shadow-md hover:-translate-y-1"
                 }`}
               >
                 {/* SVG Icon - Large & Responsive */}
                 <div className={`my-auto flex items-center justify-center transition-colors duration-300 ${
                   isSelected
-                    ? "text-white"
-                    : "text-[#52664d] group-hover:text-white"
+                    ? "text-nexgen-brightGold"
+                    : "text-nexgen-primaryGold group-hover:text-nexgen-brightGold"
                 }`}>
                   {city.svgIcon}
                 </div>

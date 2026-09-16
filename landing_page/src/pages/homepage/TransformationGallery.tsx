@@ -50,7 +50,7 @@ function ComparisonCard({ item, onOpenConsultation }: ComparisonCardProps) {
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        className="relative w-full aspect-square overflow-hidden select-none bg-[#d4d8d6] cursor-ew-resize touch-none rounded-2xl sm:rounded-3xl"
+        className="relative w-full aspect-square overflow-hidden select-none bg-gray-200 cursor-ew-resize touch-none rounded-2xl sm:rounded-3xl"
       >
         {/* After Image (Full Base - Right Side) */}
         <img
@@ -97,7 +97,7 @@ function ComparisonCard({ item, onOpenConsultation }: ComparisonCardProps) {
       {/* Patient Meta & Quick Action */}
       <div className="p-3 sm:p-4 flex flex-col justify-between flex-1 gap-2.5">
         <div className="flex items-center justify-between gap-1.5 flex-wrap">
-          <h4 className="text-sm sm:text-[15px] font-bold text-[#162418]">
+          <h4 className="text-sm sm:text-[15px] font-bold text-nexgen-veryDarkHeader">
             {item.patientName}
           </h4>
           <span className="text-[11px] text-gray-500 font-medium px-2 py-0.5 bg-gray-50 border border-gray-100 rounded-md">
@@ -106,7 +106,7 @@ function ComparisonCard({ item, onOpenConsultation }: ComparisonCardProps) {
         </div>
         <button
           onClick={onOpenConsultation}
-          className="text-xs font-bold text-[#596d53] hover:text-[#384c3c] transition-colors flex items-center justify-between group pt-1.5 border-t border-gray-100 text-left cursor-pointer"
+          className="text-xs font-bold text-nexgen-primaryGold hover:text-nexgen-brightGold transition-colors flex items-center justify-between group pt-1.5 border-t border-gray-100 text-left cursor-pointer"
         >
           <span>Request Similar Plan</span>
           <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1 shrink-0" />
@@ -120,16 +120,16 @@ export default function TransformationGallery({
   onOpenConsultation,
 }: TransformationGalleryProps) {
   return (
-    <section className="py-12 sm:py-20 bg-[#f8faf8]">
+    <section className="py-12 sm:py-20 bg-nexgen-pageLightBg">
       <div className="qht-large-container">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-4 mb-6 border-b border-gray-200">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-[500] text-[#162418]">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-[500] text-nexgen-veryDarkHeader">
             Real Transformations, Undeniable Results
           </h2>
           <a
             href="/results/"
-            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-[#596d53] hover:text-[#384c3c] transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-nexgen-primaryGold hover:text-nexgen-brightGold transition-colors"
           >
             <span>Explore All Patient Results</span>
             <ArrowRight className="w-4 h-4" />

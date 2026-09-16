@@ -56,16 +56,16 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
   };
 
   return (
-    <div className="bg-[#fcfbf9] min-h-screen pb-20 lg:pt-32 pt-20 ">
+    <div className="bg-nexgen-pageLightBg min-h-screen pb-20 lg:pt-32 pt-20">
       {/* Breadcrumbs Navigation */}
-      <div className=" bg-white/70 backdrop-blur-xs">
+      <div className="bg-white/70 backdrop-blur-xs border-b border-nexgen-primaryGold/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3.5">
           <nav className="flex items-center gap-1.5 text-xs text-gray-500 overflow-x-auto whitespace-nowrap">
-            <Link href="/" className="hover:text-[#52664d] transition-colors">
+            <Link href="/" className="hover:text-nexgen-primaryGold transition-colors">
               Home
             </Link>
             <ChevronRight className="w-3 h-3 text-gray-400 shrink-0" />
-            <Link href="/blogs" className="hover:text-[#52664d] transition-colors">
+            <Link href="/blogs" className="hover:text-nexgen-primaryGold transition-colors">
               Blogs
             </Link>
             <ChevronRight className="w-3 h-3 text-gray-400 shrink-0" />
@@ -81,17 +81,17 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
         {/* Category & Title Header */}
         <div className="space-y-4">
           <div className="flex flex-wrap items-center gap-2.5">
-            <span className="px-3 py-1 rounded-full bg-[#eff4eb] text-[#3e5039] text-xs font-semibold uppercase tracking-wider">
+            <span className="px-3 py-1 rounded-full bg-white border border-nexgen-primaryGold/30 text-nexgen-veryDarkHeader text-xs font-semibold uppercase tracking-wider">
               {blog.category}
             </span>
             <span className="text-xs text-gray-400">•</span>
             <span className="flex items-center gap-1 text-xs text-gray-500 font-medium">
-              <Clock className="w-3.5 h-3.5 text-gray-400" />
+              <Clock className="w-3.5 h-3.5 text-nexgen-primaryGold" />
               {blog.readTime}
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#232b21] tracking-tight leading-tight sm:leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-nexgen-veryDarkHeader tracking-tight leading-tight sm:leading-tight">
             {blog.title}
           </h1>
 
@@ -103,7 +103,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
           )}
 
           {/* Author Byline & Social Share Row */}
-          <div className="pt-4 pb-6 border-b border-[#e5ebe1] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="pt-4 pb-6 border-b border-nexgen-primaryGold/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="flex items-center gap-3">
               {blog.authorAvatar ? (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -113,7 +113,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
                   className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-xs"
                 />
               ) : (
-                <div className="w-12 h-12 rounded-full bg-[#52664d] text-white flex items-center justify-center font-bold text-base">
+                <div className="w-12 h-12 rounded-full bg-nexgen-veryDarkHeader text-nexgen-brightGold flex items-center justify-center font-bold text-base border border-nexgen-primaryGold/30">
                   {blog.authorName.charAt(0)}
                 </div>
               )}
@@ -178,7 +178,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
 
         {/* Featured Cover Image */}
         {blog.coverImage && (
-          <div className="my-8 sm:my-10 overflow-hidden rounded-2xl sm:rounded-3xl shadow-sm border border-[#e5ebe1] bg-slate-100">
+          <div className="my-8 sm:my-10 overflow-hidden rounded-2xl sm:rounded-3xl shadow-sm border border-nexgen-primaryGold/20 bg-slate-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={blog.coverImage}
@@ -190,29 +190,29 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
 
         {/* Article Body Content */}
         <div
-          className="prose prose-slate prose-lg max-w-none text-[#2b302c] leading-relaxed
-            prose-headings:text-[#232b21] prose-headings:font-bold prose-headings:tracking-tight
+          className="prose prose-slate prose-lg max-w-none text-gray-700 leading-relaxed
+            prose-headings:text-nexgen-veryDarkHeader prose-headings:font-bold prose-headings:tracking-tight
             prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4
             prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
             prose-p:my-4 prose-p:text-gray-700 prose-p:leading-relaxed
-            prose-strong:text-[#232b21] prose-strong:font-bold
+            prose-strong:text-nexgen-veryDarkHeader prose-strong:font-bold
             prose-ul:my-4 prose-ul:list-disc prose-ul:pl-6
             prose-li:my-1.5 prose-li:text-gray-700
-            prose-blockquote:border-l-4 prose-blockquote:border-[#52664d] prose-blockquote:bg-[#f6f9f3] prose-blockquote:p-4 prose-blockquote:rounded-r-xl prose-blockquote:italic prose-blockquote:text-gray-800
+            prose-blockquote:border-l-4 prose-blockquote:border-nexgen-primaryGold prose-blockquote:bg-nexgen-pageLightBg prose-blockquote:p-4 prose-blockquote:rounded-r-xl prose-blockquote:italic prose-blockquote:text-gray-800
             prose-img:rounded-2xl prose-img:shadow-md"
           dangerouslySetInnerHTML={{ __html: blog.content }}
         />
 
         {/* In-Article Consultation Callout Box */}
-        <div className="my-12 rounded-3xl bg-gradient-to-br from-[#eff4eb] to-[#e4ede0] border border-[#d6e2d1] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+        <div className="my-12 rounded-3xl bg-gradient-to-r from-nexgen-mainDarkBg via-nexgen-veryDarkHeader to-nexgen-mainDarkBg border border-nexgen-primaryGold/30 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl text-white">
           <div className="space-y-1.5 text-center sm:text-left">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#41553c] uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-[#52664d]" /> Personal Hairline & Graft Evaluation
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-nexgen-brightGold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-nexgen-brightGold" /> Personal Hairline & Graft Evaluation
             </span>
-            <h4 className="text-xl font-bold text-[#232b21]">
+            <h4 className="text-xl font-bold text-white">
               Considering Hair Restoration at Anwar Clinic?
             </h4>
-            <p className="text-xs sm:text-sm text-[#5a6458] max-w-md">
+            <p className="text-xs sm:text-sm text-gray-300 max-w-md">
               Speak directly with our surgical specialists. Get your estimated graft count, hairline design preview, and total cost breakdown.
             </p>
           </div>
@@ -220,7 +220,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
           <button
             type="button"
             onClick={openConsultation}
-            className="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#52664d] text-white font-bold text-sm shadow-md hover:bg-[#3f503a] hover:scale-102 transition-all cursor-pointer"
+            className="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold text-sm shadow-md hover:bg-yellow-400 hover:scale-102 transition-all cursor-pointer"
           >
             <PhoneCall className="w-4 h-4" />
             Book Free Consultation
@@ -229,24 +229,24 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
 
         {/* FAQs Accordion (if present) */}
         {blog.faqs && blog.faqs.length > 0 && (
-          <div className="my-12 space-y-4 pt-6 border-t border-[#e5ebe1]">
-            <h3 className="text-2xl font-bold text-[#232b21]">
+          <div className="my-12 space-y-4 pt-6 border-t border-nexgen-primaryGold/20">
+            <h3 className="text-2xl font-bold text-nexgen-veryDarkHeader">
               Frequently Asked Questions
             </h3>
             <div className="space-y-3 pt-2">
               {blog.faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-[#e5ebe1] bg-white overflow-hidden shadow-2xs"
+                  className="rounded-2xl border border-nexgen-primaryGold/20 bg-white overflow-hidden shadow-2xs"
                 >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-5 text-left font-semibold text-[#232b21] hover:text-[#52664d] transition-colors"
+                    className="w-full flex items-center justify-between p-5 text-left font-semibold text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors"
                   >
                     <span>{faq.question}</span>
                     <ChevronDown
-                      className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-200 ${openFaq === idx ? "rotate-180 text-[#52664d]" : ""
+                      className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-200 ${openFaq === idx ? "rotate-180 text-nexgen-primaryGold" : ""
                         }`}
                     />
                   </button>
@@ -263,12 +263,12 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
 
         {/* Tags */}
         {blog.tags && blog.tags.length > 0 && (
-          <div className="pt-8 pb-10 border-t border-[#e5ebe1] flex flex-wrap items-center gap-2">
+          <div className="pt-8 pb-10 border-t border-nexgen-primaryGold/20 flex flex-wrap items-center gap-2">
             <span className="text-xs font-semibold text-gray-500 mr-1">Tags:</span>
             {blog.tags.map((tag, i) => (
               <span
                 key={i}
-                className="px-3 py-1 rounded-full bg-white border border-[#dce5d7] text-xs font-medium text-[#41553c]"
+                className="px-3 py-1 rounded-full bg-white border border-nexgen-primaryGold/30 text-xs font-medium text-nexgen-veryDarkHeader hover:border-nexgen-primaryGold transition-colors"
               >
                 #{tag}
               </span>
@@ -277,7 +277,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
         )}
 
         {/* Author Bio Box */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl bg-white border border-[#e5ebe1] shadow-xs flex flex-col sm:flex-row items-center sm:items-start gap-5">
+        <div className="my-10 p-6 sm:p-8 rounded-3xl bg-white border border-nexgen-primaryGold/20 shadow-xs flex flex-col sm:flex-row items-center sm:items-start gap-5">
           {blog.authorAvatar ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -286,7 +286,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
               className="w-20 h-20 rounded-2xl object-cover shrink-0 border border-gray-200"
             />
           ) : (
-            <div className="w-20 h-20 rounded-2xl bg-[#52664d] text-white flex items-center justify-center font-bold text-2xl shrink-0">
+            <div className="w-20 h-20 rounded-2xl bg-nexgen-veryDarkHeader text-nexgen-brightGold flex items-center justify-center font-bold text-2xl shrink-0 border border-nexgen-primaryGold/30">
               {blog.authorName.charAt(0)}
             </div>
           )}
@@ -295,11 +295,11 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
               <h4 className="text-base sm:text-lg font-bold text-gray-900">
                 {blog.authorName}
               </h4>
-              <span className="px-2.5 py-0.5 rounded-full bg-[#eff4eb] text-[#41553c] text-[11px] font-semibold">
+              <span className="px-2.5 py-0.5 rounded-full bg-nexgen-pageLightBg text-nexgen-veryDarkHeader border border-nexgen-primaryGold/20 text-[11px] font-semibold">
                 Medical Author
               </span>
             </div>
-            <p className="text-xs font-medium text-[#52664d]">{blog.authorRole}</p>
+            <p className="text-xs font-medium text-nexgen-primaryGold">{blog.authorRole}</p>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed pt-1">
               Dr. Anwar has performed over 3,000+ successful hair restoration procedures, specializing in dense-pack hairline reconstruction and advanced biological follicle preservation.
             </p>
@@ -308,14 +308,14 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
 
         {/* Related Articles Section */}
         {blog.related && blog.related.length > 0 && (
-          <div className="mt-16 pt-10 border-t border-[#e5ebe1] space-y-6">
+          <div className="mt-16 pt-10 border-t border-nexgen-primaryGold/20 space-y-6">
             <div className="flex items-center justify-between">
-              <h3 className="text-xl sm:text-2xl font-bold text-[#232b21]">
+              <h3 className="text-xl sm:text-2xl font-bold text-nexgen-veryDarkHeader">
                 Related Articles
               </h3>
               <Link
                 href="/blogs"
-                className="text-xs sm:text-sm font-semibold text-[#52664d] hover:text-[#384c3c] flex items-center gap-1"
+                className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold hover:text-nexgen-brightGold flex items-center gap-1"
               >
                 View all blogs <ArrowRight className="w-4 h-4" />
               </Link>
@@ -326,7 +326,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
                 <Link
                   key={item.id}
                   href={`/blogs/${item.slug}`}
-                  className="group bg-white rounded-2xl border border-[#e5ebe1] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+                  className="group bg-white rounded-2xl border border-nexgen-primaryGold/20 hover:border-nexgen-primaryGold/40 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
                 >
                   <div>
                     <div className="relative h-36 bg-slate-100 overflow-hidden">
@@ -340,13 +340,13 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute top-2 left-2">
-                        <span className="px-2 py-0.5 rounded-full bg-white/90 text-[#3e5039] text-[10px] font-semibold">
+                        <span className="px-2 py-0.5 rounded-full bg-white/95 text-nexgen-veryDarkHeader border border-nexgen-primaryGold/20 text-[10px] font-semibold">
                           {item.category}
                         </span>
                       </div>
                     </div>
                     <div className="p-4">
-                      <h4 className="font-bold text-sm text-[#232b21] group-hover:text-[#52664d] transition-colors line-clamp-2 leading-snug">
+                      <h4 className="font-bold text-sm text-nexgen-veryDarkHeader group-hover:text-nexgen-primaryGold transition-colors line-clamp-2 leading-snug">
                         {item.title}
                       </h4>
                       <p className="text-xs text-gray-500 line-clamp-2 mt-1.5 leading-relaxed">
@@ -356,7 +356,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
                   </div>
                   <div className="px-4 pb-4 pt-2 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400">
                     <span>{item.readTime}</span>
-                    <span className="text-[#52664d] font-semibold group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-0.5">
+                    <span className="text-nexgen-primaryGold font-semibold group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-0.5">
                       Read <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>

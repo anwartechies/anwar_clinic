@@ -159,7 +159,7 @@ export default function CostEstimateCalculatorSection({
         
         {/* Heading */}
         <div className="max-w-4xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.12]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.12]">
             Calculate Your Estimated <br />
             Hair Restoration Cost
           </h2>
@@ -173,7 +173,7 @@ export default function CostEstimateCalculatorSection({
             
             {/* Age Input */}
             <div>
-              <label className="text-sm font-bold text-[#1b221d] block mb-2">
+              <label className="text-sm font-bold text-nexgen-veryDarkHeader block mb-2">
                 Type Your Age?
               </label>
               <input
@@ -182,13 +182,13 @@ export default function CostEstimateCalculatorSection({
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
                 required
-                className="w-full border-b border-gray-300 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#1b392b] bg-transparent transition-colors"
+                className="w-full border-b border-gray-300 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-nexgen-primaryGold bg-transparent transition-colors"
               />
             </div>
 
             {/* Personal Details */}
             <div className="space-y-6 pt-2">
-              <label className="text-sm font-bold text-[#1b221d] block">
+              <label className="text-sm font-bold text-nexgen-veryDarkHeader block">
                 Enter Your Personal Details
               </label>
 
@@ -200,7 +200,7 @@ export default function CostEstimateCalculatorSection({
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   required
-                  className="w-full border-b border-gray-300 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#1b392b] bg-transparent transition-colors"
+                  className="w-full border-b border-gray-300 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-nexgen-primaryGold bg-transparent transition-colors"
                 />
               </div>
 
@@ -212,7 +212,7 @@ export default function CostEstimateCalculatorSection({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full border-b border-gray-300 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#1b392b] bg-transparent transition-colors"
+                  className="w-full border-b border-gray-300 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-nexgen-primaryGold bg-transparent transition-colors"
                 />
               </div>
 
@@ -236,7 +236,7 @@ export default function CostEstimateCalculatorSection({
 
             {/* Hereditary Radio Options */}
             <div className="pt-2">
-              <label className="text-sm font-bold text-[#1b221d] block mb-3">
+              <label className="text-sm font-bold text-nexgen-veryDarkHeader block mb-3">
                 Is It Hereditary?
               </label>
               
@@ -248,7 +248,7 @@ export default function CostEstimateCalculatorSection({
                     value="mother"
                     checked={hereditary === "mother"}
                     onChange={(e) => setHereditary(e.target.value)}
-                    className="w-4 h-4 text-[#596d53] focus:ring-[#596d53]"
+                    className="w-4 h-4 text-nexgen-primaryGold focus:ring-nexgen-primaryGold"
                   />
                   <span>Yes, From Mother's Side</span>
                 </label>
@@ -260,7 +260,7 @@ export default function CostEstimateCalculatorSection({
                     value="father"
                     checked={hereditary === "father"}
                     onChange={(e) => setHereditary(e.target.value)}
-                    className="w-4 h-4 text-[#596d53] focus:ring-[#596d53]"
+                    className="w-4 h-4 text-nexgen-primaryGold focus:ring-nexgen-primaryGold"
                   />
                   <span>Yes, From Father's Side</span>
                 </label>
@@ -272,7 +272,7 @@ export default function CostEstimateCalculatorSection({
                     value="no"
                     checked={hereditary === "no"}
                     onChange={(e) => setHereditary(e.target.value)}
-                    className="w-4 h-4 text-[#596d53] focus:ring-[#596d53]"
+                    className="w-4 h-4 text-nexgen-primaryGold focus:ring-nexgen-primaryGold"
                   />
                   <span>No, it isn't</span>
                 </label>
@@ -284,7 +284,7 @@ export default function CostEstimateCalculatorSection({
           {/* Right Column: Baldness Level Selection & Submit CTA */}
           <div className="lg:col-span-6 flex flex-col justify-between h-full space-y-8">
             <div>
-              <label className="text-sm font-bold text-[#1b221d] block mb-4">
+              <label className="text-sm font-bold text-nexgen-veryDarkHeader block mb-4">
                 Select Your Baldness Level
               </label>
 
@@ -299,7 +299,7 @@ export default function CostEstimateCalculatorSection({
                       onClick={() => setSelectedBaldness(level.id)}
                       className={`relative rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-between border text-center transition-all cursor-pointer ${
                         isSelected
-                          ? "border-[#596d53] bg-[#eff5f1]/60 shadow-md ring-2 ring-[#596d53]/20"
+                          ? "border-nexgen-primaryGold bg-nexgen-pageLightBg shadow-md ring-2 ring-nexgen-primaryGold/20"
                           : "border-gray-200/90 bg-white hover:border-gray-300 hover:shadow-xs"
                       }`}
                     >
@@ -308,7 +308,7 @@ export default function CostEstimateCalculatorSection({
                         <div
                           className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${
                             isSelected
-                              ? "border-[#596d53] bg-[#596d53]"
+                              ? "border-nexgen-primaryGold bg-nexgen-primaryGold"
                               : "border-gray-300 bg-white"
                           }`}
                         >
@@ -335,7 +335,7 @@ export default function CostEstimateCalculatorSection({
             <div className="flex justify-end pt-4">
               <button
                 type="submit"
-                className="bg-[#52664d] hover:bg-[#43543e] text-white font-bold text-sm sm:text-base py-3.5 px-10 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
+                className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3.5 px-10 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
               >
                 Calculate My Estimate
               </button>

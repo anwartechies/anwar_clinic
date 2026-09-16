@@ -102,7 +102,7 @@ function InteractiveComparisonCard({ item }: { item: CostResultItem }) {
   };
 
   return (
-    <div className="bg-[#38493a] rounded-3xl overflow-hidden shadow-xl border border-white/10 flex flex-col justify-between">
+    <div className="bg-nexgen-navBg rounded-3xl overflow-hidden shadow-xl border border-nexgen-primaryGold/20 flex flex-col justify-between">
 
       {/* Interactive Split Comparison Slider */}
       <div
@@ -156,7 +156,7 @@ function InteractiveComparisonCard({ item }: { item: CostResultItem }) {
       <div className="p-5 space-y-3">
         <div className="flex items-center justify-between text-xs text-gray-200 font-medium">
           <span className="font-bold text-white">{item.name}</span>
-          <span className="text-[#b1fc85] font-semibold">{item.grafts}</span>
+          <span className="text-nexgen-brightGold font-semibold">{item.grafts}</span>
         </div>
         <div className="flex items-center justify-between text-[11px] text-gray-300">
           <span>{item.technique}</span>
@@ -170,7 +170,7 @@ function InteractiveComparisonCard({ item }: { item: CostResultItem }) {
 
 export default function CostResultsSection() {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 bg-[#485942] text-white overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden">
       <div className="qht-large-container relative z-10">
 
         {/* Header Row with Vector Motif */}
@@ -200,10 +200,10 @@ export default function CostResultsSection() {
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-white/20" />
           </div>
-          <div className="relative z-10 bg-[#485942] px-6">
+          <div className="relative z-10 bg-nexgen-mainDarkBg px-6">
             <Link
               href="/results"
-              className="inline-flex items-center gap-1.5 bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-xs sm:text-sm py-3 px-8 rounded-full shadow-lg transition-all active:scale-95 duration-150"
+              className="inline-flex items-center gap-1.5 bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-xs sm:text-sm py-3 px-8 rounded-full shadow-lg transition-all active:scale-95 duration-150"
             >
               <span>Explore More Results</span>
               <span className="text-sm font-black">+</span>

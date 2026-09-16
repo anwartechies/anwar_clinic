@@ -44,13 +44,13 @@ export default function CostFactorsSection() {
         {/* Top Header Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-12 sm:mb-16">
           <div className="lg:col-span-7">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.12]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.12]">
               6 Key Factors That Affect Hair <br />
               Transplant Cost in India
             </h2>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
               Hair transplant pricing varies based on multiple clinical, technical and geographic factors. While cost is often the first thing patients consider when comparing clinics, it should not be the sole deciding factor - understanding what shapes the final price helps you make a truly informed decision.
             </p>
           </div>
@@ -61,20 +61,20 @@ export default function CostFactorsSection() {
           {COST_FACTORS.map((factor, idx) => (
             <div
               key={idx}
-              className="bg-[#eff5f1] rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden border border-gray-200/50 shadow-2xs hover:shadow-xs transition-shadow min-h-[260px]"
+              className="bg-nexgen-pageLightBg rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden border border-gray-200/50 shadow-2xs hover:shadow-xs transition-shadow min-h-[260px]"
             >
               <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#1b221d] mb-3 leading-snug whitespace-pre-line">
+                <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader mb-3 leading-snug whitespace-pre-line">
                   {factor.title}
                 </h3>
-                <p className="text-xs text-[#5c685f] leading-relaxed font-normal">
+                <p className="text-xs text-gray-600 leading-relaxed font-normal">
                   {factor.desc}
                 </p>
               </div>
 
               {/* Large Watermark Number in bottom right */}
               <div className="flex justify-end pt-4 select-none pointer-events-none">
-                <span className="text-5xl sm:text-6xl font-black text-black/10 tracking-tighter leading-none">
+                <span className="text-5xl sm:text-6xl font-black text-nexgen-primaryGold/20 tracking-tighter leading-none">
                   {factor.num}
                 </span>
               </div>

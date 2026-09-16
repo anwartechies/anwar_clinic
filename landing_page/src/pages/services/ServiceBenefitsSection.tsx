@@ -21,31 +21,31 @@ interface ServiceBenefitsSectionProps {
 const DEFAULT_BENEFITS: BenefitItem[] = [
   {
     id: 1,
-    icon: <CheckCircle2 className="w-8 h-8 text-[#bde876]" />,
+    icon: <CheckCircle2 className="w-8 h-8 text-nexgen-brightGold" />,
     title: "Hairline Restoration",
     desc: "The unnatural hairlines are corrected, and a natural look is implemented.",
   },
   {
     id: 2,
-    icon: <Sparkles className="w-8 h-8 text-[#bde876]" />,
+    icon: <Sparkles className="w-8 h-8 text-nexgen-brightGold" />,
     title: "Permanent Results",
     desc: `The Corrective Hair Transplant procedures at ${COMPANY_NAME} Clinic ensure natural and long-lasting results.`,
   },
   {
     id: 3,
-    icon: <ShieldCheck className="w-8 h-8 text-[#bde876]" />,
+    icon: <ShieldCheck className="w-8 h-8 text-nexgen-brightGold" />,
     title: "Using Advanced techniques",
     desc: `The repair methods used by experts at ${COMPANY_NAME} Clinic are safe and leave negligible scars.`,
   },
   {
     id: 4,
-    icon: <Clock className="w-8 h-8 text-[#bde876]" />,
+    icon: <Clock className="w-8 h-8 text-nexgen-brightGold" />,
     title: "Quick Healing Process",
     desc: "New methods of Hair Transplant Repair are less invasive with less recovery time.",
   },
   {
     id: 5,
-    icon: <Star className="w-8 h-8 text-[#bde876]" />,
+    icon: <Star className="w-8 h-8 text-nexgen-brightGold" />,
     title: "Customised Repair",
     desc: `${COMPANY_NAME} Clinic makes sure that the repair plan is tailored to the needs and satisfaction of the patient.`,
   },
@@ -68,7 +68,7 @@ export default function ServiceBenefitsSection({
   });
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#38493a] text-white overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden">
       <div className="qht-large-container">
         
         {/* Section Heading & Subtitle */}
@@ -95,7 +95,7 @@ export default function ServiceBenefitsSection({
               {/* Left & Middle: Circular Outline Icon + Title */}
               <div className="flex items-center gap-5 sm:gap-7 md:w-1/2">
                 {/* Circular Icon */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#8ea987]/60 bg-white/5 flex items-center justify-center p-3 flex-shrink-0 group-hover:border-white/80 group-hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-nexgen-primaryGold/60 bg-white/5 flex items-center justify-center p-3 flex-shrink-0 group-hover:border-nexgen-brightGold group-hover:bg-white/10 transition-all duration-300">
                   {typeof item.icon === "string" && (item.icon.startsWith("http") || item.icon.startsWith("/")) ? (
                     <img
                       src={item.icon}
@@ -128,7 +128,7 @@ export default function ServiceBenefitsSection({
           <div className="mt-12 sm:mt-16 text-center">
             <button
               onClick={onOpenConsultation}
-              className="bg-[#596d53] hover:bg-[#495c44] text-white font-semibold text-sm sm:text-base py-3.5 px-9 rounded-full shadow-lg transition-all active:scale-95 duration-150"
+              className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3.5 px-9 rounded-full shadow-lg transition-all active:scale-95 duration-150"
             >
               Book an Appointment
             </button>

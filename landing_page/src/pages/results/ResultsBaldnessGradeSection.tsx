@@ -16,7 +16,7 @@ export default function ResultsBaldnessGradeSection({
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6">
 
         {/* Dark Olive Rounded Container */}
-        <div className="bg-[#52664d] rounded-3xl sm:rounded-[40px] p-6 sm:p-10 lg:p-14 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="bg-nexgen-mainDarkBg rounded-3xl sm:rounded-[40px] p-6 sm:p-10 lg:p-14 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border border-nexgen-primaryGold/25">
 
           {/* Left Column: Grade Chart Illustration Image */}
           <div className="lg:col-span-5 flex justify-center">
@@ -40,7 +40,7 @@ export default function ResultsBaldnessGradeSection({
 
             {/* Time Badge */}
             <div className="flex items-center gap-2 text-xs sm:text-lg text-white/85 font-medium">
-              <Clock className="w-4 h-4 text-white/75" />
+              <Clock className="w-4 h-4 text-nexgen-brightGold" />
               <span>Takes approximately 1 min</span>
             </div>
 
@@ -52,21 +52,21 @@ export default function ResultsBaldnessGradeSection({
             {/* 3 Key Features List */}
             <div className="pt-2 space-y-3.5">
               <div className="flex items-center gap-3 text-xs sm:text-lg text-white/90">
-                <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
+                <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-nexgen-brightGold">
                   <FlaskConical className="w-4 h-4 stroke-[1.8]" />
                 </div>
                 <span>Evidence-based graft calculations & 95%+ follicle survival</span>
               </div>
 
               <div className="flex items-center gap-3 text-xs sm:text-lg text-white/90">
-                <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
+                <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-nexgen-brightGold">
                   <Stethoscope className="w-4 h-4 stroke-[1.8]" />
                 </div>
                 <span>Direct clinical guidance from senior restoration surgeons</span>
               </div>
 
               <div className="flex items-center gap-3 text-xs sm:text-lg text-white/90">
-                <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white/80">
+                <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-nexgen-brightGold">
                   <BadgePercent className="w-4 h-4 stroke-[1.8]" />
                 </div>
                 <span>Transparent, itemized pricing with flexible EMI options</span>
@@ -77,7 +77,7 @@ export default function ResultsBaldnessGradeSection({
             <div className="pt-4">
               <button
                 onClick={onOpenConsultation}
-                className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3.5 px-10 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
+                className="bg-nexgen-brightGold hover:bg-nexgen-primaryGold text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3.5 px-10 rounded-full shadow-lg transition-all active:scale-95 duration-150 cursor-pointer"
               >
                 Start Your Free Scalp Evaluation
               </button>
