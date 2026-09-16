@@ -34,17 +34,17 @@ const CITY_GALLERIES: CityGallery[] = [
       </svg>
     ),
     photos: {
-      hero: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
+      hero: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-08-pm-mu46xz28f0p1lx.jpeg",
       heroAlt: "Patna Main Clinic Entrance and Reception",
-      office: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80",
+      office: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-55-37-pm-mu4713fhxp35ck.jpeg",
       officeAlt: "Doctor Consultation Suite Patna",
-      otRoom: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+      otRoom: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-8-03-52-pm-mu47c3sxpl41ro.jpeg",
       otRoomAlt: "Advanced Sterile OT Room Patna",
-      otLight: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+      otLight: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-52-pm-mu46z5zwqbrtgd.jpeg",
       otLightAlt: "High Precision Surgical Shadowless Lamp",
-      lounge: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=600&q=80",
+      lounge: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-10-56-pm-mu16nggosuecep.jpeg",
       loungeAlt: "Patna Patient Lounge and Waiting Area",
-      wallOfFame: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80",
+      wallOfFame: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/doctor-mu16qkmeekqvfb.jpeg",
       wallOfFameAlt: "Wall of Patient Transformation Success Stories",
     },
   },
@@ -60,18 +60,18 @@ const CITY_GALLERIES: CityGallery[] = [
       </svg>
     ),
     photos: {
-      hero: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
-      heroAlt: "Mumbai Clinic Consultation & Care Center",
-      office: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-      officeAlt: "Doctor Consultation Cabin Mumbai",
-      otRoom: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80",
-      otRoomAlt: "Mumbai State-of-the-Art Procedure Room",
-      otLight: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
-      otLightAlt: "Sterile Cleanroom Surgical Illumination",
-      lounge: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=600&q=80",
-      loungeAlt: "Mumbai Patient Waiting Lounge",
-      wallOfFame: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80",
-      wallOfFameAlt: "Patient Results and Accreditations",
+      hero: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-08-pm-mu46xz28f0p1lx.jpeg",
+      heroAlt: "Mumbai Main Clinic Entrance and Reception",
+      office: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-55-37-pm-mu4713fhxp35ck.jpeg",
+      officeAlt: "Doctor Consultation Suite Mumbai",
+      otRoom: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-8-03-52-pm-mu47c3sxpl41ro.jpeg",
+      otRoomAlt: "Advanced Sterile OT Room Mumbai",
+      otLight: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-52-pm-mu46z5zwqbrtgd.jpeg",
+      otLightAlt: "High Precision Surgical Shadowless Lamp",
+      lounge: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-10-56-pm-mu16nggosuecep.jpeg",
+      loungeAlt: "Patna Patient Lounge and Waiting Area",
+      wallOfFame: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/doctor-mu16qkmeekqvfb.jpeg",
+      wallOfFameAlt: "Wall of Patient Transformation Success Stories",
     },
   },
 ];
@@ -85,10 +85,10 @@ export default function AboutClinicStandardsSection() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         {/* Header Row: Title & Filter on Left, Description on Right */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-12">
-          
+
           {/* Left Column: Heading & City Pills */}
           <div>
             <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold uppercase tracking-wider block mb-2">
@@ -108,11 +108,10 @@ export default function AboutClinicStandardsSection() {
                     key={city.id}
                     type="button"
                     onClick={() => setActiveCityId(city.id)}
-                    className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
-                      isActive
-                        ? "bg-nexgen-veryDarkHeader text-white border border-nexgen-primaryGold shadow-md"
-                        : "bg-white border border-gray-200 text-gray-700 hover:border-nexgen-primaryGold/50 hover:bg-nexgen-pageLightBg"
-                    }`}
+                    className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${isActive
+                      ? "bg-nexgen-veryDarkHeader text-white border border-nexgen-primaryGold shadow-md"
+                      : "bg-white border border-gray-200 text-gray-700 hover:border-nexgen-primaryGold/50 hover:bg-nexgen-pageLightBg"
+                      }`}
                   >
                     <span className={isActive ? "text-nexgen-brightGold" : "text-nexgen-primaryGold"}>
                       {city.icon}
@@ -135,10 +134,10 @@ export default function AboutClinicStandardsSection() {
 
         {/* Dynamic Image Mosaic Grid */}
         <div className="space-y-4 sm:space-y-5">
-          
+
           {/* Top Row: Big Hero (Left) + 2 Stacked Cards (Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
-            
+
             {/* Main Tall Hero Photo (Left 6 cols on LG) */}
             <div className="lg:col-span-6 rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-100 shadow-xs border border-gray-100 relative group aspect-[4/3] sm:aspect-[16/11] lg:aspect-auto lg:h-full min-h-[280px] sm:min-h-[380px]">
               <img
@@ -150,7 +149,7 @@ export default function AboutClinicStandardsSection() {
 
             {/* Right 2 Stacked Photos (Right 6 cols on LG) */}
             <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-5">
-              
+
               {/* Doctor Consultation Suite */}
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-100 shadow-xs border border-gray-100 aspect-[16/10] sm:aspect-[4/3] lg:aspect-[16/8.5] relative group">
                 <img
@@ -175,7 +174,7 @@ export default function AboutClinicStandardsSection() {
 
           {/* Bottom Row: 3 Equal Photos Side-by-Side */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-            
+
             {/* 1. Surgical OT Lamp / Door */}
             <div className="rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-100 shadow-xs border border-gray-100 aspect-[4/3] relative group">
               <img
