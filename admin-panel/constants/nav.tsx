@@ -16,6 +16,7 @@ import {
   TbShoppingBag,
   TbSettings,
   TbBriefcase,
+  TbGift,
 } from "react-icons/tb";
 
 export interface NavItem {
@@ -45,6 +46,7 @@ export const NAV_ITEMS: NavItem[] = [
   { title: "Blogs",         icon: <TbArticle className="h-5 w-5 shrink-0" />,         path: "/blogs",         permissions: ["blogs:read"] },
   { title: "Products",      icon: <TbShoppingBag className="h-5 w-5 shrink-0" />,     path: "/products",      permissions: ["products:read"] },
   { title: "Careers",       icon: <TbBriefcase className="h-5 w-5 shrink-0" />,       path: "/careers",       permissions: ["careers:read"] },
+  { title: "Offers Banner", icon: <TbGift className="h-5 w-5 shrink-0" />,            path: "/offers",        permissions: ["offers:read"] },
   { title: "Media",         icon: <TbPhoto className="h-5 w-5 shrink-0" />,           path: "/media",         permissions: ["media:read"] },
   { title: "Settings",      icon: <TbSettings className="h-5 w-5 shrink-0" />,        path: "/settings",      permissions: ["settings:read"] },
 ];
@@ -76,12 +78,14 @@ export const PERMISSION_LABELS: Record<string, string> = {
   "blogs:write": "Create, edit & publish blog posts",
   "products:read": "View ecommerce products",
   "products:write": "Create, edit & publish products",
+  "careers:read": "View job openings & applications",
+  "careers:write": "Create/edit jobs & update applications",
+  "offers:read": "View offer banners",
+  "offers:write": "Create, edit, activate & complete offer banners",
   "media:read": "View the media library",
   "media:write": "Upload & delete media files",
   "settings:read": "View clinic configuration",
   "settings:write": "Manage roles, permissions & clinic settings",
-  "careers:read": "View job openings & applications",
-  "careers:write": "Create/edit jobs & update applications",
 };
 
 // Display order + label per resource group in the matrix. Unlisted resources
@@ -101,8 +105,9 @@ export const RESOURCE_META: { key: string; label: string; order: number }[] = [
   { key: "blogs", label: "Blog Posts", order: 11 },
   { key: "products", label: "Ecommerce Products", order: 12 },
   { key: "careers", label: "Careers & Jobs", order: 13 },
-  { key: "media", label: "Media Library", order: 14 },
-  { key: "settings", label: "Settings", order: 15 },
+  { key: "offers", label: "Offer Banners", order: 14 },
+  { key: "media", label: "Media Library", order: 15 },
+  { key: "settings", label: "Settings", order: 16 },
 ];
 
 export function resourceLabel(resource: string) {

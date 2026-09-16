@@ -156,26 +156,24 @@ function HeaderBar({
           </nav>
 
           {/* CTA Button: Book your surgery */}
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-[#52664d] hover:bg-[#43543e] text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl md:rounded-2xl text-[14px] sm:text-[15px] font-bold transition-colors duration-200 shadow-md whitespace-nowrap ml-1"
+          <button
+            type="button"
+            onClick={onOpenConsultation}
+            className="bg-[#52664d] hover:bg-[#43543e] text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl md:rounded-2xl text-[14px] sm:text-[15px] font-bold transition-colors duration-200 shadow-md whitespace-nowrap ml-1 cursor-pointer"
           >
             Book your surgery
-          </a>
+          </button>
         </div>
 
         {/* Mobile Actions & Menu Toggle */}
         <div className="flex lg:hidden items-center gap-2">
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="px-4 py-2 bg-[#52664d] text-white text-xs font-semibold rounded-xl shadow-xs"
+          <button
+            type="button"
+            onClick={onOpenConsultation}
+            className="px-4 py-2 bg-[#52664d] hover:bg-[#43543e] text-white text-xs font-semibold rounded-xl shadow-xs cursor-pointer"
           >
             Book Surgery
-          </a>
+          </button>
 
           <button
             onClick={onToggleMobileMenu}
@@ -594,14 +592,16 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
             </div>
 
             <div className="pt-4 border-t border-gray-100 space-y-3">
-              <a
-                href="https://pages.razorpay.com/pl_R9xTz14IIPBGyE/view"
-                target="_blank"
-                rel="noreferrer"
-                className="w-full py-3 block text-center bg-[#596d53] text-white rounded-xl font-bold text-sm"
+              <button
+                type="button"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  handleOpenConsultation();
+                }}
+                className="w-full py-3 block text-center bg-[#596d53] hover:bg-[#465b41] text-white rounded-xl font-bold text-sm cursor-pointer transition-colors"
               >
                 Book your surgery
-              </a>
+              </button>
 
               <button
                 onClick={() => {

@@ -10,6 +10,7 @@ import { Blog } from "./Blog";
 import { Product } from "./Product";
 import { Job } from "./Job";
 import { JobApplication } from "./JobApplication";
+import { Offer } from "./Offer";
 
 // Role <-> Permission join table. A role's grants live entirely in here, which
 // is what lets permissions be re-assigned at runtime from Settings > Roles
@@ -54,6 +55,10 @@ User.hasMany(Job, { foreignKey: "createdById", as: "jobs" });
 Job.hasMany(JobApplication, { foreignKey: "jobId", as: "applications", onDelete: "CASCADE" });
 JobApplication.belongsTo(Job, { foreignKey: "jobId", as: "job" });
 
+// Offers
+Offer.belongsTo(User, { foreignKey: "createdById", as: "createdBy" });
+User.hasMany(Offer, { foreignKey: "createdById", as: "offers" });
+
 export async function syncDatabase() {
   await sequelize.sync({ alter: true });
 }
@@ -70,4 +75,5 @@ export {
   Product,
   Job,
   JobApplication,
+  Offer,
 };

@@ -1,7 +1,7 @@
 import { Router, Request, Response } from "express";
 import { Op } from "sequelize";
 import multer from "multer";
-import { Service, Lead, Blog, Product, Job, JobApplication } from "../models";
+import { Service, Lead, Blog, Product, Job, JobApplication, Offer } from "../models";
 import { LEAD_SOURCES, LeadSource } from "../models/Lead";
 import { SEED_SECTIONS_BY_SLUG } from "../config/serviceSeedData";
 import { getGoogleReviews } from "../services/googleReviews";
@@ -486,6 +486,35 @@ router.post(
     }
   }
 );
+
+// GET /public/offers/active — returns current active website offer banner
+router.get("/offers/active", async (_req: Request, res: Response) => {
+  try {
+    const offer = await Offer.findOne({
+      where: { status: "active" },
+    });
+
+    if (!offer) {
+      res.json({ isEnabled: false });
+      return;
+    }
+
+    res.json({
+      id: offer.id,
+      isEnabled: true,
+      badge: offer.badge || undefined,
+      title: offer.title,
+      highlightText: offer.highlightText || undefined,
+      perks: Array.isArray(offer.perks) ? offer.perks : [],
+      couponCode: offer.couponCode || undefined,
+      ctaText: offer.ctaText || "Claim Consultation",
+      link: offer.link || "/offer",
+    });
+  } catch (err: any) {
+    console.error("Failed to fetch active offer:", err);
+    res.status(500).json({ message: "Failed to fetch active offer", isEnabled: false });
+  }
+});
 
 export default router;
 

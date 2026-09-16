@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Star, Layers, Sparkles } from "lucide-react";
 import { useConsultation } from "@/context/ConsultationContext";
 import { COMPANY_NAME } from "@/config/constants";
+import { fetchGoogleReviews, type GoogleReviewsData } from "@/lib/googleReviews";
 
 interface ComparisonRow {
   feature: string;
@@ -41,11 +42,23 @@ const COMPARISON_ROWS: ComparisonRow[] = [
 
 export default function MedicalComparisonSection() {
   const { openConsultation } = useConsultation();
+  const [googleData, setGoogleData] = useState<GoogleReviewsData | null>(null);
+
+  useEffect(() => {
+    const ctrl = new AbortController();
+    fetchGoogleReviews(ctrl.signal).then(setGoogleData);
+    return () => ctrl.abort();
+  }, []);
+
+  const rating = googleData?.rating ? googleData.rating.toFixed(1) : "5.0";
+  const reviewCount = googleData?.userRatingCount
+    ? googleData.userRatingCount.toLocaleString()
+    : "241";
 
   return (
     <section className="py-20 lg:py-24 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* ========================================================
             HEADER
            ======================================================== */}
@@ -63,7 +76,7 @@ export default function MedicalComparisonSection() {
             3 SEPARATE CARD COLUMNS
            ======================================================== */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          
+
           {/* Card 1: Feature Column */}
           <div className="bg-[#eff5f1] rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-[#e2ece4]">
             {/* Header */}
@@ -142,7 +155,7 @@ export default function MedicalComparisonSection() {
             BOTTOM CONNECT BANNER
            ======================================================== */}
         <div className="mt-10 bg-[#52664d] rounded-2xl sm:rounded-3xl p-6 sm:py-7 sm:px-10 text-white flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
-          
+
           {/* Left: Google Rating Badge */}
           <div className="flex items-center gap-4 lg:pr-8 lg:border-r lg:border-white/30 w-full lg:w-auto justify-center lg:justify-start">
             <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center p-2 shadow-xs flex-shrink-0">
@@ -165,16 +178,34 @@ export default function MedicalComparisonSection() {
                 />
               </svg>
             </div>
-            <div>
-              <div className="flex items-center gap-1 text-white mb-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
-                ))}
+            {googleData?.googleMapsUri ? (
+              <a
+                href={googleData.googleMapsUri}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-90 transition-opacity text-left"
+              >
+                <div className="flex items-center gap-1 text-white mb-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
+                  ))}
+                </div>
+                <p className="text-xs sm:text-[13px] text-white/95 font-medium whitespace-nowrap underline decoration-white/30 underline-offset-2">
+                  {rating} rating, {reviewCount} google reviews
+                </p>
+              </a>
+            ) : (
+              <div>
+                <div className="flex items-center gap-1 text-white mb-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
+                  ))}
+                </div>
+                <p className="text-xs sm:text-[13px] text-white/95 font-medium whitespace-nowrap">
+                  {rating} rating, {reviewCount} google reviews
+                </p>
               </div>
-              <p className="text-xs sm:text-[13px] text-white/95 font-medium whitespace-nowrap">
-                4.9 rating, 2,091 google reviews
-              </p>
-            </div>
+            )}
           </div>
 
           {/* Center: Headline */}

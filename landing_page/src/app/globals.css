@@ -14,6 +14,54 @@
   --qht-vivid-green: #00d084;
   --qht-light-bg: #f8faf8;
   --qht-light-bg-alt: #f1f5f2;
+
+  /* ==========================================================================
+     NexGen Premium Color Palette
+     ========================================================================== */
+  /* Main Dark Background - Deep Navy */
+  --nexgen-main-dark-bg: #032A3A;
+  --nexgen-main-dark-bg-rgb: 3, 42, 58;
+  --color-deep-navy: #032A3A;
+
+  /* Services Section - Midnight Teal Navy */
+  --nexgen-services-section: #06384A;
+  --nexgen-services-section-rgb: 6, 56, 74;
+  --color-midnight-teal-navy: #06384A;
+
+  /* Service Inner Card - Slate Teal */
+  --nexgen-service-inner-card: #244F60;
+  --nexgen-service-inner-card-rgb: 36, 79, 96;
+  --color-slate-teal: #244F60;
+
+  /* Very Dark Header - Dark Navy */
+  --nexgen-very-dark-header: #021E2B;
+  --nexgen-very-dark-header-rgb: 2, 30, 43;
+  --color-dark-navy: #021E2B;
+
+  /* Primary Gold - Luxury Gold */
+  --nexgen-primary-gold: #D6A447;
+  --nexgen-primary-gold-rgb: 214, 164, 71;
+  --color-luxury-gold: #D6A447;
+
+  /* Bright Gold / CTA - Champagne Gold */
+  --nexgen-bright-gold-cta: #EDB957;
+  --nexgen-bright-gold-cta-rgb: 237, 185, 87;
+  --color-champagne-gold: #EDB957;
+
+  /* Soft Gold - Sand Gold */
+  --nexgen-soft-gold: #C99A43;
+  --nexgen-soft-gold-rgb: 201, 154, 67;
+  --color-sand-gold: #C99A43;
+
+  /* Navigation Background - Warm Ivory */
+  --nexgen-nav-bg: #FBF9F5;
+  --nexgen-nav-bg-rgb: 251, 249, 245;
+  --color-warm-ivory: #FBF9F5;
+
+  /* Page Light Background - Cream */
+  --nexgen-page-light-bg: #F7F2E9;
+  --nexgen-page-light-bg-rgb: 247, 242, 233;
+  --color-cream: #F7F2E9;
 }
 
 html {

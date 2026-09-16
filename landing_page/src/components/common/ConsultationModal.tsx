@@ -7,6 +7,7 @@ import { COUNTRY_CODES } from "@/data/qhtData";
 import { COMPANY_NAME } from "@/config/constants";
 import { submitLead } from "@/lib/leads";
 import { STATIC_OFFER, OFFER_PAGE_PATH } from "@/config/offer";
+import { useOffer } from "@/context/OfferContext";
 import type { ConsultationIntent } from "@/context/ConsultationContext";
 
 interface ConsultationModalProps {
@@ -22,6 +23,8 @@ export default function ConsultationModal({
   onClose,
 }: ConsultationModalProps) {
   const router = useRouter();
+  const activeOffer = useOffer();
+  const currentOffer = activeOffer.isEnabled ? activeOffer : STATIC_OFFER;
   const isOffer = intent === "offer";
   const [name, setName] = useState("");
   const [countryCode, setCountryCode] = useState("+91");
@@ -49,7 +52,7 @@ export default function ConsultationModal({
         // Lead sources are a DB enum, so the claim is flagged in the message
         // instead — it shows on the lead in the admin panel.
         ...(isOffer && {
-          message: `Claimed website offer${STATIC_OFFER.couponCode ? ` (code ${STATIC_OFFER.couponCode})` : ""}: ${STATIC_OFFER.highlightText ?? STATIC_OFFER.title}`,
+          message: `Claimed website offer${currentOffer.couponCode ? ` (code ${currentOffer.couponCode})` : ""}: ${currentOffer.highlightText ?? currentOffer.title}`,
         }),
       });
 
@@ -98,7 +101,7 @@ export default function ConsultationModal({
         <div className="bg-[#1b392b] text-white p-6 sm:p-8 relative">
           <div className="flex items-center gap-2 mb-2">
             <span className="inline-flex items-center gap-1 bg-[#b1fc85] text-[#162418] text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-              <Sparkles className="w-3 h-3" /> {isOffer ? STATIC_OFFER.badge ?? "Special Offer" : "Free Consultation"}
+              <Sparkles className="w-3 h-3" /> {isOffer ? currentOffer.badge ?? "Special Offer" : "Free Consultation"}
             </span>
           </div>
           <h3 className="text-xl sm:text-2xl font-bold">
@@ -106,7 +109,7 @@ export default function ConsultationModal({
           </h3>
           <p className="text-xs text-gray-300 mt-1">
             {isOffer
-              ? `Share your details to reserve ${STATIC_OFFER.highlightText ?? "this offer"} with your ${COMPANY_NAME} consultation.`
+              ? `Share your details to reserve ${currentOffer.highlightText ?? "this offer"} with your ${COMPANY_NAME} consultation.`
               : `Get personalized hairline assessment and exact graft estimate from ${COMPANY_NAME} specialists.`}
           </p>
         </div>

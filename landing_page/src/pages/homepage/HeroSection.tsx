@@ -32,21 +32,26 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
 
   return (
     <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 bg-[#f4f7f4] overflow-hidden">
-      {/* Wide screens: large clusters framing the headline from both sides —
-          only from xl up, where the text leaves room at the edges */}
-      <FollicleArt className="hidden xl:block top-20 -left-10 w-[380px] opacity-60" />
-      <FollicleArt className="hidden xl:block top-20 -right-10 w-[380px] opacity-60 -scale-x-100" />
+      {/* Absolute Background Image (Black mask applied directly to image pixels via brightness filter) */}
+      <div className="absolute max-md:hidden inset-0 z-0 pointer-events-none">
+        <img
+          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-25-24-pm-mu16ngv5sdupct.jpeg"
+          alt={`${COMPANY_NAME} Background`}
+          className="w-full h-full object-contain object-left-top brightness-50"
+        />
+      </div>
 
       {/* isolate: lets the phone art sit behind the text (-z-10) without
           dropping below the section's background */}
-      <div className="qht-container text-center relative isolate">
+      <div className="qht-container text-center relative z-10 isolate">
         {/* Below xl the text spans (nearly) the full width, so clusters sit
             beside the CTA row instead — the one place with free space at every size */}
-        <FollicleArt className="xl:hidden -z-10 -bottom-12 -left-20 md:-left-12 lg:-left-8 w-[190px] md:w-[250px] lg:w-[290px] opacity-40 md:opacity-45" />
-        <FollicleArt className="xl:hidden -z-10 -bottom-12 -right-20 md:-right-12 lg:-right-8 w-[190px] md:w-[250px] lg:w-[290px] opacity-40 md:opacity-45 -scale-x-100" />
+        {/* <FollicleArt className="xl:hidden -z-10 -bottom-12 -left-20 md:-left-12 lg:-left-8 w-[190px] md:w-[250px] lg:w-[290px] opacity-40 md:opacity-45" />
+        <FollicleArt className="xl:hidden -z-10 -bottom-12 -right-20 md:-right-12 lg:-right-8 w-[190px] md:w-[250px] lg:w-[290px] opacity-40 md:opacity-45 -scale-x-100" /> */}
+
 
         {/* Main Headline */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-[500] text-[#181d19] tracking-tight leading-[1.18] max-w-7xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-[500] md:text-white tracking-tight leading-[1.18] max-w-7xl mx-auto">
           Pioneering Natural Hair Restoration & Artistic Precision,{" "}
           {/* <br /> */}
           <span className="text-[#52664d] font-[500] inline-block mt-1">
@@ -71,7 +76,7 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
       </div>
 
       {/* Infinite Horizontal Showcase Carousel */}
-      <div className="mt-10 sm:mt-12 relative w-full overflow-hidden">
+      <div className="mt-10 sm:mt-12 relative z-10 w-full overflow-hidden">
         <div className="animate-marquee gap-4 sm:gap-5">
           {duplicatedSlides.map((slide, idx) => (
             <div

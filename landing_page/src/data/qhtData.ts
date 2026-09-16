@@ -277,7 +277,7 @@ export const EXPERT_STAGES: ExpertStage[] = [
     percentage: "0%",
     whoWithYou: [
       { role: "Hair Restoration Specialist", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/hp-expert-icon-1.webp" },
-      { role: "Clinical Dermatologist", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/derma-icon.webp" },
+      { role: "Hair Transplant Surgeon", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/derma-icon.webp" },
       { role: "Patient Care Advisor", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/coordinator-icon.webp" },
     ],
     howTheySupport: [
@@ -305,7 +305,7 @@ export const EXPERT_STAGES: ExpertStage[] = [
     percentage: "60%",
     whoWithYou: [
       { role: "Lead Hair Restoration Surgeon", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/hp-expert-icon-1.webp" },
-      { role: "Micro-Graft Technicians", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/anesthetist-icon.webp" },
+      { role: "Advance FUE & DHI Technician", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/anesthetist-icon.webp" },
     ],
     howTheySupport: [
       "Gentle, non-traumatic follicular unit extraction",
@@ -318,7 +318,7 @@ export const EXPERT_STAGES: ExpertStage[] = [
     percentage: "100%",
     whoWithYou: [
       { role: "Restoration Specialist", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/hp-expert-icon-1.webp" },
-      { role: "Dermatology Team", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/derma-icon.webp" },
+      { role: "Hair Transplant Team", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/derma-icon.webp" },
       { role: "Post-Op Care Coordinator", icon: "https://www.qhtclinic.com/wp-content/uploads/2025/10/care-team.webp" },
     ],
     howTheySupport: [
@@ -368,8 +368,8 @@ export const PRICING_PACKAGES: PricePackage[] = [
     technique: "DHI",
     fullName: "Direct Hair Implantation",
     desc: "5000 – 6000 Grafts Required. High-precision direct implanter pen technique for maximum density and natural angle control.",
-    perGraft: 15,
-    totalRange: "₹75,000 – ₹90,000 (5k–6k Grafts)",
+    perGraft: 20,
+    totalRange: "₹1,00,000 – ₹1,20,000 (5k–6k Grafts)",
     features: [
       "3 GFC Free",
       "5 Days Med Free",
@@ -411,7 +411,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "Male pattern hair loss (Androgenetic Alopecia) progressively affects hairline position and crown density.",
       `At ${COMPANY_NAME}, our male restoration procedures combine aesthetic hairline design with permanent follicle longevity, restoring your natural look and personal confidence.`,
     ],
-    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/t1-mtzji2lq10j280.jpeg",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-21-17-pm-mu3whzrqnyjy6z.jpeg",
     link: "/services/hair-transplant-for-men/",
   },
   {
@@ -422,7 +422,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "A well-designed hairline frames the face and restores youthful facial balance without looking artificial.",
       `At ${COMPANY_NAME}, our surgeons handcraft every hairline contour, selecting single-hair follicles at precise growth angles to achieve undetectable, permanent results.`,
     ],
-    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-13-at-12-09-12-am-mtzjsehbjkjquk.jpeg",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-21-26-pm-mu3whznud4ycxb.jpeg",
     link: "/services/hairline-reconstruction/",
   },
   {
@@ -433,7 +433,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "If a previous hair transplant left you with pluggy grafts, misdirected hair, or depleted donor areas, corrective restoration can restore balance.",
       `Our experienced surgical team at ${COMPANY_NAME} carefully redistributes grafts, camouflages scars, and refines your hairline to deliver the natural appearance you originally envisioned.`,
     ],
-    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/iii2-mtzjkctwkp1zrc.jpeg",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-21-32-pm-mu3whzkgho1j0r.jpeg",
     link: "/services/failed-hair-transplant-repair/",
   },
   {
@@ -444,7 +444,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "Growth Factor Concentrate (GFC) therapy harnesses concentrated regenerative growth factors from your own blood, delivered directly to weakened hair roots.",
       "This non-surgical therapy is highly effective for reducing active shedding, strengthening existing hair caliber, and boosting overall scalp vitality.",
     ],
-    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-26-43-pm-mu3whzecanuo4t.jpeg",
     link: "/services/gfc-treatment/",
   },
   {
@@ -466,7 +466,7 @@ export const SERVICES_ACCORDION: ServiceAccordionItem[] = [
       "Platelet-Rich Plasma (PRP) is a clinically proven, non-invasive treatment utilizing your body’s own healing platelets to nourish dormant follicles.",
       "Ideal for early-stage thinning, post-transplant recovery acceleration, and overall hair density maintenance.",
     ],
-    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/mask-group-4-mtzjz39sekfjz5.webp",
+    image: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-41-05-pm-mu3whz83hjbekh.jpeg",
     link: "/services/prp-treatment/",
   },
 ];
