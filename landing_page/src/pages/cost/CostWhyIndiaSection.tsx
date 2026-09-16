@@ -14,9 +14,9 @@ export default function CostWhyIndiaSection() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left Column: Why India Benefits */}
           <div className="lg:col-span-7 space-y-8">
             <div>
@@ -31,7 +31,7 @@ export default function CostWhyIndiaSection() {
 
             {/* 5 Distinct Benefit Rows */}
             <div className="divide-y divide-gray-100 pt-2">
-              
+
               {/* Row 1: World-Class Surgical Infrastructure */}
               <div className="py-6 first:pt-0 flex items-start gap-4 sm:gap-5">
                 <div className="w-10 h-10 rounded-xl bg-nexgen-primaryGold/10 text-nexgen-primaryGold flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -113,7 +113,7 @@ export default function CostWhyIndiaSection() {
           {/* Right Column: QHT Clinic By the Numbers Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
             <div className="w-full max-w-[430px] rounded-3xl p-7 sm:p-9 bg-nexgen-mainDarkBg text-white shadow-2xl space-y-6 divide-y divide-white/15 border border-nexgen-primaryGold/30">
-              
+
               <div className="pb-1">
                 <span className="text-xs sm:text-[13px] font-bold text-white/90 tracking-wide uppercase block">
                   {COMPANY_NAME} By the Numbers
@@ -123,7 +123,7 @@ export default function CostWhyIndiaSection() {
               {/* Stat 1 */}
               <div className="pt-6">
                 <div className="text-4xl sm:text-5xl font-black text-nexgen-brightGold tracking-tight leading-none">
-                  15,000+
+                  16,000+
                 </div>
                 <p className="text-xs sm:text-sm text-white/90 font-medium mt-2 leading-snug">
                   Successful hair restoration procedures completed
@@ -133,10 +133,10 @@ export default function CostWhyIndiaSection() {
               {/* Stat 2 */}
               <div className="pt-6">
                 <div className="text-4xl sm:text-5xl font-black text-nexgen-brightGold tracking-tight leading-none">
-                  4.9★
+                  5.0★
                 </div>
                 <p className="text-xs sm:text-sm text-white/90 font-medium mt-2 leading-snug">
-                  Google rating backed by 2,000+ verified patient reviews
+                  Google rating backed by 2,100+ verified patient reviews
                 </p>
               </div>
 

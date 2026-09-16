@@ -413,8 +413,8 @@ export default function Header({ onOpenConsultation, initialServices }: HeaderPr
 
       {/* 1. Static Initial Header - Transparent overlay on every page */}
       <header
-        className={`absolute left-0 right-0 z-40 bg-transparent pb-4 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${isBannerVisible
-          ? "top-[52px] sm:top-[54px] pt-4 sm:pt-6"
+        className={`absolute left-0 right-0 z-40 bg-transparent pb-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isBannerVisible
+          ? "top-[42px] sm:top-[48px] pt-4 sm:pt-6"
           : "top-0 pt-6 sm:pt-8"
           }`}
       >

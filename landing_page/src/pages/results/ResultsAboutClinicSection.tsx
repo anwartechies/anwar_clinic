@@ -11,7 +11,7 @@ export default function ResultsAboutClinicSection({
   title = `Excellence in Hair Restoration at ${COMPANY_NAME}`,
 }: ResultsAboutClinicSectionProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
+    <section className="py-16 sm:py-20 lg:py-24 px-20 max-md:px-5 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
 
         <div className="max-w-4xl space-y-6">

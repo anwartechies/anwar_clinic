@@ -21,9 +21,9 @@ export default function MedicalTourismHero() {
       {/* Background Hero Banner */}
       <div className="absolute max-md:hidden inset-0 z-0">
         <img
-          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-21-01-pm-mu3wi00xvq9fn8.jpeg"
+          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-38-17-pm-mu46erfup35rbw.jpeg"
           alt={`${COMPANY_NAME} Medical Tourism For International Patients`}
-          className="w-full h-full object-fill object-center"
+          className="w-full h-full object-fill object-center blur-sm"
         />
         {/* Soft Radial & Linear Dark Gradient Overlay for Maximum Readability */}
         <div className="absolute inset-0 bg-black/45 via-black/35 to-black/60" />

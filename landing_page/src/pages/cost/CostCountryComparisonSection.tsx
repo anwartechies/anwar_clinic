@@ -139,7 +139,7 @@ export default function CostCountryComparisonSection() {
 
         {/* Footer Note */}
         <p className="text-xs text-white/80 font-normal mt-6 max-w-4xl">
-          India offers significant cost savings versus the UK and USA, with equivalent or superior clinical quality. Exchange rates approximate as of 2025.
+          India offers significant cost savings versus the UK and USA, with equivalent or superior clinical quality. Exchange rates approximate as of 2026.
         </p>
 
       </div>

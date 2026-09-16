@@ -20,31 +20,31 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
+    src: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-52-pm-mu46z5zwqbrtgd.jpeg",
     title: "Doctor-Led Hairline Architecture",
     category: "Surgeon Assessment",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    src: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-08-pm-mu46xz28f0p1lx.jpeg",
     title: "Ultra-Sterile Operating Theaters",
     category: "HEPA Filtered Theaters",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1200&q=80",
+    src: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-55-37-pm-mu4713fhxp35ck.jpeg",
     title: "VIP Patient Lounge & Hospitality",
-    category: "Comfort & Recovery",
+    category: "Surgical Procedures & Team",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+    src: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-8-03-52-pm-mu47c3sxpl41ro.jpeg",
     title: "Microscopic Graft Preservation",
     category: "High Viability Lab",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
+    src: "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-8-06-05-pm-mu47enqn4f3okf.jpeg",
     title: "International Patient Experience",
     category: "Patient Delight",
   },
@@ -56,7 +56,7 @@ export default function MedicalInfrastructureSection() {
   return (
     <section className="py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden">
       <div className="qht-container">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
           <span className="inline-block px-3.5 py-1.5 rounded-full bg-nexgen-veryDarkHeader/10 text-nexgen-veryDarkHeader border border-nexgen-primaryGold/20 text-xs font-bold tracking-wider uppercase mb-3">
@@ -66,7 +66,7 @@ export default function MedicalInfrastructureSection() {
             Glimpse of Our Infrastructure & Hospitality
           </h2>
           <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto font-normal">
-            Comfort is considered as highly at {COMPANY_NAME} as clinical results. State-of-the-art operating theatres, private recovery rooms, cosy lounges, and a dedicated international patient desk ensure a completely stress-free experience.
+            At {COMPANY_NAME}, exceptional clinical outcomes are matched by world-class hospitality. Equipped with ultra-sterile surgical theaters, private post-procedure recovery suites, and a dedicated international patient concierge, we ensure a seamless and tranquil healing journey.
           </p>
         </div>
 

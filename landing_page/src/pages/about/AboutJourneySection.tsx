@@ -13,7 +13,7 @@ interface PillarItem {
 const JOURNEY_PILLARS: PillarItem[] = [
   {
     num: "01",
-    title: "15,000+ Procedures Completed",
+    title: "16,000+ Procedures Completed",
     desc: "A rich history of delivering exceptional results for patients across India and overseas.",
   },
   {
@@ -37,10 +37,10 @@ export default function AboutJourneySection() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
       <div className="qht-large-container">
-        
+
         {/* Main 2-Column Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left Column: Headline & Story */}
           <div className="lg:col-span-7 space-y-5">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.14]">
@@ -79,16 +79,16 @@ export default function AboutJourneySection() {
 
         </div>
 
-        {/* Bottom Section: Our Certifications */}
+        {/* Bottom Section: Our Certifications
         <div className="mt-14 sm:mt-16 pt-8 border-t border-gray-100">
           <span className="text-xs font-semibold text-nexgen-primaryGold uppercase tracking-wider block mb-4">
             Our Certifications
           </span>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-3xl">
-            
-            {/* Card 1: US-FDA-approved technology */}
-            <div className="rounded-2xl border border-nexgen-primaryGold/20 p-4 sm:p-5 flex items-center gap-3.5 bg-white shadow-2xs hover:border-nexgen-primaryGold/40 hover:shadow-xs transition-all">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-3xl"> */}
+
+        {/* Card 1: US-FDA-approved technology */}
+        {/* <div className="rounded-2xl border border-nexgen-primaryGold/20 p-4 sm:p-5 flex items-center gap-3.5 bg-white shadow-2xs hover:border-nexgen-primaryGold/40 hover:shadow-xs transition-all">
               <div className="w-10 h-10 rounded-full border border-nexgen-primaryGold/40 flex flex-col items-center justify-center text-[9px] font-black text-gray-800 flex-shrink-0 relative">
                 <span>FDA</span>
                 <CheckCircle2 className="w-3 h-3 text-nexgen-primaryGold absolute -bottom-0.5 -right-0.5 bg-white rounded-full" />
@@ -99,10 +99,10 @@ export default function AboutJourneySection() {
                   technology
                 </h4>
               </div>
-            </div>
+            </div> */}
 
-            {/* Card 2: Certified & trained transplant surgeons */}
-            <div className="rounded-2xl border border-nexgen-primaryGold/20 p-4 sm:p-5 flex items-center gap-3.5 bg-white shadow-2xs hover:border-nexgen-primaryGold/40 hover:shadow-xs transition-all">
+        {/* Card 2: Certified & trained transplant surgeons */}
+        {/* <div className="rounded-2xl border border-nexgen-primaryGold/20 p-4 sm:p-5 flex items-center gap-3.5 bg-white shadow-2xs hover:border-nexgen-primaryGold/40 hover:shadow-xs transition-all">
               <div className="w-10 h-10 rounded-full bg-nexgen-pageLightBg text-nexgen-primaryGold flex items-center justify-center flex-shrink-0">
                 <UserCheck className="w-5 h-5 stroke-[1.8]" />
               </div>
@@ -112,12 +112,12 @@ export default function AboutJourneySection() {
                   surgeons
                 </h4>
               </div>
-            </div>
+            </div> */}
 
-          </div>
-        </div>
+        {/* </div>
+    </div> */}
 
-      </div>
-    </section>
+      </div >
+    </section >
   );
 }
