@@ -79,17 +79,17 @@ export default function ServiceRecoveryTimelineSection({
   const currentWeek = safeWeeks[activeWeekIndex] || safeWeeks[0];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden">
       <div className="qht-large-container">
 
         {/* Header */}
         <div className="max-w-3xl mb-12 sm:mb-16 space-y-3">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.18]">
             {title.toLowerCase().includes("recovery")
               ? title
               : `Recovery Time and Aftercare of ${title}`}
           </h2>
-          <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
             {subtitle}
           </p>
         </div>
@@ -106,8 +106,8 @@ export default function ServiceRecoveryTimelineSection({
                   key={w.id ?? idx}
                   onClick={() => setActiveWeekIndex(idx)}
                   className={`px-6 py-3 rounded-full text-xs font-bold transition-all text-center whitespace-nowrap ${isActive
-                      ? "bg-[#596d53] text-white shadow-md"
-                      : "bg-[#dce5de] hover:bg-[#cfded2] text-[#5c685f]"
+                      ? "bg-nexgen-mainDarkBg text-white shadow-md border border-nexgen-primaryGold/30"
+                      : "bg-white hover:bg-gray-100 text-gray-700 border border-gray-200"
                     }`}
                 >
                   {w.label}
@@ -131,14 +131,14 @@ export default function ServiceRecoveryTimelineSection({
           <div className="lg:col-span-5 space-y-6">
 
             {/* Card 1: What to Expect */}
-            <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xs">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-[#596d53] pb-3 border-b border-gray-100">
+            <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xs border border-gray-100">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-nexgen-primaryGold pb-3 border-b border-gray-100">
                 WHAT TO EXPECT
               </h3>
               <div className="divide-y divide-gray-100 mt-2 flex flex-col">
                 {currentWeek.expectations.map((item, idx) => (
                   <div key={idx} className="py-3 flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#596d53] fill-[#596d53]/15 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-nexgen-primaryGold fill-nexgen-primaryGold/15 flex-shrink-0" />
                     <span className="text-xs sm:text-sm font-medium text-gray-800 leading-snug">
                       {item}
                     </span>
@@ -148,14 +148,14 @@ export default function ServiceRecoveryTimelineSection({
             </div>
 
             {/* Card 2: How to Care */}
-            <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xs">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-[#596d53] pb-3 border-b border-gray-100">
+            <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xs border border-gray-100">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-nexgen-primaryGold pb-3 border-b border-gray-100">
                 HOW TO CARE
               </h3>
               <div className="divide-y divide-gray-100 mt-2 flex flex-col">
                 {currentWeek.careGuidelines.map((item, idx) => (
                   <div key={idx} className="py-3 flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#596d53] fill-[#596d53]/15 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-nexgen-primaryGold fill-nexgen-primaryGold/15 flex-shrink-0" />
                     <span className="text-xs sm:text-sm font-medium text-gray-800 leading-snug">
                       {item}
                     </span>

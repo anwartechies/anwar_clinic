@@ -54,15 +54,15 @@ export default function MedicalInfrastructureSection() {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
   return (
-    <section className="py-20 lg:py-24 bg-[#f8faf8] overflow-hidden">
+    <section className="py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden">
       <div className="qht-container">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#1b392b]/10 text-[#1b392b] text-xs font-bold tracking-wider uppercase mb-3">
+          <span className="inline-block px-3.5 py-1.5 rounded-full bg-nexgen-veryDarkHeader/10 text-nexgen-veryDarkHeader border border-nexgen-primaryGold/20 text-xs font-bold tracking-wider uppercase mb-3">
             Facility Excellence
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[600] text-[#162418] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[600] text-nexgen-veryDarkHeader tracking-tight leading-tight">
             Glimpse of Our Infrastructure & Hospitality
           </h2>
           <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto font-normal">
@@ -95,7 +95,7 @@ export default function MedicalInfrastructureSection() {
 
               {/* Card Label Bottom */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#b1fc85] block mb-1">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-nexgen-brightGold block mb-1">
                   {item.category}
                 </span>
                 <h3 className="text-base sm:text-lg font-bold leading-snug">
@@ -107,17 +107,17 @@ export default function MedicalInfrastructureSection() {
         </div>
 
         {/* Feature Highlights Pills */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-semibold text-[#162418]">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-semibold text-nexgen-veryDarkHeader">
           <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-gray-200 shadow-xs">
-            <ShieldCheck className="w-4 h-4 text-[#00d084]" />
+            <ShieldCheck className="w-4 h-4 text-nexgen-primaryGold" />
             <span>NABH & International Sterility Protocols</span>
           </div>
           <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-gray-200 shadow-xs">
-            <Building className="w-4 h-4 text-[#1b392b]" />
+            <Building className="w-4 h-4 text-nexgen-veryDarkHeader" />
             <span>4 Prime Urban Centers across India</span>
           </div>
           <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-gray-200 shadow-xs">
-            <Sparkles className="w-4 h-4 text-[#fcb900]" />
+            <Sparkles className="w-4 h-4 text-nexgen-brightGold" />
             <span>VIP Chauffeur & 5-Star Partner Hospitality</span>
           </div>
         </div>
@@ -150,10 +150,10 @@ export default function MedicalInfrastructureSection() {
 
               <div className="p-6 bg-white flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#1b392b]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-nexgen-primaryGold">
                     {selectedImage.category}
                   </span>
-                  <h3 className="text-lg font-bold text-[#162418] mt-0.5">
+                  <h3 className="text-lg font-bold text-nexgen-veryDarkHeader mt-0.5">
                     {selectedImage.title}
                   </h3>
                 </div>

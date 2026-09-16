@@ -16,27 +16,27 @@ export default function ResultsAboutClinicSection({
 
         <div className="max-w-4xl space-y-6">
           {/* Main Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight">
             {title}
           </h2>
 
           {/* Paragraph 1 */}
-          <p className="text-xs sm:text-[18px] text-[#5c685f] leading-relaxed font-normal">
+          <p className="text-xs sm:text-[18px] text-nexgen-serviceInnerCard leading-relaxed font-normal">
             When seeking genuine, transformative hair restoration, {COMPANY_NAME} delivers unmatched surgical precision and aesthetic excellence. Driven by doctor-led protocols, advanced micro-instrumentation, and high graft viability, our clinic is committed to natural, permanent results.
           </p>
 
           {/* Paragraph 2 */}
-          <p className="text-xs sm:text-[18px] text-[#5c685f] leading-relaxed font-normal">
+          <p className="text-xs sm:text-[18px] text-nexgen-serviceInnerCard leading-relaxed font-normal">
             Patients at {COMPANY_NAME} receive individualized treatment plans using advanced techniques including precision Micro-FUE and Direct Hair Implantation. Whether correcting early temple recession, addressing advanced vertex thinning, or performing beard and eyebrow reconstruction, our surgical team prioritizes soft, age-appropriate hairline architecture and lifelong permanence.
           </p>
 
           {/* Subheading & Bullet Points */}
           <div className="pt-3 space-y-3">
-            <h3 className="text-sm sm:text-2xl font-[500] text-[#1b221d]">
+            <h3 className="text-sm sm:text-2xl font-[500] text-nexgen-veryDarkHeader">
               The {COMPANY_NAME} Standard of Excellence
             </h3>
 
-            <ul className="space-y-2 text-xs sm:text-[18px] text-[#5c685f] list-disc list-inside">
+            <ul className="space-y-2 text-xs sm:text-[18px] text-nexgen-serviceInnerCard list-disc list-inside marker:text-nexgen-primaryGold">
               <li>
                 <span className="font-normal">Board-certified hair restoration surgeons leading every procedure</span>
               </li>

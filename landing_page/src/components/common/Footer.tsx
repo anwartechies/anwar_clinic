@@ -41,12 +41,12 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
   const col2 = serviceItems.slice(half);
 
   return (
-    <footer className="bg-[#3b493a] text-white pt-16 pb-14">
+    <footer className="bg-nexgen-veryDarkHeader text-white pt-16 pb-14 border-t border-nexgen-serviceInnerCard/30">
       <div className="qht-large-container">
         {/* Main Grid: Sticky Left Branch Info + Right Links Sections */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Sticky on Scroll, Logo, Branch Addresses, Contact & Book Surgery */}
-          <div className="lg:col-span-4 space-y-5 text-sm sm:text-[15px] text-[#cdd7cb] lg:sticky lg:top-24 lg:self-start">
+          <div className="lg:col-span-4 space-y-5 text-sm sm:text-[15px] text-gray-300 lg:sticky lg:top-24 lg:self-start">
             {/* Logo */}
             <Link href="/" className="inline-block mb-3">
               <img
@@ -64,7 +64,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
               <p className="font-bold text-white text-base">
                 {COMPANY_NAME}
               </p>
-              <p className="leading-relaxed text-xs sm:text-sm text-[#cdd7cb] mt-1.5">
+              <p className="leading-relaxed text-xs sm:text-sm text-gray-300 mt-1.5">
                 Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014
               </p>
 
@@ -87,7 +87,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
                 href="https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1 text-xs text-[#baf788] hover:underline font-medium mt-3"
+                className="inline-flex items-center gap-1 text-xs text-nexgen-brightGold hover:underline font-medium mt-3"
               >
                 <span>Get Directions on Google Maps →</span>
               </a>
@@ -101,14 +101,14 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
               <p className="font-bold text-white text-base">
                 {COMPANY_NAME} Mumbai
               </p>
-              <p className="leading-relaxed text-xs sm:text-sm text-[#cdd7cb] mt-1.5">
+              <p className="leading-relaxed text-xs sm:text-sm text-gray-300 mt-1.5">
                 Bandra West / Andheri, Mumbai, Maharashtra
               </p>
               <a
                 href="https://maps.google.com/?q=Mumbai+Maharashtra"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1 text-xs text-[#baf788] hover:underline font-medium mt-2"
+                className="inline-flex items-center gap-1 text-xs text-nexgen-brightGold hover:underline font-medium mt-2"
               >
                 <span>View on Google Maps →</span>
               </a>
@@ -118,13 +118,13 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
             <div className="flex items-center justify-between pt-2 text-sm sm:text-[15px] font-medium text-white">
               <a
                 href={`tel:${CLINIC_PHONE.replace(/[^0-9+]/g, "")}`}
-                className="hover:text-[#baf788] transition-colors"
+                className="hover:text-nexgen-brightGold transition-colors"
               >
                 {CLINIC_PHONE}
               </a>
               <a
                 href={`mailto:${CLINIC_EMAIL}`}
-                className="hover:text-[#baf788] transition-colors"
+                className="hover:text-nexgen-brightGold transition-colors"
               >
                 {CLINIC_EMAIL}
               </a>
@@ -136,7 +136,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
                 href="https://pages.razorpay.com/pl_R9xTz14IIPBGyE/view"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block bg-[#596d53] hover:bg-[#495c44] text-white font-semibold text-sm py-2.5 px-7 rounded-full shadow-sm transition-colors"
+                className="inline-block bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold text-sm py-2.5 px-7 rounded-full shadow-sm transition-colors"
               >
                 Book your Surgery
               </a>
@@ -150,7 +150,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
               <h4 className="text-lg sm:text-xl font-bold text-white mb-4 tracking-tight">
                 Company Links
               </h4>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-[15px] text-[#cdd7cb]">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-[15px] text-gray-300">
                 <div className="space-y-3">
                   <p><Link href="/about" className="hover:text-white transition-colors">About us</Link></p>
                   <p><Link href="/results" className="hover:text-white transition-colors">Results</Link></p>
@@ -173,7 +173,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
               <h4 className="text-lg sm:text-xl font-bold text-white mb-4 tracking-tight">
                 Our Services
               </h4>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-[15px] text-[#cdd7cb]">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-[15px] text-gray-300">
                 <div className="space-y-3">
                   {col1.map((item, idx) => (
                     <p key={idx}>
@@ -236,7 +236,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
 
         {/* Bottom Full-Width Line + Copyright & Appointment CTA */}
         <div className="border-t border-white/15 pt-8 mt-14 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-sm text-[#cdd7cb] font-normal">
+          <p className="text-sm text-gray-300 font-normal">
             © {currentYear} {COMPANY_NAME} Regrow Hair |{" "}
             <Link href="/privacy-policy" className="hover:text-white underline">
               Privacy Policy
@@ -249,7 +249,7 @@ export default function Footer({ onOpenConsultation, initialServices }: FooterPr
 
           <button
             onClick={handleOpenConsultation}
-            className="bg-[#596d53] hover:bg-[#495c44] text-white font-semibold text-sm py-3 px-8 rounded-full shadow-sm transition-colors"
+            className="bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold text-sm py-3 px-8 rounded-full shadow-sm transition-colors cursor-pointer"
           >
             Book an Appointment
           </button>

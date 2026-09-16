@@ -102,7 +102,7 @@ function VideoCard({ video }: { video: JourneyVideo }) {
 
           {/* Red YouTube Center Play Button */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-14 h-9 sm:w-16 sm:h-11 bg-[#ff0000] rounded-2xl flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-[#cc0000] transition-all duration-200">
+            <div className="w-14 h-9 sm:w-16 sm:h-11 bg-red-600 rounded-2xl flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-red-700 transition-all duration-200">
               <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white text-white ml-0.5" />
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function CostVideoJourneySection() {
         
         {/* Heading */}
         <div className="max-w-4xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.14]">
             Watch The Incredible Journey & <br />
             Transformation.
           </h2>

@@ -121,17 +121,17 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
   };
 
   return (
-    <div className="bg-[#fcfdfc] min-h-screen pt-24 sm:pt-32 pb-24">
+    <div className="bg-nexgen-pageLightBg min-h-screen pt-24 sm:pt-32 pb-24">
       {/* 1. Breadcrumbs & Job Header */}
-      <section className="border-b border-gray-100 bg-white py-8 sm:py-12">
+      <section className="border-b border-nexgen-primaryGold/20 bg-white py-8 sm:py-12">
         <div className="qht-container">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6">
-            <Link href="/" className="hover:text-[#52664d] transition">
+            <Link href="/" className="hover:text-nexgen-primaryGold transition">
               Home
             </Link>
             <ChevronRight className="w-3 h-3" />
-            <Link href="/career" className="hover:text-[#52664d] transition">
+            <Link href="/career" className="hover:text-nexgen-primaryGold transition">
               Careers
             </Link>
             <ChevronRight className="w-3 h-3" />
@@ -144,34 +144,34 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div>
               <div className="flex flex-wrap items-center gap-2.5 mb-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-[#52664d]/10 text-[#52664d]">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-nexgen-pageLightBg text-nexgen-veryDarkHeader border border-nexgen-primaryGold/20">
                   {job.department}
                 </span>
                 <span className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
                   {job.employmentType}
                 </span>
                 {job.openings > 1 && (
-                  <span className="text-xs font-medium text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
+                  <span className="text-xs font-medium text-nexgen-primaryGold bg-nexgen-pageLightBg border border-nexgen-primaryGold/30 px-3 py-1 rounded-full">
                     {job.openings} Vacancies
                   </span>
                 )}
               </div>
 
-              <h1 className="text-2xl sm:text-4xl font-[500] text-[#162418] tracking-tight mb-4">
+              <h1 className="text-2xl sm:text-4xl font-[500] text-nexgen-veryDarkHeader tracking-tight mb-4">
                 {job.title}
               </h1>
 
-              <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-[#5c685f]">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-gray-600">
                 <span className="flex items-center gap-1.5 font-medium">
-                  <MapPin className="w-4 h-4 text-[#52664d]" />
+                  <MapPin className="w-4 h-4 text-nexgen-primaryGold" />
                   {job.location}
                 </span>
                 <span className="flex items-center gap-1.5 font-medium">
-                  <Briefcase className="w-4 h-4 text-[#52664d]" />
+                  <Briefcase className="w-4 h-4 text-nexgen-primaryGold" />
                   {job.experience} Exp.
                 </span>
                 {job.salaryRange && (
-                  <span className="flex items-center gap-1.5 font-semibold text-[#162418]">
+                  <span className="flex items-center gap-1.5 font-semibold text-nexgen-veryDarkHeader">
                     {job.salaryRange}
                   </span>
                 )}
@@ -180,7 +180,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
 
             <a
               href="#apply-form"
-              className="inline-flex items-center justify-center px-7 py-3 rounded-full text-xs font-semibold text-white bg-[#52664d] hover:bg-[#3d4d39] shadow-sm transition shrink-0"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-full text-xs font-bold text-nexgen-veryDarkHeader bg-nexgen-brightGold hover:bg-yellow-400 shadow-sm transition shrink-0"
             >
               Apply for this Job
             </a>
@@ -194,27 +194,27 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
           {/* Left Column: Job Details */}
           <div className="lg:col-span-7 space-y-10">
             {/* Description */}
-            <div className="bg-white rounded-3xl p-7 sm:p-9 border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
-              <h2 className="text-lg sm:text-xl font-semibold text-[#162418] mb-4 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-[#52664d]" />
+            <div className="bg-white rounded-3xl p-7 sm:p-9 border border-nexgen-primaryGold/20 shadow-xs">
+              <h2 className="text-lg sm:text-xl font-semibold text-nexgen-veryDarkHeader mb-4 flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-nexgen-primaryGold" />
                 About The Position
               </h2>
-              <p className="text-sm text-[#5c685f] leading-relaxed whitespace-pre-line font-normal">
+              <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line font-normal">
                 {job.description}
               </p>
             </div>
 
             {/* Responsibilities */}
             {job.responsibilities && job.responsibilities.length > 0 && (
-              <div className="bg-white rounded-3xl p-7 sm:p-9 border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
-                <h2 className="text-lg sm:text-xl font-semibold text-[#162418] mb-5 flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#52664d]" />
+              <div className="bg-white rounded-3xl p-7 sm:p-9 border border-nexgen-primaryGold/20 shadow-xs">
+                <h2 className="text-lg sm:text-xl font-semibold text-nexgen-veryDarkHeader mb-5 flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-nexgen-primaryGold" />
                   Key Responsibilities
                 </h2>
                 <ul className="space-y-3.5">
                   {job.responsibilities.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-xs sm:text-[13px] text-gray-700 leading-relaxed">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#52664d] mt-2 shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-nexgen-primaryGold mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -224,15 +224,15 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
 
             {/* Requirements & Qualifications */}
             {job.requirements && job.requirements.length > 0 && (
-              <div className="bg-white rounded-3xl p-7 sm:p-9 border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
-                <h2 className="text-lg sm:text-xl font-semibold text-[#162418] mb-5 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#52664d]" />
+              <div className="bg-white rounded-3xl p-7 sm:p-9 border border-nexgen-primaryGold/20 shadow-xs">
+                <h2 className="text-lg sm:text-xl font-semibold text-nexgen-veryDarkHeader mb-5 flex items-center gap-2">
+                  <ShieldCheck className="w-5 h-5 text-nexgen-primaryGold" />
                   Qualifications & Requirements
                 </h2>
                 <ul className="space-y-3.5">
                   {job.requirements.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-xs sm:text-[13px] text-gray-700 leading-relaxed">
-                      <CheckCircle2 className="w-4 h-4 text-[#52664d] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-nexgen-primaryGold shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -242,15 +242,15 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
 
             {/* Perks & Benefits */}
             {job.benefits && job.benefits.length > 0 && (
-              <div className="bg-white rounded-3xl p-7 sm:p-9 border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
-                <h2 className="text-lg sm:text-xl font-semibold text-[#162418] mb-5 flex items-center gap-2">
-                  <Building className="w-5 h-5 text-[#52664d]" />
+              <div className="bg-white rounded-3xl p-7 sm:p-9 border border-nexgen-primaryGold/20 shadow-xs">
+                <h2 className="text-lg sm:text-xl font-semibold text-nexgen-veryDarkHeader mb-5 flex items-center gap-2">
+                  <Building className="w-5 h-5 text-nexgen-primaryGold" />
                   What We Offer / Perks
                 </h2>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   {job.benefits.map((item, idx) => (
-                    <li key={idx} className="p-3.5 rounded-2xl bg-[#f8faf8] border border-gray-100 text-xs text-gray-700 font-medium flex items-center gap-2.5">
-                      <div className="w-2 h-2 rounded-full bg-[#52664d] shrink-0" />
+                    <li key={idx} className="p-3.5 rounded-2xl bg-nexgen-pageLightBg border border-nexgen-primaryGold/20 text-xs text-nexgen-veryDarkHeader font-medium flex items-center gap-2.5">
+                      <div className="w-2 h-2 rounded-full bg-nexgen-primaryGold shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -261,20 +261,20 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
 
           {/* Right Column: Sticky Application Form */}
           <div id="apply-form" className="lg:col-span-5 lg:sticky lg:top-28">
-            <div className="bg-white rounded-3xl p-7 sm:p-8 border border-gray-100 shadow-[0_6px_35px_rgba(0,0,0,0.04)]">
+            <div className="bg-white rounded-3xl p-7 sm:p-8 border border-nexgen-primaryGold/20 shadow-lg">
               {submitted ? (
                 <div className="py-10 text-center space-y-4">
-                  <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-sm">
+                  <div className="w-16 h-16 bg-nexgen-pageLightBg text-nexgen-primaryGold border border-nexgen-primaryGold/30 rounded-full flex items-center justify-center mx-auto shadow-sm">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Application Submitted!</h3>
+                  <h3 className="text-xl font-bold text-nexgen-veryDarkHeader">Application Submitted!</h3>
                   <p className="text-xs text-gray-600 leading-relaxed max-w-sm mx-auto">
                     Thank you, <span className="font-semibold text-gray-900">{fullName}</span>. Our recruitment team at {COMPANY_NAME} will review your application for the <span className="font-semibold">{job.title}</span> position and reach out via phone or email shortly.
                   </p>
                   <div className="pt-4">
                     <Link
                       href="/career"
-                      className="inline-flex items-center gap-2 px-6 py-2.5 text-xs font-semibold text-[#52664d] bg-[#52664d]/10 hover:bg-[#52664d]/20 rounded-full transition"
+                      className="inline-flex items-center gap-2 px-6 py-2.5 text-xs font-bold text-nexgen-veryDarkHeader bg-nexgen-brightGold hover:bg-yellow-400 rounded-full transition shadow-sm"
                     >
                       Browse Other Openings
                     </Link>
@@ -283,8 +283,8 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="border-b border-gray-100 pb-4 mb-4">
-                    <h3 className="text-lg font-bold text-[#162418]">Apply for this Position</h3>
-                    <p className="text-xs text-[#5c685f] mt-1">
+                    <h3 className="text-lg font-bold text-nexgen-veryDarkHeader">Apply for this Position</h3>
+                    <p className="text-xs text-gray-500 mt-1">
                       Complete the details below and upload your CV.
                     </p>
                   </div>
@@ -307,7 +307,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                       placeholder="Dr. / Mr. / Ms. Full Name"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#52664d]/20 focus:border-[#52664d] transition"
+                      className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-nexgen-primaryGold/20 focus:border-nexgen-primaryGold transition"
                     />
                   </div>
 
@@ -323,7 +323,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                         placeholder="you@example.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#52664d]/20 focus:border-[#52664d] transition"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-nexgen-primaryGold/20 focus:border-nexgen-primaryGold transition"
                       />
                     </div>
 
@@ -337,7 +337,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                         placeholder="+91 98765 43210"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#52664d]/20 focus:border-[#52664d] transition"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-nexgen-primaryGold/20 focus:border-nexgen-primaryGold transition"
                       />
                     </div>
                   </div>
@@ -354,7 +354,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                         placeholder="e.g. 3 Years"
                         value={experienceYears}
                         onChange={(e) => setExperienceYears(e.target.value)}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#52664d]/20 focus:border-[#52664d] transition"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-nexgen-primaryGold/20 focus:border-nexgen-primaryGold transition"
                       />
                     </div>
 
@@ -367,7 +367,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                         placeholder="e.g. Apollo / Medanta"
                         value={currentCompany}
                         onChange={(e) => setCurrentCompany(e.target.value)}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#52664d]/20 focus:border-[#52664d] transition"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-nexgen-primaryGold/20 focus:border-nexgen-primaryGold transition"
                       />
                     </div>
                   </div>
@@ -380,7 +380,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                     <select
                       value={noticePeriod}
                       onChange={(e) => setNoticePeriod(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#52664d]/20 focus:border-[#52664d] transition"
+                      className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-nexgen-primaryGold/20 focus:border-nexgen-primaryGold transition"
                     >
                       <option value="Immediate">Immediate / Available Now</option>
                       <option value="15 Days">15 Days</option>
@@ -396,9 +396,9 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                     </label>
 
                     {resumeFile ? (
-                      <div className="p-3.5 rounded-2xl border border-[#52664d]/30 bg-[#52664d]/5 flex items-center justify-between">
+                      <div className="p-3.5 rounded-2xl border border-nexgen-primaryGold/40 bg-nexgen-pageLightBg flex items-center justify-between">
                         <div className="flex items-center gap-2.5 min-w-0">
-                          <FileText className="w-5 h-5 text-[#52664d] shrink-0" />
+                          <FileText className="w-5 h-5 text-nexgen-primaryGold shrink-0" />
                           <div className="min-w-0">
                             <p className="text-xs font-semibold text-gray-900 truncate">
                               {resumeFile.name}
@@ -421,9 +421,9 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                         onDragOver={(e) => e.preventDefault()}
                         onDrop={handleDrop}
                         onClick={() => fileInputRef.current?.click()}
-                        className="p-5 rounded-2xl border-2 border-dashed border-gray-200 hover:border-[#52664d] bg-gray-50/50 hover:bg-[#52664d]/5 text-center cursor-pointer transition"
+                        className="p-5 rounded-2xl border-2 border-dashed border-gray-200 hover:border-nexgen-primaryGold bg-gray-50/50 hover:bg-nexgen-pageLightBg text-center cursor-pointer transition"
                       >
-                        <Upload className="w-6 h-6 text-[#52664d] mx-auto mb-1.5" />
+                        <Upload className="w-6 h-6 text-nexgen-primaryGold mx-auto mb-1.5" />
                         <p className="text-xs font-medium text-gray-800">
                           Click to browse or drag & drop resume
                         </p>
@@ -451,7 +451,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                       placeholder="Briefly highlight your relevant clinical background, surgical skills, or reasons for applying..."
                       value={coverNote}
                       onChange={(e) => setCoverNote(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#52664d]/20 focus:border-[#52664d] transition"
+                      className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-nexgen-primaryGold/20 focus:border-nexgen-primaryGold transition"
                     />
                   </div>
 
@@ -459,7 +459,7 @@ export default function JobDetailClient({ job }: JobDetailClientProps) {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-3 px-5 rounded-full text-xs font-semibold text-white bg-[#52664d] hover:bg-[#3d4d39] disabled:opacity-50 transition shadow-sm flex items-center justify-center gap-2"
+                    className="w-full py-3 px-5 rounded-full text-xs font-bold text-nexgen-veryDarkHeader bg-nexgen-brightGold hover:bg-yellow-400 disabled:opacity-50 transition shadow-md flex items-center justify-center gap-2 cursor-pointer"
                   >
                     {submitting ? (
                       <>

@@ -7,13 +7,13 @@
 :root {
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-display: 'Outfit', system-ui, sans-serif;
-  --qht-dark: #162418;
-  --qht-primary: #1b392b;
-  --qht-primary-hover: #284c3b;
-  --qht-accent: #b1fc85;
-  --qht-vivid-green: #00d084;
-  --qht-light-bg: #f8faf8;
-  --qht-light-bg-alt: #f1f5f2;
+  --qht-dark: #021E2B;
+  --qht-primary: #032A3A;
+  --qht-primary-hover: #06384A;
+  --qht-accent: #D6A447;
+  --qht-vivid-green: #EDB957;
+  --qht-light-bg: #F7F2E9;
+  --qht-light-bg-alt: #FBF9F5;
 
   /* ==========================================================================
      NexGen Premium Color Palette
@@ -67,7 +67,7 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
-  color: #111111;
+  color: #021E2B;
   background-color: #ffffff;
 }
 
@@ -91,16 +91,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f2;
+  background: #F7F2E9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1b392b;
+  background: #032A3A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #284c3b;
+  background: #D6A447;
 }
 
 /* Smooth Horizontal Scroll without scrollbars for carousels */
@@ -136,8 +136,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #1b392b;
-  color: #ffffff;
+  background-color: #D6A447;
+  color: #021E2B;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.75rem 1.75rem;

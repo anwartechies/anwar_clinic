@@ -146,11 +146,11 @@ export default function ServiceDetailHero({
 
       {/* 2. Floating "Request a callback" Green Bar */}
       <div className="relative z-20 -mt-10 sm:-mt-12 lg:-mt-14 max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="bg-[#596d53] text-white rounded-3xl p-5 sm:p-7 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-white/10">
+        <div className="bg-nexgen-mainDarkBg text-white rounded-3xl p-5 sm:p-7 shadow-[0_12px_36px_rgba(0,0,0,0.25)] border border-nexgen-primaryGold/30">
           {isSubmitted ? (
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-1 text-center sm:text-left">
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-7 h-7 text-[#b1fc85]" />
+                <CheckCircle2 className="w-7 h-7 text-nexgen-brightGold" />
                 <div>
                   <h4 className="text-base font-bold text-white">
                     Thank You, {fullName}! Callback Scheduled.
@@ -163,7 +163,7 @@ export default function ServiceDetailHero({
               <button
                 type="button"
                 onClick={handleSendAnother}
-                className="px-5 py-2 bg-white text-[#1b392b] rounded-full text-xs font-bold hover:bg-gray-100 transition-colors"
+                className="px-5 py-2 bg-nexgen-brightGold text-nexgen-veryDarkHeader rounded-full text-xs font-bold hover:brightness-105 transition-all"
               >
                 Send Another
               </button>
@@ -180,7 +180,7 @@ export default function ServiceDetailHero({
               {/* Form Input Fields */}
               <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 items-center">
                 {/* Full Name */}
-                <div className="relative border-b border-white/40 focus-within:border-white transition-colors pb-1">
+                <div className="relative border-b border-white/40 focus-within:border-nexgen-primaryGold transition-colors pb-1">
                   <input
                     type="text"
                     required
@@ -192,7 +192,7 @@ export default function ServiceDetailHero({
                 </div>
 
                 {/* Country Code + Mobile Number */}
-                <div className="flex items-center gap-2 border-b border-white/40 focus-within:border-white transition-colors pb-1">
+                <div className="flex items-center gap-2 border-b border-white/40 focus-within:border-nexgen-primaryGold transition-colors pb-1">
                   <div className="relative">
                     <select
                       value={countryCode}
@@ -218,7 +218,7 @@ export default function ServiceDetailHero({
                 </div>
 
                 {/* Email Address */}
-                <div className="relative border-b border-white/40 focus-within:border-white transition-colors pb-1">
+                <div className="relative border-b border-white/40 focus-within:border-nexgen-primaryGold transition-colors pb-1">
                   <input
                     type="email"
                     placeholder="Email Address"
@@ -234,7 +234,7 @@ export default function ServiceDetailHero({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto bg-white text-[#2a382c] hover:bg-[#f0f4ef] font-bold text-sm sm:text-base py-2.5 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150 disabled:opacity-60"
+                  className="w-full sm:w-auto bg-nexgen-brightGold text-nexgen-veryDarkHeader hover:brightness-105 font-bold text-sm sm:text-base py-2.5 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150 disabled:opacity-60"
                 >
                   {isSubmitting ? "Sending..." : "Submit"}
                 </button>

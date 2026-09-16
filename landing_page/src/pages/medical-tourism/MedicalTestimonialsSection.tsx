@@ -144,7 +144,7 @@ export default function MedicalTestimonialsSection() {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-[#586b4e] text-white overflow-hidden">
+    <section className="py-20 lg:py-28 bg-nexgen-mainDarkBg text-white overflow-hidden border-t border-nexgen-primaryGold/20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* ========================================================
@@ -179,20 +179,20 @@ export default function MedicalTestimonialsSection() {
                 <div>
                   {/* Top Row: 5 Green Stars + Outline Quote Icon */}
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-[#586b4e]">
+                    <div className="flex items-center gap-1 text-nexgen-primaryGold">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-[#586b4e] text-[#586b4e]" />
+                        <Star key={i} className="w-4 h-4 fill-nexgen-primaryGold text-nexgen-primaryGold" />
                       ))}
                     </div>
 
                     {/* Outline Quote Symbol */}
-                    <span className="text-[#8ba07f] font-serif text-3xl font-extrabold select-none leading-none">
+                    <span className="text-nexgen-brightGold font-serif text-3xl font-extrabold select-none leading-none">
                       ❞
                     </span>
                   </div>
 
                   {/* Card Title */}
-                  <h3 className="text-lg sm:text-xl font-bold text-[#162418] tracking-tight mt-5 mb-3 leading-snug">
+                  <h3 className="text-lg sm:text-xl font-bold text-nexgen-veryDarkHeader tracking-tight mt-5 mb-3 leading-snug">
                     {item.title}
                   </h3>
 
@@ -205,7 +205,7 @@ export default function MedicalTestimonialsSection() {
                 {/* Bottom Section: Divider + Name & City */}
                 <div>
                   <div className="border-t border-gray-200/80 my-5" />
-                  <h4 className="text-sm sm:text-base font-bold text-[#162418]">
+                  <h4 className="text-sm sm:text-base font-bold text-nexgen-veryDarkHeader">
                     {item.name}
                   </h4>
                   <p className="text-xs text-gray-500 font-normal mt-0.5">
@@ -226,18 +226,18 @@ export default function MedicalTestimonialsSection() {
           <div className="w-full max-w-xl h-px bg-white/20 absolute left-1/2 -translate-x-1/2" />
 
           {/* Navigation Prev / Next Buttons */}
-          <div className="relative z-10 flex items-center gap-3 bg-[#586b4e] px-4">
+          <div className="relative z-10 flex items-center gap-3 bg-nexgen-mainDarkBg px-4">
             <button
               onClick={prevSlide}
               aria-label="Previous testimonial (Slide Right)"
-              className="w-11 h-11 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white hover:text-[#586b4e] active:scale-95 transition-all cursor-pointer shadow-sm"
+              className="w-11 h-11 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-nexgen-brightGold hover:text-nexgen-veryDarkHeader active:scale-95 transition-all cursor-pointer shadow-sm"
             >
               <ChevronLeft className="w-5 h-5 stroke-[2]" />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next testimonial (Slide Left)"
-              className="w-11 h-11 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white hover:text-[#586b4e] active:scale-95 transition-all cursor-pointer shadow-sm"
+              className="w-11 h-11 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-nexgen-brightGold hover:text-nexgen-veryDarkHeader active:scale-95 transition-all cursor-pointer shadow-sm"
             >
               <ChevronRight className="w-5 h-5 stroke-[2]" />
             </button>

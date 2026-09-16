@@ -55,14 +55,14 @@ export default function MedicalCostComparisonSection() {
   const { openConsultation } = useConsultation();
 
   return (
-    <section className="py-20 lg:py-24 bg-[#f8faf8] overflow-hidden">
+    <section className="py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* ========================================================
             LEFT-ALIGNED HEADER (Matching Screenshot)
            ======================================================== */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#162418] tracking-tight leading-[1.2]">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-nexgen-veryDarkHeader tracking-tight leading-[1.2]">
             Cost Comparison Between Hair Transplant
             in India, the UAE, Turkey, the USA, and China
           </h2>
@@ -76,7 +76,7 @@ export default function MedicalCostComparisonSection() {
             <div
               key={idx}
               className={`bg-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-sm border transition-all duration-300 hover:shadow-md ${item.badge
-                  ? "border-[#2c3d28]/30 ring-1 ring-[#2c3d28]/10"
+                  ? "border-nexgen-primaryGold/50 ring-1 ring-nexgen-primaryGold/20 shadow-md"
                   : "border-gray-200/70"
                 }`}
             >
@@ -88,12 +88,12 @@ export default function MedicalCostComparisonSection() {
                       Starts at
                     </span>
                     {item.badge && (
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-[#eff5f1] text-[#2c3d28] border border-[#d8e8dc]">
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-nexgen-brightGold/20 text-nexgen-veryDarkHeader border border-nexgen-primaryGold/40">
                         {item.badge}
                       </span>
                     )}
                   </div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-[#162418] tracking-tight mt-2">
+                  <div className="text-3xl sm:text-4xl font-extrabold text-nexgen-veryDarkHeader tracking-tight mt-2">
                     {item.price}
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default function MedicalCostComparisonSection() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold text-[#162418]">
+                  <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
                     {item.country}
                   </h3>
                 </div>
@@ -123,35 +123,7 @@ export default function MedicalCostComparisonSection() {
             </div>
           ))}
         </div>
-
-        {/* ========================================================
-            BOTTOM BANNER (Matching Screenshot)
-           ======================================================== */}
-        {/* <div className="mt-10 bg-gradient-to-r from-[#2c3d28] via-[#354830] to-[#243320] rounded-2xl sm:rounded-3xl p-6 sm:py-6 sm:px-10 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl"> */}
-
-        {/* Left: Graphic + Title */}
-        {/* <div className="flex items-center gap-4 text-center sm:text-left">
-          <div className="w-12 h-12 rounded-2xl bg-white/15 border border-white/25 flex-shrink-0 flex items-center justify-center text-[#b1fc85] shadow-xs">
-            <Calculator className="w-6 h-6 stroke-[2]" />
-          </div>
-          <h3 className="text-xl sm:text-2xl lg:text-[26px] font-bold text-white tracking-tight leading-tight">
-            Get your hair transplant cost estimation.
-          </h3>
-        </div> */}
-
-        {/* Right: Consult Now Button */}
-        {/* <div className="flex-shrink-0">
-          <button
-            onClick={openConsultation}
-            className="px-8 py-3.5 rounded-full bg-white text-[#162418] font-bold text-sm sm:text-base shadow-md hover:bg-[#eff5f1] transition-all transform hover:scale-105 cursor-pointer whitespace-nowrap"
-          >
-            Consult Now
-          </button>
-        </div>
-
-      </div> */}
-
       </div>
-    </section >
+    </section>
   );
 }

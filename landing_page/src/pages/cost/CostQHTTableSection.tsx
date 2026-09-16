@@ -7,37 +7,43 @@ const DHI_PRICING_ROWS = [
   {
     stage: "Norwood II–III (Hairline Restructuring)",
     grafts: "800 – 1,500",
-    dhiCost: "₹12,000 – ₹22,500",
+    bioFueCost: "₹12,000 – ₹22,500",
+    dhiCost: "₹16,000 – ₹30,000",
     premiumCost: "₹20,000 – ₹37,500",
   },
   {
     stage: "Norwood III (Temples + Vertex)",
     grafts: "1,200 – 1,800",
-    dhiCost: "₹18,000 – ₹27,000",
+    bioFueCost: "₹18,000 – ₹27,000",
+    dhiCost: "₹24,000 – ₹36,000",
     premiumCost: "₹30,000 – ₹45,000",
   },
   {
     stage: "Norwood IV (Crown & Mid-Scalp)",
     grafts: "2,000 – 2,500",
-    dhiCost: "₹30,000 – ₹37,500",
+    bioFueCost: "₹30,000 – ₹37,500",
+    dhiCost: "₹40,000 – ₹50,000",
     premiumCost: "₹50,000 – ₹62,500",
   },
   {
     stage: "Norwood V (Extensive Thinning)",
     grafts: "2,500 – 3,500",
-    dhiCost: "₹37,500 – ₹52,500",
+    bioFueCost: "₹37,500 – ₹52,500",
+    dhiCost: "₹50,000 – ₹70,000",
     premiumCost: "₹62,500 – ₹87,500",
   },
   {
     stage: "Norwood VI (Significant Bald Area)",
     grafts: "3,500 – 4,500",
-    dhiCost: "₹52,500 – ₹67,500",
+    bioFueCost: "₹52,500 – ₹67,500",
+    dhiCost: "₹70,000 – ₹90,000",
     premiumCost: "₹87,500 – ₹1,12,500",
   },
   {
     stage: "Norwood VII (Mega Session)",
     grafts: "5,000 – 6,000",
-    dhiCost: "₹75,000 – ₹90,000",
+    bioFueCost: "₹75,000 – ₹90,000",
+    dhiCost: "₹1,00,000 – ₹1,20,000",
     premiumCost: "₹1,25,000 – ₹1,50,000",
   },
 ];
@@ -49,15 +55,15 @@ export default function CostQHTTableSection() {
         
         {/* Header */}
         <div className="max-w-4xl mb-10">
-          <span className="text-xs sm:text-sm font-semibold text-[#5c685f] block mb-2 tracking-wide">
+          <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold block mb-2 tracking-wide">
             Bio FUE & DHI Pricing Matrix
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight mb-4">
             Bio FUE & DHI Hair Transplant <br />
             Cost by Norwood Stage
           </h2>
-          <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-3xl">
-            {COMPANY_NAME} offers specialized Bio FUE (with DMEM medium preservation) and Direct Hair Implantation (DHI) starting from just ₹15 per graft, and Premium Sapphire DHI at ₹25 per graft. All procedures include complimentary GFC sessions, 5 days medication, and post-op care.
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-3xl">
+            {COMPANY_NAME} delivers cutting-edge follicular preservation and implantation protocols. Choose between Bio FUE with DMEM nutrient medium (₹15/graft), Direct Hair Implantation (DHI) with micro-pen precision (₹20/graft), and Premium Sapphire DHI (₹25/graft) for ultra-refined graft density. All surgical tiers include complimentary regenerative GFC/PRP therapy, post-op medications, and dedicated surgeon reviews.
           </p>
         </div>
 
@@ -65,11 +71,12 @@ export default function CostQHTTableSection() {
         <div className="w-full rounded-3xl overflow-hidden shadow-xl border border-gray-200/80 bg-white">
           
           {/* Table Header Row */}
-          <div className="bg-[#243322] text-white py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 font-bold text-xs sm:text-sm">
-            <div className="col-span-4 sm:col-span-4">Norwood Stage</div>
-            <div className="col-span-3 sm:col-span-3">Grafts Required</div>
-            <div className="col-span-3 sm:col-span-3 text-left">Bio FUE / DHI (₹15/graft)</div>
-            <div className="col-span-2 sm:col-span-2 text-right">Premium DHI (₹25/graft)</div>
+          <div className="bg-nexgen-veryDarkHeader text-white py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 font-bold text-xs sm:text-sm border-b border-nexgen-primaryGold/20">
+            <div className="col-span-4 sm:col-span-3">Norwood Stage</div>
+            <div className="col-span-2 sm:col-span-3">Est. Grafts</div>
+            <div className="col-span-2 sm:col-span-2 text-left">Bio FUE (₹15)</div>
+            <div className="col-span-2 sm:col-span-2 text-left">DHI (₹20)</div>
+            <div className="col-span-2 sm:col-span-2 text-right">Premium (₹25)</div>
           </div>
 
           {/* Table Body Rows */}
@@ -79,16 +86,19 @@ export default function CostQHTTableSection() {
                 key={idx}
                 className="py-4 sm:py-5 px-6 sm:px-10 grid grid-cols-12 items-center hover:bg-gray-50/80 transition-colors"
               >
-                <div className="col-span-4 sm:col-span-4 font-bold text-gray-900">
+                <div className="col-span-4 sm:col-span-3 font-bold text-gray-900">
                   {row.stage}
                 </div>
-                <div className="col-span-3 sm:col-span-3 text-gray-500 font-medium">
+                <div className="col-span-2 sm:col-span-3 text-gray-500 font-medium">
                   {row.grafts}
                 </div>
-                <div className="col-span-3 sm:col-span-3 font-bold text-[#0062b8]">
+                <div className="col-span-2 sm:col-span-2 font-bold text-nexgen-veryDarkHeader">
+                  {row.bioFueCost}
+                </div>
+                <div className="col-span-2 sm:col-span-2 font-bold text-nexgen-veryDarkHeader">
                   {row.dhiCost}
                 </div>
-                <div className="col-span-2 sm:col-span-2 font-bold text-[#b45309] text-right">
+                <div className="col-span-2 sm:col-span-2 font-bold text-nexgen-primaryGold text-right">
                   {row.premiumCost}
                 </div>
               </div>
@@ -99,7 +109,7 @@ export default function CostQHTTableSection() {
 
         {/* Footer Note */}
         <p className="text-xs text-gray-500 font-normal mt-6">
-          Includes free GFC/PRP, 5 days medications, headwash, blood test, and post-transplant doctor consultations at {COMPANY_NAME} Clinic.
+          * Transparent pricing structure. Every package includes complimentary GFC/PRP sessions, 5 days medication, sterile headwashes, laboratory diagnostics, and scheduled surgeon follow-ups at {COMPANY_NAME}.
         </p>
 
       </div>

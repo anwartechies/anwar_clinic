@@ -43,7 +43,7 @@ export default function ServiceWhyUsSection({
   const defaultSubtitle = `At ${COMPANY_NAME}, our clinical protocols combine surgical artistry, sterile theater standards, and dedicated patient care.\nKey clinical strengths:`;
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#596d53] text-white overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden border-t border-nexgen-primaryGold/25">
       <div className="qht-large-container">
         
         {/* Header Row */}
@@ -74,7 +74,7 @@ export default function ServiceWhyUsSection({
             <div className="mt-8 sm:mt-10 w-full text-center lg:text-left">
               <button
                 onClick={onOpenConsultation}
-                className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
+                className="bg-nexgen-brightGold hover:bg-nexgen-primaryGold text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150 cursor-pointer"
               >
                 Book Free Consultation
               </button>

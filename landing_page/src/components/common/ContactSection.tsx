@@ -83,7 +83,7 @@ export default function ContactSection({
   };
 
   return (
-    <section className={`py-16 sm:py-20 lg:py-24 mt-32 bg-[#eff5f1] overflow-hidden ${className}`}>
+    <section className={`py-16 sm:py-20 lg:py-24 mt-32 bg-nexgen-pageLightBg overflow-hidden ${className}`}>
       <div className="qht-large-container">
 
         {/* Top Half: Contact Info (Left) + Lead Form (Right) */}
@@ -91,13 +91,13 @@ export default function ContactSection({
 
           {/* Left Column: Heading, Info, Email */}
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] leading-[1.18] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader leading-[1.18] tracking-tight">
               Connect with Our Specialists
               <br />
               or Visit Our Centers.
             </h2>
 
-            <p className="text-sm sm:text-base text-[#5c685f] leading-relaxed max-w-md font-normal">
+            <p className="text-sm sm:text-base text-nexgen-serviceInnerCard leading-relaxed max-w-md font-normal">
               Reach out directly for a comprehensive graft assessment, surgeon consultation, and tailored treatment roadmap.
             </p>
 
@@ -105,7 +105,7 @@ export default function ContactSection({
             <div className="pt-2">
               <a
                 href={`mailto:care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`}
-                className="text-base sm:text-lg font-bold text-[#1b221d] hover:text-[#596d53] transition-colors"
+                className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors"
               >
                 care@{COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com
               </a>
@@ -115,16 +115,16 @@ export default function ContactSection({
           {/* Right Column: Lead Form */}
           <div className="lg:col-span-6">
             <div className="w-full">
-              <h3 className="text-2xl sm:text-[28px] font-[500] text-[#596d53] mb-6">
+              <h3 className="text-2xl sm:text-[28px] font-[500] text-nexgen-primaryGold mb-6">
                 Schedule a Consultation
               </h3>
 
               {isSubmitted ? (
                 <div className="bg-white rounded-3xl p-8 text-center space-y-4 shadow-sm border border-gray-100">
-                  <div className="w-14 h-14 bg-[#596d53]/10 text-[#596d53] rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-14 h-14 bg-nexgen-primaryGold/10 text-nexgen-primaryGold rounded-full flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="text-xl font-bold text-[#1b221d]">
+                  <h4 className="text-xl font-bold text-nexgen-veryDarkHeader">
                     Thank You, {fullName}!
                   </h4>
                   <p className="text-sm text-gray-600 max-w-sm mx-auto">
@@ -132,7 +132,7 @@ export default function ContactSection({
                   </p>
                   <button
                     onClick={handleReset}
-                    className="mt-4 px-6 py-2.5 bg-[#596d53] text-white rounded-xl text-xs font-semibold hover:bg-[#495b44] transition-colors"
+                    className="mt-4 px-6 py-2.5 bg-nexgen-primaryGold text-nexgen-veryDarkHeader rounded-xl text-xs font-bold hover:bg-nexgen-brightGold transition-colors cursor-pointer"
                   >
                     Submit Another Inquiry
                   </button>
@@ -147,7 +147,7 @@ export default function ContactSection({
                       placeholder="Full Name"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      className="w-full px-4 py-3 bg-white rounded-lg border border-transparent focus:border-[#596d53] text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-xs transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-lg border border-transparent focus:border-nexgen-primaryGold text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-xs transition-all"
                     />
                   </div>
 
@@ -157,7 +157,7 @@ export default function ContactSection({
                       <select
                         value={countryCode}
                         onChange={(e) => setCountryCode(e.target.value)}
-                        className="h-full appearance-none pl-3 pr-7 py-3 bg-white rounded-lg border border-transparent focus:border-[#596d53] text-xs sm:text-sm font-medium text-gray-700 focus:outline-none shadow-xs cursor-pointer"
+                        className="h-full appearance-none pl-3 pr-7 py-3 bg-white rounded-lg border border-transparent focus:border-nexgen-primaryGold text-xs sm:text-sm font-medium text-gray-700 focus:outline-none shadow-xs cursor-pointer"
                       >
                         {COUNTRY_CODES.map((c, idx) => (
                           <option key={idx} value={c.code}>
@@ -174,7 +174,7 @@ export default function ContactSection({
                       placeholder="Enter phone number"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
-                      className="flex-1 px-4 py-3 bg-white rounded-lg border border-transparent focus:border-[#596d53] text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-xs transition-all"
+                      className="flex-1 px-4 py-3 bg-white rounded-lg border border-transparent focus:border-nexgen-primaryGold text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-xs transition-all"
                     />
                   </div>
 
@@ -185,7 +185,7 @@ export default function ContactSection({
                       placeholder="Enter your email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-4 py-3 bg-white rounded-lg border border-transparent focus:border-[#596d53] text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-xs transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-lg border border-transparent focus:border-nexgen-primaryGold text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-xs transition-all"
                     />
                   </div>
 
@@ -196,18 +196,18 @@ export default function ContactSection({
                       placeholder="Enter City"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
-                      className="w-full px-4 py-3 bg-white rounded-lg border border-transparent focus:border-[#596d53] text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-xs transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-lg border border-transparent focus:border-nexgen-primaryGold text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-xs transition-all"
                     />
                   </div>
 
                   {/* Checkboxes */}
-                  <div className="pt-1.5 space-y-2 text-xs text-[#5c685f]">
+                  <div className="pt-1.5 space-y-2 text-xs text-nexgen-serviceInnerCard">
                     <label className="flex items-center gap-2 cursor-pointer select-none">
                       <input
                         type="checkbox"
                         checked={whatsappOptIn}
                         onChange={(e) => setWhatsappOptIn(e.target.checked)}
-                        className="w-4 h-4 rounded border-gray-300 text-[#596d53] focus:ring-[#596d53] accent-[#596d53] cursor-pointer"
+                        className="w-4 h-4 rounded border-gray-300 text-nexgen-primaryGold focus:ring-nexgen-primaryGold accent-nexgen-primaryGold cursor-pointer"
                       />
                       <span>Opt-in for WhatsApp updates</span>
                     </label>
@@ -217,7 +217,7 @@ export default function ContactSection({
                         type="checkbox"
                         checked={privacyAgreed}
                         onChange={(e) => setPrivacyAgreed(e.target.checked)}
-                        className="w-4 h-4 rounded border-gray-300 text-[#596d53] focus:ring-[#596d53] accent-[#596d53] cursor-pointer"
+                        className="w-4 h-4 rounded border-gray-300 text-nexgen-primaryGold focus:ring-nexgen-primaryGold accent-nexgen-primaryGold cursor-pointer"
                       />
                       <span>You authorise {COMPANY_NAME} as per Privacy Policy</span>
                     </label>
@@ -234,7 +234,7 @@ export default function ContactSection({
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3.5 bg-[#596d53] hover:bg-[#495b44] text-white rounded-xl font-bold text-sm sm:text-base shadow-sm transition-all duration-200 active:scale-[0.99] disabled:opacity-70"
+                      className="w-full py-3.5 bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader rounded-xl font-bold text-sm sm:text-base shadow-sm transition-all duration-200 active:scale-[0.99] disabled:opacity-70 cursor-pointer"
                     >
                       {isSubmitting ? "Scheduling..." : "Schedule a Consultation"}
                     </button>
@@ -258,17 +258,17 @@ export default function ContactSection({
                 className="bg-white rounded-3xl p-7 sm:p-8 flex flex-col justify-start shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-200 group"
               >
                 {/* Location Icon */}
-                <div className="w-8 h-8 flex items-center justify-center text-[#596d53] flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-6 h-6 stroke-[2.2] fill-[#596d53]/15" />
+                <div className="w-8 h-8 flex items-center justify-center text-nexgen-primaryGold flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-6 h-6 stroke-[2.2] fill-nexgen-primaryGold/15" />
                 </div>
 
                 {/* City Name */}
-                <h4 className="text-lg sm:text-xl font-[500] text-[#1b221d] mt-4 tracking-tight leading-snug">
+                <h4 className="text-lg sm:text-xl font-[500] text-nexgen-veryDarkHeader mt-4 tracking-tight leading-snug">
                   {loc.city}
                 </h4>
 
                 {/* Address */}
-                <p className="text-xs sm:text-[13px] text-[#5c685f] mt-2.5 leading-relaxed font-normal">
+                <p className="text-xs sm:text-[13px] text-nexgen-serviceInnerCard mt-2.5 leading-relaxed font-normal">
                   {loc.address}
                 </p>
               </a>
@@ -280,13 +280,13 @@ export default function ContactSection({
         <div className="mt-12 sm:mt-14 bg-white rounded-3xl p-5 sm:p-7 shadow-xs border border-gray-200/80">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 px-1">
             <div>
-              <span className="text-xs font-bold text-[#596d53] uppercase tracking-wider block mb-1">
+              <span className="text-xs font-bold text-nexgen-primaryGold uppercase tracking-wider block mb-1">
                 Find Us on the Map
               </span>
-              <h4 className="text-xl sm:text-2xl font-bold text-[#1b221d] tracking-tight">
+              <h4 className="text-xl sm:text-2xl font-bold text-nexgen-veryDarkHeader tracking-tight">
                 {COMPANY_NAME} Location
               </h4>
-              <p className="text-xs sm:text-sm text-[#5c685f] mt-1">
+              <p className="text-xs sm:text-sm text-nexgen-serviceInnerCard mt-1">
                 Vishal Residency Wing-1, Pillar No-56, Raja Bazar, Patna, Bihar 800014
               </p>
             </div>
@@ -294,7 +294,7 @@ export default function ContactSection({
               href="https://www.google.com/maps/place/NEXGEN+HAIR+TRANSPLANT/@25.6044229,85.0827564,17z"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#596d53] hover:bg-[#495c44] text-white text-xs sm:text-sm font-semibold rounded-full shadow-xs transition-colors self-start sm:self-auto"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader text-xs sm:text-sm font-bold rounded-full shadow-xs transition-colors self-start sm:self-auto cursor-pointer"
             >
               <span>Get Directions</span>
               <span aria-hidden="true">↗</span>

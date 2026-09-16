@@ -7,7 +7,7 @@ import { COMPANY_NAME } from "@/config/constants";
 
 export default function ClinicHero() {
   return (
-    <section className="relative h-[70vh] min-h-[420px] max-h-[560px] flex items-center justify-center overflow-hidden bg-[#162418]">
+    <section className="relative h-[70vh] min-h-[420px] max-h-[560px] flex items-center justify-center overflow-hidden bg-nexgen-mainDarkBg">
       {/* Clinic Corridor Interior Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -26,7 +26,7 @@ export default function ClinicHero() {
         <nav aria-label="Breadcrumb" className="mb-4">
           <ol className="flex items-center gap-1.5 text-xs sm:text-sm text-white/90 font-medium">
             <li>
-              <Link href="/" className="hover:text-white transition-colors underline-offset-2 hover:underline">
+              <Link href="/" className="hover:text-nexgen-brightGold transition-colors underline-offset-2 hover:underline">
                 Home
               </Link>
             </li>

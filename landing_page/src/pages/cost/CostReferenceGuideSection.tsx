@@ -6,29 +6,29 @@ import { COMPANY_NAME } from "@/config/constants";
 
 export default function CostReferenceGuideSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden border-t border-gray-200/50">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden border-t border-gray-200/50">
       <div className="qht-large-container">
         
         {/* Header */}
         <div className="max-w-4xl mb-12 sm:mb-16">
-          <span className="text-xs sm:text-sm font-semibold text-[#5c685f] block mb-2 tracking-wide">
+          <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold block mb-2 tracking-wide">
             Complete Reference Guide
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14] mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.14] mb-3">
             Everything You Need to Know About Hair <br />
             Transplant Cost in India
           </h2>
-          <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-3xl">
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-3xl">
             A comprehensive, medically accurate reference covering all aspects of hair transplant pricing, techniques, candidacy, and recovery — designed to help you make a fully informed decision.
           </p>
         </div>
 
         {/* 8 Knowledge / Editorial Blocks in a 2-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12 items-start text-xs sm:text-[13px] text-[#5c685f] leading-relaxed">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12 items-start text-xs sm:text-[13px] text-gray-600 leading-relaxed">
           
           {/* 1. What is a Hair Transplant? */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
-            <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
+            <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
               What is a Hair Transplant?
             </h3>
             <p>
@@ -44,31 +44,31 @@ export default function CostReferenceGuideSection() {
 
           {/* 2. QHT Clinic Cost per Graft */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
-            <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
-              Per-Graft Cost Structure at {COMPANY_NAME}
+            <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
+              Transparent Per-Graft Pricing Formula
             </h3>
             <p>
-              In India, hair transplant cost is primarily calculated on a per-graft basis. A graft typically contains 1–4 hair follicles. The total cost is derived by multiplying the per-graft rate by the total number of grafts required for your specific case.
+              In India, hair restoration costs are calculated on a strictly transparent per-graft basis. Each graft contains 1–4 active follicles. Total cost is derived by multiplying the total graft count required for your desired density by the technique rate:
             </p>
             <div className="bg-white/80 rounded-xl p-3.5 border border-gray-200/60 space-y-1 my-2">
-              <span className="font-bold text-[#1b221d] block">
-                Formula: Total Cost = Number of Grafts × Per-Graft Rate
+              <span className="font-bold text-nexgen-veryDarkHeader block">
+                Formula: Total Investment = Graft Count × Per-Graft Rate
               </span>
-              <ul className="space-y-0.5 text-xs text-gray-700">
-                <li>• FUE Technique: ₹10/graft (scarless standard)</li>
-                <li>• Bio FUE (DMEM Medium): ₹15/graft (enhanced follicle vitality)</li>
-                <li>• DHI Technique: ₹15/graft (direct implanter pen)</li>
-                <li>• Premium DHI (Sapphire + DMEM): ₹25/graft (top clinical grade)</li>
+              <ul className="space-y-0.5 text-xs text-gray-700 font-medium">
+                <li>• FUE Technique: ₹10 / graft (scarless motorized baseline)</li>
+                <li>• Bio FUE (with DMEM Medium): ₹15 / graft (enhanced follicle vitality)</li>
+                <li>• DHI Technique: ₹20 / graft (direct micro-implanter pen)</li>
+                <li>• Premium Sapphire DHI: ₹25 / graft (sapphire blades + DMEM solution)</li>
               </ul>
             </div>
             <p>
-              The number of grafts required is determined by your Norwood baldness scale grade, assessed during a scalp analysis consultation with the surgeon.
+              The precise graft requirement is clinically diagnosed through high-magnification digital trichoscopy and Norwood staging during your surgeon consultation.
             </p>
           </div>
 
           {/* 3. Who is a Good Candidate for Hair Transplant? */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
-            <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
+            <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
               Who is a Good Candidate for Hair Transplant?
             </h3>
             <ul className="space-y-1.5 list-disc list-inside">
@@ -87,7 +87,7 @@ export default function CostReferenceGuideSection() {
 
           {/* 4. Hair Transplant Recovery Timeline */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
-            <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
+            <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
               Hair Transplant Recovery Timeline
             </h3>
             <ul className="space-y-1.5 list-disc list-inside">
@@ -105,28 +105,28 @@ export default function CostReferenceGuideSection() {
 
           {/* 5. Difference Between FUE, FUT and DHI */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
-            <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
-              Difference Between FUE, FUT and DHI
+            <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
+              Key Differences: FUE vs FUT vs DHI vs Sapphire
             </h3>
             <ul className="space-y-2 list-disc list-inside">
               <li>
-                <strong className="text-gray-900">FUE:</strong> Individual follicle extraction using punch tool. No linear scar. Versatile — suitable for scalp, beard, eyebrow transplants.
+                <strong className="text-gray-900">FUE (Follicular Unit Extraction):</strong> Individual follicle harvesting using micro-punches (0.75–0.9mm). Leaves zero linear scars, has minimal downtime, and is versatile across scalp, beard, and eyebrow restoration.
               </li>
               <li>
-                <strong className="text-gray-900">FUT:</strong> Strip of scalp removed and microscopically dissected. Higher graft yield in one session. Leaves linear scar concealable by hair.
+                <strong className="text-gray-900">FUT (Strip Method):</strong> An excised donor strip microscopically dissected into individual units. Delivers high graft yields in mega sessions without shaving the donor or recipient area. Leaves a discreet linear scar easily concealed by surrounding hair.
               </li>
               <li>
-                <strong className="text-gray-900">DHI (Direct Hair Implantation):</strong> A variation of FUE using a Choi implanter pen for direct placement without recipient site pre-creation. Higher cost, fewer grafts per session.
+                <strong className="text-gray-900">DHI (Direct Hair Implantation):</strong> Utilizes specialized hollow-needle implanter pens to insert follicles directly without prior channel slits, giving precise 360-degree control over depth, angle, and directional growth.
               </li>
               <li>
-                <strong className="text-gray-900">{COMPANY_NAME} Advanced Technique:</strong> Direct micro-implantation protocol reducing follicle out-of-body holding time to protect root viability and yield maximum natural density.
+                <strong className="text-gray-900">Premium Sapphire DHI:</strong> Pairs ultra-sharp gem-grade sapphire micro-incisions with direct pen delivery and DMEM bio-preservation medium, ensuring minimal tissue trauma, zero scab marks, and peak visual density.
               </li>
             </ul>
           </div>
 
           {/* 6. What is the Norwood Scale? */}
           <div className="space-y-3 pb-8 border-b border-gray-200/80">
-            <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
+            <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
               What is the Norwood Scale?
             </h3>
             <p>
@@ -148,7 +148,7 @@ export default function CostReferenceGuideSection() {
 
           {/* 7. QHT Clinic PRP Therapy */}
           <div className="space-y-3">
-            <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
+            <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
               PRP & Regenerative Therapies at {COMPANY_NAME}
             </h3>
             <p>
@@ -161,7 +161,7 @@ export default function CostReferenceGuideSection() {
 
           {/* 8. QHT Clinic EMI Plan */}
           <div className="space-y-3">
-            <h3 className="text-base sm:text-lg font-bold text-[#1b221d]">
+            <h3 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader">
               Flexible EMI & Financing Plans
             </h3>
             <p>
@@ -182,11 +182,11 @@ export default function CostReferenceGuideSection() {
 
         {/* Medical Disclaimer Box at Bottom */}
         <div className="mt-12 sm:mt-16 bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-gray-200/80 flex items-start gap-4">
-          <div className="w-8 h-8 rounded-full bg-[#eff5f1] text-[#596d53] flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div className="w-8 h-8 rounded-full bg-nexgen-primaryGold/10 text-nexgen-primaryGold flex items-center justify-center flex-shrink-0 mt-0.5">
             <Stethoscope className="w-4 h-4" />
           </div>
-          <p className="text-xs text-[#5c685f] leading-relaxed font-normal">
-            <strong className="text-[#1b221d] font-semibold">Medical Disclaimer:</strong> All pricing information on this page is indicative and based on per-graft estimates. Final costs are determined only after a personalized scalp assessment by a qualified hair restoration surgeon at {COMPANY_NAME}. Individual results may vary based on hair caliber, donor reserves, and medical candidacy. Hair transplant is a surgical procedure — choose your clinic and surgeon carefully.
+          <p className="text-xs text-gray-600 leading-relaxed font-normal">
+            <strong className="text-nexgen-veryDarkHeader font-semibold">Medical Disclaimer:</strong> All pricing information on this page is indicative and based on per-graft estimates. Final costs are determined only after a personalized scalp assessment by a qualified hair restoration surgeon at {COMPANY_NAME}. Individual results may vary based on hair caliber, donor reserves, and medical candidacy. Hair transplant is a surgical procedure — choose your clinic and surgeon carefully.
           </p>
         </div>
 

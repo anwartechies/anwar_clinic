@@ -8,7 +8,14 @@ interface GoogleReviewsProps {
   className?: string;
 }
 
-const AVATAR_COLORS = ["#52664d", "#1b392b", "#7a6a3a", "#3f5f6b", "#6b4f5f", "#4f6b58"];
+const AVATAR_COLORS = [
+  "var(--nexgen-main-dark-bg)",
+  "var(--nexgen-services-section)",
+  "var(--nexgen-service-inner-card)",
+  "var(--nexgen-very-dark-header)",
+  "var(--nexgen-primary-gold)",
+  "var(--nexgen-soft-gold)",
+];
 
 function GoogleG({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -87,11 +94,11 @@ function ReviewCard({ review }: { review: GoogleReviewItem }) {
   }, [expanded, review.text]);
 
   return (
-    <article className="min-h-[292px] bg-white rounded-3xl p-6 border border-[#e4eae4] shadow-[0_2px_12px_rgba(27,34,29,0.04)] flex flex-col">
+    <article className="min-h-[292px] bg-white rounded-3xl p-6 border border-gray-100 shadow-[0_2px_12px_rgba(27,34,29,0.04)] flex flex-col">
       <header className="flex items-start gap-3">
         <Avatar review={review} />
         <div className="min-w-0 flex-1">
-          <h3 className="text-[15px] font-semibold text-[#1b221d] leading-snug truncate">
+          <h3 className="text-[15px] font-semibold text-nexgen-veryDarkHeader leading-snug truncate">
             {review.authorUri ? (
               <a href={review.authorUri} target="_blank" rel="noopener noreferrer" className="hover:underline">
                 {review.authorName}
@@ -100,7 +107,7 @@ function ReviewCard({ review }: { review: GoogleReviewItem }) {
               review.authorName
             )}
           </h3>
-          {review.relativeTime && <p className="text-xs text-[#7a857c] mt-0.5">{review.relativeTime}</p>}
+          {review.relativeTime && <p className="text-xs text-gray-500 mt-0.5">{review.relativeTime}</p>}
         </div>
         <GoogleG className="w-5 h-5 flex-shrink-0 mt-0.5" />
       </header>
@@ -111,7 +118,7 @@ function ReviewCard({ review }: { review: GoogleReviewItem }) {
 
       <p
         ref={textRef}
-        className={`mt-3 text-sm text-[#4a554c] leading-relaxed whitespace-pre-line ${expanded ? "" : "line-clamp-5"}`}
+        className={`mt-3 text-sm text-gray-700 leading-relaxed whitespace-pre-line ${expanded ? "" : "line-clamp-5"}`}
       >
         {review.text}
       </p>
@@ -122,7 +129,7 @@ function ReviewCard({ review }: { review: GoogleReviewItem }) {
             type="button"
             onClick={() => setExpanded((v) => !v)}
             aria-expanded={expanded}
-            className="font-semibold text-[#52664d] hover:text-[#384c3c] cursor-pointer"
+            className="font-semibold text-nexgen-primaryGold hover:text-nexgen-brightGold cursor-pointer"
           >
             {expanded ? "Show less" : "Read more"}
           </button>
@@ -134,7 +141,7 @@ function ReviewCard({ review }: { review: GoogleReviewItem }) {
             href={review.reviewUri}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-[#7a857c] hover:text-[#52664d]"
+            className="inline-flex items-center gap-1 text-gray-500 hover:text-nexgen-primaryGold"
           >
             View on Google <ExternalLink className="w-3 h-3" />
           </a>
@@ -191,7 +198,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
   return (
     <section
       aria-labelledby="google-reviews-heading"
-      className={`py-16 sm:py-20 lg:py-24 bg-[#f8faf8] overflow-hidden ${className}`}
+      className={`py-16 sm:py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden ${className}`}
     >
       <div className="qht-large-container">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end mb-10 sm:mb-12">
@@ -203,38 +210,38 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
             </div>
             <h2
               id="google-reviews-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight"
             >
               Patient Experiences & Feedback
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-[#5c685f] max-w-xl">
+            <p className="mt-3 text-sm sm:text-base text-nexgen-serviceInnerCard max-w-xl">
               Real reviews from patients, straight from our Google profile.
             </p>
           </div>
 
           {/* Summary card */}
-          <div className="bg-white rounded-3xl border border-[#e4eae4] shadow-[0_8px_30px_rgba(27,34,29,0.06)] p-6">
+          <div className="bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgba(27,34,29,0.06)] p-6">
             <div className="flex items-center gap-4">
               {data.rating !== null && (
-                <span className="text-5xl font-semibold text-[#1b221d] tracking-tight leading-none tabular-nums">
+                <span className="text-5xl font-semibold text-nexgen-veryDarkHeader tracking-tight leading-none tabular-nums">
                   {data.rating.toFixed(1)}
                 </span>
               )}
               <div>
                 {data.rating !== null && <Stars rating={data.rating} size="w-5 h-5" />}
-                <p className="mt-1 text-sm text-[#5c685f]">
+                <p className="mt-1 text-sm text-nexgen-serviceInnerCard">
                   Based on{" "}
                   {data.googleMapsUri ? (
                     <a
                       href={data.googleMapsUri}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-semibold text-[#1b221d] underline decoration-gray-300 underline-offset-2 hover:decoration-[#52664d]"
+                      className="font-semibold text-nexgen-veryDarkHeader underline decoration-gray-300 underline-offset-2 hover:decoration-nexgen-primaryGold"
                     >
                       {countLabel}
                     </a>
                   ) : (
-                    <span className="font-semibold text-[#1b221d]">{countLabel}</span>
+                    <span className="font-semibold text-nexgen-veryDarkHeader">{countLabel}</span>
                   )}
                 </p>
               </div>
@@ -245,7 +252,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
                 href={data.writeReviewUri}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 border border-transparent bg-[#52664d] hover:bg-[#43543e] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-colors"
+                className="inline-flex items-center justify-center gap-1.5 border border-transparent bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader text-sm font-semibold px-4 py-2.5 rounded-full transition-colors"
               >
                 <PenLine className="w-4 h-4" /> Write a review
               </a>
@@ -254,7 +261,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
                   href={data.googleMapsUri}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 border border-[#cfd8cf] text-[#1b221d] hover:border-[#52664d] hover:text-[#52664d] text-sm font-semibold px-4 py-2.5 rounded-full transition-colors"
+                  className="inline-flex items-center justify-center gap-1.5 border border-gray-200 text-nexgen-veryDarkHeader hover:border-nexgen-primaryGold hover:text-nexgen-primaryGold text-sm font-semibold px-4 py-2.5 rounded-full transition-colors"
                 >
                   View all <ExternalLink className="w-3.5 h-3.5" />
                 </a>
@@ -270,7 +277,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
             role="region"
             aria-label="Google reviews"
             tabIndex={0}
-            className="flex items-start gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#52664d]/40 rounded-3xl"
+            className="flex items-start gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-nexgen-primaryGold/40 rounded-3xl"
           >
             {data.reviews.map((review, idx) => (
               <div
@@ -294,7 +301,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
                 onClick={() => scrollByCard(-1)}
                 disabled={edges.atStart}
                 aria-label="Previous reviews"
-                className="w-11 h-11 rounded-full bg-white border border-gray-200 text-[#1b221d] flex items-center justify-center shadow-xs transition-colors enabled:hover:bg-[#52664d] enabled:hover:text-white enabled:hover:border-[#52664d] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                className="w-11 h-11 rounded-full bg-white border border-gray-200 text-nexgen-veryDarkHeader flex items-center justify-center shadow-xs transition-colors enabled:hover:bg-nexgen-primaryGold enabled:hover:text-nexgen-veryDarkHeader enabled:hover:border-nexgen-primaryGold disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -303,7 +310,7 @@ export default function GoogleReviews({ className = "" }: GoogleReviewsProps) {
                 onClick={() => scrollByCard(1)}
                 disabled={edges.atEnd}
                 aria-label="Next reviews"
-                className="w-11 h-11 rounded-full bg-white border border-gray-200 text-[#1b221d] flex items-center justify-center shadow-xs transition-colors enabled:hover:bg-[#52664d] enabled:hover:text-white enabled:hover:border-[#52664d] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                className="w-11 h-11 rounded-full bg-white border border-gray-200 text-nexgen-veryDarkHeader flex items-center justify-center shadow-xs transition-colors enabled:hover:bg-nexgen-primaryGold enabled:hover:text-nexgen-veryDarkHeader enabled:hover:border-nexgen-primaryGold disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>

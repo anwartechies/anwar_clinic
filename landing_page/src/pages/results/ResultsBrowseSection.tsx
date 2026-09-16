@@ -109,7 +109,7 @@ function InteractivePatientCard({
   };
 
   return (
-    <div className="bg-[#eff5f1] rounded-3xl overflow-hidden border border-gray-200/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+    <div className="bg-nexgen-navBg rounded-3xl overflow-hidden border border-nexgen-serviceInnerCard/20 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
 
       {/* Top: Interactive Before/After Split Comparison Box */}
       <div
@@ -200,7 +200,7 @@ function InteractivePatientCard({
           {/* Results Timeline */}
           <div>
             <span className="text-gray-500 mr-1.5">Results :</span>
-            <span className="font-semibold text-[#1b392b]">{patient.resultsTimeline}</span>
+            <span className="font-semibold text-nexgen-primaryGold">{patient.resultsTimeline}</span>
           </div>
         </div>
 
@@ -209,7 +209,7 @@ function InteractivePatientCard({
           <Link
             // href={`/results/${patient.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
             href={"#"}
-            className="w-full py-2.5 px-4 rounded-full border border-gray-400/80 hover:border-[#1b392b] hover:bg-white text-gray-800 hover:text-[#1b392b] transition-all flex items-center justify-center gap-2 text-xs font-semibold shadow-2xs group"
+            className="w-full py-2.5 px-4 rounded-full border border-gray-300 hover:border-nexgen-primaryGold hover:bg-white text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-all flex items-center justify-center gap-2 text-xs font-semibold shadow-2xs group"
           >
             <span className="group-hover:translate-x-0.5 transition-transform">
               → &nbsp; View Complete Growth Timeline
@@ -246,7 +246,7 @@ export default function ResultsBrowseSection({
 
         {/* Header Title + Counter */}
         <div className="flex items-center justify-between gap-4 pb-6">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight">
             Discover Transformations Tailored to Your Case
           </h2>
           <div className="hidden sm:flex w-8 h-8 rounded-lg border border-gray-200 items-center justify-center text-xs font-bold text-gray-500">
@@ -259,8 +259,8 @@ export default function ResultsBrowseSection({
           <div className="flex items-center gap-4 sm:gap-6 min-w-max text-xs sm:text-sm text-gray-700">
 
             {/* Filters Label */}
-            <div className="flex items-center gap-2 font-bold text-[#1b221d] pr-2">
-              <SlidersHorizontal className="w-4 h-4 text-[#596d53]" />
+            <div className="flex items-center gap-2 font-bold text-nexgen-veryDarkHeader pr-2">
+              <SlidersHorizontal className="w-4 h-4 text-nexgen-primaryGold" />
               <span>Filters</span>
             </div>
 

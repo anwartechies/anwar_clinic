@@ -44,9 +44,9 @@ export default function FloatingActionBar({
       <button
         type="button"
         onClick={handleOpenConsultation}
-        className="flex items-center gap-2 bg-[#1b392b] text-white px-5 py-3 rounded-full text-xs sm:text-sm font-bold shadow-xl hover:bg-[#284c3b] hover:scale-105 active:scale-95 transition-all duration-300 border border-[#b1fc85]/30 cursor-pointer"
+        className="flex items-center gap-2 bg-nexgen-mainDarkBg text-white px-5 py-3 rounded-full text-xs sm:text-sm font-bold shadow-xl hover:bg-nexgen-servicesSection hover:scale-105 active:scale-95 transition-all duration-300 border border-nexgen-primaryGold/40 cursor-pointer"
       >
-        <Calendar className="w-4 h-4 text-[#b1fc85]" />
+        <Calendar className="w-4 h-4 text-nexgen-brightGold" />
         <span>Book Appointment</span>
       </button>
     </div>

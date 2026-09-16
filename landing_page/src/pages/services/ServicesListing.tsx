@@ -50,15 +50,15 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
   });
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#fafcfa]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-pageLightBg">
       <div className="qht-large-container">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div className="max-w-xl">
-            <span className="inline-flex items-center gap-1.5 bg-[#eaf4e8] text-[#1b392b] text-xs font-bold px-3 py-1 rounded-full mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-[#596d53]" /> Comprehensive Procedures
+            <span className="inline-flex items-center gap-1.5 bg-nexgen-brightGold/15 text-nexgen-veryDarkHeader border border-nexgen-primaryGold/30 text-xs font-bold px-3 py-1 rounded-full mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-nexgen-primaryGold" /> Comprehensive Procedures
             </span>
-            <h2 className="text-3xl sm:text-5xl font-[500] text-[#1b221d] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight">
               Clinical Hair Restoration Procedures
             </h2>
           </div>
@@ -73,8 +73,8 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap shadow-sm ${activeFilter === cat
-                ? "bg-[#1b392b] text-white shadow-[#1b392b]/20"
+              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap shadow-sm cursor-pointer ${activeFilter === cat
+                ? "bg-nexgen-mainDarkBg text-white border border-nexgen-primaryGold/30"
                 : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
                 }`}
             >
@@ -98,7 +98,7 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {item.badge && (
-                  <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-[#1b392b] text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
+                  <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-nexgen-veryDarkHeader text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
                     {item.badge}
                   </span>
                 )}
@@ -107,7 +107,7 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
               {/* Content Body */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg sm:text-xl font-[500] text-[#1b221d] group-hover:text-[#596d53] transition-colors leading-snug mb-2.5">
+                  <h3 className="text-lg sm:text-xl font-[500] text-nexgen-veryDarkHeader group-hover:text-nexgen-primaryGold transition-colors leading-snug mb-2.5">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-3">
@@ -119,7 +119,7 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
                 <div className="mt-6 pt-5 border-t border-gray-100 flex items-center justify-between">
                   <Link
                     href={item.link}
-                    className="text-xs sm:text-sm font-semibold text-[#1b221d] hover:text-[#596d53] flex items-center gap-1 group/link transition-colors"
+                    className="text-xs sm:text-sm font-semibold text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold flex items-center gap-1 group/link transition-colors"
                   >
                     <span>View Procedure</span>
                     <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
@@ -127,7 +127,7 @@ export default function ServicesListing({ services, onOpenConsultation }: Servic
 
                   <button
                     onClick={onOpenConsultation}
-                    className="w-8 h-8 rounded-full bg-[#f4f7f4] group-hover:bg-[#1b392b] group-hover:text-white text-gray-700 flex items-center justify-center transition-colors duration-200"
+                    className="w-8 h-8 rounded-full bg-nexgen-navBg group-hover:bg-nexgen-primaryGold group-hover:text-nexgen-veryDarkHeader text-gray-700 flex items-center justify-center transition-colors duration-200 cursor-pointer"
                     aria-label="Book consultation"
                   >
                     <ArrowUpRight className="w-4 h-4" />

@@ -31,11 +31,11 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
   const duplicatedSlides = [...HERO_SLIDES, ...HERO_SLIDES];
 
   return (
-    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 bg-[#f4f7f4] overflow-hidden">
+    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 bg-nexgen-pageLightBg overflow-hidden">
       {/* Absolute Background Image (Black mask applied directly to image pixels via brightness filter) */}
       <div className="absolute max-md:hidden inset-0 z-0 pointer-events-none">
         <img
-          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-14-at-2-25-24-pm-mu16ngv5sdupct.jpeg"
+          src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-4-49-04-pm-mu411bb72kfv8h.jpeg"
           alt={`${COMPANY_NAME} Background`}
           className="w-full h-full object-contain object-left-top brightness-50"
         />
@@ -51,16 +51,16 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
 
 
         {/* Main Headline */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-[500] md:text-white tracking-tight leading-[1.18] max-w-7xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-[500] text-nexgen-veryDarkHeader md:text-white tracking-tight leading-[1.18] max-w-7xl mx-auto">
           Pioneering Natural Hair Restoration & Artistic Precision,{" "}
           {/* <br /> */}
-          <span className="text-[#52664d] font-[500] inline-block mt-1">
+          <span className="text-nexgen-primaryGold font-[600] inline-block mt-1">
             at {COMPANY_NAME}
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-3.5 text-sm sm:text-[20px] text-[#5c685f] max-w-4xl mx-auto font-normal leading-relaxed">
+        <p className="mt-3.5 text-sm sm:text-[20px] text-nexgen-serviceInnerCard md:text-gray-200 max-w-4xl mx-auto font-normal leading-relaxed">
           Clinically advanced, undetectable results tailored to your unique facial aesthetics — restoring lifelong density, youthful definition, and confidence.
         </p>
 
@@ -68,7 +68,7 @@ export default function HeroSection({ onOpenConsultation }: HeroSectionProps) {
         <div className="mt-6 sm:mt-7 flex justify-center">
           <button
             onClick={onOpenConsultation}
-            className="bg-[#52664d] hover:bg-[#43543e] text-white font-medium text-sm sm:text-[15px] py-3.5 px-8 sm:px-9 rounded-full shadow-sm transition-all duration-200 active:scale-95 cursor-pointer"
+            className="bg-nexgen-primaryGold hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader font-bold text-sm sm:text-[15px] py-3.5 px-8 sm:px-9 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 cursor-pointer"
           >
             Schedule Your Free Scalp Evaluation
           </button>

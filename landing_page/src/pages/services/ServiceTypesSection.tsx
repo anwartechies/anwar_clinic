@@ -53,19 +53,19 @@ export default function ServiceTypesSection({
   }));
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden">
       <div className="qht-large-container">
 
         {/* Centered Heading & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.18]">
             {title.toLowerCase().startsWith("types of") ||
               title.toLowerCase().startsWith("type of") ||
               title.toLowerCase().startsWith("types")
               ? title
               : `Types of ${title}`}
           </h2>
-          <p className="text-sm sm:text-base text-[#5c685f] mt-3.5 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-gray-600 mt-3.5 leading-relaxed font-normal">
             {subtitle}
           </p>
         </div>
@@ -79,12 +79,12 @@ export default function ServiceTypesSection({
             >
               <div>
                 {/* Type Title */}
-                <h3 className="text-xl sm:text-2xl font-bold text-[#1b221d] tracking-tight">
+                <h3 className="text-xl sm:text-2xl font-bold text-nexgen-veryDarkHeader tracking-tight">
                   {type.title}
                 </h3>
 
                 {/* Type Description */}
-                <p className="text-xs sm:text-sm text-[#5c685f] mt-2.5 leading-relaxed font-normal min-h-[40px]">
+                <p className="text-xs sm:text-sm text-gray-600 mt-2.5 leading-relaxed font-normal min-h-[40px]">
                   {type.desc}
                 </p>
 
@@ -99,7 +99,7 @@ export default function ServiceTypesSection({
               </div>
 
               {/* Bullet Points List */}
-              <ul className="space-y-2.5 pl-5 list-disc text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal marker:text-[#596d53]">
+              <ul className="space-y-2.5 pl-5 list-disc text-xs sm:text-sm text-gray-600 leading-relaxed font-normal marker:text-nexgen-primaryGold">
                 {type.points.map((point, pIdx) => (
                   <li key={pIdx}>{point}</li>
                 ))}

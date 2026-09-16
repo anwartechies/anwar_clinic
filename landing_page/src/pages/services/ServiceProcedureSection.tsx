@@ -56,12 +56,12 @@ export default function ServiceProcedureSection({
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-12 lg:mb-16">
           {/* Title & Subtitle */}
           <div className="max-w-xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.18]">
               {title.toLowerCase().startsWith("procedure")
                 ? title
                 : `Procedure used for ${title} in India`}
             </h2>
-            <p className="text-sm sm:text-base text-[#5c685f] leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
               {subtitle || defaultSubtitle}
             </p>
           </div>
@@ -70,10 +70,10 @@ export default function ServiceProcedureSection({
           <div className="grid grid-cols-2 gap-4 sm:gap-5 flex-shrink-0">
             {/* Stat Card 1: 4 Week Recovery */}
             <div className="w-[140px] sm:w-[160px] aspect-square rounded-3xl border border-gray-200/90 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-md transition-shadow">
-              <span className="text-4xl sm:text-5xl font-light text-[#596d53] leading-none">
+              <span className="text-4xl sm:text-5xl font-light text-nexgen-primaryGold leading-none">
                 4
               </span>
-              <span className="text-xs sm:text-sm font-semibold text-[#596d53] leading-tight">
+              <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold leading-tight">
                 Week
                 <br />
                 Recovery
@@ -82,10 +82,10 @@ export default function ServiceProcedureSection({
 
             {/* Stat Card 2: Minimal Pain */}
             <div className="w-[140px] sm:w-[160px] aspect-square rounded-3xl border border-gray-200/90 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-md transition-shadow">
-              <div className="w-10 h-10 rounded-full bg-[#596d53]/10 flex items-center justify-center text-[#596d53]">
+              <div className="w-10 h-10 rounded-full bg-nexgen-primaryGold/10 flex items-center justify-center text-nexgen-primaryGold">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <span className="text-xs sm:text-sm font-semibold text-[#596d53] leading-tight">
+              <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold leading-tight">
                 Minimal Pain
               </span>
             </div>
@@ -108,7 +108,7 @@ export default function ServiceProcedureSection({
             <div className="mt-8 sm:mt-10 w-full text-center lg:text-left">
               <button
                 onClick={onOpenConsultation}
-                className="bg-[#596d53] hover:bg-[#495b44] text-white font-semibold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
+                className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 duration-150"
               >
                 Book Free Consultation
               </button>
@@ -125,16 +125,16 @@ export default function ServiceProcedureSection({
                 >
                   {/* Step Text */}
                   <div className="space-y-1.5 flex-1">
-                    <h3 className="text-lg sm:text-xl font-bold text-[#1b221d] tracking-tight leading-snug">
+                    <h3 className="text-lg sm:text-xl font-bold text-nexgen-veryDarkHeader tracking-tight leading-snug">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-lg">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-lg">
                       {step.desc}
                     </p>
                   </div>
 
                   {/* Outlined Stroke Number (01, 02, 03, 04) */}
-                  <div className="flex-shrink-0 font-light text-3xl sm:text-4xl text-transparent [-webkit-text-stroke:1.5px_#596d53] select-none tracking-widest pt-1 group-hover:scale-105 transition-transform">
+                  <div className="flex-shrink-0 font-light text-3xl sm:text-4xl text-transparent [-webkit-text-stroke:1.5px_var(--nexgen-primary-gold)] select-none tracking-widest pt-1 group-hover:scale-105 transition-transform">
                     {step.stepNumber}
                   </div>
                 </div>

@@ -58,7 +58,7 @@ export default function BaldTruthSection() {
         <div
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="bg-[#42523f] text-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-20 shadow-xl relative overflow-hidden"
+          className="bg-nexgen-mainDarkBg text-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-20 shadow-xl relative overflow-hidden border border-nexgen-primaryGold/20"
         >
           {/* Section Header & Slider Controls */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 sm:mb-12">
@@ -75,17 +75,17 @@ export default function BaldTruthSection() {
             <div className="flex items-center gap-2.5 flex-shrink-0 self-end sm:self-center">
               <button
                 onClick={() => scroll("left")}
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-gray-100 text-gray-800 flex items-center justify-center shadow-md transition-transform active:scale-95 duration-150"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader flex items-center justify-center shadow-md transition-all active:scale-95 duration-150 cursor-pointer"
                 aria-label="Previous Truth"
               >
-                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800" />
+                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-nexgen-veryDarkHeader" />
               </button>
               <button
                 onClick={() => scroll("right")}
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-gray-100 text-gray-800 flex items-center justify-center shadow-md transition-transform active:scale-95 duration-150"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-nexgen-brightGold text-nexgen-veryDarkHeader flex items-center justify-center shadow-md transition-all active:scale-95 duration-150 cursor-pointer"
                 aria-label="Next Truth"
               >
-                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800" />
+                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-nexgen-veryDarkHeader" />
               </button>
             </div>
           </div>
@@ -105,11 +105,11 @@ export default function BaldTruthSection() {
                 >
                   {/* Item Number */}
                   {isCircled ? (
-                    <div className="w-14 h-14 sm:w-24 sm:h-24 rounded-full border-[1.5px] border-[#b4f67c] flex items-center justify-center flex-shrink-0 text-2xl sm:text-7xl font-light text-white leading-none">
+                    <div className="w-14 h-14 sm:w-24 sm:h-24 rounded-full border-[1.5px] border-nexgen-brightGold flex items-center justify-center flex-shrink-0 text-2xl sm:text-7xl font-light text-nexgen-brightGold leading-none">
                       {item.id}.
                     </div>
                   ) : (
-                    <span className="text-3xl sm:text-4xl lg:text-7xl font-light text-[#b4f67c] flex-shrink-0 leading-none pt-1">
+                    <span className="text-3xl sm:text-4xl lg:text-7xl font-light text-nexgen-brightGold flex-shrink-0 leading-none pt-1">
                       {item.id}.
                     </span>
                   )}

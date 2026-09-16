@@ -27,7 +27,7 @@ export default function PromisesSection() {
       <div className="qht-container">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-4 mb-8 border-b border-black/50">
-          <h2 className="text-3xl sm:text-6xl font-[500] text-[#162418]">
+          <h2 className="text-3xl sm:text-6xl font-[500] text-nexgen-veryDarkHeader">
             Our Clinical Commitments
           </h2>
           <span className="w-10 h-10 rounded-lg border-[0.1px] border-black font-bold flex items-center justify-center text-base">
@@ -46,7 +46,7 @@ export default function PromisesSection() {
                 className="w-full h-auto object-cover"
               />
             </div>
-            <h3 className="text-xl sm:text-3xl font-[400] text-[#162418] leading-snug">
+            <h3 className="text-xl sm:text-3xl font-[400] text-nexgen-veryDarkHeader leading-snug">
               Artistic Hairline Architecture. Zero-Compromise Safety. Permanent Follicular Vitality.
             </h3>
           </div>
@@ -58,11 +58,11 @@ export default function PromisesSection() {
                 key={promise.id}
                 className="flex items-start gap-4 p-5 rounded-2xl"
               >
-                <span className="w-7 h-7 flex-shrink-0 rounded-full bg-[#1b392b] text-white font-bold flex items-center justify-center text-xs">
+                <span className="w-7 h-7 flex-shrink-0 rounded-full bg-nexgen-mainDarkBg text-nexgen-brightGold border border-nexgen-primaryGold/30 font-bold flex items-center justify-center text-xs">
                   {promise.id}
                 </span>
                 <div>
-                  <h4 className="text-xl sm:text-2xl font-[300] text-[#162418]">
+                  <h4 className="text-xl sm:text-2xl font-[300] text-nexgen-veryDarkHeader">
                     {promise.title}
                   </h4>
                   <p className="mt-1 text-xs sm:text-lg text-gray-600 leading-relaxed">

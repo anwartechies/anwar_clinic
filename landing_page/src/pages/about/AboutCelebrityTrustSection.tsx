@@ -83,15 +83,18 @@ export default function AboutCelebrityTrustSection() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#eff5f1] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-pageLightBg overflow-hidden">
       <div className="qht-large-container">
 
         {/* Centered Heading & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-tight mb-4">
+          <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold uppercase tracking-wider block mb-2">
+            Verified Testimonials
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight mb-4">
             Celebrities & Patients Who Trust {COMPANY_NAME}
           </h2>
-          <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-2xl mx-auto">
             From familiar faces to everyday citizens, thousands of people have trusted {COMPANY_NAME} Hair Transplant Clinic for their hair restoration journey. Every case is unique, but the results remain constant: natural appearance, renewed confidence, and trusted excellence.
           </p>
         </div>
@@ -101,7 +104,7 @@ export default function AboutCelebrityTrustSection() {
 
           {/* Card Outer Mask */}
           <div
-            className="rounded-3xl sm:rounded-[36px] overflow-hidden shadow-xl bg-[#52664d]"
+            className="rounded-3xl sm:rounded-[36px] overflow-hidden shadow-2xl bg-nexgen-mainDarkBg border border-nexgen-primaryGold/30"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -121,7 +124,7 @@ export default function AboutCelebrityTrustSection() {
 
                     <div className="space-y-4 sm:space-y-6">
                       {/* Double Quote Vector Icon */}
-                      <div className="text-white/80">
+                      <div className="text-nexgen-brightGold">
                         <svg className="w-10 h-10 sm:w-12 sm:h-12 fill-none stroke-currentColor stroke-[1.5]" viewBox="0 0 48 48">
                           <path d="M12 28C16.4183 28 20 24.4183 20 20C20 15.5817 16.4183 12 12 12C7.58172 12 4 15.5817 4 20C4 28 10 36 20 36" strokeLinecap="round" />
                           <path d="M34 28C38.4183 28 42 24.4183 42 20C42 15.5817 38.4183 12 34 12C29.5817 12 26 15.5817 26 20C26 28 32 36 42 36" strokeLinecap="round" />
@@ -134,24 +137,24 @@ export default function AboutCelebrityTrustSection() {
                       </h3>
 
                       {/* Testimonial Body Paragraph */}
-                      <p className="text-xs sm:text-[13.5px] text-white/85 leading-relaxed font-normal">
+                      <p className="text-xs sm:text-[13.5px] text-gray-300 leading-relaxed font-normal">
                         {item.quote}
                       </p>
                     </div>
 
                     {/* Author & Rating */}
-                    <div className="pt-6 sm:pt-8 mt-4 border-t border-white/15">
+                    <div className="pt-6 sm:pt-8 mt-4 border-t border-nexgen-primaryGold/20">
                       {/* 5 Stars */}
-                      <div className="flex items-center gap-1 text-white mb-2">
+                      <div className="flex items-center gap-1 text-nexgen-brightGold mb-2">
                         {[...Array(item.rating)].map((_, idx) => (
-                          <Star key={idx} className="w-3.5 h-3.5 fill-white text-white" />
+                          <Star key={idx} className="w-3.5 h-3.5 fill-nexgen-brightGold text-nexgen-brightGold" />
                         ))}
                       </div>
 
                       <div className="text-sm sm:text-base font-bold text-white">
                         - {item.name}
                       </div>
-                      <div className="text-xs text-white/70 font-normal mt-0.5">
+                      <div className="text-xs text-nexgen-primaryGold/80 font-normal mt-0.5">
                         {item.role}
                       </div>
                     </div>
@@ -159,7 +162,7 @@ export default function AboutCelebrityTrustSection() {
                   </div>
 
                   {/* Right Column: Full-Height Celebrity Portrait */}
-                  <div className="lg:col-span-6 bg-gray-100 relative min-h-[340px] sm:min-h-[420px] lg:min-h-full">
+                  <div className="lg:col-span-6 bg-gray-900 relative min-h-[340px] sm:min-h-[420px] lg:min-h-full">
                     <img
                       src={item.image}
                       alt={`${item.name} - Hair Transplant Result`}
@@ -177,18 +180,18 @@ export default function AboutCelebrityTrustSection() {
             type="button"
             onClick={handlePrev}
             aria-label="Previous testimonial"
-            className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 w-11 sm:w-12 h-11 sm:h-12 rounded-full bg-white text-[#1b221d] flex items-center justify-center hover:bg-gray-50 active:scale-90 transition-all shadow-lg border border-gray-100 cursor-pointer z-20"
+            className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 w-11 sm:w-12 h-11 sm:h-12 rounded-full bg-nexgen-brightGold text-nexgen-veryDarkHeader flex items-center justify-center hover:bg-yellow-400 active:scale-90 transition-all shadow-lg border border-nexgen-primaryGold/30 cursor-pointer z-20"
           >
-            <ChevronLeft className="w-5 h-5 text-[#1b221d]" />
+            <ChevronLeft className="w-5 h-5 text-nexgen-veryDarkHeader" />
           </button>
 
           <button
             type="button"
             onClick={handleNext}
             aria-label="Next testimonial"
-            className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 w-11 sm:w-12 h-11 sm:h-12 rounded-full bg-white text-[#1b221d] flex items-center justify-center hover:bg-gray-50 active:scale-90 transition-all shadow-lg border border-gray-100 cursor-pointer z-20"
+            className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 w-11 sm:w-12 h-11 sm:h-12 rounded-full bg-nexgen-brightGold text-nexgen-veryDarkHeader flex items-center justify-center hover:bg-yellow-400 active:scale-90 transition-all shadow-lg border border-nexgen-primaryGold/30 cursor-pointer z-20"
           >
-            <ChevronRight className="w-5 h-5 text-[#1b221d]" />
+            <ChevronRight className="w-5 h-5 text-nexgen-veryDarkHeader" />
           </button>
 
           {/* Bottom Dot Indicators */}
@@ -200,7 +203,7 @@ export default function AboutCelebrityTrustSection() {
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`transition-all duration-300 rounded-full cursor-pointer ${currentIndex === idx
-                  ? "w-8 h-2.5 bg-[#52664d]"
+                  ? "w-8 h-2.5 bg-nexgen-brightGold"
                   : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
                   }`}
               />

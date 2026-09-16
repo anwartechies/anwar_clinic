@@ -65,7 +65,7 @@ export default function CostPage() {
       <GoogleReviews />
 
       {/* 14. Hair Transplant Cost by City in India (22 Cities Grid) */}
-      <CostByCitySection onOpenConsultation={openConsultation} />
+      {/* <CostByCitySection onOpenConsultation={openConsultation} /> */}
 
       {/* 15. Contact Us Section */}
       {/* <ContactSection showLocations={true} /> */}

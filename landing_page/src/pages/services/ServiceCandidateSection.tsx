@@ -46,9 +46,9 @@ export default function ServiceCandidateSection({
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
       <div className="qht-large-container">
 
-        {/* Top Header Row */}
+        {/* Section Heading & Subtitle */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.18] max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.18] max-w-2xl">
             {title.toLowerCase().startsWith("who is") ? (
               title
             ) : (
@@ -59,7 +59,7 @@ export default function ServiceCandidateSection({
               </>
             )}
           </h2>
-          <p className="text-sm sm:text-lg text-[#5c685f] max-w-md leading-relaxed font-normal">
+          <p className="text-sm sm:text-lg text-gray-600 max-w-md leading-relaxed font-normal">
             {subtitle}
           </p>
         </div>
@@ -86,18 +86,18 @@ export default function ServiceCandidateSection({
               {points.map((point, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-6 sm:p-7 rounded-2xl sm:rounded-[24px] border border-gray-200/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:border-[#596d53]/40 transition-all duration-200"
+                  className="bg-white p-6 sm:p-7 rounded-2xl sm:rounded-[24px] border border-gray-200/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:border-nexgen-primaryGold/40 transition-all duration-200"
                 >
-                  {/* Green Circular Badge Checkmark */}
-                  <div className="w-6 h-6 rounded-full bg-[#596d53] text-white flex items-center justify-center shadow-xs">
+                  {/* Gold Circular Badge Checkmark */}
+                  <div className="w-6 h-6 rounded-full bg-nexgen-primaryGold text-white flex items-center justify-center shadow-xs">
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#1b221d] mt-3 leading-snug">
+                  <h3 className="text-lg font-bold text-nexgen-veryDarkHeader mt-3 leading-snug">
                     {point.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#5c685f] mt-1.5 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-gray-600 mt-1.5 leading-relaxed font-normal">
                     {point.desc}
                   </p>
                 </div>
@@ -105,11 +105,11 @@ export default function ServiceCandidateSection({
             </div>
 
             {/* Bottom "Still Confused? Talk to our experts" Banner */}
-            <div className="relative rounded-2xl sm:rounded-[24px] overflow-hidden bg-[#38493a] text-white p-6 sm:p-8 shadow-md">
+            <div className="relative rounded-2xl sm:rounded-[24px] overflow-hidden bg-nexgen-mainDarkBg text-white p-6 sm:p-8 shadow-md border border-nexgen-primaryGold/30">
               {/* Decorative Background Circles */}
               <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-20 pointer-events-none">
-                <div className="absolute -right-10 -top-10 w-44 h-44 rounded-full bg-[#596d53]" />
-                <div className="absolute right-20 -bottom-10 w-36 h-36 rounded-full bg-[#6a8063]" />
+                <div className="absolute -right-10 -top-10 w-44 h-44 rounded-full bg-nexgen-primaryGold" />
+                <div className="absolute right-20 -bottom-10 w-36 h-36 rounded-full bg-nexgen-brightGold" />
               </div>
 
               <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
@@ -124,7 +124,7 @@ export default function ServiceCandidateSection({
 
                 <button
                   onClick={onOpenConsultation}
-                  className="bg-white hover:bg-gray-100 text-[#1b221d] font-bold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 whitespace-nowrap flex-shrink-0"
+                  className="bg-nexgen-brightGold hover:brightness-105 text-nexgen-veryDarkHeader font-bold text-sm sm:text-base py-3 px-8 rounded-full shadow-md transition-all active:scale-95 whitespace-nowrap flex-shrink-0"
                 >
                   Contact Us
                 </button>

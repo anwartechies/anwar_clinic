@@ -64,7 +64,7 @@ export default function FAQSection({
 
         {/* Section Heading */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-5xl  font-[500] text-[#1b221d] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-5xl  font-[500] text-nexgen-veryDarkHeader tracking-tight leading-tight">
             {title}
           </h2>
         </div>
@@ -84,19 +84,19 @@ export default function FAQSection({
                 >
                   <div className="flex items-baseline gap-5 sm:gap-7 pr-4">
                     {/* Number 01, 02, etc. */}
-                    <span className="text-xs sm:text-sm font-semibold text-[#5c685f] tracking-tight flex-shrink-0">
+                    <span className="text-xs sm:text-sm font-semibold text-nexgen-primaryGold tracking-tight flex-shrink-0">
                       {faq.id}
                     </span>
 
                     {/* Question Text */}
-                    <span className="text-sm sm:text-2xl font-[500] text-[#1b221d] group-hover:text-[#596d53] transition-colors leading-snug">
+                    <span className="text-sm sm:text-2xl font-[500] text-nexgen-veryDarkHeader group-hover:text-nexgen-primaryGold transition-colors leading-snug">
                       {faq.question}
                     </span>
                   </div>
 
                   {/* Smooth Rotating Chevron */}
                   <ChevronDown
-                    className={`w-4 h-4 text-gray-500 flex-shrink-0 transition-transform duration-300 ease-out ${isOpen ? "rotate-180 text-[#1b221d]" : "text-gray-400 group-hover:text-gray-700"
+                    className={`w-4 h-4 text-gray-500 flex-shrink-0 transition-transform duration-300 ease-out ${isOpen ? "rotate-180 text-nexgen-primaryGold" : "text-gray-400 group-hover:text-gray-700"
                       }`}
                   />
                 </button>
@@ -109,7 +109,7 @@ export default function FAQSection({
                     }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-xs sm:text-[18.5px] text-[#5c685f] leading-relaxed pl-8 sm:pl-10 font-normal">
+                    <p className="text-xs sm:text-[18.5px] text-nexgen-serviceInnerCard leading-relaxed pl-8 sm:pl-10 font-normal">
                       {faq.answer}
                     </p>
                   </div>

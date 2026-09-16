@@ -52,7 +52,7 @@ export default function ResultsHero({
   };
 
   return (
-    <section className="relative pt-32 pb-24 sm:pt-36 sm:pb-32 lg:pt-40 lg:pb-36 bg-[#eff5f1] overflow-hidden min-h-[92vh] flex items-center">
+    <section className="relative pt-32 pb-24 sm:pt-36 sm:pb-32 lg:pt-40 lg:pb-36 bg-nexgen-pageLightBg overflow-hidden min-h-[92vh] flex items-center">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
 
         {/* Main 3-Column Relative Layout */}
@@ -74,7 +74,7 @@ export default function ResultsHero({
 
               {/* Bold Yellow Badge Text Overlay */}
               <div className="absolute inset-x-0 bottom-14 sm:bottom-16 px-3 text-center pointer-events-none">
-                <span className="text-[#facc15] font-black text-lg sm:text-xl tracking-tight uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                <span className="text-nexgen-brightGold font-black text-lg sm:text-xl tracking-tight uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
                   AFTER 9 MONTHS
                 </span>
               </div>
@@ -84,14 +84,14 @@ export default function ResultsHero({
           {/* 2. CENTER TYPOGRAPHY & SCROLL DOWN */}
           <div className="relative z-20 text-center flex flex-col items-center justify-center lg:-mr-24 lg:translate-x-4 max-w-sm sm:max-w-md pointer-events-auto">
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[500] text-[#1b221d] tracking-tight leading-[1.04]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.04]">
               Proven Results <br />
-              <span className="text-[#596d53]">Lasting</span> <br />
-              <span className="text-[#596d53]">Confidence.</span>
+              <span className="text-nexgen-primaryGold">Lasting</span> <br />
+              <span className="text-nexgen-primaryGold">Confidence.</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xs sm:text-[16px] text-[#5c685f] mt-4 max-w-[270px] mx-auto leading-relaxed font-normal">
+            <p className="text-xs sm:text-[16px] text-nexgen-serviceInnerCard mt-4 max-w-[270px] mx-auto leading-relaxed font-normal">
               From receding temples to full crown restoration — discover what’s possible with {COMPANY_NAME}.
             </p>
 
@@ -103,7 +103,7 @@ export default function ResultsHero({
                 aria-label="Scroll down"
               >
                 <span
-                  className="text-[10px] text-gray-400 group-hover:text-[#596d53] uppercase tracking-[0.25em] font-semibold mb-3 transition-colors"
+                  className="text-[10px] text-gray-400 group-hover:text-nexgen-primaryGold uppercase tracking-[0.25em] font-semibold mb-3 transition-colors"
                   style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
                 >
                   SCROLL DOWN
@@ -111,14 +111,14 @@ export default function ResultsHero({
 
                 {/* Thin Vertical Arrow */}
                 <div className="flex flex-col items-center">
-                  <div className="w-[1px] h-12 bg-gray-300 group-hover:bg-[#596d53] transition-colors" />
+                  <div className="w-[1px] h-12 bg-gray-300 group-hover:bg-nexgen-primaryGold transition-colors" />
                   <svg
                     width="12"
                     height="8"
                     viewBox="0 0 12 8"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="text-gray-400 group-hover:text-[#596d53] transition-colors"
+                    className="text-gray-400 group-hover:text-nexgen-primaryGold transition-colors"
                   >
                     <path
                       d="M1 1.5L6 6.5L11 1.5"

@@ -35,7 +35,7 @@ export default function ServiceDosDontsSection({
   dos = DEFAULT_DOS,
 }: ServiceDosDontsSectionProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#596d53] text-white overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden border-y border-nexgen-primaryGold/20">
       <div className="qht-large-container">
         
         {/* Centered Heading & Subtitle */}
@@ -55,15 +55,15 @@ export default function ServiceDosDontsSection({
           
           {/* Left Card: Don'ts */}
           <div className="bg-white rounded-3xl p-7 sm:p-9 shadow-xl flex flex-col justify-start">
-            <h3 className="text-xl sm:text-2xl font-bold text-[#1b221d] pb-4 border-b border-gray-200/80">
+            <h3 className="text-xl sm:text-2xl font-bold text-nexgen-veryDarkHeader pb-4 border-b border-gray-200/80">
               Don’ts
             </h3>
             
             <div className="divide-y divide-gray-200/80 flex flex-col">
               {donts.map((item, idx) => (
                 <div key={idx} className="py-4.5 sm:py-5 flex items-center gap-3.5 group">
-                  <div className="w-5 h-5 rounded-full bg-[#e53e3e] text-white flex items-center justify-center flex-shrink-0 shadow-xs group-hover:scale-110 transition-transform">
-                    <XCircle className="w-3.5 h-3.5 fill-white text-[#e53e3e]" />
+                  <div className="w-5 h-5 rounded-full bg-red-500 text-white flex items-center justify-center flex-shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                    <XCircle className="w-3.5 h-3.5 fill-white text-red-500" />
                   </div>
                   <span className="text-xs sm:text-sm font-medium text-gray-800 leading-snug">
                     {item}
@@ -75,15 +75,15 @@ export default function ServiceDosDontsSection({
 
           {/* Right Card: Do's */}
           <div className="bg-white rounded-3xl p-7 sm:p-9 shadow-xl flex flex-col justify-start">
-            <h3 className="text-xl sm:text-2xl font-bold text-[#1b221d] pb-4 border-b border-gray-200/80">
+            <h3 className="text-xl sm:text-2xl font-bold text-nexgen-veryDarkHeader pb-4 border-b border-gray-200/80">
               Do’s
             </h3>
             
             <div className="divide-y divide-gray-200/80 flex flex-col">
               {dos.map((item, idx) => (
                 <div key={idx} className="py-4.5 sm:py-5 flex items-center gap-3.5 group">
-                  <div className="w-5 h-5 rounded-full bg-[#596d53] text-white flex items-center justify-center flex-shrink-0 shadow-xs group-hover:scale-110 transition-transform">
-                    <CheckCircle2 className="w-3.5 h-3.5 fill-white text-[#596d53]" />
+                  <div className="w-5 h-5 rounded-full bg-nexgen-primaryGold text-white flex items-center justify-center flex-shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                    <CheckCircle2 className="w-3.5 h-3.5 fill-white text-nexgen-primaryGold" />
                   </div>
                   <span className="text-xs sm:text-sm font-medium text-gray-800 leading-snug">
                     {item}

@@ -139,11 +139,11 @@ export default function ClinicShowcaseSection({
 
         {/* Heading & Intro */}
         <div className="max-w-5xl mb-8 sm:mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-[#1b221d] tracking-tight leading-[1.14] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-nexgen-veryDarkHeader tracking-tight leading-[1.14] mb-4">
             We have state of the art hair transplant <br />
             clinic across in india.
           </h2>
-          <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal max-w-4xl">
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal max-w-4xl">
             We have state-of-the-art hair transplant clinics across India, offering advanced treatments with the latest technology and highly experienced surgeons. Our clinics are equipped to provide safe, effective, and natural-looking results. Whether you're dealing with hair loss or looking for hair restoration, {COMPANY_NAME} Clinic ensures personalized care and exceptional outcomes in every major city across India.
           </p>
         </div>
@@ -158,11 +158,11 @@ export default function ClinicShowcaseSection({
                 type="button"
                 onClick={() => handleTabChange(branch.id)}
                 className={`flex items-center gap-2 px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${isActive
-                  ? "bg-[#52664d] text-white shadow-md"
+                  ? "bg-nexgen-mainDarkBg text-white shadow-md border border-nexgen-primaryGold/30"
                   : "bg-white text-gray-700 border border-gray-300/80 hover:bg-gray-50 hover:border-gray-400"
                   }`}
               >
-                <span className={isActive ? "text-white" : "text-[#52664d]"}>
+                <span className={isActive ? "text-nexgen-brightGold" : "text-nexgen-primaryGold"}>
                   {branch.tabIcon}
                 </span>
                 <span>{branch.tabLabel}</span>
@@ -178,11 +178,11 @@ export default function ClinicShowcaseSection({
           <div className="lg:col-span-4 space-y-6">
 
             {/* Contact Card */}
-            <div className="bg-[#eff5f1] rounded-3xl p-6 sm:p-7 space-y-4 border border-gray-200/50 shadow-2xs">
+            <div className="bg-nexgen-pageLightBg rounded-3xl p-6 sm:p-7 space-y-4 border border-gray-200/60 shadow-2xs">
 
               {/* Address */}
               <div className="flex items-start gap-3.5 pb-3.5 border-b border-gray-300/40">
-                <div className="w-8 h-8 rounded-full bg-[#52664d] text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
+                <div className="w-8 h-8 rounded-full bg-nexgen-mainDarkBg text-nexgen-brightGold border border-nexgen-primaryGold/30 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <p className="text-xs sm:text-[13px] text-gray-800 leading-snug font-medium">
@@ -192,12 +192,12 @@ export default function ClinicShowcaseSection({
 
               {/* Phone */}
               <div className="flex items-center gap-3.5 pb-3.5 border-b border-gray-300/40">
-                <div className="w-8 h-8 rounded-full bg-[#52664d] text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
+                <div className="w-8 h-8 rounded-full bg-nexgen-mainDarkBg text-nexgen-brightGold border border-nexgen-primaryGold/30 flex items-center justify-center flex-shrink-0 shadow-2xs">
                   <Phone className="w-3.5 h-3.5" />
                 </div>
                 <a
                   href={`tel:${currentBranch.phone.replace(/[^0-9+]/g, "")}`}
-                  className="text-xs sm:text-[13px] text-gray-800 font-semibold hover:text-[#52664d] transition-colors"
+                  className="text-xs sm:text-[13px] text-gray-800 font-semibold hover:text-nexgen-primaryGold transition-colors"
                 >
                   {currentBranch.phone}
                 </a>
@@ -205,12 +205,12 @@ export default function ClinicShowcaseSection({
 
               {/* Email */}
               <div className="flex items-center gap-3.5">
-                <div className="w-8 h-8 rounded-full bg-[#52664d] text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
+                <div className="w-8 h-8 rounded-full bg-nexgen-mainDarkBg text-nexgen-brightGold border border-nexgen-primaryGold/30 flex items-center justify-center flex-shrink-0 shadow-2xs">
                   <Mail className="w-3.5 h-3.5" />
                 </div>
                 <a
                   href={`mailto:${currentBranch.email}`}
-                  className="text-xs sm:text-[13px] text-gray-800 font-semibold hover:text-[#52664d] transition-colors"
+                  className="text-xs sm:text-[13px] text-gray-800 font-semibold hover:text-nexgen-primaryGold transition-colors"
                 >
                   {currentBranch.email}
                 </a>
@@ -219,9 +219,9 @@ export default function ClinicShowcaseSection({
             </div>
 
             {/* "Get An Expert Assistance." Card */}
-            <div className="bg-gradient-to-br from-[#121c13] via-[#1b2b1d] to-[#2c3d2a] rounded-3xl p-7 sm:p-8 text-white relative overflow-hidden shadow-xl border border-[#344b38]">
+            <div className="bg-gradient-to-br from-nexgen-mainDarkBg to-nexgen-veryDarkHeader rounded-3xl p-7 sm:p-8 text-white relative overflow-hidden shadow-xl border border-nexgen-primaryGold/30">
               {/* Subtle ambient light glow */}
-              <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-[#b1fc85]/15 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-nexgen-primaryGold/15 rounded-full blur-2xl pointer-events-none" />
 
               <div className="relative z-10">
                 <h3 className="text-2xl sm:text-[26px] font-[500] text-white leading-tight mb-2 tracking-tight">
@@ -235,7 +235,7 @@ export default function ClinicShowcaseSection({
                 <button
                   type="button"
                   onClick={onOpenConsultation}
-                  className="bg-white hover:bg-gray-100 text-gray-900 font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow-md transition-all active:scale-95 duration-150 cursor-pointer"
+                  className="bg-nexgen-brightGold hover:bg-white text-nexgen-veryDarkHeader font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow-md transition-all active:scale-95 duration-150 cursor-pointer"
                 >
                   Consult Us
                 </button>
@@ -249,10 +249,10 @@ export default function ClinicShowcaseSection({
 
             {/* Branch Showcase Header */}
             <div className="mb-6">
-              <h3 className="text-2xl sm:text-3xl font-[500] text-[#1b221d] mb-2 tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-[500] text-nexgen-veryDarkHeader mb-2 tracking-tight">
                 {currentBranch.title}
               </h3>
-              <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed max-w-2xl">
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-2xl">
                 {currentBranch.subtitle}
               </p>
             </div>
@@ -282,7 +282,7 @@ export default function ClinicShowcaseSection({
                         type="button"
                         onClick={() => setCurrentImageIndex(dotIdx)}
                         className={`h-1.5 rounded-full transition-all duration-300 ${currentImageIndex === dotIdx
-                          ? "w-6 bg-[#b1fc85]"
+                          ? "w-6 bg-nexgen-brightGold"
                           : "w-2 bg-white/50 hover:bg-white"
                           }`}
                       />

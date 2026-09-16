@@ -30,7 +30,7 @@ export default function EbookCatalogueForm({
   };
 
   return (
-    <section className="py-20 sm:py-24 lg:py-28 bg-[#52664d] text-white overflow-hidden relative">
+    <section className="py-20 sm:py-24 lg:py-28 bg-nexgen-mainDarkBg text-white overflow-hidden relative">
       <div className="qht-large-container">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -42,16 +42,16 @@ export default function EbookCatalogueForm({
               <div className="relative flex items-center justify-center">
                 {/* Book 1 (Left tilted) */}
                 <div className="w-[180px] sm:w-[220px] md:w-[240px] rounded-2xl overflow-hidden shadow-2xl transform -rotate-12 hover:-rotate-6 transition-transform duration-500 z-10 border border-white/20 bg-white">
-                  <div className="p-4 sm:p-5 bg-white text-[#1b221d] flex flex-col justify-between aspect-[3/4]">
+                  <div className="p-4 sm:p-5 bg-white text-nexgen-veryDarkHeader flex flex-col justify-between aspect-[3/4]">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center font-bold text-[10px]">
                         {COMPANY_NAME}
                       </div>
                     </div>
                     <div className="my-auto py-2">
-                      <h4 className="text-base sm:text-lg font-extrabold leading-tight text-[#1b221d]">
+                      <h4 className="text-base sm:text-lg font-extrabold leading-tight text-nexgen-veryDarkHeader">
                         Hair Transplant <br />
-                        <span className="text-[#52664d]">Techniques</span>
+                        <span className="text-nexgen-primaryGold">Techniques</span>
                       </h4>
                       <p className="text-[10px] text-gray-500 mt-1 leading-snug">
                         The Consumer’s guide to hair transplant surgery
@@ -61,23 +61,23 @@ export default function EbookCatalogueForm({
                     <div className="pt-2 border-t border-gray-100 flex items-center justify-center gap-1 opacity-80">
                       <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
                       <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
-                      <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[8px] flex items-center justify-center font-bold">{COMPANY_NAME}</div>
+                      <div className="w-6 h-6 rounded-full bg-nexgen-mainDarkBg text-white text-[8px] flex items-center justify-center font-bold">{COMPANY_NAME}</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Book 2 (Right upright) */}
                 <div className="w-[180px] sm:w-[220px] md:w-[240px] rounded-2xl overflow-hidden shadow-2xl transform rotate-6 hover:rotate-3 transition-transform duration-500 -ml-12 sm:-ml-16 z-20 border border-white/20 bg-white">
-                  <div className="p-4 sm:p-5 bg-white text-[#1b221d] flex flex-col justify-between aspect-[3/4]">
+                  <div className="p-4 sm:p-5 bg-white text-nexgen-veryDarkHeader flex flex-col justify-between aspect-[3/4]">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center font-bold text-[10px]">
                         {COMPANY_NAME}
                       </div>
                     </div>
                     <div className="my-auto py-2">
-                      <h4 className="text-base sm:text-lg font-extrabold leading-tight text-[#1b221d]">
+                      <h4 className="text-base sm:text-lg font-extrabold leading-tight text-nexgen-veryDarkHeader">
                         Hair Transplant <br />
-                        <span className="text-[#52664d]">Techniques</span>
+                        <span className="text-nexgen-primaryGold">Techniques</span>
                       </h4>
                       <p className="text-[10px] text-gray-500 mt-1 leading-snug">
                         Everything you wanted to know about hair transplant
@@ -86,7 +86,7 @@ export default function EbookCatalogueForm({
                     {/* Illustration preview */}
                     <div className="pt-2 border-t border-gray-100 flex items-center justify-center gap-1 opacity-80">
                       <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
-                      <div className="w-6 h-6 rounded-full bg-[#52664d] text-white text-[8px] flex items-center justify-center font-bold">{COMPANY_NAME}</div>
+                      <div className="w-6 h-6 rounded-full bg-nexgen-mainDarkBg text-white text-[8px] flex items-center justify-center font-bold">{COMPANY_NAME}</div>
                       <div className="w-6 h-6 rounded-full bg-gray-100 border border-gray-300"></div>
                     </div>
                   </div>
@@ -128,7 +128,7 @@ export default function EbookCatalogueForm({
             <div className="pt-6">
               {downloadSuccess ? (
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center space-y-3">
-                  <CheckCircle className="w-10 h-10 text-[#b1fc85] mx-auto" />
+                  <CheckCircle className="w-10 h-10 text-nexgen-brightGold mx-auto" />
                   <h4 className="text-base font-bold text-white">
                     Guide Ready For Download!
                   </h4>
@@ -141,7 +141,7 @@ export default function EbookCatalogueForm({
                       e.preventDefault();
                       alert(`Downloading ${COMPANY_NAME}-Hair-Transplant-Guide.pdf`);
                     }}
-                    className="inline-flex items-center gap-2 px-7 py-3 bg-white text-[#52664d] rounded-full text-xs font-bold hover:bg-gray-100 transition-colors shadow-md cursor-pointer"
+                    className="inline-flex items-center gap-2 px-7 py-3 bg-nexgen-brightGold hover:bg-nexgen-primaryGold text-nexgen-veryDarkHeader rounded-full text-xs font-bold transition-colors shadow-md cursor-pointer"
                   >
                     <Download className="w-4 h-4" /> Download PDF Now
                   </a>
@@ -192,7 +192,7 @@ export default function EbookCatalogueForm({
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto bg-white hover:bg-gray-100 text-[#52664d] font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-lg transition-all active:scale-95 whitespace-nowrap cursor-pointer"
+                      className="w-full sm:w-auto bg-nexgen-brightGold hover:bg-nexgen-primaryGold text-nexgen-veryDarkHeader font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-lg transition-all active:scale-95 whitespace-nowrap cursor-pointer"
                     >
                       {isSubmitting ? "Processing..." : "Download Now"}
                     </button>
