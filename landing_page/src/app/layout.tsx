@@ -8,6 +8,8 @@ import { ConsultationProvider } from "@/context/ConsultationContext";
 import { COMPANY_NAME } from "@/config/constants";
 
 import { fetchServices } from "@/lib/services";
+import { fetchActiveOffer } from "@/lib/offers";
+import { OfferProvider } from "@/context/OfferContext";
 
 export const dynamic = "force-dynamic";
 
@@ -44,20 +46,23 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const services = await fetchServices();
+  const offer = await fetchActiveOffer();
 
   return (
     <html lang="en">
       <body className="antialiased text-slate-900 bg-white selection:bg-[#1b392b] selection:text-white">
-        <ConsultationProvider>
-          <div className="min-h-screen flex flex-col bg-white">
-            <Header initialServices={services} />
-            <main className="flex-grow">{children}</main>
-            <Footer initialServices={services} />
-            <FloatingActionBar />
-          </div>
+        <OfferProvider initialOffer={offer}>
+          <ConsultationProvider>
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header initialServices={services} />
+              <main className="flex-grow">{children}</main>
+              <Footer initialServices={services} />
+              <FloatingActionBar />
+            </div>
 
-          <WhatsAppButton />
-        </ConsultationProvider>
+            <WhatsAppButton />
+          </ConsultationProvider>
+        </OfferProvider>
       </body>
     </html>
   );

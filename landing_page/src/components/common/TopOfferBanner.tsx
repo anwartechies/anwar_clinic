@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Sparkles, ArrowRight, X, Gift } from "lucide-react";
 import { useConsultation } from "@/context/ConsultationContext";
+import { useOffer } from "@/context/OfferContext";
 import { STATIC_OFFER, type OfferBannerConfig } from "@/config/offer";
 
 // Re-exported so existing imports from this module keep working.
@@ -16,22 +17,28 @@ interface TopOfferBannerProps {
 }
 
 export default function TopOfferBanner({
-  config = STATIC_OFFER,
+  config: propConfig,
   onOpenConsultation,
   onVisibilityChange,
 }: TopOfferBannerProps) {
+  const contextOffer = useOffer();
+  const config = propConfig ?? contextOffer;
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const { claimOffer } = useConsultation();
 
-  // Appears after 10 seconds with animation
+  // Appears after slight delay with animation
   useEffect(() => {
-    if (!config.isEnabled) return;
+    if (!config.isEnabled) {
+      setIsVisible(false);
+      if (onVisibilityChange) onVisibilityChange(false);
+      return;
+    }
 
     const timer = setTimeout(() => {
       setIsVisible(true);
       if (onVisibilityChange) onVisibilityChange(true);
-    }, 1000); // 10 seconds
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [config.isEnabled, onVisibilityChange]);

@@ -1,6 +1,7 @@
 import { COMPANY_NAME } from "./constants";
 
 export interface OfferBannerConfig {
+  id?: string;
   isEnabled: boolean;
   badge?: string;
   title: string;
