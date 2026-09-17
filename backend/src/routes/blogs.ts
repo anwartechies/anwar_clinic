@@ -30,7 +30,32 @@ async function uniqueSlug(base: string, excludeId?: string): Promise<string> {
   }
 }
 
-// GET /blogs — list all blogs (drafts included)
+/**
+ * @swagger
+ * /blogs:
+ *   get:
+ *     summary: List all blog posts (including drafts)
+ *     tags: [Admin - Blogs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [draft, published]
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: List of blog posts
+ */
 router.get("/", authorize("blogs:read"), async (req: AuthRequest, res: Response) => {
   try {
     const { status, category, search } = req.query;
@@ -66,7 +91,26 @@ router.get("/", authorize("blogs:read"), async (req: AuthRequest, res: Response)
   }
 });
 
-// GET /blogs/:id — single blog for the editor
+/**
+ * @swagger
+ * /blogs/{id}:
+ *   get:
+ *     summary: Get single blog post by ID for editing
+ *     tags: [Admin - Blogs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Complete blog post
+ *       404:
+ *         description: Blog not found
+ */
 router.get("/:id", authorize("blogs:read"), async (req: AuthRequest, res: Response) => {
   try {
     const blog = await Blog.findByPk(req.params.id);
@@ -80,7 +124,70 @@ router.get("/:id", authorize("blogs:read"), async (req: AuthRequest, res: Respon
   }
 });
 
-// POST /blogs — create a new blog
+/**
+ * @swagger
+ * /blogs:
+ *   post:
+ *     summary: Create a new blog post
+ *     tags: [Admin - Blogs]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - title
+ *             properties:
+ *               title:
+ *                 type: string
+ *               slug:
+ *                 type: string
+ *               excerpt:
+ *                 type: string
+ *               content:
+ *                 type: string
+ *               contentBlocks:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *               faqs:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *               category:
+ *                 type: string
+ *               tags:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               authorName:
+ *                 type: string
+ *               authorRole:
+ *                 type: string
+ *               authorAvatar:
+ *                 type: string
+ *               coverImage:
+ *                 type: string
+ *               readTime:
+ *                 type: string
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published]
+ *               featured:
+ *                 type: boolean
+ *               metaTitle:
+ *                 type: string
+ *               metaDescription:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: Blog post created
+ *       400:
+ *         description: Validation error
+ */
 router.post("/", authorize("blogs:write"), async (req: AuthRequest, res: Response) => {
   try {
     const b = req.body || {};
@@ -119,7 +226,62 @@ router.post("/", authorize("blogs:write"), async (req: AuthRequest, res: Respons
   }
 });
 
-// PUT /blogs/:id — update a blog
+/**
+ * @swagger
+ * /blogs/{id}:
+ *   put:
+ *     summary: Update an existing blog post
+ *     tags: [Admin - Blogs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               slug:
+ *                 type: string
+ *               excerpt:
+ *                 type: string
+ *               content:
+ *                 type: string
+ *               contentBlocks:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *               faqs:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *               category:
+ *                 type: string
+ *               tags:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               coverImage:
+ *                 type: string
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published]
+ *               featured:
+ *                 type: boolean
+ *     responses:
+ *       200:
+ *         description: Blog updated
+ *       404:
+ *         description: Blog not found
+ */
 router.put("/:id", authorize("blogs:write"), async (req: AuthRequest, res: Response) => {
   try {
     const blog = await Blog.findByPk(req.params.id);
@@ -154,7 +316,26 @@ router.put("/:id", authorize("blogs:write"), async (req: AuthRequest, res: Respo
   }
 });
 
-// PATCH /blogs/:id/toggle-status — quick publish/unpublish
+/**
+ * @swagger
+ * /blogs/{id}/toggle-status:
+ *   patch:
+ *     summary: Quick toggle between draft and published status
+ *     tags: [Admin - Blogs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Status toggled
+ *       404:
+ *         description: Blog not found
+ */
 router.patch("/:id/toggle-status", authorize("blogs:write"), async (req: AuthRequest, res: Response) => {
   try {
     const blog = await Blog.findByPk(req.params.id);
@@ -170,7 +351,26 @@ router.patch("/:id/toggle-status", authorize("blogs:write"), async (req: AuthReq
   }
 });
 
-// DELETE /blogs/:id — delete a blog
+/**
+ * @swagger
+ * /blogs/{id}:
+ *   delete:
+ *     summary: Delete a blog post
+ *     tags: [Admin - Blogs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Blog deleted
+ *       404:
+ *         description: Blog not found
+ */
 router.delete("/:id", authorize("blogs:write"), async (req: AuthRequest, res: Response) => {
   try {
     const blog = await Blog.findByPk(req.params.id);

@@ -27,6 +27,18 @@ const ALLOWED_MIME = [
 router.use(authenticate);
 
 // Lets the UI label which backend is live without hardcoding it.
+/**
+ * @swagger
+ * /media/config:
+ *   get:
+ *     summary: Get media storage configuration (storage driver, max upload size, allowed types)
+ *     tags: [Admin - Media]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Storage configuration
+ */
 router.get("/config", authorize("media:read"), (_req: AuthRequest, res: Response) => {
   res.json({
     driver: storage.name,
@@ -35,6 +47,18 @@ router.get("/config", authorize("media:read"), (_req: AuthRequest, res: Response
   });
 });
 
+/**
+ * @swagger
+ * /media:
+ *   get:
+ *     summary: List all uploaded media assets
+ *     tags: [Admin - Media]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: List of media assets
+ */
 router.get("/", authorize("media:read"), async (_req: AuthRequest, res: Response) => {
   const assets = await MediaAsset.findAll({
     include: [{ model: User, as: "uploadedBy", attributes: ["id", "fullName"] }],
@@ -43,6 +67,32 @@ router.get("/", authorize("media:read"), async (_req: AuthRequest, res: Response
   res.json(assets);
 });
 
+/**
+ * @swagger
+ * /media/upload:
+ *   post:
+ *     summary: Upload a media asset (image/document)
+ *     tags: [Admin - Media]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - file
+ *             properties:
+ *               file:
+ *                 type: string
+ *                 format: binary
+ *     responses:
+ *       201:
+ *         description: Uploaded media asset record
+ *       400:
+ *         description: Unsupported file type or file too large
+ */
 router.post(
   "/upload",
   authorize("media:write"),
@@ -83,6 +133,35 @@ router.post(
   }
 );
 
+/**
+ * @swagger
+ * /media/{id}:
+ *   put:
+ *     summary: Update media asset metadata (e.g. alt text)
+ *     tags: [Admin - Media]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               altText:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Asset updated
+ *       404:
+ *         description: Asset not found
+ */
 router.put("/:id", authorize("media:write"), async (req: AuthRequest, res: Response) => {
   const asset = await MediaAsset.findByPk(req.params.id);
   if (!asset) {
@@ -94,6 +173,26 @@ router.put("/:id", authorize("media:write"), async (req: AuthRequest, res: Respo
   res.json(asset);
 });
 
+/**
+ * @swagger
+ * /media/{id}:
+ *   delete:
+ *     summary: Delete a media asset from library and storage
+ *     tags: [Admin - Media]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Asset deleted
+ *       404:
+ *         description: Asset not found
+ */
 router.delete("/:id", authorize("media:write"), async (req: AuthRequest, res: Response) => {
   const asset = await MediaAsset.findByPk(req.params.id);
   if (!asset) {

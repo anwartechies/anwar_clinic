@@ -8,6 +8,20 @@ router.use(authenticate);
 
 // Readable by any signed-in user: the admin panel needs the role list to
 // resolve a previewed role's permissions and to render the roles matrix.
+/**
+ * @swagger
+ * /roles:
+ *   get:
+ *     summary: List all roles with attached permissions and user counts
+ *     tags: [Admin - Roles]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: List of roles
+ *       401:
+ *         description: Unauthorized
+ */
 router.get("/", async (_req: AuthRequest, res: Response) => {
   const roles = await Role.findAll({ include: [Permission], order: [["createdAt", "ASC"]] });
   const counts = (await User.count({ group: ["roleId"] })) as unknown as {
@@ -22,6 +36,43 @@ router.get("/", async (_req: AuthRequest, res: Response) => {
   res.json(withCounts);
 });
 
+/**
+ * @swagger
+ * /roles:
+ *   post:
+ *     summary: Create a new custom role
+ *     tags: [Admin - Roles]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *               - slug
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: Content Editor
+ *               slug:
+ *                 type: string
+ *                 example: content-editor
+ *               description:
+ *                 type: string
+ *                 example: Can manage blogs, products, and services
+ *     responses:
+ *       201:
+ *         description: Role created successfully
+ *       400:
+ *         description: Invalid input or slug already exists
+ *       401:
+ *         description: Unauthorized
+ *       403:
+ *         description: Forbidden - missing settings:write permission
+ */
 router.post("/", authorize("settings:write"), async (req: AuthRequest, res: Response) => {
   const { name, slug, description } = req.body;
   if (!name || !slug) {
@@ -44,6 +95,39 @@ router.post("/", authorize("settings:write"), async (req: AuthRequest, res: Resp
   res.status(201).json(created);
 });
 
+/**
+ * @swagger
+ * /roles/{id}:
+ *   put:
+ *     summary: Update role details
+ *     tags: [Admin - Roles]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Role updated
+ *       400:
+ *         description: Cannot rename superadmin
+ *       404:
+ *         description: Role not found
+ */
 router.put("/:id", authorize("settings:write"), async (req: AuthRequest, res: Response) => {
   const role = await Role.findByPk(req.params.id);
   if (!role) {
@@ -63,6 +147,28 @@ router.put("/:id", authorize("settings:write"), async (req: AuthRequest, res: Re
   res.json(updated);
 });
 
+/**
+ * @swagger
+ * /roles/{id}:
+ *   delete:
+ *     summary: Delete a role
+ *     tags: [Admin - Roles]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Role deleted
+ *       400:
+ *         description: Cannot delete superadmin or role with assigned users
+ *       404:
+ *         description: Role not found
+ */
 router.delete("/:id", authorize("settings:write"), async (req: AuthRequest, res: Response) => {
   const role = await Role.findByPk(req.params.id);
   if (!role) {
@@ -85,6 +191,41 @@ router.delete("/:id", authorize("settings:write"), async (req: AuthRequest, res:
 });
 
 // Replace a role's permission set — this is the whole dynamic-RBAC write path.
+/**
+ * @swagger
+ * /roles/{id}/permissions:
+ *   put:
+ *     summary: Update assigned permissions for a role
+ *     tags: [Admin - Roles]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - permissionIds
+ *             properties:
+ *               permissionIds:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       200:
+ *         description: Permissions successfully updated
+ *       400:
+ *         description: Super Admin permissions cannot be modified
+ *       404:
+ *         description: Role not found
+ */
 router.put("/:id/permissions", authorize("settings:write"), async (req: AuthRequest, res: Response) => {
   const role = await Role.findByPk(req.params.id);
   if (!role) {

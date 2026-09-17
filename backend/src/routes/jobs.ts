@@ -21,6 +21,31 @@ function slugify(text: string): string {
 // ---------------------------------------------------------------------------
 
 // List all jobs (for admin table)
+/**
+ * @swagger
+ * /jobs:
+ *   get:
+ *     summary: List all job openings with applicant counts
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: department
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: List of jobs with applicant counts
+ */
 router.get("/", authorize("careers:read"), async (req: AuthRequest, res: Response) => {
   try {
     const { status, department, search } = req.query;
@@ -76,7 +101,26 @@ router.get("/", authorize("careers:read"), async (req: AuthRequest, res: Respons
   }
 });
 
-// Get single job details
+/**
+ * @swagger
+ * /jobs/{id}:
+ *   get:
+ *     summary: Get single job opening with attached applications
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Job details
+ *       404:
+ *         description: Job not found
+ */
 router.get("/:id", authorize("careers:read"), async (req: AuthRequest, res: Response) => {
   try {
     const job = await Job.findByPk(req.params.id, {
@@ -105,7 +149,61 @@ router.get("/:id", authorize("careers:read"), async (req: AuthRequest, res: Resp
   }
 });
 
-// Create job opening
+/**
+ * @swagger
+ * /jobs:
+ *   post:
+ *     summary: Create a new job opening
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - title
+ *               - description
+ *             properties:
+ *               title:
+ *                 type: string
+ *               department:
+ *                 type: string
+ *               location:
+ *                 type: string
+ *               employmentType:
+ *                 type: string
+ *               experience:
+ *                 type: string
+ *               salaryRange:
+ *                 type: string
+ *               openings:
+ *                 type: integer
+ *               description:
+ *                 type: string
+ *               responsibilities:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               requirements:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               benefits:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published, closed]
+ *     responses:
+ *       201:
+ *         description: Job opening created
+ *       400:
+ *         description: Missing required fields
+ */
 router.post("/", authorize("careers:write"), async (req: AuthRequest, res: Response) => {
   try {
     const {
@@ -161,7 +259,40 @@ router.post("/", authorize("careers:write"), async (req: AuthRequest, res: Respo
   }
 });
 
-// Update job opening
+/**
+ * @swagger
+ * /jobs/{id}:
+ *   put:
+ *     summary: Update an existing job opening
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               department:
+ *                 type: string
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published, closed]
+ *     responses:
+ *       200:
+ *         description: Job updated
+ *       404:
+ *         description: Job not found
+ */
 router.put("/:id", authorize("careers:write"), async (req: AuthRequest, res: Response) => {
   try {
     const job = await Job.findByPk(req.params.id);
@@ -208,7 +339,26 @@ router.put("/:id", authorize("careers:write"), async (req: AuthRequest, res: Res
   }
 });
 
-// Delete job opening
+/**
+ * @swagger
+ * /jobs/{id}:
+ *   delete:
+ *     summary: Delete a job opening
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Job deleted
+ *       404:
+ *         description: Job not found
+ */
 router.delete("/:id", authorize("careers:write"), async (req: AuthRequest, res: Response) => {
   try {
     const job = await Job.findByPk(req.params.id);
@@ -228,7 +378,32 @@ router.delete("/:id", authorize("careers:write"), async (req: AuthRequest, res: 
 // 2. Candidate Applications Management
 // ---------------------------------------------------------------------------
 
-// List all applications with filtering & search
+/**
+ * @swagger
+ * /jobs/admin/applications:
+ *   get:
+ *     summary: List candidate job applications with filtering
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: jobId
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [new, reviewing, shortlisted, interviewed, hired, rejected]
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: List of applications
+ */
 router.get("/admin/applications", authorize("careers:read"), async (req: AuthRequest, res: Response) => {
   try {
     const { jobId, status, search } = req.query;
@@ -266,8 +441,26 @@ router.get("/admin/applications", authorize("careers:read"), async (req: AuthReq
   }
 });
 
-// Stream an applicant's CV. The file is private in storage, so this route (login
-// + careers:read) is the only way to read it — there is no shareable link.
+/**
+ * @swagger
+ * /jobs/admin/applications/{id}/resume:
+ *   get:
+ *     summary: Stream private resume file for an applicant
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Resume file stream
+ *       404:
+ *         description: Application or resume not found
+ */
 router.get(
   "/admin/applications/:id/resume",
   authorize("careers:read"),
@@ -304,7 +497,38 @@ router.get(
   }
 );
 
-// Update application status & admin notes
+/**
+ * @swagger
+ * /jobs/admin/applications/{id}/status:
+ *   patch:
+ *     summary: Update candidate application review status & notes
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               status:
+ *                 type: string
+ *                 enum: [new, reviewing, shortlisted, interviewed, hired, rejected]
+ *               adminNotes:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Status updated
+ *       404:
+ *         description: Application not found
+ */
 router.patch(
   "/admin/applications/:id/status",
   authorize("careers:write"),
@@ -329,7 +553,26 @@ router.patch(
   }
 );
 
-// Delete an application
+/**
+ * @swagger
+ * /jobs/admin/applications/{id}:
+ *   delete:
+ *     summary: Delete a job application and its private resume
+ *     tags: [Admin - Jobs]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Application deleted
+ *       404:
+ *         description: Application not found
+ */
 router.delete(
   "/admin/applications/:id",
   authorize("careers:write"),

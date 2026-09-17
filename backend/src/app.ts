@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { env } from "./config/env";
+import swaggerUi from "swagger-ui-express";
+import { swaggerSpec } from "./config/swagger";
 import authRoutes from "./routes/auth";
 import rolesRoutes from "./routes/roles";
 import permissionsRoutes from "./routes/permissions";
@@ -62,6 +64,26 @@ app.use("/jobs", jobsRoutes);
 app.use("/offers", offersRoutes);
 // Open CORS: the landing page and ecommerce fetch this from their own origins.
 app.use("/public", cors({ origin: true }), publicRoutes);
+
+// Swagger API Documentation (Available in both dev and production)
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec, {
+    customSiteTitle: "Anwar Clinic API Documentation",
+    customCss: ".swagger-ui .topbar { display: none }",
+    swaggerOptions: {
+      persistAuthorization: true,
+      docExpansion: "none",
+      filter: true,
+    },
+  })
+);
+
+app.get("/api-docs.json", (_req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.json(swaggerSpec);
+});
 
 app.use((_req, res) => {
   res.status(404).json({ message: "Route not found" });
