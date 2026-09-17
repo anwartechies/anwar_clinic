@@ -316,7 +316,8 @@ export function DeployManager() {
               }}
               className="max-h-[28rem] overflow-auto whitespace-pre-wrap bg-slate-950 p-4 font-mono text-[11px] leading-relaxed text-emerald-100"
             >
-              {active?.log?.trim() || "Waiting for output…"}
+              {/* strip terminal colour codes some tools still emit */}
+              {active?.log?.replace(/\x1b\[[0-9;]*m/g, "").trim() || "Waiting for output…"}
             </pre>
           </div>
         )}

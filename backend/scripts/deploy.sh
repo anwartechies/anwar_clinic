@@ -6,9 +6,9 @@
 # the copy, because bash reads a script lazily — the `git pull` below would otherwise
 # rewrite the very bytes this shell is about to execute.
 #
-# The caller spawns it detached so it survives `pm2 restart` killing the API process
-# that started it. Nothing is waiting on our exit status: the EXIT trap writing
-# $EXIT_FILE is the only completion signal there is.
+# The caller double-forks it (see routes/deploy.ts) so it is not a descendant of the
+# API: pm2's treekill would otherwise kill it at `pm2 restart`. Nothing is waiting on
+# our exit status: the EXIT trap writing $EXIT_FILE is the only completion signal.
 #
 # Required env: REPO APP_DIR BRANCH PROC PORT HEALTH_PATH LOG EXIT_FILE META_FILE
 
@@ -27,6 +27,10 @@ finish() {
   echo "$code" >"$EXIT_FILE"
 }
 trap finish EXIT
+# Being killed is a failure, never a success: without these, the EXIT trap can
+# record the last command's status (often 0) for a script that was interrupted.
+trap 'exit 130' INT
+trap 'exit 143' TERM
 
 say() { echo ""; echo "▸ $1"; STEP="$1"; }
 die() { echo "$1"; exit 1; }
@@ -84,7 +88,7 @@ say "npm run build"
 npm run build || exit $?
 
 say "pm2 restart $PROC"
-pm2 restart "$PROC" --update-env || exit $?
+pm2 restart "$PROC" --update-env --no-color || exit $?
 pm2 save || true
 
 say "health check :$PORT$HEALTH_PATH"

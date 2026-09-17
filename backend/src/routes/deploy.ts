@@ -220,8 +220,12 @@ router.post("/:target", authorize("deploy:trigger"), async (req: AuthRequest, re
     await fsp.copyFile(DEPLOY_SCRIPT, runner);
     await fsp.chmod(runner, 0o755);
 
-    const child = spawn("bash", [runner], {
-      // detached — this child must survive `pm2 restart` killing the API that spawned it.
+    // Double-fork: this launcher shell backgrounds the real script and exits at once,
+    // so the script is re-parented to init and is no longer in this process's tree.
+    // That matters because pm2 restarts apps with treekill — it kills every
+    // descendant of the app — so a direct child (even detached into its own
+    // session) was killed at `pm2 restart`, before the health check could run.
+    const child = spawn("bash", ["-c", 'bash "$1" </dev/null >/dev/null 2>&1 &', "deploy-launcher", runner], {
       detached: true,
       stdio: "ignore",
       env: {
