@@ -10,12 +10,12 @@ const options: swaggerJsdoc.Options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Anwar Clinic API",
+      title: "NexGen Clinic API",
       version: "1.0.0",
       description:
-        "Comprehensive REST API documentation for Anwar Clinic backend. Includes all public endpoints (landing page, ecommerce, careers, leads) and private admin endpoints (services, blogs, products, leads, jobs, media, RBAC roles & permissions).",
+        "Comprehensive REST API documentation for NexGen Clinic backend. Includes all public endpoints (landing page, ecommerce, careers, leads) and private admin endpoints (services, blogs, products, leads, jobs, media, RBAC roles & permissions).",
       contact: {
-        name: "Anwar Clinic Engineering",
+        name: "NexGen Clinic Engineering",
       },
     },
     servers: [

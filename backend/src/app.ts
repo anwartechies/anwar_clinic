@@ -72,7 +72,7 @@ app.use(
   "/api-docs",
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpec, {
-    customSiteTitle: "Anwar Clinic API Documentation",
+    customSiteTitle: "NexGen Clinic API Documentation",
     customCss: ".swagger-ui .topbar { display: none }",
     swaggerOptions: {
       persistAuthorization: true,
