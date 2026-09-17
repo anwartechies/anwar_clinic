@@ -228,12 +228,12 @@ export const PROMISES_LIST: PromiseItem[] = [
 ];
 
 export const PROMISE_GALLERY_IMAGES = [
-  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
-  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/p5-mtzj1k7g8yzzb9.jpeg",
-  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/t1-mtzji2lq10j280.jpeg",
-  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/clinic-with-doc-mtzjmlrtcqfokt.jpeg",
-  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-15-at-10-22-45-am-mu2k31is4e8c0u.jpeg",
-  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-15-at-10-22-47-am-mu2k30vb4yns1b.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-55-37-pm-mu4713fhxp35ck.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-52-pm-mu46z5zwqbrtgd.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-55-37-pm-mu4713fhxp35ck.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-21-17-pm-mu3whzrqnyjy6z.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-08-pm-mu46xz28f0p1lx.jpeg",
+  "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-21-26-pm-mu3whznud4ycxb.jpeg",
 ];
 
 // 5. See the Difference
