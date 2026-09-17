@@ -11,6 +11,7 @@ import { Product } from "./Product";
 import { Job } from "./Job";
 import { JobApplication } from "./JobApplication";
 import { Offer } from "./Offer";
+import { Deployment } from "./Deployment";
 
 // Role <-> Permission join table. A role's grants live entirely in here, which
 // is what lets permissions be re-assigned at runtime from Settings > Roles
@@ -76,4 +77,5 @@ export {
   Job,
   JobApplication,
   Offer,
+  Deployment,
 };

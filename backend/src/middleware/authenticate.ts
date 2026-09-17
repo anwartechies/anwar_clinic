@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import { env } from "../config/env";
 import { User, Role, Permission } from "../models";
+import { isPlatformAdmin } from "../config/platform";
 
 export interface AuthRequest extends Request {
   user?: {
@@ -10,6 +11,8 @@ export interface AuthRequest extends Request {
     permissions: string[];
     fullName: string;
     email: string;
+    /** Rhinon Tech operator (see config/platform.ts) — not merely a superadmin. */
+    isPlatformAdmin: boolean;
   };
 }
 
@@ -51,6 +54,7 @@ export async function authenticate(req: AuthRequest, res: Response, next: NextFu
       permissions,
       fullName: account.fullName,
       email: account.email,
+      isPlatformAdmin: isPlatformAdmin(account.email),
     };
   } catch (err: any) {
     console.error("Auth lookup failed:", err.message);
@@ -58,6 +62,21 @@ export async function authenticate(req: AuthRequest, res: Response, next: NextFu
     return;
   }
 
+  next();
+}
+
+/**
+ * Platform-operations guard (rhinon-cms: requirePlatformOrg).
+ *
+ * authorize() short-circuits for any superadmin, and the clinic's own admin is a
+ * superadmin — so without this, the clinic could reach /deploy and restart the
+ * server. Modules that operate the platform rather than the clinic sit behind this.
+ */
+export function requirePlatformAdmin(req: AuthRequest, res: Response, next: NextFunction) {
+  if (!req.user?.isPlatformAdmin) {
+    res.status(403).json({ message: "This module is not available to your account." });
+    return;
+  }
   next();
 }
 

@@ -17,9 +17,10 @@ export function Header() {
     router.replace("/auth/login");
   };
 
+  // First letter of each word, ignoring punctuation — "Prabhat (Rhinon Tech)" → "PR".
   const initials = (fullName || "")
     .split(" ")
-    .map((part) => part[0])
+    .map((part) => part.replace(/[^\p{L}\p{N}]/gu, "")[0])
     .filter(Boolean)
     .slice(0, 2)
     .join("")

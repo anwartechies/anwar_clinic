@@ -84,6 +84,8 @@ export const PERMISSION_LABELS: Record<string, string> = {
   "offers:write": "Create, edit, activate & complete offer banners",
   "media:read": "View the media library",
   "media:write": "Upload & delete media files",
+  "deploy:read": "View backend deploys & logs",
+  "deploy:trigger": "Deploy the backend (pull, build, restart)",
   "settings:read": "View clinic configuration",
   "settings:write": "Manage roles, permissions & clinic settings",
 };
@@ -108,7 +110,12 @@ export const RESOURCE_META: { key: string; label: string; order: number }[] = [
   { key: "offers", label: "Offer Banners", order: 14 },
   { key: "media", label: "Media Library", order: 15 },
   { key: "settings", label: "Settings", order: 16 },
+  { key: "deploy", label: "Deploy (Rhinon)", order: 17 },
 ];
+
+// Permission groups never shown in the role matrix: Deploy is locked to one
+// account (prabhat@rhinon.tech) on the server, so granting it to a role does nothing.
+export const PLATFORM_RESOURCES = ["deploy"];
 
 export function resourceLabel(resource: string) {
   const known = RESOURCE_META.find((r) => r.key === resource);

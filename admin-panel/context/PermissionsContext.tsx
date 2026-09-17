@@ -24,6 +24,9 @@ type PermissionsContextType = {
    *  slug while superadmin is browsing another role's URL, else roleSlug. */
   effectiveRoleSlug: string;
   ready: boolean;
+  /** Rhinon Tech operator (server-decided) — unlocks platform tools like Deploy.
+   *  Always false while previewing another role. Being superadmin is not enough. */
+  isPlatformAdmin: boolean;
   /** Permission check that accounts for preview mode and the superadmin
    *  override — use this everywhere instead of reading `permissions` directly. */
   has: (...anyOf: string[]) => boolean;
@@ -77,6 +80,7 @@ export function PermissionsProvider({ children }: { children: React.ReactNode })
     permissions: string[];
     roleSlug: string;
     fullName: string;
+    isPlatformAdmin: boolean;
   } | null>(null);
   const [ready, setReady] = useState(false);
   const [tick, setTick] = useState(0);
@@ -91,13 +95,14 @@ export function PermissionsProvider({ children }: { children: React.ReactNode })
 
   useEffect(() => {
     let cancelled = false;
-    apiFetch<{ permissions: string[]; roleSlug: string; fullName: string }>("/auth/me")
+    apiFetch<{ permissions: string[]; roleSlug: string; fullName: string; isPlatformAdmin?: boolean }>("/auth/me")
       .then((data) => {
         if (cancelled) return;
         setLive({
           permissions: data.permissions || [],
           roleSlug: data.roleSlug || "",
           fullName: data.fullName || "",
+          isPlatformAdmin: data.isPlatformAdmin === true,
         });
         setReady(true);
         // Keep the cookie warm as the fast-path hint for the next page load.
@@ -149,6 +154,7 @@ export function PermissionsProvider({ children }: { children: React.ReactNode })
   };
 
   const effectiveRoleSlug = isPreviewing ? urlRoleSlug : roleSlug;
+  const isPlatformAdmin = !isPreviewing && live?.isPlatformAdmin === true;
 
   return (
     <PermissionsContext.Provider
@@ -159,6 +165,7 @@ export function PermissionsProvider({ children }: { children: React.ReactNode })
         isPreviewing,
         effectiveRoleSlug,
         ready,
+        isPlatformAdmin,
         has,
         refresh: () => setTick((t) => t + 1),
       }}
