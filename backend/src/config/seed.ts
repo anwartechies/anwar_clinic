@@ -2,6 +2,7 @@ import bcrypt from "bcryptjs";
 import { sequelize } from "./database";
 import { Role, Permission, User, syncDatabase } from "../models";
 import { PERMISSION_CATALOG, DEFAULT_ROLE_GRANTS } from "./permissions";
+import { ensurePlatformAdmin } from "./seedPlatformAdmin";
 
 // The one account created on a fresh database. Everything else — extra roles,
 // extra staff — is created from the admin panel at runtime.
@@ -80,6 +81,8 @@ async function seed() {
   console.log(`  Email:    ${SEED_ADMIN.email}`);
   console.log(`  Password: ${SEED_ADMIN.password}`);
   console.log("");
+
+  await ensurePlatformAdmin(superadminRole.id);
 
   await sequelize.close();
 }

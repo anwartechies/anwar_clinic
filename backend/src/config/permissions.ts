@@ -35,6 +35,8 @@ export const PERMISSION_CATALOG = [
   { name: "careers:write",      resource: "careers",       action: "write" },
   { name: "offers:read",        resource: "offers",        action: "read"  },
   { name: "offers:write",       resource: "offers",        action: "write" },
+  { name: "deploy:read",        resource: "deploy",        action: "read"  },
+  { name: "deploy:trigger",     resource: "deploy",        action: "trigger" },
   { name: "settings:read",      resource: "settings",      action: "read"  },
   { name: "settings:write",     resource: "settings",      action: "write" },
 ];

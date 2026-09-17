@@ -5,7 +5,7 @@ import { TbPlus, TbTrash, TbShield, TbCheck, TbAlertCircle, TbLock } from "react
 import { cn } from "@/lib/utils";
 import { apiFetch } from "@/lib/api";
 import { usePermissions } from "@/context/PermissionsContext";
-import { PERMISSION_LABELS, resourceLabel, resourceOrder } from "@/constants/nav";
+import { PERMISSION_LABELS, PLATFORM_RESOURCES, resourceLabel, resourceOrder } from "@/constants/nav";
 import { PageHeader } from "@/components/Layout/PageHeader";
 
 interface Permission {
@@ -73,6 +73,7 @@ export function RolesManager() {
   const grouped = useMemo(() => {
     const byResource = new Map<string, Permission[]>();
     for (const perm of permissions) {
+      if (PLATFORM_RESOURCES.includes(perm.resource)) continue;
       const list = byResource.get(perm.resource) ?? [];
       list.push(perm);
       byResource.set(perm.resource, list);

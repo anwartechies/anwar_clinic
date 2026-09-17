@@ -9,6 +9,7 @@
     "build": "rm -rf dist && tsc",
     "start": "node dist/server.js",
     "db:seed": "ts-node src/config/seed.ts",
+    "db:seed:platform-admin": "ts-node src/config/seedPlatformAdmin.ts",
     "db:seed:services": "ts-node src/config/seedServices.ts"
   },
   "dependencies": {

@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+import { isPlatformAdmin } from "../config/platform";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { User, Role, Permission } from "../models";
@@ -58,6 +59,7 @@ router.post("/login", async (req: Request, res: Response) => {
     permissions,
     fullName: user.fullName,
     email: user.email,
+    isPlatformAdmin: isPlatformAdmin(user.email),
   });
 });
 
@@ -81,6 +83,7 @@ router.get("/me", authenticate, async (req: AuthRequest, res: Response) => {
     ...user.toJSON(),
     permissions: req.user!.permissions,
     roleSlug: req.user!.roleSlug,
+    isPlatformAdmin: req.user!.isPlatformAdmin,
   });
 });
 

@@ -11,6 +11,7 @@ import leadsRoutes from "./routes/leads";
 import blogsRoutes from "./routes/blogs";
 import productsRoutes from "./routes/products";
 import jobsRoutes from "./routes/jobs";
+import deployRoutes from "./routes/deploy";
 import offersRoutes from "./routes/offers";
 import publicRoutes from "./routes/public";
 
@@ -59,6 +60,7 @@ app.use("/leads", leadsRoutes);
 app.use("/blogs", blogsRoutes);
 app.use("/products", productsRoutes);
 app.use("/jobs", jobsRoutes);
+app.use("/deploy", deployRoutes);
 app.use("/offers", offersRoutes);
 // Open CORS: the landing page and ecommerce fetch this from their own origins.
 app.use("/public", cors({ origin: true }), publicRoutes);
