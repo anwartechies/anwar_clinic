@@ -1,6 +1,6 @@
-# Anwar Clinic — Master Developer Documentation
+# NexGen Clinic — Master Developer Documentation
 
-**Project Name:** Anwar Clinic (NexGen Hair Transplant & Aesthetic Surgery)  
+**Project Name:** NexGen Clinic (NexGen Hair Transplant & Aesthetic Surgery)  
 **Repository:** Monorepo (`backend`, `admin-panel`, `landing_page`, `ecommerce`)  
 **Version:** 1.0.0  
 **Target Audience:** Software Engineers, Solution Architects, Technical Leads, DevOps  
