@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TbLayoutSidebarLeftCollapse, TbLayoutSidebarLeftExpand } from "react-icons/tb";
+import { TbLayoutSidebarLeftCollapse, TbLayoutSidebarLeftExpand, TbCode, TbExternalLink } from "react-icons/tb";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS } from "@/constants/nav";
 import { usePermissions } from "@/context/PermissionsContext";
@@ -95,6 +95,28 @@ export function Sidebar() {
             );
           })}
         </nav>
+
+        <div className="border-t border-slate-200 p-2 dark:border-slate-800">
+          <a
+            href={`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5050"}/api-docs`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={!expanded ? "API Documentation (Swagger)" : undefined}
+            className={cn(
+              "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+              !expanded && "lg:justify-center lg:px-0",
+              "text-slate-600 hover:bg-teal-50 hover:text-teal-700 dark:text-slate-400 dark:hover:bg-teal-500/10 dark:hover:text-teal-300"
+            )}
+          >
+            <TbCode className="h-5 w-5 shrink-0 text-teal-600 dark:text-teal-400" />
+            {expanded && (
+              <span className="flex flex-1 items-center justify-between truncate">
+                <span>API Docs</span>
+                <TbExternalLink className="h-3.5 w-3.5 text-slate-400" />
+              </span>
+            )}
+          </a>
+        </div>
       </aside>
     </>
   );

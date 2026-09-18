@@ -8,6 +8,57 @@ import { authenticate, AuthRequest } from "../middleware/authenticate";
 
 const router = Router();
 
+/**
+ * @swagger
+ * /auth/login:
+ *   post:
+ *     summary: Authenticate user & get JWT token
+ *     tags: [Auth]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - email
+ *               - password
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 example: admin@anwarclinic.com
+ *               password:
+ *                 type: string
+ *                 format: password
+ *                 example: admin123
+ *     responses:
+ *       200:
+ *         description: Login successful
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 token:
+ *                   type: string
+ *                 roleSlug:
+ *                   type: string
+ *                 roleName:
+ *                   type: string
+ *                 permissions:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *                 fullName:
+ *                   type: string
+ *                 email:
+ *                   type: string
+ *       400:
+ *         description: Missing email or password
+ *       401:
+ *         description: Invalid email or password
+ */
 router.post("/login", async (req: Request, res: Response) => {
   const { email, password } = req.body;
 
@@ -63,10 +114,36 @@ router.post("/login", async (req: Request, res: Response) => {
   });
 });
 
+/**
+ * @swagger
+ * /auth/logout:
+ *   post:
+ *     summary: Invalidate user session
+ *     tags: [Auth]
+ *     responses:
+ *       200:
+ *         description: Successfully logged out
+ */
 router.post("/logout", (_req: Request, res: Response) => {
   res.json({ message: "Logged out" });
 });
 
+/**
+ * @swagger
+ * /auth/me:
+ *   get:
+ *     summary: Get current authenticated user profile & permissions
+ *     tags: [Auth]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Current user profile with live permissions
+ *       401:
+ *         description: Unauthorized - missing or invalid token
+ *       404:
+ *         description: User not found
+ */
 router.get("/me", authenticate, async (req: AuthRequest, res: Response) => {
   const user = await User.findByPk(req.user!.userId, {
     include: [{ model: Role, as: "role" }],

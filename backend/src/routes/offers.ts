@@ -9,7 +9,18 @@ const router = Router();
 
 router.use(authenticate);
 
-// GET /offers — list all offers (draft, active, completed)
+/**
+ * @swagger
+ * /offers:
+ *   get:
+ *     summary: List all banner offers (active, draft, completed)
+ *     tags: [Admin - Offers]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: List of offers sorted with active first
+ */
 router.get("/", authorize("offers:read"), async (_req: AuthRequest, res: Response) => {
   try {
     const offers = await Offer.findAll({
@@ -46,7 +57,26 @@ router.get("/", authorize("offers:read"), async (_req: AuthRequest, res: Respons
   }
 });
 
-// GET /offers/:id — single offer with details
+/**
+ * @swagger
+ * /offers/{id}:
+ *   get:
+ *     summary: Get single offer details with creator info
+ *     tags: [Admin - Offers]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Offer details
+ *       404:
+ *         description: Offer not found
+ */
 router.get("/:id", authorize("offers:read"), async (req: AuthRequest, res: Response) => {
   try {
     const offer = await Offer.findByPk(req.params.id, {
@@ -71,7 +101,51 @@ router.get("/:id", authorize("offers:read"), async (req: AuthRequest, res: Respo
   }
 });
 
-// POST /offers — create a new offer
+/**
+ * @swagger
+ * /offers:
+ *   post:
+ *     summary: Create a new promotional banner offer
+ *     tags: [Admin - Offers]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - title
+ *             properties:
+ *               badge:
+ *                 type: string
+ *                 default: "Special Offer"
+ *               title:
+ *                 type: string
+ *               highlightText:
+ *                 type: string
+ *               perks:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               couponCode:
+ *                 type: string
+ *               ctaText:
+ *                 type: string
+ *                 default: "Claim Consultation"
+ *               link:
+ *                 type: string
+ *                 default: "/offer"
+ *               status:
+ *                 type: string
+ *                 enum: [draft, active]
+ *     responses:
+ *       201:
+ *         description: Offer created
+ *       400:
+ *         description: Validation error or another offer is already active
+ */
 router.post("/", authorize("offers:write"), async (req: AuthRequest, res: Response) => {
   try {
     const body = req.body || {};
@@ -137,7 +211,56 @@ router.post("/", authorize("offers:write"), async (req: AuthRequest, res: Respon
   }
 });
 
-// PUT /offers/:id — update offer details and status
+/**
+ * @swagger
+ * /offers/{id}:
+ *   put:
+ *     summary: Update offer details or transition status (draft -> active -> completed)
+ *     tags: [Admin - Offers]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               badge:
+ *                 type: string
+ *               highlightText:
+ *                 type: string
+ *               perks:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               couponCode:
+ *                 type: string
+ *               ctaText:
+ *                 type: string
+ *               link:
+ *                 type: string
+ *               status:
+ *                 type: string
+ *                 enum: [draft, active, completed]
+ *               statusNote:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Offer updated
+ *       400:
+ *         description: Cannot modify completed offer or multiple active offers collision
+ *       404:
+ *         description: Offer not found
+ */
 router.put("/:id", authorize("offers:write"), async (req: AuthRequest, res: Response) => {
   try {
     const offer = await Offer.findByPk(req.params.id);
@@ -248,7 +371,28 @@ router.put("/:id", authorize("offers:write"), async (req: AuthRequest, res: Resp
   }
 });
 
-// DELETE /offers/:id — delete an offer (only allowed for drafts or completed, never active)
+/**
+ * @swagger
+ * /offers/{id}:
+ *   delete:
+ *     summary: Delete an offer (only draft or completed offers can be deleted)
+ *     tags: [Admin - Offers]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Offer deleted
+ *       400:
+ *         description: Active offers cannot be deleted while live
+ *       404:
+ *         description: Offer not found
+ */
 router.delete("/:id", authorize("offers:write"), async (req: AuthRequest, res: Response) => {
   try {
     const offer = await Offer.findByPk(req.params.id);

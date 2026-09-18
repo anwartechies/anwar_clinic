@@ -8,12 +8,52 @@ const router = Router();
 
 router.use(authenticate);
 
-// Returns dynamic section schema for the product editor
+/**
+ * @swagger
+ * /products/schema:
+ *   get:
+ *     summary: Get dynamic section schemas for product editor
+ *     tags: [Admin - Products]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Product section schema definitions
+ */
 router.get("/schema", authorize("products:read"), (_req: AuthRequest, res: Response) => {
   res.json(PRODUCT_SECTIONS);
 });
 
-// List all products for the admin panel
+/**
+ * @swagger
+ * /products:
+ *   get:
+ *     summary: List all products for admin panel
+ *     tags: [Admin - Products]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: concern
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [draft, published]
+ *     responses:
+ *       200:
+ *         description: List of products (without heavy sections)
+ */
 router.get("/", authorize("products:read"), async (req: AuthRequest, res: Response) => {
   const { search, category, concern, status } = req.query;
 
@@ -44,7 +84,26 @@ router.get("/", authorize("products:read"), async (req: AuthRequest, res: Respon
   res.json(products);
 });
 
-// Get single product for editing
+/**
+ * @swagger
+ * /products/{id}:
+ *   get:
+ *     summary: Get single product by ID with all sections
+ *     tags: [Admin - Products]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Full product details
+ *       404:
+ *         description: Product not found
+ */
 router.get("/:id", authorize("products:read"), async (req: AuthRequest, res: Response) => {
   const product = await Product.findByPk(req.params.id);
   if (!product) {
@@ -79,7 +138,74 @@ async function resolveUniqueSlug(baseSlug: string, currentId?: string): Promise<
   }
 }
 
-// Create new product
+/**
+ * @swagger
+ * /products:
+ *   post:
+ *     summary: Create a new ecommerce product
+ *     tags: [Admin - Products]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *             properties:
+ *               name:
+ *                 type: string
+ *               slug:
+ *                 type: string
+ *               category:
+ *                 type: string
+ *               concern:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *               originalPrice:
+ *                 type: number
+ *               isSale:
+ *                 type: boolean
+ *               badge:
+ *                 type: string
+ *               rating:
+ *                 type: number
+ *               reviewsCount:
+ *                 type: number
+ *               image:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               inStock:
+ *                 type: boolean
+ *               stockQuantity:
+ *                 type: number
+ *               isKit:
+ *                 type: boolean
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published]
+ *               sortOrder:
+ *                 type: integer
+ *               seoTitle:
+ *                 type: string
+ *               seoDescription:
+ *                 type: string
+ *               sections:
+ *                 type: object
+ *               hiddenSections:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       201:
+ *         description: Product created
+ *       400:
+ *         description: Validation error
+ */
 router.post("/", authorize("products:write"), async (req: AuthRequest, res: Response) => {
   const {
     name,
@@ -141,7 +267,40 @@ router.post("/", authorize("products:write"), async (req: AuthRequest, res: Resp
   res.status(201).json(product);
 });
 
-// Update product
+/**
+ * @swagger
+ * /products/{id}:
+ *   put:
+ *     summary: Update an existing product
+ *     tags: [Admin - Products]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published]
+ *     responses:
+ *       200:
+ *         description: Product updated
+ *       404:
+ *         description: Product not found
+ */
 router.put("/:id", authorize("products:write"), async (req: AuthRequest, res: Response) => {
   const product = await Product.findByPk(req.params.id);
   if (!product) {
@@ -205,7 +364,26 @@ router.put("/:id", authorize("products:write"), async (req: AuthRequest, res: Re
   res.json(product);
 });
 
-// Quick toggle status
+/**
+ * @swagger
+ * /products/{id}/toggle-status:
+ *   patch:
+ *     summary: Quick toggle product draft/published status
+ *     tags: [Admin - Products]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Status updated
+ *       404:
+ *         description: Product not found
+ */
 router.patch("/:id/toggle-status", authorize("products:write"), async (req: AuthRequest, res: Response) => {
   const product = await Product.findByPk(req.params.id);
   if (!product) {
@@ -218,7 +396,26 @@ router.patch("/:id/toggle-status", authorize("products:write"), async (req: Auth
   res.json({ id: product.id, status: newStatus });
 });
 
-// Delete product
+/**
+ * @swagger
+ * /products/{id}:
+ *   delete:
+ *     summary: Delete a product
+ *     tags: [Admin - Products]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Product deleted
+ *       404:
+ *         description: Product not found
+ */
 router.delete("/:id", authorize("products:write"), async (req: AuthRequest, res: Response) => {
   const product = await Product.findByPk(req.params.id);
   if (!product) {

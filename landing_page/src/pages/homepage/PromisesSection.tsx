@@ -91,7 +91,7 @@ export default function PromisesSection() {
               <img
                 src={imgUrl}
                 alt={`Surgical Facility ${(idx % PROMISE_GALLERY_IMAGES.length) + 1}`}
-                className="w-full h-full object-fit group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           ))}

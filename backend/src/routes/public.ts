@@ -16,6 +16,35 @@ const PUBLIC_ATTRS = [
   "sortOrder", "seoTitle", "seoDescription", "sections", "hiddenSections",
 ] as const;
 
+/**
+ * @swagger
+ * /public/services:
+ *   get:
+ *     summary: List all published services (card summary)
+ *     tags: [Public - Services]
+ *     responses:
+ *       200:
+ *         description: List of published service cards
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   slug:
+ *                     type: string
+ *                   title:
+ *                     type: string
+ *                   cardDescription:
+ *                     type: string
+ *                   cardImage:
+ *                     type: string
+ *                   badge:
+ *                     type: string
+ *                   sortOrder:
+ *                     type: integer
+ */
 router.get("/services", async (_req: Request, res: Response) => {
   const services = await Service.findAll({
     where: { status: "published" },
@@ -26,6 +55,25 @@ router.get("/services", async (_req: Request, res: Response) => {
   res.json(services);
 });
 
+/**
+ * @swagger
+ * /public/services/{slug}:
+ *   get:
+ *     summary: Get full details and rich content sections for a service by slug
+ *     tags: [Public - Services]
+ *     parameters:
+ *       - in: path
+ *         name: slug
+ *         required: true
+ *         schema:
+ *           type: string
+ *         example: hair-transplant
+ *     responses:
+ *       200:
+ *         description: Complete service details and content sections
+ *       404:
+ *         description: Service not found
+ */
 router.get("/services/:slug", async (req: Request, res: Response) => {
   const slug = req.params.slug;
   const service = await Service.findOne({
@@ -79,7 +127,27 @@ const PUBLIC_BLOG_DETAIL_FIELDS = [
   "content", "contentBlocks", "faqs", "metaTitle", "metaDescription", "views",
 ] as const;
 
-// GET /public/blogs — published blogs for landing page
+/**
+ * @swagger
+ * /public/blogs:
+ *   get:
+ *     summary: List published blogs for landing page
+ *     tags: [Public - Blogs]
+ *     parameters:
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *         description: Filter by blog category
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *         description: Search query matching title or excerpt
+ *     responses:
+ *       200:
+ *         description: List of published blog summaries
+ */
 router.get("/blogs", async (req: Request, res: Response) => {
   try {
     const { category, search } = req.query;
@@ -111,7 +179,24 @@ router.get("/blogs", async (req: Request, res: Response) => {
   }
 });
 
-// GET /public/blogs/:slug — single published blog + related posts
+/**
+ * @swagger
+ * /public/blogs/{slug}:
+ *   get:
+ *     summary: Get single published blog by slug and 3 related articles
+ *     tags: [Public - Blogs]
+ *     parameters:
+ *       - in: path
+ *         name: slug
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Blog article details with related posts
+ *       404:
+ *         description: Blog not found
+ */
 router.get("/blogs/:slug", async (req: Request, res: Response) => {
   try {
     const blog = await Blog.findOne({
@@ -124,7 +209,7 @@ router.get("/blogs/:slug", async (req: Request, res: Response) => {
     }
 
     // Increment views in background
-    Blog.increment("views", { where: { id: blog.id } }).catch(() => {});
+    Blog.increment("views", { where: { id: blog.id } }).catch(() => { });
 
     // Fetch related blogs (same category or recent, excluding this blog)
     const related = await Blog.findAll({
@@ -172,7 +257,34 @@ const PUBLIC_PRODUCT_CARD_ATTRS = [
   "sortOrder",
 ] as const;
 
-// GET /public/products — list all published products
+/**
+ * @swagger
+ * /public/products:
+ *   get:
+ *     summary: List published products for ecommerce catalog
+ *     tags: [Public - Products]
+ *     parameters:
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: concern
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: sortBy
+ *         schema:
+ *           type: string
+ *           enum: [price-low, price-high, rating]
+ *     responses:
+ *       200:
+ *         description: List of published products
+ */
 router.get("/products", async (req: Request, res: Response) => {
   try {
     const { category, concern, search, sortBy } = req.query;
@@ -215,7 +327,24 @@ router.get("/products", async (req: Request, res: Response) => {
   }
 });
 
-// GET /public/products/:slug — single published product with full sections
+/**
+ * @swagger
+ * /public/products/{slug}:
+ *   get:
+ *     summary: Get single published product details with related recommendations
+ *     tags: [Public - Products]
+ *     parameters:
+ *       - in: path
+ *         name: slug
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Product detail object
+ *       404:
+ *         description: Product not found
+ */
 router.get("/products/:slug", async (req: Request, res: Response) => {
   try {
     const slug = req.params.slug;
@@ -278,10 +407,18 @@ function isRateLimited(ip: string) {
 const trim = (v: unknown, max: number) =>
   typeof v === "string" && v.trim() ? v.trim().slice(0, max) : null;
 
-// Lead capture for every public form on the landing page. Deliberately open and
-// credential-less — the response carries no data back, only an acknowledgement.
-// Live Google rating + reviews for the clinic. `configured: false` (HTTP 200)
-// means the key/place aren't set yet — the landing page hides the section.
+/**
+ * @swagger
+ * /public/google-reviews:
+ *   get:
+ *     summary: Get clinic Google rating, total reviews and top reviews
+ *     tags: [Public - Reviews]
+ *     responses:
+ *       200:
+ *         description: Google reviews data or configured=false if not yet configured
+ *       502:
+ *         description: Google reviews service temporarily unavailable
+ */
 router.get("/google-reviews", async (_req: Request, res: Response) => {
   try {
     const payload = await getGoogleReviews();
@@ -292,6 +429,61 @@ router.get("/google-reviews", async (_req: Request, res: Response) => {
   }
 });
 
+/**
+ * @swagger
+ * /public/leads:
+ *   post:
+ *     summary: Submit a consultation/enquiry lead from public website
+ *     tags: [Public - Leads]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - fullName
+ *               - phone
+ *             properties:
+ *               fullName:
+ *                 type: string
+ *                 example: John Doe
+ *               phone:
+ *                 type: string
+ *                 example: "9876543210"
+ *               countryCode:
+ *                 type: string
+ *                 example: "+91"
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 example: john@example.com
+ *               city:
+ *                 type: string
+ *                 example: Mumbai
+ *               branch:
+ *                 type: string
+ *                 example: Bandra
+ *               message:
+ *                 type: string
+ *                 example: Interested in hair transplant consultation
+ *               whatsappOptIn:
+ *                 type: boolean
+ *                 example: true
+ *               source:
+ *                 type: string
+ *                 example: consultation_modal
+ *               pageUrl:
+ *                 type: string
+ *                 example: "https://anwarclinic.com/services/hair-transplant"
+ *     responses:
+ *       201:
+ *         description: Lead received successfully
+ *       400:
+ *         description: Validation error - name and phone required
+ *       429:
+ *         description: Rate limited - too many submissions
+ */
 router.post("/leads", async (req: Request, res: Response) => {
   if (isRateLimited(req.ip || "unknown")) {
     res.status(429).json({ message: "Too many requests — please try again in a minute." });
@@ -341,7 +533,29 @@ const ALLOWED_RESUME_MIME = [
   "application/octet-stream",
 ];
 
-// List published jobs for /career page
+/**
+ * @swagger
+ * /public/jobs:
+ *   get:
+ *     summary: List published job openings for careers page
+ *     tags: [Public - Jobs]
+ *     parameters:
+ *       - in: query
+ *         name: department
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: employmentType
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: List of published job openings
+ */
 router.get("/jobs", async (req: Request, res: Response) => {
   try {
     const { department, employmentType, search } = req.query;
@@ -392,7 +606,24 @@ router.get("/jobs", async (req: Request, res: Response) => {
   }
 });
 
-// Get detailed job opening for /career/[slug]
+/**
+ * @swagger
+ * /public/jobs/{slug}:
+ *   get:
+ *     summary: Get detailed published job opening by slug
+ *     tags: [Public - Jobs]
+ *     parameters:
+ *       - in: path
+ *         name: slug
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Job opening details
+ *       404:
+ *         description: Job opening not found
+ */
 router.get("/jobs/:slug", async (req: Request, res: Response) => {
   try {
     const job = await Job.findOne({
@@ -410,7 +641,56 @@ router.get("/jobs/:slug", async (req: Request, res: Response) => {
   }
 });
 
-// Submit candidate application for a job
+/**
+ * @swagger
+ * /public/jobs/{slug}/apply:
+ *   post:
+ *     summary: Submit a job application with resume upload
+ *     tags: [Public - Jobs]
+ *     parameters:
+ *       - in: path
+ *         name: slug
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - fullName
+ *               - email
+ *               - phone
+ *               - resume
+ *             properties:
+ *               fullName:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *                 format: email
+ *               phone:
+ *                 type: string
+ *               experienceYears:
+ *                 type: string
+ *               currentCompany:
+ *                 type: string
+ *               noticePeriod:
+ *                 type: string
+ *               coverNote:
+ *                 type: string
+ *               resume:
+ *                 type: string
+ *                 format: binary
+ *     responses:
+ *       201:
+ *         description: Application submitted successfully
+ *       400:
+ *         description: Missing fields or invalid resume file
+ *       404:
+ *         description: Job not found
+ */
 router.post(
   "/jobs/:slug/apply",
   resumeUpload.single("resume"),
@@ -473,7 +753,7 @@ router.post(
         });
       } catch (err) {
         // Don't leave an orphaned CV behind if the application wasn't saved.
-        await storage.removePrivate(stored.key).catch(() => {});
+        await storage.removePrivate(stored.key).catch(() => { });
         throw err;
       }
 
@@ -487,7 +767,16 @@ router.post(
   }
 );
 
-// GET /public/offers/active — returns current active website offer banner
+/**
+ * @swagger
+ * /public/offers/active:
+ *   get:
+ *     summary: Get current active website promotional offer banner
+ *     tags: [Public - Offers]
+ *     responses:
+ *       200:
+ *         description: Active offer details or isEnabled=false if no offer active
+ */
 router.get("/offers/active", async (_req: Request, res: Response) => {
   try {
     const offer = await Offer.findOne({

@@ -14,7 +14,18 @@ const ASSIGNEE_INCLUDE = [
   { model: User, as: "assignedTo", attributes: ["id", "fullName", "email"] },
 ];
 
-/** Counts per status, for the filter chips. Cheap enough to serve unpaginated. */
+/**
+ * @swagger
+ * /leads/stats:
+ *   get:
+ *     summary: Get lead counts grouped by status
+ *     tags: [Admin - Leads]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Total leads and counts per status
+ */
 router.get("/stats", authorize("leads:read"), async (_req: AuthRequest, res: Response) => {
   const rows = (await Lead.findAll({
     attributes: ["status", [fn("COUNT", col("id")), "count"]],
@@ -28,7 +39,18 @@ router.get("/stats", authorize("leads:read"), async (_req: AuthRequest, res: Res
   res.json({ total: Object.values(byStatus).reduce((a, b) => a + b, 0), byStatus });
 });
 
-/** Staff who can own a lead — feeds the "assign to" dropdown. */
+/**
+ * @swagger
+ * /leads/assignees:
+ *   get:
+ *     summary: List active staff members available for lead assignment
+ *     tags: [Admin - Leads]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: List of active users
+ */
 router.get("/assignees", authorize("leads:write"), async (_req: AuthRequest, res: Response) => {
   const users = await User.findAll({
     where: { status: "active" },
@@ -38,6 +60,41 @@ router.get("/assignees", authorize("leads:write"), async (_req: AuthRequest, res
   res.json(users);
 });
 
+/**
+ * @swagger
+ * /leads:
+ *   get:
+ *     summary: List leads with pagination, filtering & search
+ *     tags: [Admin - Leads]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: source
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 25
+ *     responses:
+ *       200:
+ *         description: Paginated leads array with totals
+ */
 router.get("/", authorize("leads:read"), async (req: AuthRequest, res: Response) => {
   const { status, source, search } = req.query as Record<string, string | undefined>;
   const page = Math.max(1, parseInt(String(req.query.page ?? "1"), 10) || 1);
@@ -68,6 +125,26 @@ router.get("/", authorize("leads:read"), async (req: AuthRequest, res: Response)
   res.json({ leads: rows, total: count, page, limit, pages: Math.ceil(count / limit) || 1 });
 });
 
+/**
+ * @swagger
+ * /leads/{id}:
+ *   get:
+ *     summary: Get single lead details by ID
+ *     tags: [Admin - Leads]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Lead object
+ *       404:
+ *         description: Lead not found
+ */
 router.get("/:id", authorize("leads:read"), async (req: AuthRequest, res: Response) => {
   const lead = await Lead.findByPk(req.params.id, { include: ASSIGNEE_INCLUDE });
   if (!lead) {
@@ -78,6 +155,52 @@ router.get("/:id", authorize("leads:read"), async (req: AuthRequest, res: Respon
 });
 
 // Manual entry — for a walk-in or a phone enquiry typed in by reception.
+/**
+ * @swagger
+ * /leads:
+ *   post:
+ *     summary: Manually create a new lead (walk-in or phone call)
+ *     tags: [Admin - Leads]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - fullName
+ *               - phone
+ *             properties:
+ *               fullName:
+ *                 type: string
+ *               phone:
+ *                 type: string
+ *               countryCode:
+ *                 type: string
+ *                 default: "+91"
+ *               email:
+ *                 type: string
+ *               city:
+ *                 type: string
+ *               branch:
+ *                 type: string
+ *               message:
+ *                 type: string
+ *               whatsappOptIn:
+ *                 type: boolean
+ *               status:
+ *                 type: string
+ *                 enum: [new, contacted, consultation_scheduled, won, lost]
+ *               notes:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: Lead created
+ *       400:
+ *         description: Validation error
+ */
 router.post("/", authorize("leads:write"), async (req: AuthRequest, res: Response) => {
   const { fullName, phone } = req.body;
   if (!String(fullName ?? "").trim() || !String(phone ?? "").trim()) {
@@ -102,6 +225,48 @@ router.post("/", authorize("leads:write"), async (req: AuthRequest, res: Respons
   res.status(201).json(lead);
 });
 
+/**
+ * @swagger
+ * /leads/{id}:
+ *   put:
+ *     summary: Update lead status, notes, assignment or contact details
+ *     tags: [Admin - Leads]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               status:
+ *                 type: string
+ *                 enum: [new, contacted, consultation_scheduled, won, lost]
+ *               notes:
+ *                 type: string
+ *               assignedToId:
+ *                 type: string
+ *               branch:
+ *                 type: string
+ *               city:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Lead updated
+ *       400:
+ *         description: Invalid status or assignedToId
+ *       404:
+ *         description: Lead not found
+ */
 router.put("/:id", authorize("leads:write"), async (req: AuthRequest, res: Response) => {
   const lead = await Lead.findByPk(req.params.id);
   if (!lead) {
@@ -136,6 +301,26 @@ router.put("/:id", authorize("leads:write"), async (req: AuthRequest, res: Respo
   res.json(fresh);
 });
 
+/**
+ * @swagger
+ * /leads/{id}:
+ *   delete:
+ *     summary: Delete a lead
+ *     tags: [Admin - Leads]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Lead deleted
+ *       404:
+ *         description: Lead not found
+ */
 router.delete("/:id", authorize("leads:write"), async (req: AuthRequest, res: Response) => {
   const lead = await Lead.findByPk(req.params.id);
   if (!lead) {

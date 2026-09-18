@@ -9,10 +9,34 @@ const router = Router();
 router.use(authenticate);
 
 // The admin panel builds every section form from this — see config/serviceSections.ts.
+/**
+ * @swagger
+ * /services/schema:
+ *   get:
+ *     summary: Get dynamic section schemas for building admin service forms
+ *     tags: [Admin - Services]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Array of section form schemas
+ */
 router.get("/schema", authorize("services:read"), (_req: AuthRequest, res: Response) => {
   res.json(SERVICE_SECTIONS);
 });
 
+/**
+ * @swagger
+ * /services:
+ *   get:
+ *     summary: List all services (card fields only)
+ *     tags: [Admin - Services]
+ *     security:
+ *       - BearerAuth: []
+ *     responses:
+ *       200:
+ *         description: List of all services
+ */
 router.get("/", authorize("services:read"), async (_req: AuthRequest, res: Response) => {
   const services = await Service.findAll({
     order: [["sortOrder", "ASC"], ["createdAt", "ASC"]],
@@ -22,6 +46,26 @@ router.get("/", authorize("services:read"), async (_req: AuthRequest, res: Respo
   res.json(services);
 });
 
+/**
+ * @swagger
+ * /services/{id}:
+ *   get:
+ *     summary: Get single service by ID with full content sections
+ *     tags: [Admin - Services]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Complete service record
+ *       404:
+ *         description: Service not found
+ */
 router.get("/:id", authorize("services:read"), async (req: AuthRequest, res: Response) => {
   const service = await Service.findByPk(req.params.id);
   if (!service) {
@@ -61,6 +105,54 @@ function sanitizeHidden(input: unknown): string[] {
   return input.filter((k): k is string => typeof k === "string" && isKnownSection(k));
 }
 
+/**
+ * @swagger
+ * /services:
+ *   post:
+ *     summary: Create a new service
+ *     tags: [Admin - Services]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - title
+ *             properties:
+ *               title:
+ *                 type: string
+ *               slug:
+ *                 type: string
+ *               cardDescription:
+ *                 type: string
+ *               cardImage:
+ *                 type: string
+ *               badge:
+ *                 type: string
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published]
+ *               seoTitle:
+ *                 type: string
+ *               seoDescription:
+ *                 type: string
+ *               sections:
+ *                 type: object
+ *               hiddenSections:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       201:
+ *         description: Service created
+ *       400:
+ *         description: Validation error
+ *       403:
+ *         description: Forbidden - missing services:write permission
+ */
 router.post("/", authorize("services:write"), async (req: AuthRequest, res: Response) => {
   const { title, slug, cardDescription, cardImage, badge, status, seoTitle, seoDescription } = req.body;
   if (!title) {
@@ -94,6 +186,31 @@ router.post("/", authorize("services:write"), async (req: AuthRequest, res: Resp
   res.status(201).json(service);
 });
 
+/**
+ * @swagger
+ * /services/reorder:
+ *   put:
+ *     summary: Bulk update sort order for services
+ *     tags: [Admin - Services]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - orderedIds
+ *             properties:
+ *               orderedIds:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       200:
+ *         description: Order updated
+ */
 router.put("/reorder", authorize("services:write"), async (req: AuthRequest, res: Response) => {
   const { orderedIds } = req.body as { orderedIds: string[] };
   if (!Array.isArray(orderedIds)) {
@@ -106,6 +223,56 @@ router.put("/reorder", authorize("services:write"), async (req: AuthRequest, res
   res.json({ message: "Order updated" });
 });
 
+/**
+ * @swagger
+ * /services/{id}:
+ *   put:
+ *     summary: Update an existing service and its sections
+ *     tags: [Admin - Services]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               slug:
+ *                 type: string
+ *               cardDescription:
+ *                 type: string
+ *               cardImage:
+ *                 type: string
+ *               badge:
+ *                 type: string
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published]
+ *               seoTitle:
+ *                 type: string
+ *               seoDescription:
+ *                 type: string
+ *               sections:
+ *                 type: object
+ *               hiddenSections:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       200:
+ *         description: Service updated
+ *       404:
+ *         description: Service not found
+ */
 router.put("/:id", authorize("services:write"), async (req: AuthRequest, res: Response) => {
   const service = await Service.findByPk(req.params.id);
   if (!service) {
@@ -144,6 +311,26 @@ router.put("/:id", authorize("services:write"), async (req: AuthRequest, res: Re
   res.json(service);
 });
 
+/**
+ * @swagger
+ * /services/{id}:
+ *   delete:
+ *     summary: Delete a service
+ *     tags: [Admin - Services]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Service deleted
+ *       404:
+ *         description: Service not found
+ */
 router.delete("/:id", authorize("services:write"), async (req: AuthRequest, res: Response) => {
   const service = await Service.findByPk(req.params.id);
   if (!service) {
