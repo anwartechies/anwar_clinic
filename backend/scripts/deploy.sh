@@ -74,12 +74,12 @@ cd "$APP_DIR" || die "backend dir missing: $REPO/$APP_DIR"
 # Only reinstall when dependencies actually moved (pathspecs are relative to this dir).
 # `npm ci` rather than `npm install`: it never rewrites the committed lockfile, so the
 # checkout stays clean and the next `git pull --ff-only` can't be blocked by it.
-if [ -d node_modules ] && git diff --quiet "$BEFORE" "$AFTER" -- package-lock.json package.json 2>/dev/null; then
+if [ -d node_modules ] && [ -f node_modules/.bin/tsc ] && git diff --quiet "$BEFORE" "$AFTER" -- package-lock.json package.json 2>/dev/null; then
   echo ""
   echo "▸ npm ci — skipped (dependencies unchanged)"
 else
-  say "npm ci"
-  npm ci || exit $?
+  say "npm ci --include=dev"
+  npm ci --include=dev || exit $?
 fi
 
 # Build BEFORE restarting: a compile error must fail the deploy with the old build
