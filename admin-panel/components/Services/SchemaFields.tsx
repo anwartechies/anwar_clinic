@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { TbPlus, TbTrash, TbPhoto, TbChevronUp, TbChevronDown } from "react-icons/tb";
+import { TbPlus, TbTrash, TbChevronUp, TbChevronDown } from "react-icons/tb";
 import { cn } from "@/lib/utils";
-import { MediaPicker } from "./MediaPicker";
+import { ImageField } from "./ImageField";
 import type { ItemField, SchemaField } from "./types";
 
 // Every editable field on a service page is rendered by these components,
@@ -19,45 +19,6 @@ function Label({ children, help }: { children: React.ReactNode; help?: string })
       <label className="text-xs font-medium text-slate-700 dark:text-slate-300">{children}</label>
       {help && <p className="text-[11px] text-slate-400">{help}</p>}
     </div>
-  );
-}
-
-function ImageField({
-  value,
-  onChange,
-  placeholder,
-}: {
-  value: string;
-  onChange: (v: string) => void;
-  placeholder?: string;
-}) {
-  const [picking, setPicking] = useState(false);
-  return (
-    <>
-      <div className="flex gap-2">
-        <input
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder || "https://…"}
-          className={cn(inputCls, "font-mono text-xs")}
-        />
-        <button
-          type="button"
-          onClick={() => setPicking(true)}
-          title="Pick from Media Library"
-          className="shrink-0 rounded-lg border border-slate-300 px-2.5 text-slate-500 transition hover:border-teal-400 hover:text-teal-600 dark:border-slate-700"
-        >
-          <TbPhoto className="h-4 w-4" />
-        </button>
-      </div>
-      {value && (
-        <span className="mt-1.5 block h-16 w-fit overflow-hidden rounded border border-slate-200 dark:border-slate-700">
-          {/* eslint-disable-next-line @next/next/no-img-element -- arbitrary content URLs */}
-          <img src={value} alt="" className="h-full w-auto object-contain" />
-        </span>
-      )}
-      <MediaPicker open={picking} onClose={() => setPicking(false)} onPick={onChange} />
-    </>
   );
 }
 

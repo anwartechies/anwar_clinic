@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { ImageField } from "./ImageField";
 import Link from "next/link";
 import {
   TbArrowLeft, TbCheck, TbAlertCircle, TbChevronDown, TbEye, TbEyeOff, TbExternalLink,
@@ -207,7 +208,7 @@ export function ServiceEditor({ serviceId, roleSlug }: { serviceId: string; role
           </div>
           <div>
             <label className="mb-1.5 block text-xs font-medium text-slate-700 dark:text-slate-300">Card image</label>
-            <input value={service.cardImage ?? ""} onChange={(e) => setField("cardImage", e.target.value)} className={cn(inputCls, "font-mono text-xs")} />
+            <ImageField value={service.cardImage ?? ""} onChange={(v) => setField("cardImage", v)} />
           </div>
           <div>
             <label className="mb-1.5 block text-xs font-medium text-slate-700 dark:text-slate-300">SEO title</label>
