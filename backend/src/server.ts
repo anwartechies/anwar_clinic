@@ -15,17 +15,22 @@ async function syncServicesOnBoot() {
       const service = await Service.findOne({ where: { slug } });
       const meta = ALL_SERVICES_SEED.find((s) => s.slug === slug);
       if (service) {
-        const existingRaw = JSON.stringify(service.sections || {});
-        const hasLegacyQht = existingRaw.includes("qhtclinic.com") || existingRaw.includes("QHT") || existingRaw.includes("SAVA");
-        const cleanSections = hasLegacyQht
-          ? { ...(service.sections || {}), ...sections }
-          : { ...sections, ...(service.sections || {}) };
+        // Seed data only ever FILLS GAPS. What the admin panel saved always wins:
+        // this runs on every boot, so overwriting here silently undid their edits.
+        const existing: Record<string, Record<string, unknown>> = { ...(service.sections || {}) };
+
+        // The section was renamed with the QHT -> NexGen rebrand. Carry any saved
+        // content over to the new key, or the next save drops it as unknown.
+        if (existing.whyChooseQHT && !existing.whyChooseNexGen) {
+          existing.whyChooseNexGen = existing.whyChooseQHT;
+        }
+        delete existing.whyChooseQHT;
 
         await service.update({
-          sections: cleanSections,
-          ...(meta?.desc ? { cardDescription: meta.desc } : {}),
+          sections: { ...sections, ...existing },
+          ...(meta?.desc && !service.cardDescription ? { cardDescription: meta.desc } : {}),
           ...(meta?.image && !service.cardImage ? { cardImage: meta.image } : {}),
-          ...(meta?.badge ? { badge: meta.badge } : {}),
+          ...(meta?.badge && !service.badge ? { badge: meta.badge } : {}),
         });
       } else if (meta) {
         await Service.create({

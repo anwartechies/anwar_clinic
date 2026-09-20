@@ -169,12 +169,15 @@ export default function ServiceDetailPage({ slug, service }: ServiceDetailPagePr
       {/* 12. Causes */}
       {!hidden("causes") && <ServiceCausesSection title={title} {...sec("causes")} />}
 
-      {/* 13. Why Choose NexGen */}
+      {/* 13. Why Choose NexGen — the section was renamed from whyChooseQHT, so
+          spread both keys (current one last, so it wins). sec() always returns an
+          object, which is why the old `a || b` never reached the legacy key. */}
       {(!hidden("whyChooseNexGen") && !hidden("whyChooseQHT")) && (
         <ServiceWhyChooseQHTSection
           title={title}
           onOpenConsultation={openConsultation}
-          {...(sec("whyChooseNexGen") || sec("whyChooseQHT"))}
+          {...sec("whyChooseQHT")}
+          {...sec("whyChooseNexGen")}
         />
       )}
 

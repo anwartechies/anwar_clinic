@@ -300,7 +300,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Temple Hair Transplant?",
       subtitle: "We combine precision temporal artistry with patented transplantation methods:",
       features: [
@@ -666,7 +666,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Natural Hair Transplant?",
       subtitle: "Experience, surgical precision, and patient-centered protocols that set us apart:",
       features: [
@@ -1050,7 +1050,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen Hair Transplant for Eyebrow Reconstruction",
       subtitle: "Comprehensive counselling, world-class precision, and dedicated patient care:",
       features: [
@@ -1460,7 +1460,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Crown Hair Transplant?",
       subtitle: "We combine precision spiral artistry with patented quick transplantation:",
       features: [
@@ -1844,7 +1844,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Burn Hair Transplant?",
       subtitle: "NexGen Hair Transplant specializes in turning scars into stories of strength with compassionate care:",
       features: [
@@ -2229,7 +2229,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Afro Hair Transplant?",
       subtitle: "NexGen Hair Transplant provides dedicated expertise and specialized equipment for Afro-textured hair:",
       features: [
@@ -2597,7 +2597,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for FUE Hair Transplant?",
       subtitle: "NexGen Hair Transplant provides advanced techniques, experienced surgeons, and supportive aftercare for long-term success:",
       features: [
@@ -2981,7 +2981,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Ultra Dense Hair Transplant",
       subtitle: "NexGen Hair Transplant combines senior surgeon mastery, patented tools, and ethical care:",
       features: [
@@ -3375,7 +3375,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for No Shave Hair Transplant",
       subtitle: "Selecting the best clinic for a No Shave Hair Transplant matters — NexGen Hair Transplant ensures unmatched comfort and precision:",
       features: [
@@ -3764,7 +3764,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Hair Transplant Repair",
       subtitle: "NexGen Hair Transplant provides the specialized skills, technology, and empathy required for complex corrective cases:",
       features: [
@@ -4160,7 +4160,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Hair Transplant Repair",
       subtitle: "NexGen Hair Transplant provides the specialized skills, technology, and empathy required for complex corrective cases:",
       features: [
@@ -4558,7 +4558,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for FUT Hair Transplant",
       subtitle: "With over 15,000+ surgeries and ABHRS-certified doctors, NexGen Hair Transplant provides clinical excellence:",
       features: [
@@ -4968,7 +4968,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "WHY CHOOSE NEXGEN FOR MALE HAIR TRANSPLANT",
       subtitle: "NexGen Hair Transplant offers world-class techniques with greater affordability, offering EMI options, celebrity approval, and pan-India presence.",
       features: [
@@ -5394,7 +5394,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen Hair Transplant for Hairline Reconstruction?",
       subtitle: "At NexGen Hair Transplant, hairline reconstruction is about designing a hairline that matches your facial proportions and stays consistent over time:",
       features: [
@@ -5773,7 +5773,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Hair Transplant for Caucasian Men?",
       subtitle: "NexGen Hair Transplants for Caucasian Men provide the right techniques, surgeons, natural results, the least recovery time, and proper aftercare for long-term success.",
       features: [
@@ -6165,7 +6165,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen Hair Transplant for Custom Hairline Transplant?",
       subtitle: "Choosing NexGen Hair Transplant ensures a world-class restoration experience backed by an outstanding surgical team:",
       features: [
@@ -6546,7 +6546,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Influencer Hair Transplant?",
       subtitle: "NexGen Hair Transplant provides advanced techniques, experienced celebrity surgeons, natural density, and fast recovery:",
       features: [
@@ -6946,7 +6946,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Bad Hair Transplant Correction?",
       subtitle: "There are many scars—physical and emotional—from a badly done hair transplant. At NexGen Hair Transplant, we can correct a bad hair transplant, and do it safely, efficiently, and with the highest level of expertise.",
       features: [
@@ -7346,7 +7346,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Mustache Hair Transplant In India?",
       subtitle: "NexGen Hair Transplant is a renowned name for Mustache reconstruction in India, providing dedicated care, natural density, and lifetime results.",
       features: [
@@ -7735,7 +7735,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for NexGen Hair Transplant",
       subtitle: "NexGen Hair Transplant, with its highly experienced team, offers authentic results. It is a celebrity-trusted clinic that uses the advanced NexGen Hair Transplant technique and ensures supportive care throughout the procedure.",
       features: [
@@ -8143,7 +8143,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Female Hair Transplant",
       subtitle: "NexGen Hair Transplant stands out as the preferred choice for female hair transplants, combining advanced technology with personalized care for natural, lasting results.",
       features: [
@@ -8545,7 +8545,7 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
       ],
     },
     
-    whyChooseQHT: {
+    whyChooseNexGen: {
       title: "Why Choose NexGen for Beard Hair Transplant",
       subtitle: "NexGen Hair Transplant is a reputable option when it comes to transplanting beard hair, providing hi-tech solutions and individualized service delivery with natural and permanent outcomes.",
       features: [

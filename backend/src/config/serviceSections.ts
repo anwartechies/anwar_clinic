@@ -192,6 +192,17 @@ export const SERVICE_SECTIONS: SectionSchema[] = [
     fields: [
       { name: "title", label: "Heading", type: "text" },
       { name: "costOverview", label: "Overview paragraphs", type: "stringList" },
+      {
+        name: "tableRows",
+        label: "Price table",
+        type: "objectList",
+        help: "Rows of the pricing table shown above the cost factors.",
+        itemFields: [
+          { name: "type", label: "Procedure / graft range", type: "textarea" },
+          { name: "cost", label: "Price range", type: "text" },
+          { name: "badge", label: "Badge", type: "text" },
+        ],
+      },
       { name: "factorsSubtitle", label: "Factors sub-heading", type: "textarea" },
       {
         name: "factors",

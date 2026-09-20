@@ -31,14 +31,12 @@ async function seedServices() {
     });
 
     if (!wasCreated && SEED_SECTIONS_BY_SLUG[item.slug]) {
+      // Re-seeding tops up missing sections; it never overwrites what the admin
+      // panel saved (spreading the seed last used to wipe every edit).
       await service.update({
-        cardDescription: item.desc,
-        badge: item.badge ?? null,
-        seoTitle: `${item.title} in India | NexGen Hair Transplant`,
-        seoDescription: item.desc,
         sections: {
-          ...(service.sections || {}),
           ...SEED_SECTIONS_BY_SLUG[item.slug],
+          ...(service.sections || {}),
         },
       });
     }
