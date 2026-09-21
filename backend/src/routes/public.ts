@@ -3,7 +3,6 @@ import { Op } from "sequelize";
 import multer from "multer";
 import { Service, Lead, Blog, Product, Job, JobApplication, Offer } from "../models";
 import { LEAD_SOURCES, LeadSource } from "../models/Lead";
-import { SEED_SECTIONS_BY_SLUG } from "../config/serviceSeedData";
 import { getGoogleReviews } from "../services/googleReviews";
 import { storage } from "../services/storage";
 
@@ -83,32 +82,6 @@ router.get("/services/:slug", async (req: Request, res: Response) => {
   if (!service) {
     res.status(404).json({ message: "Service not found" });
     return;
-  }
-
-  // If seed data has richer sections than DB, update DB automatically
-  if (SEED_SECTIONS_BY_SLUG[slug]) {
-    const seedSections = SEED_SECTIONS_BY_SLUG[slug];
-    const currentSections = (service.sections as Record<string, any>) || {};
-    const needsUpdate = Object.keys(seedSections).some(
-      (k) => !currentSections[k] || Object.keys(currentSections[k] || {}).length === 0
-    );
-    if (needsUpdate) {
-      await Service.update(
-        {
-          sections: {
-            ...currentSections,
-            ...seedSections,
-          },
-        },
-        { where: { slug } }
-      );
-      const updated = await Service.findOne({
-        where: { slug, status: "published" },
-        attributes: PUBLIC_ATTRS as unknown as string[],
-      });
-      res.json(updated);
-      return;
-    }
   }
 
   res.json(service);

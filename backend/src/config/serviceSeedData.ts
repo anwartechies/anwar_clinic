@@ -509,11 +509,194 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
           "answer": "Yes. Follicles taken from the permanent safe donor zone are DHT-resistant and grow naturally for life."
         },
         {
-          "question": "Can failed temple transplants be corrected at DIRECT HAIR TRANSPLANT Clinic?",
-          "answer": "Yes. NexGen Hair Transplant Clinic specializes in corrective repair, fixing pluggy or misdirected grafts into natural hairlines."
-        }
-      ]
-    }
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-6-1.png",
+          title: "Medical Evaluation",
+          desc: "Review medical history and medication use with your surgeon to ensure complete surgical safety.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-9.png",
+          title: "Scalp & Hair Hygiene",
+          desc: "Wash your scalp with mild antiseptic shampoo on procedure morning for a clean surgical field.",
+        },
+      ],
+    },
+    cost: {
+      title: "Temple Hair Transplant Cost in India",
+      costOverview: [
+        "Temple hair transplant in India typically ranges from ₹40,000 to ₹90,000 depending on graft requirement (500 – 1,500 single-hair grafts), technique selected, and facial symmetry needs.",
+        "At NexGen Hair Transplant, all-inclusive packages with specialized DHI implanters ensure accessible pricing with zero hidden charges.",
+      ],
+      tableRows: [
+        { type: "Bilateral Temple Peak Touch-up (500 – 800 Grafts)", cost: "₹40,000 – ₹65,000" },
+        { type: "Advanced NexGen Hair Transplant Temporal Reconstruction (800 – 1,500 Grafts)", cost: "₹65,000 – ₹95,000", badge: "Most Popular", isHighlight: true },
+        { type: "Combined Temple & Frontal Hairline (1,500 – 2,500 Grafts)", cost: "₹95,000 – ₹1,45,000" },
+      ],
+      factorsSubtitle: "The factors affecting Temple Hair Transplant cost include:",
+      factors: [
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-4-3.png",
+          title: "Size of the Bald Patch",
+          desc: "Larger temporal recession requires higher graft counts, impacting the overall cost.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-5-2.png",
+          title: "Number of Grafts",
+          desc: "Total single-hair follicular units harvested to create soft, natural temporal density.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-6-3.png",
+          title: "Treatment Method Chosen",
+          desc: "Advanced NexGen Hair Transplant with DHI pens offers superior angle control compared to standard FUE.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-7-3.png",
+          title: "Clinical Expertise at NexGen Hair Transplant",
+          desc: "Experienced surgeons ensure acute angle accuracy and natural facial balance.",
+        },
+        {
+          icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-8-3.png",
+          title: "Multiple Sittings",
+          desc: "Multi-stage procedures for mega-sessions or revision cases influence the overall investment.",
+        },
+      ],
+    },
+    whyUs: {
+      title: "Why We Are Amongst the Most Trusted Temple Hair Transplant Clinic in India",
+      subtitle: "NexGen Hair Transplant is trusted for temple hair transplant with expert surgeons and advanced techniques:",
+      stats: [
+        { title: "High Success Rate", desc: "Completed thousands of Temple Hair transplants with acute angle precision and proper care." },
+        { title: "100% Client Satisfaction", desc: "Proven track record of successful temporal restorations and satisfied patients." },
+        { title: "Clinics All Over India", desc: "State-of-the-art facilities across 3 prime metropolitan centers in India." },
+        { title: "Over 15,000+ Successful Surgeries", desc: "Delivered by our senior surgical team with decades of collective experience." },
+      ],
+    },
+    journey: {
+      title: "Watch The Incredible Journey & Transformation.",
+      videos: [
+        { title: "Youtuber Bilal Rajput 6 Month Result | Transformation", youtubeId: "A6I29UR_1Q0", thumbnail: "https://img.youtube.com/vi/A6I29UR_1Q0/maxresdefault.jpg" },
+        { title: "Youtuber Nadeem Bunny Five Months Result | Hair Restoration", youtubeId: "aUcTotzYYXI", thumbnail: "https://img.youtube.com/vi/aUcTotzYYXI/maxresdefault.jpg" },
+        { title: "Grade 3 Baldness Temple & Frontal Result | Delhi", youtubeId: "z3DFH5rnmQ0", thumbnail: "https://img.youtube.com/vi/z3DFH5rnmQ0/maxresdefault.jpg" },
+        { title: "Hair Transplant in Bhopal | Best Results & Cost", youtubeId: "mCI8WvJ-7rI", thumbnail: "https://img.youtube.com/vi/mCI8WvJ-7rI/maxresdefault.jpg" },
+        { title: "Hair Transplant Result | Patient Journey", youtubeId: "R4DYeCqCJEM", thumbnail: "https://img.youtube.com/vi/R4DYeCqCJEM/maxresdefault.jpg" },
+        { title: "Grade 2 Baldness Temple & Hairline Result", youtubeId: "vTSsqvEoZt4", thumbnail: "https://img.youtube.com/vi/vTSsqvEoZt4/maxresdefault.jpg" },
+      ],
+    },
+    causes: {
+      title: "Causes of Early Temple Hair Loss",
+      subtitle: "Key factors causing premature thinning and recession at the temporal peaks:",
+      causes: [
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-9-2.png", title: "Personal & Family History", desc: "Hereditary sensitivity to androgenetic alopecia causing early temporal recession." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-10-3.png", title: "Stress & Lifestyle", desc: "Irregular sleep, chronic stress, and nutritional deficiencies triggering thinning." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-11-3.png", title: "Social Appearance Demand", desc: "Desire for sharp, youthful hairline definition for personal and professional presence." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-12-3.png", title: "Hormonal Imbalance", desc: "Fluctuations in hormonal levels affecting follicle anchoring at temporal angles." },
+        { icon: "https://www.qhtclinic.com/wp-content/uploads/2025/09/icon-13-2.png", title: "Medical Conditions", desc: "Underlying scalp ailments or medications leading to premature hair loss." },
+      ],
+    },
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Temple Hair Transplant?",
+      subtitle: "We combine precision temporal artistry with patented transplantation methods:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and influencers for undetectable temporal hairline framing." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "Clinical Expertise", desc: "Decades of experience managing complex acute hair exit angles." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp", title: "Natural Results", desc: "Soft feathered temporal margins providing authentic, harmonious facial proportions." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "Best Facilities", desc: "Equipped with state-of-the-art optical systems and sterile operating suites." },
+      ],
+    },
+    postSurgerySupport: {
+      title: "Post-Surgery Support for Temple Hair Transplant",
+      subtitle: "NexGen Hair Transplant provides structured aftercare to ensure smooth healing and natural temporal growth.",
+      image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3-3.jpg",
+      supportItems: [
+        { title: "Regular Follow-ups", desc: "Routine clinical visits to track recovery and graft rooting." },
+        { title: "Medication Prescribing", desc: "Post-transplant medications to accelerate healing and minimize discomfort." },
+        { title: "Customized Therapy", desc: "Tailored PRP/GFC therapy for enhanced follicular revitalization." },
+        { title: "Customized Lifestyle Guidance", desc: "Personalized instructions on diet, sleep positioning, and gentle hair care." },
+      ],
+    },
+    dosDonts: {
+      title: "Do’s and Don’ts after Temple Hair Transplant",
+      subtitle: "Guidelines to ensure optimal healing and protect your transplanted temporal grafts:",
+      donts: [
+        "Avoid direct sunlight and UV exposure during the initial recovery weeks.",
+        "Avoid heavy exercise or activities causing excessive sweating.",
+        "Do not touch, scratch, or pick at the temporal hairline scabs.",
+        "Avoid using styling gels, chemical sprays, or hair dyes for at least 2–3 weeks.",
+      ],
+      dos: [
+        "Follow all post-surgery instructions as advised by your lead surgeon.",
+        "Wash and keep your scalp clean using recommended gentle cleansers.",
+        "Eat nutrient-rich food and stay well hydrated to support regrowth.",
+        "Take prescribed medications on time to manage comfort and prevent infection.",
+      ],
+    },
+    recoveryTimeline: {
+      title: "Recovery Time & Aftercare of Temple Hair Transplant",
+      subtitle: "Understanding your temporal hair restoration journey over time:",
+      weeks: [
+        {
+          label: "Week 1-2",
+          expectations: ["Mild redness, slight swelling, and sensitive skin around the temporal peaks."],
+          careGuidelines: ["Keep head elevated, follow NexGen Hair Transplant wash routine, and avoid scratching grafts."],
+        },
+        {
+          label: "Week 2-6",
+          expectations: ["Scabs fall off naturally and transplanted hairs enter the resting shed phase."],
+          careGuidelines: ["Avoid strong sunlight and heavy workouts; resume normal routine."],
+        },
+        {
+          label: "Month 3-12",
+          expectations: ["New growth starts from month 3, growing thicker and denser over months 6–9."],
+          careGuidelines: ["Continue gentle hair care and attend milestone clinical reviews."],
+        },
+        {
+          label: "After 1 Year",
+          expectations: ["Full mature temporal density with seamless, lifelong facial framing."],
+          careGuidelines: ["Enjoy natural styling, cutting, and normal grooming routines."],
+        },
+      ],
+    },
+    bookingBar: {
+      title: "Your Most Trusted Hair Restoration Experts — Consult Today",
+      patientCountText: "4.9K patients booked their sessions",
+    },
+    comparison: {
+      title: "Comparison of Temple Hair Transplant Techniques",
+      subtitle: "Key differences between advanced NexGen Hair Transplant and traditional FUE for temple reconstruction:",
+      cards: [
+        {
+          title: "NexGen Temple Hair Transplant",
+          purpose: "Precision acute hair exit angle placement & high density using DHI pens.",
+          effectiveness: "Natural temporal margins, 98% graft survival, seamless blending.",
+          risk: "Minimally invasive, rapid 5–7 day recovery, zero visible scars.",
+          cost: "Affordable Precision (₹65,000 – ₹95,000)",
+        },
+        {
+          title: "Traditional FUE Temple Hair Transplant",
+          purpose: "Forceps implantation into premade slits with standard punch extraction.",
+          effectiveness: "Moderate density with higher risk of misdirected temporal angles.",
+          risk: "Standard 7–10 day healing time with micro-dot marks.",
+          cost: "Standard Tier (₹50,000 – ₹80,000)",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQs on Temple Hairline Transplant",
+      faqs: [
+        {
+          question: "What is the best method for temple hairline transplant?",
+          answer: "The Advanced NexGen Hair Transplant Technique is the gold standard because it ensures acute 10–15° hair exit angles, high density, and rapid 5–7 day recovery.",
+        },
+        {
+          question: "Is temple hair transplant permanent?",
+          answer: "Yes. Follicles harvested from the permanent safe donor zone are DHT-resistant and grow naturally for a lifetime.",
+        },
+        {
+          question: "Can failed temple transplants be corrected at NexGen Hair Transplant?",
+          answer: "Yes. NexGen Hair Transplant specializes in revision repair, extracting poorly angled grafts and reconstructing natural temporal symmetry.",
+        },
+      ],
+    },
   },
   "natural-look-hair-restoration": {
     "hero": {
@@ -842,41 +1025,18 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Natural Hair Transplant?",
-      "subtitle": "Doctor-led microsurgery, high graft survival, and transparent care that set us apart:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Trustworthy Expertise",
-          "desc": "Senior surgeons specializing in undetectable single-hair micro transitions."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp",
-          "title": "Faster Recovery & Comfort",
-          "desc": "Minimally invasive sapphire micro-slits minimize downtime and discomfort."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Natural-Looking Results",
-          "desc": "Custom hairline designs that integrate seamlessly with your native hair flow."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp",
-          "title": "Trusted & Reliable Care",
-          "desc": "Uncompromising clinical standards backed by thousands of verified reviews."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Advanced Technology & Tools",
-          "desc": "Specialized DHI implanters and sapphire blades maximizing follicle survival."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Customized Treatment Plans",
-          "desc": "Personalized density planning tailored to your exact hair loss pattern."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Natural Hair Transplant?",
+      subtitle: "Experience, surgical precision, and patient-centered protocols that set us apart:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Trustworthy Expertise", desc: "Senior surgeons specializing in undetectable single-hair micro transitions." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Faster Recovery & Comfort", desc: "Minimally invasive sapphire micro-slits minimize downtime and discomfort." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Natural-Looking Results", desc: "Custom hairline designs that integrate seamlessly with your native hair flow." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Trusted & Reliable Care", desc: "Uncompromising clinical standards backed by thousands of verified reviews." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Advanced Technology & Tools", desc: "Specialized DHI implanters and sapphire blades maximizing follicle survival." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Customized Treatment Plans", desc: "Personalized density planning tailored to your exact hair loss pattern." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support For Natural Hair Transplant",
@@ -1351,36 +1511,17 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Eyebrow Reconstruction",
-      "subtitle": "Comprehensive counselling, world-class precision, and dedicated patient care:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp",
-          "title": "Proper Analysis & Counselling",
-          "desc": "Personalized brow mapping aligned to golden ratio facial proportions."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp",
-          "title": "World-Class Techniques",
-          "desc": "Single-hair micro implanters delivering natural acute angles and zero scars."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp",
-          "title": "Proper Support",
-          "desc": "Pre- and post-procedure guidance with compassionate patient coordination."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp",
-          "title": "Affordability",
-          "desc": "Transparent, cost-effective packages with easy EMI options."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/5-img-1.webp",
-          "title": "Comprehensive Care",
-          "desc": "Continuous healing monitoring and long-term trimming guidance."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen Hair Transplant for Eyebrow Reconstruction",
+      subtitle: "Comprehensive counselling, world-class precision, and dedicated patient care:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Proper Analysis & Counselling", desc: "Personalized brow mapping aligned to golden ratio facial proportions." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "World-Class Techniques", desc: "Single-hair micro implanters delivering natural acute angles and zero scars." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp", title: "Proper Support", desc: "Pre- and post-procedure guidance with compassionate patient coordination." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "Affordability", desc: "Transparent, cost-effective packages with easy EMI options." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/5-img-1.webp", title: "Comprehensive Care", desc: "Continuous healing monitoring and long-term trimming guidance." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support For Eyebrow Reconstruction",
@@ -1883,31 +2024,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Crown Hair Transplant?",
-      "subtitle": "We combine precision spiral artistry with patented quick transplantation:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Celebrity Trusted",
-          "desc": "Trusted by public figures and celebrities for undetectable vertex restoration."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Clinical Expertise",
-          "desc": "Decades of surgical mastery managing complex whorl geometries."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Natural Results",
-          "desc": "Expert multi-angle placement recreating your original spiral hair whorl."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Best Facilities",
-          "desc": "Equipped with advanced optical magnification and sterile operating suites."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Crown Hair Transplant?",
+      subtitle: "We combine precision spiral artistry with patented quick transplantation:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and celebrities for undetectable vertex restoration." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Clinical Expertise", desc: "Decades of surgical mastery managing complex whorl geometries." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Natural Results", desc: "Expert multi-angle placement recreating your original spiral hair whorl." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Best Facilities", desc: "Equipped with advanced optical magnification and sterile operating suites." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support for Crown Hair Transplant",
@@ -2378,41 +2504,18 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Burn Hair Transplant?",
-      "subtitle": "NexGen Hair Transplant Clinic specializes in turning scars into stories of strength with compassionate care:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Expertise in Burn Cases",
-          "desc": "Senior surgeons with extensive experience in reconstructive grafting on fibrotic tissue."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Safe & Sterile Procedures",
-          "desc": "Carried out in ultra-sterile hospital-grade OT suites with strict infection control."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Leading Technology & Global Standards",
-          "desc": "Sapphire blades and DHI implanters ensure high survival and natural density."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Personalized Treatment Plan",
-          "desc": "Customized protocols factoring in scar depth, skin elasticity, and patient goals."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp",
-          "title": "Transparent Pricing",
-          "desc": "Clear upfront quotes with no hidden fees and accessible EMI payment plans."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp",
-          "title": "Restoring Confidence",
-          "desc": "Rebuilding self-esteem, dignity, and a positive outlook for burn survivors."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Burn Hair Transplant?",
+      subtitle: "NexGen Hair Transplant specializes in turning scars into stories of strength with compassionate care:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Expertise in Burn Cases", desc: "Senior surgeons with extensive experience in reconstructive grafting on fibrotic tissue." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Safe & Sterile Procedures", desc: "Carried out in ultra-sterile hospital-grade OT suites with strict infection control." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Leading Technology & Global Standards", desc: "Sapphire blades and DHI implanters ensure high survival and natural density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Personalized Treatment Plan", desc: "Customized protocols factoring in scar depth, skin elasticity, and patient goals." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Transparent Pricing", desc: "Clear upfront quotes with no hidden fees and accessible EMI payment plans." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Restoring Confidence", desc: "Rebuilding self-esteem, dignity, and a positive outlook for burn survivors." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support for Burn Hair Transplant",
@@ -2885,41 +2988,18 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Afro Hair Transplant?",
-      "subtitle": "NexGen Hair Transplant Clinic provides dedicated expertise and specialized equipment for Afro-textured hair:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/11/Delhi-7-1.webp",
-          "title": "Specialists in Afro Hair Cases",
-          "desc": "Surgeons trained in handling coiled root structures with zero transection."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/11/Gfc-Tretment@2x.webp",
-          "title": "Surgical Tools for Precision",
-          "desc": "Curved sapphire punches and high-power magnification systems ensure graft survival."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/11/Haridwar-1.webp",
-          "title": "Affordable Afro Hair Transplant in India",
-          "desc": "Transparent international patient packages with no hidden surcharges."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/11/1000-1200-1-1.webp",
-          "title": "Restore Confidence",
-          "desc": "Recreate natural ethnic hairline framing that looks authentic and youthful."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp",
-          "title": "Thorough Aftercare",
-          "desc": "Personalized scalp hydration and anti-keloid care protocols."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp",
-          "title": "Worldwide Trust",
-          "desc": "Patients travel globally to NexGen Hair Transplant Clinic for reliable Afro hair restoration."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Afro Hair Transplant?",
+      subtitle: "NexGen Hair Transplant provides dedicated expertise and specialized equipment for Afro-textured hair:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Delhi-7-1.webp", title: "Specialists in Afro Hair Cases", desc: "Surgeons trained in handling coiled root structures with zero transection." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Gfc-Tretment@2x.webp", title: "Surgical Tools for Precision", desc: "Curved sapphire punches and high-power magnification systems ensure graft survival." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/Haridwar-1.webp", title: "Affordable Afro Hair Transplant in India", desc: "Transparent international patient packages with no hidden surcharges." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/11/1000-1200-1-1.webp", title: "Restore Confidence", desc: "Recreate natural ethnic hairline framing that looks authentic and youthful." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Thorough Aftercare", desc: "Personalized scalp hydration and anti-keloid care protocols." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Worldwide Trust", desc: "Patients travel globally to NexGen Hair Transplant for reliable Afro hair restoration." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support for Afro Hair Transplant",
@@ -3371,31 +3451,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for FUE Hair Transplant?",
-      "subtitle": "NexGen Hair Transplant Clinic provides advanced techniques, experienced surgeons, and supportive aftercare for long-term success:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp",
-          "title": "Celebrity Trusted",
-          "desc": "Trusted by celebrities and creators for undetectable, natural FUE hair restoration."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp",
-          "title": "Clinical Expertise",
-          "desc": "Years of dedicated experience in micro-punch FUE and DHI pen implantation."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp",
-          "title": "Natural Results",
-          "desc": "Artistic hairline design and correct angular placement ensure lifelong authentic growth."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp",
-          "title": "Best Facilities",
-          "desc": "Equipped with state-of-the-art surgical suites and sterile protocols for seamless care."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for FUE Hair Transplant?",
+      subtitle: "NexGen Hair Transplant provides advanced techniques, experienced surgeons, and supportive aftercare for long-term success:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "Trusted by celebrities and creators for undetectable, natural FUE hair restoration." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "Clinical Expertise", desc: "Years of dedicated experience in micro-punch FUE and DHI pen implantation." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp", title: "Natural Results", desc: "Artistic hairline design and correct angular placement ensure lifelong authentic growth." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "Best Facilities", desc: "Equipped with state-of-the-art surgical suites and sterile protocols for seamless care." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support for FUE Hair Transplant",
@@ -3868,36 +3933,17 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Ultra Dense Hair Transplant",
-      "subtitle": "NexGen Hair Transplant Clinic combines senior surgeon mastery, patented tools, and ethical care:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp",
-          "title": "Celebrity Clinic",
-          "desc": "Renowned in the industry and trusted by film and TV celebrities for undetectable high density."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp",
-          "title": "High Precision and Expertise",
-          "desc": "Motorized sapphire punches and DHI implanters ensure high graft viability and dense packing."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-3.webp",
-          "title": "Great Support",
-          "desc": "Comprehensive pre- and post-operative guidance delivered with care and compassion."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp",
-          "title": "Authentic Results",
-          "desc": "Guaranteed natural hair density aligned with natural follicle angles for seamless aesthetic blending."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp",
-          "title": "Affordability",
-          "desc": "Transparent, mid-range packages with EMI assistance to make premium density accessible."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Ultra Dense Hair Transplant",
+      subtitle: "NexGen Hair Transplant combines senior surgeon mastery, patented tools, and ethical care:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Celebrity Clinic", desc: "Renowned in the industry and trusted by film and TV celebrities for undetectable high density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "High Precision and Expertise", desc: "Motorized sapphire punches and DHI implanters ensure high graft viability and dense packing." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-3.webp", title: "Great Support", desc: "Comprehensive pre- and post-operative guidance delivered with care and compassion." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Authentic Results", desc: "Guaranteed natural hair density aligned with natural follicle angles for seamless aesthetic blending." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Affordability", desc: "Transparent, mid-range packages with EMI assistance to make premium density accessible." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post Surgery Support",
@@ -4388,36 +4434,17 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for No Shave Hair Transplant",
-      "subtitle": "Selecting the best clinic for a No Shave Hair Transplant matters — NexGen Hair Transplant Clinic ensures unmatched comfort and precision:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp",
-          "title": "Personalized Care",
-          "desc": "A tailored treatment strategy developed for your specific hair density and styling needs."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
-          "title": "Qualified Team",
-          "desc": "Senior surgeons with over 1,000+ completed unshaven procedures for safe, natural results."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-3.webp",
-          "title": "Use of Modern Techniques",
-          "desc": "High-magnification loupes and sapphire punches allow flawless graft insertion between existing hair."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp",
-          "title": "Patient Focused Care",
-          "desc": "Comprehensive guidance and 360-degree support from initial consultation to final results."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-img-5.jpg",
-          "title": "Genuine Outcomes",
-          "desc": "Implantation performed at natural angles to seamlessly blend with existing hair for undetectable results."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for No Shave Hair Transplant",
+      subtitle: "Selecting the best clinic for a No Shave Hair Transplant matters — NexGen Hair Transplant ensures unmatched comfort and precision:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "Personalized Care", desc: "A tailored treatment strategy developed for your specific hair density and styling needs." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Qualified Team", desc: "Senior surgeons with over 1,000+ completed unshaven procedures for safe, natural results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-3.webp", title: "Use of Modern Techniques", desc: "High-magnification loupes and sapphire punches allow flawless graft insertion between existing hair." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp", title: "Patient Focused Care", desc: "Comprehensive guidance and 360-degree support from initial consultation to final results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/repair-img-5.jpg", title: "Genuine Outcomes", desc: "Implantation performed at natural angles to seamlessly blend with existing hair for undetectable results." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post Surgery Support for NexGen Hair Transplant Clinic Unshaven Hair Transplant",
@@ -4895,31 +4922,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Hair Transplant Repair",
-      "subtitle": "NexGen Hair Transplant Clinic provides the specialized skills, technology, and empathy required for complex corrective cases:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp",
-          "title": "Celebrity Trusted",
-          "desc": "Trusted by public figures and celebrities for undetectable corrective revisions."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
-          "title": "Clinical Expertise",
-          "desc": "Over 5,000+ successful repairs handling plug extraction, scar repair, and density enhancement."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg",
-          "title": "Natural Results",
-          "desc": "Master-level single-hair feathering restores soft, natural transitions that blend seamlessly."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp",
-          "title": "Best Facilities",
-          "desc": "Equipped with stereo-microscopes and advanced implanters for maximum graft preservation."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Hair Transplant Repair",
+      subtitle: "NexGen Hair Transplant provides the specialized skills, technology, and empathy required for complex corrective cases:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and celebrities for undetectable corrective revisions." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Clinical Expertise", desc: "Over 5,000+ successful repairs handling plug extraction, scar repair, and density enhancement." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg", title: "Natural Results", desc: "Master-level single-hair feathering restores soft, natural transitions that blend seamlessly." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp", title: "Best Facilities", desc: "Equipped with stereo-microscopes and advanced implanters for maximum graft preservation." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support for Hair Transplant Repair",
@@ -5405,31 +5417,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Hair Transplant Repair",
-      "subtitle": "NexGen Hair Transplant Clinic provides the specialized skills, technology, and empathy required for complex corrective cases:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp",
-          "title": "Celebrity Trusted",
-          "desc": "Trusted by public figures and celebrities for undetectable corrective revisions."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
-          "title": "Clinical Expertise",
-          "desc": "Over 5,000+ successful repairs handling plug extraction, scar repair, and density enhancement."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg",
-          "title": "Natural Results",
-          "desc": "Master-level single-hair feathering restores soft, natural transitions that blend seamlessly."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp",
-          "title": "Best Facilities",
-          "desc": "Equipped with stereo-microscopes and advanced implanters for maximum graft preservation."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Hair Transplant Repair",
+      subtitle: "NexGen Hair Transplant provides the specialized skills, technology, and empathy required for complex corrective cases:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "Celebrity Trusted", desc: "Trusted by public figures and celebrities for undetectable corrective revisions." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Clinical Expertise", desc: "Over 5,000+ successful repairs handling plug extraction, scar repair, and density enhancement." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/repair-img-2.jpg", title: "Natural Results", desc: "Master-level single-hair feathering restores soft, natural transitions that blend seamlessly." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp", title: "Best Facilities", desc: "Equipped with stereo-microscopes and advanced implanters for maximum graft preservation." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support for Hair Transplant Repair",
@@ -5919,41 +5916,18 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for FUT Hair Transplant",
-      "subtitle": "With over 15,000+ surgeries and ABHRS-certified doctors, NexGen Hair Transplant Clinic provides clinical excellence:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp",
-          "title": "Expert Surgical Team",
-          "desc": "Highly skilled surgeons experienced in thousands of procedures spanning Norwood 1 to 7 grades."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
-          "title": "Advanced Implantation",
-          "desc": "Grafts implanted using DHI/Choi implanters for natural depth, acute angles, and density."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-5.webp",
-          "title": "Personalised Planning",
-          "desc": "Tailored surgical plan with precise graft count estimates and transparent cost breakdown."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp",
-          "title": "Comprehensive Aftercare",
-          "desc": "Structured follow-ups, suture management, medications, and lifestyle support."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-7.webp",
-          "title": "Celebrity Trusted Results",
-          "desc": "Trusted choice of public figures requiring undetectable, high-density hair restoration."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3.jpg",
-          "title": "Transparent Pricing",
-          "desc": "Honest per-graft pricing without hidden costs, delivering maximum value for high graft counts."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for FUT Hair Transplant",
+      subtitle: "With over 15,000+ surgeries and ABHRS-certified doctors, NexGen Hair Transplant provides clinical excellence:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "Expert Surgical Team", desc: "Highly skilled surgeons experienced in thousands of procedures spanning Norwood 1 to 7 grades." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Advanced Implantation", desc: "Grafts implanted using DHI/Choi implanters for natural depth, acute angles, and density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-5.webp", title: "Personalised Planning", desc: "Tailored surgical plan with precise graft count estimates and transparent cost breakdown." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp", title: "Comprehensive Aftercare", desc: "Structured follow-ups, suture management, medications, and lifestyle support." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-7.webp", title: "Celebrity Trusted Results", desc: "Trusted choice of public figures requiring undetectable, high-density hair restoration." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/img-3.jpg", title: "Transparent Pricing", desc: "Honest per-graft pricing without hidden costs, delivering maximum value for high graft counts." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support for FUT Hair Transplant",
@@ -6473,28 +6447,17 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "postSurgerySupport": {
-      "title": "Post Surgery Support",
-      "subtitle": "At NexGen Hair Transplant Clinic, comprehensive post-surgery support is provided to address all queries and ensure smooth recovery.",
-      "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80",
-      "supportItems": [
-        {
-          "title": "Detailed Follow-Up Plan",
-          "desc": "A proper follow-up guide helps in understanding post-treatment care to avoid complications."
-        },
-        {
-          "title": "Extended Support",
-          "desc": "Full support is provided post-treatment with compassion and care whenever questions arise."
-        },
-        {
-          "title": "Expert Consultation",
-          "desc": "Immediate expert consultation is available for urgent queries or checkups."
-        },
-        {
-          "title": "Lifestyle Recommendations",
-          "desc": "Stress reduction and nutritional guidelines to support optimal follicle growth."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "WHY CHOOSE NEXGEN FOR MALE HAIR TRANSPLANT",
+      subtitle: "NexGen Hair Transplant offers world-class techniques with greater affordability, offering EMI options, celebrity approval, and pan-India presence.",
+      features: [
+        { image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80", title: "WORLD-CLASS TECHNIQUES", desc: "We use the NexGen Hair Transplant TECHNIQUE where slits are created before graft extraction, offering scarless, natural results with high graft survival." },
+        { image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80", title: "CELEBRITY TRUSTED", desc: "Renowned celebrities like Rajpal Yadav, Rajgopal Iyer, and Dayanand Shetty have trusted NexGen Hair Transplant for natural results." },
+        { image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80", title: "AFFORDABILITY", desc: "NexGen Hair Transplant is the preferred choice for hair restoration, providing transparent packages and unmatched clinical value." },
+        { image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80", title: "PAN -INDIA CLINICS", desc: "Pan-India presence makes expert hair restoration accessible across multiple major hubs." },
+        { image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80", title: "EMI OPTIONS", desc: "Flexible EMI options ensure world-class treatments are accessible even during a financial crunch." },
+      ],
     },
     "dosDonts": {
       "title": "Do's and Don'ts after Male Hair Transplant",
@@ -6993,31 +6956,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Hairline Reconstruction?",
-      "subtitle": "At NexGen Hair Transplant Clinic, hairline reconstruction is about designing a hairline that matches your facial proportions and stays consistent over time:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Artistic Hairline Design",
-          "desc": "Every hairline is created to fit your individual face shape and age for an authentic, seamless result."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp",
-          "title": "Advanced NexGen Hair Transplant Clinic Technology",
-          "desc": "Immediate graft placement with zero waiting time ensures higher survival and maximum density."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Experienced Surgeons",
-          "desc": "Over 12,000 successful procedures completed with unmatched precision and artistic expertise."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp",
-          "title": "Natural & Long-Term Results",
-          "desc": "Medical skill and micro single-hair feathering guarantee your new hairline grows naturally for life."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen Hair Transplant for Hairline Reconstruction?",
+      subtitle: "At NexGen Hair Transplant, hairline reconstruction is about designing a hairline that matches your facial proportions and stays consistent over time:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Artistic Hairline Design", desc: "Every hairline is created to fit your individual face shape and age for an authentic, seamless result." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Advanced NexGen Hair Transplant Technology", desc: "Immediate graft placement with zero waiting time ensures higher survival and maximum density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Experienced Surgeons", desc: "Over 12,000 successful procedures completed with unmatched precision and artistic expertise." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Natural & Long-Term Results", desc: "Medical skill and micro single-hair feathering guarantee your new hairline grows naturally for life." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post Surgery Support",
@@ -7483,31 +7431,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Hair Transplant for Caucasian Men?",
-      "subtitle": "NexGen Hair Transplant Clinics for Caucasian Men provide the right techniques, surgeons, natural results, the least recovery time, and proper aftercare for long-term success.",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Celebrity Trusted",
-          "desc": "Trusted by celebrities, global influencers, and international travelers for undetectable results."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp",
-          "title": "Clinical Expertise",
-          "desc": "Years of specialized experience handling Caucasian hair follicle geometry with our advanced NexGen Hair Transplant Clinic technique."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Natural Results",
-          "desc": "Expert surgeons craft customized hairlines and natural density matching European facial symmetry."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp",
-          "title": "Best Facilities",
-          "desc": "World-class surgical suites equipped with cutting-edge sapphire micro-tools and sterile safety protocols."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Hair Transplant for Caucasian Men?",
+      subtitle: "NexGen Hair Transplants for Caucasian Men provide the right techniques, surgeons, natural results, the least recovery time, and proper aftercare for long-term success.",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Celebrity Trusted", desc: "Trusted by celebrities, global influencers, and international travelers for undetectable results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "Clinical Expertise", desc: "Years of specialized experience handling Caucasian hair follicle geometry with our advanced NexGen Hair Transplant technique." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Natural Results", desc: "Expert surgeons craft customized hairlines and natural density matching European facial symmetry." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Best Facilities", desc: "World-class surgical suites equipped with cutting-edge sapphire micro-tools and sterile safety protocols." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post Surgery Support",
@@ -7989,31 +7922,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Custom Hairline Transplant?",
-      "subtitle": "Choosing NexGen Hair Transplant Clinic ensures a world-class restoration experience backed by an outstanding surgical team:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Artistic Hairline Design",
-          "desc": "Age-related, face-proportioned customized planning for the most authentic front framing."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp",
-          "title": "NexGen Hair Transplant Clinic Technology",
-          "desc": "Immediate graft placement with zero holding time for 95%+ graft survival and high density."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Skilled Surgeons",
-          "desc": "Certified hair restoration doctors with over 12,000 successful surgical outcomes."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp",
-          "title": "Natural & Long-Lasting",
-          "desc": "Undetectable single-hair feathering on leading borders with lifetime permanent growth."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen Hair Transplant for Custom Hairline Transplant?",
+      subtitle: "Choosing NexGen Hair Transplant ensures a world-class restoration experience backed by an outstanding surgical team:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Artistic Hairline Design", desc: "Age-related, face-proportioned customized planning for the most authentic front framing." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-1.webp", title: "NexGen Hair Transplant Technology", desc: "Immediate graft placement with zero holding time for 95%+ graft survival and high density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Skilled Surgeons", desc: "Certified hair restoration doctors with over 12,000 successful surgical outcomes." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Natural & Long-Lasting", desc: "Undetectable single-hair feathering on leading borders with lifetime permanent growth." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support",
@@ -8484,31 +8402,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Influencer Hair Transplant?",
-      "subtitle": "NexGen Hair Transplant Clinic provides advanced techniques, experienced celebrity surgeons, natural density, and fast recovery:",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Celebrity Trusted",
-          "desc": "Trusted by Bollywood actors, YouTube creators, and reality TV stars for seamless restoration."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Clinical Expertise",
-          "desc": "Years of experience handling aesthetic, camera-critical hairline and crown cases."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Natural Results",
-          "desc": "Micro-feathered borders and high graft density that look completely natural under 4K video."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp",
-          "title": "Best Facilities",
-          "desc": "Equipped with state-of-the-art sterile surgical suites and dedicated private patient lounges."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Influencer Hair Transplant?",
+      subtitle: "NexGen Hair Transplant provides advanced techniques, experienced celebrity surgeons, natural density, and fast recovery:",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Celebrity Trusted", desc: "Trusted by Bollywood actors, YouTube creators, and reality TV stars for seamless restoration." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Clinical Expertise", desc: "Years of experience handling aesthetic, camera-critical hairline and crown cases." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Natural Results", desc: "Micro-feathered borders and high graft density that look completely natural under 4K video." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Best Facilities", desc: "Equipped with state-of-the-art sterile surgical suites and dedicated private patient lounges." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support for Influencers",
@@ -9026,28 +8929,18 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "postSurgerySupport": {
-      "title": "Post-Surgery Support for Unnatural Hair Transplant Fix",
-      "subtitle": "A successful Unnatural Hair Transplant Fix doesn't stop in the operating room—true success is attributed to the diligent aftercare following surgery to ensure natural, long-lasting results.",
-      "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-post-surgery-thumb.webp",
-      "supportItems": [
-        {
-          "title": "Routine Follow-Ups",
-          "desc": "Scheduled follow-ups allow patients who are having an Unnatural Hair Transplant Fix to monitor their recovery and growth."
-        },
-        {
-          "title": "Longevity of Results",
-          "desc": "Comprehensive care ensures that every patient will be able to achieve natural and long-lasting results from their Unnatural Hair Transplant Fix"
-        },
-        {
-          "title": "Access to the Surgeon",
-          "desc": "For any concerns or questions around the Unnatural Hair Transplant Fix, patients have direct access to the experts and primary surgeons."
-        },
-        {
-          "title": "Customized Aftercare Plan",
-          "desc": "Patients receive an Unnatural Hair Transplant Fix aftercare plan providing protection for smooth recovery and superior long-term results."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Bad Hair Transplant Correction?",
+      subtitle: "There are many scars—physical and emotional—from a badly done hair transplant. At NexGen Hair Transplant, we can correct a bad hair transplant, and do it safely, efficiently, and with the highest level of expertise.",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Expertise in Bad Hair Transplant Correction", desc: "NexGen Hair Transplant is a well-respected name in the field of Bad Hair Transplant Correction, with many techniques and professionally proven results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Advanced NexGen Hair Transplant Technique", desc: "Unlike other clinics, we are prepared to offer our NexGen Hair Transplant Technique, which allows for proper monitoring of graft survival and sustained naturalness of the Bad Hair Transplant Correction." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Precise Surgery with NexGen Hair Transplant Technology", desc: "With the aid of sapphire punches and magnification lenses, our surgeons are able to perform accurate and safe Bad Hair Transplant Correction." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Superior Facilities & Transparent Pricing", desc: "Patients trust NexGen Hair Transplant and feel confident in our Bad Hair Transplant Correction, with our exceptional facilities, complete infrastructure, and honest/transparent pricing." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-4.webp", title: "Restoring Confidence", desc: "Our commitment and efforts are not only to repair someone's hair- our deeper goal is to fix someone's confidence through a professional Bad Hair Transplant Correction." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/sd-wc-img-2.webp", title: "Aftercare Support", desc: "NexGen Hair Transplant provides you with aftercare follow-up and assistance as you require after the Bad Hair Transplant Correction procedure, to ensure a smooth recovery." },
+      ],
     },
     "dosDonts": {
       "title": "Do’s and Don’ts After Bad Hair Transplant Correction",
@@ -9516,36 +9409,17 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Mustache Hair Transplant In India?",
-      "subtitle": "NexGen Hair Transplant Clinic is a renowned name for Mustache reconstruction in India, providing dedicated care, natural density, and lifetime results.",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp",
-          "title": "Celebrity Trusted",
-          "desc": "NexGen Hair Transplant Clinic is trusted by celebrities for natural and discreet facial hair restoration."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp",
-          "title": "Expertise",
-          "desc": "Surgeons with decades of facial hair restoration experience ensure personalized care and best outcomes."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-1.webp",
-          "title": "Natural Looking Results",
-          "desc": "Skilled artistic approach and attention to angle and direction result in natural, trimmable moustaches."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp",
-          "title": "State of the Art Facility",
-          "desc": "Equipped with cutting-edge technology and high-magnification tools for comfortable and seamless surgery."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-1.webp",
-          "title": "Comprehensive Care",
-          "desc": "Dedicated pre-operative planning and post-transplant follow-up support at every stage."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Mustache Hair Transplant In India?",
+      subtitle: "NexGen Hair Transplant is a renowned name for Mustache reconstruction in India, providing dedicated care, natural density, and lifetime results.",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "NexGen Hair Transplant is trusted by celebrities for natural and discreet facial hair restoration." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "Expertise", desc: "Surgeons with decades of facial hair restoration experience ensure personalized care and best outcomes." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-1.webp", title: "Natural Looking Results", desc: "Skilled artistic approach and attention to angle and direction result in natural, trimmable moustaches." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "State of the Art Facility", desc: "Equipped with cutting-edge technology and high-magnification tools for comfortable and seamless surgery." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-1.webp", title: "Comprehensive Care", desc: "Dedicated pre-operative planning and post-transplant follow-up support at every stage." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post-Surgery Support For Moustache Hair Transplant",
@@ -10018,36 +9892,17 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for NexGen Hair Transplant Clinic",
-      "subtitle": "NexGen Hair Transplant Clinic, with its highly experienced team, offers authentic results. It is a celebrity-trusted clinic that uses the advanced NexGen Hair Transplant Clinic technique and ensures supportive care throughout the procedure.",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp",
-          "title": "Celebrity Trusted",
-          "desc": "NexGen Hair Transplant Clinic is trusted by renowned celebrities like Rajpal Yadav and Dayanand Shetty for natural results."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp",
-          "title": "Expertise",
-          "desc": "With years of experience, our surgeons ensure that each patient receives personalized care and optimal density."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp",
-          "title": "Natural Looking Results",
-          "desc": "Our skilled surgeons' artistic approach and attention to detail result in natural-looking hairlines and fuller hair."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp",
-          "title": "State of the Art Facility",
-          "desc": "Equipped with cutting-edge technology including sapphire punches and DHI implanters for seamless surgery."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/5-img.webp",
-          "title": "Comprehensive Care",
-          "desc": "From initial consultation to post-transplant follow-ups, our team is dedicated to extensive care and guidance."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for NexGen Hair Transplant",
+      subtitle: "NexGen Hair Transplant, with its highly experienced team, offers authentic results. It is a celebrity-trusted clinic that uses the advanced NexGen Hair Transplant technique and ensures supportive care throughout the procedure.",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/1-img.webp", title: "Celebrity Trusted", desc: "NexGen Hair Transplant is trusted by renowned celebrities like Rajpal Yadav and Dayanand Shetty for natural results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/2-img.webp", title: "Expertise", desc: "With years of experience, our surgeons ensure that each patient receives personalized care and optimal density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/3-img.webp", title: "Natural Looking Results", desc: "Our skilled surgeons' artistic approach and attention to detail result in natural-looking hairlines and fuller hair." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/4-img.webp", title: "State of the Art Facility", desc: "Equipped with cutting-edge technology including sapphire punches and DHI implanters for seamless surgery." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/5-img.webp", title: "Comprehensive Care", desc: "From initial consultation to post-transplant follow-ups, our team is dedicated to extensive care and guidance." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post Surgery Support for NexGen Hair Transplant Clinic",
@@ -10555,31 +10410,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Female Hair Transplant",
-      "subtitle": "NexGen Hair Transplant Clinic stands out as the preferred choice for female hair transplants, combining advanced technology with personalized care for natural, lasting results.",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
-          "title": "Expertise",
-          "desc": "Certified surgeon execution ensuring peak safety and aesthetic mastery."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp",
-          "title": "High Quality Tools Used",
-          "desc": "Ultra-refined microscopic tools designed specifically for female anatomy and hair density."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-5.webp",
-          "title": "Comprehensive Care",
-          "desc": "1000+ successful female cases with private suites and a dedicated women-led care team."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp",
-          "title": "Celebrity Trusted",
-          "desc": "Trusted by public personalities and clients globally for undetectable, natural volume."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Female Hair Transplant",
+      subtitle: "NexGen Hair Transplant stands out as the preferred choice for female hair transplants, combining advanced technology with personalized care for natural, lasting results.",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Expertise", desc: "Led by certified hair restoration surgeons. Zero technician-led procedures for ultimate safety." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-3.webp", title: "High Quality Tools Used", desc: "Ultra-refined microscopic tools designed specifically for female anatomy and hair density." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-5.webp", title: "Comprehensive Care", desc: "1000+ successful female cases with private suites and a dedicated women-led care team." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-6.webp", title: "Celebrity Trusted", desc: "Trusted by public personalities and clients globally for undetectable, natural volume." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post Surgery Support",
@@ -11076,31 +10916,16 @@ export const SEED_SECTIONS_BY_SLUG: Record<string, Record<string, Record<string,
         }
       ]
     },
-    "whyChooseQHT": {
-      "title": "Why Choose NexGen Hair Transplant Clinic for Beard Hair Transplant",
-      "subtitle": "NexGen Hair Transplant Clinic is a reputable option when it comes to transplanting beard hair, providing hi-tech solutions and individualized service delivery with natural and permanent outcomes.",
-      "features": [
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/Group-14678.jpg",
-          "title": "Advanced NexGen Hair Transplant Clinic Technology",
-          "desc": "There is instant grafting with low out of body time, leading to high survival rates and more dense results."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/09/body-img-2.jpg",
-          "title": "Customized Beard Design",
-          "desc": "Each transplant will be designed based on the symmetry of the face, the color of the skin, and the type of beard to have a natural appearance."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp",
-          "title": "Expert Surgical Team",
-          "desc": "The procedure is done by very experienced doctors and specialists who are very accurate and safe."
-        },
-        {
-          "image": "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-7.webp",
-          "title": "Clearly Communicated Care",
-          "desc": "Crystal-clear pricing, EMI plans and reputed outcomes have led to the choice of NexGen Hair Transplant Clinic by thousands of people, including celebrities."
-        }
-      ]
+
+    whyChooseNexGen: {
+      title: "Why Choose NexGen for Beard Hair Transplant",
+      subtitle: "NexGen Hair Transplant is a reputable option when it comes to transplanting beard hair, providing hi-tech solutions and individualized service delivery with natural and permanent outcomes.",
+      features: [
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/Group-14678.jpg", title: "Advanced NexGen Hair Transplant Technology", desc: "There is instant grafting with low out of body time, leading to high survival rates and more dense results." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/09/body-img-2.jpg", title: "Customized Beard Design", desc: "Each transplant will be designed based on the symmetry of the face, the color of the skin, and the type of beard to have a natural appearance." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-4.webp", title: "Expert Surgical Team", desc: "The procedure is done by very experienced doctors and specialists who are very accurate and safe." },
+        { image: "https://www.qhtclinic.com/wp-content/uploads/2025/08/transplant-img-7.webp", title: "Clearly Communicated Care", desc: "Crystal-clear pricing, EMI plans and reputed outcomes have led to the choice of NexGen Hair Transplant by thousands of people, including celebrities." },
+      ],
     },
     "postSurgerySupport": {
       "title": "Post Surgery Support",
