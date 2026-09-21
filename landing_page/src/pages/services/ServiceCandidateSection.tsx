@@ -71,7 +71,7 @@ export default function ServiceCandidateSection({
           <div className="lg:col-span-4 flex justify-center lg:justify-start items-center">
             <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/ideal-candidate-for-fut-mu9xzqeitvl92y.png"
                 alt="Ideal Candidate Illustration"
                 className="w-full h-full object-cover rounded-2xl shadow-sm"
               />

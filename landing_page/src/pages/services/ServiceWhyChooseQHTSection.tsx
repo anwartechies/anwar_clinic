@@ -131,28 +131,28 @@ export default function ServiceWhyChooseQHTSection({
               {/* Overlapping Patient Avatars */}
               <div className="flex -space-x-2">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-3-mu2jxhk9h6w4rt.jpg"
                   alt="Patient avatar"
                   className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-2-mu2jxhc5aa4czi.jpg"
                   alt="Patient avatar"
                   className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-1-mu2jxgr4xjdvq4.jpg"
                   alt="Patient avatar"
                   className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
                 <div className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold bg-nexgen-veryDarkHeader text-nexgen-brightGold text-xs font-bold flex items-center justify-center">
-                  +4.7k
+                  +2.5k
                 </div>
               </div>
 
               {/* Rating Text */}
               <p className="text-base sm:text-lg font-normal text-nexgen-veryDarkHeader leading-snug">
-                <span className="font-bold text-nexgen-veryDarkHeader">4,700 satisfied patients</span>{" "}
+                <span className="font-bold text-nexgen-veryDarkHeader">2,500 satisfied patients</span>{" "}
                 achieved lasting results with a 100% success rate.
               </p>
             </div>
