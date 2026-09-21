@@ -20,19 +20,19 @@ export const DEFAULT_ROUTINES: RoutineItem[] = [
     timeSlot: "Morning",
     steps: [
       {
-        title: "Wash with URoots Daily Hydrating Shampoo",
+        title: "Wash with NexGen Daily Hydrating Shampoo",
         instruction:
-          "Use a gentle cleanser, URoots daily hydrating shampoo, to wash your scalp and hair before applying any hair care products.",
+          "Use a gentle cleanser, NexGen daily hydrating shampoo, to wash your scalp and hair before applying any hair care products.",
       },
       {
         title: "Apply Topical Solutions",
         instruction:
-          "Apply URoots Minoxidil 5% and URoots hair serum to a clean, dry scalp. Use it twice daily and avoid washing your hair for at least 4 hours after application.",
+          "Apply NexGen Minoxidil 5% and NexGen hair serum to a clean, dry scalp. Use it twice daily and avoid washing your hair for at least 4 hours after application.",
       },
       {
         title: "Take Oral supplements",
         instruction:
-          "Take one URoots hair supplement tablet and URoots Finasteride tablets daily after breakfast or lunch, for the time recommended by your doctor.",
+          "Take one NexGen hair supplement tablet and NexGen Finasteride tablets daily after breakfast or lunch, for the time recommended by your doctor.",
       },
     ],
   },
@@ -43,7 +43,7 @@ export const DEFAULT_ROUTINES: RoutineItem[] = [
       {
         title: "Apply Night Restorative Hair Serum",
         instruction:
-          "Apply 1ml of URoots cyclical restorative serum directly onto thinning scalp areas. Gently massage with fingertips for 2 minutes to boost micro-circulation.",
+          "Apply 1ml of NexGen cyclical restorative serum directly onto thinning scalp areas. Gently massage with fingertips for 2 minutes to boost micro-circulation.",
       },
       {
         title: "Overnight Scalp Recovery",
@@ -64,7 +64,7 @@ export const DEFAULT_ROUTINES: RoutineItem[] = [
       {
         title: "Nourishing Botanical Oil Treatment",
         instruction:
-          "Follow up with URoots botanical growth oil. Leave on for 2-4 hours before washing with mild shampoo.",
+          "Follow up with NexGen botanical growth oil. Leave on for 2-4 hours before washing with mild shampoo.",
       },
     ],
   },
