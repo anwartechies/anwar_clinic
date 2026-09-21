@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Mail, MapPin, CheckCircle2, ChevronDown } from "lucide-react";
 import { COUNTRY_CODES } from "@/data/qhtData";
-import { COMPANY_NAME } from "@/config/constants";
+import { CLINIC_EMAIL, COMPANY_NAME } from "@/config/constants";
 import { submitLead } from "@/lib/leads";
 
 interface ClinicLocation {
@@ -104,10 +104,10 @@ export default function ContactSection({
             {/* Email link */}
             <div className="pt-2">
               <a
-                href={`mailto:care@${COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`}
+                href={`mailto:${CLINIC_EMAIL}`}
                 className="text-base sm:text-lg font-bold text-nexgen-veryDarkHeader hover:text-nexgen-primaryGold transition-colors"
               >
-                care@{COMPANY_NAME.toLowerCase().replace(/[^a-z0-9]/g, "")}.com
+                {CLINIC_EMAIL}
               </a>
             </div>
           </div>
