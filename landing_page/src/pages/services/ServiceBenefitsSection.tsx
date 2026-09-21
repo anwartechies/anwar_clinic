@@ -70,13 +70,13 @@ export default function ServiceBenefitsSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-nexgen-mainDarkBg text-white overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Section Heading & Subtitle */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[500] text-white tracking-tight leading-[1.18]">
             {title.toLowerCase().startsWith("benefits of") ||
-            title.toLowerCase().startsWith("benefit of") ||
-            title.toLowerCase().startsWith("benefits")
+              title.toLowerCase().startsWith("benefit of") ||
+              title.toLowerCase().startsWith("benefits")
               ? title
               : `Benefits of ${title}`}
           </h2>
@@ -95,7 +95,7 @@ export default function ServiceBenefitsSection({
               {/* Left & Middle: Circular Outline Icon + Title */}
               <div className="flex items-center gap-5 sm:gap-7 md:w-1/2">
                 {/* Circular Icon */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-nexgen-primaryGold/60 bg-white/5 flex items-center justify-center p-3 flex-shrink-0 group-hover:border-nexgen-brightGold group-hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-nexgen-primaryGold/60 bg-nexgen-cream flex items-center justify-center p-3 flex-shrink-0 group-hover:border-nexgen-brightGold group-hover:bg-nexgen-pageLightBg transition-all duration-300">
                   {typeof item.icon === "string" && (item.icon.startsWith("http") || item.icon.startsWith("/")) ? (
                     <img
                       src={item.icon}

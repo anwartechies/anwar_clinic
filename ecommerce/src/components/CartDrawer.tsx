@@ -27,8 +27,8 @@ export default function CartDrawer() {
     },
     {
       id: "rec-shampoo",
-      name: "URoots Daily Hydrating Anti-DHT Shampoo",
-      slug: "uroots-hydrating-shampoo",
+      name: "NexGen Daily Hydrating Anti-DHT Shampoo",
+      slug: "NexGen-hydrating-shampoo",
       category: "Shampoos",
       concern: "Hair Fall",
       price: 499.0,
@@ -90,7 +90,7 @@ export default function CartDrawer() {
       {/* Slide-over Drawer Panel */}
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
         <div className="w-full sm:w-[420px] max-w-full bg-white shadow-2xl flex flex-col justify-between animate-in slide-in-from-right duration-300">
-          
+
           {/* Top Header */}
           <div className="px-4 sm:px-6 py-4 sm:py-5 border-b border-gray-100 flex items-center justify-between">
             <h2 className="text-xl sm:text-[26px] font-bold text-[#1b221d] tracking-tight">
@@ -120,7 +120,7 @@ export default function CartDrawer() {
             ) : (
               cart.map((item) => (
                 <div key={item.product.id} className="flex gap-3 sm:gap-4 items-start">
-                  
+
                   {/* Thumbnail */}
                   <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-xl sm:rounded-2xl overflow-hidden bg-[#ebe6df] flex-shrink-0 border border-gray-100">
                     <img
@@ -135,7 +135,7 @@ export default function CartDrawer() {
                     <h3 className="text-xs sm:text-[15px] font-bold text-[#1b392b] leading-snug line-clamp-2">
                       {item.product.name}
                     </h3>
-                    
+
                     <p className="text-xs sm:text-sm font-semibold text-[#5c685f] mt-0.5 sm:mt-1 mb-2.5 sm:mb-3">
                       {formatPrice(item.product.price)}
                     </p>

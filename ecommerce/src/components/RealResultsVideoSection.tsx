@@ -17,7 +17,7 @@ export const TESTIMONIALS_DATA: VideoTestimonial[] = [
     id: "sushant",
     name: "Sushant Gupta",
     quote:
-      "I had my transplant at NexGen and used to collect my medicines from the clinic. Now I just order them on URoots and they get delivered to my door.",
+      "I had my transplant at NexGen and used to collect my medicines from the clinic. Now I just order them on NexGen and they get delivered to my door.",
     thumbnail:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -26,7 +26,7 @@ export const TESTIMONIALS_DATA: VideoTestimonial[] = [
     id: "sounu",
     name: "Sounu Kumar",
     quote:
-      "Six months after my transplant, I'm still following my NexGen medicines. My results speak for themselves, and now I get everything on URoots.",
+      "Six months after my transplant, I'm still following my NexGen medicines. My results speak for themselves, and now I get everything on NexGen.",
     thumbnail:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -176,7 +176,7 @@ export default function RealResultsVideoSection() {
                 <h4 className="text-xl font-bold mb-2">{activeVideo.name}&apos;s Transformation Journey</h4>
                 <p className="text-xs text-white/80 max-w-xs mx-auto mb-4">{activeVideo.quote}</p>
                 <span className="text-[11px] bg-[#b1fc85] text-black px-4 py-1.5 rounded-full font-bold">
-                  Verified URoots Patient Story
+                  Verified NexGen Patient Story
                 </span>
               </div>
             </div>
