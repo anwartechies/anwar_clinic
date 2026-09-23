@@ -217,3 +217,24 @@ src/
 > `syncDatabase()` uses `sequelize.sync({ alter: true })`, which is convenient in
 > development but not what you want against production data — swap in real
 > migrations before deploying.
+
+## Service Content Rephraser (ChatGPT & Gemini Supported)
+
+An automated script to fetch active services from the database and rephrase descriptive narrative content, paragraphs, and bullet points using ChatGPT / OpenAI (`gpt-4o-mini`, `gpt-4o`) or Google Gemini, strictly preserving all titles, headings, questions, images, and pricing.
+
+```bash
+# 1. Preview changes using ChatGPT (Dry Run - no DB writes)
+npm run services:rephrase -- --dry-run
+
+# 2. Test rephrase on a single service on live RDS
+npm run services:rephrase -- --prod --slug=temple-hair-transplant --dry-run
+
+# 3. Apply rephrasing across all active services on live RDS
+npm run services:rephrase -- --prod
+
+# 4. Create a JSON backup without updating anything
+npm run services:backup -- --prod
+
+# 5. Restore from a previous backup if ever needed
+npm run services:restore -- --prod --restore=scripts/backups/services_backup_xxx.json
+```
