@@ -10,7 +10,10 @@
     "start": "node dist/server.js",
     "db:seed": "ts-node src/config/seed.ts",
     "db:seed:platform-admin": "ts-node src/config/seedPlatformAdmin.ts",
-    "db:seed:services": "ts-node src/config/seedServices.ts"
+    "db:seed:services": "ts-node src/config/seedServices.ts",
+    "services:rephrase": "ts-node scripts/rephraseServices.ts",
+    "services:backup": "ts-node scripts/rephraseServices.ts --backup-only",
+    "services:restore": "ts-node scripts/rephraseServices.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1119.0",
