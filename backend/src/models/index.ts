@@ -12,6 +12,8 @@ import { Job } from "./Job";
 import { JobApplication } from "./JobApplication";
 import { Offer } from "./Offer";
 import { Deployment } from "./Deployment";
+import { InventoryItem } from "./InventoryItem";
+import { InventoryLog } from "./InventoryLog";
 
 // Role <-> Permission join table. A role's grants live entirely in here, which
 // is what lets permissions be re-assigned at runtime from Settings > Roles
@@ -60,6 +62,16 @@ JobApplication.belongsTo(Job, { foreignKey: "jobId", as: "job" });
 Offer.belongsTo(User, { foreignKey: "createdById", as: "createdBy" });
 User.hasMany(Offer, { foreignKey: "createdById", as: "offers" });
 
+// Inventory
+InventoryItem.belongsTo(User, { foreignKey: "createdById", as: "createdBy" });
+User.hasMany(InventoryItem, { foreignKey: "createdById", as: "inventoryItems" });
+
+InventoryItem.hasMany(InventoryLog, { foreignKey: "inventoryItemId", as: "logs", onDelete: "CASCADE" });
+InventoryLog.belongsTo(InventoryItem, { foreignKey: "inventoryItemId", as: "item" });
+
+InventoryLog.belongsTo(User, { foreignKey: "performedById", as: "performedBy" });
+User.hasMany(InventoryLog, { foreignKey: "performedById", as: "inventoryLogs" });
+
 export async function syncDatabase() {
   await sequelize.sync({ alter: true });
 }
@@ -78,4 +90,7 @@ export {
   JobApplication,
   Offer,
   Deployment,
+  InventoryItem,
+  InventoryLog,
 };
+
