@@ -7,7 +7,8 @@ export type InventoryAction =
   | "broken"
   | "stolen"
   | "expired"
-  | "adjustment";
+  | "adjustment"
+  | "sold";
 
 export interface InventoryLogAttributes {
   id: string;
@@ -53,7 +54,7 @@ InventoryLog.init(
       allowNull: false,
     },
     action: {
-      type: DataTypes.ENUM("restock", "used_procedure", "broken", "stolen", "expired", "adjustment"),
+      type: DataTypes.ENUM("restock", "used_procedure", "broken", "stolen", "expired", "adjustment", "sold"),
       allowNull: false,
     },
     quantity: {

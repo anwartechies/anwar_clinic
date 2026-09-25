@@ -10,6 +10,7 @@ import {
   TbActivity,
   TbAlertCircle,
   TbCheck,
+  TbShoppingCart,
 } from "react-icons/tb";
 import { apiFetch } from "@/lib/api";
 import { cn } from "@/lib/utils";
@@ -99,6 +100,13 @@ export function QuickAdjustModal({
       desc: "Used during hair transplant surgery / PRP session",
       icon: TbActivity,
       color: "border-blue-300 bg-blue-50 text-blue-800 dark:bg-blue-950/20 dark:text-blue-300",
+    },
+    {
+      id: "sold",
+      title: "Stock Sold / Dispensed",
+      desc: "Record stock sold to patient/retail & deduct from stock",
+      icon: TbShoppingCart,
+      color: "border-emerald-300 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/20 dark:text-emerald-300",
     },
     {
       id: "adjustment",

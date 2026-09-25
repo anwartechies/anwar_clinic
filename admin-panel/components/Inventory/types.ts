@@ -12,7 +12,8 @@ export type InventoryAction =
   | "broken"
   | "stolen"
   | "expired"
-  | "adjustment";
+  | "adjustment"
+  | "sold";
 
 export interface InventoryItem {
   id: string;
@@ -142,5 +143,9 @@ export const ACTION_LABELS: Record<InventoryAction, { label: string; badge: stri
   adjustment: {
     label: "Audit Reconciliation",
     badge: "bg-purple-50 text-purple-700 dark:bg-purple-500/10 dark:text-purple-300",
+  },
+  sold: {
+    label: "Sold / Dispensed",
+    badge: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:border-emerald-800 font-semibold",
   },
 };

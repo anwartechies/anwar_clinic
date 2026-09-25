@@ -19,6 +19,7 @@ import {
   TbUser,
   TbClock,
   TbRefresh,
+  TbShoppingCart,
 } from "react-icons/tb";
 import { apiFetch } from "@/lib/api";
 import { cn } from "@/lib/utils";
@@ -35,6 +36,7 @@ interface StockDetailDrawerProps {
   onClose: () => void;
   onEdit: (item: InventoryItem) => void;
   onAdjust: (item: InventoryItem) => void;
+  onSell?: (item: InventoryItem) => void;
   onDelete: (item: InventoryItem) => void;
   canWrite: boolean;
 }
@@ -45,6 +47,7 @@ export function StockDetailDrawer({
   onClose,
   onEdit,
   onAdjust,
+  onSell,
   onDelete,
   canWrite,
 }: StockDetailDrawerProps) {
@@ -420,7 +423,7 @@ export function StockDetailDrawer({
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => onEdit(item)}
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 shadow-xs transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-xs transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
                       >
                         <TbPencil className="h-4 w-4" />
                         Edit Details
@@ -428,10 +431,19 @@ export function StockDetailDrawer({
 
                       <button
                         onClick={() => onAdjust(item)}
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-teal-600 px-4 py-2 text-xs font-semibold text-white shadow-xs transition hover:bg-teal-700"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-xs transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
                       >
                         <TbAdjustments className="h-4 w-4" />
-                        Adjust / Log Loss
+                        Adjust
+                      </button>
+
+                      <button
+                        onClick={() => onSell?.(item)}
+                        disabled={item.stockQuantity <= 0}
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3.5 py-2 text-xs font-semibold text-white shadow-xs transition hover:bg-emerald-700 disabled:opacity-40"
+                      >
+                        <TbShoppingCart className="h-4 w-4" />
+                        Register Sale
                       </button>
                     </div>
                   </div>
