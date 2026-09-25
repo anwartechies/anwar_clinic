@@ -16,6 +16,7 @@ import jobsRoutes from "./routes/jobs";
 import deployRoutes from "./routes/deploy";
 import offersRoutes from "./routes/offers";
 import inventoryRoutes from "./routes/inventory";
+import staffRoutes from "./routes/staff";
 import publicRoutes from "./routes/public";
 
 const app = express();
@@ -66,6 +67,7 @@ app.use("/jobs", jobsRoutes);
 app.use("/deploy", deployRoutes);
 app.use("/offers", offersRoutes);
 app.use("/inventory", inventoryRoutes);
+app.use("/staff", staffRoutes);
 // Open CORS: the landing page and ecommerce fetch this from their own origins.
 app.use("/public", cors({ origin: true }), publicRoutes);
 

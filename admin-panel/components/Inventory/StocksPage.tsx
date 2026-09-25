@@ -14,6 +14,7 @@ import {
   TbChevronRight,
   TbPackage,
   TbClockExclamation,
+  TbShoppingCart,
 } from "react-icons/tb";
 import { apiFetch } from "@/lib/api";
 import { usePermissions } from "@/context/PermissionsContext";
@@ -23,6 +24,7 @@ import { InventorySubNav } from "./InventorySubNav";
 import { StockDetailDrawer } from "./StockDetailDrawer";
 import { ItemModal } from "./ItemModal";
 import { QuickAdjustModal } from "./QuickAdjustModal";
+import { SellStockModal } from "./SellStockModal";
 import {
   InventoryItem,
   InventoryCategory,
@@ -52,6 +54,9 @@ export function StocksPage() {
 
   const [adjustingItem, setAdjustingItem] = useState<InventoryItem | null>(null);
   const [isAdjustModalOpen, setIsAdjustModalOpen] = useState(false);
+
+  const [sellingItem, setSellingItem] = useState<InventoryItem | null>(null);
+  const [isSellModalOpen, setIsSellModalOpen] = useState(false);
 
   const fetchItems = async () => {
     try {
@@ -100,6 +105,11 @@ export function StocksPage() {
     setIsAdjustModalOpen(true);
   };
 
+  const handleOpenSellModal = (item?: InventoryItem) => {
+    setSellingItem(item || null);
+    setIsSellModalOpen(true);
+  };
+
   const handleDeleteItem = async (item: InventoryItem) => {
     if (!confirm(`Are you sure you want to delete "${item.name}"? This will also remove its movement audit logs.`)) {
       return;
@@ -128,13 +138,22 @@ export function StocksPage() {
         description="Hair transplant surgical instruments, anesthetics, and medical consumables catalog."
         action={
           canWrite && (
-            <button
-              onClick={handleOpenAddModal}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-teal-600 px-4 py-2 text-xs font-semibold text-white shadow-xs transition hover:bg-teal-700"
-            >
-              <TbPlus className="h-4 w-4" />
-              Add Stock Item
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => handleOpenSellModal()}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-xs transition hover:bg-emerald-700"
+              >
+                <TbShoppingCart className="h-4 w-4" />
+                Register Sale
+              </button>
+              <button
+                onClick={handleOpenAddModal}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-teal-600 px-4 py-2 text-xs font-semibold text-white shadow-xs transition hover:bg-teal-700"
+              >
+                <TbPlus className="h-4 w-4" />
+                Add Stock Item
+              </button>
+            </div>
           )
         }
       />
@@ -397,13 +416,23 @@ export function StocksPage() {
                           onClick={(e) => e.stopPropagation()}
                         >
                           {canWrite && (
-                            <button
-                              onClick={() => handleOpenAdjustModal(item)}
-                              title="Quick adjust stock or log damage/theft"
-                              className="rounded-lg p-1.5 text-slate-500 transition hover:bg-slate-100 hover:text-teal-600 dark:hover:bg-slate-800 dark:hover:text-teal-400"
-                            >
-                              <TbAdjustments className="h-4 w-4" />
-                            </button>
+                            <>
+                              <button
+                                onClick={() => handleOpenSellModal(item)}
+                                disabled={item.stockQuantity <= 0}
+                                title={item.stockQuantity > 0 ? `Register sale for ${item.name}` : "Out of stock"}
+                                className="rounded-lg p-1.5 text-slate-500 transition hover:bg-slate-100 hover:text-emerald-600 dark:hover:bg-slate-800 dark:hover:text-emerald-400 disabled:opacity-30"
+                              >
+                                <TbShoppingCart className="h-4 w-4" />
+                              </button>
+                              <button
+                                onClick={() => handleOpenAdjustModal(item)}
+                                title="Quick adjust stock or log damage/theft"
+                                className="rounded-lg p-1.5 text-slate-500 transition hover:bg-slate-100 hover:text-teal-600 dark:hover:bg-slate-800 dark:hover:text-teal-400"
+                              >
+                                <TbAdjustments className="h-4 w-4" />
+                              </button>
+                            </>
                           )}
                           <button
                             onClick={() => handleRowClick(item)}
@@ -433,6 +462,7 @@ export function StocksPage() {
         }}
         onEdit={(item) => handleOpenEditModal(item)}
         onAdjust={(item) => handleOpenAdjustModal(item)}
+        onSell={(item) => handleOpenSellModal(item)}
         onDelete={(item) => handleDeleteItem(item)}
         canWrite={canWrite}
       />
@@ -459,6 +489,20 @@ export function StocksPage() {
         onSuccess={() => {
           fetchItems();
           // Also trigger reload of drawer if open
+          if (selectedItemId) {
+            setSelectedItemId(selectedItemId);
+          }
+        }}
+      />
+
+      {/* Sell Stock Modal */}
+      <SellStockModal
+        item={sellingItem}
+        allItems={items}
+        isOpen={isSellModalOpen}
+        onClose={() => setIsSellModalOpen(false)}
+        onSuccess={() => {
+          fetchItems();
           if (selectedItemId) {
             setSelectedItemId(selectedItemId);
           }

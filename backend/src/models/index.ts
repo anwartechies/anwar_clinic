@@ -73,6 +73,28 @@ InventoryLog.belongsTo(User, { foreignKey: "performedById", as: "performedBy" })
 User.hasMany(InventoryLog, { foreignKey: "performedById", as: "inventoryLogs" });
 
 export async function syncDatabase() {
+  try {
+    await sequelize.query(`
+      DO $$
+      BEGIN
+        IF EXISTS (
+          SELECT 1 FROM pg_type typ WHERE typ.typname = 'enum_inventory_logs_action'
+        ) THEN
+          IF NOT EXISTS (
+            SELECT 1 FROM pg_type typ
+            INNER JOIN pg_enum enm ON enm.enumtypid = typ.oid
+            WHERE typ.typname = 'enum_inventory_logs_action' AND enm.enumlabel = 'sold'
+          ) THEN
+            ALTER TYPE "enum_inventory_logs_action" ADD VALUE 'sold';
+          END IF;
+        END IF;
+      EXCEPTION
+        WHEN others THEN NULL;
+      END $$;
+    `);
+  } catch (_e) {
+    // Ignore if not postgres or if enum doesn't exist yet
+  }
   await sequelize.sync({ alter: true });
 }
 

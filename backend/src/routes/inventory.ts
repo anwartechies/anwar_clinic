@@ -393,7 +393,7 @@ router.patch("/:id/adjust", authorize("inventory:write"), async (req: AuthReques
     }
 
     const { action, quantity, reason } = req.body as {
-      action: "restock" | "broken" | "stolen" | "used_procedure" | "expired" | "adjustment";
+      action: "restock" | "broken" | "stolen" | "used_procedure" | "expired" | "adjustment" | "sold";
       quantity: number;
       reason?: string;
     };
@@ -412,6 +412,14 @@ router.patch("/:id/adjust", authorize("inventory:write"), async (req: AuthReques
 
     if (action === "restock") {
       newStock = prevStock + qty;
+      item.stockQuantity = newStock;
+    } else if (action === "sold") {
+      if (prevStock < qty) {
+        return res.status(400).json({
+          message: `Insufficient stock. Cannot sell ${qty} ${item.unit}. Only ${prevStock} ${item.unit} available in stock.`,
+        });
+      }
+      newStock = Math.max(0, prevStock - qty);
       item.stockQuantity = newStock;
     } else if (action === "broken") {
       // Increments broken counter and deducts from active usable stock
@@ -451,6 +459,82 @@ router.patch("/:id/adjust", authorize("inventory:write"), async (req: AuthReques
   } catch (err: any) {
     console.error("Error adjusting stock:", err);
     res.status(500).json({ message: err.message || "Failed to adjust stock" });
+  }
+});
+
+/**
+ * POST /inventory/:id/sell
+ * Register stock sale, deduct inventory, and log activity with performer details
+ */
+router.post("/:id/sell", authorize("inventory:write"), async (req: AuthRequest, res: Response) => {
+  try {
+    const item = await InventoryItem.findByPk(req.params.id);
+    if (!item) {
+      return res.status(404).json({ message: "Inventory item not found" });
+    }
+
+    const { quantity, unitPrice, customerName, invoiceNumber, notes } = req.body;
+
+    const qty = parseInt(String(quantity), 10);
+    if (isNaN(qty) || qty <= 0) {
+      return res.status(400).json({ message: "Quantity sold must be at least 1." });
+    }
+
+    if (item.stockQuantity < qty) {
+      return res.status(400).json({
+        message: `Insufficient stock! Cannot sell ${qty} ${item.unit}. Only ${item.stockQuantity} ${item.unit} currently available.`,
+      });
+    }
+
+    const prevStock = item.stockQuantity;
+    const newStock = prevStock - qty;
+    item.stockQuantity = newStock;
+    await item.save();
+
+    // Construct informative audit trail reason
+    const priceStr = unitPrice !== undefined && unitPrice !== "" && unitPrice !== null
+      ? ` @ ₹${Number(unitPrice).toFixed(2)}/${item.unit}`
+      : item.sellingPrice
+      ? ` @ ₹${Number(item.sellingPrice).toFixed(2)}/${item.unit}`
+      : "";
+    const customerStr = customerName && String(customerName).trim() ? ` to ${String(customerName).trim()}` : "";
+    const invoiceStr = invoiceNumber && String(invoiceNumber).trim() ? ` (Invoice #${String(invoiceNumber).trim()})` : "";
+    const noteStr = notes && String(notes).trim() ? ` — ${String(notes).trim()}` : "";
+    const fullReason = `Stock Sold: ${qty} ${item.unit}${priceStr}${customerStr}${invoiceStr}${noteStr}`;
+
+    const log = await InventoryLog.create({
+      inventoryItemId: item.id,
+      action: "sold",
+      quantity: qty,
+      previousStock: prevStock,
+      newStock,
+      reason: fullReason,
+      performedById: req.user?.userId || null,
+    });
+
+    const populatedLog = await InventoryLog.findByPk(log.id, {
+      include: [
+        {
+          model: InventoryItem,
+          as: "item",
+          attributes: ["id", "name", "sku", "category", "unit"],
+        },
+        {
+          model: User,
+          as: "performedBy",
+          attributes: ["id", "fullName", "email"],
+        },
+      ],
+    });
+
+    res.json({
+      message: `Successfully registered sale of ${qty} ${item.unit} of ${item.name}`,
+      item,
+      log: populatedLog,
+    });
+  } catch (err: any) {
+    console.error("Error registering stock sale:", err);
+    res.status(500).json({ message: err.message || "Failed to register stock sale" });
   }
 });
 
