@@ -4,6 +4,8 @@ import bcrypt from "bcryptjs";
 import { User, Role } from "../models";
 import { authenticate, authorize, AuthRequest } from "../middleware/authenticate";
 import { isPlatformAdmin } from "../config/platform";
+import { env } from "../config/env";
+import { sendStaffInviteEmail } from "../services/emailService";
 
 const router = Router();
 
@@ -200,6 +202,22 @@ router.post("/", authorize("staff:write"), async (req: AuthRequest, res: Respons
       },
     ],
   });
+
+  // Send invitation email to the newly invited staff member
+  try {
+    const loginUrl = `${env.frontendUrl}/auth/login`;
+    await sendStaffInviteEmail({
+      recipientName: newUser.fullName,
+      recipientEmail: newUser.email,
+      roleName: role.name,
+      department: newUser.department,
+      designation: newUser.designation,
+      temporaryPassword: password,
+      loginUrl,
+    });
+  } catch (emailErr) {
+    console.error(`[Staff] Failed to send invite email to ${newUser.email}:`, emailErr);
+  }
 
   res.status(201).json(createdStaff);
 });
