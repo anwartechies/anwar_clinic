@@ -18,6 +18,7 @@ type PermissionsContextType = {
   /** The signed-in user's own role. */
   roleSlug: string;
   fullName: string;
+  userId: string;
   /** True while previewing another role's URL as superadmin. */
   isPreviewing: boolean;
   /** The role currently in effect for gating decisions — the previewed role's
@@ -80,6 +81,7 @@ export function PermissionsProvider({ children }: { children: React.ReactNode })
     permissions: string[];
     roleSlug: string;
     fullName: string;
+    userId: string;
     isPlatformAdmin: boolean;
   } | null>(null);
   const [ready, setReady] = useState(false);
@@ -88,6 +90,7 @@ export function PermissionsProvider({ children }: { children: React.ReactNode })
   const permissions = live?.permissions ?? cookieHint;
   const roleSlug = live?.roleSlug ?? "";
   const fullName = live?.fullName ?? "";
+  const userId = live?.userId ?? "";
 
   const urlRoleSlug = pathname.split("/")[1] || "";
   const isPreviewing =
@@ -95,13 +98,14 @@ export function PermissionsProvider({ children }: { children: React.ReactNode })
 
   useEffect(() => {
     let cancelled = false;
-    apiFetch<{ permissions: string[]; roleSlug: string; fullName: string; isPlatformAdmin?: boolean }>("/auth/me")
+    apiFetch<{ id?: string; userId?: string; permissions: string[]; roleSlug: string; fullName: string; isPlatformAdmin?: boolean }>("/auth/me")
       .then((data) => {
         if (cancelled) return;
         setLive({
           permissions: data.permissions || [],
           roleSlug: data.roleSlug || "",
           fullName: data.fullName || "",
+          userId: data.id || data.userId || "",
           isPlatformAdmin: data.isPlatformAdmin === true,
         });
         setReady(true);
@@ -162,6 +166,7 @@ export function PermissionsProvider({ children }: { children: React.ReactNode })
         permissions,
         roleSlug,
         fullName,
+        userId,
         isPreviewing,
         effectiveRoleSlug,
         ready,

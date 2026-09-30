@@ -228,7 +228,7 @@ export function StaffModal({
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="doctor@anwarclinic.com"
+                placeholder="doctor@nexgenclinic.com"
                 className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
               />
             </div>
@@ -306,11 +306,10 @@ export function StaffModal({
                 <button
                   type="button"
                   onClick={() => setStatus("active")}
-                  className={`flex-1 py-2 px-3 rounded-xl border text-xs font-medium transition flex items-center justify-center gap-2 ${
-                    status === "active"
+                  className={`flex-1 py-2 px-3 rounded-xl border text-xs font-medium transition flex items-center justify-center gap-2 ${status === "active"
                       ? "bg-emerald-500/10 border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold"
                       : "border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
-                  }`}
+                    }`}
                 >
                   <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
                   Active
@@ -318,11 +317,10 @@ export function StaffModal({
                 <button
                   type="button"
                   onClick={() => setStatus("inactive")}
-                  className={`flex-1 py-2 px-3 rounded-xl border text-xs font-medium transition flex items-center justify-center gap-2 ${
-                    status === "inactive"
+                  className={`flex-1 py-2 px-3 rounded-xl border text-xs font-medium transition flex items-center justify-center gap-2 ${status === "inactive"
                       ? "bg-amber-500/10 border-amber-500 text-amber-600 dark:text-amber-400 font-semibold"
                       : "border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
-                  }`}
+                    }`}
                 >
                   <span className="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
                   Inactive / Pending
