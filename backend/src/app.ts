@@ -18,6 +18,16 @@ import offersRoutes from "./routes/offers";
 import inventoryRoutes from "./routes/inventory";
 import staffRoutes from "./routes/staff";
 import publicRoutes from "./routes/public";
+import patientsRoutes from "./routes/patients";
+import vitalsRoutes from "./routes/vitals";
+import queueRoutes from "./routes/queue";
+import appointmentsRoutes from "./routes/appointments";
+import consultationsRoutes from "./routes/consultations";
+import prescriptionsRoutes from "./routes/prescriptions";
+import billingRoutes from "./routes/billing";
+import reportsRoutes from "./routes/reports";
+import doctorsRoutes from "./routes/doctors";
+import pharmacyRoutes from "./routes/pharmacy";
 
 const app = express();
 
@@ -68,6 +78,16 @@ app.use("/deploy", deployRoutes);
 app.use("/offers", offersRoutes);
 app.use("/inventory", inventoryRoutes);
 app.use("/staff", staffRoutes);
+app.use("/patients", patientsRoutes);
+app.use("/vitals", vitalsRoutes);
+app.use("/queue", queueRoutes);
+app.use("/appointments", appointmentsRoutes);
+app.use("/consultations", consultationsRoutes);
+app.use("/prescriptions", prescriptionsRoutes);
+app.use("/billing", billingRoutes);
+app.use("/reports", reportsRoutes);
+app.use("/doctors", doctorsRoutes);
+app.use("/pharmacy", pharmacyRoutes);
 // Open CORS: the landing page and ecommerce fetch this from their own origins.
 app.use("/public", cors({ origin: true }), publicRoutes);
 

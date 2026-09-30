@@ -14,6 +14,15 @@ import { Offer } from "./Offer";
 import { Deployment } from "./Deployment";
 import { InventoryItem } from "./InventoryItem";
 import { InventoryLog } from "./InventoryLog";
+import { Patient } from "./Patient";
+import { Appointment } from "./Appointment";
+import { QueueEntry } from "./QueueEntry";
+import { PatientVitals } from "./PatientVitals";
+import { Consultation } from "./Consultation";
+import { Prescription } from "./Prescription";
+import { PrescriptionItem } from "./PrescriptionItem";
+import { Invoice } from "./Invoice";
+import { InvoiceItem } from "./InvoiceItem";
 
 // Role <-> Permission join table. A role's grants live entirely in here, which
 // is what lets permissions be re-assigned at runtime from Settings > Roles
@@ -72,6 +81,63 @@ InventoryLog.belongsTo(InventoryItem, { foreignKey: "inventoryItemId", as: "item
 InventoryLog.belongsTo(User, { foreignKey: "performedById", as: "performedBy" });
 User.hasMany(InventoryLog, { foreignKey: "performedById", as: "inventoryLogs" });
 
+// -----------------------------------------------------------------------------
+// Clinical Models Associations
+// -----------------------------------------------------------------------------
+
+// Patient <-> User
+Patient.belongsTo(User, { foreignKey: "createdById", as: "createdBy" });
+User.hasMany(Patient, { foreignKey: "createdById", as: "registeredPatients" });
+
+// Patient <-> Appointments
+Patient.hasMany(Appointment, { foreignKey: "patientId", as: "appointments" });
+Appointment.belongsTo(Patient, { foreignKey: "patientId", as: "patient" });
+Appointment.belongsTo(User, { foreignKey: "doctorId", as: "doctor" });
+Appointment.belongsTo(User, { foreignKey: "createdById", as: "createdBy" });
+
+// Patient & Doctor <-> QueueEntry
+Patient.hasMany(QueueEntry, { foreignKey: "patientId", as: "queueEntries" });
+QueueEntry.belongsTo(Patient, { foreignKey: "patientId", as: "patient" });
+QueueEntry.belongsTo(User, { foreignKey: "doctorId", as: "doctor" });
+QueueEntry.belongsTo(Appointment, { foreignKey: "appointmentId", as: "appointment" });
+QueueEntry.belongsTo(User, { foreignKey: "createdById", as: "createdBy" });
+
+// Patient & Queue <-> PatientVitals
+Patient.hasMany(PatientVitals, { foreignKey: "patientId", as: "vitals" });
+PatientVitals.belongsTo(Patient, { foreignKey: "patientId", as: "patient" });
+PatientVitals.belongsTo(QueueEntry, { foreignKey: "queueEntryId", as: "queueEntry" });
+QueueEntry.hasOne(PatientVitals, { foreignKey: "queueEntryId", as: "vitals" });
+PatientVitals.belongsTo(Appointment, { foreignKey: "appointmentId", as: "appointment" });
+PatientVitals.belongsTo(User, { foreignKey: "recordedById", as: "recordedBy" });
+
+// Patient, Doctor & Queue <-> Consultation
+Patient.hasMany(Consultation, { foreignKey: "patientId", as: "consultations" });
+Consultation.belongsTo(Patient, { foreignKey: "patientId", as: "patient" });
+Consultation.belongsTo(User, { foreignKey: "doctorId", as: "doctor" });
+Consultation.belongsTo(QueueEntry, { foreignKey: "queueEntryId", as: "queueEntry" });
+QueueEntry.hasOne(Consultation, { foreignKey: "queueEntryId", as: "consultation" });
+
+// Consultation <-> Prescription & Items
+Consultation.hasOne(Prescription, { foreignKey: "consultationId", as: "prescription" });
+Prescription.belongsTo(Consultation, { foreignKey: "consultationId", as: "consultation" });
+Prescription.belongsTo(Patient, { foreignKey: "patientId", as: "patient" });
+Prescription.belongsTo(User, { foreignKey: "doctorId", as: "doctor" });
+
+Prescription.hasMany(PrescriptionItem, { foreignKey: "prescriptionId", as: "items", onDelete: "CASCADE" });
+PrescriptionItem.belongsTo(Prescription, { foreignKey: "prescriptionId", as: "prescription" });
+PrescriptionItem.belongsTo(InventoryItem, { foreignKey: "inventoryItemId", as: "inventoryItem" });
+
+// Consultation & Patient <-> Invoice & Items
+Consultation.hasOne(Invoice, { foreignKey: "consultationId", as: "invoice" });
+Invoice.belongsTo(Consultation, { foreignKey: "consultationId", as: "consultation" });
+Patient.hasMany(Invoice, { foreignKey: "patientId", as: "invoices" });
+Invoice.belongsTo(Patient, { foreignKey: "patientId", as: "patient" });
+Invoice.belongsTo(User, { foreignKey: "billedById", as: "billedBy" });
+
+Invoice.hasMany(InvoiceItem, { foreignKey: "invoiceId", as: "items", onDelete: "CASCADE" });
+InvoiceItem.belongsTo(Invoice, { foreignKey: "invoiceId", as: "invoice" });
+InvoiceItem.belongsTo(InventoryItem, { foreignKey: "inventoryItemId", as: "inventoryItem" });
+
 export async function syncDatabase() {
   try {
     await sequelize.query(`
@@ -86,6 +152,18 @@ export async function syncDatabase() {
             WHERE typ.typname = 'enum_inventory_logs_action' AND enm.enumlabel = 'sold'
           ) THEN
             ALTER TYPE "enum_inventory_logs_action" ADD VALUE 'sold';
+          END IF;
+        END IF;
+
+        IF EXISTS (
+          SELECT 1 FROM pg_type typ WHERE typ.typname = 'enum_queue_entries_status'
+        ) THEN
+          IF NOT EXISTS (
+            SELECT 1 FROM pg_type typ
+            INNER JOIN pg_enum enm ON enm.enumtypid = typ.oid
+            WHERE typ.typname = 'enum_queue_entries_status' AND enm.enumlabel = 'pending_pharmacy'
+          ) THEN
+            ALTER TYPE "enum_queue_entries_status" ADD VALUE 'pending_pharmacy';
           END IF;
         END IF;
       EXCEPTION
@@ -114,5 +192,14 @@ export {
   Deployment,
   InventoryItem,
   InventoryLog,
+  Patient,
+  Appointment,
+  QueueEntry,
+  PatientVitals,
+  Consultation,
+  Prescription,
+  PrescriptionItem,
+  Invoice,
+  InvoiceItem,
 };
 

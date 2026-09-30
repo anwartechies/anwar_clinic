@@ -1,4 +1,5 @@
-import { Role, Permission } from "../models";
+import bcrypt from "bcryptjs";
+import { Role, Permission, User } from "../models";
 
 // Single source of truth for the permission catalog. The DB is synced to this
 // list on every boot (additive only) — see syncPermissionCatalog below. Adding
@@ -10,8 +11,13 @@ export const PERMISSION_CATALOG = [
   { name: "appointments:write", resource: "appointments",  action: "write" },
   { name: "patients:read",      resource: "patients",      action: "read"  },
   { name: "patients:write",     resource: "patients",      action: "write" },
+  { name: "vitals:read",        resource: "vitals",        action: "read"  },
+  { name: "vitals:write",       resource: "vitals",        action: "write" },
+  { name: "queue:read",         resource: "queue",         action: "read"  },
+  { name: "queue:write",        resource: "queue",         action: "write" },
   { name: "doctors:read",       resource: "doctors",       action: "read"  },
   { name: "doctors:write",      resource: "doctors",       action: "write" },
+  { name: "consultation:write", resource: "consultation",  action: "write" },
   { name: "prescriptions:read", resource: "prescriptions", action: "read"  },
   { name: "prescriptions:write",resource: "prescriptions", action: "write" },
   { name: "billing:read",       resource: "billing",       action: "read"  },
@@ -49,6 +55,10 @@ export const DEFAULT_ROLE_GRANTS: Record<string, string[]> = {
     "dashboard:read",
     "appointments:read", "appointments:write",
     "patients:read", "patients:write",
+    "vitals:read", "vitals:write",
+    "queue:read", "queue:write",
+    "doctors:read",
+    "consultation:write",
     "prescriptions:read", "prescriptions:write",
     "reports:read",
     "leads:read",
@@ -59,15 +69,20 @@ export const DEFAULT_ROLE_GRANTS: Record<string, string[]> = {
     "dashboard:read",
     "appointments:read", "appointments:write",
     "patients:read", "patients:write",
+    "vitals:read", "vitals:write",
+    "queue:read", "queue:write",
     "doctors:read",
     "billing:read", "billing:write",
     "leads:read", "leads:write",
   ],
   pharmacist: [
     "dashboard:read",
+    "queue:read", "queue:write",
+    "patients:read",
+    "doctors:read",
     "prescriptions:read",
     "inventory:read", "inventory:write",
-    "billing:read",
+    "billing:read", "billing:write",
   ],
 };
 
@@ -89,16 +104,42 @@ export async function syncPermissionCatalog() {
     await (superadmin as any).addPermissions(allPerms);
   }
 
-  if (createdPerms.length > 0) {
-    for (const [slug, grantNames] of Object.entries(DEFAULT_ROLE_GRANTS)) {
-      const role = await Role.findOne({ where: { slug } });
-      if (!role) continue;
-      const toGrant = createdPerms.filter((p) => grantNames.includes(p.name));
-      if (toGrant.length > 0) {
-        await (role as any).addPermissions(toGrant);
-      }
+  for (const [slug, grantNames] of Object.entries(DEFAULT_ROLE_GRANTS)) {
+    const [role] = await Role.findOrCreate({
+      where: { slug },
+      defaults: {
+        name: slug.charAt(0).toUpperCase() + slug.slice(1),
+        slug,
+        description: `${slug.charAt(0).toUpperCase() + slug.slice(1)} role for clinical workflow`,
+      },
+    });
+
+    const refreshed = await Role.findByPk(role.id, { include: [{ model: Permission }] });
+    const existingPermNames = new Set(((refreshed as any)?.Permissions || []).map((p: any) => p.name));
+    const toGrant = allPerms.filter((p) => grantNames.includes(p.name) && !existingPermNames.has(p.name));
+    if (toGrant.length > 0) {
+      await (role as any).addPermissions(toGrant);
+      console.log(`[Permissions] Granted default permissions to ${slug}: ${toGrant.map((p) => p.name).join(", ")}`);
     }
-    console.log(`[Permissions] Catalog sync: created ${createdPerms.map((p) => p.name).join(", ")}`);
+  }
+
+  // Ensure default Pharmacist staff user exists for testing
+  const pharmacistRole = await Role.findOne({ where: { slug: "pharmacist" } });
+  if (pharmacistRole) {
+    const existingPharmacist = await User.findOne({ where: { email: "pharmacist@anwarclinic.com" } });
+    if (!existingPharmacist) {
+      const passwordHash = await bcrypt.hash("Pharmacist@123", 10);
+      await User.create({
+        fullName: "Chief Pharmacist",
+        email: "pharmacist@anwarclinic.com",
+        passwordHash,
+        roleId: pharmacistRole.id,
+        department: "Pharmacy",
+        designation: "Head Pharmacist",
+        status: "active",
+      });
+      console.log("[Seed] Seeded default pharmacist account: pharmacist@anwarclinic.com (Pharmacist@123)");
+    }
   }
 
   return { total: allPerms.length, created: createdPerms.length };
