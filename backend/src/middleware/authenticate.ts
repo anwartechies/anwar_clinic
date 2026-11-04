@@ -4,7 +4,7 @@ import { env } from "../config/env";
 import { User, Role, Permission } from "../models";
 import { isPlatformAdmin } from "../config/platform";
 
-export interface AuthRequest extends Request {
+export interface AuthRequest extends Request<Record<string, string>> {
   user?: {
     userId: string;
     roleSlug: string;

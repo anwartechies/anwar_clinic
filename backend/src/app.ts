@@ -16,8 +16,12 @@ import jobsRoutes from "./routes/jobs";
 import deployRoutes from "./routes/deploy";
 import offersRoutes from "./routes/offers";
 import publicRoutes from "./routes/public";
+import { inventoryApp } from "./modules/inventory";
 
 const app = express();
+
+// Before the clinic CORS: its preflight handler would answer for inventory's origins.
+app.use("/api", inventoryApp);
 
 const allowedOrigins = [
   ...env.frontendUrls,
@@ -34,6 +38,11 @@ app.use(
   })
 );
 app.use(express.json({ limit: "5mb" }));
+// Express 5 leaves req.body undefined without a JSON body; clinic routes destructure it.
+app.use((req, _res, next) => {
+  req.body ??= {};
+  next();
+});
 
 // Locally-stored uploads are served as a public, open-CORS static host — these
 // URLs get embedded in <img src> on the landing page, which is a different

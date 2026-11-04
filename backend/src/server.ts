@@ -8,6 +8,7 @@ import { ALL_SERVICES_SEED, SEED_SECTIONS_BY_SLUG } from "./config/serviceSeedDa
 import { syncSeedBlogsOnBoot } from "./config/seedBlogs";
 import { syncSeedProductsOnBoot } from "./config/seedProducts";
 import { syncSeedJobsOnBoot } from "./config/seedJobs";
+import { startInventory } from "./modules/inventory";
 
 async function syncServicesOnBoot() {
   try {
@@ -73,6 +74,8 @@ async function start() {
   await syncSeedBlogsOnBoot();
   await syncSeedProductsOnBoot();
   await syncSeedJobsOnBoot();
+
+  await startInventory();
 
   console.log(`[Storage] Driver: ${storage.name}`);
 
