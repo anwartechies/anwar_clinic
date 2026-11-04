@@ -17,7 +17,7 @@ export default function ServiceBookingBar({
     <section className="py-8 sm:py-10 bg-nexgen-mainDarkBg text-white overflow-hidden border-y border-nexgen-primaryGold/30">
       <div className="qht-large-container">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
-          
+
           {/* Left Title */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-[500] text-white tracking-tight leading-tight text-center lg:text-left max-w-xl">
             {title}
@@ -26,21 +26,21 @@ export default function ServiceBookingBar({
           {/* Center Social Proof (Avatars + Count) */}
           <div className="flex items-center gap-6">
             <div className="hidden lg:block w-px h-10 bg-white/30" />
-            
+
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-3-mu2jxhk9h6w4rt.jpg"
                   alt="Patient"
                   className="w-8 h-8 rounded-full border-2 border-nexgen-primaryGold object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-2-mu2jxhc5aa4czi.jpg"
                   alt="Patient"
                   className="w-8 h-8 rounded-full border-2 border-nexgen-primaryGold object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-1-mu2jxgr4xjdvq4.jpg"
                   alt="Patient"
                   className="w-8 h-8 rounded-full border-2 border-nexgen-primaryGold object-cover"
                 />

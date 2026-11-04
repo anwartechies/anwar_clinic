@@ -53,4 +53,17 @@ export const env = {
     // How long reviews are reused before asking Google again.
     cacheSeconds: parseInt(process.env.GOOGLE_REVIEWS_CACHE_SECONDS || "3600", 10),
   },
+
+  // SMTP email configuration for outbound transactional emails
+  smtp: {
+    host: process.env.SMTP_HOST || "smtp.gmail.com",
+    port: parseInt(process.env.SMTP_PORT || "587", 10),
+    secure: process.env.SMTP_SECURE === "true" || process.env.SMTP_PORT === "465",
+    user: process.env.SMTP_USER || process.env.EMAIL_FROM || "ahmar@saleszium.com",
+    pass: process.env.SMTP_PASS || "",
+    from:
+      process.env.SMTP_FROM ||
+      process.env.EMAIL_FROM ||
+      `"Nexgen Clinic" <${process.env.SMTP_USER || process.env.EMAIL_FROM || "ahmar@saleszium.com"}>`,
+  },
 };

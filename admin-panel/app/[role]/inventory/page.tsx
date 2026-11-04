@@ -1,17 +1,12 @@
 "use client";
 
 import { RequirePermission } from "@/components/UI/Guards";
-import { ModulePlaceholder } from "@/components/UI/ModulePlaceholder";
+import { OverviewDashboard } from "@/components/Inventory/OverviewDashboard";
 
-export default function Page() {
+export default function InventoryOverviewPage() {
   return (
     <RequirePermission permissions={["inventory:read"]}>
-      <ModulePlaceholder
-        title="Inventory"
-        description="Medicines, consumables and stock levels."
-        writePermission="inventory:write"
-        writeAction="Add stock"
-      />
+      <OverviewDashboard />
     </RequirePermission>
   );
 }

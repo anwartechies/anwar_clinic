@@ -1,17 +1,12 @@
 "use client";
 
 import { RequirePermission } from "@/components/UI/Guards";
-import { ModulePlaceholder } from "@/components/UI/ModulePlaceholder";
+import { AppointmentsPage } from "@/components/Appointments/AppointmentsPage";
 
 export default function Page() {
   return (
     <RequirePermission permissions={["appointments:read"]}>
-      <ModulePlaceholder
-        title="Appointments"
-        description="Schedule and track patient visits."
-        writePermission="appointments:write"
-        writeAction="New appointment"
-      />
+      <AppointmentsPage />
     </RequirePermission>
   );
 }

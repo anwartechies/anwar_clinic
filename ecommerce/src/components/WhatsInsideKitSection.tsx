@@ -12,30 +12,30 @@ export interface KitItem {
 export const DEFAULT_KIT_ITEMS: KitItem[] = [
   {
     id: "item-1",
-    title: "URoots Shampoo with Aloe Vera and Pro-Moisturisers For Men and Women",
+    title: "NexGen Shampoo with Aloe Vera and Pro-Moisturisers For Men and Women",
     description:
-      "Description URoots Aloe Vera shampoo is a gentle, daily-use moisturising formula developed to nourish the sensitive post-transplant scalp without stripping natural lipids.",
+      "Description NexGen Aloe Vera shampoo is a gentle, daily-use moisturising formula developed to nourish the sensitive post-transplant scalp without stripping natural lipids.",
     image: "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "item-2",
-    title: "URoots Hair Serum (Previously Venfoll Hair Serum)",
+    title: "NexGen Hair Serum (Previously Venfoll Hair Serum)",
     description:
-      "Description URoots Hair Serum is an advanced daily care serum for men and women by URoots formulated with Redensyl and Procapil to stimulate dormant follicles.",
+      "Description NexGen Hair Serum is an advanced daily care serum for men and women by NexGen formulated with Redensyl and Procapil to stimulate dormant follicles.",
     image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "item-3",
-    title: "URoots Hair Supplement (Previously Growbald)",
+    title: "NexGen Hair Supplement (Previously Growbald)",
     description:
-      "Description URoots hair supplement for men is a daily nutraceutical multivitamin, formulated with high-potency Biotin, Zinc, Pumpkin Seed, and vital amino acids.",
+      "Description NexGen hair supplement for men is a daily nutraceutical multivitamin, formulated with high-potency Biotin, Zinc, Pumpkin Seed, and vital amino acids.",
     image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "item-4",
-    title: "URoots Finasil Tablets IP 1mg for Men (Previously Finasil Wellness Tablets)",
+    title: "NexGen Finasil Tablets IP 1mg for Men (Previously Finasil Wellness Tablets)",
     description:
-      "Description URoots Finasil Tablets IP 1mg is an oral treatment for men, formulated with pharmaceutical grade DHT blockers to stop progressive follicle miniaturization.",
+      "Description NexGen Finasil Tablets IP 1mg is an oral treatment for men, formulated with pharmaceutical grade DHT blockers to stop progressive follicle miniaturization.",
     image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80",
   },
   {
@@ -57,7 +57,7 @@ export default function WhatsInsideKitSection({
   return (
     <section className="py-16 sm:py-20 bg-white">
       <div className="qht-large-container">
-        
+
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5c685f] block mb-2">
@@ -72,10 +72,10 @@ export default function WhatsInsideKitSection({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-start">
           {items.map((item) => (
             <div key={item.id} className="flex flex-col group">
-              
+
               {/* Product Pedestal Image Container */}
               <div className="relative aspect-square w-full rounded-2xl sm:rounded-[26px] overflow-hidden bg-[#ebe6df] mb-3.5 select-none shadow-xs border border-gray-100/60">
-                
+
                 {/* Brand Watermark in Top Left */}
                 <div className="absolute top-3 left-3 z-10 text-[9px] text-[#4a554c]/75 font-semibold tracking-tight select-none pointer-events-none">
                   <span className="font-bold text-[#1b221d]/85 block">NexGen Meds</span>

@@ -4,6 +4,7 @@ import { NAV_ITEMS } from "@/constants/nav";
 import { usePermissions } from "@/context/PermissionsContext";
 import { RequirePermission } from "@/components/UI/Guards";
 import { PageHeader } from "@/components/Layout/PageHeader";
+import { ClinicalDashboardWidgets } from "@/components/Dashboard/ClinicalDashboardWidgets";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -35,6 +36,9 @@ function DashboardBody() {
         />
         <StatCard label="Modules available" value={String(modules.length)} />
       </div>
+
+      {/* Role-Specific Clinical & Front-Desk Widgets */}
+      <ClinicalDashboardWidgets />
 
       <h2 className="mb-3 text-sm font-semibold text-slate-700 dark:text-slate-300">Your modules</h2>
       {modules.length === 0 ? (

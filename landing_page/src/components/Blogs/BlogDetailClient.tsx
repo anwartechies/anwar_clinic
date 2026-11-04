@@ -210,7 +210,7 @@ export default function BlogDetailClient({ blog }: BlogDetailClientProps) {
               <Sparkles className="w-3.5 h-3.5 text-nexgen-brightGold" /> Personal Hairline & Graft Evaluation
             </span>
             <h4 className="text-xl font-bold text-white">
-              Considering Hair Restoration at Anwar Clinic?
+              Considering Hair Restoration at Nexgen Clinic?
             </h4>
             <p className="text-xs sm:text-sm text-gray-300 max-w-md">
               Speak directly with our surgical specialists. Get your estimated graft count, hairline design preview, and total cost breakdown.

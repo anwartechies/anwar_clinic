@@ -164,8 +164,8 @@ export function OfferModal({
               {isCompleted
                 ? "View Completed Offer"
                 : isEditing
-                ? "Edit Offer Banner"
-                : "Create New Offer Banner"}
+                  ? "Edit Offer Banner"
+                  : "Create New Offer Banner"}
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
               {isCompleted
@@ -252,7 +252,7 @@ export function OfferModal({
                 disabled={isCompleted}
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                placeholder="e.g. Book your Anwar Clinic Hair Transplant this month & get"
+                placeholder="e.g. Book your Nexgen Clinic Hair Transplant this month & get"
                 className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition disabled:opacity-60"
                 required
               />

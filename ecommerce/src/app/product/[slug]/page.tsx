@@ -33,11 +33,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { product } = await fetchProduct(params.slug);
   if (!product) {
     return {
-      title: "Product Not Found | URoots by Anwar Clinic",
+      title: "Product Not Found | NexGen Hair Transplant Clinic",
     };
   }
   return {
-    title: product.seoTitle || `${product.name} | URoots by Anwar Clinic`,
+    title: product.seoTitle || `${product.name} | NexGen Hair Transplant Clinic`,
     description: product.seoDescription || product.description,
   };
 }

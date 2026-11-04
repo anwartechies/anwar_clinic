@@ -62,11 +62,11 @@ const getCleanFeatureImage = (title: string, imgUrl?: string, idx = 0) => {
     if (upper.includes(key)) return cleanUrl;
   }
   const fallbackList = [
-    "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
+    "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-08-pm-mu46xz28f0p1lx.jpeg",
+    "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-53-52-pm-mu46z5zwqbrtgd.jpeg",
+    "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-55-37-pm-mu4713fhxp35ck.jpeg",
+    "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-2-41-05-pm-mu3whz83hjbekh.jpeg",
+    "https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-8-03-52-pm-mu47c3sxpl41ro.jpeg",
   ];
   return fallbackList[idx % fallbackList.length];
 };
@@ -131,28 +131,28 @@ export default function ServiceWhyChooseQHTSection({
               {/* Overlapping Patient Avatars */}
               <div className="flex -space-x-2">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-3-mu2jxhk9h6w4rt.jpg"
                   alt="Patient avatar"
                   className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-2-mu2jxhc5aa4czi.jpg"
                   alt="Patient avatar"
                   className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                  src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/testimonial-1-mu2jxgr4xjdvq4.jpg"
                   alt="Patient avatar"
                   className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold object-cover"
                 />
                 <div className="w-10 h-10 rounded-full border-2 border-nexgen-brightGold bg-nexgen-veryDarkHeader text-nexgen-brightGold text-xs font-bold flex items-center justify-center">
-                  +4.7k
+                  +2.5k
                 </div>
               </div>
 
               {/* Rating Text */}
               <p className="text-base sm:text-lg font-normal text-nexgen-veryDarkHeader leading-snug">
-                <span className="font-bold text-nexgen-veryDarkHeader">4,700 satisfied patients</span>{" "}
+                <span className="font-bold text-nexgen-veryDarkHeader">2,500 satisfied patients</span>{" "}
                 achieved lasting results with a 100% success rate.
               </p>
             </div>

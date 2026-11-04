@@ -34,7 +34,7 @@ export const REVIEWS_LIST: CustomerReview[] = [
     rating: 5,
     headline: "Kit ne sab aasaan kar diya",
     comment:
-      "Itne saare products hain market mein, samajh nahi aata kaunsa lo. URoots ka Total Hair Restoration Kit khareed liya, decision khatam. Sab ek saath, sab ek dusre ke saath kaam karte hain. 3 mahine mein dheere dheere progress dikh raha hai.",
+      "Itne saare products hain market mein, samajh nahi aata kaunsa lo. NexGen ka Total Hair Restoration Kit khareed liya, decision khatam. Sab ek saath, sab ek dusre ke saath kaam karte hain. 3 mahine mein dheere dheere progress dikh raha hai.",
   },
   {
     id: "rev-4",
@@ -84,7 +84,7 @@ export default function CustomerReviewsSection() {
   return (
     <section className="py-16 sm:py-24 bg-white border-t border-gray-100">
       <div className="max-w-4xl mx-auto px-5 sm:px-8">
-        
+
         {/* Section Heading */}
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#1b221d] tracking-tight">
@@ -94,7 +94,7 @@ export default function CustomerReviewsSection() {
 
         {/* Reviews Summary Top Card */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8 border-b border-gray-200">
-          
+
           {/* Left: Overall Score */}
           <div className="md:col-span-4 text-center md:text-left space-y-1">
             <div className="flex items-center justify-center md:justify-start gap-1.5 text-[#2e7d32]">
@@ -203,17 +203,16 @@ export default function CustomerReviewsSection() {
         <div className="divide-y divide-gray-200">
           {reviews.map((rev) => (
             <div key={rev.id} className="py-6 sm:py-7 space-y-2">
-              
+
               {/* Star Rating */}
               <div className="flex text-[#2e7d32]">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className={`w-3.5 h-3.5 ${
-                      i < rev.rating
+                    className={`w-3.5 h-3.5 ${i < rev.rating
                         ? "fill-current text-[#2e7d32]"
                         : "text-gray-300"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
@@ -263,9 +262,8 @@ export default function CustomerReviewsSection() {
                       className="cursor-pointer"
                     >
                       <Star
-                        className={`w-5 h-5 ${
-                          star <= newRating ? "fill-current" : "text-gray-300"
-                        }`}
+                        className={`w-5 h-5 ${star <= newRating ? "fill-current" : "text-gray-300"
+                          }`}
                       />
                     </button>
                   ))}

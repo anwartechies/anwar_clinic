@@ -68,7 +68,7 @@ router.post("/login", async (req: Request, res: Response) => {
   }
 
   const user = await User.findOne({
-    where: { email: String(email).trim().toLowerCase(), status: "active" },
+    where: { email: String(email).trim().toLowerCase() },
     include: [{ model: Role, as: "role", include: [{ model: Permission }] }],
   });
 
@@ -81,6 +81,20 @@ router.post("/login", async (req: Request, res: Response) => {
   if (!valid) {
     res.status(401).json({ message: "Invalid email or password" });
     return;
+  }
+
+  // If user was newly invited, their initial status is "inactive" and lastLoginAt is null.
+  // Upon their first successful login, their status automatically transitions to "active".
+  if (user.status === "inactive") {
+    if (!user.lastLoginAt) {
+      await user.update({ status: "active", lastLoginAt: new Date() });
+      user.status = "active";
+    } else {
+      res.status(403).json({ message: "Your account has been deactivated. Please contact an administrator." });
+      return;
+    }
+  } else {
+    await user.update({ lastLoginAt: new Date() });
   }
 
   const role = (user as any).role as Role & { Permissions: Permission[] };
@@ -100,8 +114,6 @@ router.post("/login", async (req: Request, res: Response) => {
     env.jwtSecret,
     { expiresIn: env.jwtExpiresIn as jwt.SignOptions["expiresIn"] }
   );
-
-  await user.update({ lastLoginAt: new Date() });
 
   res.json({
     token,

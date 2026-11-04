@@ -51,7 +51,7 @@ export default function ServiceProcedureSection({
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
       <div className="qht-large-container">
-        
+
         {/* Top Header & Stat Boxes */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-12 lg:mb-16">
           {/* Title & Subtitle */}
@@ -94,12 +94,12 @@ export default function ServiceProcedureSection({
 
         {/* Main 2-Column: Diagram + Steps */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          
+
           {/* Left Column: Hairline Before/After Outline Vector + CTA Button */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-start justify-between">
             <div className="relative w-full max-w-[340px] aspect-square flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80"
+                src="https://anwar-clinic-assets.s3.ap-south-1.amazonaws.com/media/whatsapp-image-2026-09-16-at-7-55-37-pm-mu4713fhxp35ck.jpeg"
                 alt="Procedure Clinical Demonstration"
                 className="w-full h-full object-cover rounded-2xl shadow-md"
               />

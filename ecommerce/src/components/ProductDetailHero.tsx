@@ -282,7 +282,7 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
                     <div>
                       <p className={isExpandedText ? "" : "line-clamp-3"}>
                         {product.description ||
-                          "URoots Post Hair Transplant Kit is an expert-curated, complete hair regrowth treatment bundle for men designed to support recovery and maintain long-term hair density after hair restoration procedures. This kit provides targeted scalp treatment, follicle activation, and vital cellular nutrition."}
+                          "NexGen Post Hair Transplant Kit is an expert-curated, complete hair regrowth treatment bundle for men designed to support recovery and maintain long-term hair density after hair restoration procedures. This kit provides targeted scalp treatment, follicle activation, and vital cellular nutrition."}
                         {" "}Formulated with US-FDA approved compounds, peptides, and organic botanicals under clinical supervision of NexGen Clinic dermatologists.
                       </p>
                       <button

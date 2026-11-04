@@ -27,7 +27,7 @@ export default function ClinicalStudiesSection() {
           </h2>
 
           <p className="text-xs sm:text-sm text-[#5c685f] leading-relaxed font-normal">
-            URoots Complete Hair Care Routine Kit combines six products that work together to provide deep nourishment to the scalp and hair follicles. Instead of relying on a single product, this kit contains products formulated with clinically proven ingredients that support scalp health, nourish follicles, improve hair density, and reduce hair fall simultaneously.
+            NexGen Complete Hair Care Routine Kit combines six products that work together to provide deep nourishment to the scalp and hair follicles. Instead of relying on a single product, this kit contains products formulated with clinically proven ingredients that support scalp health, nourish follicles, improve hair density, and reduce hair fall simultaneously.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export default function ClinicalStudiesSection() {
 
             {/* Summary Text */}
             <p className="text-xs sm:text-sm text-[#2b3a2a] leading-relaxed max-w-sm font-medium">
-              URoots Complete Hair Care Routine Kit combines products formulated with clinically proven ingredients to address hair fall from multiple angles for long-term hair care.
+              NexGen Complete Hair Care Routine Kit combines products formulated with clinically proven ingredients to address hair fall from multiple angles for long-term hair care.
             </p>
 
           </div>
