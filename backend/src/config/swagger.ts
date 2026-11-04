@@ -1,6 +1,7 @@
 import path from "path";
 import swaggerJsdoc from "swagger-jsdoc";
 import { env } from "./env";
+import { inventoryPaths, inventoryTags } from "../modules/inventory/swagger";
 
 const routesPattern = path
   .resolve(__dirname, "../routes/*.{ts,js}")
@@ -20,14 +21,15 @@ const options: swaggerJsdoc.Options = {
     },
     servers: [
       {
-        url: `http://localhost:${env.port}`,
-        description: "Current environment server",
+        url: "/",
+        description: "This host",
       },
       {
-        url: "/",
-        description: "Relative URL (works on any host/domain)",
+        url: `http://localhost:${env.port}`,
+        description: "Local development",
       },
     ],
+    paths: inventoryPaths(),
     components: {
       securitySchemes: {
         BearerAuth: {
@@ -35,6 +37,12 @@ const options: swaggerJsdoc.Options = {
           scheme: "bearer",
           bearerFormat: "JWT",
           description: "Enter your JWT token obtained from POST /auth/login",
+        },
+        InventoryBearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
+          description: "Enter the accessToken from POST /api/auth/login",
         },
       },
       schemas: {
@@ -64,6 +72,7 @@ const options: swaggerJsdoc.Options = {
       { name: "Admin - Media", description: "Media assets library (requires media:read/write)" },
       { name: "Admin - Roles", description: "RBAC roles & assigned permissions" },
       { name: "Admin - Permissions", description: "System permissions catalog" },
+      ...inventoryTags,
     ],
   },
   apis: [routesPattern],
